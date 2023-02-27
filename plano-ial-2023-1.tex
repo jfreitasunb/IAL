@@ -1,0 +1,204 @@
+%!TEX program = xelatex
+%!TEX encoding = ISO-8859-1
+\def\ano{2023}
+\def\semestre{1}
+\def\numerosemanas{17}
+\def\disciplina{Introdução à Álgebra Linear}
+\def\turma{03}
+\def\nome{Jos\'e Ant\^onio O. Freitas}
+\def\email{jfreitas@unb.br}
+
+\documentclass[12pt]{exam}
+
+%\usepackage[leqno]{amsmath}
+%\usepackage{makeidx,graphics}
+\usepackage{graphicx}
+\graphicspath{{/Arquivos/Dropbox/imagens-latex/}{D:/Dropbox/imagens-latex/}}
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext}
+%\usepackage{color}
+%\usepackage[latin1]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{enumitem}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+\newcommand{\real}{\mathbb{R}}
+
+%\DeclareGraphicsRule{jpg}{*[}{}{`jpeg2eps #1.jpg}
+%\input{seteps}
+%\input{setbmp-dvips}
+
+\setlength{\topmargin}{-1.0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{10.1in}
+\setlength{\textwidth}{6.5in}
+\setlength{\baselineskip}{12mm}
+
+\begin{document}
+\extraheadheight{0.7in}
+\firstpageheadrule
+\runningheadrule
+\lhead{
+        \begin{minipage}[c]{1.7cm}
+        \includegraphics[width=1.7cm]{unb.pdf}
+        \end{minipage}%
+        \hspace{0pt}
+        \begin{minipage}[c]{4in}
+          {Universidade de Bras{\'\i}lia} --
+          {Departamento de Matem{\'a}tica}
+\end{minipage}
+\vspace*{-0.8cm}
+}
+% \chead{Universidade de Bras{\'\i}lia - Departamento de Matem{\'a}tica}
+% \rhead{}
+% \vspace*{-2cm}
+
+\extrafootheight{.5in}
+\footrule
+\lfoot{\disciplina\ - Turma \turma\ - \semestre$^o$/\ano}
+\cfoot{}
+\rfoot{P\'agina \thepage\ de \numpages}
+
+\begin{center}
+{\large\bf Plano de Ensino -- \semestre$^{o}$/\ano} \\
+{\large\bf \disciplina\ -- Turma \turma}\\
+\end{center}
+\hrule
+
+\begin{flushleft}
+  Prof.: \nome\\
+  email: \href{mailto:{\email}}{\email}
+  \end{flushleft}
+  \hrule
+  \bigskip \bigskip
+\vspace{0.25cm}
+\noindent {\bf{PROGRAMA:}} o curso contará com \numerosemanas\ semanas dividas em 3 módulos. O conteúdo do curso abordará os seguintes assuntos:
+\begin{itemize}
+    \item Matrizes e sistemas lineares. Determinantes.
+
+    \item Espaços vetoriais. Transformações Lineares.
+
+    \item Autovalores e autovetores. Diagonalização de operadores. Espaços vetoriais com produto interno.
+
+\end{itemize}
+
+\vspace{0.5cm}
+\noindent {\bf{BIBLIOGRAFIA:}}
+\begin{itemize}
+
+%    \item Arquivo com as \textbf{Notas de Aula} dispon{\'\i}vel em
+%        \href{https://moodle.mat.unb.br/mod/resource/view.php?id=905}{Notas de Aula: \disciplina\ - \turma}.
+
+    \item H. Anton, C. Rorres: {\it {\'A}lgebra Linear com Aplicações}, $10^a$ Ed., Editora Bookman, 2012.
+
+    \item C. H. Edwards, D. E. Penney: {\it Introdução à Álgebra Linear}, Editora Prentice-Hall do Brasil.
+
+    \item S. Lang: {\it Álgebra Linear}, Editora Moderna, 2003.
+
+    \item T. S. Blyth, E. F. Robertson: {\it Basic Linear Algebra}, $2^a$ Ed., Springer, 2002.
+\end{itemize}
+
+\noindent {\bf{SISTEMA DE AVALIA\c{C}\~{A}O:}} em cada um dos módulos sera realizada uma prova e  atribuídauma nota $M_i$, $i=1$, 2, 3. A nota final ($NF$) de cada estudante ser\'a dada por:
+\[
+    NF = \dfrac{2M_1 + 3M_2 + 4M_3}{9}, \quad 0 \le NF \le 10.
+\]
+Ser\'a considerado aprovado o estudante que obtiver $NF \ge 5$.
+
+\vspace{0.5cm}
+
+As provas ser\~ao realizadas no hor\'ario da aula e as datas est\~ao listadas abaixo e podem, a crit\'erio do professor, ser mudadas.
+
+\begin{center}
+    \begin{tabular}{c|c|c}
+        \hline\hline
+        \hspace{1cm}{\bf Prova}\hspace{1cm} & \hspace{3cm}{\bf Data}\hspace{3cm} & \hspace{1.7cm}{\bf Hor\'{a}rio}\hspace{1.7cm} \\
+        \hline\hline
+        $P_1$ & 25/04/23 (terça-feira) \phantom{x} & 19:00 - 20:40 \\
+        \hline
+        $P_2$ & 08/06/23 (quinta-feira) \phantom{x} & 19:00 - 20:40 \\
+        \hline
+        $P_3$ & 20/07/23 (quinta-feira) \phantom{x} & 19:00 - 20:40 \\
+        \hline\hline
+    \end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+{\bf \noindent Men\c{c}\~{a}o Final:} ser\'{a} obtida da $NF$ de
+acordo com as normas da UnB.
+\begin{center}
+    \begin{tabular}{c|c}
+        \hline\hline
+        \hspace{1cm}{Nota}\hspace{1cm} & \hspace{0.25cm}{Men\c{c}\~{a}o}\hspace{0.25cm}\\
+        \hline\hline
+        9,00 a 10,0 & SS \\
+        \hline
+        7,00 a 8,99 & MS \\
+        \hline
+        5,00 a 6,99 & MM \\
+        \hline
+        3,00 a 4,99 & MI \\
+        \hline
+        0,00 a 2,99  & II \\
+        \hline\hline
+    \end{tabular}
+\end{center}
+Receber{\'a} a men{\c c}{\~a}o {\bf SR} quem estiver reprovado por faltar mais de 25\%
+das aulas.
+
+\vspace{0.5cm}
+\noindent {\bf{P\'{A}GINA DA TURMA:}} A p\'agina da disciplina est\'a dispon{\'\i}vel no endere\c{c}o
+\begin{center}
+    \href{https://moodle.mat.unb.br/course/view.php?id=55}{https://moodle.mat.unb.br}
+\end{center}
+
+
+\begin{itemize}
+\item Toda a comunica\c{c}\~{a}o oficial do curso, inclusive a divulga\c{c}\~{a}o de
+notas e gabaritos, se dar\'{a} atrav\'{e}s do {\em F\'{o}rum de Not\'{\i}cias} do
+\textbf{MoodleMAT}.
+\item No {\em F\'{o}rum de Debates} do \textbf{MoodleMAT} poder\~{a}o ser
+postadas d\'{u}vidas que ser\~{a}o respondidas on-line pelos seus
+colegas, pelo monitor dessa turma ou pelo professor.
+\end{itemize}
+
+\noindent {\bf{OBSERVA\c{C}\~{O}ES IMPORTANTES:}}
+
+\begin{enumerate}[label={\arabic*})]
+\item As provas ser\~{a}o individuais e sem qualquer tipo de
+aux\'{\i}lio (calculadora, livros etc.), sendo vedado o empr\'{e}stimo de
+qualquer material entre os alunos durante as avalia\c{c}\~{o}es. As
+tentativas de fraude ser\~{a}o reprimidas com m\'{a}ximo rigor.
+
+\item \'{E} vedado o uso de telefones celulares e quaisquer dispositivos
+eletr\^{o}nicos pessoais durante a realiza\c{c}\~{a}o das atividades do curso
+em sala de aula.
+
+\item Ser\'{a} exigido documento de identifica\c{c}\~{a}o dos estudantes nos
+dias de provas e testes.
+
+\item A aus\^{e}ncia acarretar\'{a} nota zero em qualquer uma das
+avalia\c{c}\~{o}es.
+
+\item A crit\'{e}rio do professor, as datas das provas poder\~{a}o
+ser alteradas.
+
+\item A lista de presen\c{c}a ser\'{a} passada apenas uma vez
+durante cada aula e est\'{a} sujeita a confirma\c{c}\~{a}o oral. O
+estudante deve assin\'{a}-la de forma legível. {\'E} proibido assinar
+com suas iniciais e \'{e} proibido assinar por outra pessoa.
+
+\item Haver{\'a} avalia{\c c}{\~a}o quanto {\`a} clareza, apresenta{\c
+c}{\~a}o e formaliza{\c c}{\~a}o na  resolu{\c c}{\~a}o das quest{\~o}es de
+cada prova. A nota do aluno poder{\'a} ser alterada em raz{\~a}o da
+inobserv{\^a}ncia desses par{\^a}metros.
+% \item A comunica\c{c}\~ao entre o professor/monitores e estudantes ser\'a, preferencialmente,
+%  estabelecida pelo f\'orum do \textbf{MoodleMAT}.
+\end{enumerate}
+\end{document}
