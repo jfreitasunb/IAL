@@ -19,3 +19,6 @@ IAL.pdf
 *.xml
 *.toc
 *.bbl
+*.blg
+*.ilg
+*.ind
