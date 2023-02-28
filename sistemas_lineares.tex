@@ -1,5 +1,5 @@
 %!TEX program = xelatex
-%!TEX root = Algebra_Linear.tex
+%!TEX root = IAL.tex
 %%Usar makeindex -s indexstyle.ist arquivo no terminal para gerar o {\'\i}ndice remissivo agrupado por inicial
 %%Ap\'os executar pdflatex arquivo
 \chapter{Sistemas Lineares E Matrizes}
@@ -34,7 +34,7 @@
 			a \otimes 1_\cp{K} = a = 1_\cp{K} \otimes a
 		\]
 		para todo $a \in \cp{K}$.
-		\item \textbf{Elemento inverso da multiplica\c{c}\~ao}: Para cada $a \in \cp{K}$, $a \ne 0_{\cp{K}}$, existe um elemento em $\cp{K}$, denotado por $a^{-1}$ e chamado de \textbf{inverso multiplicativo} de $a$ 
+		\item \textbf{Elemento inverso da multiplica\c{c}\~ao}: Para cada $a \in \cp{K}$, $a \ne 0_{\cp{K}}$, existe um elemento em $\cp{K}$, denotado por $a^{-1}$ e chamado de \textbf{inverso multiplicativo} de $a$
 		tal que
 		\[
 			a \otimes a^{-1} = 1_\cp{K} = a^{-1} \otimes a.
@@ -150,7 +150,7 @@ Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, \otimes, \oplus)$. Quando n\~ao
 		\[
 			0_1 = 0_1 + 0_2 = 0_2.
 		\]
-	
+
 		\item Sejam $b$ e $c$ elementos opostos de $a$. Da{\'\i}
 		\begin{align*}
 			a + b &= 0_\cp{K}\\
@@ -160,26 +160,26 @@ Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, \otimes, \oplus)$. Quando n\~ao
 		\[
 			b = b + 0_\cp{K} = b + (c + a) = (b + a) + c = 0_\cp{K} + c = c.
 		\]
-		
+
 		\item Temos
 		\begin{align*}
 			b &= b + 0_{\cp{K}} = b + (a + (-a)) = (b + a) + (-a) \\ &= (a + b) + (-a) = (a + c) + (-a) = (c + a) + (-a) \\ &= c + (a + (-a)) = c + 0_{\cp{K}} \\ &= c
 		\end{align*}
 		como quer{\'\i}amos.
-	
+
 		\item De fato,
 		\[
 			a\cdot 0_\cp{K} + 0_\cp{K} = a\cdot 0_\cp{K} = a\cdot (0_\cp{K} + 0_\cp{K}) = a\cdot 0_\cp{K} + a\cdot 0_\cp{K},
 		\]
 		logo pela lei do cancelamento, $a\cdot 0_\cp{K} = 0_\cp{K}$ como quer{\'\i}amos.
-	
-	
+
+
 		\item
 		De fato, suponha que $1_a$ e $1_b$ sejam elementos neutros da multiplica\c{c}\~ao. Ent\~ao
 		\[
 			1_a = 1_a\cdot 1_b = 1_b.
 		\]
-	
+
 		\item Dado $a \in \cp{K}$, $a \ne 0_{\cp{K}}$, suponha que $b$, $c \in \cp{K}$ sejam tais que
 		\[
 			ab = 1_{\cp{K}} \quad ac = 1_{\cp{K}}.
@@ -188,12 +188,12 @@ Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, \otimes, \oplus)$. Quando n\~ao
 		\[
 			b = 1_{\cp{K}}b = (ac)b = c(ab) = c1_{\cp{K}} = c.
 		\]
-		
+
 		\item De fato,
 		\begin{align*}
 			b &= b1_{\cp{K}} = b(aa^{-1}) = (ba)a^{-1} = (ab)a^{-1} \\ &= (ac)a^{-1} = (ca)a^{-1} = c(aa^{-1}) = c1_{\cp{K}} \\ &= c
 		\end{align*}
-	
+
 		\item
 		Suponha que $a \ne 0_\cp{K}$, ent\~ao existe $a^{-1}$. Da{\'\i}
 		\begin{align*}
@@ -223,7 +223,7 @@ Fixemos ent\~ao $p \in \z$ um n\'umero primo. Dado $a \in \z$, sempre \'e poss{\
 \[
 	a = pq + r,
 \]
-onde $b$, $r \in \z$ e $0 \le r \le p - 1$. Assim quando efetuamos a divis\~ao inteira de qualquer n\'umero inteiro $a$ por $p$ os poss{\'\i}veis restos s\~ao: $0$, 
+onde $b$, $r \in \z$ e $0 \le r \le p - 1$. Assim quando efetuamos a divis\~ao inteira de qualquer n\'umero inteiro $a$ por $p$ os poss{\'\i}veis restos s\~ao: $0$,
 $1$, $2$, \dots, $p -1 $.
 
 Assim vamos considerar o seguinte conjunto
@@ -293,7 +293,7 @@ onde sob a barra estamos usando a soma e multiplica\c{c}\~ao usuais dos inteiros
 					$\rule{0pt}{2.5ex}\overline{2}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$& $\overline{0}$ & $\overline{1}$ \\\hline
 					$\rule{0pt}{2.5ex}\overline{3}$ & $\overline{3}$ & $\overline{4}$ & $\overline{0}$& $\overline{1}$ & $\overline{2}$ \\\hline
 					$\rule{0pt}{2.5ex}\overline{4}$ & $\overline{4}$ & $\overline{0}$ & $\overline{1}$& $\overline{2}$ & $\overline{3}$ \\\hline
-				\end{tabular} \qquad 
+				\end{tabular} \qquad
 				\begin{tabular}{|c|c|c|c|c|c|}
 					\hline
 					$\otimes$ &\rule{0pt}{2.5ex} $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
@@ -332,7 +332,7 @@ onde sob a barra estamos usando a soma e multiplica\c{c}\~ao usuais dos inteiros
 		\]
 		Logo todo elemento de $\z_p$ possui oposto aditivo.
 		\item $\overline{x} \otimes \overline{y} = \overline{x\cdot y} = \overline{y \cdot x} = \overline{y} \otimes \overline{x}$.
-		\item $(\overline{x} \otimes \overline{y}) \otimes \overline{z} = (\overline{x\cdot y}) \otimes \overline{z} = \overline{(x\cdot y) \cdot z} = 
+		\item $(\overline{x} \otimes \overline{y}) \otimes \overline{z} = (\overline{x\cdot y}) \otimes \overline{z} = \overline{(x\cdot y) \cdot z} =
 		\overline{x\cdot (y\cdot z)} = \overline{x} \otimes (\overline{y} \otimes \overline{z})$.
 		\item O elemento $\overline{1} \in \z_p$ \'e tal que
 		\[
@@ -350,7 +350,7 @@ onde sob a barra estamos usando a soma e multiplica\c{c}\~ao usuais dos inteiros
 			&\overline{x} \otimes \overline{y} + \overline{p} \otimes \overline{z} = \overline{1}\\
 			&\overline{x} \otimes \overline{y} = \overline{1}
 		\end{align*}
-		uma vez que $\overline{p} = \overline{0}$. Como $\overline{y}$ \'e obtido pelo resto da divis\~ao inteira de $y$ por $p$, ent\~ao 
+		uma vez que $\overline{p} = \overline{0}$. Como $\overline{y}$ \'e obtido pelo resto da divis\~ao inteira de $y$ por $p$, ent\~ao
 		$\overline{y} \in \z_p$. Observe que $y \ne 0$ pois $p \ge 2$ e $y \ne p$ pois sen\~ao $(x + z)p = 1$ o que \'e imposs{\'\i}vel uma vez que $p \ge 2$. Logo $\overline{y} \ne \overline{0}$ e assim todo elemento $\overline{x} \in \z_p$ possui inverso multiplicativo.
 		\item $(\overline{x} \oplus \overline{y}) \otimes \overline{z}= (\overline{x + y}) \otimes \overline{z} = \overline{(x + y) \cdot z} = \overline{xz + yz} = \overline{xz} \oplus \overline{yz} = \overline{x} \otimes \overline{z} \oplus \overline{y} \otimes \overline{z}$.
 	\end{enumerate}
@@ -539,7 +539,7 @@ Seja $\cp{K}$ um corpo. Consideremos o problema de determinar $n$ escalares, ou 
 		a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m\\
 	\end{cases}
 \end{equation}
-onde $b_1$, \dots, $b_m$ e $a_{ij}$, $1 \le i \le m$, $1 \le j \le n$ s\~ao elementos de $\cp{K}$ previamente conhecidos. Chamamos \eqref{sistemalinear} de um \textbf{sistema de $m$ equa\c{c}\~oes lineares a $n$ inc\'ognitas} $x_1$, $x_2$, \dots, $x_n$. Toda $n$-upla $(\alpha_1, \alpha_2, \dots, \alpha_n)$ onde $\alpha_i \in \cp{K}$ para $1 \le i \le n$, que satisfazem a cada uma das equa\c{c}\~oes de \eqref{sistemalinear} \'e chamada de uma \textbf{solu\c{c}\~ao} do sistema. 
+onde $b_1$, \dots, $b_m$ e $a_{ij}$, $1 \le i \le m$, $1 \le j \le n$ s\~ao elementos de $\cp{K}$ previamente conhecidos. Chamamos \eqref{sistemalinear} de um \textbf{sistema de $m$ equa\c{c}\~oes lineares a $n$ inc\'ognitas} $x_1$, $x_2$, \dots, $x_n$. Toda $n$-upla $(\alpha_1, \alpha_2, \dots, \alpha_n)$ onde $\alpha_i \in \cp{K}$ para $1 \le i \le n$, que satisfazem a cada uma das equa\c{c}\~oes de \eqref{sistemalinear} \'e chamada de uma \textbf{solu\c{c}\~ao} do sistema.
 
 Se $b_1 = b_2 = \cdots = b_m = 0_\cp{K} \in K$, dizemos que o sistema
 \begin{equation}\label{sistemalinearhomogeneo}\index{Sistema Linear}
@@ -731,7 +731,7 @@ Uma raz\~ao para nos restringirmos a estes tr\^es tipos simples de opera\c{c}\~o
 	\begin{enumerate}
 		\item [e1)] Suponha que $e$ seja a opera\c{c}\~ao que troca a linha $i$ pela linha $j$ de $A$. Temos
 		\[
-			e(A) = 
+			e(A) =
 				\begin{bmatrix}
 					a_{11} & a_{12} & \cdots & a_{1n}\\
 					a_{21} & a_{22} & \cdots & a_{2n}\\
@@ -751,7 +751,7 @@ Uma raz\~ao para nos restringirmos a estes tr\^es tipos simples de opera\c{c}\~o
 
 		\item [e2)] Suponha que $e$ seja a opera\c{c}\~ao que multiplica a $i$-\'esima de $A$ por $\alpha \in \cp{K}$, onde $\alpha \ne 0_\cp{K}$. Temos
 		\[
-			e(A) = 
+			e(A) =
 				\begin{bmatrix}
 					a_{11} & a_{12} & \cdots & a_{1n}\\
 					a_{21} & a_{22} & \cdots & a_{2n}\\
@@ -767,7 +767,7 @@ Uma raz\~ao para nos restringirmos a estes tr\^es tipos simples de opera\c{c}\~o
 		\]
 		\item [e3)] Suponha que $e$ seja a opera\c{c}\~ao que substitui a linha $i$ de $A$ pela linha $i$ mais $\alpha$ vezes a linha $j$. Temos
 		\[
-			e(A) = 
+			e(A) =
 				\begin{bmatrix}
 					a_{11} & a_{12} & \cdots & a_{1n}\\
 					a_{21} & a_{22} & \cdots & a_{2n}\\
@@ -779,7 +779,7 @@ Uma raz\~ao para nos restringirmos a estes tr\^es tipos simples de opera\c{c}\~o
 		\]
 		Seja $e'$ a opera\c{c}\~ao que substitui a linha $i$ de $e(A)$ pela linha $i$ mais $(-\alpha)$ vezes a linha $j$. Ent\~ao
 		\[
-			e'(e(A)) = 
+			e'(e(A)) =
 					\begin{bmatrix}
 						a_{11} & a_{12} & \cdots & a_{1n}\\
 						a_{21} & a_{22} & \cdots & a_{2n}\\
@@ -808,7 +808,7 @@ Uma raz\~ao para nos restringirmos a estes tr\^es tipos simples de opera\c{c}\~o
 \begin{exemplo}
 	A matriz
 	\[
-		B = 
+		B =
 			\begin{bmatrix}
 				1 & 0\\
 				0 & 1\\
@@ -826,7 +826,7 @@ Uma raz\~ao para nos restringirmos a estes tr\^es tipos simples de opera\c{c}\~o
 	\]
 	pois
 	\begin{align*}
-		A &= 
+		A &=
 			\left[
 				\begin{array}{cc}
 					\phantom{-}1 & \phantom{-}0\\
@@ -1004,7 +1004,7 @@ Uma raz\~ao para nos restringirmos a estes tr\^es tipos simples de opera\c{c}\~o
 		\phantom{-}1 & 2
 		\end{bmatrix}.$ Temos:
 		\begin{align*}
-			A &= 
+			A &=
 				\left[
 					\begin{array}{cc}
 						-1 & i\\
@@ -1091,7 +1091,7 @@ Uma raz\~ao para nos restringirmos a estes tr\^es tipos simples de opera\c{c}\~o
 			a_{ij} = \delta_{ij} =
 			\begin{cases}
 				1, & \mbox{ se } i = j\\
-				0, & \mbox{ se } i \ne j 
+				0, & \mbox{ se } i \ne j
 			\end{cases}.
 		\]
 		O s{\'\i}mbolo $\delta_{ij}$ \'e chamada \textbf{s{\'\i}mbolo de Kronecher} \'e ser\'a utilizado com certa frequ\^encia.
@@ -1178,7 +1178,7 @@ Uma raz\~ao para nos restringirmos a estes tr\^es tipos simples de opera\c{c}\~o
 	\]
 	Precisamos primeiro reduzir $A$ a sua forma escada:
 	\begin{align*}
-		A &= 
+		A &=
 			\left[
 			\begin{array}{cccc}
 				\phantom{-}1 & \phantom{-}2 & 1 & 0\\
@@ -1276,7 +1276,7 @@ Com o objetivo de resolver o sistema \eqref{equacaolinear} vamos come\c{c}ar for
 	\end{amatrix}_{m \times (n + 1)}.
 \]
 
-Sabemos que $P$ \'e linha-equivalente a uma matriz linha-reduzida \`a forma em escada $R$. A \'ultima coluna de $R$ cont\'em elementos $z_1$, $z_2$, \dots, $z_m$ que s\~ao resultados das opera\c{c}\~oes elementares aplicadas \`a matriz $P$. Seja 
+Sabemos que $P$ \'e linha-equivalente a uma matriz linha-reduzida \`a forma em escada $R$. A \'ultima coluna de $R$ cont\'em elementos $z_1$, $z_2$, \dots, $z_m$ que s\~ao resultados das opera\c{c}\~oes elementares aplicadas \`a matriz $P$. Seja
 \[
 	Z =
 	\begin{bmatrix}
@@ -1415,12 +1415,12 @@ As possibilidades para as solu\c{c}\~oes de tal sistema s\~ao descritas no segui
 		\]
 		Aplicando as opera\c{c}\~oes elementares para reduzir $A$ \`a forma em escada:
 		\begin{align*}
-			A &= 
+			A &=
 				\left[
 					\begin{array}{ccc}
 						\phantom{-}1 & \phantom{-}3 & \phantom{-}1 \\
 						\phantom{-}2 & \phantom{-}6 & \phantom{-}2 \\
-						-1 & -3 & -1 
+						-1 & -3 & -1
 					\end{array}
 				\right]
 				\begin{array}{l}
@@ -1432,7 +1432,7 @@ As possibilidades para as solu\c{c}\~oes de tal sistema s\~ao descritas no segui
 				\begin{array}{ccc}
 					1 & 3 & 1 \\
 					0 & 0 & 0 \\
-					0 & 0 & 0 
+					0 & 0 & 0
 				\end{array}
 				\right]
 		\end{align*}
@@ -1464,7 +1464,7 @@ As possibilidades para as solu\c{c}\~oes de tal sistema s\~ao descritas no segui
 		\]
 		Aplicando as opera\c{c}\~oes elementares para reduzir $A$ a forma em escada:
 		\begin{align*}
-			A &= 
+			A &=
 				\left[
 					\begin{array}{ccc|c}
 						\overline{1} & \overline{4} & \overline{2} & \overline{6}\\
@@ -1673,12 +1673,12 @@ As possibilidades para as solu\c{c}\~oes de tal sistema s\~ao descritas no segui
 					\\
 					L_2 \to L_2 - L_1\\
 					L_3 \to L_3 - 3L_1\\
-				\end{array} \sim		
+				\end{array} \sim
 				\left[
 					\begin{array}{ccc|c}
 						1 & -1 & \phantom{-}2 & \phantom{-}4 \\
 						0 & \phantom{-}1 & -1 & \phantom{-}2 \\
-						0 & -1 & \phantom{-}1 & -4 
+						0 & -1 & \phantom{-}1 & -4
 					\end{array}
 				\right]
 				\begin{array}{l}
@@ -1690,7 +1690,7 @@ As possibilidades para as solu\c{c}\~oes de tal sistema s\~ao descritas no segui
 					\begin{array}{ccc|c}
 						1 & 0 & \phantom{-}1 & \phantom{-}6 \\
 						0 & 1 & -1 & \phantom{-}2 \\
-						0 & 0 & \phantom{-}0 & -2 
+						0 & 0 & \phantom{-}0 & -2
 					\end{array}
 				\right]
 		\end{align*}
@@ -1755,7 +1755,7 @@ tal que $AB = BA = I_2$? Queremos que
 	\begin{bmatrix}
 		x & y\\
 		z & t
-	\end{bmatrix} = 
+	\end{bmatrix} =
 	\begin{bmatrix}
 		1 & 0\\
 		0 & 1
@@ -1787,7 +1787,7 @@ Assim podemos considerar a matriz ampliada contendo colunas correspondentes a ca
     \left[
     	\begin{array}{cc|cc}
     		1 &  2 & \phantom{-}1 & 0 \\
-        	0 &  -2 & -3 & 1	
+        	0 &  -2 & -3 & 1
     	\end{array}
     \right]
     \begin{array}{l}
@@ -1960,7 +1960,7 @@ e neste caso definimos
 \[
 	\det A = a_{11} \in \cp{K}.
 \]
-Suponha que $n > 1$ e que $\det B$ esteja definido para todas as matrizes  $B \in \cp{M}_p(\cp{K})$ com $p < n$ e seja 
+Suponha que $n > 1$ e que $\det B$ esteja definido para todas as matrizes  $B \in \cp{M}_p(\cp{K})$ com $p < n$ e seja
 $A \in \cp{M}_n(\cp{K})$. Para cada $(i,j)$, defina a matriz $A_{ij}$ formada a partir de $A$ retirando-se a sua $i$-\'esima linha e a sua $j$-\'esima coluna. \'E claro que $A \in \cp{M}_{n - 1}(\cp{K})$ e portanto $\det A_{ij}$ est\'a definido. Defina ent\~ao
 \[
 	\det A = \sum_{j = 1}^n(-1)^{i + j}a_{ij}\det A_{ij} \in \cp{K}.
