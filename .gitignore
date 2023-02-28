@@ -15,3 +15,6 @@ Algebra_Linear.tex
 main.pdf
 main.tex
 IAL.pdf
+*.bcf
+*.xml
+*.toc
