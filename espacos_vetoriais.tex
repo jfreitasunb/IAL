@@ -1,6 +1,6 @@
-%!TEX root = Algebra_Linear.tex
-%%Usar makeindex -s indexstyle.ist arquivo no terminal para gerar o {\'\i}ndice remissivo agrupado por inicial
-%%Ap\'os executar pdflatex arquivo
+%!TEX program = xelatex
+%!TEX root = IAL.tex
+
 \chapter{Espa\c{c}os Vetoriais}
 
 Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
@@ -211,8 +211,8 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 			0_V = \alpha_1 u_1 + \alpha_2 u_2 + \cdots + \alpha_n u_n
 		\]
 		onde $u_i \in \mathcal{B}$ e $\alpha_i \in \cp{K}$ com $i = 1$, 2, \dots, n \'e tomando $\alpha_1 = \alpha_2 = \cdots = \alpha_n = 0_\cp{K}$.
-		
-		\item Dizemos que o conjunto $\mathcal{B}$ \'e \textbf{linearemente dependente}\index{Espa\c{c}o Vetorial!Conjunto L.D.} ou simplesmente 
+
+		\item Dizemos que o conjunto $\mathcal{B}$ \'e \textbf{linearemente dependente}\index{Espa\c{c}o Vetorial!Conjunto L.D.} ou simplesmente
 		\textbf{L.D.}, se existem vetores distintos $u_1$, $u_2$, \dots, $u_n \in \mathcal{B}$ e escalares $\alpha_1$, $\alpha_2$, \dots, $\alpha_n$ n\~ao todos nulos, tais que
 		\[
 			\alpha_1 u_1 + \alpha_2 u_2 + \cdots + \alpha_n u_n = 0_V.
@@ -328,7 +328,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \begin{prova}
 	Sejam $\mathcal{B}$ e $\mathcal{B}'$ duas bases de $V$. Como $V$ \'e finitamente gerado, segue da Proposi\c{c}\~ao \ref{conjuntoLI} que $\mathcal{B}$ e $\mathcal{B}'$ s\~ao finitos pois s\~ao L.I e possuem $m$ e $m'$ elementos, respectivamente.
 
-	Considerando $\mathcal{B}$ como conjunto gerador de $V$ e $\mathcal{B}'$ L.I., segue da Proposi\c{c}\~ao \ref{conjuntoLI} que $m' \le m$. Por outro lado, considerando $\mathcal{B}'$ como conjunto gerador de $V$ e $\mathcal{B}$ L.I., segue da Proposi\c{c}\~ao \ref{conjuntoLI} que $m 
+	Considerando $\mathcal{B}$ como conjunto gerador de $V$ e $\mathcal{B}'$ L.I., segue da Proposi\c{c}\~ao \ref{conjuntoLI} que $m' \le m$. Por outro lado, considerando $\mathcal{B}'$ como conjunto gerador de $V$ e $\mathcal{B}$ L.I., segue da Proposi\c{c}\~ao \ref{conjuntoLI} que $m
 	\le m'$.
 
 	Logo $m = m'$, ou seja, duas bases t\^em sempre o mesmo n\'umero de elementos.
@@ -477,7 +477,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 	Seja $v \in W_1 + W_2$. Ent\~ao $v = x + y$ onde $x \in W_1$ e $y \in W_2$. Mas $\mathcal{B}_1$ e $\mathcal{B}_2$ s\~ao bases de $W_1$ e $W_2$, respectivamente. Assim
 	\begin{align*}
 		x = \sum_{i = 1}^n \alpha_i w_i + \sum_{j = 1}^r\beta_j v_j\\
-		y = \sum_{i = 1}^n \delta_i w_i + \sum_{l = 1}^p\gamma_l u_l	
+		y = \sum_{i = 1}^n \delta_i w_i + \sum_{l = 1}^p\gamma_l u_l
 	\end{align*}
 	com $\alpha_i$, $\beta_j$, $\delta_i$, $\gamma_l \in \cp{K}$. Da{\'\i}
 	\[
@@ -655,7 +655,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 			\]
 			Aplicando as opera\c{c}\~oes elementares em $A$ para reduz{\'\i}-la a forma em escada
 			\begin{align*}
-				A &= 
+				A &=
 					\left[
 						\begin{array}{ccc}
 		  					\phantom{-}1 & 2 & 1\\
@@ -725,7 +725,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 			\]
 			Aplicando as opera\c{c}\~oes elementares em $M$:
 			\begin{align*}
-				M &= 
+				M &=
 					\left[
 						\begin{array}{ccc}
 		  					\phantom{-}1 & \phantom{-}0 & \phantom{-}1\\
@@ -830,7 +830,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \end{lema}
 
 \begin{teorema}
-	Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$ e seja $\mathcal{C}$ um conjunto L.I. em $V$. Ent\~ao existe uma base $\mathcal{B}$ de $V$ contendo $\mathcal{C}$.	
+	Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$ e seja $\mathcal{C}$ um conjunto L.I. em $V$. Ent\~ao existe uma base $\mathcal{B}$ de $V$ contendo $\mathcal{C}$.
 \end{teorema}
 \begin{prova}
 	Sejam $V$ um espa\c{c}o vetorial sobre $\cp{K}$ e $\mathcal{C}$ um subconjunto L.I. de $V$. Considere $\mathcal{P}$ a classe de todos os subconjuntos L.I. em $V$ que contenham $\mathcal{C}$. \'E claro que $\mathcal{P}$ \'e n\~ao vazio, j\'a que o pr\'oprio conjunto $\mathcal{C}$ pertence a $\mathcal{P}$. Al\'em disso, $\mathcal{P}$ \'e parcialmente ordenado por inclus\~ao. Para usar o Lema de Zorn, precisamos mostrar que todo subconjunto totalmente ordenado de $\mathcal{P}$ tem uma cota superior. Com esse objetivo, considere $\mathcal{D} = \{\mathcal{A}_\alpha\}_{\alpha \in I}$ um subconjunto totalmente ordenado de $\mathcal{P}$. O candidato natural para cota superior de $\mathcal{D}$ \'e a uni\~ao de todos os conjuntos $\mathcal{A}_\alpha$ em $\mathcal{D}$. Precisamos mostrar que $\mathcal{A} = \cup_{\alpha \in I}\mathcal{A}_\alpha$ \'e L.I.. Seja ent\~ao $\mathcal{L} = \{v_1, v_2, \dots,v_n\}$ um subconjunto finito de $\mathcal{A}$. Da{\'\i} para cada $i = 1$, \dots, $n$ existe $\alpha_i \in I$ tal que $v_i \in \mathcal{A}_{\alpha_i}$. Como $\mathcal{A}$ \'e totalmente ordenado, podemos reorganizar os {\'\i}ndices $i$ de tal modo que $\mathcal{A}_{\alpha_1} \sub \mathcal{A}_{\alpha_2} \sub \cdots \sub \mathcal{A}_{\alpha_n}$. Agora cada $\mathcal{A}_{\alpha_i}$ \'e L.I. pois pertencem a $\mathcal{P}$, ent\~ao como $\mathcal{L} \sub \mathcal{A}_{\alpha_n}$, segue que $\mathcal{L}$ tamb\'em \'e L.I.. Como $\mathcal{L}$ \'e qualquer conjunto finito, segue que $\mathcal{A}$ \'e L.I.. Assim $\mathcal{D}$ possui uma cota superior. Segue do Lema de Zorn que $\mathcal{P}$ tem elemento maximal, que vamos chamar de $\mathcal{B}$. Provemos que $\mathcal{B}$ \'e uma base de $V$. Primeiro como $\mathcal{B}$ \'e um elemento de $\mathcal{P}$, ent\~ao $\mathcal{B}$ \'e L.I.. Resta ent\~ao provar que $\mathcal{B}$ gera $V$. Para isso, suponha que existe $w \in V$ que n\~ao \'e gerado por $\mathcal{B}$. Assim $\mathcal{B} \cup \{w\}$ \'e L.I.. Mas $\mathcal{B} \sub \mathcal{B} \cup \{w\}$ o que \'e imposs{\'\i}vel pois $\mathcal{B}$ \'e elemento maximal. Logo tal $w$ n\~ao existe. Portanto $\mathcal{B}$ \'e uma base de $V$.

@@ -1,7 +1,5 @@
 %!TEX program = xelatex
-%!TEX root = Algebra_Linear.tex
-%%Usar makeindex -s indexstyle.ist Algebra_Linear.idx arquivo no terminal para gerar o {\'\i}ndice remissivo agrupado por inicial
-%%Ap\'os executar pdflatex arquivo
+%!TEX root = IAL.tex
 
 \chapter{Transforma\c{c}\~oes Lineares}
 
@@ -73,11 +71,11 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \begin{exemplo}
 	\begin{enumerate}[label={\arabic*})]
 		\item Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais. A fun\c{c}\~ao $T : V \to W$ dada por $T(u) = 0_W$ para todo $u \in V$ \'e uma transforma\c{c}\~ao linear.
-		
+
 		\item Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. A fun\c{c}\~ao $T : V \to V$ dada por $T(u) = u$ para todo $u \in V$ \'e uma transforma\c{c}\~ao linear.
-		
+
 		\item Considere $\real$ como um $\real$-espa\c{c}o vetorial. Dado $a \in \real$, defina $T_a : \real \to \real$ por $T_a(x) = ax$ para todo $x \in \real$. Ent\~ao $T_a$ \'e uma transforma\c{c}\~ao linear. Agora, seja $T : \real \to \real$ dada por $T(x) = e^x$. Ent\~ao $T$ n\~ao \'e uma transforma\c{c}\~ao linear pois $T(0) \ne 0$.
-		
+
 		\item Sejam $\cp{K}^3$ e $\cp{M}_2(\cp{K})$ $\cp{K}$-espa\c{c}os vetoriais. Defina $T : \cp{K}^3 \to \cp{M}_2(\cp{K})$ por
 		\[
 			T(a, b, c) = \begin{bmatrix}
@@ -851,7 +849,7 @@ Seja $P$ a matriz cuja entrada $(i,j)$ \'e o escalar $\alpha_{ij}$, isto \'e,
 Ent\~ao podemos escrever
 \[
 	[x]_{\mathcal{B}_1} = P \begin{bmatrix}
-		\beta_1\\ 
+		\beta_1\\
 		\vdots\\
 		\beta_n
 	\end{bmatrix} = P[x]_{\mathcal{B}_2}.
