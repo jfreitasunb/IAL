@@ -30,6 +30,9 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\def\ano{2023}
+\def\semestre{1}
+
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
@@ -54,10 +57,20 @@
 
 \definecolor{ocre}{RGB}{243, 102, 25} % Define the color used for highlighting throughout the book
 
-\chapterimage{orange1.jpg} % Chapter heading image
+%\chapterimage{orange1.jpg} % Chapter heading image
 \chapterspaceabove{6.5cm} % Default whitespace from the top of the page to the chapter title on chapter pages
 \chapterspacebelow{6.75cm} % Default amount of vertical whitespace from the top margin to the start of the text on chapter pages
 \input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\tikzset{
+	>=stealth,
+	bullet/.style={
+		fill=black,
+		circle,
+		minimum width=1pt,
+		inner sep=1pt
+	}
+}
 
 %----------------------------------------------------------------------------------------
 
@@ -67,32 +80,30 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\titlepage % Output the title page
-	{\includegraphics[width=\paperwidth]{background.pdf}} % Code to output the background image, which should be the same dimensions as the paper to fill the page entirely; leave empty for no background image
-	{ % Title(s) and author(s)
-		\centering\sffamily % Font styling
-		{\Huge\bfseries Introdução à Álgebra Linear\par} % Book title
-		\vspace{16pt} % Vertical whitespace
-		\vspace{24pt} % Vertical whitespace
-		{\huge\bfseries José Antônio O. Freitas\par} % Author name
-		\vspace{26pt}
-		{\bfseries \today\par}
-	}
+\begingroup
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+	\node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background}};
+	\draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Introdução à Álgebra Linear\\[15pt] % Book title
+			{\Large Notas de Aula \semestre/\ano}\\[20pt] % Subtitle
+			{\huge Jos\'e Ant\^onio O. Freitas}\\
+			{\large \today}}}; % Author name
 
+\end{tikzpicture}
+\vfill
+\endgroup
 %----------------------------------------------------------------------------------------
 %	COPYRIGHT PAGE
 %----------------------------------------------------------------------------------------
-
-\thispagestyle{empty} % Suppress headers and footers on this page
-
-~\vfill % Push the text down to the bottom of the page
+\newpage
+~\vfill
+\thispagestyle{empty}
 
 \noindent \ccbyncsa\ Este texto est\'a licenciado sob uma \textbf{Licen\c{c}a Creative Commons Atribui\c{c}\~ao-N\~aoComercial-CompartilhaIgual 3.0 Brasil} \href{http://creativecommons.org/licenses/by-nc-sa/3.0/br/deed.pt\_BR}{\textit{http://creativecommons.org/licenses/by-nc-sa/3.0/br/deed.pt\_BR}}\\ % Copyright notice
 
 %----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
-
 \pagestyle{empty} % Disable headers and footers for the following pages
 
 \tableofcontents % Output the table of contents
@@ -106,6 +117,10 @@
 %----------------------------------------------------------------------------------------
 
 \include{sistemas_lineares}
+\include{espacos_vetoriais}
+\include{transformacoes_lineares}
+\include{formas_canonicas}
+\include{produto_interno}
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
