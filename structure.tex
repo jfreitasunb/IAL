@@ -1,33 +1,16 @@
 %!TEX program = xelatex
 %!TEX root = IAL.tex
 
-\usepackage{graphicx} % Required for including pictures
-\graphicspath{{Images/}} % Specifies the directory where pictures are stored
 
 \usepackage{ccicons} %ícones creative commons
 
-\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext}
-
-\usepackage{enumitem}
-
-\usepackage{lipsum} % Inserts dummy text
-
-\usepackage{tikz} % Required for drawing custom shapes
+\usepackage{amstext}
 
 \usepackage[brazil]{babel}
 
 \usepackage{multicol}
 
 \usepackage{gauss}
-
-\usepackage{enumitem} % Customize lists
-\setlist{nolistsep} % Reduce spacing between bullet points and numbered lists
-
-\usepackage{booktabs} % Required for nicer horizontal rules in tables
-
-\usepackage{xcolor} % Required for specifying colors by name
-\definecolor{ocre}{RGB}{243,102,25} % Define the orange color used for highlighting throughout the book
-
 
 %----------------------------------------------------------------------------------------
 %	MATH COMMANDS
@@ -121,3 +104,34 @@
     \addtocounter{elimination@steps}{1}
 }
 \makeatother
+% Defines the theorem text style for each type of theorem to one of the three styles above
+\newcounter{dummy}
+\numberwithin{dummy}{section}
+\theoremstyle{ocrenumbox}
+\newtheorem{teoremaT}[dummy]{Teorema}
+\newtheorem{problema}{Problema}[chapter]
+\newtheorem{exercicio}{Exercício}[chapter]
+\theoremstyle{blacknumex}
+\newtheorem{exemplo}{Exemplo}[chapter]
+\newtheorem{exemplos}{Exemplos}[chapter]
+\newtheorem{observacao}{Observaçao}[chapter]
+\newtheorem{observacoes}{Observações}[chapter]
+\newtheorem{nota}{Nota}[chapter]
+\theoremstyle{blacknumbox}
+\newtheorem{definicaoT}{Definição}[section]
+\newtheorem{definicoesT}{Definições}[section]
+\newtheorem{corolarioT}[dummy]{Corolário}
+\theoremstyle{ocrenum}
+\newtheorem{proposicao}[dummy]{Proposição}
+\newtheorem{lema}[dummy]{Lema}
+\newenvironment{prova}[1][Prova]{\noindent\textbf{#1:} }{\qedsymbol}%{\ \rule{0.5em}{0.5em}}
+
+
+% Creates an environment for each type of theorem and assigns it a theorem text style from the "Theorem Styles" section above and a colored box from above
+\newenvironment{teorema}{\begin{tBox}\begin{teoremaT}}{\end{teoremaT}\end{tBox}}
+\newenvironment{definicao}{\begin{dBox}\begin{definicaoT}}{\end{definicaoT}\end{dBox}}
+\newenvironment{definicoes}{\begin{dBox}\begin{definicoesT}}{\end{definicoesT}\end{dBox}}
+\newenvironment{corolario}{\begin{cBox}\begin{corolarioT}}{\end{corolarioT}\end{cBox}}
+\newtheorem*{solucao}{Solu{\c c}{\~a}o:}
+\newtheorem{notacao}{Nota\c{c}\~ao}[section]
+\newtheorem{propriedades}{Propriedades}[section]
