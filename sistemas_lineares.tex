@@ -1,0 +1,2030 @@
+%!TEX program = xelatex
+%!TEX root = Algebra_Linear.tex
+%%Usar makeindex -s indexstyle.ist arquivo no terminal para gerar o {\'\i}ndice remissivo agrupado por inicial
+%%Ap\'os executar pdflatex arquivo
+\chapter{Sistemas Lineares E Matrizes}
+
+%\section{Preliminares}
+
+\section{Corpos}\label{ssub:corpos}
+
+\begin{definicao}\label{corpo}\index{Corpos}
+	Um conjunto n\~ao vazio $\cp{K}$ \'e chamado de \textbf{corpo} se em $\cp{K}$ podemos definir duas opera\c{c}\~oes, denotadas por $\oplus$ (e chamada de \textbf{adi\c{c}\~ao}) e $\otimes$ (e chamada de \textbf{multiplica\c{c}\~ao}) de modo que
+	\begin{align*}
+		(1)\ a \oplus b \in \cp{K}\\
+		(2)\ a \otimes b \in \cp{K}
+	\end{align*}
+	para todos $a$, $b \in \cp{K}$ e que satisfa\c{c}am as seguintes propriedades:
+	\begin{enumerate}[label={\roman*})]
+		\item \textbf{Comutatividade da adi\c{c}\~ao}: $a \oplus b = b \oplus a$ para todos $a$, $b \in \cp{K}$;
+		\item \textbf{Associatividade da adi\c{c}\~ao}: $a \oplus (b \oplus c) = (a \oplus b) \oplus c$, para todos $a$, $b$ e $c \in \cp{K}$;
+		\item \textbf{Elemento neutro da adi\c{c}\~ao}: Existe um elemento em $\cp{K}$, denotado por $0_\cp{K}$ ou simplesmente $0$ e chamado de \textbf{elemento neutro da adi\c{c}\~ao}, que satisfaz
+		\[
+			a \oplus 0_\cp{K} = a = 0_\cp{K} \oplus a
+		\]
+		para todo $a \in \cp{K}$.
+		\item \textbf{Elemento oposto da adi\c{c}\~ao}: Para cada $a \in \cp{K}$, existe um elemento em $\cp{K}$, denotado por $-a$ e chamado de \textbf{oposto} de $a$ ou \textbf{inverso aditivo} de $a$ tal que
+		\[
+			a \oplus (-a) = 0_\cp{K} = (-a) \oplus a.
+		\]
+		\item \textbf{Comutatividade da multiplica\c{c}\~ao}: $a \otimes b = b \otimes a$ para todos $a$, $b \in \cp{K}$;
+		\item \textbf{Associatividade da multiplica\c{c}\~ao}: $a \otimes (b \otimes c) = (a \otimes b) \otimes c$, para todos $a$, $b$ e $c \in \cp{K}$;
+		\item \textbf{Elemento neutro da multiplica\c{c}\~ao}: Existe um elemento em $\cp{K}$, denotado por $1_\cp{K}$ ou simplesmente $1$ e chamado de \textbf{elemento neutro da multiplica\c{c}\~ao} ou \textbf{unidade}, que satisfaz
+		\[
+			a \otimes 1_\cp{K} = a = 1_\cp{K} \otimes a
+		\]
+		para todo $a \in \cp{K}$.
+		\item \textbf{Elemento inverso da multiplica\c{c}\~ao}: Para cada $a \in \cp{K}$, $a \ne 0_{\cp{K}}$, existe um elemento em $\cp{K}$, denotado por $a^{-1}$ e chamado de \textbf{inverso multiplicativo} de $a$ 
+		tal que
+		\[
+			a \otimes a^{-1} = 1_\cp{K} = a^{-1} \otimes a.
+		\]
+		\item \textbf{Distributividade da soma em rela\c{c}\~ao \`a multiplica\c{c}\~ao}: $(a \oplus b)\otimes c = a\otimes c \oplus b\otimes c$, para todos $a$, $b$ e $c \in \cp{K}$.
+	\end{enumerate}
+\end{definicao}
+
+Para simplificar a nota\c{c}\~ao vamos escrever
+\[
+	a \otimes b = ab.
+\]
+Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, \otimes, \oplus)$. Quando n\~ao houver chance de confus\~ao em rela\c{c}\~ao \`as opera\c{c}\~oes de soma e multiplica\c{c}\~ao envolvidas no corpo $(\cp{K}, \otimes, \oplus)$, vamos simplesmente dizer que $\cp{K}$ \'e um corpo. Os elementos de um corpo $\cp{K}$ s\~ao chamados de \textbf{escalares}.
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item S\~ao exemplos de corpos os conjuntos: $\rac$, $\real$, $\complex$ com as opera\c{c}\~oes de soma e multiplica\c{c}\~oes usuais destes conjuntos.
+
+		\item O conjunto $\z$ com a soma e multiplica\c{c}\~oes usuais n\~ao \'e um corpo, pois por exemplo, n\~ao existe $b \in \z$ tal que $2b = 1$.
+
+		\item Seja
+		\[
+			\rac{[\sqrt{2}]} = \{a + b\sqrt{2} \mid a,\ b \in \rac\}.
+		\]
+		Dados $a + b\sqrt{2}$, $c + d\sqrt{2} \in \rac{[\sqrt{2}]}$, defina
+		\begin{align*}
+			(a + b\sqrt{2}) + (c + d\sqrt{2}) = (a + c) + (b + d)\sqrt{2}\\
+			(a + b\sqrt{2})(c + d\sqrt{2}) = (ac + 2bd) + (ad + bc)\sqrt{2}
+		\end{align*}
+		Al\'em disso, $a + b\sqrt{2} = c + d\sqrt{2}$ se, e somente se, $a = c$ e $b = d$.
+		Aqui o elemento neutro da adi\c{c}\~ao \'e $0$, o elemento neutro da multiplica\c{c}\~ao \'e $1$, o oposto aditivo de $a + b\sqrt{2}$ \'e $-a - b\sqrt{2}$ e o inverso multiplicativo de $a + b\sqrt{2}$ \'e $\dfrac{a - b\sqrt{2}}{a^2 - 2b^2}$ para $a \ne 0$ ou $b \ne 0$.
+
+		\item Considere as opera\c{c}\~oes $\oplus$ e $\otimes$ em $\rac$ definidas por
+		\begin{align*}
+			x \oplus y = x + y - 3\\
+			x \otimes y = x + y - \dfrac{xy}{3},
+		\end{align*}
+		para todos $x$, $y \in \rac$. Ent\~ao $(\rac, \oplus, \otimes)$ \'e um corpo.
+		\begin{solucao}
+			De fato, para todos $x$, $y$ e $z \in \rac$ temos:
+			\begin{enumerate}[label={\arabic*})]
+				\item $x \oplus y = x + y - 3 = y + x - 3 = y \oplus x$.
+				Logo $x \oplus y = y \oplus x$.
+
+				\item Temos
+				\begin{align*}
+					(x \oplus y) \oplus z &= (x + y - 3) \oplus z = (x + y - 3) + z - 3 = x + y + z - 6\\
+					x \oplus ( y \oplus z) &= x \oplus (y + z - 3) = x + (y + z - 3) - 3 = x + y + z - 6.
+				\end{align*} Logo $(x \oplus y) \oplus z = x \oplus ( y \oplus z)$, como quer{\'\i}amos.
+
+				\item Tome $0_{\cp{K}} = 3$. Ent\~ao para todo $x \in \rac$ temos
+				\[
+					x \oplus 0_{\cp{K}} = x \oplus 3 = x + 3 - x = x.
+				\]
+				Logo $0_{\cp{K}} = 3$ \'e o elemento neutro da opera\c{c}\~ao $\oplus$ em $\rac$.
+
+				\item Para $x \in \rac$ tome $y = 6 - x \in \rac$. Assim
+				\[
+					x \oplus y = x \oplus (6 - x) = x + (6 - x ) - 3 = 3 = 0_{\cp{K}},
+				\]
+				logo $y = 6 - x$ \'e o oposto de $x$ na adi\c{c}\~ao $\oplus$ definida em $\rac$.
+
+				\item $x \otimes y = x + y - \dfrac{xy}{3} = y + x - \dfrac{yx}{3} = y \otimes x$, para todos $x$, $y \in \rac$.
+
+				\item Para $x$, $y$ e $z \in \rac$ temos
+				\begin{align*}
+					(x \otimes y) \otimes z &= \left(x + y - \dfrac{xy}{3}\right) \otimes z = \left(x + y - \dfrac{xy}{3}\right) + y - \dfrac{\left(x + y - \dfrac{xy}{3}\right)z}{3} \\ &= x + y - \dfrac{xy}{3} + z - \dfrac{xz}{3} - \dfrac{yz}{3} + \dfrac{xyz}{9}\\
+					x \otimes (y \otimes z) &= x \otimes \left(y + z - \dfrac{yz}{3}\right) = x + \left(y + z - \dfrac{yz}{3}\right) - \dfrac{x\left(y + z - \dfrac{yz}{3}\right)}{3} \\ &= x + y + z - \dfrac{yz}{3} - \dfrac{xy}{3} - \dfrac{xz}{3} + \dfrac{xyz}{9},
+				\end{align*}
+				logo $(x \otimes y) \otimes z = x \otimes (y \otimes z)$, como quer{\'\i}amos.
+
+				\item Tome $1_{\cp{K}} = 0$. Ent\~ao
+				\[
+					x \otimes 1_{\cp{K}} = x \otimes 0 = x + 0 - \dfrac{x0}{3} = x,
+				\]
+				para todo $x \in \rac$. Logo $1_{\cp{K}} = 0$ \'e a unidade da opera\c{c}\~ao $\otimes$ em $\rac$.
+
+				\item Dado $x \in \rac$, $x \ne 3 = 0_{\cp{K}}$ tome $y = \dfrac{-3x}{3 - x} \in \rac$. Temos
+				\[
+					x \otimes y = x \otimes \dfrac{-3x}{3 - x} = x + \dfrac{-3x}{3 - x} - \dfrac{x\left(\dfrac{-3x}{3 - x}\right)}{3} = 0 = 1_{\cp{K}}.
+				\]
+				Logo $y = \dfrac{-3x}{3 - x}$ \'e o inverso multiplicativo de $x$ na opera\c{c}\~ao $\otimes$ em $\rac$.
+
+				\item Para todos $x$, $y$ e $z \in \rac$ temos
+				\begin{align*}
+					(x \oplus y) \otimes z &= (x + y - 3) \otimes z = (x + y - 3) + z - \dfrac{(x + y - 3)z}{3} \\ &= x + y - 3 + z - \dfrac{xz}{3} - \dfrac{yz}{3} + z\\
+					(x \otimes z) \oplus (y \otimes z) &= \left(x + z - \dfrac{xz}{3}\right) \oplus \left(y + z - \dfrac{yz}{3}\right) \\ &= x + z - \dfrac{xz}{3} + y + z - \dfrac{yz}{3} - 3,
+				\end{align*}
+				Logo $(x \oplus y) \otimes z = (x \otimes z) \oplus (y \otimes z)$.
+			\end{enumerate}
+			Portanto $(\rac, \oplus, \otimes)$ \'e um corpo.
+		\end{solucao}
+	\end{enumerate}
+\end{exemplo}
+
+\begin{proposicao}
+	Seja $(\cp{K}, +, \cdot)$ um corpo. Ent\~ao:
+	\begin{enumerate}[label={\roman*})]
+		\item O elemento neutro da soma \'e \'unico.
+		\item O oposto aditivo de cada elemento de $\cp{K}$ \'e \'unico.
+		\item Vale a lei do cancelamento, isto \'e, se $a + b = a + c$ ent\~ao $b = c$.
+		\item Para todo $a \in \cp{K}$, $a\cdot 0_\cp{K} = 0_\cp{K}$.
+		\item O elemento neutro da multiplica\c{c}\~ao \'e \'unico.
+		\item O inverso de um elemento n\~ao nulo \'e \'unico.
+		\item Se $a \in \cp{K}$ \'e tal que $a \ne 0_\cp{K}$ e $ab = ac$, ent\~ao $b = c$.
+		\item Se $ab = 0_\cp{K}$, com $a$ e $b \in \cp{K}$, ent\~ao $a = 0_\cp{K}$ ou $b = 0_\cp{K}$.
+	\end{enumerate}
+\end{proposicao}
+\begin{prova}
+	Vamos provar algumas propriedades.
+	\begin{enumerate}[label={\roman*})]
+		\item De fato, suponha que $0_1$ e $0_2$ sejam elementos neutros da soma em $\cp{K}$. Temos
+		\[
+			0_1 = 0_1 + 0_2 = 0_2.
+		\]
+	
+		\item Sejam $b$ e $c$ elementos opostos de $a$. Da{\'\i}
+		\begin{align*}
+			a + b &= 0_\cp{K}\\
+			a + c &= 0_\cp{K}.
+		\end{align*}
+	 	Ent\~ao
+		\[
+			b = b + 0_\cp{K} = b + (c + a) = (b + a) + c = 0_\cp{K} + c = c.
+		\]
+		
+		\item Temos
+		\begin{align*}
+			b &= b + 0_{\cp{K}} = b + (a + (-a)) = (b + a) + (-a) \\ &= (a + b) + (-a) = (a + c) + (-a) = (c + a) + (-a) \\ &= c + (a + (-a)) = c + 0_{\cp{K}} \\ &= c
+		\end{align*}
+		como quer{\'\i}amos.
+	
+		\item De fato,
+		\[
+			a\cdot 0_\cp{K} + 0_\cp{K} = a\cdot 0_\cp{K} = a\cdot (0_\cp{K} + 0_\cp{K}) = a\cdot 0_\cp{K} + a\cdot 0_\cp{K},
+		\]
+		logo pela lei do cancelamento, $a\cdot 0_\cp{K} = 0_\cp{K}$ como quer{\'\i}amos.
+	
+	
+		\item
+		De fato, suponha que $1_a$ e $1_b$ sejam elementos neutros da multiplica\c{c}\~ao. Ent\~ao
+		\[
+			1_a = 1_a\cdot 1_b = 1_b.
+		\]
+	
+		\item Dado $a \in \cp{K}$, $a \ne 0_{\cp{K}}$, suponha que $b$, $c \in \cp{K}$ sejam tais que
+		\[
+			ab = 1_{\cp{K}} \quad ac = 1_{\cp{K}}.
+		\]
+		Ent\~ao
+		\[
+			b = 1_{\cp{K}}b = (ac)b = c(ab) = c1_{\cp{K}} = c.
+		\]
+		
+		\item De fato,
+		\begin{align*}
+			b &= b1_{\cp{K}} = b(aa^{-1}) = (ba)a^{-1} = (ab)a^{-1} \\ &= (ac)a^{-1} = (ca)a^{-1} = c(aa^{-1}) = c1_{\cp{K}} \\ &= c
+		\end{align*}
+	
+		\item
+		Suponha que $a \ne 0_\cp{K}$, ent\~ao existe $a^{-1}$. Da{\'\i}
+		\begin{align*}
+			&ab = 0_\cp{K}\\
+			&a^{-1}(ab) = a^{-1}0_\cp{K}\\
+			&1b = 0_\cp{K}\\
+			&b = 0_\cp{K}.
+		\end{align*}
+	\end{enumerate}
+\end{prova}
+
+
+% \begin{observacao}
+% Os elementos de um corpo qualquer $\cp{K}$ s\~ao chamados de \textbf{escalares}.
+% \end{observacao}
+
+\section{Corpos Finitos}\label{sec:corpor_finitos}\index{Corpos!Finitos}
+
+Aqui vamos utilizar o seguinte resultado, conhecido como \textbf{algoritmo da divis\~ao de Euclides} em $\z$: dados $a$, $b \in \z$ com $b > 0$, ent\~ao existem \'unicos $q$, $r \in \z$ tais que
+\[
+	a = bq + r
+\]
+onde $0 \le r < b$.
+
+
+Fixemos ent\~ao $p \in \z$ um n\'umero primo. Dado $a \in \z$, sempre \'e poss{\'\i}vel escrever
+\[
+	a = pq + r,
+\]
+onde $b$, $r \in \z$ e $0 \le r \le p - 1$. Assim quando efetuamos a divis\~ao inteira de qualquer n\'umero inteiro $a$ por $p$ os poss{\'\i}veis restos s\~ao: $0$, 
+$1$, $2$, \dots, $p -1 $.
+
+Assim vamos considerar o seguinte conjunto
+\[
+	\z_p = \{\overline{0}, \overline{1}, \overline{2}, \dots, \overline{p - 1}\}
+\]
+onde
+\begin{align*}
+	&\overline{0} = \{bp \mid b \in \z\} = \{0, \pm p, \pm 2p, \pm 3p, \dots\}\\
+	&\overline{1} = \{bp + 1\mid b \in \z\} = \{\pm p + 1, \pm 2p + 1, \pm 3p + 1, \dots\}\\
+	&\overline{2} = \{bp + 2\mid b \in \z\} = \{\pm p + 2, \pm 2p + 2, \pm 3p + 2, \dots\}\\
+	\vdots\\
+	&\overline{p - 1} = \{bp + (p - 1) \mid b \in \z\} = \{(b + 1)p - 1) \mid b \in \z\}\\ &= \{cp - 1 \mid c \in \z\} = \{-1, \pm p - 1, \pm 2p - 1, \pm 3p - 1, \dots\}.
+\end{align*}
+
+defina em $\z_p$ a soma $\oplus$ e a multiplica\c{c}\~ao $\otimes$ por: para $\overline{x}$, $\overline{y} \in \z_p$
+\begin{align*}
+	\overline{x} \oplus \overline{y} &= \overline{x + y}\\
+	\overline{x} \otimes \overline{y} &= \overline{xy},
+\end{align*}
+onde sob a barra estamos usando a soma e multiplica\c{c}\~ao usuais dos inteiros. Para determinar o valor de $\overline{x + y}$ e de $\overline{xy}$, encontramos o resto da divis\~ao inteira de $x + y$ por $p$ e de $xy$ por $p$. Logo
+\begin{align*}
+	\overline{x} \oplus \overline{y} \in \z_p\\
+	\overline{x} \otimes \overline{y} \in \z_p.
+\end{align*}
+
+\begin{exemplos}
+	\begin{enumerate}[label={\arabic*})]
+		\item Para $p = 3$ os poss{\'\i}veis restos na divis\~ao inteira s\~ao: $0$, $1$ e $2$. Da{\'\i}
+			\[
+				\z_3 = \{\overline{0}, \overline{1}, \overline{2}\}
+			\]
+		e temos
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				$\oplus$ &\rule{0pt}{2.5ex} $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
+				$\rule{0pt}{2.5ex}\overline{0}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
+				$\rule{0pt}{2.5ex}\overline{1}$ & $\overline{1}$ & $\overline{2}$ & $\overline{0}$\\\hline
+				$\rule{0pt}{2.5ex}\overline{2}$ & $\overline{2}$ & $\overline{0}$ & $\overline{1}$\\\hline
+				\end{tabular} \qquad \begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				$\otimes$ &\rule{0pt}{2.5ex} $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
+				$\rule{0pt}{2.5ex}\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$\\\hline
+				$\rule{0pt}{2.5ex}\overline{1}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$\\\hline
+				$\rule{0pt}{2.5ex}\overline{2}$ & $\overline{0}$ & $\overline{2}$ & $\overline{1}$\\\hline
+			\end{tabular}
+		\end{center}
+		Note que a soma $\oplus$ e o produto $\otimes$ em $\z_3$ s\~ao comutativos, a soma possui elemento neutro que \'e $\overline{0}$, todo elemento possui
+		oposto aditivo. A multiplica\c{c}\~ao possui unidade que \'e $\overline{1}$ e todo elemento n\~ao nulo possui inverso multiplicativo. \'E simples verificar que a soma e o produto em $\z_3$ s\~ao associativos e o produto \'e distributivo em rela\c{c}\~ao \`a soma. Portanto, $(\z_3, \oplus, \otimes)$ \'e um corpo. Al\'em disso, em tal corpo temos
+		\[
+			(\overline{1} \oplus \overline{1}) \oplus \overline{1} = (\overline{1 + 1}) \oplus \overline{1} = \overline{2} \oplus \overline{1} = \overline{3} = \overline{0}.
+		\]
+		e $\overline{1} \ne \overline{0}$.
+
+		\item Para $p = 5$ os poss{\'\i}veis restos na divis\~ao inteira s\~ao: $0$, $1$, $2$, $3$ e $4$. Da{\'\i}
+			\[
+				\z_5 = \{\overline{0}, \overline{1}, \overline{2}, \overline{3}, \overline{4}\}
+			\]
+		e temos
+			\begin{center}
+				\begin{tabular}{|c|c|c|c|c|c|c|c|}
+					\hline
+					$\oplus$ &\rule{0pt}{2.5ex}$\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
+					$\rule{0pt}{2.5ex}\overline{0}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
+					$\rule{0pt}{2.5ex}\overline{1}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$ & $\overline{0}$\\\hline
+					$\rule{0pt}{2.5ex}\overline{2}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$& $\overline{0}$ & $\overline{1}$ \\\hline
+					$\rule{0pt}{2.5ex}\overline{3}$ & $\overline{3}$ & $\overline{4}$ & $\overline{0}$& $\overline{1}$ & $\overline{2}$ \\\hline
+					$\rule{0pt}{2.5ex}\overline{4}$ & $\overline{4}$ & $\overline{0}$ & $\overline{1}$& $\overline{2}$ & $\overline{3}$ \\\hline
+				\end{tabular} \qquad 
+				\begin{tabular}{|c|c|c|c|c|c|}
+					\hline
+					$\otimes$ &\rule{0pt}{2.5ex} $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
+					$\rule{0pt}{2.5ex}\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$\\\hline
+					$\rule{0pt}{2.5ex}\overline{1}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\overline{3}$ & $\overline{4}$\\\hline
+					$\rule{0pt}{2.5ex}\overline{2}$ & $\overline{0}$ & $\overline{2}$ & $\overline{4}$& $\overline{1}$ & $\overline{3}$ \\\hline
+					$\rule{0pt}{2.5ex}\overline{3}$ & $\overline{0}$ & $\overline{3}$ & $\overline{1}$& $\overline{4}$ & $\overline{2}$ \\\hline
+					$\rule{0pt}{2.5ex}\overline{4}$ & $\overline{0}$ & $\overline{4}$ & $\overline{3}$& $\overline{2}$ & $\overline{1}$ \\\hline
+				\end{tabular}
+			\end{center}
+		Note que a soma $\oplus$ e o produto $\otimes$ em $\z_5$ s\~ao comutativos, a soma possui elemento neutro que \'e $\overline{0}$, todo elemento possui
+		oposto aditivo. A multiplica\c{c}\~ao possui unidade que \'e $\overline{1}$ e todo elemento n\~ao nulo possui inverso multiplicativo. \'E simples verificar que a soma e o produto em $\z_5$ s\~ao associativos e o produto \'e distributivo em rela\c{c}\~ao \`a soma. Portanto, $(\z_5, \oplus, \otimes)$ \'e um corpo. Al\'em disso, em tal corpo temos
+		\[
+			\overline{1} \oplus \overline{1} \oplus \overline{1} \oplus \overline{1} \oplus \overline{1} = \overline{1 + 1 + 1 + 1 + 1} = \overline{5} = \overline{0}.
+		\]
+		e $\overline{1} \ne \overline{0}$.
+	\end{enumerate}
+\end{exemplos}
+
+\begin{teorema}
+	Para todo $p \in \z$, $p$ n\'umero primo, $(\z_p, \oplus, \otimes)$ \'e um corpo.
+\end{teorema}
+\begin{prova}
+	Dados $\overline{x}$, $\overline{y}$, $\overline{z} \in \z_p$ temos:
+	\begin{enumerate}[label={\roman*})]
+		\item $\overline{x} \oplus \overline{y} = \overline{x + y} = \overline{y + x} = \overline{y} \oplus \overline{x}$;
+		\item $(\overline{x} \oplus \overline{y}) \oplus \overline{z} = (\overline{x + y}) \oplus \overline{z} = \overline{(x + y) + z} = \overline{x + (y + z)} = \overline{x} \oplus (\overline{y} \oplus \overline{z}) = \overline{x} \oplus (\overline{y} \oplus \overline{z})$
+		\item Temos que $\overline{0} \in \z_p$ e para todo $\overline{x} \in \z_p$:
+		\[
+			\overline{0} \oplus \overline{x} = \overline{x} \oplus \overline{0} = \overline{x + 0} = \overline{x}.
+		\]
+		Logo $\overline{0}$ \'e o elemento neutro da adi\c{c}\~ao em $\z_p$.
+		\item Dado $\overline{x} \in \z_p$, tome $\overline{p - x} \in \z_p$, pois $0 \le p - x \le p - 1$. Assim
+		\[
+			\overline{x} \oplus \overline{p - x} = \overline{p - x} \oplus \overline{x} = \overline{(p - x) + x} = \overline{p} = \overline{0}.
+		\]
+		Logo todo elemento de $\z_p$ possui oposto aditivo.
+		\item $\overline{x} \otimes \overline{y} = \overline{x\cdot y} = \overline{y \cdot x} = \overline{y} \otimes \overline{x}$.
+		\item $(\overline{x} \otimes \overline{y}) \otimes \overline{z} = (\overline{x\cdot y}) \otimes \overline{z} = \overline{(x\cdot y) \cdot z} = 
+		\overline{x\cdot (y\cdot z)} = \overline{x} \otimes (\overline{y} \otimes \overline{z})$.
+		\item O elemento $\overline{1} \in \z_p$ \'e tal que
+		\[
+			\overline{1} \otimes \overline{x} = \overline{x} \otimes \overline{1} = \overline{x\cdot 1} = \overline{x}
+		\]
+		para todo $\overline{x} \in \z_p$.
+		\item Primeiramente, como $p$ \'e um n\'umero primo ent\~ao existem $y$, $z \in \z$ tais que
+		\[
+			xy + pz = 1
+		\]
+		para todo $x \in \{1, 2, \dots, p - 1\}$. Logo,
+		\begin{align*}
+			&\overline{xy + pz} = \overline{1}\\
+			&\overline{xy} \oplus \overline{pz} = \overline{1}\\
+			&\overline{x} \otimes \overline{y} + \overline{p} \otimes \overline{z} = \overline{1}\\
+			&\overline{x} \otimes \overline{y} = \overline{1}
+		\end{align*}
+		uma vez que $\overline{p} = \overline{0}$. Como $\overline{y}$ \'e obtido pelo resto da divis\~ao inteira de $y$ por $p$, ent\~ao 
+		$\overline{y} \in \z_p$. Observe que $y \ne 0$ pois $p \ge 2$ e $y \ne p$ pois sen\~ao $(x + z)p = 1$ o que \'e imposs{\'\i}vel uma vez que $p \ge 2$. Logo $\overline{y} \ne \overline{0}$ e assim todo elemento $\overline{x} \in \z_p$ possui inverso multiplicativo.
+		\item $(\overline{x} \oplus \overline{y}) \otimes \overline{z}= (\overline{x + y}) \otimes \overline{z} = \overline{(x + y) \cdot z} = \overline{xz + yz} = \overline{xz} \oplus \overline{yz} = \overline{x} \otimes \overline{z} \oplus \overline{y} \otimes \overline{z}$.
+	\end{enumerate}
+	Portanto, $(\z_p, \oplus, \otimes)$ \'e um corpo, como quer{\'\i}amos demonstrar.
+\end{prova}
+
+\begin{observacao}
+\begin{enumerate}
+	\item Se $p$ n\~ao for um n\'umero primo, $(\z_p, \oplus, \otimes)$ pode n\~ao ser corpo. Por exemplo, em $\z_6$ temos $\overline{2} \ne \overline{0}$ e $\overline{3} \ne \overline{0}$, mas
+	\[
+		\overline{2}\otimes \overline{3} = \overline{2\cdot 3} = \overline{6} = \overline{0}.
+	\]
+	\item Para simplificar a nota\c{c}\~ao vamos denotar $\oplus$ por $+$ e $\otimes$ por $\cdot$. Assim vamos dizer simplesmente que $(\z_p, +, \cdot)$ \'e um corpo.
+\end{enumerate}
+\end{observacao}
+
+\section{N\'umeros Complexos}
+Nesta se\c{c}\~ao vamos relembrar algumas propriedades b\'asicas dos \textbf{n\'umeros complexos}. Tal conjunto \'e definido como
+\[
+	\complex = \{a + bi \mid a, b \in \real, i^2 = -1\}.
+\]
+Dados $z = a + bi$, $w = c + di \in \complex$ definimos a soma e a multiplica\c{c}\~ao em $\complex$ por
+\begin{align*}
+	z + w &= (a + c) + (b + d)i\\
+	z\cdot w &= (ac - bd) + (ad + bc)i.
+\end{align*}
+Al\'em disso, $a + bi = c + di$ se, e somente se, $a = c$ e $b = d$.
+
+Dado um n\'umero complexo $z = a + bi \ne 0$, seja
+\[
+	w = \dfrac{a - bi}{a^2 + b^2} \ne 0.
+\]
+Note que
+\begin{align*}
+	z\cdot w = (a + bi)\cdot \dfrac{a - bi}{a^2 + b^2} = \dfrac{(a^2 + b^2) + (-ab + ba)}{a^2 + b^2} = 1
+\end{align*}
+assim $w$ \'e o inverso multiplicativo de $z$ em $\complex$.
+
+O \textbf{m\'odulo} do n\'umero complexo $z = a + bi$ \'e definido como
+\[
+	|z| = \sqrt{a^2 + b^2}
+\]
+e o \textbf{conjudado complexo} de $z = a + bi$ \'e definido como
+\[
+	\overline{z} = a - bi.
+\]
+
+\begin{proposicao}
+	Para todos $z$, $w \in \complex$ valem:
+	\begin{enumerate}[label={\roman*})]
+		\item $\overline{\overline{z}} = z$;
+		\item $|\overline{z}| = |z|$;
+		\item $z\cdot\overline{z} = |z|^2$;
+		\item $\overline{z^{-1}} = \overline{z}^{-1}$;
+		\item $\overline{z + w} = \overline{z} + \overline{w}$;
+		\item $\overline{z \cdot w} = \overline{z} \cdot \overline{w}$;
+		\item $|z \cdot w| = |z| \cdot |w|$;
+	\end{enumerate}
+\end{proposicao}
+
+Uma propriedade importante dos n\'umeros complexos que iremos utilizar \'e a seguinte:
+\begin{teorema}
+	Todo polin\^omio com coeficientes em $\complex$ possui ra{\'\i}zes complexas.
+\end{teorema}
+
+Um corpo satisfazendo a propriedade do teorema anterior \'e chamado de \textbf{algebricamente fechado}. \'E f\'acil ver que $\rac$ e $\real$ n\~ao s\~ao corpos algebricamente fechados, isto \'e, existem polin\^omios com coeficientes em $\rac$ e em $\real$ que n\~ao possuem ra{\'\i}zes nesses corpos.
+
+\section{Matrizes}
+
+Aqui vamos recordar algumas propriedades b\'asicas de matrizes. Para isso seja $\cp{K}$ um corpo.
+
+Sejam $m$, $n$ dois inteiros positivos. Uma \textbf{matriz $m$ por $n$ $A$ sobre $\cp{K}$} \'e dada por $m \times n$ valores $a_{ij} \in K$, com $1 \le i \le m$, $1 \le j \le n$ agrupadas em $m$ linhas e $n$ colunas, que ser\'a representada por
+\[
+	A = (a_{ij})_{m\times n} = \begin{pmatrix}
+		a_{11} & a_{12} & \cdots & a_{1n}\\
+		a_{21} & a_{22} & \cdots & a_{2n}\\
+		\vdots & & & \vdots\\
+		a_{m1} & a_{m2} & \cdots & a_{mn}
+	\end{pmatrix}.
+\]
+
+Denotaremos o conjunto de todas as matrizes $m \times n$ sobre $\cp{K}$ por $M_{m\times n}(\cp{K})$. Nesse conjunto podemos definir as seguintes opera\c{c}\~oes:
+\begin{enumerate}
+	\item \textit{Soma de matrizes:} Se $A = (a_{ij})$, $B = (b_{ij}) \in M_{m\times n}(\cp{K})$, ent\~ao a soma $A + B$ \'e a matriz $C = (c_{ij}) \in M_{m\times n}(\cp{K})$, tal que, para cada par $(i,j)$ temos $c_{ij} = a_{ij} + b_{ij}$, ou seja,
+	\begin{align*}
+		A + B &= \begin{pmatrix}
+		a_{11} & a_{12} & \cdots & a_{1n}\\
+		a_{21} & a_{22} & \cdots & a_{2n}\\
+		\vdots & & & \vdots\\
+		a_{m1} & a_{m2} & \cdots & a_{mn}
+	\end{pmatrix} + \begin{pmatrix}
+		b_{11} & b_{12} & \cdots & b_{1n}\\
+		b_{21} & b_{22} & \cdots & b_{2n}\\
+		\vdots & & & \vdots\\
+		b_{m1} & b_{m2} & \cdots & b_{mn}
+	\end{pmatrix}\\ &= \begin{pmatrix}
+		a_{11} + b_{11} & a_{12} + b_{12} & \cdots & a_{1n} + b_{1n}\\
+		a_{21} + b_{21} & a_{22} + b_{22}& \cdots & a_{2n} + b_{1n}\\
+		\vdots & & & \vdots\\
+		a_{m1} + b_{m1} & a_{m2} + b_{m2}& \cdots & a_{mn} + b_{mn}
+	\end{pmatrix}
+	\end{align*}
+	\'E f\'acil verificar que a soma de matrizes satisfaz as propriedades de $(i)$ \`a $(iv)$ da Defini\c{c}\~ao \ref{corpo}.
+
+	\item \textit{Multiplica\c{c}\~ao por escalar:} Se $A = (a_{ij}) \in M_{m\times n}(\cp{K})$ e $\lambda \in \cp{K}$ definimos o \textbf{produto de $\lambda$ por $A$} como sendo a matriz $B = (b_{ij}) \in M_{m\times n}(\cp{K})$ onde para cada para $(i,j)$ $b_{ij} = \lambda a_{ij}$:
+	\begin{align*}
+		\lambda A = \lambda \begin{pmatrix}
+		a_{11} & a_{12} & \cdots & a_{1n}\\
+		a_{21} & a_{22} & \cdots & a_{2n}\\
+		\vdots & & & \vdots\\
+		a_{m1} & a_{m2} & \cdots & a_{mn}
+	\end{pmatrix} = \begin{pmatrix}
+		\lambda a_{11} & \lambda a_{12} & \cdots & \lambda a_{1n}\\
+		\lambda a_{21} & \lambda a_{22} & \cdots & \lambda a_{2n}\\
+		\vdots & & & \vdots\\
+		\lambda a_{m1} & \lambda a_{m2} & \cdots & \lambda a_{mn}
+	\end{pmatrix}.
+	\end{align*}
+
+	\item \textit{Produto de matrizes:} Sejam $A = (a_{ij}) \in M_{m\times n}(\cp{K})$ e $B = (b_{ij}) \in M_{n\times p}(\cp{K})$, definimos o \textbf{produto de $A$ por $B$} como sendo a matriz $C = (c_{ij}) \in M_{m\times p}(\cp{K})$ tal que
+	\[
+		c_{ij} = \sum_{l=1}^n a_{il}b_{lj},
+	\]
+	para $i = 1$, \dots, $m$ e $j = 1$, \dots, $p$. Isto \'e,
+	\begin{align*}
+		A\cdot B &= \begin{pmatrix}
+		a_{11} & a_{12} & \cdots & a_{1n}\\
+		a_{21} & a_{22} & \cdots & a_{2n}\\
+		\vdots & & & \vdots\\
+		a_{m1} & a_{m2} & \cdots & a_{mn}
+	\end{pmatrix}\cdots \begin{pmatrix}
+		b_{11} & b_{12} & \cdots & b_{1p}\\
+		b_{21} & b_{22} & \cdots & b_{2p}\\
+		\vdots & & & \vdots\\
+		b_{n1} & b_{n2} & \cdots & b_{np}
+	\end{pmatrix} \\ &= \begin{pmatrix}
+		\sum_{l=1}^n a_{1l}b_{l1} & \sum_{l=1}^n a_{1l}b_{l2} & \cdots & \sum_{l=1}^n a_{1l}b_{lp}\\
+		\sum_{l=1}^n a_{2l}b_{l1} & \sum_{l=1}^n a_{2l}b_{l2} & \cdots & \sum_{l=1}^n a_{2l}b_{lp}\\
+		\vdots & & & \vdots\\
+		\sum_{l=1}^n a_{ml}b_{l1} & \sum_{l=1}^n a_{ml}b_{l2} & \cdots & \sum_{l=1}^n a_{ml}b_{lp}
+	\end{pmatrix}.
+	\end{align*}
+	N\~ao \'e dif{\'\i}cil verificar que o produto de matrizes \'e associativo.
+\end{enumerate}
+
+No caso particular em que $m = n$, as matrizes em $M_{n\times n}(\cp{K})$ s\~ao chamadas de \textbf{matrizes quadradas} e escreveremos simplesmente $M_n(\cp{K})$. No caso de matrizes quadradas a multiplica\c{c}\~ao de matrizes tem um elemento neutro, ou unidade, que ser\'a a matriz
+\[
+	Id_n = \begin{pmatrix}
+		1_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K}\\
+		0_\cp{K} & 1_\cp{K} & \cdots & 0_\cp{K}\\
+		\vdots & \vdots & & \vdots\\
+		0_\cp{K} & 0_\cp{K} & \cdots & 1_\cp{K}
+	\end{pmatrix},
+\]
+chamada de \textbf{matriz identidade} e para toda $A \in M_n(\cp{K})$ vale
+\[
+	A\cdot I_n = A = I_n\cdot A.
+\]
+De modo geral, a multiplica\c{c}\~ao de matrizes n\~ao \'e comutativa e n\~ao admite inverso multiplicativo.
+
+\begin{proposicao}
+	Dadas matrizes $A$, $B$ e $C \in M_{n\times n}(\cp{K})$ e $\alpha$, $\beta \in \cp{K}$ vale:
+	\begin{enumerate}[label={\roman*})]
+		\item $(A + B) + C = A + (B + C)$
+		\item $A + B = B + A$
+		\item $\alpha(A + B) = \alpha A + \alpha B$
+		\item $(\alpha + \beta)A = \alpha A + \beta A$.
+	\end{enumerate}
+	Agora se $A \in M_{m\times n}(\cp{K})$, $B \in M_{n\times l}(\cp{K})$ e $C \in M_{l\times p}(\cp{K})$, ent\~ao:
+	\begin{enumerate}[label={\roman*})]
+		\item $(A\cdot B)\cdot C = A\cdot(B \cdot C)$
+		\item $\alpha(A\cdot B) = (\alpha A)\cdot B = A \cdot(\alpha B)$
+	\end{enumerate}
+	Se $A \in M_{m\times n}(\cp{K})$, $B \in M_{m\times n}(\cp{K})$ e $C \in M_{n\times p}(\cp{K})$, ent\~ao:
+	\[
+		(A + B)\cdot C = (A\cdot C) + (B\cdot C).
+	\]
+\end{proposicao}
+\section{Sistemas Lineares}\label{ssub:sistemas_lineares}
+Seja $\cp{K}$ um corpo. Consideremos o problema de determinar $n$ escalares, ou seja, $n$ elementos $x_1$, $x_2$, \dots, $x_n$ em $\cp{K}$ que satisfa\c{c}am simultaneamente as equa\c{c}\~oes
+\begin{equation}\label{sistemalinear}\index{Sistema Linear}
+	\begin{cases}
+		a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1\\
+		a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2\\
+		\qquad \vdots\\
+		a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m\\
+	\end{cases}
+\end{equation}
+onde $b_1$, \dots, $b_m$ e $a_{ij}$, $1 \le i \le m$, $1 \le j \le n$ s\~ao elementos de $\cp{K}$ previamente conhecidos. Chamamos \eqref{sistemalinear} de um \textbf{sistema de $m$ equa\c{c}\~oes lineares a $n$ inc\'ognitas} $x_1$, $x_2$, \dots, $x_n$. Toda $n$-upla $(\alpha_1, \alpha_2, \dots, \alpha_n)$ onde $\alpha_i \in \cp{K}$ para $1 \le i \le n$, que satisfazem a cada uma das equa\c{c}\~oes de \eqref{sistemalinear} \'e chamada de uma \textbf{solu\c{c}\~ao} do sistema. 
+
+Se $b_1 = b_2 = \cdots = b_m = 0_\cp{K} \in K$, dizemos que o sistema
+\begin{equation}\label{sistemalinearhomogeneo}\index{Sistema Linear}
+	\begin{cases}
+		a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = 0_\cp{K}\\
+		a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = 0_\cp{K}\\
+		\qquad \vdots\\
+		a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = 0_\cp{K}\\
+	\end{cases}
+\end{equation}
+\'e um \textbf{sistema linear homog\^eneo}, ou que cada uma de suas equa\c{c}\~oes \'e homog\^enea. Observe que tal sistema sempre possui solu\c{c}\~ao, a saber, $x_1 = x_2 = \cdots = x_n = 0_\cp{K}$.
+
+O m\'etodo mais importante para determinar as solu\c{c}\~oes de um sistema de equa\c{c}\~oes lineares \'e o m\'etodo do \textbf{escalonamento}. Por exemplo, considere o sistema
+\begin{equation}\label{exemploplo1}
+	\begin{cases}
+		2x_1 - x_2 + x_3 = 0\\
+		x_1 + 3x_2 + 4x_ 3 = 0
+	\end{cases}
+\end{equation}
+onde o corpo considerado \'e $\real$.
+
+Observe que multiplicando a segunda equa\c{c}\~ao de \eqref{exemploplo1} por $-2$ e somando o resultado \`a primeira equa\c{c}\~ao obtemos
+\[
+	-7x_2 - 7x_3 = 0
+\]
+o que resulta em $x_2 = -x_3$. Agora se multiplicarmos a primeira equa\c{c}\~ao de \eqref{exemploplo1} por $3$ e somarmos com a segunda, obtemos
+\[
+	7x_1 + 7x_3 = 0
+\]
+e da{\'\i} $x_1 = -x_3$.
+
+Assim para que uma terna $(x_1, x_2, x_3)$ de n\'umeros reais seja solu\c{c}\~ao de \eqref{exemploplo1} deve satisfazer
+\[
+	x_1 = x_2 = -x_3.
+\]
+Por outro lado, qualquer terna da forma $(a, a, -a)$ \'e solu\c{c}\~ao de \eqref{exemploplo1}. Portanto a solu\c{c}\~ao de \eqref{exemploplo1} \'e da forma
+\[
+	(a, a, -a)
+\]
+onde $a \in \real$.
+
+No caso de um sistema linear da forma \eqref{sistemalinear}, o processo de elemina\c{c}\~ao de vari\'aveis ser\'a feito mediante o uso de 3 tipos de opera\c{c}\~oes. S\~ao elas:
+\begin{itemize}
+	\item[$e_1$)] Troca da posi\c{c}\~ao de duas equa\c{c}\~oes.
+	\item[$e_2$)] Multiplica\c{c}\~ao de uma equa\c{c}\~ao por um escalar n\~ao nulo.
+	\item[$e_3$)] Substitui\c{c}\~ao de uma equa\c{c}\~ao pela soma desta equa\c{c}\~ao com alguma outra.
+\end{itemize}
+
+Estas tr\^es opera\c{c}\~oes s\~ao chamadas de \textbf{opera\c{c}\~oes elementares}.\index{Opera\c{c}\~oes Elementares}
+
+\begin{exemplo}
+	Considere o seguinte sistema sobre o corpo $\real$:
+	\[
+		\begin{cases}
+			x_1 + 4x_2 + 3x_3 = 1\\
+			2x_1 + 5x_2 + 4x_3 = 4\\
+			x_1 - 3x_2 - 2x_3 = 5
+		\end{cases}
+	\]
+	Efetuando opera\c{c}\~oes elementares podemos escrever:
+	\begin{align*}
+		&\begin{cases}
+			x_1 + 4x_2 + 3x_3 = 1\\
+			2x_1 + 5x_2 + 4x_3 = 4 & L_2 \rightarrow L_2 - 2L_1\\
+			x_1 - 3x_2 - 2x_3 = 5
+		\end{cases} \sim
+		\begin{cases}
+			x_1 + 4x_2 + 3x_3 = 1\\
+			\phantom{0x_1} -3x_2 - 2x_3 = 2\\
+			x_1 - 3x_2 - 2x_3 = 5 & L_3 \rightarrow L_2 - L_1
+		\end{cases}\\ \\ & \sim
+		\begin{cases}
+			x_1 + 4x_2 + 3x_3 = 1\\
+			\phantom{0x_1} - 3x_2 - 2x_3 = 2 & L_2 \rightarrow (-1/3)L_2\\
+			\phantom{0x_1} - 7x_2 - 5x_3 = 4
+		\end{cases} \sim
+		\begin{cases}
+			x_1 + 4x_2 + 3x_3 = 1\\
+			\phantom{0x_1} x_2 + (2/3)x_3 = (-2/3)\\
+			\phantom{0x_1} - 7x_2 - 5x_3 = 4 & L_3 \rightarrow L_3 + 7L_2
+		\end{cases}\\ \\ & \sim
+		\begin{cases}
+			x_1 + 4x_2 + 3x_3 = 1\\
+			\phantom{0x_1} x_2 + (2/3)x_3 = (-2/3)\\
+			\phantom{0x_1} \phantom{0x_2}  -(1/3)x_3 = -(2/3)
+		\end{cases}
+	\end{align*}
+	Assim encontramos
+	\[
+		x_1 = 3, \quad x_2 = -2, \quad x_3 = 2.
+	\]
+\end{exemplo}
+
+\begin{definicao}\index{Sistemas Equivalentes}
+	Dois sistemas de equa\c{c}\~oes lineares s\~ao chamados de \textbf{equivalentes} se, e somente, se toda solu\c{c}\~ao de qualquer um dos sistemas \'e solu\c{c}\~ao do outro.
+\end{definicao}
+
+Dado um sistema linear
+\begin{equation}
+	\begin{cases}
+		a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1\\
+		a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2\\
+		\qquad \vdots\\
+		a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m\\
+	\end{cases}
+\end{equation}
+com o objetivo de simplificar sua nota\c{c}\~ao vamos escrev\^e-lo na forma
+\begin{equation}\label{formamatricial}
+	AX = B
+\end{equation}
+onde
+\begin{enumerate}
+	\item
+	\[
+		A = \begin{bmatrix}
+				a_{11} & a_{12} & \cdots & a_{1n}\\
+				\vdots & & & \vdots\\
+				a_{m1} & a_{m2} & \cdots & a_{mn}
+			\end{bmatrix}_{m\times n}; \quad a_{ij} \in \cp{K},\ 1 \le i \le m,\ 1 \le j \le n
+	\]
+	\'e chamada \textbf{matriz dos coeficientes do sistema};
+	\item
+	\[
+		X = \begin{bmatrix}
+			x_1\\
+			x_2\\
+			\vdots\\
+			x_n
+		\end{bmatrix}_{n \times 1}
+	\]
+	\item
+	\[
+		B = \begin{bmatrix}
+			b_1\\
+			b_2\\
+			\vdots\\
+			b_m
+		\end{bmatrix}_{m \times 1}; \quad b_1, b_2, \dots, b_m \in \cp{K}.
+	\]
+\end{enumerate}
+
+Uma outra matriz que podemos associar ao sistema \eqref{sistemalinear} \'e
+\[
+	\begin{amatrix}{4}
+		a_{11} & a_{12} & \cdots & a_{1n} & b_1\\
+		a_{21} & a_{22} & \cdots & a_{2n} & b_2\\
+		\vdots & \vdots & \vdots & \vdots & \vdots\\
+		a_{m1} & a_{m2} & \cdots & a_{mn} & b_m\\
+	\end{amatrix}
+\]
+que \'e chamada de \textbf{matriz ampliada do sistema} ou \textbf{matriz aumentada do sistema}.
+
+Na forma matricial as opera\c{c}\~oes elementares s\~ao descritas como:\index{Opera\c{c}\~oes Elementares!Sobre Matrizes}
+\begin{itemize}
+	\item[$e_1$)] Trocar a $i$-\'esima linha de $A$ pela $j$-\'esima linha de $A$: $L_i \leftrightarrow L_j$;
+	\item[$e_2$)] Multiplica\c{c}\~ao da $i$-\'esima linha de $A$ por um escalar $\alpha \in \cp{K}$ n\~ao nulo: $L_i \rightarrow \alpha L_i$;
+	\item[$e_3$)] Substitui\c{c}\~ao da $i$-\'esima linha de $A$ pela $i$-\'esima linha mais $\alpha$ vezes a $j$-\'esima linha: $L_i \rightarrow L_i + \alpha L_j$.
+\end{itemize}
+
+\begin{observacao}
+	Denotaremos a matriz
+	\[
+		\begin{bmatrix}
+			0_{\cp{K}} & 0_{\cp{K}} \cdots & 0_{\cp{K}}\\
+			0_{\cp{K}} & 0_{\cp{K}} \cdots & 0_{\cp{K}}\\
+			\vdots & & \vdots\\
+			0_{\cp{K}} & 0_{\cp{K}} \cdots & 0_{\cp{K}}
+		\end{bmatrix},
+	\]
+	onde $0_{\cp{K}}$ \'e o elemento neutro da soma no corpo $\cp{K}$, simplesmente por $0$.
+\end{observacao}
+
+Uma raz\~ao para nos restringirmos a estes tr\^es tipos simples de opera\c{c}\~oes sobre linhas \'e que, tendo efetuado uma tal opera\c{c}\~ao $e$ sobre uma matriz $A$, podemos desfazer essa opera\c{c}\~ao efetuando uma opera\c{c}\~ao de mesmo tipo sobre $e(A)$.
+
+\begin{teorema}
+	A cada opera\c{c}\~ao elementar sobre linhas $e$, corresponde uma opera\c{c}\~ao elementar sobre linhas $e'$, do mesmo tipo que $e$, tal que $e'(e(A)) = A$ para qualquer matriz $A$. Em outras palavras, a opera\c{c}\~ao inversa de uma opera\c{c}\~ao elementar sobre linhas existe e \'e uma opera\c{c}\~ao elementar sobre linhas do mesmo tipo.
+\end{teorema}
+\begin{prova}
+	Vamos verificar que cada uma das opera\c{c}\~oes elementares possui uma opera\c{c}\~ao inversa. Seja $A$ uma matriz $m \times n$ sobre o corpo $\cp{K}$
+	\[
+		A =
+		\begin{bmatrix}
+			a_{11} & a_{12} & \cdots & a_{1n}\\
+			a_{21} & a_{22} & \cdots & a_{2n}\\
+			\vdots & & & \vdots\\
+			a_{m1} & a_{m2} & \cdots & a_{mn}
+		\end{bmatrix}.
+	\]
+	\begin{enumerate}
+		\item [e1)] Suponha que $e$ seja a opera\c{c}\~ao que troca a linha $i$ pela linha $j$ de $A$. Temos
+		\[
+			e(A) = 
+				\begin{bmatrix}
+					a_{11} & a_{12} & \cdots & a_{1n}\\
+					a_{21} & a_{22} & \cdots & a_{2n}\\
+					\vdots\\
+					a_{j1} & a_{j2} & \cdots & a_{jn}\\
+					\vdots\\
+					a_{i1} & a_{i2} & \cdots & a_{in}\\
+					\vdots\\
+					a_{m1} & a_{m2} & \cdots & a_{mn}
+				\end{bmatrix}.
+		\]
+		Ent\~ao, seja $e'$ a opera\c{c}\~ao que troca a linha $i$ pela linha $j$ de $e(A)$. Assim
+		\[
+			e'(e(A)) = A
+		\]
+		como quer{\'\i}amos.
+
+		\item [e2)] Suponha que $e$ seja a opera\c{c}\~ao que multiplica a $i$-\'esima de $A$ por $\alpha \in \cp{K}$, onde $\alpha \ne 0_\cp{K}$. Temos
+		\[
+			e(A) = 
+				\begin{bmatrix}
+					a_{11} & a_{12} & \cdots & a_{1n}\\
+					a_{21} & a_{22} & \cdots & a_{2n}\\
+					\vdots\\
+					\alpha a_{i1} & \alpha a_{i2} & \cdots & \alpha a_{in}\\
+					\vdots\\
+					a_{m1} & a_{m2} & \cdots & a_{mn}
+				\end{bmatrix}.
+		\]
+		Seja $e'$ a opera\c{c}\~ao que multiplica a linha $i$ de $e(A)$ por $\alpha^{-1} \in \cp{K}$. Ent\~ao
+		\[
+			e'(e(A)) = A.
+		\]
+		\item [e3)] Suponha que $e$ seja a opera\c{c}\~ao que substitui a linha $i$ de $A$ pela linha $i$ mais $\alpha$ vezes a linha $j$. Temos
+		\[
+			e(A) = 
+				\begin{bmatrix}
+					a_{11} & a_{12} & \cdots & a_{1n}\\
+					a_{21} & a_{22} & \cdots & a_{2n}\\
+					\vdots\\
+					a_{i1} + \alpha a_{j1} & a_{i2} + \alpha a_{j2} & \cdots & a_{in} + \alpha a_{jn}\\
+					\vdots\\
+					a_{m1} & a_{m2} & \cdots & a_{mn}
+				\end{bmatrix}.
+		\]
+		Seja $e'$ a opera\c{c}\~ao que substitui a linha $i$ de $e(A)$ pela linha $i$ mais $(-\alpha)$ vezes a linha $j$. Ent\~ao
+		\[
+			e'(e(A)) = 
+					\begin{bmatrix}
+						a_{11} & a_{12} & \cdots & a_{1n}\\
+						a_{21} & a_{22} & \cdots & a_{2n}\\
+						\vdots\\
+						a_{i1} + \alpha a_{j1} + (-\alpha)a_{j1} & a_{i2} + \alpha a_{j2} + (-\alpha)a_{j2} & \cdots & a_{in} + \alpha a_{jn} + (-\alpha)a_{jn}\\
+						\vdots\\
+						a_{m1} & a_{m2} & \cdots & a_{mn}
+					\end{bmatrix}.
+		\]
+		e assim
+		\[
+			e'(e(A)) = A.
+		\]
+	\end{enumerate}
+	Portanto cada opera\c{c}\~ao elementar sobre linhas possui uma opera\c{c}\~ao inversa.
+\end{prova}
+
+\begin{definicao}\index{Matriz!Linha Equivalente}
+	Se $A$ e $B$ s\~ao matrizes $m \times n$, dizemos que $B$ \'e \textbf{linha-equivalente} a $A$, se $B$ for obtida de $A$ atrav\'es de uma quantidade finita de opera\c{c}\~oes elementares sobre as linhas de $A$.
+\end{definicao}
+
+\begin{notacao}
+	$A \rightarrow B$ ou $A \sim B$.
+\end{notacao}
+
+\begin{exemplo}
+	A matriz
+	\[
+		B = 
+			\begin{bmatrix}
+				1 & 0\\
+				0 & 1\\
+				0 & 0
+			\end{bmatrix}
+	\]
+	\'e linha equivalente \`a matriz
+	\[
+		A =
+			\begin{bmatrix}
+				\phantom{-}1 & \phantom{-}0\\
+				\phantom{-}4 & -1\\
+				-3 & \phantom{-}4
+			\end{bmatrix}
+	\]
+	pois
+	\begin{align*}
+		A &= 
+			\left[
+				\begin{array}{cc}
+					\phantom{-}1 & \phantom{-}0\\
+					\phantom{-}4 & -1\\
+					-3 & \phantom{-}4
+				\end{array}
+			\right]
+			\begin{array}{l}
+				\phantom{x}\\
+				L_2 \to L_2 - 4L_1\\
+				\phantom{x}
+			\end{array} \sim
+			\left[
+				\begin{array}{cc}
+					\phantom{-}1 & \phantom{-}0\\
+					\phantom{-}0 & -1\\
+					-3 & \phantom{-}4
+				\end{array}
+			\right]
+			\begin{array}{l}
+				\phantom{x}\\
+				\phantom{x}\\
+				L_3 \to L_3 + 3L_1
+			\end{array}\\ \\ &\sim
+			\left[
+				\begin{array}{cc}
+					1 & \phantom{-}0\\
+					0 & -1\\
+					0 & \phantom{-}4
+				\end{array}
+			\right]
+			\begin{array}{l}
+				\phantom{x}\\
+				L_2 \to (-1)L_2\\
+				\phantom{x}
+			\end{array} \sim
+			\left[
+				\begin{array}{cc}
+					1 & 0\\
+					0 & 1\\
+					0 & 4
+				\end{array}
+			\right]
+			\begin{array}{l}
+				\phantom{x}\\
+				\phantom{x}\\
+				L_3 \to L_3 - 4L_2
+			\end{array}\\ \\ &\sim
+			\left[
+				\begin{array}{cc}
+					1 & 0\\
+					0 & 1\\
+					0 & 0
+				\end{array}
+			\right] = B.
+	\end{align*}
+\end{exemplo}
+
+\begin{teorema}
+	Se $X_1$ e $X_2$ s\~ao duas solu\c{c}\~oes de
+	\[
+	AX = 0,
+	\]
+	ent\~ao $\alpha X_1 + \beta X_2$ tamb\'em \'e solu\c{c}\~ao de $AX = 0$, para quaisquer $\alpha$, $\beta \in \cp{K}$.
+\end{teorema}
+
+\begin{teorema}
+	Se $A$ e $B$ s\~ao matrizes $m \times n$ que s\~ao linha-equivalentes, ent\~ao os sistemas homog\^eneos de equa\c{c}\~oes lineares $AX = 0$ e $BX = 0$ t\^em exatamente as mesmas solu\c{c}\~oes.
+\end{teorema}
+\begin{prova}
+	Suponha que podemos obter a matriz $B$ \`a partir da matriz $A$ por meio de uma sequ\^encia finita de opera\c{c}\~oes elementares sobre linhas:
+	\[
+	A = A_0 \sim A_1 \sim A_2 \sim \cdots \sim A_r = B.
+	\]
+	Nesta situa\c{c}\~ao, para provar que $AX = 0$ e $BX = 0$ tem as mesmas solu\c{c}\~oes basta provar que $A_iX = 0$ e $A_{i + 1}X = 0$ tem as mesmas solu\c{c}\~oes, isto \'e, que uma opera\c{c}\~ao elementar sobre linhas n\~ao altera o conjunto das solu\c{c}\~oes.
+
+	Assim podemos supor que $B$ \'e obtida de $A$ por meio de uma \'unica opera\c{c}\~ao elementar. Qualquer que seja a opera\c{c}\~ao elementar, $e_1$ ou $e_2$ ou $e_3$, cada equa\c{c}\~ao do sistema $BX = 0$ ser\'a uma combina\c{c}\~ao das equa\c{c}\~oes do sistema $AX = 0$. Como a inversa de uma opera\c{c}\~ao elementar sobre linhas \'e ainda uma opera\c{c}\~ao elementar sobre linhas, cada equa\c{c}\~ao de $AX = 0$ tamb\'em ser\'a uma combina\c{c}\~ao das equa\c{c}\~oes em $BX = 0$. Logo toda solu\c{c}\~ao de $AX = 0$ tamb\'em \'e solu\c{c}\~ao de $BX = 0$ e toda solu\c{c}\~ao de $BX = 0$ tamb\'em \'e solu\c{c}\~ao de $AX = 0$, como quer{\'\i}amos.
+\end{prova}
+
+\begin{exemplo}
+	Considere o sistema homog\^eneo $AX = 0$, onde:
+	\begin{enumerate}[label={\arabic*})]
+		\item $A = \begin{bmatrix}
+						2 & -1 & \phantom{-}3 & \phantom{-}2\\
+						1 & \phantom{-}4 & \phantom{-}0 & -1\\
+						2 & \phantom{-}6 & -1 & \phantom{-}5
+					\end{bmatrix}.$
+		Para encontrar a solu\c{c}\~ao deste sistema s\'o precisamos encontrar uma matriz $B$ que seja linha equivalente \`a $A$ e que seja mais f\'acil de determinar a solu\c{c}\~ao do sistema resultante. Assim, vamos executar as opera\c{c}\~oes elementares em $A$ de modo a simplific\'a-la:
+		\begin{align*}
+			A &=
+				\left[
+					\begin{array}{cccc}
+						2 & -1 & \phantom{-}3 & \phantom{-}2\\
+						1 & \phantom{-}4 & \phantom{-}0 & -1\\
+						2 & \phantom{-}6 & -1 & \phantom{-}5
+					\end{array}
+				\right]
+				\begin{array}{l}
+					L_1 \leftrightarrow L_2\\
+					\phantom{x}\\
+					\phantom{x}
+				\end{array} \sim
+				\left[
+					\begin{array}{cccc}
+						1 & \phantom{-}4 & \phantom{-}0 & -1\\
+						2 & -1 & \phantom{-}3 & \phantom{-}2\\
+						2 & \phantom{-}6 & -1 & \phantom{-}5
+					\end{array}
+				\right]
+				\begin{array}{l}
+					\phantom{x}\\
+					L_2 \to L_2 - 2L_1\\
+					L_3 \to L_3 - 2L_1
+				\end{array}\\ \\ &\sim
+				\left[
+					\begin{array}{cccc}
+						1 & \phantom{-}4 & \phantom{-}0 & -1\\
+						0 & -9 & \phantom{-}3 & \phantom{-}4\\
+						0 & -2 & -1 & \phantom{-}7
+					\end{array}
+				\right]
+				\begin{array}{l}
+					\phantom{x}\\
+					L_2 \leftrightarrow L_3\\
+					\phantom{x}
+				\end{array} \sim
+				\left[
+					\begin{array}{cccc}
+						1 & \phantom{-}4 & 0 & -1\\
+						0 & -2 & -1 & \phantom{-}7\\
+						0 & -9 & \phantom{-}3 & \phantom{-}4
+					\end{array}
+				\right]
+				\begin{array}{l}
+					\phantom{x}\\
+					L_2 \to (-1/2)L_2\\
+					\phantom{x}
+				\end{array}\\ \\ &\sim
+				\left[
+					\begin{array}{cccc}
+						1 & \phantom{-}4 & 0 & -1\\
+						0 & \phantom{-}1 & 1/2 & -7/2\\
+						0 & -9 & 3 & \phantom{-}4
+					\end{array}
+				\right]
+				\begin{array}{l}
+					\phantom{x}\\
+					\phantom{x}\\
+					L_3 \to L_3 + 9L_2
+				\end{array} \sim
+				\left[
+					\begin{array}{cccc}
+						1 & 4 & 0 & -1\\
+						0 & 1 & 1/2 & -7/2\\
+						0 & 0 & 15/2 & -55/2
+					\end{array}
+				\right]
+		\end{align*}
+		assim obtemos o sistema
+		\[
+			\begin{cases}
+				x_1 + 4x_2 - x_4 = 0\\
+				x_2 + (1/2)x_3 - (7/2)x_4 = 0\\
+				(15/2)/x_3 - (55/2)x_4 = 0
+			\end{cases}.
+		\]
+		Isolando $x_3$ na \'ultima equa\c{c}\~ao temos a solu\c{c}\~ao dada por
+		\[
+			S = \left\{\left(\dfrac{-17}{3}x_4, \dfrac{5}{3}x_4, \dfrac{11}{3}x_4, x_4\right) \mid x_4 \in \real\right\}.
+		\]
+
+		\item $A = \begin{bmatrix}
+		-1 & i\\
+		-i & 1\\
+		\phantom{-}1 & 2
+		\end{bmatrix}.$ Temos:
+		\begin{align*}
+			A &= 
+				\left[
+					\begin{array}{cc}
+						-1 & i\\
+						-i & 1\\
+						\phantom{-}1 & 2
+					\end{array}
+				\right]
+				\begin{array}{l}
+					L_1 \leftrightarrow L_3\\
+					\phantom{x}\\
+					\phantom{x}
+				\end{array} \sim
+				\left[
+					\begin{array}{cc}
+						\phantom{-}1 & 2\\
+						-i & 1\\
+						-1 & i
+					\end{array}
+				\right]
+				\begin{array}{l}
+					\phantom{x}\\
+					L_2 \to L_2 + iL_1\\
+					L_3 \to L_3 + L_1
+				\end{array}\\ \\ &\sim
+				\left[
+					\begin{array}{cc}
+						1 & 2\\
+						0 & 1 + 2i\\
+						0 & 2 + i
+					\end{array}
+				\right]
+				\begin{array}{l}
+					\phantom{x}\\
+					L_2 \to \dfrac{1 - 2i}{5}L_2\\
+					\phantom{x}
+				\end{array} \sim
+				\left[
+					\begin{array}{cc}
+						1 & 2\\
+						0 & 1\\
+						0 & 2 + i
+					\end{array}
+				\right]
+				\begin{array}{l}
+					\phantom{x}\\
+					\phantom{x}\\
+					L_3 \to L_3 - (2 + i)L_2
+				\end{array}\\ \\ &\sim
+				\left[
+					\begin{array}{cc}
+						1 & 2\\
+						0 & 1\\
+						0 & 0
+					\end{array}
+				\right]
+		\end{align*}
+		Assim obtemos o sistema
+		\[
+			\begin{cases}
+				x_1 + 2x_2 = 0\\
+				x_2 = 0
+			\end{cases}
+		\]
+		cuja solu\c{c}\~ao \'e $x_1 = x_2 = 0$.
+	\end{enumerate}
+\end{exemplo}
+
+\begin{definicao}\label{linhareduzida}\index{Matriz!Linha-reduzida}
+	Uma matriz R $m \times n$ \'e chamada de \textbf{linha-reduzida} se:
+	\begin{enumerate}[label={\roman*})]
+		\item o primeiro elemento n\~ao nulo em cada linha n\~ao nula de $R$ \'e $1_\cp{K}$.
+		\item cada coluna de $R$ que cont\'em o primeiro elemento n\~ao nulo de alguma linha tem todos os seus outros elementos nulos.
+	\end{enumerate}
+\end{definicao}
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item Um exemplo de uma matriz linha-reduzida \'e a matriz identidade $n \times n$. Tal matriz pode ser definida por
+		\[
+			I = (a_{ij})_{1 \le i,j \le n}
+		\]
+		onde
+		\[
+			a_{ij} = \delta_{ij} =
+			\begin{cases}
+				1, & \mbox{ se } i = j\\
+				0, & \mbox{ se } i \ne j 
+			\end{cases}.
+		\]
+		O s{\'\i}mbolo $\delta_{ij}$ \'e chamada \textbf{s{\'\i}mbolo de Kronecher} \'e ser\'a utilizado com certa frequ\^encia.
+		\item As matrizes
+		\[
+			A =
+			\begin{bmatrix}
+				1 & 0 & \phantom{-}0 & 0\\
+				0 & 1 & -1 & 0\\
+				0 & 0 & \phantom{-}1 & 0
+			\end{bmatrix};\quad
+			B =
+			\begin{bmatrix}
+				0 & 2 & \phantom{-}1\\
+				1 & 0 & -3\\
+				0 & 0 & \phantom{-}0
+			\end{bmatrix}
+		\]
+		n\~ao s\~ao linha-reduzidas.
+	\end{enumerate}
+\end{exemplo}
+
+\begin{teorema}
+	Toda matriz $m \times n$ sobre um corpo $\cp{K}$ \'e linha-equivalente a uma matriz linha-reduzida.
+\end{teorema}
+\begin{prova}
+	Seja $A$ uma matriz $m \times n$ sobre um corpo $\cp{K}$. Se todo elemento na primeira linha de $A$ \'e $0_\cp{K}$, ent\~ao a condi\c{c}\~ao (a) de \eqref{linhareduzida} est\'a satisfeita no que diz respeito a linha 1. Se a linha 1 tem um elemento n\~ao nulo, seja $r$ o menor inteiro positivo $j$ tal que $a_{1r} \ne 0$. Multiplique a linha 1 por $a_{1r}^{-1}$ e condi\c{c}\~ao (a) de \eqref{linhareduzida} est\'a satisfeita em rela\c{c}\~ao a linha 1. Agora, para cada $i \ge 2$, somemos $-a_{ir}$ vezes a linha 1 \`a linha i. Assim o primeiro elemento n\~ao nulo da linha 1 ocorre na coluna $r$, este elemento \'e $1_\cp{K}$, e todos os outros elementos da coluna $r$ s\~ao nulos.
+
+	Considere agora a matriz que resultou das opera\c{c}\~oes acima. Se todo elemento na linha 2 \'e nulo, nada h\'a a fazer. Se algum elemento na linha 2 \'e n\~ao nulo, multiplicamos a linha 2 por um escalar de modo que o primeiro elemento n\~ao nulo da linha 2 seja $1_\cp{K}$. Caso o primeiro elemento n\~ao nulo da linha 1 ocorra na coluna $r$, o primeiro elemento n\~ao nulo da linha 2 n\~ao pode ocorrer na coluna $r$. Digamos ent\~ao que ele ocorra na coluna $r'$. Somando m\'ultiplos adequados da linha 2 \`as diversas linhas, podemos fazer com que todos os elementos da coluna $r'$ seja nulos, com exce\c{c}\~ao do elemento $1_\cp{K}$ da linha 2. O importante a ser observado \'e: ao efetuarmos estas \'ultimas opera\c{c}\~oes, n\~ao alteramos os elementos da linha 1 na colunas 1, 2, \dots, $r$; al\'em disso, n\~ao alteramos nenhum elemento da coluna $r$. \'E claro que, se a linha 1 fosse identicamente nula, as opera\c{c}\~oes com a linha 2 n\~ao afetariam a linha 1.
+
+	Operando com uma linha de cada vez da maneira acima, \'e evidente que, com uma quantidade finita de passos, chegamos a uma matriz linha-reduzida.
+\end{prova}
+
+\begin{definicao}\index{Matriz!Na forma escada}
+	Uma matriz $R$ $m \times n$ \'e chamada uma \textbf{matriz linha-reduzida \`a forma em escada} se:
+	\begin{enumerate}[label={\roman*})]
+		\item $R$ \'e linha-reduzida;
+		\item toda linha de $R$ cujos elementos s\~ao todos nulos ocorre abaixo de todas as linhas que possuem um elemento n\~ao-nulo;
+		\item se as linhas 1, 2, \dots, $r$ s\~ao as linhas n\~ao-nulas de $R$ e se o primeiro elemento n\~ao-nulo da linha $i$ ocorre na coluna $k_i$, $i = 1$, \dots, $r$, ent\~ao $k_1 < k_2 < \cdots < k_r$.
+	\end{enumerate}
+\end{definicao}
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item  A matriz identidade e a matriz nula s\~ao linha-reduzidas \`a forma escada;
+		\item $\begin{bmatrix}
+		1 & 0 & \phantom{-}0 & 0\\
+		0 & 1 & -1 & 0\\
+		0 & 0 & \phantom{-}1 & 0
+		\end{bmatrix}$ N\~ao \'e linha-reduzida \`a forma escada.
+		\item $\begin{bmatrix}
+		0 & 2 & \phantom{-}1\\
+		1 & 0 & -3\\
+		0 & 0 & \phantom{-}0
+		\end{bmatrix}$ N\~ao \'e linha-reduzida \`a forma escada.
+		\item $\begin{bmatrix}
+		0 & 1 & -3 & 0 & 2\\
+		0 & 0 & \phantom{-}0 & 1 & 2\\
+		0 & 0 & \phantom{-}0 & 0 & 0
+		\end{bmatrix}$ \'E linha-reduzida \`a forma escada.
+	\end{enumerate}
+\end{exemplo}
+
+\begin{teorema}
+	Toda matriz $A$ $m \times n$ \'e linha-equivalente a uma matriz linha-reduzida \`a forma em escada.
+\end{teorema}
+\begin{prova}
+	Sabemos que $A$ \'e linha-equivalente a uma matriz linha-reduzida. Portanto, basta notar que, efetuando uma quantidade finita de permuta\c{c}\~oes das linhas de uma matriz linha-reduzida, podemos transform\'a-la numa matriz linha-reduzida \`a forma em escada.
+\end{prova}
+
+\begin{definicao}\index{Posto!de uma matriz}\index{Nulidade!de uma matriz}
+	Dada uma matriz $A$ $m \times n$, seja $B$ a matriz $m \times n$ linha-reduzida \`a forma em escada linha-equivalente a $A$. O \textbf{posto} de $A$, denotado por $p$, \'e o n\'umero de linhas n\~ao-nulas de $B$. A \textbf{nulidade} de $A$ \'e o n\'umero $n - p$.
+\end{definicao}
+
+\begin{exemplo}
+	Qual o posto e a nulidade da matriz $A$, onde
+	\[
+		A =
+		\begin{bmatrix}
+			\phantom{-}1 & \phantom{-}2 & 1 & 0\\
+			-1 & \phantom{-}0 & 3 & 5\\
+			\phantom{-}1 & -2 & 1 & 1
+		\end{bmatrix}?
+	\]
+	Precisamos primeiro reduzir $A$ a sua forma escada:
+	\begin{align*}
+		A &= 
+			\left[
+			\begin{array}{cccc}
+				\phantom{-}1 & \phantom{-}2 & 1 & 0\\
+				-1 & \phantom{-}0 & 3 & 5\\
+				\phantom{-}1 & -2 & 1 & 1
+			\end{array}
+			\right]
+			\begin{array}{l}
+				\\
+				L_2 \to L_2 + L_1\\
+				L_3 \to L_3 - L_1
+			\end{array} \sim
+			\left[
+				\begin{array}{cccc}
+					1 & \phantom{-}2 & 1 & 0\\
+					0 & \phantom{-}2 & 4 & 5\\
+					0 & -4 & 0 & 1
+				\end{array}
+			\right]
+			\begin{array}{l}
+				\\
+				L_2 \to (1/2)L_2\\
+				\phantom{x}
+			\end{array}\\ \\ &\sim
+			\left[
+				\begin{array}{cccc}
+					1 & \phantom{-}2 & 1 & 0\\
+					0 & \phantom{-}1 & 2 & 5/2\\
+					0 & -4 & 0 & 1
+				\end{array}
+			\right]
+			\begin{array}{l}
+				L_1 \to L_1 - 2L_2\\
+				\phantom{x}\\
+				L_3 \to L_3 + 4L_2
+			\end{array} \sim
+			\left[
+				\begin{array}{cccc}
+					1 & 0 & -3 & -5\\
+					0 & 1 & \phantom{-}2 & \phantom{-}5/2\\
+					0 & 0 & \phantom{-}8 & \phantom{-}11
+				\end{array}
+			\right]
+			\begin{array}{l}
+				\phantom{x}\\
+				\phantom{x}\\
+				L_3 \to (1/8)L_3
+			\end{array}\\ \\ &\sim
+			\left[
+				\begin{array}{cccc}
+					1 & 0 & -3 & -5\\
+					0 & 1 & \phantom{-}2 & \phantom{-}5/2\\
+					0 & 0 & \phantom{-}1 & \phantom{-}11/8
+				\end{array}
+			\right]
+			\begin{array}{l}
+				L_1 \to L_1 + 3L_3\\
+				L_2 \to L_2 - 2L_3\\
+				\phantom{x}
+			\end{array} \sim
+			\left[
+				\begin{array}{cccc}
+					1 & 0 & 0 & -7/8\\
+					0 & 1 & 0 & -1/4\\
+					0 & 0 & 1 & \phantom{-}11/8
+				\end{array}
+			\right]
+	\end{align*}
+	Logo o posto de $A$ \'e $p = 3$ e a nulidade \'e $n - p = 4 - 3 = 1$.
+\end{exemplo}
+
+Considere o sistema
+\begin{equation}\label{equacaolinear}
+	AX = B
+\end{equation}
+onde $A$ \'e uma matriz $m \times n$ e $B$ \'e uma matriz $m \times 1$, ambas com entradas no corpo $\cp{K}$ e $X$ \'e uma matriz $n \times 1$. Observe que, enquanto uma sistema homog\^eneo $AX = 0$ sempre admite a solu\c{c}\~ao
+\[
+x_1 = x_2 = \cdots = x_n = 0_\cp{K},
+\]
+um sistema n\~ao homog\^eneo pode ter:
+\begin{enumerate}
+	\item Uma \'unica solu\c{c}\~ao $x_1 = \alpha_1$, $x_2 = \alpha_2$, \dots, $x_n = \alpha_n$, onde $\alpha_i \in \cp{K}$, para $i = 1$, 2, \dots, $n$. Neste caso dizemos que o sistema \'e \textbf{poss{\'\i}vel e determinado}.
+	\item Mais de uma solu\c{c}\~ao. Neste caso dizemos que o sistema \'e \textbf{poss{\'\i}vel e indeterminado}. Caso o corpo $\cp{K}$ tenha infinitos elementos, o sistema ter\'a infinitas solu\c{c}\~oes.
+	\item Nenhuma solu\c{c}\~ao. Neste caso dizemos o que sistema \'e \textbf{imposs{\'\i}vel}.
+\end{enumerate}
+
+Com o objetivo de resolver o sistema \eqref{equacaolinear} vamos come\c{c}ar formando a matriz ampliada
+\[
+	P = [A|B] =
+	\begin{amatrix}{4}
+		a_{11} & a_{12} & \dots & a_{1n} & b_1\\
+		a_{21} & a_{22} & \dots & a_{2n} & b_2\\
+		\vdots & \vdots & \vdots & \vdots & \vdots\\
+		a_{m1} & a_{m2} & \dots & a_{mn} & b_m\\
+	\end{amatrix}_{m \times (n + 1)}.
+\]
+
+Sabemos que $P$ \'e linha-equivalente a uma matriz linha-reduzida \`a forma em escada $R$. A \'ultima coluna de $R$ cont\'em elementos $z_1$, $z_2$, \dots, $z_m$ que s\~ao resultados das opera\c{c}\~oes elementares aplicadas \`a matriz $P$. Seja 
+\[
+	Z =
+	\begin{bmatrix}
+		z_1\\
+		z_2\\
+		\vdots\\
+		z_m
+	\end{bmatrix}.
+\]
+Ent\~ao $R$ pode ser escrita como $R = [R' \mid Z]$. Como no caso homog\^eneo, \'e poss{\'\i}vel mostrar que os sistemas
+\[
+	AX = B \mbox{ e } R'X = Z
+\]
+possuem exatamente as mesmas solu\c{c}\~oes.
+
+As possibilidades para as solu\c{c}\~oes de tal sistema s\~ao descritas no seguinte teorema:
+
+\begin{teorema}
+	Considere o sistema
+	\[
+		AX = B
+	\]
+	onde $A$ \'e uma matriz $m \times n$ e $B$ \'e uma matriz $m \times 1$, ambas com entradas no corpo $\cp{K}$ e $X$ \'e uma matriz $n \times 1$. Ent\~ao:
+	\begin{enumerate}[label={\roman*})]
+		\item O sistema tem solu\c{c}\~ao se, e somente se, o posto da matriz ampliada \'e igual ao posto da matriz dos coeficientes.
+
+		\item Se a matriz ampliada e a matriz dos coeficientes t\^em o mesmo posto $p$ e $p = n$, ent\~ao a solu\c{c}\~ao \'e \'unica.
+
+		\item Se a matriz ampliada e a matriz dos coeficientes t\^em o mesmo posto $p$ e $p < n$, ent\~ao podemos escolher $n - p$ vari\'aveis, e as outras $p$ vari\'aveis ser\~ao dadas em fun\c{c}\~ao destas $n - p$ vari\'aveis escolhidas.
+	\end{enumerate}
+	O n\'umero $n - p$ \'e chamado de \textbf{grau de liberdade} e as $n - p$ vari\'aveis s\~ao chamadas de \textbf{vari\'aveis livres}.
+\end{teorema}
+\begin{prova}
+	\textit{$1^a$ Parte: Se existe solu\c{c}\~ao para o sistema, ent\~ao a matriz ampliada e a matriz dos coeficientes t\^em o mesmo posto:} Para mostrar isso, vamos provar que se a matriz ampliada e a matriz dos coeficientes tiverem postos diferentes, ent\~ao o sistema n\~ao ter\'a solu\c{c}\~ao. Observe primeiro que o posto da matriz ampliada n\~ao pode ser menor que o posto da matriz dos coeficientes uma vez que a matriz ampliada \'e formada a partir da matriz dos coeficientes. Assim o \'unico caso poss{\'\i}vel \'e o posto da matriz ampliada ser maior que o posto da matriz dos coeficientes. Ent\~ao esta matriz, quando reduzida \`a forma em escada deve conter uma linha da forma
+	\[
+		\begin{bmatrix}
+			0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K} & \mid & 1_\cp{K}
+		\end{bmatrix}.
+	\]
+	Logo o sistema associado a essa matriz tem uma equa\c{c}\~ao do tipo
+	\[
+		0_\cp{K}x_1 + 0_\cp{K}x_2 + \cdots + 0_\cp{K}x_n = 1_\cp{K}
+	\]
+	o que \'e imposs{\'\i}vel. Logo n\~ao existe solu\c{c}\~ao.
+
+	\textit{$2^a$ Parte: Se o posto \'e igual, ent\~ao existe solu\c{c}\~ao:} Nesta situa\c{c}\~ao podem ocorrer dois casos:
+	\begin{enumerate}
+		\item Se $p = n$, ent\~ao a matriz linha-reduzida \`a forma em escada tem a forma
+		\[
+			\begin{amatrix}{5}
+				1_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K} & z_1\\
+				0_\cp{K} & 1_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K} & z_2\\
+				\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+				0_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 1_\cp{K} & z_n\\
+				0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K}\\
+				\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+				0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K}
+			\end{amatrix}
+		\]
+		e a solu\c{c}\~ao do sistema ser\'a
+		\[
+			x_1 = z_1, x_2 = z_2, \cdots, x_n = z_n.
+		\]
+		\item Se $p \ne n$, ent\~ao devemos ter $p < n$. Caso $p > n$, como a matriz est\'a na forma escada o elemento $1_\cp{K}$ deve ocorrer em duas linhas diferentes, mas na mesma coluna. Mas neste caso, podemos anular uma destas linhas repetidas. Logo, $p < n$. Neste caso a matriz na forma escada pode ter a forma:
+		\begin{enumerate}
+			\item
+			\[
+				\begin{amatrix}{9}
+					1_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K} & a_{1p+1} & a_{1p+2} & \cdots & a_{1n} & z_1\\
+					0_\cp{K} & 1_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K} & a_{2p+1} & a_{2p+2} & \cdots & a_{2n} & z_2\\
+					\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+					0_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 1_\cp{K} & a_{pp+1} & a_{pp+2} & \cdots & a_{pn} & z_p\\
+					0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K} & 0_\cp{K}\\
+					\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+					0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K}  & 0_\cp{K}
+				\end{amatrix}.
+			\]
+			Neste caso teremos
+			\[
+				\begin{cases}
+					x_1 = z_1 + (-a_{1 p + 1})x_{p + 1} + (-a_{1 p + 2})x_{p + 2} + \cdots + (-a_{1n})x_{n}\\
+					x_2 = z_2 + (-a_{2 p + 1})x_{p + 1} + (-a_{2 p + 2})x_{p + 2} + \cdots + (-a_{2n})x_{n}\\
+					\qquad \vdots\\
+					x_p = z_p + (-a_{p p + 1})x_{p + 1} + (-a_{p p + 2})x_{p + 2} + \cdots + (-a_{pn})x_{n}\\
+				\end{cases}
+			\]
+			e o sistema ter\'a mais de uma solu\c{c}\~ao, sendo $x_{p + 1}$ , $x_{p + 2}$, \dots, $x_n$ as vari\'aveis livres.
+			\item Uma segunda forma a ser considerada para a matriz reduzida \'e
+			\[
+				\begin{amatrix}{9}
+					0_\cp{K} & 1_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K} & a_{1p+2} & a_{1p+3} & \cdots & a_{1n} & z_1\\
+					0_\cp{K} & 0_\cp{K} & 1_\cp{K} & \cdots & 0_\cp{K} & a_{2p+2} & a_{2p+3} & \cdots & a_{2n} & z_2\\
+					\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+					0_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 1_\cp{K} & a_{pp+2} & a_{pp+3} & \cdots & a_{pn} & z_p\\
+					0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K} & 0_\cp{K}\\
+					\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+					0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K}  & 0_\cp{K}
+				\end{amatrix}.
+			\]
+			Neste caso teremos
+			\[
+				\begin{cases}
+					x_2 = z_1 + (-a_{1 p + 2})x_{p + 2} + (-a_{1 p + 3})x_{p + 3} + \cdots + (-a_{1n})x_{n}\\
+					x_3 = z_2 + (-a_{2 p + 3})x_{p + 3} + (-a_{2 p + 3})x_{p + 3} + \cdots + (-a_{2n})x_{n}\\
+					\qquad \vdots\\
+					x_{p+1} = z_p + (-a_{p p + 2})x_{p + 2} + (-a_{p p + 3})x_{p + 3} + \cdots + (-a_{pn})x_{n}\\
+				\end{cases}
+			\]
+			e o sistema ter\'a mais de uma solu\c{c}\~ao, sendo $x_1$, $x_{p + 1}$ , $x_{p + 2}$, \dots, $x_n$ as vari\'aveis livres.
+		\end{enumerate}
+		Prosseguindo com esse racioc{\'\i}nio, vemos que para qualquer posto $p < n$ teremos um sistema com mais de uma solu\c{c}\~ao e $n - p$ vari\'aveis livres.
+	\end{enumerate}
+	Portanto a condi\c{c}\~ao (i) do teorema est\'a provada.
+
+	Observe que os itens (ii) e (iii) foram automaticamente demonstrados nos itens (a) e (b) anteriores.
+
+	Logo o teorema est\'a provado.
+\end{prova}
+
+\begin{exemplo}
+	Encontre a solu\c{c}\~ao dos seguintes sistemas lineares:
+	\begin{enumerate}[label={\arabic*})]
+		\item $\begin{cases}
+		x + 3y + z = 0\\
+		2x + 6y + 2z = 0\\
+		-x - 3y - z = 0
+		\end{cases}$ em $\real$.
+		\begin{solucao}
+		A matriz dos coeficentes deste sistema \'e
+		\[
+			\begin{bmatrix}
+				\phantom{-}1 & \phantom{-}3 & 1\\
+				\phantom{-}2 & \phantom{-}6 & 2\\
+				-1 & -3 & -1
+			\end{bmatrix}.
+		\]
+		Aplicando as opera\c{c}\~oes elementares para reduzir $A$ \`a forma em escada:
+		\begin{align*}
+			A &= 
+				\left[
+					\begin{array}{ccc}
+						\phantom{-}1 & \phantom{-}3 & \phantom{-}1 \\
+						\phantom{-}2 & \phantom{-}6 & \phantom{-}2 \\
+						-1 & -3 & -1 
+					\end{array}
+				\right]
+				\begin{array}{l}
+					\\
+					L_2 \to L_2 - 2L_1\\
+					L_3 \to L_3 + L_1
+				\end{array} \sim
+				\left[
+				\begin{array}{ccc}
+					1 & 3 & 1 \\
+					0 & 0 & 0 \\
+					0 & 0 & 0 
+				\end{array}
+				\right]
+		\end{align*}
+		Assim o posto de $A$ \'e $p = 1$ e a nulidade \'e 2, ou seja, temos duas vari\'aveis livres, a saber $y$ e $z$. Logo a solu\c{c}\~ao \'e dada por
+		\[
+			x = -3y - z;\quad y,\ z \in \real.
+		\]
+		Que pode ser escrita como
+		\[
+			S = \{(x, y ,z) \mid x, y, z \in \real \} = \{(-3y - z, y, z) \mid y, z \in \real\}.
+		\]
+		\end{solucao}
+		\item $\begin{cases}
+		\overline{1}x + \overline{4}y + \overline{2}z = \overline{6}\\
+		\overline{1}x + \overline{5}y + \overline{2}z = \overline{2}\\
+		\overline{2}x + \overline{3}y + \overline{4}z = \overline{4}\\
+		\overline{4}x + \overline{5}y + \overline{1}z = \overline{5}
+		\end{cases}$ em $\z_7$.
+		\begin{solucao}
+		A matriz ampliada do sistema \'e
+		\[
+			A =
+			\begin{amatrix}{3}
+				\overline{1} & \overline{4} & \overline{2} & \overline{6}\\
+				\overline{1} & \overline{5} & \overline{2} & \overline{2}\\
+				\overline{2} & \overline{3} & \overline{4} & \overline{4}\\
+				\overline{4} & \overline{5} & \overline{1} & \overline{5}
+			\end{amatrix}.
+		\]
+		Aplicando as opera\c{c}\~oes elementares para reduzir $A$ a forma em escada:
+		\begin{align*}
+			A &= 
+				\left[
+					\begin{array}{ccc|c}
+						\overline{1} & \overline{4} & \overline{2} & \overline{6}\\
+						\overline{1} & \overline{5} & \overline{2} & \overline{2}\\
+						\overline{2} & \overline{3} & \overline{4} & \overline{4}\\
+						\overline{4} & \overline{5} & \overline{1} & \overline{5}
+					\end{array}
+				\right]
+				\begin{array}{l}
+					\\
+					L_2 \to L_2 + \overline{6}L_1\\
+					L_3 \to L_3 + \overline{5}L_1\\
+					L_4 \to L_4 + \overline{4}L_1
+				\end{array} \sim
+				\left[
+					\begin{array}{ccc|c}
+						\overline{1} & \overline{4} & \overline{2} & \overline{6}\\
+						\overline{0} & \overline{1} & \overline{0} & \overline{3}\\
+						\overline{0} & \overline{2} & \overline{0} & \overline{6}\\
+						\overline{0} & \overline{3} & \overline{0} & \overline{2}
+					\end{array}
+				\right]
+				\begin{array}{l}
+					L_1 \to L_1 + \overline{3}L_2\\
+					\\
+					L_3 \to L_3 + \overline{5}L_2\\
+					L_4 \to L_4 + \overline{4}L_2
+				\end{array}\\ \\ &\sim
+				\left[
+					\begin{array}{ccc|c}
+						\overline{1} & \overline{0} & \overline{2} & \overline{1}\\
+						\overline{0} & \overline{1} & \overline{0} & \overline{3}\\
+						\overline{0} & \overline{0} & \overline{0} & \overline{0}\\
+						\overline{0} & \overline{0} & \overline{0} & \overline{0}
+					\end{array}
+				\right]
+		\end{align*}
+		Assim o posto de $A$ \'e $p = 2$ e a nulidade \'e 1. Logo temos uma \'unica vari\'avel livre que \'e $z$. A solu\c{c}\~ao ent\~ao \'e dada por
+		\[
+			x = \overline{1} + \overline{5}z,\quad y = \overline{3},\quad z \in \z_7.
+		\]
+		O conjunto solu\c{c}\~ao \'e
+		\[
+			S = \{(x, y, z) \mid x, y , z \in \z_7\} = \{(\overline{1} + \overline{5}z, \overline{3}, z) \mid z \in \z_7\}.
+		\]
+		Tal conjunto cont\'em exatamente 7 solu\c{c}\~oes distintas.
+		\end{solucao}
+		\item $
+		\begin{cases}
+			\overline{2}x_1 + \overline{1}x_2 + \overline{2}x_3 + \overline{2}x_4 = \overline{7}\\
+			\overline{3}x_1 + \overline{1}x_2 + \overline{2}x_3 + \overline{1}x_4 = \overline{9}\\
+			\overline{1}x_1 + \overline{4}x_3 + \overline{3}x_4 = \overline{6}\\
+			\overline{5}x_1 + \overline{1}x_3 + \overline{1}x_4 = \overline{9}
+		\end{cases}$
+		em $\z_{11}$.
+		\begin{solucao}
+		A matriz ampliada do sistema \'e
+		\[
+			A =
+			\begin{amatrix}{4}
+				\overline{2} & \overline{1} & \overline{2} & \overline{2} & \overline{7}\\
+				\overline{3} & \overline{1} & \overline{2} & \overline{1} & \overline{9}\\
+				\overline{1} & \overline{0} & \overline{4} & \overline{3} & \overline{6}\\
+				\overline{5} & \overline{0} & \overline{1} & \overline{1} & \overline{9}
+			\end{amatrix}.
+		\]
+		Aplicando as opera\c{c}\~oes elementares para reduzir $A$ \`a forma em escada:
+		\begin{align*}
+			A &=
+				\left[
+					\begin{array}{cccc|c}
+						\overline{2} & \overline{1} & \overline{2} & \overline{2} & \overline{7}\\
+						\overline{3} & \overline{1} & \overline{2} & \overline{1} & \overline{9}\\
+						\overline{1} & \overline{0} & \overline{4} & \overline{3} & \overline{6}\\
+						\overline{5} & \overline{0} & \overline{1} & \overline{1} & \overline{9}
+					\end{array}
+				\right]
+				\begin{array}{l}
+					L_1 \leftrightarrow L_3
+				\end{array} \sim
+				\left[
+					\begin{array}{cccc|c}
+						\overline{1} & \overline{0} & \overline{4} & \overline{3} & \overline{6}\\
+						\overline{3} & \overline{1} & \overline{2} & \overline{1} & \overline{9}\\
+						\overline{2} & \overline{1} & \overline{2} & \overline{2} & \overline{7}\\
+						\overline{5} & \overline{0} & \overline{1} & \overline{1} & \overline{9}
+					\end{array}
+				\right]
+				\begin{array}{l}
+					\\
+					L_2 \to L_2 + \overline{8}L_1\\
+					L_3 \to L_3 + \overline{9}L_1\\
+					L_4 \to L_4 + \overline{6}L_1
+				\end{array}\\ \\ &\sim
+				\left[
+					\begin{array}{cccc|c}
+						\overline{1} & \overline{0} & \overline{4} & \overline{3} & \overline{6}\\
+						\overline{0} & \overline{1} & \overline{1} & \overline{3} & \overline{2}\\
+						\overline{0} & \overline{1} & \overline{5} & \overline{7} & \overline{6}\\
+						\overline{0} & \overline{0} & \overline{3} & \overline{8} & \overline{1}
+					\end{array}
+				\right]
+				\begin{array}{l}
+					\\
+					\\
+					L_3 \to L_3 + \overline{10}L_2\\
+					\phantom{x}
+				\end{array} \sim
+				\left[
+					\begin{array}{cccc|c}
+						\overline{1} & \overline{0} & \overline{4} & \overline{3} & \overline{6}\\
+						\overline{0} & \overline{1} & \overline{1} & \overline{3} & \overline{2}\\
+						\overline{0} & \overline{0} & \overline{4} & \overline{4} & \overline{4}\\
+						\overline{0} & \overline{0} & \overline{3} & \overline{8} & \overline{1}
+					\end{array}
+				\right]
+				\begin{array}{l}
+					\\
+					\\
+					L_3 \to \overline{3}L_3\\
+					\phantom{x}
+				\end{array}\\ \\ &\sim
+				\left[
+					\begin{array}{cccc|c}
+						\overline{1} & \overline{0} & \overline{4} & \overline{3} & \overline{6}\\
+						\overline{0} & \overline{1} & \overline{1} & \overline{3} & \overline{2}\\
+						\overline{0} & \overline{0} & \overline{1} & \overline{1} & \overline{1}\\
+						\overline{0} & \overline{0} & \overline{3} & \overline{8} & \overline{1}
+					\end{array}
+				\right]
+				\begin{array}{l}
+					L_1 \to L_1 + \overline{7}L_3\\
+					L_2 \to L_2 + \overline{10}L_3\\
+					\\
+					L_4 \to L_4 + \overline{8}L_3
+				\end{array} \sim
+				\left[
+					\begin{array}{cccc|c}
+						\overline{1} & \overline{0} & \overline{0} & \overline{10} & \overline{2}\\
+						\overline{0} & \overline{1} & \overline{0} & \overline{2} & \overline{1}\\
+						\overline{0} & \overline{0} & \overline{1} & \overline{1} & \overline{1}\\
+						\overline{0} & \overline{0} & \overline{0} & \overline{5} & \overline{9}
+					\end{array}
+				\right]
+				\begin{array}{l}
+					\\
+					\\
+					\\
+					L_4 \to \overline{9}L_4
+				\end{array}\\ \\ &\sim
+				\left[
+					\begin{array}{cccc|c}
+						\overline{1} & \overline{0} & \overline{0} & \overline{10} & \overline{2}\\
+						\overline{0} & \overline{1} & \overline{0} & \overline{2} & \overline{1}\\
+						\overline{0} & \overline{0} & \overline{1} & \overline{1} & \overline{1}\\
+						\overline{0} & \overline{0} & \overline{0} & \overline{1} & \overline{4}
+					\end{array}
+				\right]
+				\begin{array}{l}
+					L_1 \to L_1 + L_4\\
+					L_2 \to L_2 + \overline{9}L_4\\
+					L_3 \to L_3 + \overline{10}L_4\\
+					\phantom{x}
+				\end{array} \sim
+				\left[
+					\begin{array}{cccc|c}
+						\overline{1} & \overline{0} & \overline{0} & \overline{0} & \overline{6}\\
+						\overline{0} & \overline{1} & \overline{0} & \overline{0} & \overline{4}\\
+						\overline{0} & \overline{0} & \overline{1} & \overline{0} & \overline{8}\\
+						\overline{0} & \overline{0} & \overline{0} & \overline{1} & \overline{4}
+					\end{array}
+				\right]
+		\end{align*}
+		Assim o posto de $A$ \'e $p = 4$ e a nulidade \'e 0. Logo o sistema tem uma \'unica solu\c{c}\~ao dada por
+		\[
+			x_1 = \overline{6}, x_2 = \overline{4}, x_3 = \overline{8}, x_4 = \overline{4}.
+		\]
+		\end{solucao}
+		\item $
+		\begin{cases}
+			x_1 - x_2 + 2x_3 = 4\\
+			x_1 + x_3 = 6\\
+			2x_1 - 3x_2 + 5x_3 = 4
+		\end{cases}
+		$  em $\rac$.
+		\begin{solucao}
+		A matriz dos coeficentes deste sistema \'e
+		\[
+			\begin{amatrix}{3}
+				1 & -1 & 2 & 4 \\
+				1 & \phantom{-}0 & 1 & 6 \\
+				2 & -3 & 5 & 4
+			\end{amatrix}.
+		\]
+		Aplicando as opera\c{c}\~oes elementares para reduzir $A$ \`a forma em escada:
+		\begin{align*}
+			A &=
+				\left[
+					\begin{array}{ccc|c}
+						1 & -1 & 2 & 4 \\
+						1 & \phantom{-}0 & 1 & 6 \\
+						2 & -3 & 5 & 4
+					\end{array}
+				\right]
+				\begin{array}{l}
+					\\
+					L_2 \to L_2 - L_1\\
+					L_3 \to L_3 - 3L_1\\
+				\end{array} \sim		
+				\left[
+					\begin{array}{ccc|c}
+						1 & -1 & \phantom{-}2 & \phantom{-}4 \\
+						0 & \phantom{-}1 & -1 & \phantom{-}2 \\
+						0 & -1 & \phantom{-}1 & -4 
+					\end{array}
+				\right]
+				\begin{array}{l}
+					L_1 \to L_1 + L_2\\
+					\\
+					L_3 \to L_3 + L_2
+				\end{array}\\ \\ &\sim
+				\left[
+					\begin{array}{ccc|c}
+						1 & 0 & \phantom{-}1 & \phantom{-}6 \\
+						0 & 1 & -1 & \phantom{-}2 \\
+						0 & 0 & \phantom{-}0 & -2 
+					\end{array}
+				\right]
+		\end{align*}
+		Assim o sistema n\~ao tem solu\c{c}\~ao. Note que o posto da matriz ampliada \'e $p = 3$ e a posto da matriz dos coeficientes \'e 2.
+		\end{solucao}
+	\end{enumerate}
+\end{exemplo}
+
+\section{Matrizes e Determinantes}
+
+Seja $\cp{K}$ um corpo. Denotamos por $\cp{M}_{p \times q}(\cp{K})$ o conjunto de todas as matrizes $p \times q$ com entradas em $\cp{K}$. A soma e o produtos de matrizes s\~ao definidos de modo usual.
+
+Quando $p = q = n$, dizemos que uma matriz $A \in \cp{M}_{n \times n}(\cp{K})$, que denotaremos simplesmente por $\cp{M}_{n}(\cp{K})$, \'e \textbf{quadrada}.\index{Matriz!Quadrada}
+Tal conjunto tem elemento neutro para a multiplica\c{c}\~ao de matrizes que \'e a \textbf{matriz identidade} $I_n$ dada por
+\[
+	\begin{bmatrix}
+		1_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K}\\
+		0_\cp{K} & 1_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K}\\
+		\vdots\\
+		0_\cp{K} & 0_\cp{K} & 0_\cp{K} & \cdots & 1_\cp{K}
+	\end{bmatrix}.
+\]
+
+\begin{definicao}
+	Seja $A \in \cp{M}_{n}(\cp{K})$. Uma matriz $B \in \cp{M}_{n}(\cp{K})$ tal que $BA = I_n$ \'e chamada uma \textbf{inversa \`a esquerda} de $A$; uma matriz $C \in \cp{M}_{n}(\cp{K})$ tal que $AC = I_n$ \'e chamada uma \textbf{inversa \`a direita} de $A$. Se $AB = BA = I_n$, ent\~ao $A$ \'e chamada \textbf{invert{\'\i}vel}.
+\end{definicao}
+
+\begin{proposicao}
+	Se $A \in \cp{M}_{n}(\cp{K})$ possui uma inversa \`a esquerda $B$ e uma inversa \`a direita $C$, ent\~ao $B = C$.
+\end{proposicao}
+
+\begin{proposicao}
+	Sejam $A$, $B \in \cp{M}_{n}(\cp{K})$.
+	\begin{enumerate}[label={\roman*})]
+		\item Se $A$ \'e invert{\'\i}vel, ent\~ao $A^{-1}$ tamb\'em o \'e e $(A^{-1})^{-1} = A$.
+		\item Se $A$ e $B$ s\~ao invert{\'\i}veis, ent\~ao $AB$ tamb\'em o \'e e $(AB)^{-1} = B^{-1}A^{-1}$.
+	\end{enumerate}
+\end{proposicao}
+
+Dada um matriz $A$ como encontrar sua inversa? Por exemplo, para $A \in \cp{M}_2(\cp{R})$ dada por
+\[
+	A =
+	\begin{bmatrix}
+		1 & 2\\
+		3 & 4
+	\end{bmatrix}
+\]
+como achar
+\[
+	B =
+	\begin{bmatrix}
+		x & y\\
+		z & t
+	\end{bmatrix}
+\]
+tal que $AB = BA = I_2$? Queremos que
+\[
+	\begin{bmatrix}
+		1 & 2\\
+		3 & 4
+	\end{bmatrix}
+	\begin{bmatrix}
+		x & y\\
+		z & t
+	\end{bmatrix} = 
+	\begin{bmatrix}
+		1 & 0\\
+		0 & 1
+	\end{bmatrix}.
+\]
+Temos ent\~ao os seguintes sistemas para resolver:
+\[
+	\begin{cases}
+		x + 2z = 1\\
+		3x + 4z = 0
+	\end{cases} \quad \mbox{e}\quad
+	\begin{cases}
+		y + 2t = 0\\
+		3y + 4t = 1
+	\end{cases}.
+\]
+Assim podemos considerar a matriz ampliada contendo colunas correspondentes a cada um dos sistemas e reduz{\'\i}-la \`a forma em escada:
+\begin{align*}
+	A &= \left[
+			\begin{array}{cc|cc}
+		        1 & 2 & 1 & 0 \\
+		        3 & 4 & 0 & 1
+    		\end{array}
+    	\right]
+    	\begin{array}{l}
+    	\\
+        L_2 \to L_2 - 3L_1
+    	\end{array} \sim
+    \left[
+    	\begin{array}{cc|cc}
+    		1 &  2 & \phantom{-}1 & 0 \\
+        	0 &  -2 & -3 & 1	
+    	\end{array}
+    \right]
+    \begin{array}{l}
+        L_1 \to L_1 + L_2\\
+    \end{array}\\ \\ &\sim
+    \left[
+    	\begin{array}{cc|cc}
+        	1 &  0 & -2 & 1 \\
+        	0 &  -2 & -3 & 1
+    	\end{array}
+    \right]
+    \begin{array}{l}
+        \\
+        L_2 \to -\dfrac{1}{2}L_2
+    \end{array} \sim
+    \left[
+    	\begin{array}{cc|cc}
+    		1 &  0 & -2 & \phantom{-}1 \\
+        	0 &  1 & \phantom{-}3/2 & -1/2
+    	\end{array}
+    \right]
+\end{align*}
+
+
+Assim a matriz
+\[
+	B =
+	\begin{bmatrix}
+		-2 & 1 \\
+		3/2 & -1/2
+	\end{bmatrix}
+\]
+\'e tal que $AB = BA = I_2$.
+
+Portanto, determinar se uma matriz $A \in \cp{M}_n(\cp{K})$ possui inversa ou n\~ao \'e equivalente \`a resolver um sistema linear. Assim, temos o seguinte resultado:
+\begin{teorema}
+	Seja $A \in \cp{M}_n(\cp{K})$. As seguintes afirma\c{c}\~oes s\~ao equivalentes:
+	\begin{enumerate}[label={\roman*})]
+		\item $A$ \'e invert{\'\i}vel;
+		\item O sistema homog\^eneo $AX = 0$ possui somente a solu\c{c}\~ao trivial;
+		\item O sistema $AX = Y$, onde $Y$ \'e uma matriz $n \times 1$, possui uma \'unica solu\c{c}\~ao para qualquer $Y$.
+	\end{enumerate}
+\end{teorema}
+
+\begin{corolario}
+	Se $A \in \cp{M}_n(\cp{K})$ \'e invert{\'\i}vel e se uma sequ\^encia de opera\c{c}\~oes elementares sobre linhas reduz $A$ \`a matriz unidade, ent\~ao essa mesma sequ\^encia de opera\c{c}\~oes elementares sobre linhas quando aplicadas \`a matriz $I_n$, resulta em $A^{-1}$.
+\end{corolario}
+
+\begin{exemplo}
+	Seja
+	\[
+		A =
+		\begin{bmatrix}
+			1 & 1 & 0\\
+			0 & 2 & 1\\
+			1 & 0 & 1
+		\end{bmatrix}.
+	\]
+	Determine a inversa de $A$, se existir.
+	\begin{solucao}
+		Temos
+		\begin{align*}
+			A &= \left[
+					\begin{array}{ccc|ccc}
+						1 & 1 & 0 & 1 & 0 & 0 \\
+						0 & 2 & 1 & 0 & 1 & 0\\
+						1 & 0 & 1 & 0 & 0 & 1
+					\end{array}
+				\right]
+				\begin{array}{l}
+					\\
+		    		\\
+		    		L_3 \to L_3 - L_1
+				\end{array} \sim
+				\left[
+					\begin{array}{ccc|ccc}
+						1 & \phantom{-}1 & 0 & \phantom{-}1 & 0 & 0 \\
+						0 & \phantom{-}2 & 1 & \phantom{-}0 & 1 & 0\\
+						0 & -1 & 1 & -1 & 0 & 1
+					\end{array}
+				\right]
+				\begin{array}{l}
+					\\
+			    	L_2 \leftrightarrow L_3\\
+				\end{array}\\ \\ &\sim
+				\left[
+					\begin{array}{ccc|ccc}
+						1 & \phantom{-}1 & 0 & \phantom{-}1 & 0 & 0 \\
+						0 & -1 & 1 & -1 & 0 & 1\\
+						0 & \phantom{-}2 & 1 & \phantom{-}0 & 1 & 0
+					\end{array}
+				\right]
+				\begin{array}{l}
+					\\
+			    	L_2 \leftrightarrow L_3\\
+				\end{array} \sim
+				\left[
+					\begin{array}{ccc|ccc}
+						1 & \phantom{-}1 & 0 & \phantom{-}1 & 0 & 0 \\
+						0 & -1 & 1 & -1 & 0 & 1\\
+						0 & \phantom{-}2 & 1 & \phantom{-}0 & 1 & 0
+					\end{array}
+				\right]
+				\begin{array}{l}
+					\\
+			    	L_2 \to -L_2\\
+				\end{array}\\ \\ &\sim
+				\left[
+					\begin{array}{ccc|ccc}
+						1 & 1 & \phantom{-}0 & \phantom{-}1 & 0 & 0 \\
+						0 & 1 & -1 & \phantom{-}1 & 0 & -1\\
+						0 & 2 & \phantom{-}1 & \phantom{-}0 & 1 & 0
+					\end{array}
+				\right]
+				\begin{array}{l}
+					L_1 \to L_1 - L_2\\
+			    	\\
+			    	L_3 \to L_3 -2L_2
+				\end{array} \sim
+				\left[
+					\begin{array}{ccc|ccc}
+						1 & 0 & \phantom{-}1 & \phantom{-}0 & 0 & 1 \\
+						0 & 1 & -1 & -1 & 0 & 1\\
+						0 & 0 & \phantom{-}3 & -2 & 1 & 2
+					\end{array}
+				\right]
+				\begin{array}{l}
+					\\
+		    		\\
+		    		L_3 \to \dfrac{1}{3}L_3
+				\end{array}\\ \\ &\sim
+				\left[
+					\begin{array}{ccc|ccc}
+						1 & 0 & \phantom{-}1 & \phantom{-}0 & 0 & 1 \\
+						0 & 1 & -1 & -1 & 0 & 1\\
+						0 & 0 & \phantom{-}1 & -2/3 & 1/3 & 2/3
+					\end{array}
+				\right]
+				\begin{array}{l}
+					L_1 \to L_1 - L_3\\
+		    		L_2 \to L_2 + L_3\\
+				\end{array} \sim
+				\left[
+					\begin{array}{ccc|ccc}
+						1 & 0 & 0 & \phantom{-}2/3 & -1/3 & \phantom{-}1/3 \\
+						0 & 1 & 0 & \phantom{-}1/3 & \phantom{-}1/3 & -1/3\\
+						0 & 0 & 1 & -2/3 & \phantom{-}1/3 & \phantom{-}2/3
+					\end{array}
+				\right]
+		\end{align*}
+		Logo $A$ \'e invert{\'\i}vel e
+		\[
+			A^{-1} =
+			\begin{bmatrix}
+				\phantom{-}2/3 & -1/3 & \phantom{-}1/3 \\
+				\phantom{-}1/3 & \phantom{-}1/3 & -1/3\\
+				-2/3 & \phantom{-}1/3 & \phantom{-}2/3
+			\end{bmatrix}.
+		\]
+	\end{solucao}
+\end{exemplo}
+
+Faremos agora a defini\c{c}\~ao de \textbf{determinante} de modo indutivo na ordem de uma dada matriz quadrada $A \in \cp{M}_n(\cp{K})$, $n \ge 1$.
+
+Se $n = 1$, ent\~ao a matriz $A \in \cp{M}_1(\cp{K})$ \'e da forma
+\[
+	A = (a_{11})
+\]
+e neste caso definimos
+\[
+	\det A = a_{11} \in \cp{K}.
+\]
+Suponha que $n > 1$ e que $\det B$ esteja definido para todas as matrizes  $B \in \cp{M}_p(\cp{K})$ com $p < n$ e seja 
+$A \in \cp{M}_n(\cp{K})$. Para cada $(i,j)$, defina a matriz $A_{ij}$ formada a partir de $A$ retirando-se a sua $i$-\'esima linha e a sua $j$-\'esima coluna. \'E claro que $A \in \cp{M}_{n - 1}(\cp{K})$ e portanto $\det A_{ij}$ est\'a definido. Defina ent\~ao
+\[
+	\det A = \sum_{j = 1}^n(-1)^{i + j}a_{ij}\det A_{ij} \in \cp{K}.
+\]
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item Seja
+		\[
+			A =
+			\begin{bmatrix}
+				a & b\\
+				c & d
+			\end{bmatrix} \in \cp{M}_2(\cp{K}).
+		\]
+		Fixada a linha 1, temos
+		\[
+			\det A = \sum_{j = 1}^2(-1)^{1 + j}a_{1j}\det A_{1j} = (-1)^{1 + 1}a_{11}\det A_{11} + (-1)^{1 + 2}a_{12}\det A_{12} = ad - bc.
+		\]
+		Obter{\'\i}amos o mesmo resultado se consider\'assemos a linha 2.
+
+		\item Seja
+		\[
+			A =
+			\begin{bmatrix}
+				a_{11} & a_{12} & a_{13}\\
+				a_{21} & a_{22} & a_{23}\\
+				a_{31} & a_{32} & a_{33}
+			\end{bmatrix} \in \cp{M}_2(\cp{K}).
+		\]
+		Fixada a linha 2, temos
+		\begin{align*}
+			\det A &= \sum_{j = 1}^3(-1)^{2 + j}a_{2j}\det A_{2j} \\ &= (-1)^{2 + 1}a_{21}\det A_{21} + (-1)^{2 + 2}a_{22}\det A_{22} + (-1)^{2 + 3}a_{32}\det A_{32}\\ &= -a_{21}\det\begin{bmatrix}a_{12} & a_{13}\\a_{32} & a_{33}\end{bmatrix} + a_{22}\det\begin{bmatrix}a_{11} & a_{12}\\a_{31} & a_{33}\end{bmatrix} - a_{23}\det\begin{bmatrix}a_{11} & a_{12}\\a_{31} & a_{32}\end{bmatrix}.
+		\end{align*}
+		Da{\'\i}
+		\[
+			\det A = a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} - a_{13}a_{22}a_{31} - a_{12}a_{21}a_{33} - a_{11}a_{23}a_{32}.
+		\]
+	\end{enumerate}
+\end{exemplo}
+
+\begin{proposicao}
+	Sejam $A$, $B \in \cp{M}_n(\cp{K})$ e $\lambda \in \cp{K}$. Temos:
+	\begin{enumerate}[label={\roman*})]
+		\item $\det(AB) = \det A \det B$,
+		\item $\det(\lambda A) = \lambda^n \det(A)$,
+		\item $\det(A^{-1}) = (\det A)^{-1}$.
+	\end{enumerate}
+\end{proposicao}
+
+
+\begin{proposicao}
+	Seja $A$ uma matriz $n \times n$ com entradas num corpo $\cp{K}$.
+	\begin{enumerate}[label={\roman*})]
+		\item Se $B$ \'e a matriz resultante da permuta\c{c}\~ao de duas linhas de $A$, ent\~ao $\det (B) = -\det (A)$.
+		\item Se $B$ \'e a matriz resultante da multiplica\c{c}\~ao de uma linha de $A$ por um escalar n\~ao nulo $\alpha \in \cp{K}$, ent\~ao $\det(B) = \alpha\det(A)$.
+		\item Se $B$ \'e a matriz resultante da soma da linha $i$ de $A$ com um m\'ultiplo n\~ao nulo $\alpha \in \cp{K}$ da linha $j$ de $A$, ent\~ao $\det(B) = \det(A)$.
+	\end{enumerate}
+\end{proposicao}
+
+\begin{observacao}
+	\'E poss{\'\i}vel mostrar que o determinante tamb\'em pode ser definido a partir das colunas de uma matriz $A \in \cp{M}_n(\cp{K})$.
+\end{observacao}
+
+\begin{teorema}
+	Uma matriz $A \in \cp{M}_n(\cp{K})$ \'e invert{\'\i}vel se, e somente se, $\det A \ne 0_\cp{K}$.
+\end{teorema}

@@ -1,0 +1,123 @@
+%!TEX program = xelatex
+%!TEX root = IAL.tex
+
+\usepackage{graphicx} % Required for including pictures
+\graphicspath{{Images/}} % Specifies the directory where pictures are stored
+
+\usepackage{ccicons} %ícones creative commons
+
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext}
+
+\usepackage{enumitem}
+
+\usepackage{lipsum} % Inserts dummy text
+
+\usepackage{tikz} % Required for drawing custom shapes
+
+\usepackage[brazil]{babel}
+
+\usepackage{multicol}
+
+\usepackage{gauss}
+
+\usepackage{enumitem} % Customize lists
+\setlist{nolistsep} % Reduce spacing between bullet points and numbered lists
+
+\usepackage{booktabs} % Required for nicer horizontal rules in tables
+
+\usepackage{xcolor} % Required for specifying colors by name
+\definecolor{ocre}{RGB}{243,102,25} % Define the orange color used for highlighting throughout the book
+
+
+%----------------------------------------------------------------------------------------
+%	MATH COMMANDS
+%----------------------------------------------------------------------------------------
+
+
+\newcommand{\n}{\mathbb{N}}
+\newcommand{\z}{\mathbb{Z}}
+\newcommand{\rac}{\mathbb{Q}}
+\newcommand{\dom}{{\rm dom\,}}
+\newcommand{\im}{{\rm Im\,}}
+\newcommand{\aut}{{\rm Aut\,}}
+\newcommand{\cp}[1]{\mathbb{#1}}
+\newcommand{\sub}{\subseteq}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\lap}[1]{\mathcal{L}\left\{#1\right\}}
+\newcommand{\lapi}[1]{\mathcal{L}^{-1}\left\{#1\right\}}
+\newcommand{\se}[1]{\displaystyle\sum_{n = 1}^\infty{#1}}
+\newcommand{\dlim}[2]{\displaystyle\lim_{#1\rightarrow #2}}
+\newcommand{\slim}{\displaystyle\lim_{n \rightarrow \infty}}
+\newcommand{\seq}[1]{\{{#1_n\}}}
+\newcommand{\seg}[1]{\displaystyle\sum_{n = 1}^\infty{#1_n}}
+\newcommand{\sei}[2]{\displaystyle\sum_{#1}^\infty{#2}}
+\newcommand{\sepc}[3]{\displaystyle\sum_{#1}^\infty{#2(x - #3)^n}}
+\newcommand{\imp}[3]{\displaystyle\int_{#1}^{+\infty}{#3}{d #2}}
+\newcommand{\dint}[4]{\displaystyle\int_{#1}^{#2}{#4}{d#3}}
+\newcommand{\inti}[2]{\displaystyle\int{#1}{d#2}}
+\newcommand{\norma}[1]{\left\lVert#1\right\rVert}
+\newcommand{\flim}[1]{\displaystyle\lim_{#1\rightarrow \infty}}
+\renewcommand{\sin}{{\rm sen\,}}
+\renewcommand{\tan}{{\rm tg\,}}
+\renewcommand{\csc}{{\rm cossec\,}}
+\renewcommand{\cot}{{\rm cotg\,}}
+\renewcommand{\sinh}{{\rm senh\,}}
+\newcommand\T{\rule{0pt}{2.6ex}}
+
+%-------------amatrix
+% Augmented matrix.  Usage (note the argument does not count the aug col):
+% \begin{amatrix}{2}
+%   1  2  3 \\  4  5  6
+% \end{amatrix}
+\newenvironment{amatrix}[1]{%
+  \left[\begin{array}{@{}*{#1}{r}|r@{}}
+}{%
+  \end{array}\right]
+}
+
+
+\usepackage{array}
+
+\makeatletter
+\newcounter{elimination@steps}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash$}p{#1}<{$}}
+\def\elimination@num@rights{}
+\def\elimination@num@variables{}
+\def\elimination@col@width{}
+\newenvironment{elimination}[4][0]
+{
+    \setcounter{elimination@steps}{0}
+    \def\elimination@num@rights{#1}
+    \def\elimination@num@variables{#2}
+    \def\elimination@col@width{#3}
+    \renewcommand{\arraystretch}{#4}
+    \start@align\@ne\st@rredtrue\m@ne
+}
+{
+    \endalign
+    \ignorespacesafterend
+}
+\newcommand{\eliminationstep}[2]
+{
+    \ifnum\value{elimination@steps}>0\sim\quad\fi
+    \left[
+        \ifnum\elimination@num@rights>0
+            \begin{array}
+            {@{}*{\elimination@num@variables}{R{\elimination@col@width}}
+            |@{}*{\elimination@num@rights}{R{\elimination@col@width}}}
+        \else
+            \begin{array}
+            {@{}*{\elimination@num@variables}{R{\elimination@col@width}}}
+        \fi
+            #1
+        \end{array}
+    \right]
+    &
+    \begin{array}{l}
+        #2
+    \end{array}
+    &%                                    moved second & here
+    \addtocounter{elimination@steps}{1}
+}
+\makeatother

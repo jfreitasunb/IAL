@@ -1,0 +1,838 @@
+%!TEX root = Algebra_Linear.tex
+%%Usar makeindex -s indexstyle.ist arquivo no terminal para gerar o {\'\i}ndice remissivo agrupado por inicial
+%%Ap\'os executar pdflatex arquivo
+\chapter{Espa\c{c}os Vetoriais}
+
+Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
+
+\begin{definicao}
+	Um conjunto	n\~ao vazio $V$ \'e um \textbf{espa\c{c}o vetorial}\index{Espa\c{c}o Vetorial} sobre um corpo $\cp{K}$ se em seus elementos, chamados \textbf{vetores}, estiverem definidas duas opera\c{c}\~oes satisfazendo:
+	\begin{itemize}
+		\item[A)] A cada par $u$, $w \in V$ corresponde um vetor $u + w \in V$, chamado \textbf{soma} de $u$ e $w$, de modo que:
+		\item[A1)] $u + w = w + u$, para todos $u$, $w \in V$;
+		\item[A2)] $(u + w) + x = u + (w + x)$, para todos $u$, $w$ e $x \in V$;
+		\item[A3)] Existe em $V$ um vetor, denominado \textbf{vetor nulo} e denotado por $0_V$, tal que
+		\[
+			0_V + u = u
+		\]
+		para todo $u \in V$.
+		\item[A4)] Para cada vetor $u \in V$, existe um vetor em $V$, denotado por $-u$ tal que
+		\[
+			u + (-u) = 0_V.
+		\]
+		\item[M)] A cada par $\alpha \in \cp{K}$ e $u \in V$, corresponde um vetor $\alpha \cdot u \in V$, denominado \textbf{produto por escalar} de $\alpha$ por $u$ de modo que:
+		\item[M1)] $(\alpha\beta)\cdot u = \alpha(\beta\cdot u)$ para todos $\alpha$, $\beta \in \cp{K}$ e todo $u \in V$;
+		\item[M2)] $1_\cp{K}\cdot u = u$ para todo $u \in V$, onde $1_\cp{K}$ \'e o elemento neutro da multiplica\c{c}\~ao em $\cp{K}$.
+		\item[D1)] $\alpha\cdot(u + w) = \alpha\cdot u + \alpha\cdot w$, para todo $\alpha \in \cp{K}$ e todos $u$, $w \in V$;
+		\item[D2)] $(\alpha + \beta)\cdot u = \alpha\cdot u + \beta\cdot u$, para todos $\alpha$, $\beta \in \cp{K}$ e todo $u \in V$.
+	\end{itemize}
+\end{definicao}
+
+\begin{observacao}
+	Vamos usar a express\~ao $\cp{K}$-\textbf{espa\c{c}o vetorial} para nos referir a um espa\c{c}o vetorial $V$ sobre um corpo $\cp{K}$.
+\end{observacao}
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item Todo corpo \'e um espa\c{c}o vetorial sobre si mesmo.
+		\item Seja $\cp{K}$ um corpo. Considere o conjunto
+		\[
+			\cp{K}^n = \underbrace{\cp{K} \times \cp{K} \times \cdots \times \cp{K}}_{n\ vezes} = \{(a_1, a_2,\dots,a_n) \mid a_i \in \cp{K}, i =1, 2, \dots, n\}
+		\]
+		e defina
+		\begin{itemize}
+			\item $(a_1, a_2, \dots, a_n) + (b_1, b_2, \dots,b_n) = (a_1 + b_1, a_2 + b_2,\dots, a_n + b_n)$ para todos $(a_1, a_2, \dots,a_n)$ ,$(b_1, b_2, \dots,b_n) \in \cp{K}^n$;
+			\item $\alpha (a_1, a_2, \dots,a_n) = (\alpha a_1, \alpha a_2, \dots, \alpha a_n)$ para todo $\alpha \in \cp{K}$ e todo $(a_1, a_2, \dots, a_n) \in \cp{K}^n$.
+			Com estas opera\c{c}\~oes $\cp{K}^n$ \'e um espa\c{c}o vetorial sobre $\cp{K}$. Assim temos:
+			\begin{itemize}
+				\item $\real^n$ \'e um espa\c{c}o vetorial sobre $\real$;
+				\item $\complex^n$ \'e um espa\c{c}o vetorial sobre $\complex$;
+				\item $(\z_p)^n$ \'e um espa\c{c}o vetorial sobre $\z_p$.
+			\end{itemize}
+
+		\end{itemize}
+		\item $\complex^n$ \'e um espa\c{c}o vetorial sobre $\real$ se definirmos:
+		\begin{itemize}
+			\item $(a_1, a_2, \dots, a_n) + (b_1, b_2, \dots,b_n) = (a_1 + b_1, a_2 + b_2,\dots, a_n + b_n)$ para todos $(a_1, a_2, \dots,a_n)$ ,$(b_1, b_2, \dots,b_n) \in \complex^n$;
+			\item $\alpha (a_1, a_2, \dots,a_n) = (\alpha a_1, \alpha a_2, \dots, \alpha a_n)$ para todo $\alpha \in \real$ e todo $(a_1, a_2, \dots, a_n) \in \complex^n$.
+		\end{itemize}
+		\item O conjunto $\rac$ \'e um espa\c{c}o vetorial sobre $\rac$, mas n\~ao \'e um espa\c{c}o vetorial sobre $\real$. (Por qu\^e?)
+		\item Considere o conjunto dos polin\^omios
+		\[
+			\mathcal{P}(\cp{K}) = \{ p(x) = a_nx^n + a_{n - 1}x^{n - 1} + \cdots + a_1x + a_0 \mid a_i \in \cp{K}, i = 0, 1, 2, \dots, n; n \ge 0 \}.
+		\]
+		Dados $p(x) = a_nx^n + a_{n - 1}x^{n - 1} + \cdots + a_1x + a_0$ e $q(x) = b_mx^m + b_{m - 1}x^{m - 1} + \cdots + b_1x + b_0$ em $\mathcal{P}(\cp{K})$, suponha que $n < m$ e defina:
+		\begin{itemize}
+			\item $(p + q)(x) = b_mx^m + b_{m - 1}x^{m - 1} + \cdots + b_{n + 1}x^{n + 1} + (a_n + b_n)x^n + \cdots + (a_1 + b_1)x + (a_0 + b_0)$
+			\item $(\alpha p)(x) = \alpha a_nx^n + \alpha a_{n - 1}x^{n - 1} + \cdots + \alpha a_1x + \alpha a_0$, onde $\alpha \in \cp{K}$.
+		\end{itemize}
+		Assim $\mathcal{P}(\cp{K})$ \'e um $\cp{K}$-espa\c{c}o vetorial.
+		\item O conjunto das matrizes $\cp{M}_{p \times q}(\cp{K})$ com coeficientes em $\cp{K}$ \'e um $\cp{K}$-espa\c{c}o vetorial com a soma usual de matrizes e a multiplica\c{c}\~ao por escalar usual.
+
+
+		\item Seja $V = \{x \in \real \mid x > 0\} = \real_+^*$. Defina em $V$ as seguintes opera\c{c}\~oes:
+		\begin{align*}
+			x \oplus y &= xy\\
+			\lambda \otimes x &= x^\lambda
+		\end{align*}
+		para todos $x$, $y \in V$ e para todo $\lambda \in \real$. Ent\~ao com essas opera\c{c}\~oes $V$ \'e um $\real$-espa\c{c}o vetorial.
+		\begin{solucao}
+			Temos:
+			\begin{enumerate}
+				\item[A1)] $x \oplus y = xy = yx = y \oplus x$, para todos $x$, $y \in V$.
+				\item[A2)] $(x \oplus y) \oplus z = (xy) \oplus z = (xy)z = x(yz) = x \oplus (yz) = x \oplus (y \oplus z)$, para todos $x$, $y$, $z \in V$.
+				\item[A3)] Tome $0_V = 1$. Ent\~ao para todo $x \in V$ temos
+				\[
+					x\oplus 0_V = x\oplus 1 = x\cdot 1 = x.
+				\]
+				Logo $0_V = 1$ \'e o vetor nulo de $V$.
+				\item[A4)] Dado $x \in V$, tome $-x = \dfrac{1}{x} \in V$. Assim
+				\[
+					x \oplus (-x) = x \oplus \dfrac{1}{x} = x \cdot \dfrac{1}{x} = 1 = 0_V.
+				\]
+				\item[M1)] $(\alpha \beta)\otimes x = x^{\alpha \beta} = (x^\beta)^\alpha = \alpha \otimes (x^\beta) = \alpha \otimes (\beta \otimes x)$ para todos $\alpha$, $\beta \in \real$ e todo $x \in V$.
+				\item[M2)] $1_\real \otimes x = 1\otimes x = x^1 = x$ para todo $x \in V$.
+				\item[D1)] $\alpha \otimes (x \oplus y) = \alpha \otimes (xy) = (xy)^\alpha = (x^\alpha) (y^\alpha) = (\alpha \otimes x) (\alpha \otimes y) = (\alpha \otimes x) \oplus (\alpha \otimes y)$ para todos $x$, $y \in V$ e para todo $\alpha \in \real$.
+				\item[D2)] $(\alpha + \beta) \otimes x = x^{\alpha + \beta} = x^\alpha x^\beta = (\alpha \otimes x)(\beta \otimes x) = (\alpha \otimes x) \oplus (\beta \otimes x)$, para todos $\alpha$, $\beta \in \real$ e para todo $x \in V$.
+			\end{enumerate}
+			Portanto $V$ \'e um $\real$-espa\c{c}o vetorial.
+		\end{solucao}
+		\end{enumerate}
+\end{exemplo}
+
+\begin{definicao}
+	Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$.
+	\begin{enumerate}[label={\roman*})]
+		\item Um vetor $w \in V$ \'e uma \textbf{combina\c{c}\~ao linear}\index{Espa\c{c}o Vetorial!Combina\c{c}\~ao linear} dos vetores $u_1$, $u_2$, \dots, $u_n \in V$ se existirem escalares $\alpha_1$, $\alpha_2$, \dots, $\alpha_n \in V$ tais que
+		\[
+			w = \alpha_1 u_1 + \alpha_2u_2 + \cdots + \alpha_nu_n = \sum_{i = 1}^n \alpha_iu_i.
+		\]
+		\item Seja $\mathcal{B}$ um subconjunto de $V$. Dizemos que $\mathcal{B}$ \'e um \textbf{conjunto gerador}\index{Espa\c{c}o Vetorial!Conjunto gerador} (ou que $\mathcal{B}$ gera $V$) se todo elemento de $V$ for uma combina\c{c}\~ao linear de uma quantidade finita de elementos de $\mathcal{B}$.
+	\end{enumerate}
+\end{definicao}
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item O vetor $(1, 1, 1) \in \real^3$ \'e uma combina\c{c}\~ao linear dos vetores $u_1 = (1, 2, 3)$, $u_2 = (0, 1, 2)$ e $u_3 = (-1, 0, 1)$. De fato, precisamos encontrar $\alpha$, $\beta$ e $\gamma \in \real$ tais que:
+		\[
+			(1, 1, 1) = \alpha u_1 + \beta u_2 + \gamma u_3 = (\alpha - \gamma, 2\alpha + \beta, 3\alpha + 2\beta + \gamma).
+		\]
+		Assim resolvendo o sistema
+		\[
+		\begin{cases}
+			\alpha - \gamma = 1\\
+			2\alpha + \beta = 1\\
+			3\alpha + 2\beta + \gamma = 1
+		\end{cases}
+		\]
+		encontramos que suas solu\c{c}\~oes s\~ao dadas por
+		\begin{align*}
+			\alpha &= 1 + \gamma\\
+			\beta &= -1 - 2\gamma
+		\end{align*}
+		onde $\gamma \in \real$. Logo o vetor $(1, 1, 1)$ \'e de fato uma combina\c{c}\~ao linear dos vetores $u_1$, $u_2$ e $u_3$. Podemos tomar, por exemplo, $\gamma = 2$ e escrever
+		\[
+			(1, 1, 1) = 3(1, 2, 3) - 5(0, 1, 2) + 2(-1, 0 , 1).
+		\]
+		\item O vetor $(1, -2, 2) \in \real^3$ n\~ao \'e uma combina\c{c}\~ao linear dos vetores $u_1 = (1, 2, 3)$, $u_2 = (0, 1, 2)$ e $u_3 = (-1, 0, 1)$. De fato, suponha que $\alpha$, $\beta$ e $\gamma \in \real$ s\~ao tais que:
+		\[
+			(1, -2, 2) = \alpha u_1 + \beta u_2 + \gamma u_3 = (\alpha - \gamma, 2\alpha + \beta, 3\alpha + 2\beta + \gamma).
+		\]
+		Assim resolvendo o sistema
+		\[
+		\begin{cases}
+			\alpha - \gamma = 1\\
+			2\alpha + \beta = -2\\
+			3\alpha + 2\beta + \gamma = 2
+		\end{cases}.
+		\]
+		A matriz linha-reduzida \`a forma em escada deste sistema \'e
+		\[
+			\begin{bmatrix}
+				1 & 0 & -1 & 0\\
+				0 & 1 & \phantom{-}2 & 0\\
+				0 & 0 & \phantom{-}0 & 1
+			\end{bmatrix}
+		\]
+		e portanto o sistema \'e imposs{\'\i}vel. Logo o vetor $(1, -2, 2)$ n\~ao \'e uma combina\c{c}\~ao linear dos vetores $u_1$, $u_2$ e $u_3$.
+	\item Considere o $\real$-espa\c{c}o vetorial $\real^3$. Dado um vetor $(a, b, c) \in \real^3$ podemos escrever
+	\[
+		(a, b, c) = a(1, 0, 0) + b(0, 1, 0) + c(0, 0, 1).
+	\]
+	Assim qualquer vetor de $\real^3$ \'e uma combina\c{c}\~ao linear dos vetores $(1, 0 , 0)$, $(0, 1 , 0)$ e $(0, 0 , 1)$. Logo o conjunto $\mathcal{B} = \{(1, 0 , 0), (0, 1 , 0), (0, 0 , 1)\}$ \'e um conjunto gerador para $\real^3$.
+	\item $\mathcal{B}_1 = \{(1, 0 , 1), (1, 1 , 0), (1, 1 , 1), (-1, 0, 0), (-1, -1, 0), (-1, -1, -1)\}$ tamb\'em \'e um conjunto gerador para $\real^3$ como $\real$-espa\c{c}o vetorial. De fato, dado $(a, b, c) \in \real^3$, queremos encontrar $x_1$, $x_2$, $x_3$, $x_4$, $x_5$, $x_6 \in \real$ tais que
+	\[
+		(a, b, c) = x_1(1, 0 , 1) + x_2(1, 1 , 0) + x_3(1, 1 , 1) + x_4(-1, 0, 0) + x_5(-1, -1, 0) + x_6(-1, -1, -1).
+	\]
+	O que fornece o sistema
+	\[
+		\begin{cases}
+			x_1 + x_2 + x_3 - x_4 - x_5 - x_6 = a\\
+			x_2 + x_3 - x_5 - x_6 = b\\
+			x_1 + x_3 - x_6 = c
+		\end{cases}
+	\]
+	cuja matriz linha-reduzida \`a forma em escada \'e
+	\[
+		\begin{bmatrix}
+			1 & 0 & 0 & -1 & \phantom{-}0 & \phantom{-}0 & a - b\\
+			0 & 1 & 0 & -1 & -1 & \phantom{-}0 & a - c\\
+			0 & 0 & 1 & \phantom{-}1 & \phantom{-}0 & -1 & b + c - a
+		\end{bmatrix},
+	\]
+	assim o sistema \'e poss{\'\i}vel e indeterminado, com posto 3 e nulidade 3. Sua solu\c{c}\~ao \'e descrita pela equa\c{c}\~oes
+	\begin{align*}
+		x_1 &= a - b + x_4\\
+		x_2 &= a - c + x_4 + x_5\\
+		x_3 &= b + c - a - x_4 + x_6
+	\end{align*}
+	onde $x_4$, $x_5$ e $x_6 \in \real$. Portanto $\mathcal{B}_1$ \'e um conjunto gerador para $\real^3$.
+	\item Seja $\mathcal{P}(\real)$ o conjunto dos polin\^omios em $\real$. O subconjunto $\mathcal{B} = \{1, x, x^2, \dots, x^n, \dots\}$ \'e um conjunto gerador de $\mathcal{P}(\real)$ visto como um $\real$-espa\c{c}o vetorial.
+	\item O conjunto $\mathcal{B} = \{(1, 0), (0, 1)\}$ gera $\complex^2$ como $\complex$-espa\c{c}o vetorial. No entanto, este conjunto n\~ao gera $\complex^2$ como $\real$-espa\c{c}o vetorial pois, por exemplo, $(i, 0)$ n\~ao \'e combina\c{c}\~ao linear dos vetores em $\mathcal{B}$. De fato, se $\alpha$ e $\beta$ s\~ao tais que
+	\[
+		(i, 0) = \alpha (1, 0) + \beta (0, 1)
+	\]
+	ent\~ao $\alpha = i$ o que \'e imposs{\'\i}vel em $\real$.
+	\end{enumerate}
+\end{exemplo}
+
+\begin{observacao}
+	\begin{enumerate}\label{conjuntogerador}
+		\item Por conven\c{c}\~ao diremos que o conjunto vazio gera o $\cp{K}$-espa\c{c}o vetorial $\{0\}$.\label{geradorconjuntonulo}
+		\item Todo espa\c{c}o vetorial possui um conjunto gerador. (Qual?)
+	\end{enumerate}
+\end{observacao}
+
+\begin{definicao}
+	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial e $\mathcal{B}$ um subconjunto de $V$.
+	\begin{enumerate}[label={\roman*})]
+		\item Dizemos que $\mathcal{B}$ \'e \textbf{linearmente independente}\index{Espa\c{c}o Vetorial!Conjunto L.I.} ou simplesmente \textbf{L.I.}, se o \'unico meio de escrevermos
+		\[
+			0_V = \alpha_1 u_1 + \alpha_2 u_2 + \cdots + \alpha_n u_n
+		\]
+		onde $u_i \in \mathcal{B}$ e $\alpha_i \in \cp{K}$ com $i = 1$, 2, \dots, n \'e tomando $\alpha_1 = \alpha_2 = \cdots = \alpha_n = 0_\cp{K}$.
+		
+		\item Dizemos que o conjunto $\mathcal{B}$ \'e \textbf{linearemente dependente}\index{Espa\c{c}o Vetorial!Conjunto L.D.} ou simplesmente 
+		\textbf{L.D.}, se existem vetores distintos $u_1$, $u_2$, \dots, $u_n \in \mathcal{B}$ e escalares $\alpha_1$, $\alpha_2$, \dots, $\alpha_n$ n\~ao todos nulos, tais que
+		\[
+			\alpha_1 u_1 + \alpha_2 u_2 + \cdots + \alpha_n u_n = 0_V.
+		\]
+	\end{enumerate}
+\end{definicao}
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item Seja $\mathcal{B} = \{(1, 0), (i, 0), (0, 1), (0, i)\}\sub \complex^2$. Considerando $\complex^2$ como um $\complex$-espa\c{c}o vetorial, ent\~ao $\mathcal{B}$ \'e L.D. pois
+		\[
+			(0, 0) = 0(1, 0) + 0(i, 0) + 1(0, 1) + i(0, i).
+		\]
+		Agora, considerando $\complex^2$ com um $\real$-espa\c{c}o vetorial, o conjunto $\mathcal{B}$ \'e L.I.. De fato, se $\alpha$, $\beta$, $\gamma$, $\delta \in \real$ s\~ao tais que
+		\[
+			(0, 0 ) = \alpha(1, 0) + \beta(i, 0) + \gamma(0, 1) + \delta(0, i)
+		\]
+		ent\~ao $\alpha = \beta = \gamma = \delta = 0$.
+		\item Considerando $\real^2$ como um $\real$-espa\c{c}o vetorial, o conjunto $\mathcal{B} = \{(1, -1), (1, 0), (1, 1)\}$ \'e L.D. pois
+		\[
+			(0, 0 ) = \dfrac{1}{2}(1, -1) - (1, 0) + \dfrac{1}{2}(1, 1).
+		\]
+	\end{enumerate}
+\end{exemplo}
+
+\begin{observacao}\label{conjutoLDLI}
+	Por conven\c{c}\~ao, o conjunto vazio \'e L.I.
+\end{observacao}
+
+\begin{propriedades}
+	\begin{enumerate}[label={\roman*})]
+		\item Todo conjunto contendo o vetor nulo \'e L.D.
+		\item Todo espa\c{c}o vetorial n\~ao-nulo possui um conjunto L.I. n\~ao vazio. (Qual?)
+		\item Todo subconjunto de um conjunto L.I. \'e L.I.
+	\end{enumerate}
+\end{propriedades}
+
+\begin{definicao}
+	Seja $V$ um espa\c{c}o vetorial sobre o corpo $\cp{K}$. Dizemos que um subconjunto $\mathcal{B}$ de $V$ \'e uma \textbf{base}\index{Espa\c{c}o Vetorial!Base} de $V$ se:
+	\begin{enumerate}[label={\roman*})]
+		\item $\mathcal{B}$ for um conjunto gerador de $V$;
+		\item $\mathcal{B}$ for L.I.
+	\end{enumerate}
+\end{definicao}
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item $\mathcal{B} = \{(1, 0 , 0), (0, 1, 0), (0, 0 ,1)\}$ \'e uma base de $\real^3$ como $\real$-espa\c{c}o vetorial.
+		\item $\mathcal{B} = \{(1, 0), (0, 1)\}$ \'e uma base de $\complex^2$ como $\complex$-espa\c{c}o vetorial.
+		\item $\mathcal{B} = \{(1, 0), (i , 0), (0, 1) (0, 1), (0, i)\}$ \'e uma base de $\complex^2$ como $\real$-espa\c{c}o vetorial.
+		\item Considere $\mathcal{P}(\complex) = \{p(x) = a_nx^n + \cdots + a_1x + a_0 \mid a_i \in \complex\}$ como $\complex$-espa\c{c}o vetorial. Sabemos que o conjunto
+		\[
+			\mathcal{B} = \{1, x, x^2, \dots, x^n, \dots\}
+		\]
+		gera $\mathcal{P}(\complex)$ como $\complex$-espa\c{c}o vetorial. Suponha que existam $\alpha_1$, $\alpha_2$, \dots, $\alpha_n \in \complex$ tais que
+		\[
+			\alpha_0 + \alpha_1x + \cdots + \alpha_nx^n = 0
+		\]
+		para todo $x \in \complex$. Como um polin\^omio de grau $n$ em $\complex$ n\~ao pode ter mais do que $n$ ra{\'\i}zes, ent\~ao $\alpha_0 = \alpha_1 = \cdots = \alpha_n = 0$ e portanto $\mathcal{B}$ \'e L.I. Logo $\mathcal{B}$ \'e uma base de $\mathcal{P}(\complex)$.
+	\end{enumerate}
+\end{exemplo}
+
+\begin{observacao}
+	Pelas Observa\c{c}\~oes \ref{conjuntogerador} item \ref{geradorconjuntonulo} e Observa\c{c}\~ao \ref{conjutoLDLI}, o conjunto vazio \'e uma base do $\cp{K}$-espa\c{c}o vetorial $\{0\}$.
+\end{observacao}
+
+\begin{definicao}
+	Dizemos que um espa\c{c}o vetorial $V$ sobre um corpo $\cp{K}$ \'e \textbf{finitamente gerado}\index{Espa\c{c}o Vetorial!Finitamente gerado} se ele possui um conjunto gerador finito.
+\end{definicao}
+
+\begin{proposicao}\label{conjuntoLI}
+	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial n\~ao nulo e finitamente gerado. Suponha que $\{v_1, v_2, \dots, v_m\}$ seja um conjunto gerador de $V$. Ent\~ao todo conjunto L.I de vetores de $V$ tem no m\'aximo $m$ elementos.
+\end{proposicao}
+\begin{prova}
+	Vamos provar que todo conjunto de elementos de $V$ que contenha mais do que $m$ vetores \'e L.D. Para tanto, seja $\mathcal{A} = \{u_1, u_2, \dots, u_n\}$ com $n > m$. Como $\{v_1, v_2, \dots, v_m\}$ \'e um conjunto gerador de $V$, ent\~ao existem escalares $\alpha_{ij} \in \cp{K}$ tais que para cada $j = 1$, 2, \dots, $n$ temos
+	\begin{align}\label{combinacao_linear_u_v}
+		u_j = \alpha_{1j}v_1 + \alpha_{2j}v_2 + \cdots + \alpha_{mj}v_m = \sum_{i = 1}^m\alpha_{ij}v_i.
+	\end{align}
+	Assim queremos mostrar que existem escalares $\lambda_1$, $\lambda_2$, \dots, $\lambda_n$ n\~ao todos nulos de modo que
+	\begin{align}\label{vetores_u_LI}
+		\sum_{j = 1}^n \lambda_ju_j = \lambda_1 u_1 + \lambda_2 u_2 + \cdots + \lambda_n u_n = 0_V.
+	\end{align}
+	Agora, substituindo os valores em \eqref{combinacao_linear_u_v} na equa\c{c}\~ao \eqref{vetores_u_LI} obtemos
+	\[
+		\sum_{j = 1}^n\lambda_ju_j = \sum_{j = 1}^n\lambda_j\left(\sum_{i = 1}^m\alpha_{ij}v_i\right) = \sum_{j = 1}^n\sum_{i = 1}^m\lambda_j\alpha_{ij}v_i = \sum_{i = 1}^m\left(\sum_{j = 1}^n\lambda_j\alpha_{ij}\right)v_i.
+	\]
+	Como queremos mostrar que os vetores no conjunto $\mathcal{A}$ s\~ao L.D vamos supor ent\~ao que
+	\[
+		\sum_{j = 1}^n\lambda_j\alpha_{ij} = 0_\cp{K}
+	\]
+	para $i = 1$, 2, \dots, $n$. Assim obtemos o sistema
+	\begin{equation}\label{sistemabaseEV}
+		\begin{cases}
+			\lambda_1\alpha_{11} + \lambda_2\alpha_{12} + \cdots + \lambda_n\alpha_{1n} = 0_\cp{K}\\
+			\qquad \vdots\\
+			\lambda_1\alpha_{m1} + \lambda_2\alpha_{m2} + \cdots + \lambda_n\alpha_{mn} = 0_\cp{K}\\
+		\end{cases}
+	\end{equation}
+	onde $\lambda_1$, \dots, $\lambda_n$ s\~ao as inc\'ognitas e $\alpha_{ij} \in \cp{K}$. Como o n\'umero de equa\c{c}\~oes \'e menor que o n\'umero de inc\'ognitas, ent\~ao a matriz linha-reduzida \`a forma em escada do sistema \eqref{sistemabaseEV} tem posto menor que $n$, ou seja, o sistema \eqref{sistemabaseEV} tem solu\c{c}\~ao n\~ao trivial. Assim existem $\lambda_1$, \dots, $\lambda_n$ n\~ao todos nulos tais que
+	\[
+		\sum_{j = 1}^n\lambda_j\alpha_{ij} = 0_\cp{K},
+	\]
+	ou seja, existem $\lambda_1$, \dots, $\lambda_n$ n\~ao todos nulos de modo que
+	\[
+		\lambda_1 u_1 + \lambda_2 u_2 + \cdots + \lambda_n u_n = 0_V.
+	\]
+	Portanto o conjunto $\mathcal{A}$ \'e L.D., como quer{\'\i}amos.
+\end{prova}
+
+\begin{corolario}
+	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial n\~ao nulo e finitamente gerado. Ent\~ao duas bases quaisquer de $V$ t\^em o mesmo n\'umero de elementos.
+\end{corolario}
+\begin{prova}
+	Sejam $\mathcal{B}$ e $\mathcal{B}'$ duas bases de $V$. Como $V$ \'e finitamente gerado, segue da Proposi\c{c}\~ao \ref{conjuntoLI} que $\mathcal{B}$ e $\mathcal{B}'$ s\~ao finitos pois s\~ao L.I e possuem $m$ e $m'$ elementos, respectivamente.
+
+	Considerando $\mathcal{B}$ como conjunto gerador de $V$ e $\mathcal{B}'$ L.I., segue da Proposi\c{c}\~ao \ref{conjuntoLI} que $m' \le m$. Por outro lado, considerando $\mathcal{B}'$ como conjunto gerador de $V$ e $\mathcal{B}$ L.I., segue da Proposi\c{c}\~ao \ref{conjuntoLI} que $m 
+	\le m'$.
+
+	Logo $m = m'$, ou seja, duas bases t\^em sempre o mesmo n\'umero de elementos.
+\end{prova}
+
+\begin{definicao}
+	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. Se $V$ admite uma base finita, ent\~ao chamamos de \textbf{dimens\~ao}\index{Espa\c{c}o Vetorial!Dimens\~ao} de $V$, e denotamos por $\dim_\cp{K} V$, o n\'umero de elementos em tal base.
+\end{definicao}
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item $\dim_\cp{K}\cp{K}^n = n$;
+		\item $\dim_\real\real^3 = 3$;
+		\item $\dim_\complex\complex^2 = 2$;
+		\item $\dim_\real\complex^2 = 4$.
+	\end{enumerate}
+\end{exemplo}
+
+
+\begin{proposicao}\label{ampliarconjuntoLI}
+	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial e considere $\mathcal{B} = \{u_1, u_2, \dots, u_n\}$ um conjunto L.I. em $V$. Se existir $u \in V$ que n\~ao seja combina\c{c}\~ao linear dos elementos de $\mathcal{B}$, ent\~ao $\{u_1, u_2, \dots, u_n, u\}$ \'e L.I.
+\end{proposicao}
+\begin{prova}
+	Sejam $\alpha_1$, $\alpha_2$, \dots, $\alpha_n$, $\alpha_{n + 1}$ escalares tais que
+	\[
+		\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_nu_n + \alpha_{n + 1}u = 0_u.
+	\]
+	Se $\alpha_{n + 1} \ne 0_\cp{K}$ ent\~ao podemos escrever
+	\[
+		u = \left(-\dfrac{\alpha_1}{\alpha_{n + 1}}\right)u_1 + \left(-\dfrac{\alpha_2}{\alpha_{n + 1}}\right)u_2 + \cdots + \left(-\dfrac{\alpha_n}{\alpha_{n + 1}}\right)u_n
+	\]
+	e ent\~ao $u$ \'e combina\c{c}\~ao linear de $u_1$, \dots, $u_n$ o que contradiz nossa hip\'otese. Assim $\alpha_{n + 1} = 0_\cp{K}$ e da{\'\i} obtemos
+	\[
+		\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_nu_n = 0_u.
+	\]
+	Mas $\{u_1, u_2, \dots, u_n\}$ \'e L.I, logo $\alpha_1 = \cdots = \alpha_n = 0_\cp{K}$. Portanto, $\{u_1, u_2, \dots, u_n, u\}$ \'e L.I.
+\end{prova}
+
+\begin{teorema}
+	Todo espa\c{c}o vetorial n\~ao-nulo e finitamente gerado possui uma base.
+\end{teorema}
+\begin{prova}
+	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial n\~ao-nulo e finitamente gerado. Ent\~ao $V$ possui um conjunto gerador finito, digamos com $m$ elementos, $m > 1$. Seja $u_1 \in V$, $u_1 \ne 0_V$. Ent\~ao $\mathcal{B}_1 = \{u_1\}$ \'e L.I. Se $\mathcal{B}_1$ gera $V$ ent\~ao $\mathcal{B}_1$ \'e uma base de $V$. Caso contr\'ario, existe $u_2 \in V$ tal que $u_2$ n\~ao \'e um m\'ultiplo escalar de $u_1$. Pela Proposi\c{c}\~ao \ref{ampliarconjuntoLI}, $\mathcal{B}_2 = \{u_1, u_2\}$ \'e L.I. Novamente, se $\mathcal{B}_2$ gera $V$, ent\~ao $\mathcal{B}_2$ \'e uma base de $V$. Caso contr\'ario, existe $u_3 \in V$ tal que $u_3$ n\~ao \'e uma combina\c{c}\~ao linear de $u_1$ e $u_2$. Da{\'\i}, $\mathcal{B}_3 = \{u_1, u_2, u_3\}$ \'e L.I. Continuando com este processo chegamos a uma base de $V$ ou obtemos conjuntos L.I. com um n\'umero arbitr\'ario de elementos. A segunda op\c{c}\~ao n\~ao \'e poss{\'\i}vel por causa da Proposi\c{c}\~ao \ref{conjuntoLI}. Portanto, com este processo obtemos uma base de $V$.
+\end{prova}
+
+\begin{corolario}
+	Seja $V$ um espa\c{c}o vetorial sobre um corpo $\cp{K}$ e de dimens\~ao $n \ge 1$. Seja $\mathcal{B}$ um subconjunto de $V$ com $n$ elementos. As seguintes afirma\c{c}\~oes s\~ao equivalentes:
+	\begin{enumerate}[label={\roman*})]
+		\item $\mathcal{B}$ \'e uma base de $V$;
+		\item $\mathcal{B}$ \'e L.I.;
+		\item $\mathcal{B}$ \'e um conjunto gerador de $V$.
+	\end{enumerate}
+\end{corolario}
+
+\begin{teorema}\label{basecontendoconjuntoLI}
+	Seja $V$ uma $\cp{K}$-espa\c{c}o vetorial finitamente gerado e seja $\mathcal{B}$ um conjunto L.I. em $V$. Ent\~ao existe uma base de $V$ contendo $\mathcal{B}$.
+\end{teorema}
+
+\begin{proposicao}
+	Seja $V$ uma $\cp{K}$-espa\c{c}o vetorial de dimens\~ao $n \ge 1$ e seja $\mathcal{B} \sub V$. As seguintes afirma\c{c}\~oes s\~ao equivalentes:
+	\begin{enumerate}[label={\roman*})]
+		\item $\mathcal{B}$ \'e uma base de $V$;
+		\item Cada elemento de $V$ se escreve de maneira \'unica como combina\c{c}\~ao linear de elementos de $\mathcal{B}$.
+	\end{enumerate}
+\end{proposicao}
+\begin{prova}
+	\begin{itemize}
+		\item[$i) \Rightarrow ii)$] Suponha que $\mathcal{B} = \{u_1, \dots,u_n\}$ seja um base de $V$. Em particular $\mathcal{B}$ gera $V$. Seja $u \in V$ e suponha que existam escalares $\alpha_1$, \dots, $\alpha_n$, $\beta_1$, \dots, $\beta_n$ tais que
+		\[
+			\sum_{i = 1}^n \alpha_iu_i = u = \sum_{i = 1}^n \beta_iu_i.
+		\]
+		Da{\'\i}
+		\[
+			\sum_{i = 1}^n (\alpha_i - \beta_i)u_i	 = 0_V
+		\]
+		e como $\mathcal{B}$ \'e L.I segue que $\alpha_1 = \beta_1$, \dots, $\alpha_n = \beta_n$ como quer{\'\i}amos.
+		\item[$ii) \Rightarrow i)$] Agora suponha que cada elemento de $V$ se escreva de maneira \'unica como combina\c{c}\~ao linear de elementos de $\mathcal{B}$. Assim, $\mathcal{B}$ gera $V$. Resta mostrar que $\mathcal{B}$ \'e L.I. Sejam ent\~ao $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ tais que
+		\[
+			\alpha_1u_1 + \cdots + \alpha_nu_n = 0_V.
+		\]
+		Como $0_V = 0_\cp{K}u_1 + \cdots + 0_\cp{K}u_n$, segue ent\~ao da unicidade que $\alpha_1 = \dots = \alpha_n = 0_\cp{K}$ e da{\'\i} $\mathcal{B}$ \'e L.I. Portanto, $\mathcal{B}$ \'e uma base de $V$.
+	\end{itemize}
+\end{prova}
+
+\section{Subespa\c{c}os} % (fold)
+\label{sec:subespacos}
+
+\begin{definicao}
+	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. Um subconjunto n\~ao vazio $W$ de $V$ \'e um \textbf{subespa\c{c}o vetorial} de $V$ se a restri\c{c}\~ao das opera\c{c}o\~es de $V$ a $W$ torna $W$ um $\cp{K}$-espa\c{c}o vetorial.\index{Subespa\c{c}o}
+\end{definicao}
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item O subconjunto $W = \{0_V\}$ \'e um subespa\c{c}o vetorial de qualquer espa\c{c}o vetorial $V$. O pr\'oprio $V$ como subconjunto de $V$ \'e tamb\'em um subespa\c{c}o vetorial. Estes dois subespa\c{c}os s\~ao chamados de \textbf{subespa\c{c}os triviais}.
+		\item Seja $V$ um $\cp{K}$-espa\c{c}o vetorial e $w \in V$. Ent\~ao o conjunto $\cp{K}w = \{\alpha w \mid \alpha \in \cp{K}\}$ \'e um subespa\c{c}o vetorial de $V$.
+	\end{enumerate}
+\end{exemplo}
+
+\begin{teorema}
+	Um subconjunto n\~ao vazio $W$ de um $\cp{K}$-espa\c{c}o vetorial $V$ \'e um subespa\c{c}o de $V$ se, e somente se, para cada par de vetores $u_1$, $u_2 \in W$ e cada escalar $\lambda \in \cp{K}$, temos que $\lambda u_1 + u_2 \in W$.
+\end{teorema}
+\begin{prova}
+	Exerc{\'\i}cio!
+\end{prova}
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item $V = \real^5$; $W = \{(0,x_2,x_3,x_4,x_5) \mid x_i \in \real\}$ \'e um subespa\c{c}o de $V$.
+		\item $V = M_n(\cp{K})$; $UT_n(\cp{K}) = \left\{\begin{bmatrix}
+			a_{11} & a_{12} & \cdots & a_{1n}\\
+			0_\cp{K} & a_{22} & \cdots & a_{2n}\\
+			\vdots\\
+			0_\cp{K} & 0_\cp{K} & \cdots & a_{nn}
+		\end{bmatrix} \mid a_{ij} \in \cp{K}\right\}$ \'e um subespa\c{c}o de $V$.
+		\item $V = \real^2$; $W = \{(x,x^2) \mid x \in \real\}$ n\~ao \'e subespa\c{c}o. Por exemplo, $u = (1,1)$, $v = (2,4) \in W$ e no entanto $u + v \notin W$.
+	\end{enumerate}
+\end{exemplo}
+
+\begin{proposicao}
+	Se $W_1$ e $W_1$ s\~ao subespa\c{c}os de um $\cp{K}$-espa\c{c}o vetorial $V$ ent\~ao
+	\begin{enumerate}[label={\roman*})]
+		\item $W_1 \cap W_2$ \'e um subespa\c{c}o vetorial de $V$. De fato, $W_1 \cap W_2$ \'e um subespa\c{c}o tanto de $W_1$ quanto de $W_2$.
+		\item $W_1 + W_2 = \{u_1 + u_2 \mid u_1 \in W_1, u_2 \in W_2\}$ \'e um subespa\c{c}o vetorial de $V$.
+	\end{enumerate}
+\end{proposicao}
+\begin{prova}
+	Exerc{\'\i}cio!
+\end{prova}
+
+\begin{proposicao}
+	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial n\~ao nulo e de dimens\~ao finita. Se $W$ \'e um subespa\c{c}o n\~ao trivial de $V$, ent\~ao $\dim_\cp{K} W < \dim_\cp{K} V$.
+\end{proposicao}
+\begin{prova}
+	Seja $\mathcal{B} = \{w_1, \dots,w_n\}$ uma base de $W$. Em particular $\mathcal{B}$ \'e um conjunto L.I. de $V$. Como $W \ne V$, existe $u \in V$ tal que $u \notin W$ e assim $u$ n\~ao \'e gerado pelos elementos de $\mathcal{B}$. Da{\'\i} pela Proposi\c{c}\~ao \ref{ampliarconjuntoLI}, $\{w_1, \dots,w_n,u\}$ \'e L.I..Logo, uma base de $V$ conter\'a mais elementos que o conjunto $\mathcal{B}$, isto \'e, $\dim_\cp{K} W < \dim_\cp{K} V$.
+\end{prova}
+
+\begin{proposicao}
+	Sejam $V$ um $\cp{K}$-espa\c{c}o vetorial, $W_1$ e $W_2$ subespa\c{c}os vetoriais de $V$, ambos de dimens\~ao finita. Ent\~ao
+	\[
+		\dim_\cp{K}(W_1 + W_2) = \dim_\cp{K}W_1 + \dim_\cp{K}W_2 - \dim_\cp{K}(W_1 \cap W_2).
+	\]
+\end{proposicao}
+\begin{prova}
+	Vamos supor primeiro que $W_1 \cap W_2 \ne \{0_V\}$. Como $W_1$ e $W_2$ s\~ao de dimens\~ao finita, ent\~ao $W_1 \cap W_2$ e $W_1 + W_2$ tamb\'em o s\~ao. Assim seja $\mathcal{B} = \{w_1, \dots,w_n\}$ uma base de $W_1 \cap W_2$. Como $W_1 \cap W_2$ \'e um subespa\c{c}o vetorial tanto de $W_1$ como de $W_2$, pelo Teorema \ref{basecontendoconjuntoLI} podemos estender $\mathcal{B}$ a uma base de $W_1$ e a uma base de $W_2$. Sejam $\mathcal{B}_1 = \{w_1,\dots,w_n,v_1,\dots,v_r\}$ uma base de $W_1$ e $\mathcal{B}_2 = \{w_1,\dots,w_n,u_1,\dots,u_p\}$ uma base de $W_2$. Note que $\mathcal{B} \sub \mathcal{B}_1$ e $\mathcal{B} \sub \mathcal{B}_2$. Vamos ent\~ao mostrar que $\mathcal{A} = \{w_1,\dots,w_n,v_1,\dots,v_r,u_1,\dots,u_p\}$ \'e uma base de $W_1 + W_2$. Primeiro mostraremos que $\mathcal{A}$ gera $W_1 + W_2$.
+
+	Seja $v \in W_1 + W_2$. Ent\~ao $v = x + y$ onde $x \in W_1$ e $y \in W_2$. Mas $\mathcal{B}_1$ e $\mathcal{B}_2$ s\~ao bases de $W_1$ e $W_2$, respectivamente. Assim
+	\begin{align*}
+		x = \sum_{i = 1}^n \alpha_i w_i + \sum_{j = 1}^r\beta_j v_j\\
+		y = \sum_{i = 1}^n \delta_i w_i + \sum_{l = 1}^p\gamma_l u_l	
+	\end{align*}
+	com $\alpha_i$, $\beta_j$, $\delta_i$, $\gamma_l \in \cp{K}$. Da{\'\i}
+	\[
+		v = x + y = \sum_{i = 1}^n(\alpha_i + \delta_i)w_i + \sum_{j = 1}^r\beta_jv_j + \sum_{l = 1}^p\gamma_lu_l
+	\]
+	e ent\~ao $\mathcal{A}$ gera $W_1 + W_2$.
+
+	Agora, precisamos mostrar que $\mathcal{A}$ \'e L.I.. Considere ent\~ao a soma
+	\[
+		\sum_{i = 1}^n\alpha_iw_i + \sum_{j = 1}^r\beta_jv_j + \sum_{l = 1}^p\gamma_lu_l = 0_V
+	\]
+	onde $\alpha_i$, $\beta_j$, $\gamma_l \in \cp{K}$. Assim
+	\begin{equation}\label{equacaoauxiliar}
+		\sum_{l = 1}^p\gamma_lu_l = \sum_{i = 1}^n(-\alpha_i)w_i + \sum_{j = 1}^r(-\beta_j)v_j \in W_1 \cap W_2
+	\end{equation}
+	pois \'e uma combina\c{c}\~ao linear de elementos de $\mathcal{B}_1$ e de $\mathcal{B}_2$, simultaneamente. Logo, existem $\lambda_1$, \dots, $\lambda_n \in \cp{K}$ tais que
+	\[
+		\sum_{l = 1}^p\gamma_lu_l = \sum_{i = 1}^n\lambda_iw_i
+	\]
+	isto \'e,
+	\[
+		\sum_{l = 1}^p\gamma_lu_l + \sum_{i = 1}^n(-\lambda_i)w_i = 0_V.
+	\]
+	Mas $\mathcal{B}$ \'e L.I., da{\'\i} $\gamma_1 = \cdots = \gamma_p = \lambda_1 = \cdots = \lambda_n = 0_\cp{K}$. Assim podemos reescrever \eqref{equacaoauxiliar} como
+	\[
+		\sum_{i = 1}^n(-\alpha_i)w_i + \sum_{j = 1}^r(-\beta_j)v_j = 0_\cp{K}.
+	\]
+	Mas $\mathcal{B}_1$ \'e L.I., donde $\alpha_1 = \cdots = \alpha_n = \beta_1 = \cdots = \beta_r = 0_\cp{K}$. Isto \'e, $\mathcal{A}$ \'e L.I..
+
+	Portanto $\mathcal{A}$ \'e uma base de $W_1 + W_2$ e assim
+	\[
+		\dim_\cp{K}(W_1 + W_2) = \dim_\cp{K}W_1 + \dim_\cp{K}W_2 - \dim_\cp{K}(W_1 \cap W_2).
+	\]
+
+	Se $W_1 \cap W_2 = \{0_V\}$, sejam $\mathcal{B}_1$ e $\mathcal{B}_2$ bases de $W_1$ e $W_2$, respectivamente. Analogamente ao caso anterior, mostra-se que $\mathcal{B}_1 \cup \mathcal{B}_2$ \'e uma base de $W_1 + W_2$.
+\end{prova}
+
+\begin{definicao}\index{Subespa\c{c}o!gerado}
+	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial e $S = \{u_1,\dots,u_n\} \sub V$. O \textbf{subespa\c{c}o gerado} por $S$ \'e definido como o subconjunto de $V$ formado por todas as combina\c{c}\~oes lineares de $u_1$, \dots, $u_n$. Denotaremos tal conjunto por
+	\[
+		[u_1,\dots,u_n] = \{\alpha_1u_1 + \cdots + \alpha_nu_n \mid \alpha_1, \dots, \alpha_n \in \cp{K}\}.
+	\]
+\end{definicao}
+
+\begin{proposicao}
+	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial e $\{v_1,\dots,v_n\} \sub V$. O conjunto $[v_1,\dots,v_n]$ \'e um $\cp{K}$-subespa\c{c}o vetorial de $V$.
+\end{proposicao}
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item Dado $\mathcal{P}(\complex)$ o $\complex$-espa\c{c}o vetorial dos polin\^omios com coeficientes em $\complex$, seja $\{1,x,x^2,x^3,x^4\} \sub \mathcal{P}(\complex)$. Ent\~ao
+		\[
+			[1,x,x^2,x^3,x^4] = \{a_0 + a_1x + a_2x^2 + a_3x^3 + a_4x^4\} = \{f(x) \in \mathcal{P}(\complex) \mid \deg f(x) \le 4\}
+		\]
+		\'e um subespa\c{c}o de $\mathcal{P}(\complex)$.
+		\item Considere $\real^5$ como um $\real$-espa\c{c}o vetorial e seja $\{(1,2,0,3,0);(0,0,1,4,0);(0,0,0,0,1)\}$. Ent\~ao
+		\[
+			[(1,2,0,3,0);(0,0,1,4,0);(0,0,0,0,1)] = \{(\alpha, 2\alpha,\beta,3\alpha + 4\beta,\gamma) \mid \alpha, \beta, \gamma \in \real\}
+		\]
+		\'e um subespa\c{c}o vetorial de $\real^5$.
+		\item Considere $W = [(1,2,3);(0,1,2);(-1,0,1)]$ um $\real$-espa\c{c}o vetorial. Determinar $\dim_\real W$.
+		\begin{solucao}
+			Inicialmente, vamos verificar se o conjunto $\{(1,2,3);(0,1,2);(-1,0,1)\}$ \'e L.I. ou L.D.. Para isso, sejam $x$, $y$ e $z \in \real$ tais que
+			\[
+				x(1,2,3) + y(0,1,2) + z(-1,0,1) = (0,0,0).
+			\]
+			Assim vemos que $x = z$ e $y = -2z$ s\~ao solu\c{c}\~oes para o sistema
+			\[
+				\begin{cases}
+					x - z = 0\\
+					2x + y = 0\\
+					3x + 2y + z = 0
+				\end{cases}
+			\]
+			e com isso $\{(1,2,3);(0,1,2);(-1,0,1)\}$ \'e L.D. Da{\'\i} $\dim_\real W \le 2$. Agora note que $(1,2,3)$ n\~ao \'e m\'ultiplo escalar de $(0,1,2)$. Logo, $\{(1,2,3); (0,1,2)\}$ \'e L.I. e ent\~ao $\dim_\real W = 2$.
+		\end{solucao}
+		\item Mostre que
+		\[
+			S = \left\{ e_1 = \begin{pmatrix}
+				\overline{1}\\
+				\overline{2}\\
+				\overline{6}\\
+				\overline{3}\\
+				\overline{4}
+			\end{pmatrix}; e_2 = \begin{pmatrix}
+				\overline{0}\\
+				\overline{1}\\
+				\overline{3}\\
+				\overline{5}\\
+				\overline{3}
+			\end{pmatrix}, e_3 = \begin{pmatrix}
+				\overline{0}\\
+				\overline{0}\\
+				\overline{2}\\
+				\overline{6}\\
+				\overline{5}
+			\end{pmatrix}, e_4 = \begin{pmatrix}
+				\overline{0}\\
+				\overline{0}\\
+				\overline{0}\\
+				\overline{2}\\
+				\overline{4}
+			\end{pmatrix}, e_5 = \begin{pmatrix}
+				\overline{0}\\
+				\overline{0}\\
+				\overline{0}\\
+				\overline{0}\\
+				\overline{5}
+			\end{pmatrix}\right\}
+		\]
+		\'e uma base para $\cp{M}_{5\times1}(\z_7)$ como $\z_7$-espa\c{c}o vetorial.
+		\begin{solucao}
+			Uma base de $\cp{M}_{5\times1}(\z_7)$ \'e dada por
+			\[
+			S = \left\{ \begin{pmatrix}
+				\overline{1}\\
+				\overline{0}\\
+				\overline{0}\\
+				\overline{0}\\
+				\overline{0}
+			\end{pmatrix}; \begin{pmatrix}
+				\overline{0}\\
+				\overline{1}\\
+				\overline{0}\\
+				\overline{0}\\
+				\overline{0}
+			\end{pmatrix}; \begin{pmatrix}
+				\overline{0}\\
+				\overline{0}\\
+				\overline{1}\\
+				\overline{0}\\
+				\overline{0}
+			\end{pmatrix}; \begin{pmatrix}
+				\overline{0}\\
+				\overline{0}\\
+				\overline{0}\\
+				\overline{1}\\
+				\overline{0}
+			\end{pmatrix}; \begin{pmatrix}
+				\overline{0}\\
+				\overline{0}\\
+				\overline{0}\\
+				\overline{0}\\
+				\overline{1}
+			\end{pmatrix}\right\},
+		\]
+		da{\'\i} $\dim_{\z_7}\cp{M}_{5\times1}(\z_7) = 5$. Assim como $S$ possui 5 elementos, basta mostrar que $S$ \'e L.I.. O que \'e imediato pois
+		\[
+			a_1e_1 + a_2e_2 + a_3e_3 + a_4e_4 + a_5e_5 = \begin{pmatrix}
+				\overline{0}\\
+				\overline{0}\\
+				\overline{0}\\
+				\overline{0}\\
+				\overline{0}
+			\end{pmatrix}
+		\]
+		s\'o \'e poss{\'\i}vel se $a_1 = a_2 = a_3 = a_4 = a_5 = \overline{0}$.
+		\end{solucao}
+		\item Seja $V = \mathcal{P}_4(\real)$. Determine uma base de $V$ contendo os polin\^omios
+		\begin{align*}
+			&p_1(x) = 1 + 2x - x^2 + 3x^3 + 2x^4\\
+			&p_2(x) = 2 + 4x + x^2 + 6x^3 + 3x^4\\
+			&p_3(x) = 1 + 2x + 2x^2 + 3x^3 + 2x^4.
+		\end{align*}
+		\begin{solucao}
+			Sabemos que $\mathcal{B} = \{1,x,x^2,x^3,x^4\}$ \'e uma base de $\mathcal{P}_4(\real)$. Tal base \'e chamada de \textbf{base can\^onica} de $\mathcal{P}_4(\real)$. Assim $\dim_\real \mathcal{P}_4(\real) = 5$. Para determinar uma base contendo $p_1(x)$, $p_2(x)$ e $p_3(x)$, come\c{c}amos determinando se tais vetores s\~ao L.I. ou L.D.. Para isso montamos a matriz
+			\[
+				A = \begin{bmatrix}
+					\phantom{-}1 & 2 & 1\\
+					\phantom{-}2 & 4 & 2\\
+					-1 & 1 & 2\\
+					\phantom{-}3 & 6 & 3\\
+					\phantom{-}2 & 3 & 2
+				\end{bmatrix}.
+			\]
+			Aplicando as opera\c{c}\~oes elementares em $A$ para reduz{\'\i}-la a forma em escada
+			\begin{align*}
+				A &= 
+					\left[
+						\begin{array}{ccc}
+		  					\phantom{-}1 & 2 & 1\\
+							\phantom{-}2 & 4 & 2\\
+							-1 & 1 & 2\\
+							\phantom{-}3 & 6 & 3\\
+							\phantom{-}2 & 3 & 2
+     					\end{array}
+     				\right]
+     				\begin{array}{l}
+     					\phantom{x}\\
+     					L_2 \to L_2 - 2L_1\\
+     					L_3 \to L_3 + L_1\\
+     					L_4 \to L_2 - 3L_1\\
+     					L_5 \to L_5 - 2L_1
+     				\end{array} \sim
+     				\left[
+	     				\begin{array}{ccc}
+		  					1 & \phantom{-}2 & 1\\
+							0 & \phantom{-}0 & 0\\
+							0 & \phantom{-}3 & 3\\
+							0 & \phantom{-}0 & 0\\
+							0 & -1 & 0
+	     				\end{array}
+     				\right] = M.
+     		\end{align*}
+     		Como a matrix $M$ possui posto 3, ent\~ao $\{p_1(x), p_2(x), p_3(x)\}$ \'e L.I. em $\mathcal{P}_4(\real)$. Observe que $M$ n\~ao tem 1 na segunda e quarta linhas. Assim vamos adicionar a $M$ uma coluna com 1 na segunda linha e outra com 1 na quarta linha, obtendo
+     		\[
+     			M' = \begin{bmatrix}
+  					1 & \phantom{-}2 & 1 & 0 & 0\\
+					0 & \phantom{-}0 & 0 & 1 & 0\\
+					0 & \phantom{-}3 & 3 & 0 & 0\\
+					0 & \phantom{-}0 & 0 & 0 & 1\\
+					0 & -1 & 0 & 0 & 0
+     			\end{bmatrix}.
+     		\]
+     		Assim $\mathcal{B}' = \{p_1(x), p_2(x), p_3(x),x, x^3\}$ forma uma base de $\mathcal{P}_4(\real)$ contendo $p_1(x)$, $p_2(x)$ e $p_3(x)$.
+		\end{solucao}
+		\item Considere $V = \cp{M}_{3\times 2}(\real)$. Verifique se o conjunto formado pelas matrizes
+		\[
+			A_1 = \begin{bmatrix}
+				\phantom{-}1 & 0\\
+				-1 & 3\\
+				\phantom{-}3 & 2
+			\end{bmatrix}; A_2 = \begin{bmatrix}
+				0 & -1\\
+				2 & \phantom{-}4\\
+				3 & \phantom{-}2
+			\end{bmatrix}; A_3 = \begin{bmatrix}
+				1 & -2\\
+				3 & \phantom{-}11\\
+				9 & \phantom{-}6
+			\end{bmatrix}.
+		\]
+		\'e L.D. ou L.I. em $V$.
+		\begin{solucao}
+			Considere a matriz $M$ formada pelas entradas das matrizes $A_1$, $A_2$ e $A_3$ escritas como colunas de $M$
+			\[
+				M = \begin{bmatrix}
+					\phantom{-}1 & \phantom{-}0 & \phantom{-}1\\
+					\phantom{-}0 & -1 & -2\\
+					-1 & \phantom{-}2 & \phantom{-}3\\
+					\phantom{-}3 & \phantom{-}4 & \phantom{-}11\\
+					\phantom{-}3 & \phantom{-}3 & \phantom{-}9\\
+					\phantom{-}2 & \phantom{-}2 & \phantom{-}6
+				\end{bmatrix}.
+			\]
+			Aplicando as opera\c{c}\~oes elementares em $M$:
+			\begin{align*}
+				M &= 
+					\left[
+						\begin{array}{ccc}
+		  					\phantom{-}1 & \phantom{-}0 & \phantom{-}1\\
+							\phantom{-}0 & -1 & -2\\
+							-1 & \phantom{-}2 & \phantom{-}3\\
+							\phantom{-}3 & \phantom{-}4 & \phantom{-}11\\
+							\phantom{-}3 & \phantom{-}3 & \phantom{-}9\\
+							\phantom{-}2 & \phantom{-}2 & \phantom{-}6
+     					\end{array}
+     				\right]
+     				\begin{array}{l}
+     					\phantom{x}\\
+     					\phantom{x}\\
+     					L_3 \to L_3 + L_1\\
+     					L_4 \to L_4 - 3L_1\\
+     					L_5 \to L_5 - 3L_1\\
+     					L_6 \to L_6 - 2L_1
+     				\end{array} \sim
+     				\left[
+     					\begin{array}{ccc}
+		  					1 & \phantom{-}0 & \phantom{-}1\\
+							0 & -1 & -2\\
+							0 & \phantom{-}2 & \phantom{-}4\\
+							0 & \phantom{-}4 & \phantom{-}8\\
+							0 & \phantom{-}3 & \phantom{-}6\\
+							0 & \phantom{-}2 & \phantom{-}4
+     					\end{array}
+     				\right]
+     				\begin{array}{l}
+     					\phantom{x}\\
+     					\phantom{x}\\
+     					L_3 \to L_3 + 2L_2\\
+     					L_4 \to L_4 + 4L_2\\
+     					L_5 \to L_5 + 3L_2\\
+     					L_6 \to L_6 + 2L_2
+     				\end{array}\\ &\sim
+     				\left[
+     					\begin{array}{ccc}
+		  					1 & \phantom{-}0 & \phantom{-}1\\
+							0 & -1 & -2\\
+							0 & \phantom{-}0 & \phantom{-}0\\
+							0 & \phantom{-}0 & \phantom{-}0\\
+							0 & \phantom{-}0 & \phantom{-}0\\
+							0 & \phantom{-}0 & \phantom{-}0
+     					\end{array}
+     				\right]
+     		\end{align*}
+     		Como a matriz possui posto 2, ent\~ao o vetor $A_3$ \'e uma combina\c{c}\~ao linear de $A_1$ e $A_2$, ou seja, $\{A_1, A_2, A_3\}$ \'e L.D..
+		\end{solucao}
+	\end{enumerate}
+\end{exemplo}
+% section subespacos (end)
+
+\section{Espa\c{c}os de dimens\~ao infinita} % (fold)
+\label{sec:espacos_de_dimensao_infinita}
+\begin{definicao}
+	Seja $X$ um conjunto qualquer.
+	\begin{enumerate}[label={\roman*})]
+		\item Uma \textbf{rela\c{c}\~ao de ordem parcial sobre} $X$, que denotaremos por $\prec$, \'e um rela\c{c}\~ao que satisfaz:\index{Rela\c{c}\~ao de Ordem!Parcial}
+		\begin{enumerate}[label={\alph*})]
+			\item $y\prec y$ para todo $y \in X$ (propriedade reflexiva);
+			\item Se $y\prec z$ e $z\prec t$ com $y$, $z$, $t \in X$, ent\~ao $y\prec t$ (propriedade transitiva);
+			\item Se $y\prec z$ e $z\prec y$, com $y$, $z \in X$, ent\~ao $y = z$ (propriedade antissim\'etrica).
+		\end{enumerate}
+		\item Uma \textbf{rela\c{c}\~ao de ordem total sobre} $X$ \'e uma rela\c{c}\~ao de ordem parcial $\prec$ sobre $X$ com  a propriedade que para quaisquer $y$, $z \in X$, ou $y\prec z$ ou $z\prec y$.\index{Rela\c{c}\~ao de Ordem!Total}
+		\item Um \textbf{conjunto parcialmente ordenado} \'e um par $(X, \prec)$ consistindo de um conjunto $X$ e uma ordem parcial $\prec$ sobre o mesmo. De modo an\'alogo, definimos um \textbf{conjunto totalmente} ordenado.
+		\item Considere $(X, \prec)$ um conjunto parcialmente ordenado. Um elemento $\alpha \in X$ \'e denominado \textbf{maximal} se $\alpha \prec \beta$, para $\beta \in X$, ent\~ao $\alpha = \beta$.\index{Elemento!Maximal}
+		\item Seja $A \sub X$. Um elemento $m \in X$ \'e denominado uma \textbf{cota superior para} $A$ se $x \prec m$, para todo $x \in A$.\index{Cota Superior}
+	\end{enumerate}
+\end{definicao}
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item A ordem natural do conjunto dos n\'umeros reais $\real$, $\le$, \'e uma rela\c{c}\~ao de ordem total.
+		\item Considere em $\cp{N}$ a seguinte rela\c{c}\~ao: $a \prec b$ se, e somente se, $a = kb$ para $k \in \cp{N}$. Ent\~ao $\prec$ \'e uma rela\c{c}\~ao de ordem parcial em $\cp{N}$.
+		\begin{solucao}
+			De fato,
+			\begin{enumerate}
+				\item $a \prec a$ pois $a = a1$.
+				\item Se $a \prec b$ e $b \prec c$ ent\~ao $a = k_1b$ e $b = k_2 c$. Da{\'\i} $a = (k_1k_2)c$, ou seja, $a \prec c$.
+				\item Se $a \prec b$ e $b \prec a$, ent\~ao $a = k_1b$ e $b = k_2a$. Logo $k_1 = k_2 = 1$ e assim $a = b$.
+			\end{enumerate}
+			A ordem n\~ao \'e total pois, por exemplo, 2 e 3 n\~ao s\~ao compar\'aveis.
+
+			Agora considere o subconjunto
+			\[
+				\mathcal{P} = \{0,2,4,8,\dots\} = \{2^k \mid k \in \cp{N}\}.
+			\]
+			Tal conjunto \'e totalmente ordenado por $\prec$. O conjunto $\mathcal{P}_1 = \{2,4,8,3,9,27\}$ \'e parcialmente ordenando por $\prec$ e possui dois elementos maximais que s\~ao 8 e 27.
+		\end{solucao}
+		\item Seja $\mathcal{A}$ uma cole\c{c}\~ao qualquer de conjuntos. A inclus\~ao de conjuntos, $\sub$, \'e uma rela\c{c}\~ao de ordem parcial sobre $\mathcal{A}$. N\~ao \'e, de modo geral, uma ordem total.
+		\item Sejam $X$ um conjunto n\~ao vazio e $\mathcal{P}(X)$ a classe de todos os subconjuntos de $X$. Ent\~ao $(\mathcal{P}(X),\sub)$ \'e um conjunto parcialmente ordenado. Seja $\mathcal{B}$ qualquer classe de subconjuntos de $X$, ent\~ao a uni\~ao de todos os conjuntos $A \in \mathcal{B}$ \'e uma cota superior para $\mathcal{B}$. Por exemplo, para $X = \cp{N}$, seja $\mathcal{P}(X)$ formado por todos os subconjuntos de $\cp{N}$. Considere $\mathcal{B}$ dado por
+		\[
+			\mathcal{B} = \{A\sub \cp{N} \mid A = \{2k\}, k \in \cp{N}\}.
+		\]
+		Assim $\cup_{k \in \cp{N}}\{2k\}$ \'e uma cota superior para $\mathcal{B}$.
+	\end{enumerate}
+\end{exemplo}
+
+\begin{lema}[Lema de Zorn]\index{Lema de Zorn}
+	Seja $X$ um conjunto parcialmente ordenando com a propriedade que cada subconjunto totalmente ordenado adminte uma cota superior. Ent\~ao $X$ cont\'em um elemento maximal.
+\end{lema}
+
+\begin{teorema}
+	Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$ e seja $\mathcal{C}$ um conjunto L.I. em $V$. Ent\~ao existe uma base $\mathcal{B}$ de $V$ contendo $\mathcal{C}$.	
+\end{teorema}
+\begin{prova}
+	Sejam $V$ um espa\c{c}o vetorial sobre $\cp{K}$ e $\mathcal{C}$ um subconjunto L.I. de $V$. Considere $\mathcal{P}$ a classe de todos os subconjuntos L.I. em $V$ que contenham $\mathcal{C}$. \'E claro que $\mathcal{P}$ \'e n\~ao vazio, j\'a que o pr\'oprio conjunto $\mathcal{C}$ pertence a $\mathcal{P}$. Al\'em disso, $\mathcal{P}$ \'e parcialmente ordenado por inclus\~ao. Para usar o Lema de Zorn, precisamos mostrar que todo subconjunto totalmente ordenado de $\mathcal{P}$ tem uma cota superior. Com esse objetivo, considere $\mathcal{D} = \{\mathcal{A}_\alpha\}_{\alpha \in I}$ um subconjunto totalmente ordenado de $\mathcal{P}$. O candidato natural para cota superior de $\mathcal{D}$ \'e a uni\~ao de todos os conjuntos $\mathcal{A}_\alpha$ em $\mathcal{D}$. Precisamos mostrar que $\mathcal{A} = \cup_{\alpha \in I}\mathcal{A}_\alpha$ \'e L.I.. Seja ent\~ao $\mathcal{L} = \{v_1, v_2, \dots,v_n\}$ um subconjunto finito de $\mathcal{A}$. Da{\'\i} para cada $i = 1$, \dots, $n$ existe $\alpha_i \in I$ tal que $v_i \in \mathcal{A}_{\alpha_i}$. Como $\mathcal{A}$ \'e totalmente ordenado, podemos reorganizar os {\'\i}ndices $i$ de tal modo que $\mathcal{A}_{\alpha_1} \sub \mathcal{A}_{\alpha_2} \sub \cdots \sub \mathcal{A}_{\alpha_n}$. Agora cada $\mathcal{A}_{\alpha_i}$ \'e L.I. pois pertencem a $\mathcal{P}$, ent\~ao como $\mathcal{L} \sub \mathcal{A}_{\alpha_n}$, segue que $\mathcal{L}$ tamb\'em \'e L.I.. Como $\mathcal{L}$ \'e qualquer conjunto finito, segue que $\mathcal{A}$ \'e L.I.. Assim $\mathcal{D}$ possui uma cota superior. Segue do Lema de Zorn que $\mathcal{P}$ tem elemento maximal, que vamos chamar de $\mathcal{B}$. Provemos que $\mathcal{B}$ \'e uma base de $V$. Primeiro como $\mathcal{B}$ \'e um elemento de $\mathcal{P}$, ent\~ao $\mathcal{B}$ \'e L.I.. Resta ent\~ao provar que $\mathcal{B}$ gera $V$. Para isso, suponha que existe $w \in V$ que n\~ao \'e gerado por $\mathcal{B}$. Assim $\mathcal{B} \cup \{w\}$ \'e L.I.. Mas $\mathcal{B} \sub \mathcal{B} \cup \{w\}$ o que \'e imposs{\'\i}vel pois $\mathcal{B}$ \'e elemento maximal. Logo tal $w$ n\~ao existe. Portanto $\mathcal{B}$ \'e uma base de $V$.
+\end{prova}
+% section espacos_de_dimens_o_infinita (end)

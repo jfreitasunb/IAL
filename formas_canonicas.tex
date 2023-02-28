@@ -1,0 +1,1639 @@
+%!TEX root = Algebra_Linear.tex
+%%Usar makeindex -s indexstyle.ist Algebra_Linear.idx arquivo no terminal para gerar o {\'\i}ndice remissivo agrupado por inicial
+%%Ap\'os executar pdflatex arquivo
+\chapter{Formas Can\^onicas}
+
+Sejam $(V,\boxplus,\boxdot)$ e $(W,\oplus,\otimes)$ espa\c{c}os vetoriais sobre $\cp{K}$. Denote por
+\[
+	\mathcal{L}(V,W) = \{T : V \to W \mid T \mbox{ \'e uma transforma\c{c}\~ao linear}\}.
+\]
+Dados $T$, $G \in \mathcal{L}(V,W)$ e $\lambda \in \cp{K}$ defina
+\begin{itemize}
+	\item $(T + G)(u) = T(u) \oplus G(u)$
+	\item $(\lambda T)(u) = \lambda\otimes T(u)$
+\end{itemize}
+para todo $u \in V$. \'E f\'acil verificar que $(\mathcal{L}(V,W),+,\cdot)$ \'e um $\cp{K}$-espa\c{c}o vetorial. O vetor nulo \'e a transforma\c{c}\~ao linear $0 : V \to W$ tal que $0(u) = 0_W$ para todo $u \in V$. Dado $T \in \mathcal{L}(V,W)$, o vetor oposto \'e $(-T) : V \to W$ definido por $(-T)(u) = -T(u)$ para todo $u \in V$.
+
+\begin{teorema}
+	Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais  com dimens\~oes $p$ e $q$, respectivamente. Ent\~ao
+	\[
+		\dim_\cp{K}\mathcal{L}(V,W) = pq = (\dim_\cp{K}V)(\dim_\cp{K}W).
+	\]
+\end{teorema}
+\begin{prova}
+	Sejam $\mathcal{B}_V = \{v_1,\dots,v_p\}$ e $\mathcal{B}_W = \{w_1,\dots,w_q\}$ bases de $V$ e $W$, respectivamente. Para cada par $(i,j)$ com $1 \le i \le q$ e $1 \le j \le p$ vamos definir uma transforma\c{c}\~ao linear $T_{(i,j)} : V \to W$ por
+	\begin{equation}\label{vetoresbaseL(V,W)}
+		T_{(i,j)}(v_r) = \begin{cases}
+			w_i & \mbox{se } r = j\\
+			0_W & \mbox{se } r \ne j
+		\end{cases},
+	\end{equation}
+	isto \'e, $T_{(i,j)}(v_r) = \delta_{jr}w_i$, onde $\delta_{jr}$ \'e o s{\'\i}mbolo de Kronecker ($\delta_{jr} = 1_\cp{K}$ se $r = j$ e $\delta_{jr} = 0_\cp{K}$ se $r \ne j$). Sabemos que existe uma \'unica transforma\c{c}\~ao linear que satisfaz \eqref{vetoresbaseL(V,W)} para cada $(i,j)$. Assim obtemos um conjunto
+	\begin{equation}\label{baseL(V,W)}
+		\mathcal{A} = \{T_{(1,1)}; T_{(1,2)};\dots;T_{(1,p)};\dots;T_{(q,1)};\dots;T_{(q,p)}\}
+	\end{equation}
+	com $pq$ elementos. Vamos mostrar que $\mathcal{A}$ \'e uma base de $\mathcal{L}(V,W)$. Primeiro, seja $G \in \mathcal{L}(V,W)$ e considere a matriz $[G]_{\mathcal{B}_V,\mathcal{B}_W} = (a_{ij})$ com rela\c{c}\~ao \`as bases $\mathcal{B}_V$ e $\mathcal{B}_W$. Assim $[G]_{\mathcal{B}_V,\mathcal{B}_W}$ \'e dada por
+	\begin{align*}
+		G(v_1) &= a_{11}w_1 + \cdots + a_{q1}w_q = \sum_{i = 1}^qa_{i1}w_i\\
+		&\vdots\\
+		G(v_p) &= a_{1p}w_1 + \cdots + a_{qp}w_q = \sum_{i = 1}^qa_{ip}w_i,
+	\end{align*}
+	ou simplesmente, $G(v_r) = \sum_{i = 1}^qa_{ir}w_i$ para $r = 1$, \dots, $p$. Considere agora a transforma\c{c}\~ao linear $H : V \to W$ dada por
+	\[
+		H = \sum_{i = 1}^q\sum_{j = 1}^pa_{ij}T_{(i,j)}.
+	\]
+	Vamos mostrar que $G = H$. Para isso, basta mostrar que $G(v_j) = H(v_j)$ para $v_j \in \mathcal{B}_V$. Temos
+	\begin{align*}
+		H(v_r) &= \sum_{i = 1}^q\sum_{j = 1}^pa_{ij}T_{(i,j)}(v_r) = \sum_{i = 1}^q\sum_{j = 1}^pa_{ij}\delta_{jr}(w_i)\\ &= \sum_{i = 1}^q(a_{i1}\delta_{1r}w_i + a_{i2}\delta_{2r}w_i + \cdots + a_{ip}\delta_{pr}w_i)\\ &= \sum_{i = 1}^qa_{ir}w_i = G(v_r)
+	\end{align*}
+	para cada $r = 1$, \dots, $p$. Portanto $G = H$ e assim $\mathcal{A}$ gera $\mathcal{L}(V,W)$.
+
+	Mostremos agora que $\mathcal{A}$ \'e L.I. em $\mathcal{L}(V,W)$. Para isso, sejam $b_{ij} \in \cp{K}$ com $1 \le i \le q$ e $1 \le j \le p$ tais que
+	\[
+		S = \sum_{i = 1}^q\sum_{j = 1}^pb_{ij}T_{(i,j)} = 0.
+	\]
+	Assim $S(v_r) = 0_W$ para todo $r = 1$, \dots, $p$. Da{\'\i}
+	\begin{align*}
+		0_W &= S(v_r) = \sum_{i = 1}^q\sum_{j = 1}^pb_{ij}T_{(i,j)}(v_r) = \sum_{i = 1}^q\sum_{j = 1}^pb_{ij}\delta_{jr}(w_i)\\ &= \sum_{i = 1}^q(b_{i1}\delta_{1r}w_i + b_{i2}\delta_{2r}w_i + \cdots + b_{ip}\delta_{pr}w_i)\\ &= \sum_{i = 1}^qb_{ir}w_i
+	\end{align*}
+	para $r = 1$, \dots, $p$. Isto \'e,
+	\begin{align*}
+		&b_{11}w_1 + \cdots + b_{q1}w_q = 0_W\\
+		&\vdots\\
+		&b_{1p}w_1 + \cdots + b_{qp}w_q = 0_W
+	\end{align*}
+	e como $\mathcal{B}_W = \{w_1,\dots,w_q\}$ \'e L.I. em $W$, ent\~ao $b_{ij} = 0_\cp{K}$ para todo $1 \le i \le q$ e $1 \le j \le p$. Logo $\mathcal{A}$ \'e L.I. e assim uma base para $\mathcal{L}(V,W)$. Portanto
+	\[
+		\dim_\cp{K}\mathcal{L}(V,W) = pq = (\dim_\cp{K}V)(\dim_\cp{K}W)
+	\]
+	como quer{\'\i}amos.
+\end{prova}
+
+\begin{corolario}
+	Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais de dimens\~oes $p$ e $q$, respectivamente. Ent\~ao $\mathcal{L}(V,W)$ \'e isomorfo a $\cp{M}_{q\times p}(\cp{K})$.
+\end{corolario}
+
+\begin{definicao}
+	\begin{enumerate}[label={\roman*})]
+		\item Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. Um \textbf{operador linear} \'e uma transforma\c{c}\~ao linear $T : V \to V$.\index{Operador Linear}
+		\item Se $T : V \to V$ \'e um operador linear, denotamos $T \circ T$ por $T^2$ e mais geralmente
+		\[
+			\underbrace{T \circ T \circ \dots \circ T}_{n} = T^n.
+		\]
+		Al\'em disso, $T^0 = Id : V \to V$ o operador tal que $Id(u) = u$ para todo $u \in V$.
+	\end{enumerate}
+\end{definicao}
+
+\section{Operadores Diagonaliz\'aveis} % (fold)
+\label{sec:operadores_diagonalizaveis}
+
+Seja $T : V \to V$ um operador linear e suponha que exista uma base $\mathcal{B} = \{v_1,\dots,v_n\}$ de $V$ tal que
+\begin{align}\label{formadiagonal}
+	[T]_\mathcal{B} = \begin{bmatrix}
+		\lambda_1 & 0_\cp{K} & 0_\cp{K} & \dots & 0_\cp{K}\\
+		0_\cp{K} & \lambda_2 & 0_\cp{K} & \dots & 0_\cp{K}\\
+		\vdots & & \ddots & & \vdots\\
+		0_\cp{K} & 0_\cp{K} & 0_\cp{K} & \dots & \lambda_n
+	\end{bmatrix}
+\end{align}
+com $\lambda_i \in \cp{K}$ para $i = 1$, \dots, $n$. Assim
+\[
+	[T(v_i)]_\mathcal{B} = [T]_\mathcal{B}[v_i]_\mathcal{B} = [T]_\mathcal{B}\begin{bmatrix}
+		0_\cp{K}\\
+		0_\cp{K}\\
+		\vdots\\
+		0_\cp{K}\\
+		1_\cp{K}\\
+		0_\cp{K}\\
+		\vdots\\
+		0_\cp{K}
+	\end{bmatrix}_\mathcal{B} = \begin{bmatrix}
+		0_\cp{K}\\
+		0_\cp{K}\\
+		\vdots\\
+		0_\cp{K}\\
+		\lambda_i\\
+		0_\cp{K}\\
+		\vdots\\
+		0_\cp{K}
+	\end{bmatrix}_\mathcal{B}
+\]
+para $i = 1$, \dots, $n$. Isto \'e,
+\[
+	T(v_i) = \lambda_i v_i
+\]
+para $i = 1$, \dots, $n$.
+
+\begin{definicao}
+	Seja $T : V \to V$ um operador linear.
+	\begin{enumerate}[label={\roman*})]
+		\item Um \textbf{autovalor} de $T$ \'e um elemento $\lambda \in \cp{K}$ tal que existe um vetor n\~ao nulo $u \in V$ com $T(u) = \lambda u$.\index{Autovalor}
+		\item Se $\lambda$ \'e um autovalor de $T$, ent\~ao todo vetor n\~ao nulo $u \in V$ tal que
+		\[
+			T(u) = \lambda u
+		\]
+		\'e chamado de \textbf{autovetor} de $T$ \textbf{associado} ao autovalor $\lambda$. Denotaremos por $Aut_T(\lambda)$ o subespa\c{c}o gerado por todos os autovetores associados a $\lambda$. Assim\index{Autovetor}
+		\[
+			\aut_T(\lambda) = \{u \in V \mid T(u) = \lambda u\}.
+		\]
+		\item Suponha que $\dim_\cp{K} V = n < \infty$. Dizemos que $T$ \'e \textbf{diagonaliz\'avel} se existir uma base $\mathcal{B}$ de $V$ tal que $[T]_\mathcal{B}$ \'e diagonal, isto \'e, tem a forma \eqref{formadiagonal}. Tal fato equivale a dizer que existe uma base formada por autovetores.\index{Transforma\c{c}\~ao Linear!Diagonaliz\'avel}
+	\end{enumerate}
+\end{definicao}
+
+Seja $T : V \to V$ um operador linear onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita. Vamos determinar um m\'etodo para encontrar todos os autovalores de $T$, caso existam.
+
+Se $\lambda \in \cp{K}$ \'e um autovalor, ent\~ao existe $u \in V$, $u \ne 0_V$ tal que $T(u) = \lambda u$. Assim, seja $Id : V \to V$ o operador identidade. Temos
+\begin{align*}
+	&T(u) = \lambda u\\
+	&T(u) = \lambda Id(u)\\
+	&T(u) - \lambda Id(u) = 0_V\\
+	&(T - \lambda Id)(u) = 0_V
+\end{align*}
+isto \'e, $u \in \ker (T - \lambda Id)$. Reciprocamente, se $u \in \ker (T - \lambda Id)$ e $u \ne 0_V$, ent\~ao $T(u) = \lambda u$. Logo
+\begin{center}
+		$\lambda$ \'e um autovalor de $T$, se, e somente, $\ker (T - \lambda Id) \ne \{0_V\}$.
+\end{center}
+
+Agora, seja $\mathcal{A}$ uma base qualquer de $V$ e considere a matriz $[T - \lambda Id]_\mathcal{A}$ do operador $T - \lambda Id \in \mathcal{L}(V,V)$. Como $\dim_\cp{K}V < \infty$, se $T - \lambda Id$ \'e injetor, ent\~ao $T - \lambda Id$ \'e um isomorfismo e da{\'\i} invert{\'\i}vel. Isto \'e, $[T - \lambda Id]_\mathcal{A}$ \'e uma matriz invert{\'\i}vel. Mas se $\lambda \in \cp{K}$ \'e autovalor, ent\~ao $\ker (T - \lambda Id) \ne \{0_V\}$, ou seja, $T - \lambda Id$ n\~ao \'e injetora e consequentemente n\~ao pode ser um isomorfismo. Loga a matriz $[T - \lambda Id]_\mathcal{A}$ n\~ao \'e invert{\'\i}vel. Assim
+\[
+\det [T - \lambda Id]_\mathcal{A} = 0_\cp{K}.
+\]
+Portanto, $\lambda \in \cp{K}$ \'e um autovalor de $T$ se, e somente se,
+\[
+\det [T - \lambda Id]_\mathcal{A} = 0_\cp{K}.
+\]
+
+\begin{proposicao}
+	Seja $\lambda \in \cp{K}$ um autovalor do operador linear $T : V \to V$. Ent\~ao
+	\[
+		\aut_T(\lambda) = \ker(T - \lambda Id).
+	\]
+\end{proposicao}
+
+Seja $x$ uma vari\'avel. Temos
+\begin{align}
+	[T - xId]_\mathcal{A} = [T]_\mathcal{A} - x[Id]_\mathcal{A} = \begin{bmatrix}
+		a_{11} - x & a_{12} & a_{13} & \cdots & a_{1n}\\
+		a_{21} & a_{22} - x & a_{23} & \cdots & a_{1n}\\
+		\vdots\\
+		a_{n1} & a_{n2} & a_{n3} & \cdots & a_{nn} - x
+	\end{bmatrix}
+\end{align}
+onde $[T]_\mathcal{A} = (a_{ij})$, $a_{ij} \in \cp{K}$ para $1 \le i,\ j \le n$. Assim $\det[T - xId]_\mathcal{A}$ \'e um polin\^omio de grau $n$ com coeficiente em $\cp{K}$. O termo $x^n$ aparece com coeficiente $\pm 1_\cp{K}$. Portanto, $\lambda \in \cp{K}$ \'e um autovalor de $T$ se, e somente se, $\lambda$ \'e uma raiz de
+\[
+\det[T - xId]_\mathcal{A}.
+\]
+
+Agora, seja $\mathcal{B}$ uma outra base de $V$. Sabemos que existe $P \in \cp{M}_n(\cp{K})$ invert{\'\i}vel tal que
+\[
+[T - xId]_\mathcal{B} = P^{-1}[T - xId]_\mathcal{A}P.
+\]
+Ent\~ao
+\[
+	\det([T - xId]_\mathcal{B}) = \det(P^{-1}[T - xId]_\mathcal{A}P) = \det(P^{-1})\det([T - xId]_\mathcal{A})\det(P) = \det[T - xId]_\mathcal{A}
+\]
+uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_\mathcal{A}$ n\~ao depende da base escolhida para $V$.
+
+\begin{definicao}
+	Sejam $V$ um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita, $T \in \mathcal{L}(V,V)$ um operador linear e $\mathcal{A}$ uma base de $V$. Chamamos o polin\^omio $\det([T - xId]_\mathcal{A})$ de \textbf{polin\^omio caracter{\'\i}stico} de $T$ e o denotamos por $p_T(x)$.
+	\index{Polin\^omio!Caracter{\'\i}stico}
+\end{definicao}
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item Seja $T : \real^2 \to \real^2$ o operador linear dado por $T(x,y) = (-y,x)$. Encontre os autovalores de $T$ e os autoespa\c{c}os associados, se existirem.
+		\begin{solucao}
+			Vamos considerar a base can\^onica de $\real^2$ dada por $\mathcal{A} = \{e_1 = (1,0); e_2 = (0,1)\}$. Temos
+			\begin{align}
+				T(1,0) = (0,1) = 0(1,0) + 1(1,0)\\
+				T(0,1) = (-1,0) = -1(1,0) + 0(1,0).
+			\end{align}
+			Da{\'\i}
+			\[
+				[T]_\mathcal{A} = \begin{bmatrix}0 & -1\\ 1 & \phantom{-}0\end{bmatrix}
+			\]
+			e ent\~ao
+			\begin{align*}
+				p_T(x) = \det([T - xId]_\mathcal{A}) = \det\begin{bmatrix} -x & -1\\\phantom{-}1 & -x\end{bmatrix} = x^2 + 1.
+			\end{align*}
+			Como $p_T(x)$ n\~ao possui ra{\'\i}zes em $\real$, segue que $T$ n\~ao possui autovalores.
+		\end{solucao}
+		\item Seja $T : \complex^2 \to \complex^2$ o operador linear dado por $T(x,y) = (-y,x)$. Encontre os autovalores de $T$ e os autoespa\c{c}os associados, se existirem, considerando $\complex^2$ com um $\complex$-espa\c{c}o vetorial.
+		\begin{solucao}
+			Considere a base can\^onica $\mathcal{A}$ de $\complex^2$. \'E imediato verificar que o polin\^omio caracter{\'\i}stico de $T$ \'e $p_T(x) = x^2 + 1$, cujas ra{\'\i}zes s\~ao $\pm i$. Assim $T$ possui 2 autovalores distintos e para cada um deles vamos encontrar o autoespa\c{c}o associado.
+			\begin{itemize}
+				\item Para $\lambda_1 = i$ temos:
+				\[
+					[T - iId]_\mathcal{A} = \begin{bmatrix} -i & -1\\\phantom{-}1 & -i\end{bmatrix}
+				\]
+				e assim $(x,y) \in \aut_T(i)$ se, e s\'o se,
+				\[
+					\begin{bmatrix} -i & -1\\\phantom{-}1 & -i\end{bmatrix} \begin{bmatrix} x\\y\end{bmatrix}	 = \begin{bmatrix} 0\\0\end{bmatrix},
+				\]
+				isto \'e, $x = iy$. Logo
+				\[
+					\aut_T(i) = \{(iy,y) \in \complex^2 \mid y \in \complex\} = [(i,1)].
+				\]
+				Assim, $\mathcal{B}_1 = \{(i,1)\}$ \'e uma base de $\aut_T(i)$ e da{\'\i} $\dim_\complex\aut_T(i) = 1$.
+				\item Para $\lambda_1 = -i$ temos:
+				\[
+					[T + iId]_\mathcal{A} = \begin{bmatrix} i & -1\\1 & \phantom{-}i\end{bmatrix}
+				\]
+				e assim $(x,y) \in \aut_T(-i)$ se, e s\'o se,
+				\[
+					\begin{bmatrix} i & -1\\1 & \phantom{-}i\end{bmatrix} \begin{bmatrix} x\\y\end{bmatrix}	 = \begin{bmatrix} 0\\0\end{bmatrix},
+				\]
+				isto \'e, $x = -iy$. Logo
+				\[
+					\aut_T(-i) = \{(-iy,y) \in \complex^2 \mid y \in \complex\} = [(-i,1)].
+				\]
+				Assim, $\mathcal{B}_2 = \{(-i,1)\}$ \'e uma base de $\aut_T(-i)$ e da{\'\i} $\dim_\complex\aut_T(-i) = 1$.
+			\end{itemize}
+			Agora o conjunto $\mathcal{B} = \mathcal{B}_1 \cup \mathcal{B}_2 = \{(i,1);(-i,1)\}$ \'e uma base de $\complex^2$ e nesta base temos
+			\[
+				[T]_\mathcal{B} = \begin{bmatrix} i & \phantom{-}0\\0 & -i\end{bmatrix}.
+			\]
+		\end{solucao}
+		\item Seja $T : \real^3 \to \real^3$ o operador linear tal que
+		\[
+			[T]_\mathcal{A} = \begin{bmatrix}
+								3 & -3 & -4\\
+								0 & \phantom{-}3 & \phantom{-}5\\
+								0 & \phantom{-}0 & \phantom{-}1
+							\end{bmatrix}
+		\]
+		onde $\mathcal{A}$ \'e uma base qualquer de $\real^3$. Determine, casa exista, uma base de $\real^3$ tal que o operador $T$ seja diagonaliz\'avel.
+		\begin{solucao}
+			Temos
+			\[
+				p_T(x) = \det([T - xId]_\mathcal{A}) = (3 - x)^2(1 - x)
+			\]
+			e assim os autovalores de $T$ s\~ao $\lambda_1 = 3$ e $\lambda_2 = 1$.
+			\begin{itemize}
+				\item Para $\lambda_1 = 3$ temos que $(x,y,z) \in \aut_T(3)$ se, e s\'o se,
+				\[
+					\begin{bmatrix}
+						0 & -3 & -4\\
+						0 & \phantom{-}0 & \phantom{-}5\\
+						0 & \phantom{-}0 & -2
+					\end{bmatrix}\begin{bmatrix}
+						x\\y\\z
+					\end{bmatrix} = \begin{bmatrix}
+						0\\0\\0
+					\end{bmatrix}.
+				\]
+				Assim
+				\[
+					\aut_T(3) = \{(x,0,0) \mid x \in \real\} = [(1,0,0)]
+				\]
+				e ent\~ao $\mathcal{B}_1 = \{(1,0,0)\}$ \'e uma base de $\aut_T(3)$ e $\dim_\real\aut_T(3) = 1$.
+				\item Para $\lambda_2 = 1$ temos que $(x,y,z) \in \aut_T(1)$ se, e s\'o se,
+				\[
+					\begin{bmatrix}
+						2 & -3 & -4\\
+						0 & \phantom{-}2 & \phantom{-}5\\
+						0 & \phantom{-}0 & \phantom{-}0
+					\end{bmatrix}\begin{bmatrix}
+						x\\y\\z
+					\end{bmatrix} = \begin{bmatrix}
+						0\\0\\0
+					\end{bmatrix}.
+				\]
+				Assim
+				\[
+					\aut_T(1) = \{(-7z/4,-5z/2,z) \mid z \in \real\} = [(-7/4,-5/2,1)]
+				\]
+				e ent\~ao $\mathcal{B}_2 = \{(-7/4,-5/2,1)\}$ \'e uma base de $\aut_T(1)$ e $\dim_\real\aut_T(1) = 1$.
+			\end{itemize}
+			Note que o conjunto $\mathcal{B} = \mathcal{B}_1 \cup \mathcal{B}_2$ \'e L.I. mas n\~ao \'e uma base de $\real^3$. Neste caso o operador $T$ n\~ao \'e diagonaliz\'avel.
+		\end{solucao}
+		\item Seja $T : \real^3 \to \real^3$ o operador tal que
+		\[
+			[T]_\mathcal{A} = \begin{bmatrix}
+								\phantom{-}1 & \phantom{-}2 & -1\\
+								-2 & -3 & \phantom{-}1\\
+								\phantom{-}2 & \phantom{-}2 & -2
+							\end{bmatrix}
+		\]
+		onde $\mathcal{A}$ \'e uma base qualquer de $\real^3$. Determinar se $T$ \'e diagonaliz\'avel.
+		\begin{solucao}
+		Temos
+		\[
+				p_T(x) = \det([T - xId]_\mathcal{A}) = -(x + 1)^2(x + 2)
+			\]
+			e assim os autovalores de $T$ s\~ao $\lambda_1 = -1$ e $\lambda_2 = -2$. C\'alculos simples mostram que
+			\begin{align*}
+				\aut_T(-1) = [(1,0,2); (0,1,2)]\\
+				\aut_T(-2) = [(1,-1,1)].
+			\end{align*}
+			\'E f\'acil verificar que o conjunto $\mathcal{B} = \{(1,0,2); (0,1,2); (1,-1,1)\}$ \'e L.I, logo uma base de $\real^3$. Nesta base temos
+			\[
+				[T]_\mathcal{B} = \begin{bmatrix}
+								-1 & \phantom{-}0 & \phantom{-}0\\
+								\phantom{-}0 & -1 & \phantom{-}0\\
+								\phantom{-}0 & \phantom{-}0 & -2
+							\end{bmatrix}.
+			\]
+			Logo $T$ \'e diagonaliz\'avel.
+		\end{solucao}
+	\end{enumerate}
+\end{exemplo}
+
+\begin{teorema}
+	Seja $T : V \to V$ um operador linear onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita e sejam $\lambda_1$, \dots, $\lambda_r$, $r \ge 1$, autovalores de $T$, dois a dois distintos.
+	\begin{enumerate}[label={\roman*})]
+		\item\label{autovetorLI} Se $u_1 + \cdots + u_r = 0_V$ com $u_i \in \aut_T(\lambda_i)$; $i = 1$, \dots, $r$; ent\~ao $u_i = 0_V$ para todo $i$.
+		\item Para cada $i = 1$, \dots, $r$ seja $\mathcal{B}_i$ um conjunto linearmente independente contido em $\aut_T(\lambda_i)$. Ent\~ao $\mathcal{B}_1 \cup \cdots \cup \mathcal{B}_r$ \'e L.I. em $V$.
+	\end{enumerate}
+\end{teorema}
+\begin{prova}
+	\begin{enumerate}[label={\roman*})]
+		\item A prova ser\'a por indu\c{c}\~ao em $r \ge 1$. Se $r = 1$, nada h\'a a fazer. Seja $r > 1$ e suponha que o teorema seja v\'alido para todo $j < r$. Vamos mostrar que tamb\'em \'e v\'alido para $j = r$. Temos
+		\begin{equation}\label{equacaoauxiliar1}
+			u_1 + u_2 + \cdots + u_r = 0_V
+		\end{equation}
+		com $u_i \in \aut_T(\lambda_i)$.
+
+		Aplicando $T$ em \eqref{equacaoauxiliar1} obtemos
+		\begin{equation}\label{equacaoauxiliar2}
+			0_V = T(u_1) + T(u_2) + \cdots + T(u_r) = \lambda_1u_1 + \lambda_2u_2 + \cdots + \lambda_ru_r.
+		\end{equation}
+		Agora multiplicando \eqref{equacaoauxiliar1} por $\lambda_1$ e subtraindo de \eqref{equacaoauxiliar2} obtemos
+		\begin{align*}
+			\lambda_1u_2 + \lambda_1u_r - \lambda_2u_2 - \cdots - \lambda_ru_r = 0_V\\
+			(\lambda_1 - \lambda_2)u_2 - \cdots - (\lambda_1 - \lambda_r)u_r = 0_V.
+		\end{align*}
+		Mas por hip\'otese de indu\c{c}\~ao, segue que $(\lambda_1 - \lambda_i)u_i = 0$ para $i = 2$, \dots, $r$. Como $\lambda_i \ne \lambda_j$ se $i \ne j$, ent\~ao $\lambda_1 - \lambda_i \ne 0_\cp{K}$ e ent\~ao $u_i = 0_V$ para $i = 2$, \dots, $r$. Logo $u_1 = 0_V$ e o resultado est\'a provado.
+		\item Para cada $i$, seja $\mathcal{B}_i = \{u_{i1}, \dots, u_{in_i}\}$. Vamos mostrar que o subconjunto de $V$ dado por $\mathcal{B} = \{u_{11}, \dots, u_{1n_1}, u_{21}, \dots, u_{2n_2}, \dots, u_{r1}, \dots, u_{rn_r}\}$ \'e L.I. em $V$. Para isso sejam $\alpha_{in_i} \in \cp{K}$, $i = 1$, \dots, $r$ tais que
+		\[
+			\alpha_{11}u_{11} + \cdots + \alpha_{1n_1}u_{1n_1} + \cdots + \alpha_{r1}u_{r1} + \cdots + \alpha_{rn_r}u_{rn_r} = 0_V.
+		\]
+		Mas
+		\[
+			\sum_{j = 1}^{n_i}\alpha_{ij}u_{ij} \in \aut_T(\lambda_i)
+		\]
+		para $i = 1$, \dots, $r$. Da{\'\i} segue do item \ref{autovetorLI} que
+		\[
+			\sum_{j = 1}^{n_i}\alpha_{ij}u_{ij} = 0_V
+		\]
+		para $i = 1$, \dots, $r$. Como $\mathcal{B}_i$ \'e L.I. para $i = 1$, \dots, $r$, ent\~ao $\alpha_{ij} = 0_\cp{K}$ para $i = 1$, \dots, $r$ e $j = 1$, \dots, $n_i$. Portanto $\mathcal{B}_1 \cup \cdots \cup \mathcal{B}_r$ \'e L.I. em $V$.
+	\end{enumerate}
+\end{prova}
+
+\begin{corolario}
+	Seja $T : V \to V$ um operador linear, onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita. Se $\lambda_1$, \dots, $\lambda_r$ s\~ao todos os autovalores de $T$, ent\~ao $T$ \'e diagonaliz\'avel se, e somente se,
+	\[
+		\dim_\cp{K} V = \sum_{i = i}^r\dim_\cp{K}\aut_T(\lambda_i).
+	\]
+\end{corolario}
+
+\begin{definicao}
+	Seja $\lambda$ um autovalor de um operador linear $T : V \to V$ onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita e suponhamos que
+	\[
+		p_T(x) = (x - \lambda)^mq(x)
+	\]
+	com $q(\lambda) \ne 0$, seja o polin\^omio caracter{\'\i}stico de $T$.
+	\begin{enumerate}[label={\roman*})]
+		\item O n\'umero $m$ \'e chamada de \textbf{multiplicidade alg\'ebrica} de $\lambda$ e o denotamos por $ma(\lambda)$.\index{Multiplicidade!Alg\'ebrica}
+		\item Chamamos de \textbf{multiplicidade geom\'etrica} de $\lambda$ \`a dimens\~ao do subespa\c{c}o $\aut_T(\lambda)$ e indicamos tal n\'umero por $mg(\lambda)$.\index{Multiplicidade!Geom\'etrica}
+	\end{enumerate}
+\end{definicao}
+
+\begin{observacao}
+	A multiplicidade alg\'ebrica de um autovalor $\lambda$ \'e o maior {\'\i}ndice $j$ tal que
+	\[
+		p_T(x) = (x - \lambda)^jq(x)
+	\]
+	com $q(\lambda) \ne 0$;
+\end{observacao}
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item $p_T(x) = (x - 2)(x^2 - 5x + 6)$, $ma(2) = 2$
+		\item $p_T(x) = (x + 1)^3(x - 2)$, $ma(2) = 1$, $ma(-1) = 3$.
+	\end{enumerate}
+\end{exemplo}
+
+\begin{proposicao}
+	Seja $\lambda$ um autovalor de $T : V \to V$, onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita. Ent\~ao $mg(\lambda) \le ma(\lambda)$.
+\end{proposicao}
+\begin{prova}
+	Seja $W = \aut_T(\lambda)$ e assuma que $\dim_\cp{K}W = r$. Sejam $\mathcal{B}_W = \{w_1,\dots,w_r\}$ uma base de $W$ e $\mathcal{B}_V = \{w_1,\dots,w_r,u_{r + 1},\dots,u_n\}$ uma base de $V$ contendo $\mathcal{B}_W$. Como $T(w_i) = \lambda w_i$ para $i = 1$, \dots, $r$; podemos escrever $[T]_{\mathcal{B}_V}$ na forma
+	\[
+		[T]_{\mathcal{B}_V} = \begin{bmatrix}
+			\lambda & 0_\cp{K} & \dots & 0_\cp{K} & a_{1r+1} & \dots & a_{1n}\\
+			0_\cp{K} & \lambda &  \dots & 0_\cp{K} & a_{2r+1} & \dots & a_{2n}\\
+			\vdots\\
+			0_\cp{K} & 0_\cp{K} & \dots & \lambda & a_{rr+1} & \dots & a_{rn}\\
+			0_\cp{K} & 0_\cp{K} & \dots & 0_\cp{K} & b_{r+1r+1} & \dots & b_{r+1n}\\
+			\vdots\\
+			0_\cp{K} & 0_\cp{K} & \dots & 0_\cp{K} & b_{nr+1} & \dots & b_{nn}\\
+		\end{bmatrix}.
+	\]
+	Assim
+	\[
+		p_T(x) = \det([T - xId]_{\mathcal{B}_V}) = (x - \lambda)^r\det(A_2).
+	\]
+	Por defini\c{c}\~ao, $ma(\lambda)$ \'e o maior {\'\i}ndice $j$ tal que $(x - \lambda)^j$ divide $p_T(x)$. Portanto, $mg(\lambda) = r \le ma(\lambda)$.
+\end{prova}
+
+Seja $T : V \to V$ um operador linear onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita. Suponha que $p_T(x) = (x - \lambda_1)^{n_1}\dots(x - \lambda_r)^{n_r}$, onde $\lambda_1$, \dots, $\lambda_r \in \cp{K}$ s\~ao distintos. Da defini\c{c}\~ao de $p_T(x)$ temos que
+\[
+	\dim_\cp{K}V = n_1 + \cdots + n_r.
+\]
+Assim, pela proposi\c{c}\~ao anterior,
+\[
+	\dim_\cp{K}V = \sum_{i = 1}^r \dim_\cp{K}\aut_T(\lambda_i)
+\]
+se, e somente se, $mg(\lambda_i) = ma(\lambda_i)$ para $i = 1$, \dots, $r$. Assim temos o seguinte teorema:
+\begin{teorema}
+	Seja $T : V \to V$ um operador linear onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita e sejam $\lambda_1$, \dots, $\lambda_r \in \cp{K}$ seus autovalores distintos. As seguintes afirma\c{c}\~oes s\~ao equivalentes:
+	\begin{enumerate}[label={\roman*})]
+		\item $T$ \'e diagonaliz\'avel.
+		\item $p_T(x) = (x - \lambda_1)^{n_1}\dots(x - \lambda_r)^{n_r}$, $n_i \ge 1$ e $mg(\lambda_i) = ma(\lambda_i)$ para cada $i = 1$, \dots, $r$.
+		\item $\dim_\cp{K}V = \displaystyle\sum_{i = 1}^r \dim_\cp{K}\aut_T(\lambda_i)$.
+	\end{enumerate}
+\end{teorema}
+% section operadores_diagonaliz\'aveis (end)
+
+\section{Subespa\c{c}os T-invariantes} % (fold)
+\label{sec:subespacos_T-invariantes}
+Seja $T : \real^3 \to \real^3$ o operador tal que
+		\[
+	[T]_\mathcal{A} = \begin{bmatrix}
+			\phantom{-}1 & \phantom{-}2 & -1\\
+			-2 & -3 & \phantom{-}1\\
+			\phantom{-}2 & \phantom{-}2 & -2
+		\end{bmatrix}
+		\]
+onde $\mathcal{A}$ \'e uma base qualquer de $\real^3$. Sabemos que $T$ \'e diagonaliz\'avel e os autoespa\c{c}os de $T$ s\~ao
+\begin{align*}
+	\aut_T(-1) = [(1,0,2); (0,1,2)]\\
+	\aut_T(-2) = [(1,-1,1)].
+\end{align*}
+Seja $u \in \aut_T(-1)$. Assim existem $\alpha$, $\beta \in \real$ tais que
+\[
+	u = \alpha(1,0,2) + \beta(0,1,2)
+\]
+e da{\'\i}
+\[
+	T(u) = \alpha T(1,0,2) + \beta T(0,1,2) = -\alpha(1,0,2) - \beta(0,1,2) \in \aut_T(-1).
+\]
+Logo, para todo $u \in \aut_T(-1)$, $T(u) \in \aut_T(-1)$. Em outras palavras
+\[
+	T(\aut_T(-1)) \sub \aut_T(-1).
+\]
+Analogamente, para todo $u \in \aut_T(-2)$, $T(u) \in \aut_T(-2)$. Em outras palavras
+\[
+	T(\aut_T(-2)) \sub \aut_T(-2).
+\]
+Agora, seja $W = [(1,0,0)]$. Primeiramente, podemos escrever
+\[
+	(1,0,0) = \alpha(1,0,2) + \beta(0,1,2) + \gamma(1,-1,1)
+\]
+tomando $\alpha = 3$ e $\beta = \gamma = -2$. Da{\'\i}
+\[
+	T(1,0,0) = (1,-2,2) \notin W
+\]
+e ent\~ao $T(W) \varsubsetneq W$.
+
+\begin{definicao}
+	Seja $T : V \to V$ um operador linear onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial e seja $W \sub V$ um subespa\c{c}o de $V$. Dizemos que $W$ \'e um \textbf{subespa\c{c}o $T$-invariante} de $V$ se $T(W) \sub W$, isto \'e, $T(u) \in W$ para todo $u \in W$.\index{Subespa\c{c}o!$T$-invariante}
+\end{definicao}
+
+\begin{exemplo}
+Seja $T : V \to V$ um operador linear onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial.
+	\begin{enumerate}[label={\arabic*})]
+		\item Os subespa\c{c}os triviais de $V$ s\~ao $T$-invariantes.
+		\item Os subespa\c{c}os $\ker T$ e $\im T$ s\~ao $T$-invariantes. De fato, se $u \in \ker T$, ent\~ao $T(u) = 0_V \in \ker T$. Assim $T(\ker T) \sub \ker T$. Agora, se $w \in \im T$, ent\~ao existe $u \in V$ tal que $T(u) = w$. Assim $T(w) = T(T(u))$, logo $T(w) \in \im T$ para todo $w \in \im T$.
+		\item Se $\lambda$ for um autovalor de $T$, ent\~ao $\aut_T(\lambda)$ \'e um subespa\c{c}o $T$-invariante.
+		\item Se $W$ \'e um subespa\c{c}o $T$-invariante, ent\~ao $T : W \to W$ \'e um operador linear.
+		\item Seja $T : \real^2 \to \real^2$ um operador linear cuja matriz em rela\c{c}\~ao \`a base can\^onica $\mathcal{B}$ de $\real^2$ \'e dada por
+		\[
+			[T]_\mathcal{B} = \begin{bmatrix}
+				0 & -1\\
+				1 & \phantom{-}0
+			\end{bmatrix}.
+		\]
+		Ent\~ao os \'unicos subespa\c{c}os $T$-invariantes s\~ao os triviais. De fato, qualquer outro espa\c{c}o $T$-invariante teria dimens\~ao 1, isto \'e, se $W$ \'e um subespa\c{c}o de $\real^2$, $T$-invariante ent\~ao $W = [v]$. Da{\'\i} $v$ seria um autovetor de $T$. Mas
+		\[
+			p_T(x) = x^2 + 1
+		\]
+		que n\~ao possui ra{\'\i}zes em $\real$. Logo, $T$ n\~ao possui subespa\c{c}o $T$-invariante n\~ao trivial.
+	\end{enumerate}
+\end{exemplo}
+
+\begin{definicao}
+	Sejam $W_1$ e $W_2$ dois subespa\c{c}os vetoriais de um $\cp{K}$-espa\c{c}o vetorial $V$. Dizemos que $W_1 + W_2$ \'e uma \textbf{soma direta} se $W_1 \cap W_2 = \{0_V\}$. Neste caso escreveremos $W_1 \oplus W_2$.\index{Soma direta}
+\end{definicao}
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item Sejam $W_1$ e $W_2$ dois subespa\c{c}os de $\complex^4$ com bases $\{(1,2,0,i);(i,0,0,1)\}$ e $\{(0,0,3,1)\}$, respectivamente. Seja $(z_1,z_2,z_3,z_4) \in W_1 \cap W_2$. Temos
+		\[
+			(z_1,z_2,z_3,z_4) = \alpha(1,2,0,i)	+ \beta(i,0,0,1) = \gamma(0,0,3,1)
+		\]
+		donde $\alpha = \beta = \gamma = 0$. Logo $W_1 \cap W_2 = \{(0,0,0,0)\}$ e portanto $W_1 + W_2$ \'e uma soma direta e escrevemos $W_1 \oplus W_2$.
+		\item Sejam $W_1 = [(0,1)]$ e $W_2 = [(1,1)]$ subespa\c{c}os de $\real^2$. Temos que se $(x,y) \in W_1 \cap W_2$, ent\~ao
+		\[
+			(x,y) = \alpha(0,1) = \beta(1,1)
+		\]
+		e da{\'\i} $\alpha = \beta = 0$. Logo, $W_1 \cap W_2 =\{(0,0)\}$ e ent\~ao $W_1 + W_2$ \'e uma soma direta. Mais ainda
+		\[
+			\dim_\real(W_1 \oplus W_2) = \dim_\real W_1 + \dim_\real W_2 = 2
+		\]
+		e portanto,
+		\[
+			W_1 \oplus W_2 = \real^2.
+		\]
+	\end{enumerate}
+\end{exemplo}
+
+\begin{definicao}
+	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial e sejam $W_1$ e $W_2$ dois subespa\c{c}os de $V$. Dizemos que $V$ \'e a \textbf{soma direta} de $W_1$ e $W_2$ se
+	\begin{enumerate}[label={\roman*})]
+		\item $W_1 \cap W_2 = \{0_V\}$;
+		\item $W_1 + W_2 = V$.
+	\end{enumerate}
+	Neste caso escrevemos
+	\[
+		V = W_1 \oplus W_2.
+	\]
+\end{definicao}
+
+\begin{proposicao}
+	Sejam $V$ um $\cp{K}$-espa\c{c}o vetorial e $W_1$, $W_2$ dois subespa\c{c}os de $V$. Ent\~ao $V = W_1 \oplus W_2$ se, e s\'o, se
+	cada elemento $u \in V$ se escreve de maneira \'unica como uma soma $x_1 + x_2$, onde $x_1 \in W_1$ e $x_2 \in W_2$.
+\end{proposicao}
+\begin{prova}
+	\begin{itemize}
+		\item[($\Rightarrow$)] Vamos supor que $V = W_1 \oplus W_2.$ Segue ent\~ao que cada elemento $u \in V$ se escreve
+		como soma de um elemento de $W_1$ com um elemento de $W_2$. Suponha agora que $u = x_1 + x_2 = y_1 + y_2$ onde
+		$x_1$, $y_1 \in W_1$ e $x_2$, $y_2 \in W_2$. Da{\'\i}
+		\[
+			x_1 - y_1 = y_2 - x_2 \in W_1 \cap W_2
+		\]
+		pois $x_1 - y_1 \in W_1$ e $y_2 - x_2 \in W_2$. Mas $W_1 \cap W_2 = \{0_V\}$, logo $x_1 = y_1$ e $x_2 = y_2$,
+		como quer{\'\i}amos.
+		\item[($\Leftarrow$)] Como cada elemento de $V$ \'e uma soma de elementos de $W_1$ com elementos de $W_2$, logo
+		$V = W_1 + W_2$. Seja $u \in W_1 + W_2$ com $u \ne 0_V$. Assim como $0_V \in W_1$ temos
+		\[
+			u = 0_V + u
+		\]
+		considerando $u \in W_2$. Por outro lado, $0_V \in W_2$, da{\'\i}
+		\[
+			u = u + 0_V
+		\]
+		considerando $u \in W_1$. Logo $u$ pode ser escrito de duas maneiras distintas, o que contradiz nossa hip\'otese.
+		Logo $u = 0_V$, isto \'e, $W_1 \cap W_2 = \{0_V\}$. Portanto, $V = W_1 \oplus W_2$.
+	\end{itemize}
+\end{prova}
+
+\begin{proposicao}
+	Sejam $V$ um $\cp{K}$-espa\c{c}o vetorial n\~ao nulo e de dimens\~ao finita e $W_1$ um subespa\c{c}o n\~ao nulo de $V$. Ent\~ao
+	existe um subespa\c{c}o $W_2$ de $V$ tal que $V = W_1 \oplus W_2$.
+\end{proposicao}
+\begin{prova}
+	Se $V = W_1$ n\~ao h\'a nada a fazer, pois basta escolher $W_2 = \{0_V\}$. Suponha ent\~ao que $V \ne W_1$. Seja
+	$\mathcal{B}_1 = \{w_1, \dots, w_m\}$ uma base de $W_1$. Sabemos que podemos estender $\mathcal{B}_1$ a uma base
+	$\mathcal{B}$ de $V$. Seja $\mathcal{B} = \{w_1, \dots, w_m, u_1, \dots, u_n\}$ uma base de $V$ contendo
+	$\mathcal{B}_1$. Defina
+	\[
+		W_2 = [u_1, \dots, u_n]
+	\]
+	o subespa\c{c}o gerado por $u_1$, \dots, $u_n$. Como $\mathcal{B}$ gera $V$, ent\~ao $V = W_1 + W_2$. Seja $v \in W_1 \cap
+	W_2$. Ent\~ao existem escalares $\alpha_1$, \dots, $\alpha_m$, $\beta_1$, \dots, $\beta_n$ tais que
+	\begin{align*}
+		v = \alpha_1w_1 + \cdots + \alpha_mw_m\\
+		v = \beta_1u_1 + \cdots + \beta_nu_n,
+	\end{align*}
+	isto \'e,
+	\[
+		\alpha_1w_1 + \cdots + \alpha_mw_m - \beta_1u_1 - \cdots - \beta_nu_n = 0_V
+	\]
+	e ent\~ao $\alpha_1 = \dots = \alpha_m = \beta_1 = \dots = \beta_n = 0_\cp{K}$ pois $\mathcal{B}$ \'e L.I.. Assim $W_1
+	\cap W_2 = \{0_V\}$ e portanto $V = W_1 \oplus W_2$.
+\end{prova}
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item Sejam $V = \real^3$ e $W_1 = [(1,0,0)]$. Ent\~ao podemos tomar $W_2 = [(0,1,0); (0,0,1)]$ e teremos $V = W_1 \oplus W_2$. Tamb\'em podemos tomar $W_3 = [(1,1,1); (0,0,1)]$ e assim $V = W_1
+		\oplus W_3$.
+		\item Sejam $V = \cp{M}_2(\real)$ e $W_1 = \left\{\begin{bmatrix}
+			a & b\\ 0 & 0
+		\end{bmatrix} \mid a,\ b \in \real\right\}$. Tomando
+		\[
+			W_2 = \left\{\begin{bmatrix}
+			0 & 0\\ c & d
+		\end{bmatrix} \mid c,\ d \in \real\right\}
+		\]
+		temos $V = W_1 \oplus W_2$.
+	\end{enumerate}
+\end{exemplo}
+
+% section subespacos_T-invariantes (end)
+
+\section{Polin\^omio Minimal} % (fold)
+\label{sec:polinomio_minimal}
+
+Seja $T : V \to V$ um operador linear sobre um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao $n \ge 1$. Para cada $i \ge 0$ se definirmos
+\[
+	T^i = \begin{cases}
+		\underbrace{T\circ T \circ \dots \circ T}_{i \mbox{ vezes}}, & i \ge 1\\
+		Id, & i = 0,
+	\end{cases}
+\]
+ent\~ao $T^i \in \mathcal{L}(V,V)$. Mas, $\dim_\cp{K} \mathcal{L}(V,V) = n^2$, assim existe $r \ge 1$ tal que o conjunto $\{T^0, T, T^2, \dots, T^{r - 1}\}$ \'e L.I., mas $\{T^0, T, T^2, \dots, T^r\}$ \'e L.D.. Logo existem escalares $a_0$, $a_1$, \dots, $a_{r - 1}$ tais que
+\[
+	T^r = a_0T^0 + a_1T^1 + \cdots + a_{r - 1}T^{r - 1},
+\]
+ou seja,
+\[
+	T^r = \sum_{i = 0}^{r - 1}a_iT^i.
+\]
+Assim
+\[
+	T^r(u) = \sum_{i = 0}^{r - 1}a_iT^i(u)
+\]
+para todo $u \in V$.
+
+Defina
+\[
+	m_T(x) = x^r - a_{r - 1}x^{r - 1} - \cdots - a_1x - a_0.
+\]
+Do exposto anteriormente segue que
+\[
+	m_T(T(u)) = 0_V
+\]
+para todo $u \in V$.
+
+\begin{definicao}
+	O \textbf{polin\^omio minimal} de um operador linear $T$ em $\mathcal{L}(V,V)$ \'e o polin\^omio m\^onico $m_T(x)$ de menor grau tal que $m_T(T(u)) = 0_V$ para todo $u \in V$. Assim, se o grau de $m_T(x)$ \'e $r$, ent\~ao o coeficiente de $x^r$ \'e 1.\index{Polin\^omio!Minimal}
+\end{definicao}
+
+\begin{exemplo}
+	Seja $T \in \mathcal{L}(\complex^3, \complex^3)$ dado por
+	\[
+		T(a, b, c) = (a, a + b, c).
+	\]
+	Temos $T \ne \lambda Id$ e
+	\begin{align*}
+		T^2(a,b,c) = T(T(a,b,c)) = T(a,a+b,c) = (a,2a+b,c) = 2(a,a+b,c) - (a,b,c)
+	\end{align*}
+	isto \'e,
+	\[
+		T^2(a,b,c) = 2T(a,b,c) - Id(a,b,c).
+	\]
+	Assim o polin\^omio minimal de $T$ \'e
+	\[
+		m_T(x) = (x - 1)^2.
+	\]
+\end{exemplo}
+
+\begin{teorema}
+	Seja $T \in \mathcal{L}(V,V)$, onde $\dim_\cp{K} V < \infty$. Os polin\^omios caracter{\'\i}stico e minimal de $T$ possuem exatamente as mesmas ra{\'\i}zes, a menos de multiplicidade.
+\end{teorema}
+
+\begin{exemplo}
+	Seja $T$ o operador sobre $\real^n$ representado em rela\c{c}\~ao \`a base can\^onica pela matriz $A$ dada. Encontre o polin\^omio minimal de $T$.
+	\begin{enumerate}[label={\arabic*})]
+		\item $A = \begin{bmatrix}
+			\phantom{-}5 & -6 & -6\\
+			-1 & \phantom{-}4 & \phantom{-}2\\
+			\phantom{-}3 & -6 & -4
+		\end{bmatrix}$, $n = 3$
+		\begin{solucao}
+			O polin\^omio caracter{\'\i}stico de $T$ \'e
+			\[
+				p_T(x) = (x - 1)(x - 2)^2.
+			\]
+			Assim os poss{\'\i}veis candidatos a polin\^omio minimal s\~ao
+			\[
+				(x - 1)(x - 2), \ (x -1)(x - 2)^2.
+			\]
+			Temos
+			\[
+				A - I_3 = \begin{bmatrix}
+					\phantom{-}4 & -6 & -6\\
+					-1 & \phantom{-}3 & \phantom{-}2\\
+					\phantom{-}3 & -6 & -5
+				\end{bmatrix},
+				A - 2I_3 = \begin{bmatrix}
+					\phantom{-}3 & -6 & -6\\
+					-1 & \phantom{-}2 & \phantom{-}2\\
+					\phantom{-}3 & -6 & -6
+				\end{bmatrix}
+			\]
+			e assim
+			\[
+				(A - I_3)(A - 2I_3) = [0]_{3 \times 3}.
+			\]
+			Logo o polin\^omio minimal de $T$ \'e
+			\[
+				m_T(x) = (x - 1)(x - 2).
+			\]
+			Note que $p_T(x) = m_T(x)(x - 2)$ e assim $p_T(A) = [0]_{3 \times 3}$.
+		\end{solucao}
+		\item $A = \begin{bmatrix}
+			2 & 1 & \phantom{-}0 & 0\\
+			0 & 2 & \phantom{-}0 & 0\\
+			0 & 0 & \phantom{-}1 & 1\\
+			0 & 0 & -2 & 4
+		\end{bmatrix}$, $n = 4$.
+		\begin{solucao}
+			O polin\^omio caracter{\'\i}stico de $T$ \'e
+			\[
+				p_T(x) = (x - 3)(x - 2)^3.
+			\]
+			Assim os poss{\'\i}veis candidatos a polin\^omio minimal s\~ao
+			\[
+				f(x) = (x - 3)(x - 2), \ g(x) = (x -3)(x - 2)^2, h(x) = (x - 3)(x - 2)^3.
+			\]
+			Temos
+			\[
+				f(A) = (A - 3I_4)(A - 2I_4) = \begin{bmatrix}
+					-1 & \phantom{-}1 & \phantom{-}0 & 0\\
+					\phantom{-}0 & -1 & \phantom{-}0 & 0\\
+					\phantom{-}0 & \phantom{-}0 & -2 & 1\\
+					\phantom{-}0 & \phantom{-}0 & -2 & 1
+				\end{bmatrix}
+				\begin{bmatrix}
+					0 & 1 & \phantom{-}0 & 0\\
+					0 & 0 & \phantom{-}0 & 0\\
+					0 & 0 & -1 & 1\\
+					0 & 0 & -2 & 2
+				\end{bmatrix} = \begin{bmatrix}
+					0 & 1 & 0 & 0\\
+					0 & 0 & 0 & 0\\
+					0 & 0 & 0 & 0\\
+					0 & 0 & 0 & 0
+				\end{bmatrix}.
+			\]
+			Agora
+			\[
+				g(A) = (A - 3I_4)(A - 2I_4)^2 = \begin{bmatrix}
+					-1 & \phantom{-}1 & \phantom{-}0 & 0\\
+					\phantom{-}0 & -1 & \phantom{-}0 & 0\\
+					\phantom{-}0 & \phantom{-}0 & -2 & 1\\
+					\phantom{-}0 & \phantom{-}0 & -2 & 1
+				\end{bmatrix}
+				\begin{bmatrix}
+					0 & 1 & \phantom{-}0 & 0\\
+					0 & 0 & \phantom{-}0 & 0\\
+					0 & 0 & -1 & 1\\
+					0 & 0 & -2 & 2
+				\end{bmatrix}^2 = \begin{bmatrix}
+					0 & 0 & 0 & 0\\
+					0 & 0 & 0 & 0\\
+					0 & 0 & 0 & 0\\
+					0 & 0 & 0 & 0
+				\end{bmatrix}.
+			\]
+			Logo o polin\^omio minimal de $T$ \'e
+			\[
+				m_T(x) = (x - 3)(x - 2)^2.
+			\]
+			Note que $p_T(x) = m_T(x)(x - 2)$ e assim $p_T(A) = [0]_{4 \times 4}$.
+		\end{solucao}
+		\item $A = \begin{bmatrix}
+			\lambda & a\\
+			0 & \lambda
+		\end{bmatrix}$ onde $a \ne 0$, $n = 2$.
+		\begin{solucao}
+			O polin\^omio caracter{\'\i}stico de $T$ \'e
+			\[
+				p_T(x) = (x - \lambda)^2.
+			\]
+			Assim o polin\^omio minimal ser\'a da forma
+			\[
+				(x - \lambda),\ (x - \lambda)^2;
+			\]
+			Como $T \ne \lambda Id$, ent\~ao segue que $m_T(x) = p_T(x)$ e da{\'\i} $p_T(A) = [0]_{2 \times 2}$.
+		\end{solucao}
+	\end{enumerate}
+\end{exemplo}
+
+\begin{teorema}[Cayley-Hamilton]\label{TeoremaCayley-Hamilton}
+	Seja $T$ um operador linear sobre um $\cp{K}$-espa\c{c}o vetorial $V$ de dimens\~ao finita. Se $p_T(x)$ \'e o polin\^omio caracter{\'\i}stico de $T$, ent\~ao $p_T(T(u)) = 0_V$ para todo $u \in V$. Em particular, o polin\^omio caracter{\'\i}stico $p_T(x)$ \'e um m\'ultiplo do polin\^omio minimal $m_T(x)$ de $T$.
+\end{teorema}
+
+Seja $T : \cp{M}_2(\real) \to \cp{M}_2(\real)$ o operador linear dado por
+\[
+	T \begin{bmatrix}
+		a & b\\
+		c & d
+	\end{bmatrix} = \begin{bmatrix}
+		d & c\\
+		0 & a
+	\end{bmatrix}.
+\]
+Considere tamb\'em os seguintes subespa\c{c}os de $\cp{M}_2(\real)$:
+\begin{align*}
+	W_1 = \left[e_1 = \begin{bmatrix}
+		0 & 1\\
+		0 & 0
+	\end{bmatrix}; e_2 = \begin{bmatrix}
+		0 & 0\\
+		1 & 0
+	\end{bmatrix}\right]\\
+	W_2 = \left[e_3 = \begin{bmatrix}
+		1 & 0\\
+		0 & 0
+	\end{bmatrix}; e_4 = \begin{bmatrix}
+		0 & 0\\
+		0 & 1
+	\end{bmatrix}\right].
+\end{align*}
+
+Temos
+\[
+	T(e_1) = \begin{bmatrix}
+		0 & 0\\
+		0 & 0
+	\end{bmatrix} \in W_1,
+	T(e_2) = \begin{bmatrix}
+		0 & 1\\
+		0 & 0
+	\end{bmatrix} \in W_1
+\]
+assim $W_1$ \'e um subespa\c{c}o $T$-invariante. Seja ent\~ao $T_1 = T : W_1 \to W_1$ e $\mathcal{B}_1 = \{e_1, e_2\}$ uma base de $W_1$. Temos
+\[
+	[T_1]_{\mathcal{B}_1} = \begin{bmatrix}
+		0 & 1\\
+		0 & 0
+	\end{bmatrix}.
+\]
+Agora,
+\[
+	T(e_3) = \begin{bmatrix}
+		0 & 0\\
+		0 & 1
+	\end{bmatrix} \in W_2,
+	T(e_4) = \begin{bmatrix}
+		1 & 0\\
+		0 & 0
+	\end{bmatrix} \in W_2
+\]
+assim $W_2$ \'e um subespa\c{c}o $T$-invariante. Seja ent\~ao $T_2 = T : W_2 \to W_2$ e $\mathcal{B}_2 = \{e_3, e_4\}$ uma base de $W_2$. Temos
+\[
+	[T_2]_{\mathcal{B}_2} = \begin{bmatrix}
+		0 & 1\\
+		1 & 0
+	\end{bmatrix}.
+\]
+Al\'em disso, \'e f\'acil ver que $\cp{M}_2(\real) = W_1 \oplus W_2$ e assim $\mathcal{B} = \mathcal{B}_1 \cup \mathcal{B}_2$ \'e uma base de $\cp{M}_2(\real)$. Assim
+\[
+	[T]_\mathcal{B} = \begin{bmatrix}
+		0 & 1 & 0 & 0\\
+		0 & 0 & 0 & 0\\
+		0 & 0 & 0 & 1\\
+		0 & 0 & 1 & 0
+	\end{bmatrix} = \begin{bmatrix}
+		[T_1]_{\mathcal{B}_1} & 0\\
+		0 & [T_2]_{\mathcal{B}_2}
+	\end{bmatrix}.
+\]
+
+Neste caso dizemos que $T$ \'e a \textbf{soma direta} dos operadores $T_1$ e $T_2$ e escrevemos
+\[
+	T = T_1 \oplus T_2.
+\]
+
+Al\'em disso temos
+\begin{align*}
+	T_1^2 (e_1) = T_1(T(e_1)) = \begin{bmatrix}
+		0 & 0\\
+		0 & 0
+	\end{bmatrix}\\
+	T_1^2 (e_2) = T_1(T(e_2)) = \begin{bmatrix}
+		0 & 0\\
+		0 & 0
+	\end{bmatrix}
+\end{align*}
+assim $T_1^2 = 0$.
+
+Note tamb\'em que $T_2$ \'e invert{\'\i}vel pois leva uma base de $W_2$ em uma base de $W_2$. Desse modo o operador $T$ pode ser escrito como a soma direta
+\[
+	T = T_1 \oplus T_2
+\]
+onde $T_1^2 = 0$ e $T_2$ \'e invert{\'\i}vel. O operador $T_1$ \'e chamado de \textbf{nilpotente} de {\'\i}ndice de nilpot\^encia 2.
+
+\begin{definicao}
+	Seja $V = W_1 \oplus W_2 \oplus \cdots \oplus W_r$ onde $\dim_\cp{K} V < \infty$. Seja $T : V \to V$ um operador linear e suponha que $W_i$ seja $T$-invariante para $i = 1$, \dots, $r$. Sejam $\mathcal{B}_1$, \dots, $\mathcal{B}_r$ bases de $W_1$, \dots, $W_r$, respectivamente. Como $\mathcal{B} = \mathcal{B}_1 \cup \dots \cup \mathcal{B}_r $ \'e uma base de $V$ ent\~ao
+	\[
+		[T]_\mathcal{B} = \begin{bmatrix}
+		[T_1]_{\mathcal{B}_1} & 0 & 0 & \dots & 0\\
+		0 & [T_2]_{\mathcal{B}_2} & 0 & \dots & 0\\
+		\vdots\\
+		0 & 0 & 0 & \dots & [T_r]_{\mathcal{B}_r}
+	\end{bmatrix}
+	\]
+	onde $T_i = T : W_i \to W_i$, $i = 1$, \dots, $r$. Neste caso escrevemos
+	\[
+		T = T_1 \oplus T_2 \oplus \cdots \oplus T_r
+	\]
+	e dizemos que $T$ \'e a \textbf{soma direta dos operadores} $T_1$, \dots, $T_r$.
+\end{definicao}
+
+\begin{definicao}
+	Um operador linear $T : V \to V$ \'e chamado de \textbf{nilpotente} se existir um $r > 0$ tal que $T^r = 0$. O \textbf{{\'\i}ndice de nilpot\^encia} de um operador nilpotente ser\'a o menor inteiro $i$ tal que $T^i = 0$.\index{Operador Linear!Nilpotente}
+\end{definicao}
+
+\begin{observacao}
+	Se $T : V \to V$ \'e um operador linear nilpotente, ent\~ao $\ker T \ne \{0_V\}$. De fato, se $T$ \'e nilpotente de {\'\i}ndice $i \ge 1$, ent\~ao existe $u \in V$ tal que $T^i(u) = 0_V$ e $T^{i - 1}(u) \ne 0_V$. Assim
+	\[
+		0_V = T^i(u) = T(T^{i - 1}(u)),
+	\]
+	isto \'e, $T^{i - 1}(u) \in \ker T$.
+\end{observacao}
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item Seja $D : \mathcal{P}_3(\real) \to \mathcal{P}_3(\real)$ o operador deriva\c{c}\~ao. \'E f\'acil ver que $D$ \'e nilpotente de {\'\i}ndice de nilpot\^enica 4.
+		\item Seja $D : \mathcal{P}_n(\real) \to \mathcal{P}_n(\real)$ o operador deriva\c{c}\~ao. \'E f\'acil ver que $D$ \'e nilpotente de {\'\i}ndice de nilpot\^enica $n + 1$.
+		\item Seja $T : \real^2 \to \real^2$ o operador linear tal que
+		\[
+			[T] = \begin{bmatrix}
+				0 & 0\\
+				1 & 0
+			\end{bmatrix}.
+		\]
+		\'E f\'acil ver que $T$ \'e nilpotente de {\'\i}ndice de nilpot\^encia 2.
+	\end{enumerate}
+\end{exemplo}
+
+\begin{teorema}\label{decomposicaonilpotente}
+	Seja $T : V \to V$ um operador linear, onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita. Ent\~ao $T$ \'e a soma direta de um operador nilpotente e um operador invert{\'\i}vel. Al\'em disso, tal decomposi\c{c}\~ao \'e essencialmente \'unica.
+\end{teorema}
+
+\begin{observacao}
+	O Teorema \ref{decomposicaonilpotente} n\~ao vale para espa\c{c}os vetoriais de dimens\~ao infinita. Por exemplo, seja $T : \mathcal{P}(\real) \to \mathcal{P}(\real)$ o operador linear dado por $T(p(x)) = xp(x)$. Suponha que  $T = T_1 \oplus T_2$, onde $T_1$ \'e nilpotente e $T_2$ \'e invert{\'\i}vel. Primeiro note que para todo $l \ge 1$, $\ker T^l = \{0\}$, logo $T$ n\~ao \'e nilpotente. Assim $T_2 \ne 0$. Seja $W_2$ um subespa\c{c}o $T$-invariante tal que $T_2 = T : W_2 \to W_2$ seja invert{\'\i}vel. Logo $T_2$ \'e sobrejetora. Tome $q(x) \in W_2$ um polin\^omio m\^onico de menor grau poss{\'\i}vel. Como $T_2$ \'e sobrejetora, ent\~ao existe $p(x) \in W_2$ tal que
+	\[
+		xp(x) = T_2(p(x)) = q(x).
+	\]
+	Mas o grau de $xp(x)$ \'e maior que o grau de $q(x)$, o que \'e um absurdo. Logo $T_2$ n\~ao \'e sobrejetora, ou seja, $T$ n\~ao pode ser decomposta com uma soma de um operador nilpotente com um invert{\'\i}vel.
+\end{observacao}
+
+\begin{proposicao}\label{basenilpotente}
+	Seja $T : V \to V$ um operador linear nilpotente de {\'\i}ndice de nilpot\^encia $r \ge 1$ e $V$ um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita. Se $u \in V$ \'e tal que $T^{r - 1}(u) \ne 0_V$, ent\~ao
+	\begin{enumerate}[label={\roman*})]
+		\item O conjunto $\{u, T(u), \dots, T^{r - 1}(u)\}$ \'e L.I..
+		\item Existe um subespa\c{c}o $T$-invariante $W$ de $V$ tal que $V = U \oplus W$, onde $U$ \'e o $\cp{K}$-espa\c{c}o vetorial dado por $U = [u,T(u),\dots, T^{r - 1}(u)]$.
+	\end{enumerate}
+\end{proposicao}
+
+Seja $T : V \to V$ um operador linear, onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita $n \ge 1$. Suponha que $T$ seja nilpotente de {\'\i}ndice de nilpot\^encia $r \ge 1$. \'E imediato que $r \le n$. Al\'em disso, como $T^{r - 1}\ne 0$, existe $u \in V$, $u \ne 0_V$ tal que $T^{r - 1}(u) \ne 0_V$. Da{\'\i}, se $r = n$, ent\~ao pela Proposi\c{c}\~ao \ref{basenilpotente}, o conjunto $\mathcal{B} = \{u, T(u), \dots, T^{n - 1}(u)\}$ \'e uma base de $V$. Com rela\c{c}\~ao \`a essa base temos
+\begin{align*}
+	T(u) = 0u + 1T(u) + 0T^2(u) + \cdots + 0T^{n - 1}(u)\\
+	T(T(u)) = 0u + 0T(u) + 1T^2(u) + \cdots + 0T^{n - 1}(u)\\
+	\vdots\\
+	T^n(u) = 0u + 0T(u) + 0T^2(u) + \cdots + 0T^{n - 1}(u)\\
+\end{align*}
+e assim
+\[
+	[T]_\mathcal{B} = \begin{bmatrix}
+		0 & 0 & 0 & \cdots & 0 & 0\\
+		1 & 0 & 0 & \cdots & 0 & 0\\
+		0 & 1 & 0 & \cdots & 0 & 0\\
+		\vdots\\
+		0 & 0 & 0 & \cdots & 1 & 0
+	\end{bmatrix}
+\]
+
+Al\'em disso, se o polin\^omio caracter{\'\i}stico de $T$ \'e $p_T(x) = (x - \lambda)^n$, ent\~ao pelo Teorema de Cayley-Hamilton, \ref{TeoremaCayley-Hamilton}, o operador $T - \lambda Id$ \'e nilpotente. Se o seu {\'\i}ndice de nilpot\^encia for $n$, ent\~ao existir\'a uma base $\mathcal{B}$ de $V$ tal que $[T]_\mathcal{B}$ ter\'a a forma
+\[
+	[T]_\mathcal{B} = \begin{bmatrix}
+		\lambda & 0 & 0 & \cdots & 0 & 0\\
+		1 & \lambda & 0 & \cdots & 0 & 0\\
+		0 & 1 & \lambda & \cdots & 0 & 0\\
+		\vdots\\
+		0 & 0 & 0 & \cdots & 1 & \lambda
+	\end{bmatrix}
+\]
+
+\begin{definicao}
+	Um \textbf{bloco de Jordan} $r \times r$ em $\lambda$ \'e a matrix $J_r(\lambda)$ em $\cp{M}_n(\cp{K})$ que tem $\lambda$ na diagonal principal e 1 na diagonal abaixo da principal, isto \'e,
+	\[
+	J_r(\lambda) = \begin{bmatrix}
+		\lambda & 0 & 0 & \cdots & 0 & 0\\
+		1 & \lambda & 0 & \cdots & 0 & 0\\
+		0 & 1 & \lambda & \cdots & 0 & 0\\
+		\vdots\\
+		0 & 0 & 0 & \cdots & 1 & \lambda
+	\end{bmatrix}_{r \times r}.
+\]\index{Jordan!Bloco de }
+\end{definicao}
+
+\begin{teorema}\label{operador_nilpotente}
+	Seja $T : V \to V$ um operador linear nilpotente com {\'\i}ndice de nilpot\^encia $r \ge 1$, onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita. Ent\~ao existem n\'umeros positivos $p$, $m_1$, \dots, $m_p$ e vetores $u_1$, \dots, $u_p$ tais que
+	\begin{enumerate}[label=({\roman*})]
+		\item\label{propriedade_i_operado_nilpotente} $r = m_1 \ge m_2 \ge \cdots \ge m_p$.
+		\item\label{propriedade_ii_operado_nilpotente} O conjunto $\mathcal{B} = \{u_1, T(u_1), \dots, T^{m_1 - 1}(u_1); u_2, T(u_2), \dots, T^{m_2 - 1}(u_2); \dots; u_p, T(u_p), \dots, \linebreak T^{m_p - 1}(u_p)\}$ \'e uma base de $V$.
+		\item\label{propriedade_iii_operado_nilpotente} $T^{m_i}(u_i) = 0_V$ para cada $i = 1$, \dots, $p$.
+		\item\label{propriedade_iv_operado_nilpotente} Se $S$ for um operador linear em um $\cp{K}$-espa\c{c}o vetorial $W$ de dimens\~ao finita, ent\~ao os inteiros $p$, $m_1$, \dots, $m_p$ associados a $S$ e a $T$ s\~ao iguais se, e somente se, existir um isomorfismo $\Phi : V \to W$ com $\Phi T \Phi^{-1} = S$.
+	\end{enumerate}
+\end{teorema}
+
+\begin{teorema}\label{forma_de_jordan}
+	Seja $T : V \to V$ um operador linear, onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita. Suponha que
+	\[
+		p_T(x) = (x - \lambda_1)^{m_1}\dots(x - \lambda_r)^{m_r}
+	\]
+	onde $m_i \ge 1$ e $\lambda_i \ne \lambda_j$ se $i \ne j$. Ent\~ao $V = W_1 \oplus \cdots \oplus W_r$ onde para cada $i = 1$, \dots, $r$ temos:
+	\begin{enumerate}[label=({\roman*})]
+		\item\label{propriedade_i_forma_de_jordan} $\dim_\cp{K} W_i = m_i$
+		\item\label{propriedade_ii_forma_de_jordan} O subespa\c{c}o $W_i$ \'e $T-invariante$
+		\item\label{propriedade_iii_forma_de_jordan} A restri\c{c}\~ao do operador $T - \lambda_i Id$ \`a $W_i$ \'e nilpotente.
+	\end{enumerate}
+\end{teorema}
+
+Seja $T : V \to V$ um operador linear sobre um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita tal que seu polin\^omio caracter{\'\i}stico seja dado por
+\[
+	p_T(x) = (x - \lambda_1)^{m_1}\dots(x - \lambda_1)^{m_r}
+\]
+com $r \ge 1$ e $\lambda_i \ne \lambda_j$ se $i \ne j$. Pelo Teorema \ref{forma_de_jordan}, existe uma decomposi\c{c}\~ao $V = W_1 \oplus \cdots \oplus W_r$ satisfazendo as propriedades \ref{propriedade_i_forma_de_jordan}, \ref{propriedade_ii_forma_de_jordan} e \ref{propriedade_iii_forma_de_jordan} de seu enunciado. Agora, para cada $i = 1$, \dots, $r$ considere $T_i = T - \lambda_i Id : W_i \to W_i$. Pelo item \ref{propriedade_iii_forma_de_jordan} do Teorema \ref{forma_de_jordan}, $T_i$ \'e nilpotente. Seja $\alpha_i$ o {\'\i}ndice de nilpot\^encia de $T_i$. Assim
+\begin{align*}
+	T_i^{\alpha_i} = 0\\
+	(T - \lambda_i Id)^{\alpha_i} = 0
+\end{align*}
+e ent\~ao $T_i$ \'e raiz do polin\^omio $(x - \lambda_i)^{\alpha_i}$ para $i = 1$, \dots, $r$. Seja $f(x) = (x - \lambda_1)^{\alpha_1} (x - \lambda_2)^{\alpha_2}\dots (x - \lambda_r)^{\alpha_r}$. Pela defini\c{c}\~ao de {\'\i}ndice de nilpot\^encia, $f(x)$ \'e o polin\^omio de menor grau tal que suas ra{\'\i}zes s\~ao $T_1$, \dots, $T_r$. Logo $T$ \'e uma raiz de $f(x)$, isto \'e, $f(x)$ \'e o polin\^omio minimal de $T$. Portanto o {\'\i}ndice de nilpot\^encia de $T_i$ \'e determinado pelo polin\^omio minimal $m_T(x)$.
+
+Como $T_i$ \'e nilpotente, pelo item \ref{propriedade_ii_operado_nilpotente} do Teorema \ref{operador_nilpotente}, existe uma base $\mathcal{B}_i$ de $W_i$ e n\'umeros $p_i$, $m_{i_1} \ge m_{i_2} \cdots \ge m_{i_{p_i}}$ tais que
+\[
+	[T_i]_{\mathcal{B}_i} = \begin{bmatrix}
+		J_{m_{i_1}}(\lambda_i)\\
+		& J_{m_{i_2}}(\lambda_i)\\
+		 & & \ddots\\
+		& & & J_{m_{i_{p_i}}}(\lambda_i)
+	\end{bmatrix}
+\]
+onde para cada $i = 1$, \dots, $r$ e $j = 1$, \dots, $p_i$
+\[
+	J_{m_{ij}}(\lambda_i) = \begin{bmatrix}
+		\lambda_i & 0 & 0 & \dots & 0\\
+		1 & \lambda_i & 0 & \dots & 0\\
+		0 & 1 & \lambda_i & \dots & 0\\
+		\vdots& & & \ddots & \vdots\\
+		0 & 0 & \dots & 1 & \lambda_i
+	\end{bmatrix}
+\]
+\'e o bloco de Jordan correspondente. Como $V = W_1 \oplus \cdots \oplus W_r$, ent\~ao $\mathcal{B} = \mathcal{B}_1 \cup \mathcal{B}_2 \cup \dots \cup \mathcal{B}_r$ \'e uma base de $V$. Em rela\c{c}\~ao \`a essa base temos
+\begin{equation}\label{matriznaformadeJordan}
+	[T]_\mathcal{B} = \begin{bmatrix}
+		[T_1]_{\mathcal{B}_1}\\
+		& [T_2]_{\mathcal{B}_2}\\
+		& & \ddots\\
+		& & & [T_r]_{\mathcal{B}_r}
+	\end{bmatrix}.
+\end{equation}
+A matriz \eqref{matriznaformadeJordan} \'e chamada \textbf{forma de Jordan} associada ao operador linear $T$. Os n\'umeros $p_i$, $m_{ij}$, $i = 1$, \dots, $r$ e $j = 1$, \dots, $p_i$ s\~ao completamente determinados por $T$. Mais ainda, pelo item \ref{propriedade_iv_operado_nilpotente} do Teorema \ref{operador_nilpotente}, dois operadores lineares $S \in \mathcal{L}(V,V)$ e $T \in \mathcal{L}(W,W)$ t\^em a mesma forma de Jordan se, e somente se, existir um isomorfismo $\Phi : V \to W$ tal que $\Phi^{-1}S\Phi = T$.\index{Jordan!Forma de}
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item Seja $T : \cp{K}^7 \to \cp{K}^7$ um operador linear tal que seu polin\^omio caracter{\'\i}stico \'e $p_T(x) = (x - 2)^4(x - 3)^3$. Encontre a(s) poss{\'\i}vel(is) forma(s) de Jordan associadas a $T$.
+		\begin{solucao}
+			Como $p_T(x) = (x - 2)^4(x - 3)^3$, ent\~ao $V = W_1 \oplus W_2$ onde $\dim_\cp{K}W_1 = 4$ e $\dim_\cp{K}W_2 = 3$. Assim $T = T_1 \oplus T_2$, onde $T_1 = T : W_1 \to W_1$ e $T_2 = T : W_2 \to W_2$. Agora, $(T_1 - 2I_4)$ \'e nilpotente de {\'\i}ndice de nilpot\^encia $r \le 4$.
+			Se $r = 1$, ent\~ao
+			\[
+				[T_1]_{\mathcal{B}_1} = \left[\begin{tabular}{cccc}
+ 					2 & 0 & 0 & 0\\
+ 					0 & 2 & 0 & 0\\
+ 					0 & 0 & 2 & 0 \\
+ 					0 & 0 & 0 & 2
+				\end{tabular}
+				\right].
+			\]
+			Se $r = 2$, ent\~ao
+			\[
+				[T_1]_{\mathcal{B}_1} = \left[\begin{tabular}{cc|cc}
+ 					2 & 0 &  & \\
+ 					1 & 2 &  & \\ \cline{1-4}
+ 					&  & 2 & 0 \\
+ 					&  & 1 & 2
+ 				\end{tabular}
+				\right]\quad \mbox{ou}\quad [T_1]_{\mathcal{B}_1} = \begin{bmatrix}
+ 					2 & 0 &  & \\
+ 					1 & 2 &  & \\
+ 					&  & 2 &  \\
+ 					&  &  & 2
+ 				\end{bmatrix}.
+			\]
+			Se $r = 3$, ent\~ao
+			\[
+				[T_1]_{\mathcal{B}_1} = \left[\begin{tabular}{ccc|c}
+ 						2 & 0 & 0 & \\
+ 						1 & 2 & 0 & \\
+ 						0 & 1 & 2 & \\ \cline{1-4}
+ 						&  &  & 2
+					\end{tabular}
+				\right].
+			\]
+			Se $r = 4$, ent\~ao
+			\[
+				[T_1]_{\mathcal{B}_1} = \left[\begin{tabular}{ccccc}
+ 						2 & 0 & 0 & 0\\
+ 						1 & 2 & 0 & 0\\
+ 						0 & 1 & 2 & 0\\
+ 						0 & 0 & 1 & 2
+					\end{tabular}
+				\right].
+			\]
+			O operador $(T_2 - 3I_3)$ \'e nilpotente de {\'\i}ndice de nilpot\^encia $r \le 3$.
+
+			Se $r = 1$, ent\~ao
+			\[
+				[T_2]_{\mathcal{B}_2} = \left[\begin{tabular}{ccc}
+ 					3 & 0 & 0\\
+ 					0 & 3 & 0\\
+ 					0 & 0 & 3
+				\end{tabular}
+				\right].
+			\]
+			Se $r = 2$, ent\~ao
+			\[
+				[T_1]_{\mathcal{B}_1} = \left[\begin{tabular}{cc|c}
+ 					3 & 0 & \\
+ 					1 & 3 & \\ \cline{1-3}
+ 					&  & 3
+ 				\end{tabular}
+				\right].
+			\]
+			Se $r = 3$, ent\~ao
+			\[
+				[T_1]_{\mathcal{B}_1} = \left[\begin{tabular}{ccc}
+ 						3 & 0 & 0 \\
+ 						1 & 3 & 0 \\
+ 						0 & 1 & 3
+					\end{tabular}
+				\right].
+			\]
+			Logo existem 15 poss{\'\i}veis formas de Jordan para $T$.
+		\end{solucao}
+		\item Seja $T : \complex^5 \to \complex^5$ tal que $p_T(x) = (x + 1)^3(x - 2)^2$.
+		\begin{solucao}
+			Neste caso como n\~ao conhecemos o polin\^omio minimal de $T$ precisamos analizar o que acontece para cada possibilidade do polin\^omio minimal. Assim:
+			\begin{enumerate}
+				\item Se $m_T(x) = (x + 1)^3(x - 2)^2$, ent\~ao existe uma base $\mathcal{B}$ de $\complex^5$ tal que
+				\[
+					[T]_\mathcal{B} = \begin{bmatrix}
+					-1 & \phantom{-}0 & \phantom{-}0 & &\\
+					\phantom{-}1 & -1 & \phantom{-}0 & & \\
+					\phantom{-}0 & \phantom{-}1 & -1 & &\\
+					& & & 2 & 0\\
+					& & & 1 & 2
+				\end{bmatrix}
+				\]
+				\item Se $m_T(x) = (x + 1)^3(x - 2)$, ent\~ao existe uma base $\mathcal{B}$ de $\complex^5$ tal que
+				\[
+					[T]_\mathcal{B} = \begin{bmatrix}
+					-1 & \phantom{-}0 & \phantom{-}0 & &\\
+					\phantom{-}1 & -1 & \phantom{-}0 & & \\
+					\phantom{-}0 & \phantom{-}1 & -1 & &\\
+					& & & 2 & \\
+					& & & & 2
+				\end{bmatrix}
+				\]
+				\item Se $m_T(x) = (x + 1)^2(x - 2)^2$, ent\~ao existe uma base $\mathcal{B}$ de $\complex^5$ tal que
+				\[
+					[T]_\mathcal{B} = \begin{bmatrix}
+					-1 & \phantom{-}0 &\\
+					\phantom{-}1 & -1 &\\
+					& & -1 & & \\
+					& & & 2 & 0\\
+					& & & 1 & 2
+				\end{bmatrix}
+				\]
+				\item Se $m_T(x) = (x + 1)^2(x - 2)$, ent\~ao existe uma base $\mathcal{B}$ de $\complex^5$ tal que
+				\[
+					[T]_\mathcal{B} = \begin{bmatrix}
+					-1 & \phantom{-}0 & & &\\
+					\phantom{-}1 & -1 & & & \\
+					& & -1 & &\\
+					& & & 2 & \\
+					& & & & 2
+				\end{bmatrix}
+				\]
+				\item Se $m_T(x) = (x + 1)(x - 2)^2$, ent\~ao existe uma base $\mathcal{B}$ de $\complex^5$ tal que
+				\[
+					[T]_\mathcal{B} = \begin{bmatrix}
+					-1 & & & &\\
+					& -1 & & & \\
+					& & -1 & &\\
+					& & & 2 & 0\\
+					& & & 1 & 2
+				\end{bmatrix}
+				\]
+				\item Se $m_T(x) = (x + 1)(x - 2)$, ent\~ao existe uma base $\mathcal{B}$ de $\complex^5$ tal que
+				\[
+					[T]_\mathcal{B} = \begin{bmatrix}
+					-1 & & & &\\
+					& -1 & & & \\
+					& & -1 & &\\
+					& & & 2 &\\
+					& & & & 2
+				\end{bmatrix}
+				\]
+			\end{enumerate}
+			
+		\end{solucao}
+		\item Seja $T : \cp{K}^4 \to \cp{K}^4$ tal que em rela\c{c}\~ao \`a base can\^onica, $T$ seja representado pela matriz
+		\[
+			[T] = \begin{bmatrix}
+				3 & -1 & \phantom{-}1 & -7\\
+				9 & -3 & -7 & -1\\
+				0 & \phantom{-}0 & \phantom{-}4 & -8\\
+				0 & \phantom{-}0 & \phantom{-}2 & -4
+			\end{bmatrix}.
+		\]
+		Encontre a forma de Jordan de $T$.
+		\begin{solucao}
+			Primeiramente temos que
+			\[
+				p_T(x) = x^4.
+			\]
+			C\'alculos simples mostram que $m_T(x) = x^2$. Assim a forma de Jordan de $T$ possui um bloco de Jordan de tamanho 2 associado a 0. Agora,
+			\begin{align*}
+				\begin{gmatrix}[b]
+  					3 & -1 & \phantom{-}1 & -7\\
+					9 & -3 & -7 & -1\\
+					0 & \phantom{-}0 & \phantom{-}4 & -8\\
+					0 & \phantom{-}0 & \phantom{-}2 & -4
+					\rowops
+			   		\add[-3]{0}{1}
+			   		\add[-1/2]{2}{3}
+     			\end{gmatrix}\leadsto\begin{gmatrix}[b]
+  					3 & -1 & \phantom{-}1 & -7\\
+					0 & \phantom{-}0 & -10 & -20\\
+					0 & \phantom{-}0 & \phantom{-}4 & -8\\
+					0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0
+					\rowops
+			   		\add[-0,4]{1}{2}
+     			\end{gmatrix}\leadsto\begin{bmatrix}
+  					3 & -1 & \phantom{-}1 & -7\\
+					0 & \phantom{-}0 & -10 & -20\\
+					0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0\\
+					0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0
+     			\end{bmatrix}
+			\end{align*}
+			e assim $\dim_\cp{K}\aut_T(0) = 2$, isto \'e, existem dois blocos de Jordan associados ao autovalor 0. Portanto, existe uma base $\mathcal{B}$ de $V$ tal que
+			\[
+				[T]_{B} = \left[\begin{tabular}{cc|cc}
+ 					0 & 0 &  & \\
+ 					1 & 0 &  & \\ \cline{1-4}
+ 					&  & 0 & 0 \\
+ 					&  & 1 & 0
+ 				\end{tabular}
+				\right].
+			\]
+		\end{solucao}
+		\item Seja $T : \real^6 \to \real^6$ o operador linear representado pela matriz
+		\[
+			[T] = \begin{bmatrix}
+				-1 & \phantom{-}1 & -1 & -3 & -1 & \phantom{-}7\\
+				\phantom{-}0 & -1 & \phantom{-}1 & \phantom{-}2 & \phantom{-}3 & \phantom{-}2\\
+				\phantom{-}0 & \phantom{-}0 & -1 & \phantom{-}0 & -2 & \phantom{-}1\\
+				\phantom{-}0 & \phantom{-}0 & \phantom{-}0 & -1 & \phantom{-}1 & -2\\
+				\phantom{-}0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 & -1 & \phantom{-}3\\
+				\phantom{-}0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 & -4
+			\end{bmatrix}.
+		\]
+		Encontre a forma de Jordan de $T$.
+		\begin{solucao}
+			Inicialmente, como $[T]$ \'e uma matriz triangular, seu polin\^omio caracter{\'\i}stico ser\'a
+			\[
+				p_T(x) = (x + 1)^5(x + 4).
+			\]
+			Um c\'alculo simples, mostra que
+			\[
+				m_T(x) = (x + 1)^3(x + 4)
+			\]
+			logo a forma de Jordan de $T$ possui um bloco de Jordan de tamanho 3, associado \`a $-1$ e um bloco de Jordan de tamanho 1, associado \`a $4$. Desse modo a forma de Jordan de $T$ ser\'a
+			\[
+				\begin{bmatrix}
+					-1\\
+					\phantom{-}1 & -1\\
+					\phantom{-}0 & \phantom{-}1 & -1\\
+					& & & -1 & \\
+					& & & \phantom{-}1 & -1\\
+					& & & & & \phantom{-}4
+				\end{bmatrix}\quad \mbox{ou} \quad\begin{bmatrix}
+					-1\\
+					\phantom{-}1 & -1\\
+					\phantom{-}0 & \phantom{-}1 & -1\\
+					& & & -1 & \\
+					& & & & -1\\
+					& & & & & \phantom{-}4
+				\end{bmatrix}.
+			\]
+			Vamos determinar agora, $\aut_T(-1)$ para decidir qual ser\'a a forma de Jordan de $T$. Temos
+			\begin{align*}
+				\begin{gmatrix}[b]
+  					0 & 1 & -1 & -3 & -1 & \phantom{-}7\\
+					0 & 0 & \phantom{-}1 & \phantom{-}2 & \phantom{-}3 & \phantom{-}2\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & -2 & \phantom{-}1\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}1 & -2\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}3\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 & -3
+					\rowops
+			   		\mult5{\times -1/3}
+     			\end{gmatrix}\leadsto\\\begin{gmatrix}[b]
+  					0 & 1 & -1 & -3 & -1 & \phantom{-}7\\
+					0 & 0 & \phantom{-}1 & \phantom{-}2 & \phantom{-}3 & \phantom{-}2\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & -2 & \phantom{-}1\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}1 & -2\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}3\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}1
+					\rowops
+			   		\add[-3]{5}{4}
+			   		\add[2]{5}{3}
+			   		\add[-1]{5}{2}
+			   		\add[-2]{5}{1}
+			   		\add[-7]{5}{0}
+     			\end{gmatrix}\leadsto\\\begin{gmatrix}[b]
+  					0 & 1 & -1 & -3 & -1 & 0\\
+					0 & 0 & \phantom{-}1 & \phantom{-}2 & \phantom{-}3 & 0\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & -2 & 0\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}1 & 0\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 & 0\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 & 1
+					\rowops
+			   		\add[2]{3}{2}
+			   		\add[-3]{3}{1}
+			   		\add{3}{0}
+     			\end{gmatrix}\leadsto\begin{bmatrix}
+  					0 & 1 & -1 & -3 & 0 & 0\\
+					0 & 0 & \phantom{-}1 & \phantom{-}2 & 0 & 0\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & 0 & 0\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & 1 & 0\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & 0 & 0\\
+					0 & 0 & \phantom{-}0 & \phantom{-}0 & 0 & 1
+     			\end{bmatrix}
+     		\end{align*}
+     		donde obtemos que $\aut_T(-1) = \{(x_1, x_2, -2x_2, x_2, 0, 0) \mid x_1, x_2 \in \real\}$. Logo obtemos $\dim_\real \aut_T(-1) = 2$, com isso existem dois blocos de Jordan associados ao autovalor -1 e portanto a forma de Jordan de $T$ \'e
+     		\[
+     			\begin{bmatrix}
+					-1\\
+					\phantom{-}1 & -1\\
+					\phantom{-}0 & \phantom{-}1 & -1\\
+					& & & -1 & \\
+					& & & \phantom{-}1 & -1\\
+					& & & & & \phantom{-}4
+				\end{bmatrix}.
+     		\]
+		\end{solucao}
+	\end{enumerate}
+\end{exemplo}
+
+\begin{observacao}
+	\begin{enumerate}[label={\arabic*})]
+		\item  Se um operador linear $T : V \to V$, onde $\dim_\cp{K} V < \infty$, \'e tal que
+			\[
+				p_T(x) = (x - \lambda_1)^{m_1}\dots(x - \lambda_1)^{m_r}
+			\]
+		com $r \ge 1$ e $\lambda_i \ne \lambda_j$ se $i \ne j$. Se $T - \lambda_i Id$ \'e nilpotente de {\'\i}ndice de nilpot\^encia $\alpha_i$, ent\~ao existe um bloco de Jordan de tamanho $\alpha_i$, $i = 1$, \dots, $r$.
+		\item A dimens\~ao de $\aut_T(\lambda_i)$ \'e igual ao n\'umero de blocos de Jordan $J_c(\lambda_i)$ associados ao autovalor $\lambda_i$ que aparece em $T$.
+		\item A base que gera a forma de Jordan \'e chamada de \textbf{base de Jordan}.\index{Jordan!Base de}
+	\end{enumerate}
+\end{observacao}
+
+% section polinomio_minimal (end)
+
+\section{Como encontrar a base de Jordan} % (fold)
+\label{sec:base_de_jordan}
+
+Seja $T : \real^3 \to \real^3$ um operador linear tal que sua forma de Jordan seja
+\[
+	[T]_\mathcal{B} = \begin{bmatrix}
+		3 & 0 & 0\\
+		1 & 3 & 0\\
+		0 & 1 & 3
+	\end{bmatrix}.
+\]
+Assim se $\mathcal{B} = \{v_1, v_2, v_3\}$ \'e a base de Jordan, temos
+\begin{align*}
+	T(v_1) = 3v_1 + v_2\\
+	T(v_2) = 3v_2 + v_3\\
+	T(v_3) = 3v_3,
+\end{align*}
+isto \'e,
+\begin{align*}
+	(T- 3Id)(v_1) = v_2\\
+	(T - 3Id)(v_2) = v_3\\
+	(T - 3Id)(v_3) = 0.
+\end{align*}
+
+Assim para achar a base de Jordan precisamos de:
+\begin{enumerate}[label={\roman*})]
+	\item Achar todos os autovetores correspondentes a um certo autovalor, isto \'e, encontrar $\aut_T(\lambda)$.
+	\item O n\'umero de autovetores L.I. associados ao autovalor $\lambda$ \'e igual ao n\'umero de blocos de Jordan associados \`a $\lambda$.
+	\item Resolver a equa\c{c}\~ao $(T - \lambda Id)(u) = v_\lambda$ onde $v_\lambda$ \'e o autovetor associado ao autovalor $\lambda$ para cada autovetor diferente.
+\end{enumerate}
+
+Vamos aplicar este m\'etodo para o caso de matrizes $3 \times 3$. Neste caso temos tr\^es situa\c{c}\~oes para analisar:
+
+\begin{enumerate}[label={\arabic*})]
+	\item Existem 3 autovetores L.I.
+
+	Por exemplo, para o operador representado pela matriz
+	\[
+		A = \begin{bmatrix}
+			4 & 0 & 1\\
+			2 & 3 & 2\\
+			1 & 0 & 4
+		\end{bmatrix}.
+	\]
+	Encontre a forma de Jordan de $A$.
+	\begin{solucao}
+		O polin\^omio caracter{\'\i}stico \'e
+		\[
+			p_A(x) = (x - 5)(x - 3)^2
+		\]
+		e da{\'\i}
+		\begin{align*}
+			\aut_A(5) = [e_1 = (1,2,1)]\\
+			\aut_A(3) = [e_2 = (0,1,0); e_3 = (-1,0,1)].
+		\end{align*}
+		Assim a forma de Jordan de $A$ \'e
+		\[
+			\begin{bmatrix}
+				5 & 0 & 0\\
+				0 & 3 & 0\\
+				0 & 0 & 3
+			\end{bmatrix},
+		\]
+		onde $J_1(5) = [5]$ e $J_1(3) = [3]$.
+	\end{solucao}
+	\item Existem 2 autovetores L.I.
+
+	Encontre a forma de Jorda e a base correspondente para o operador representado pela matriz
+	\[
+		A = \begin{bmatrix}
+			1 & 1 & 1\\
+			0 & 1 & 0\\
+			0 & 0 & 1
+		\end{bmatrix}.
+	\]
+	\begin{solucao}
+		Temos
+		\[
+			p_A(x) = (x - 1)^3 \quad \mbox{e}\quad m_A(x) = (x - 1)^2.
+		\]
+		Assim existem dois bloco de Jordan de tamanho 2. Al\'em disso,
+		\[
+			\aut_A(1) = [e_1 = (1,0,0); e_2 = (0,1,-1)]
+		\]
+		e da{\'\i} temos duas poss{\'\i}veis formas de Jordan para $A$, a saber:
+		\[
+			B = \begin{bmatrix}
+				1 & 0 &\\
+				1 & 1 &\\
+				& & 1
+			\end{bmatrix},\quad
+			C = \begin{bmatrix}
+				 1 &  &\\
+				 & 1 & 0\\
+				 & 1 & 1
+			\end{bmatrix}.
+		\]
+		Vamos procurar uma base que gere a matriz $B$. Se $\mathcal{B} = \{v_1, v_2, v_3\}$ \'e a base de Jordan que produz a matriz $B$, ent\~ao temos
+		\begin{align*}
+			A(v_1) = v_1 + v_2\\
+			A(v_2) = v_2\\
+			A(v_3) = v_3
+		\end{align*}
+		e assim
+		\begin{align*}
+			(A - I_3)(v_1) = v_2\\
+			(A - I_3)(v_2) = 0\\
+			(A - I_3)(v_3) = 0.
+		\end{align*}
+		Deste modo podemos escolher $v_2$ e $v_3$ como autovetores de $A$. Digamos que
+		\[
+			v_2 = (0,1,-1) \quad \mbox{e} \quad v_3 = (1,0,0).
+		\]
+		Precisamos encontrar $v_1 = (x,y,z)$ tal que
+		\[
+			(A - I_3)(v_1) = v_2.
+		\]
+		O sistema associado \'e
+		\[
+			\begin{bmatrix}
+				y + z\\
+				0\\
+				0
+			\end{bmatrix} = \begin{bmatrix}
+				0\\
+				1\\
+				1
+			\end{bmatrix}
+		\]
+		que \'e imposs{\'\i}vel. Assim vamos tomar
+		\[
+			v_2 = (1,0,0) \quad \mbox{e} \quad v_3 = (0,1,-1).
+		\]
+		Precisamos encontrar $v_1 = (x,y,z)$ tal que
+		\[
+			(A - I_3)(v_1) = v_2.
+		\]
+		Resolvendo o sistema associado encontramos
+		\[
+				v_1 = x(1,0,0) + y(0,1,-1) + (0,0,1).
+		\]
+		Tomando $x = y = 0$ o vetor procurado \'e $v_1 = (0,0,1)$. Assim na base $\mathcal{B} = \{v_1 = (0,0,1); v_2 = (1,0,0); v_3 = (0,1,-1)\}$ a forma de Jordan de $A$ ser\'a como dado por $B$.
+
+		Se escolhermos a ordem $\mathcal{B}_1 = \{v_3, v_1, v_2\}$ para a base, obtemos
+				\[
+					[A]_{\mathcal{B}_1} = \begin{bmatrix}
+				 			1 &  &\\
+				 			& 1 & 0\\
+				 			& 1 & 1
+						\end{bmatrix}.
+				\]
+
+	\end{solucao}
+	\item Existe 1 autovalor L.I.
+
+	Encontre a forma de Jordan e a base correspondente para o operador representado pela matriz
+	\[
+		A = \begin{bmatrix}
+			-1 & -1 & \phantom{-}0\\
+			\phantom{-}0 & -1 & -2\\
+			\phantom{-}0 & \phantom{-}0 & -1
+		\end{bmatrix}.
+	\]
+	\begin{solucao}
+	Aqui
+	\[
+		p_A(x) = (x + 1)^3 = m_A(x).
+	\]
+	Deste modo existe um bloco de Jordan de tamanho 3. Al\'em disso
+	\[
+		\aut_A(-1) = [e_1 = (1,0,0)].
+	\]
+	Assim a \'unica possibilidade para a forma de Jordan \'e
+	\[
+		\begin{bmatrix}
+			-1 & & \\
+			\phantom{-}1 & -1 &\\
+			\phantom{-}0 & \phantom{-}1 & -1
+		\end{bmatrix}.
+	\]
+	Assim se $\mathcal{B} = \{v_1, v_2, v_3\}$ \'e a base de Jordan, ent\~ao
+	\begin{align*}
+		(A + I_3)(v_1) = v_2\\
+		(A + I_3)(v_2) = v_3\\
+		(A + I_3)(v_3) = 0.
+	\end{align*}
+	Tome $v_3 = (1,0,0)$ e seja $v_2 = (x,y,z)$. Temos
+	\[
+		\begin{bmatrix}
+			0 & -1 & \phantom{-}0\\
+			0 & \phantom{-}0 & -2\\
+			0 & \phantom{-}0 & \phantom{-}0
+		\end{bmatrix}\begin{bmatrix}
+			x\\
+			y\\
+			z
+		\end{bmatrix} = \begin{bmatrix}
+			1\\
+			0\\
+			0
+		\end{bmatrix}
+	\]
+	donde
+	\[
+		v_2 = x(1,0,0) + (0,-1,0).
+	\]
+	Podemos ent\~ao tomar $v_2 = (0,-1,0)$.
+
+	Agora, precisamos encontrar $v_1 = (\alpha, \beta, \gamma)$ tal que $(A + I_3)(v_1) = v_2$. Do sistema
+	\[
+		\begin{bmatrix}
+			0 & -1 & \phantom{-}0\\
+			0 & \phantom{-}0 & -2\\
+			0 & \phantom{-}0 & \phantom{-}0
+		\end{bmatrix}\begin{bmatrix}
+			\alpha\\
+			\beta\\
+			\gamma
+		\end{bmatrix} = \begin{bmatrix}
+			\phantom{-}0\\
+			-1\\
+			\phantom{-}0
+		\end{bmatrix}
+	\]
+	encontramos
+	\[
+		v_1 = x(1,0,0) + (0,0,1/2).
+	\]
+	Tomando $v_1 = (0,0,1/2)$ a base de Jordan ser\'a
+	\[
+		\mathcal{B} = \{v_1 = (0,0,1/2); v_2 = (0,-1,0); v_3 = (1,0,0)\}.
+	\]
+	\end{solucao}
+\end{enumerate}
+
+
+
+
+% section base_de_jordan (end)
