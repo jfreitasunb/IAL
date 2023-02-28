@@ -7,3 +7,10 @@
 *.gz
 *.xdv
 plano-ial-2023-1.pdf
+*.lof
+*.idx
+Algebra_Linear.toc
+Algebra_Linear.pdf
+Algebra_Linear.tex
+main.pdf
+main.tex
