@@ -3,10 +3,130 @@
 %%Usar makeindex -s indexstyle.ist arquivo no terminal para gerar o {\'\i}ndice remissivo agrupado por inicial
 %%Ap\'os executar pdflatex arquivo
 \chapter{Matrizes}
+\section{Introdução}
+
+\subsection{Corpos}
+Durante esse curso iremos trabalhar com o conceito de corpos e alguns casos específicos desse conceito.
+
+\begin{definicao}\label{corpo}\index{Corpos}
+	Um conjunto n\~ao vazio $\cp{K}$ \'e chamado de \textbf{corpo} se em $\cp{K}$ podemos definir duas opera\c{c}\~oes, denotadas por $\oplus$ (e chamada de \textbf{adi\c{c}\~ao}) e $\otimes$ (e chamada de \textbf{multiplica\c{c}\~ao}) de modo que
+	\begin{align*}
+		(1)\ a \oplus b \in \cp{K}\\
+		(2)\ a \otimes b \in \cp{K}
+	\end{align*}
+	para todos $a$, $b \in \cp{K}$ e que satisfa\c{c}am as seguintes propriedades:
+	\begin{enumerate}[label={\roman*})]
+		\item \textbf{Comutatividade da adi\c{c}\~ao}: $a \oplus b = b \oplus a$ para todos $a$, $b \in \cp{K}$;
+		\item \textbf{Associatividade da adi\c{c}\~ao}: $a \oplus (b \oplus c) = (a \oplus b) \oplus c$, para todos $a$, $b$ e $c \in \cp{K}$;
+		\item \textbf{Elemento neutro da adi\c{c}\~ao}: Existe um elemento em $\cp{K}$, denotado por $0_\cp{K}$ ou simplesmente $0$ e chamado de \textbf{elemento neutro da adi\c{c}\~ao}, que satisfaz
+		\[
+			a \oplus 0_\cp{K} = a = 0_\cp{K} \oplus a
+		\]
+		para todo $a \in \cp{K}$.
+		\item \textbf{Elemento oposto da adi\c{c}\~ao}: Para cada $a \in \cp{K}$, existe um elemento em $\cp{K}$, denotado por $-a$ e chamado de \textbf{oposto} de $a$ ou \textbf{inverso aditivo} de $a$ tal que
+		\[
+			a \oplus (-a) = 0_\cp{K} = (-a) \oplus a.
+		\]
+		\item \textbf{Comutatividade da multiplica\c{c}\~ao}: $a \otimes b = b \otimes a$ para todos $a$, $b \in \cp{K}$;
+		\item \textbf{Associatividade da multiplica\c{c}\~ao}: $a \otimes (b \otimes c) = (a \otimes b) \otimes c$, para todos $a$, $b$ e $c \in \cp{K}$;
+		\item \textbf{Elemento neutro da multiplica\c{c}\~ao}: Existe um elemento em $\cp{K}$, denotado por $1_\cp{K}$ ou simplesmente $1$ e chamado de \textbf{elemento neutro da multiplica\c{c}\~ao} ou \textbf{unidade}, que satisfaz
+		\[
+			a \otimes 1_\cp{K} = a = 1_\cp{K} \otimes a
+		\]
+		para todo $a \in \cp{K}$.
+		\item \textbf{Elemento inverso da multiplica\c{c}\~ao}: Para cada $a \in \cp{K}$, $a \ne 0_{\cp{K}}$, existe um elemento em $\cp{K}$, denotado por $a^{-1}$ e chamado de \textbf{inverso multiplicativo} de $a$ 
+		tal que
+		\[
+			a \otimes a^{-1} = 1_\cp{K} = a^{-1} \otimes a.
+		\]
+		\item \textbf{Distributividade da soma em rela\c{c}\~ao \`a multiplica\c{c}\~ao}: $(a \oplus b)\otimes c = a\otimes c \oplus b\otimes c$, para todos $a$, $b$ e $c \in \cp{K}$.
+	\end{enumerate}
+\end{definicao}
+
+Para simplificar a nota\c{c}\~ao vamos escrever
+\[
+	a \otimes b = ab.
+\]
+
+Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, \otimes, \oplus)$. Quando n\~ao houver chance de confus\~ao em rela\c{c}\~ao \`as opera\c{c}\~oes de soma e multiplica\c{c}\~ao envolvidas no corpo $(\cp{K}, \otimes, \oplus)$, vamos simplesmente dizer que $\cp{K}$ \'e um corpo. Os elementos de um corpo $\cp{K}$ s\~ao chamados de \textbf{escalares}.
+
+Considere $\cp{K} = \rac$ ou $\real$. Então vale sempre que:
+\begin{enumerate}
+	\item $x + y = y + x$, para todos $x$, $y \in \cp{K}$;
+
+	\item $(x + y) + z = x + (y + z)$, para todos $x$, $y$ e $z \in \cp{K}$;
+
+	\item existe $0$ em $\cp{K}$ tal que $x + 0 = x$ para todo $x \in \cp{K}$;
+	
+	\item para cada $x \in \cp{K}$, existe $y \in \cp{K}$ tal que $x + y = 0$. Tal $y$ é escrito como $y = -x$;
+
+	\item $xy = yx$ para todos $x$, $y \in \cp{K}$;
+	
+	\item $(xy)z = x(yz)$ para todos $x$, $y$ e $z \in \cp{K}$;
+
+	\item existe $1 \in \cp{K}$ tal que $1x = x$ para todo $x \in \cp{K}$
+	
+	\item para todo $x \in \cp{K}real$, $x \ne 0$, existe $y \in \cp{K}$ tal que $xy =1$. Tal $y$ é escrito como $y = x^{-1}$;
+	
+	\item $(x + y)z = xz + yz$ para todos $x$, $y$ e $z \in \cp{K}$.
+\end{enumerate}
+
+\subsection{Números Complexos}\index{Números Complexos}
+Um outro conjunto importante com o qual iremos trabalhar é \textbf{conjunto dos números complexos}. Tal conjunto \'e definido como
+\[
+	\complex = \{a + bi \mid a, b \in \real, i^2 = -1\}.
+\]
+Dados $z = a + bi$, $w = c + di \in \complex$ definimos a soma e a multiplica\c{c}\~ao em $\complex$ por
+\begin{align*}
+	z + w &= (a + c) + (b + d)i\\
+	z\cdot w &= (ac - bd) + (ad + bc)i.
+\end{align*}
+Al\'em disso, $a + bi = c + di$ se, e somente se, $a = c$ e $b = d$.
+
+Dado um n\'umero complexo $z = a + bi \ne 0$, seja
+\[
+	w = \dfrac{a - bi}{a^2 + b^2} \ne 0.
+\]
+Note que
+\begin{align*}
+	z\cdot w = (a + bi)\cdot \dfrac{a - bi}{a^2 + b^2} = \dfrac{(a^2 + b^2) + (-ab + ba)}{a^2 + b^2} = 1
+\end{align*}
+assim $w$ \'e o inverso multiplicativo de $z$ em $\complex$.
+
+O \textbf{m\'odulo}\index{Números Complexos!módulo} do n\'umero complexo $z = a + bi$ \'e definido como
+\[
+	|z| = \sqrt{a^2 + b^2}
+\]
+e o \textbf{conjugado complexo} \index{Números Complexos!conjugado complexo}de $z = a + bi$ \'e definido como
+\[
+	\overline{z} = a - bi.
+\]
+
+\begin{proposicao}
+	Para todos $z$, $w \in \complex$ valem:
+	\begin{enumerate}[label={\roman*})]
+		\item $\overline{\overline{z}} = z$;
+		\item $|\overline{z}| = |z|$;
+		\item $z\cdot\overline{z} = |z|^2$;
+		\item $\overline{z^{-1}} = \overline{z}^{-1}$;
+		\item $\overline{z + w} = \overline{z} + \overline{w}$;
+		\item $\overline{z \cdot w} = \overline{z} \cdot \overline{w}$;
+		\item $|z \cdot w| = |z| \cdot |w|$;
+	\end{enumerate}
+\end{proposicao}
+
+Uma propriedade importante dos n\'umeros complexos que iremos utilizar \'e a seguinte:
+\begin{teorema}
+	Todo polin\^omio com coeficientes em $\complex$ possui ra{\'\i}zes complexas.
+\end{teorema}
+
+Um corpo satisfazendo a propriedade do teorema anterior \'e chamado de \textbf{algebricamente fechado}\index{corpo algebricamente fechado}. \'E f\'acil ver que $\rac$ e $\real$ n\~ao s\~ao corpos algebricamente fechados, isto \'e, existem polin\^omios com coeficientes em $\rac$ e em $\real$ que n\~ao possuem ra{\'\i}zes nesses corpos.
 
 \section{Matrizes}
 
-Aqui vamos recordar algumas propriedades b\'asicas de matrizes. Para isso seja $\cp{K}$ um corpo.
+Durante o restante dessas notas o conjunto $\cp{K}$ representará um dos conjuntos $\rac$, $\real$ ou $\complex$.
+
+Aqui vamos recordar algumas propriedades b\'asicas de matrizes. Para isso seja $\cp{K}$ um corpo.\index{Matriz}
 
 Sejam $m$, $n$ dois inteiros positivos. Uma \textbf{matriz $m$ por $n$ $A$ sobre $\cp{K}$} \'e dada por $m \times n$ valores $a_{ij} \in K$, com $1 \le i \le m$, $1 \le j \le n$ agrupadas em $m$ linhas e $n$ colunas, que ser\'a representada por
 \[
