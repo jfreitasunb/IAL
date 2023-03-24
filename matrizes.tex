@@ -287,6 +287,45 @@ Denotamos a $j$-ésima coluna, $1 \le j \le n$, de $A$ por
 	\end{align*}
 \end{exemplo}
 
+Dada uma matriz quadrada de ordem $n$
+\[
+	A = \begin{pmatrix}
+		a_{11} & a_{21} & \cdots & a_{1n}\\
+		a_{21} & a_{22} & \cdots & a_{2n}\\
+		\vdots & \vdots & & \vdots\\
+		a_{n1} & a_{n2} & \cdots & a_{nn}
+	\end{pmatrix}
+\]
+os elementos $a_{ij}$ de $A$ com $i = j$ formam a \textbf{diagonal princial} de $A$:\index{Matriz!diagonal princial}
+\[
+	\begin{pmatrix}
+		\tikzmarknode{top}{a_{11}} & a_{12} & a_{13} & \cdots  & a_{1n}\\ 
+		a_{21} & a_{22} \phantom{-} & a_{23} & \cdots  & a_{2n}\\ 
+		a_{31} & a_{32}\phantom{-} & a_{33} \phantom{-1} & \cdots  & a_{3n}\\ 
+		\vdots  & \vdots   & \vdots  & \vdots  & \vdots\\ 
+		a_{n1} & a_{n2} & a_{n3} & \cdots  & \tikzmarknode{bottom}{a_{nn}}\\ 
+	\end{pmatrix}
+\]
+
+\begin{tikzpicture}[overlay, remember picture]
+	\draw[red, opacity=.5, line width=5mm, line cap=round] (top.north west) -- (bottom.south east);
+\end{tikzpicture}
+
+Os elementos $a_{ij}$ com $i + j = n + 1$ formam a \textbf{diagonal secundária} de $A$:\index{Matriz!diagonal secundária}
+\[
+	\begin{pmatrix}
+		a_{11} & a_{12} & a_{13} & \cdots  & a_{1n-1} & \tikzmarknode{top_right}{a_{1n}}\\ 
+		a_{21} & a_{22} & a_{23} & \cdots  & a_{2n-1} & a_{2n}\\ 
+		a_{31} & a_{32} & a_{33} & \cdots  & \phantom{-}a_{3n-1} & a_{3n}\\ 
+		\vdots  & \vdots   & \vdots  & \vdots  & \vdots\\ 
+		\tikzmarknode{bottom_left}{a_{n1}} & \phantom{-} a_{n2} & a_{n3} & \cdots  & a_{nn-1} & {a_{nn}}\\ 
+	\end{pmatrix}
+\]
+
+\begin{tikzpicture}[overlay, remember picture]
+	\draw[blue, opacity=.5, line width=5mm, line cap=round] (top_right.north east) -- (bottom_left.south west);
+\end{tikzpicture}
+
 \begin{notacao}
 	Denotaremos o conjunto de todas as matrizes $m \times n$ sobre $\cp{K}$ por $M_{m\times n}(\cp{K})$, onde $\cp{K} = \rac$, $\real$ ou $\complex$. Assim
 	\[
@@ -304,31 +343,6 @@ Por exemplo,
 	M_{3\times 2}(\real) = \left\{\begin{pmatrix}a_{11} & a_{12}\\a_{21} & a_{22}\\ a_{31} & a_{32}\end{pmatrix} \mid a_{ij} \in \real,\ 1 \le i \le 3,\ 1 \le j \le 2\right\}.
 \]
 
-Dada uma matriz quadrada de ordem $n$
-\[
-	A = \begin{pmatrix}
-		a_{11} & a_{21} & \cdots & a_{1n}\\
-		a_{21} & a_{22} & \cdots & a_{2n}\\
-		\vdots & \vdots & & \vdots\\
-		a_{n1} & a_{n2} & \cdots & a_{nn}
-	\end{pmatrix}
-\]
-os elementos $a_{ij}$ de $A$ com $i = j$ formam a \textbf{diagonal princial} de $A$.\index{Matriz!diagonal princial} Os elementos $a_{ij}$ com $i + j = n + 1$ formam a \textbf{diagonal secundária} de $A$.\index{Matriz!diagonal secundária}
-\begin{align*}
-	A = \begin{pmatrix}
-		a_{11} & a_{21} & \cdots & a_{1n}\\
-		a_{21} & a_{22} & \cdots & a_{2n}\\
-		\vdots & \vdots & & \vdots\\
-		a_{n1} & a_{n2} & \cdots & a_{nn}
-	\end{pmatrix}
-  	A = \begin{pmatrix}
-		a_{11} & a_{21} & \cdots & a_{1n-1} & a_{1n}\\
-		a_{21} & a_{22} & \cdots & a_{2n-1} & a_{2n}\\
-		\vdots & \vdots & & \vdots\\
-		a_{n-11} & a_{n-12} & \cdots & a_{n-1n-1} & a_{n-1n}\\
-		a_{n1} & a_{n2} & \cdots & a_{n-1n} & a_{nn}
-	\end{pmatrix}
-\end{align*}
 
 No caso em que $m = n$ iremos escrever simplesmente
 \[
