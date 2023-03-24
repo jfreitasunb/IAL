@@ -135,8 +135,112 @@ Sejam $m$, $n$ dois inteiros positivos. Uma \textbf{matriz $m$ por $n$ $A$ sobre
 		a_{21} & a_{22} & \cdots & a_{2n}\\
 		\vdots & & & \vdots\\
 		a_{m1} & a_{m2} & \cdots & a_{mn}
-	\end{pmatrix}.
+	\end{pmatrix} \quad\mbox{ou}\quad
+	A = (a_{ij})_{m\times n} = \begin{bmatrix}
+		a_{11} & a_{12} & \cdots & a_{1n}\\
+		a_{21} & a_{22} & \cdots & a_{2n}\\
+		\vdots & & & \vdots\\
+		a_{m1} & a_{m2} & \cdots & a_{mn}
+	\end{bmatrix}.
 \]
+
+Neste caso $A$ denota a matriz em si e o elemento de $A$ que ocorre na linha \textbf{i} e na coluna \textbf{j} é representado por $a_{ij}$.
+
+Uma matriz $A$ com $m$ linhas e $n$ colunas é dita possuir \textbf{ordem}\index{Matriz!ordem}, ou \textbf{tamanho}, $m \times n$.
+
+\begin{exemplo}
+	A matriz $A$ dada a seguir:
+	\[
+		A = \begin{bmatrix}
+			-1 & 0 & 1/2 & 1\\
+			2 & \sqrt{2} & 3 & 3\\
+			0 & 0 & \pi & 0
+		\end{bmatrix}
+	\]
+	é uma matriz de ordem $3 \times 4$.
+
+	Nessa matriz
+	\begin{itemize}
+		\item O elemento $a_{12}$ de $A$ é $a_{12} = 0$;
+
+		\item O elemento $a_{24}$ de $A$ é $a_{24} = 3$;
+		
+		\item O elemento $a_{33}$ de $A$ é $a_{12} = \pi$.
+	\end{itemize}
+\end{exemplo}
+
+\begin{definicao}
+	Seja
+	\[
+		A = (a_{ij})_{m\times n} = \begin{bmatrix}
+			a_{11} & a_{12} & \cdots & a_{1n}\\
+			a_{21} & a_{22} & \cdots & a_{2n}\\
+			\vdots & & & \vdots\\
+			a_{m1} & a_{m2} & \cdots & a_{mn}
+		\end{bmatrix}
+	\]
+	uma matriz de ordem $m \times n$ com entradas num corpo $\cp{K}$.
+
+	\begin{enumerate}
+		\item Se $m \ne n$, $A$ é chamada de uma \textbf{matriz retangular}.\index{Matrix!retangular}
+
+		\item Se $A$ tem ordem $m \times 1$, isto é, se $A$ possui $m$ linhas e somente \textbf{uma coluna}, dizemos que $A$ é uma \textbf{matriz coluna}\index{Matriz!coluna}. Nesse caso $A$ tem a forma:
+		\[
+			A = \begin{pmatrix}a_{11}\\a_{21}\\\vdots\\a_{m - 11}\\a_{m1}\end{pmatrix}.
+		\]
+		\item Se $A$ tem ordem $1 \times n$, isto é, se $A$ possui somente \textbf{uma linhas} e $n$ colunas, dizemos que $A$ é uma \textbf{matriz linha}\index{Matriz!linha}. Nesse caso $A$ tem a forma:
+		\[
+			A = \begin{pmatrix}a_{11} & a_{12} & \cdots & a_{1n-1} & a_{1n}\end{pmatrix}.
+		\]
+		\item Se $m = n$, então $A$ é chamada de \textbf{matriz quadrada} e a ordem de $A$ é $n \times n$ ou simplesmente $n$. Neste caso $A$ tem a forma:
+		\[
+			A = (a_{ij})_{n\times n} = \begin{pmatrix}
+				a_{11} & a_{12} & \cdots & a_{1n}\\
+				a_{21} & a_{22} & \cdots & a_{2n}\\
+				\vdots & & & \vdots\\
+				a_{n1} & a_{n2} & \cdots & a_{nn}
+			\end{pmatrix}.
+		\]
+
+	\end{enumerate}
+\end{definicao}
+
+\begin{exemplo}
+	\begin{enumerate}
+		\item A matrix
+		\[
+			A = \begin{pmatrix}
+				-1 & 2 & -3/7 & 9
+			\end{pmatrix}
+		\]
+		é uma matriz-linha de ordem $1 \times 4$.
+		\item A matrix
+		\[
+			B = \begin{pmatrix}
+				-1 \\ 2 \\ -3/7 \\ 9
+			\end{pmatrix}
+		\]
+		é uma matriz-coluna de ordem $4 \times 1$.
+		\item A matrix
+		\[
+			C = \begin{pmatrix}
+				-1 & 2 & -3/7 & 9\\
+				-1 & 2 & -3/7 & 9\\
+				-1 & 2 & -3/7 & 9\\
+				-1 & 2 & -3/7 & 9\\
+			\end{pmatrix}
+		\]
+		é uma matriz quadrada de ordem $r \times 4$.
+		\item A matrix
+		\[
+			D = \begin{pmatrix}
+				-1 & 2 & -3/7 & 9\\
+				-9 & 3/7 & -2 & 1
+			\end{pmatrix}
+		\]
+		é uma matriz retangular de ordem $2 \times 4$.
+	\end{enumerate}
+\end{exemplo}
 
 Denotaremos o conjunto de todas as matrizes $m \times n$ sobre $\cp{K}$ por $M_{m\times n}(\cp{K})$. Nesse conjunto podemos definir as seguintes opera\c{c}\~oes:
 \begin{enumerate}
