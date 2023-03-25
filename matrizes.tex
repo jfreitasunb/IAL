@@ -885,10 +885,68 @@ Nesse conjunto podemos definir as seguintes opera\c{c}\~oes:
                         -15/2 & \phantom{-}5/2 & -17/2 & 7
                     \end{pmatrix}
                 \end{align*}
-
     \end{enumerate}
 \end{exemplos}
 
+\begin{observacoes}
+    \begin{enumerate}
+        \item Dadas duas matrizes $A$ e $B$ quaisquer, nem sempre o produto $AB$ ou $BA$ estarão definidos. Mesmo quando $AB$ existe, $BA$
+            pode não existir ou o contrário. Por exemplo, tome
+            \[
+                A = \begin{pmatrix}
+                    1 & 2 & 3\\
+                    3 & 0 & 1\\
+                    9 & 2 & 0
+                \end{pmatrix},
+                B = \begin{pmatrix}
+                    9 & \pi
+                \end{pmatrix}
+            \]
+            Neste caso $A$ é uma matriz de ordem $3\times 3$ e $B$ é uma matriz $2 \times 1$. Desse modo, nem $AB$ e nem $BA$ estão
+            definidas.
+            Agora tomando
+            \[
+                C = \begin{pmatrix}
+                    1 & -2 & 2
+                \end{pmatrix}
+            \]
+            o produto $AC$ não está definido, mas o produto $CA$ está e
+            \begin{align*}
+                CA = \begin{pmatrix}
+                    1 & -2 & 2
+                \end{pmatrix}
+                \begin{pmatrix}
+                    1 & 2 & 3\\
+                    3 & 0 & 1\\
+                    9 & 2 & 0
+                    \end{pmatrix} = \begin{pmatrix}
+                    1\cdot 1 + (-2)\cdot 3 + 2\cdot 9\\
+                    1\cdot 2 + (-2)\cdot 0 + 2\cdot 2\\
+                    1\cdot 3 + (-2)\cdot 1 + 2\cdot 0
+                \end{pmatrix}
+                = \begin{pmatrix}
+                    13\\
+                    4\\
+                    1
+                \end{pmatrix}
+            \end{align*}
+
+        \item Dadas duas matrizes $A$ e $B$ tais que $AB$ e $BA$ estejam definidas. Em geral, $AB \ne BA$. Por exemplo, tome
+            \[
+                A = \begin{pmatrix}1 & 2 & 3\\-1 & -2 & -3\end{pmatrix},
+                B = \begin{pmatrix}3 & 1 & 1\\2 & -1 & 1\end{pmatrix}.
+            \]
+            Assim os produtos $AB$ e $BA$ estão definidos, ambos resultam em uma matriz de ordem $2 \times 2$. Mas
+            \begin{align*}
+                AB &= \begin{pmatrix}1 & 2 & 3\\-1 & -2 & -3\end{pmatrix}\begin{pmatrix}3 & 1 & 1\\2 & -1 & 1\end{pmatrix}\\
+                BA &=\begin{pmatrix}3 & 1 & 1\\2 & -1 & 1\end{pmatrix}\begin{pmatrix}1 & 2 & 3\\-1 & -2 & -3\end{pmatrix}
+            \end{align*}
+        \item Se $A$ e $B$ são matrizes tais que $AB = 0$, não é verdade que $A = 0$ ou $B = 0$. POR EXEMPLO...
+
+        \item Se $A$, $B$ e $C$ são matrizes tais que $AB = AC$, não é verdade que $B = C$. Isto é, não vale a lei do cancelamento no
+            produto.
+    \end{enumerate}
+\end{observacoes}
 No caso particular em que $m = n$, as matrizes em $M_{n\times n}(\cp{K})$ s\~ao chamadas de \textbf{matrizes quadradas} e escreveremos simplesmente $M_n(\cp{K})$. No caso de matrizes quadradas a multiplica\c{c}\~ao de matrizes tem um elemento neutro, ou unidade, que ser\'a a matriz
 \[
 	Id_n = \begin{pmatrix}
