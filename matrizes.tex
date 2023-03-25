@@ -34,7 +34,7 @@ Durante esse curso iremos trabalhar com o conceito de corpos e alguns casos espe
 			a \otimes 1_\cp{K} = a = 1_\cp{K} \otimes a
 		\]
 		para todo $a \in \cp{K}$.
-		\item \textbf{Elemento inverso da multiplica\c{c}\~ao}: Para cada $a \in \cp{K}$, $a \ne 0_{\cp{K}}$, existe um elemento em $\cp{K}$, denotado por $a^{-1}$ e chamado de \textbf{inverso multiplicativo} de $a$ 
+		\item \textbf{Elemento inverso da multiplica\c{c}\~ao}: Para cada $a \in \cp{K}$, $a \ne 0_{\cp{K}}$, existe um elemento em $\cp{K}$, denotado por $a^{-1}$ e chamado de \textbf{inverso multiplicativo} de $a$
 		tal que
 		\[
 			a \otimes a^{-1} = 1_\cp{K} = a^{-1} \otimes a.
@@ -57,17 +57,17 @@ Considere $\cp{K} = \rac$ ou $\real$. Então vale sempre que:
 	\item $(x + y) + z = x + (y + z)$, para todos $x$, $y$ e $z \in \cp{K}$;
 
 	\item existe $0$ em $\cp{K}$ tal que $x + 0 = x$ para todo $x \in \cp{K}$;
-	
+
 	\item para cada $x \in \cp{K}$, existe $y \in \cp{K}$ tal que $x + y = 0$. Tal $y$ é escrito como $y = -x$;
 
 	\item $xy = yx$ para todos $x$, $y \in \cp{K}$;
-	
+
 	\item $(xy)z = x(yz)$ para todos $x$, $y$ e $z \in \cp{K}$;
 
 	\item existe $1 \in \cp{K}$ tal que $1x = x$ para todo $x \in \cp{K}$
-	
+
 	\item para todo $x \in \cp{K}real$, $x \ne 0$, existe $y \in \cp{K}$ tal que $xy =1$. Tal $y$ é escrito como $y = x^{-1}$;
-	
+
 	\item $(x + y)z = xz + yz$ para todos $x$, $y$ e $z \in \cp{K}$.
 \end{enumerate}
 
@@ -164,7 +164,7 @@ Uma matriz $A$ com $m$ linhas e $n$ colunas é dita possuir \textbf{ordem}\index
 		\item O elemento $a_{12}$ de $A$ é $a_{12} = 0$;
 
 		\item O elemento $a_{24}$ de $A$ é $a_{24} = 3$;
-		
+
 		\item O elemento $a_{33}$ de $A$ é $a_{12} = \pi$.
 	\end{itemize}
 \end{exemplo}
@@ -296,14 +296,14 @@ Dada uma matriz quadrada de ordem $n$
 		a_{n1} & a_{n2} & \cdots & a_{nn}
 	\end{pmatrix}
 \]
-os elementos $a_{ij}$ de $A$ com $i = j$ formam a \textbf{diagonal princial} de $A$:\index{Matriz!diagonal princial}
+os elementos $a_{ij}$ de $A$ com $i = j$ formam a \textbf{diagonal princial} de $A$:\index{Matriz!diagonal principal}
 \[
 	\begin{pmatrix}
-		\tikzmarknode{top}{a_{11}} & a_{12} & a_{13} & \cdots  & a_{1n}\\ 
-		a_{21} & a_{22} \phantom{-} & a_{23} & \cdots  & a_{2n}\\ 
-		a_{31} & a_{32}\phantom{-} & a_{33} \phantom{-1} & \cdots  & a_{3n}\\ 
-		\vdots  & \vdots   & \vdots  & \vdots  & \vdots\\ 
-		a_{n1} & a_{n2} & a_{n3} & \cdots  & \tikzmarknode{bottom}{a_{nn}}\\ 
+		\tikzmarknode{top}{a_{11}} & a_{12} & a_{13} & \cdots  & a_{1n}\\
+		a_{21} & a_{22} \phantom{-} & a_{23} & \cdots  & a_{2n}\\
+		a_{31} & a_{32}\phantom{-} & a_{33} \phantom{-1} & \cdots  & a_{3n}\\
+		\vdots  & \vdots   & \vdots  & \vdots  & \vdots\\
+		a_{n1} & a_{n2} & a_{n3} & \cdots  & \tikzmarknode{bottom}{a_{nn}}\\
 	\end{pmatrix}
 \]
 
@@ -314,17 +314,112 @@ os elementos $a_{ij}$ de $A$ com $i = j$ formam a \textbf{diagonal princial} de 
 Os elementos $a_{ij}$ com $i + j = n + 1$ formam a \textbf{diagonal secundária} de $A$:\index{Matriz!diagonal secundária}
 \[
 	\begin{pmatrix}
-		a_{11} & a_{12} & a_{13} & \cdots  & a_{1n-1} & \tikzmarknode{top_right}{a_{1n}}\\ 
-		a_{21} & a_{22} & a_{23} & \cdots  & a_{2n-1} & a_{2n}\\ 
-		a_{31} & a_{32} & a_{33} & \cdots  & \phantom{-}a_{3n-1} & a_{3n}\\ 
-		\vdots  & \vdots   & \vdots  & \vdots  & \vdots\\ 
-		\tikzmarknode{bottom_left}{a_{n1}} & \phantom{-} a_{n2} & a_{n3} & \cdots  & a_{nn-1} & {a_{nn}}\\ 
+		a_{11} & a_{12} & a_{13} & \cdots  & a_{1n-1} & \tikzmarknode{top_right}{a_{1n}}\\
+		a_{21} & a_{22} & a_{23} & \cdots  & a_{2n-1} & a_{2n}\\
+		a_{31} & a_{32} & a_{33} & \cdots  & \phantom{-}a_{3n-1} & a_{3n}\\
+		\vdots  & \vdots   & \vdots  & \vdots  & \vdots\\
+		\tikzmarknode{bottom_left}{a_{n1}} & \phantom{-} a_{n2} & a_{n3} & \cdots  & a_{nn-1} & {a_{nn}}\\
 	\end{pmatrix}
 \]
 
 \begin{tikzpicture}[overlay, remember picture]
 	\draw[blue, opacity=.5, line width=5mm, line cap=round] (top_right.north east) -- (bottom_left.south west);
 \end{tikzpicture}
+
+\begin{definicao}
+    Seja
+    \[
+        A = \begin{bmatrix}
+                a_{11} & \cdots & a_{1n}\\
+                a_{21} & \cdots & a_{2n}\\
+                \vdots & \ddots & \vdots\\
+                a_{n1} & \cdots & a_{nn}
+            \end{bmatrix}
+    \]
+    uma matriz quadrada de ordem $n$. Dizemos que:
+    \begin{enumerate}
+        \item $A$ é uma \textbf{matriz diagonal}\index{Matrix!diagonal} se $a_{ij} = 0$ para todo $i \ne j$. Assim $A$ é uma matriz da forma
+            \[
+                A = \begin{bmatrix}
+                    a_{11} & 0 & \cdots & 0\\
+                    0 & a_{22} & \cdots & 0\\
+                    \vdots & \vdots & \ddots & \vdots\\
+                    0 & \cdots & 0 & a_{nn}
+                \end{bmatrix}.
+            \]
+
+        \item $A$ é uma \textbf{matriz unidade} ou \textbf{matriz identidade} ou ainda que $A$ é uma \textbf{matriz unitária} de
+            \textbf{ordem} $n$ se $A$ é uma matriz diagonal e $a_{ii} = 1$ para $1 \le i \le n$. Neste caso denotamos tal matriz por $I_n$ e
+        \[
+            I_n = \begin{bmatrix}
+                1 & 0 & \cdots & 0\\
+                0 & 1 & \cdots & 0\\
+                \vdots & \vdots & \ddots & \vdots\\
+                0 & \cdots & 0 & 1
+            \end{bmatrix}.
+        \]
+    \item $A$ é uma \textbf{matriz triangular inferior}\index{Matriz!triangular inferior} se $a_{ij} = 0$ para $i < j$. Assim $A$ será uma matriz da forma
+    \[
+        A = \begin{bmatrix}
+                a_{11} & 0 & 0 & \cdots & 0\\
+                a_{21} & a_{22} & 0 & \cdots & 0\\
+                \vdots & \vdots & \ddots & & \vdots\\
+                a_{n1} & a_{n2} & \cdots & \cdots &  a_{nn}
+        \end{bmatrix}.
+    \]
+    \item $A$ é uma \textbf{matriz triangular superior}\index{Matriz!triangular superior} se $a_{ij} = 0$ para $i > j$. Assim $A$ será uma matriz da forma
+    \[
+        A = \begin{bmatrix}
+                a_{11} & a_{12} & a_{13} & \cdots & a_{1n}\\
+                0 & a_{22} & a_{23} & \cdots & a_{2n}\\
+                \vdots & \vdots & \ddots & & \vdots\\
+                0 & 0 & \cdots & 0 &  a_{nn}
+        \end{bmatrix}.
+    \]
+    \end{enumerate}
+\end{definicao}
+
+\begin{exemplos}
+    \begin{enumerate}
+        \item A matriz
+            \[
+                A = \begin{pmatrix}
+                    2 & -1/2 & 3 & \phantom{-}4\\
+                    0 & \phantom{-}0 & 1 & -2\\
+                    0 & \phantom{-}0 & 4 & \phantom{-}\sqrt{2}\\
+                    0 & \phantom{-}0 & 0 & \phantom{-}1
+                \end{pmatrix}
+            \]
+        é uma matriz triangular superior de ordem 4.
+        \item A matriz
+            \[
+                B = \begin{pmatrix}
+                    2 & \phantom{-}0 & \phantom{-}0 & 0\\
+                    1 & -3i & \phantom{-}0 & 0\\
+                    i & -1 & \phantom{-}4 & 0\\
+                    7 & \phantom{-}3 & -2 & 5
+                \end{pmatrix}
+            \]
+        é uma matriz triangular inferior de ordem 4.
+        \item A matriz
+            \[
+                C = \begin{pmatrix}
+                    1 & 0 & 0\\
+                    0 & 1 & 0\\
+                    0 & 0 & 1
+                \end{pmatrix}
+            \]
+        é a matriz identidade de ordem 3.
+        \item A matriz
+            \[
+                D = \begin{pmatrix}
+                    2 & 0\\
+                    0 & 3
+                \end{pmatrix}
+            \]
+        é uma matriz diagonal de ordem 2.
+    \end{enumerate}
+\end{exemplos}
 
 \begin{notacao}
 	Denotaremos o conjunto de todas as matrizes $m \times n$ sobre $\cp{K}$ por $M_{m\times n}(\cp{K})$, onde $\cp{K} = \rac$, $\real$ ou $\complex$. Assim
