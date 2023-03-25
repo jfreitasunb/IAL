@@ -933,14 +933,19 @@ Nesse conjunto podemos definir as seguintes opera\c{c}\~oes:
 
         \item Dadas duas matrizes $A$ e $B$ tais que $AB$ e $BA$ estejam definidas. Em geral, $AB \ne BA$. Por exemplo, tome
             \[
-                A = \begin{pmatrix}1 & 2 & 3\\-1 & -2 & -3\end{pmatrix},
-                B = \begin{pmatrix}3 & 1 & 1\\2 & -1 & 1\end{pmatrix}.
+                A = \begin{pmatrix}\phantom{-}1& \phantom{-}2\\-1 & -2\end{pmatrix},
+                B = \begin{pmatrix}3 & 1 \\ 1 & 2\end{pmatrix}.
             \]
-            Assim os produtos $AB$ e $BA$ estão definidos, ambos resultam em uma matriz de ordem $2 \times 2$. Mas
+            Assim os produtos $AB$ e $BA$ estão definidos, ambos resultam em uma matriz de ordem $2 \times 2$. Mas veja que
             \begin{align*}
-                AB &= \begin{pmatrix}1 & 2 & 3\\-1 & -2 & -3\end{pmatrix}\begin{pmatrix}3 & 1 & 1\\2 & -1 & 1\end{pmatrix}\\
-                BA &=\begin{pmatrix}3 & 1 & 1\\2 & -1 & 1\end{pmatrix}\begin{pmatrix}1 & 2 & 3\\-1 & -2 & -3\end{pmatrix}
+                AB &= \begin{pmatrix}\phantom{-}1 & \phantom{-}2\\-1 & -2\end{pmatrix}\begin{pmatrix}3 & 1\\1 & 2\end{pmatrix} =
+                \begin{pmatrix}1\cdot 3 + 2 \cdot 1 & 1\cdot 1 + 2 \cdot 2\\-1\cdot3 + (-2)\cdot 2 & -1\cdot 1+ (-2)\cdot 2\end{pmatrix} =
+                \begin{pmatrix}\phantom{-}5 & \phantom{-}5\\-7 & -5\end{pmatrix}\\
+                BA &=\begin{pmatrix}3 & 1\\1 & 2\end{pmatrix}\begin{pmatrix}\phantom{-}1 & \phantom{-}2\\-1 & -2\end{pmatrix} = \begin{pmatrix}3\cdot 1 +
+                1\cdot(-1) & 3\cdot 2 + 1\cdot(-1)\\1\cdot 1 + 2\cdot(-1) & 1\cdot 2 + 2 \cdot(-2)\end{pmatrix} =
+                \begin{pmatrix}\phantom{-}2 & \phantom{-}5\\-1 & -3\end{pmatrix},
             \end{align*}
+            logo $AB \ne BA$.
         \item Se $A$ e $B$ são matrizes tais que $AB = 0$, não é verdade que $A = 0$ ou $B = 0$. POR EXEMPLO...
 
         \item Se $A$, $B$ e $C$ são matrizes tais que $AB = AC$, não é verdade que $B = C$. Isto é, não vale a lei do cancelamento no
