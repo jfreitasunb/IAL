@@ -946,42 +946,41 @@ Nesse conjunto podemos definir as seguintes opera\c{c}\~oes:
                 \begin{pmatrix}\phantom{-}2 & \phantom{-}5\\-1 & -3\end{pmatrix},
             \end{align*}
             logo $AB \ne BA$.
-        \item Se $A$ e $B$ são matrizes tais que $AB = 0$, não é verdade que $A = 0$ ou $B = 0$. POR EXEMPLO...
+        \item Se $A$ e $B$ são matrizes tais que $AB = 0$, não é verdade que $A = 0$ ou $B = 0$. Por exemplo, tome
+		\[
+			A = \begin{pmatrix}1 & -1\\1 & -1\end{pmatrix} \ne 0_{2\times 2}\\
+			B = \begin{pmatrix}2 & -2\\2 & -2\end{pmatrix} \ne 0_{2 \times 2}.
+		\]
+	Temos
+	\begin{align*}
+		AB = \begin{pmatrix}1 & -1\\1 & -1\end{pmatrix}\begin{pmatrix}2 & -2\\2 & -2\end{pmatrix} = \begin{pmatrix}1\cdot 2 + (-1)\cdot 2 & 1 \cdot (-2) + (-1)\cdot(-2)\\ 1\cdot 2 + (-1)\cdot 2 & 1 \cdot (-2) + (-1)\cdot (-2)\end{pmatrix} = \begin{pmatrix}0 & 0\\0 & 0\end{pmatrix}.
+	\end{align*}
 
-        \item Se $A$, $B$ e $C$ são matrizes tais que $AB = AC$, não é verdade que $B = C$. Isto é, não vale a lei do cancelamento no
-            produto.
+        \item Se $A$, $B$ e $C$ são matrizes tais que $AB = AC$, não é verdade que $B = C$. Isto é, não vale a lei do cancelamento no produto. Por exemplo, tome
+	\[
+		A = \begin{pmatrix}0 & 1\\0 & 1\end{pmatrix}\\
+		B = \begin{pmatrix}1 & 1\\0 & 0\end{pmatrix}\\
+		C = \begin{pmatrix}3 & 3\\0 & 0\end{pmatrix}.
+	\]
+	Temos
+	\[
+		AB = AC = \begin{pmatrix}0 & 0\\0 & 0\end{pmatrix}
+	\]
+	mas $B \ne C$.
     \end{enumerate}
 \end{observacoes}
-No caso particular em que $m = n$, as matrizes em $M_{n\times n}(\cp{K})$ s\~ao chamadas de \textbf{matrizes quadradas} e escreveremos simplesmente $M_n(\cp{K})$. No caso de matrizes quadradas a multiplica\c{c}\~ao de matrizes tem um elemento neutro, ou unidade, que ser\'a a matriz
-\[
-	Id_n = \begin{pmatrix}
-		1_\cp{K} & 0_\cp{K} & \cdots & 0_\cp{K}\\
-		0_\cp{K} & 1_\cp{K} & \cdots & 0_\cp{K}\\
-		\vdots & \vdots & & \vdots\\
-		0_\cp{K} & 0_\cp{K} & \cdots & 1_\cp{K}
-	\end{pmatrix},
-\]
-chamada de \textbf{matriz identidade} e para toda $A \in M_n(\cp{K})$ vale
-\[
-	A\cdot I_n = A = I_n\cdot A.
-\]
-De modo geral, a multiplica\c{c}\~ao de matrizes n\~ao \'e comutativa e n\~ao admite inverso multiplicativo.
 
 \begin{proposicao}
-	Dadas matrizes $A$, $B$ e $C \in M_{n\times n}(\cp{K})$ e $\alpha$, $\beta \in \cp{K}$ vale:
-	\begin{enumerate}[label={\roman*})]
-		\item $(A + B) + C = A + (B + C)$
-		\item $A + B = B + A$
-		\item $\alpha(A + B) = \alpha A + \alpha B$
-		\item $(\alpha + \beta)A = \alpha A + \beta A$.
-	\end{enumerate}
-	Agora se $A \in M_{m\times n}(\cp{K})$, $B \in M_{n\times l}(\cp{K})$ e $C \in M_{l\times p}(\cp{K})$, ent\~ao:
+	Sejam $A$, $B$ e $C$ matrizes de ordens tais que as operações a seguir estejam definidas. Ent\~ao:
 	\begin{enumerate}[label={\roman*})]
 		\item $(A\cdot B)\cdot C = A\cdot(B \cdot C)$
+		\item $(A + B)\cdot C = (A\cdot C) + (B\cdot C)$
+		\item $C\cdot(A + B) = (C\cdot A) + (C\cdot B)$
 		\item $\alpha(A\cdot B) = (\alpha A)\cdot B = A \cdot(\alpha B)$
+		\item Se $A$ é uma matriz quadrada de ordem $n$, então
+			\[A\cdot I = A = I\cdot A.\]
+		\item Se $A$ é uma matriz quadrada de ordem $n$, então
+			\[A\cdot0_n = 0_n = 0_n\cdot A.\]
+		\item $(AB)^T = B^TA^T$.
 	\end{enumerate}
-	Se $A \in M_{m\times n}(\cp{K})$, $B \in M_{m\times n}(\cp{K})$ e $C \in M_{n\times p}(\cp{K})$, ent\~ao:
-	\[
-		(A + B)\cdot C = (A\cdot C) + (B\cdot C).
-	\]
 \end{proposicao}
