@@ -1,0 +1,33 @@
+\documentclass[10pt]{article}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+xlabel = $x$,
+ylabel = $y$,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-1,
+xmax=4,
+ymin=-4,
+ymax=4,
+xtick={-1,0,...,4},
+ytick={-4,-3,...,4},]
+\clip(-5,-9) rectangle (6,9);
+\draw [line width=2pt,color=ffqqqq,domain=-4.56:11.72] plot(\x,{(--3-2*\x)/1});
+\draw [line width=2pt,color=qqqqff,domain=-4.56:11.72] plot(\x,{(--2-3*\x)/-1});
+\begin{scriptsize}
+\draw[color=ffqqqq] (2,-3.3) node {$2x + y = 3$};
+\draw[color=qqqqff] (3,3.2) node {$3x - y = 2$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{document}
