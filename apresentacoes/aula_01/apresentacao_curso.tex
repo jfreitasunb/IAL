@@ -158,7 +158,12 @@
     
     \begin{frame}
     
-        Considere $\cp{K} = \rac$ ou $\real$. Então vale sempre que:
+        Considere $\cp{K} = \rac$, $\real$ ou
+        \[
+    	    \complex = \{a + bi \mid a, b \in \real, i^2 = -1\}.
+        \]
+        Então vale sempre que:
+
         \begin{enumerate}[label={\roman*})]
 	    \item $x + y = y + x$, para todos $x$, $y \in \cp{K}$;
             \item $(x + y) + z = x + (y + z)$, para todos $x$, $y$ e $z \in \cp{K}$;
@@ -167,36 +172,94 @@
             \item $xy = yx$ para todos $x$, $y \in \cp{K}$;
             \item $(xy)z = x(yz)$ para todos $x$, $y$ e $z \in \cp{K}$;
             \item existe $1 \in \cp{K}$ tal que $1x = x$ para todo $x \in \cp{K}$
-            \item para todo $x \in \cp{K}real$, $x \ne 0$, existe $y \in \cp{K}$ tal que $xy =1$. Tal $y$ é escrito como $y = x^{-1}$;
+            \item para todo $x \in \cp{K}$, $x \ne 0$, existe $y \in \cp{K}$ tal que $xy =1$. Tal $y$ é escrito como $y = x^{-1}$;
             \item $(x + y)z = xz + yz$ para todos $x$, $y$ e $z \in \cp{K}$.
         \end{enumerate}
     \end{frame}
-    \begin{frame}
-        Um outro conjunto importante com o qual iremos trabalhar é \textbf{conjunto dos números complexos}. Tal conjunto \'e definido como
-        \[
-    	    \complex = \{a + bi \mid a, b \in \real, i^2 = -1\}.
-        \]
-        Dados $z = a + bi$, $w = c + di \in \complex$ definimos a soma e a multiplica\c{c}\~ao em $\complex$ por
-        \begin{align*}
-	    z + w &= (a + c) + (b + d)i\\
-            z\cdot w &= (ac - bd) + (ad + bc)i.
-        \end{align*}
-        Al\'em disso, $a + bi = c + di$ se, e somente se, $a = c$ e $b = d$.
-
-        Dado um n\'umero complexo $z = a + bi \ne 0$, seja
-        \[
-	    w = \dfrac{a - bi}{a^2 + b^2} \ne 0.
-        \]
-        Note que
-        \begin{align*}
-            z\cdot w = (a + bi)\cdot \dfrac{a - bi}{a^2 + b^2} = \dfrac{(a^2 + b^2) + (-ab + ba)}{a^2 + b^2} = 1
-        \end{align*}
-        assim $w$ \'e o inverso multiplicativo de $z$ em $\complex$.
-    \end{frame}
     
     \begin{frame}
-        Assim $(\complex, +, \cdot)$ é um corpo.
+        \begin{enumerate}[label={\roman*})]
+            \item Assim $(\cp{K}, +, \cdot)$ é um corpo.
 
-        Durante todo esse curso o conjunto $\cp{K}$ será usado para representar um dos conjuntos: $\rac$, $\real$ ou $\complex$.
+            \item Durante todo esse curso o conjunto $\cp{K}$ será usado para representar um dos conjuntos: $\rac$, $\real$ ou $\complex$.
+        \end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+        Vamos trabalhar também com o conjunto de matrizes com entradas em $\cp{K}$:
+        \[
+            M_{m \times n}(\cp{K}) = 
+            \left\{
+                \begin{bmatrix}
+                    a_{11} & a_{12} & \cdots & a_{1n}\\
+		    a_{21} & a_{22} & \cdots & a_{2n}\\
+		    \vdots & & & \vdots\\
+		    a_{m1} & a_{m2} & \cdots & a_{mn}
+                \end{bmatrix}
+                \mid a_{ij} \in \cp{K},\ 1 \le i \le m,\ 1 \le j \le n
+	    \right\}
+        \]
+
+        Em $M_{r\times s}(\cp{K})$ vamos admitir definidas as operações de soma de matrizes e multiplicação de matriz por escalar.
+
+        Vamos também admitir as seguintes propriedades como verdadeiras:
+        \begin{proposicao}
+            Dadas matrizes $A$, $B$ e $C \in M_{n\times n}(\cp{K})$ e escalares $\alpha$, $\lambda \in \cp{K}$ vale:
+            \begin{enumerate}[label={\roman*})]
+                \item $(A + B) + C = A + (B + C)$
+                \item $A + B = B + A$
+                \item $0_{m \times n} + A = A = A + 0_{m \times n}$, onde $0_{m \times n}$ é matriz cujas entradas são todas zero.
+                \seti
+            \end{enumerate}
+        \end{proposicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{proposicao}
+            \begin{enumerate}[label={\roman*})]
+                \conti
+                \item $A - A = 0_{m \times n}$.
+                \item $(\alpha\lambda) A = \alpha(\lambda A) = \lambda(\alpha A)$
+                \item $(\alpha + \lambda)A = \alpha A + \lambda A$
+                \seti
+            \end{enumerate}
+        \end{proposicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{proposicao}
+            \begin{enumerate}[label={\roman*})]
+                \conti
+
+                \item $\alpha(A + B) = \alpha A + \alpha B$
+                \item $1A = A$ e $(-1)A = -A$
+                \item  $0A = 0_{m \times n}$
+            \end{enumerate}
+        \end{proposicao}
+    \end{frame}
+
+    \begin{frame}
+        Para o produto de matrizes vamos admitir as seguintes propriedades como verdadeiras:
+        \begin{proposicao}
+	    Sejam $A$, $B$ e $C$ matrizes de ordens tais que as operações a seguir estejam definidas. Ent\~ao:
+            \begin{enumerate}[label={\roman*})]
+                \item $(A\cdot B)\cdot C = A\cdot(B \cdot C)$
+                \item $(A + B)\cdot C = (A\cdot C) + (B\cdot C)$
+                \item $C\cdot(A + B) = (C\cdot A) + (C\cdot B)$
+                \seti
+            \end{enumerate}
+        \end{proposicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{proposicao}
+            \begin{enumerate}[label={\roman*})]
+                \conti
+
+                \item $\alpha(A\cdot B) = (\alpha A)\cdot B = A \cdot(\alpha B)$
+                \item Se $A$ é uma matriz quadrada de ordem $n$, então \[A\cdot I_n = A = I_n\cdot A,\] onde $I_n$ é a matriz quadrada de ordem $n$ onde todas as entradas da diagonal principal são 1 e as demais são zero.
+                \item Se $A$ é uma matriz quadrada de ordem $n$, então \[A\cdot0_n = 0_n = 0_n\cdot A.\]
+	    \end{enumerate}
+        \end{proposicao}
     \end{frame}
 \end{document}
