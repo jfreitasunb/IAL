@@ -83,4 +83,120 @@
             \end{tabular}
         \end{center}
     \end{frame}
+
+    \begin{frame}
+        \begin{definicao}\label{corpo}\index{Corpos}
+	Um conjunto n\~ao vazio $\cp{K}$ \'e chamado de \textbf{corpo} se em $\cp{K}$ podemos definir duas opera\c{c}\~oes, denotadas por $+$ (e chamada de \textbf{adi\c{c}\~ao}) e $\cdot$ (e chamada de \textbf{multiplica\c{c}\~ao}) de modo que
+	\begin{align*}
+            a &+ b \in \cp{K}\\
+	    a &\cdot b \in \cp{K}
+	\end{align*}
+	para todos $a$, $b \in \cp{K}$ e que satisfa\c{c}am as seguintes propriedades:
+	    \begin{enumerate}[label={\roman*})]
+		\item \textbf{Comutatividade da adi\c{c}\~ao}: $a + b = b + a$ para todos $a$, $b \in \cp{K}$;
+		\item \textbf{Associatividade da adi\c{c}\~ao}: $a + (b + c) = (a + b) + c$, para todos $a$, $b$ e $c \in \cp{K}$;
+                \seti
+            \end{enumerate}
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{definicao}
+            \begin{enumerate}[label={\roman*})]
+                \conti
+		\item \textbf{Elemento neutro da adi\c{c}\~ao}: Existe um elemento em $\cp{K}$, denotado por $0_\cp{K}$ ou simplesmente $0$ e chamado de \textbf{elemento neutro da adi\c{c}\~ao}, que satisfaz
+		\[
+			a + 0_\cp{K} = a = 0_\cp{K} + a
+		\]
+		para todo $a \in \cp{K}$.
+		\item \textbf{Elemento oposto da adi\c{c}\~ao}: Para cada $a \in \cp{K}$, existe um elemento em $\cp{K}$, denotado por $-a$ e chamado de \textbf{oposto} de $a$ ou \textbf{inverso aditivo} de $a$ tal que
+		\[
+			a + (-a) = 0_\cp{K} = (-a) + a.
+		\]
+
+                \seti
+            \end{enumerate}
+        \end{definicao}
+    \end{frame}
+    
+    \begin{frame}
+        \begin{definicao}
+            \begin{enumerate}[label={\roman*})]
+                \conti
+
+		\item \textbf{Comutatividade da multiplica\c{c}\~ao}: $a \cdot b = b \cdot a$ para todos $a$, $b \in \cp{K}$;
+		\item \textbf{Associatividade da multiplica\c{c}\~ao}: $a \cdot (b \cdot c) = (a \cdot b) \cdot c$, para todos $a$, $b$ e $c \in \cp{K}$;
+		\item \textbf{Elemento neutro da multiplica\c{c}\~ao}: Existe um elemento em $\cp{K}$, denotado por $1_\cp{K}$ ou simplesmente $1$ e chamado de \textbf{elemento neutro da multiplica\c{c}\~ao} ou \textbf{unidade}, que satisfaz
+		\[
+			a \cdot 1_\cp{K} = a = 1_\cp{K} \cdot a
+		\]
+		para todo $a \in \cp{K}$.
+	
+                \seti
+            \end{enumerate}
+        \end{definicao}
+    \end{frame}
+    
+    \begin{frame}
+        \begin{definicao}
+            \begin{enumerate}[label={\roman*})]
+                \conti
+
+	\item \textbf{Elemento inverso da multiplica\c{c}\~ao}: Para cada $a \in \cp{K}$, $a \ne 0_{\cp{K}}$, existe um elemento em $\cp{K}$, denotado por $a^{-1}$ e chamado de \textbf{inverso multiplicativo} de $a$
+		tal que
+		\[
+			a \cdot a^{-1} = 1_\cp{K} = a^{-1} \cdot a.
+		\]
+		\item \textbf{Distributividade da soma em rela\c{c}\~ao \`a multiplica\c{c}\~ao}: $(a + b)\cdot c = a\cdot c + b\cdot c$, para todos $a$, $b$ e $c \in \cp{K}$.
+	    \end{enumerate}
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
+        Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, +, \cdot)$. Quando n\~ao houver chance de confus\~ao em rela\c{c}\~ao \`as opera\c{c}\~oes de soma e multiplica\c{c}\~ao envolvidas no corpo $(\cp{K}, +, \cdot)$, vamos simplesmente dizer que $\cp{K}$ \'e um corpo. Os elementos de um corpo $\cp{K}$ s\~ao chamados de \textbf{escalares}.
+    \end{frame}
+    
+    \begin{frame}
+    
+        Considere $\cp{K} = \rac$ ou $\real$. Então vale sempre que:
+        \begin{enumerate}[label={\roman*})]
+	    \item $x + y = y + x$, para todos $x$, $y \in \cp{K}$;
+            \item $(x + y) + z = x + (y + z)$, para todos $x$, $y$ e $z \in \cp{K}$;
+            \item existe $0$ em $\cp{K}$ tal que $x + 0 = x$ para todo $x \in \cp{K}$;
+            \item para cada $x \in \cp{K}$, existe $y \in \cp{K}$ tal que $x + y = 0$. Tal $y$ é escrito como $y = -x$;
+            \item $xy = yx$ para todos $x$, $y \in \cp{K}$;
+            \item $(xy)z = x(yz)$ para todos $x$, $y$ e $z \in \cp{K}$;
+            \item existe $1 \in \cp{K}$ tal que $1x = x$ para todo $x \in \cp{K}$
+            \item para todo $x \in \cp{K}real$, $x \ne 0$, existe $y \in \cp{K}$ tal que $xy =1$. Tal $y$ é escrito como $y = x^{-1}$;
+            \item $(x + y)z = xz + yz$ para todos $x$, $y$ e $z \in \cp{K}$.
+        \end{enumerate}
+    \end{frame}
+    \begin{frame}
+        Um outro conjunto importante com o qual iremos trabalhar é \textbf{conjunto dos números complexos}. Tal conjunto \'e definido como
+        \[
+    	    \complex = \{a + bi \mid a, b \in \real, i^2 = -1\}.
+        \]
+        Dados $z = a + bi$, $w = c + di \in \complex$ definimos a soma e a multiplica\c{c}\~ao em $\complex$ por
+        \begin{align*}
+	    z + w &= (a + c) + (b + d)i\\
+            z\cdot w &= (ac - bd) + (ad + bc)i.
+        \end{align*}
+        Al\'em disso, $a + bi = c + di$ se, e somente se, $a = c$ e $b = d$.
+
+        Dado um n\'umero complexo $z = a + bi \ne 0$, seja
+        \[
+	    w = \dfrac{a - bi}{a^2 + b^2} \ne 0.
+        \]
+        Note que
+        \begin{align*}
+            z\cdot w = (a + bi)\cdot \dfrac{a - bi}{a^2 + b^2} = \dfrac{(a^2 + b^2) + (-ab + ba)}{a^2 + b^2} = 1
+        \end{align*}
+        assim $w$ \'e o inverso multiplicativo de $z$ em $\complex$.
+    \end{frame}
+    
+    \begin{frame}
+        Assim $(\complex, +, \cdot)$ é um corpo.
+
+        Durante todo esse curso o conjunto $\cp{K}$ será usado para representar um dos conjuntos: $\rac$, $\real$ ou $\complex$.
+    \end{frame}
 \end{document}
