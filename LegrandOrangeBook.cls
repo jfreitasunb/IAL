@@ -439,7 +439,7 @@
 	sorting=nyt, % Sort references in the bibliography by name, then year, then title
 	sortcites=true, % If multiple citekeys are passed to a citation command, sort them in the citation
 	abbreviate=false, % Suppress abbreviations such as "Ed." for Editor
-	backref=true, % List the page where references were cited in the bibliography
+	backref=false, % List the page where references were cited in the bibliography
 	defernumbers=true,
 ]{biblatex}
 
