@@ -20,13 +20,13 @@
 
     \questao{}\label{operacoes_matrizes} Sejam
     \begin{align*}
-        A = \begin{pmatrix}1 & 2 & 3\\2 & 1 & -1\end{pmatrix},
-        B = \begin{pmatrix}-2 & 0 & 1\\3 & 0 & 1\end{pmatrix},
-        C = \begin{pmatrix}-1\\ 2\\4\end{pmatrix},
-        D = \begin{pmatrix}-2\\ 3\\2\end{pmatrix},
+        A = \begin{pmatrix}1 & 2 & \phantom{-} 3\\2 & 1 & -1\end{pmatrix},
+        B = \begin{pmatrix}-2 & 0 & 1\\\phantom{-} 3 & 0 & 1\end{pmatrix},
+        C = \begin{pmatrix}-1\\ \phantom{-} 2\\\phantom{-} 4\end{pmatrix},
+        D = \begin{pmatrix}-2\\ \phantom{-} 3\\\phantom{-} 2\end{pmatrix},
         E = \begin{pmatrix}2 & -1\end{pmatrix},
-        F = \begin{pmatrix}4 & 3\end{pmatrix},
-    \end{align*}.
+        F = \begin{pmatrix}4 & 3\end{pmatrix}.
+    \end{align*}
     Encontre:
     \begin{multicols}{3}
         \begin{enumerate}[label={\arabic*})]
@@ -55,17 +55,17 @@
 
     \questao{} Nos itens abaixo são dadas duas matrizes $A$ e $B$ e dois números $c$ e $d$. Calcule a matriz $cA + dB$.
     \begin{enumerate}
-        \item $A = \begin{pmatrix}3 & -5\\2 & 7\end{pmatrix}$, $B = \begin{pmatrix}-1 & 0\\3 & -4\end{pmatrix}$, $c = 3$, $d = 4$
-        \item $A = \begin{pmatrix}2 & 0 & -3\\-1 & 5 & 6\end{pmatrix}$, $B = \begin{pmatrix}-2 & 3 & 1\\7 & 1 & 5\end{pmatrix}$, $c = 5$, $d = -3$
-        \item $A = \begin{pmatrix}5 & 0\\0 & 7\\3 & -1\end{pmatrix}$, $B = \begin{pmatrix}-4 & 5\\3 & 2\\7 & 4\end{pmatrix}$, $c = -2$, $d = 4$
-        \item $A = \begin{pmatrix}2 & -1 & 0\\4 & 0 & -3\\5 & -2 & 7\end{pmatrix}$, $B = \begin{pmatrix}6 & -3 & -4\\5 & 2 & -1\\0 & 7 & 9\end{pmatrix}$, $c = 7$, $d = 5$
+        \item $A = \begin{pmatrix}3 & -5\\2 & \phantom{-} 7\end{pmatrix}$, $B = \begin{pmatrix}-1 & \phantom{-} 0\\\phantom{-} 3 & -4\end{pmatrix}$, $c = 3$, $d = 4$
+        \item $A = \begin{pmatrix}\phantom{-} 2 & 0 & -3\\-1 & 5 & \phantom{-} 6\end{pmatrix}$, $B = \begin{pmatrix}-2 & 3 & 1\\\phantom{-} 7 & 1 & 5\end{pmatrix}$, $c = 5$, $d = -3$
+        \item $A = \begin{pmatrix}5 & \phantom{-} 0\\0 & \phantom{-} 7\\3 & -1\end{pmatrix}$, $B = \begin{pmatrix}-4 & 5\\\phantom{-} 3 & 2\\\phantom{-} 7 & 4\end{pmatrix}$, $c = -2$, $d = 4$
+        \item $A = \begin{pmatrix}2 & -1 & \phantom{-} 0\\4 & \phantom{-} 0 & -3\\5 & -2 & \phantom{-} 7\end{pmatrix}$, $B = \begin{pmatrix}6 & -3 & -4\\5 & \phantom{-} 2 & -1\\0 & \phantom{-} 7 & \phantom{-} 9\end{pmatrix}$, $c = 7$, $d = 5$
     \end{enumerate}
 
     \vspace{.3cm}
 
     \questao{}\label{igualdade_de_matrizes} Nos itens abaixo encontre os valores de $a$, $b$, $c$ e $d$ de modo que as igualdades sejam verdadeiras:
     \begin{enumerate}
-        \item $\begin{bmatrix}a & 3\\-1 & a + b\end{bmatrix} = \begin{bmatrix}4 & d - 2c\\d - 2c & -2\end{bmatrix}$
+        \item $\begin{bmatrix}\phantom{-} a & 3\\-1 & a + b\end{bmatrix} = \begin{bmatrix}4 & d - 2c\\d - 2c & -2\end{bmatrix}$
         \item $\begin{bmatrix}a - b & b + a\\3d + c & 2d - c\end{bmatrix} = \begin{bmatrix}8 & 1\\7 & 6\end{bmatrix}$.
     \end{enumerate}
 
@@ -111,10 +111,10 @@
 
     \questao{} Considere as matrizes
     \begin{align*}
-        A = \begin{pmatrix}5 & 0 & 6\\-8 & 0 & 3\\-2 & 2 & 7\\1 & -1 & -5\end{pmatrix},
-        B = \begin{pmatrix}1 & 3 & 2 & 4\\7 & 1 & -3 & 4\\0 & 0 & 3 & -2\end{pmatrix},
-        C = \begin{pmatrix}1 & 0 & 2\\1 & 0 & 1\\-2 & 1 & 2\end{pmatrix},
-        D = \begin{pmatrix}5 & 0 & 1 & 1\\-3 & 1 & 4 & 1\\2 & 2 & 0 & 3\\1 & -1 & 0 & 0\end{pmatrix}.
+        A = \begin{pmatrix}\phantom{-} 5 & \phantom{-} 0 & \phantom{-} 6\\-8 & \phantom{-} 0 & \phantom{-} 3\\-2 & \phantom{-} 2 & \phantom{-} 7\\1 & -1 & -5\end{pmatrix},
+        B = \begin{pmatrix}1 & 3 & \phantom{-} 2 & \phantom{-} 4\\7 & 1 & -3 & \phantom{-} 4\\0 & 0 & \phantom{-} 3 & -2\end{pmatrix},
+        C = \begin{pmatrix}\phantom{-} 1 & 0 & \phantom{-} 2\\\phantom{-} 1 & 0 & \phantom{-} 1\\-2 & 1 & 2\end{pmatrix},
+        D = \begin{pmatrix}\phantom{-} 5 & \phantom{-} 0 & 1 & 1\\-3 & \phantom{-} 1 & 4 & 1\\\phantom{-} 2 & \phantom{-} 2 & 0 & 3\\\phantom{-} 1 & -1 & 0 & 0\end{pmatrix}.
     \end{align*}
     Calcule os seguintes produtos:
     \begin{enumerate}
@@ -165,26 +165,26 @@
 
     \questao{} Quais das seguintes matrizes são simétricas?
     \begin{align*}
-        A = \begin{pmatrix}2 & -1\\1 & 2\end{pmatrix},
+        A = \begin{pmatrix}2 & -1\\1 & \phantom{-} 2\end{pmatrix},
         B = \begin{pmatrix}\pi & 0\\0 & \sqrt{2}\end{pmatrix},
-        C = \begin{pmatrix}-2 & 1 & 4\\1 & 3 & 1\\4 & 3 & -1\end{pmatrix},
-        D = \begin{pmatrix}0 & 0 & 1\\0 & 2 & -1\\1 & 3 & 4\end{pmatrix}.
+        C = \begin{pmatrix}-2 & 1 & \phantom{-} 4\\\phantom{-} 1 & 3 & \phantom{-} 1\\\phantom{-} 4 & 3 & -1\end{pmatrix},
+        D = \begin{pmatrix}0 & 0 & \phantom{-} 1\\0 & 2 & -1\\1 & 3 & \phantom{-} 4\end{pmatrix}.
     \end{align*}
 
     \vspace{.3cm}
 
     \questao{} Calcule o \textit{traço} das seguintes matrizes:
     \begin{enumerate}
-        \item $A = \begin{pmatrix}2 & 3 & 0\\1 & -2 & -3\\3 & -5 & 2\end{pmatrix}$
-        \item $B = \begin{pmatrix}5 & 3 & 0 & 2 & 4\\-1 & 1 & 0 & 2 & -8\\0 & -5 & 2 & 0 & -1\\2 & 3 & 4 & -3 & -3\end{pmatrix}$
-        \item $C = \begin{pmatrix}1 & 0 & 0 & 0\\0 & -2 & -3 & 1\\2 & 4 & -2 & 2\\4 & -1 & 3 & 0\end{pmatrix}$
+        \item $A = \begin{pmatrix}2 & \phantom{-} 3 & \phantom{-} 0\\1 & -2 & -3\\3 & -5 & \phantom{-} 2\end{pmatrix}$
+        \item $B = \begin{pmatrix}\phantom{-} 5 & \phantom{-} 3 & 0 & \phantom{-} 2 & \phantom{-} 4\\-1 & \phantom{-} 1 & 0 & \phantom{-} 2 & -8\\\phantom{-} 0 & -5 & 2 & \phantom{-} 0 & -1\\\phantom{-} 2 & \phantom{-} 3 & 4 & -3 & -3\end{pmatrix}$
+        \item $C = \begin{pmatrix}1 & \phantom{-} 0 & \phantom{-} 0 & 0\\0 & -2 & -3 & 1\\2 & \phantom{-} 4 & -2 & 2\\4 & -1 & \phantom{-} 3 & 0\end{pmatrix}$
     \end{enumerate}
 
     \vspace{.3cm}
 
     \questao{}Considere a matriz
         \[
-            A = \begin{pmatrix}a & b & -5\\c & d & 0\\5 & 0 & 0\end{pmatrix}.
+            A = \begin{pmatrix}a & b & -5\\c & d & \phantom{-} 0\\5 & 0 & \phantom{-} 0\end{pmatrix}.
         \]
         \begin{enumerate}
             \item Se $A$ é simétrica, encontre o valor de $2a + b + c - 3d$.
