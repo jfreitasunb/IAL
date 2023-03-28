@@ -77,10 +77,10 @@ Um outro conjunto importante com o qual iremos trabalhar é \textbf{conjunto dos
 	\complex = \{a + bi \mid a, b \in \real, i^2 = -1\}.
 \]
 Dados $z = a + bi$, $w = c + di \in \complex$ definimos a soma e a multiplica\c{c}\~ao em $\complex$ por
-\begin{align*}
-	z + w &= (a + c) + (b + d)i\\
-	z\cdot w &= (ac - bd) + (ad + bc)i.
-\end{align*}
+\begin{align}
+	z + w &= (a + c) + (b + d)i\label{soma_complexos}\\
+	z\cdot w &= (ac - bd) + (ad + bc)i.\label{multiplicacao_complexos}
+\end{align}
 Al\'em disso, $a + bi = c + di$ se, e somente se, $a = c$ e $b = d$.
 
 Dado um n\'umero complexo $z = a + bi \ne 0$, seja
@@ -113,6 +113,10 @@ e o \textbf{conjugado complexo} \index{Números Complexos!conjugado complexo}de 
 		\item $\overline{z \cdot w} = \overline{z} \cdot \overline{w}$;
 		\item $|z \cdot w| = |z| \cdot |w|$;
 	\end{enumerate}
+\end{proposicao}
+
+\begin{proposicao}
+	O conjunto $\complex$ com as operações definidas em \eqref{soma_complexos} e \eqref{multiplicacao_complexos} é um corpo.
 \end{proposicao}
 
 Uma propriedade importante dos n\'umeros complexos que iremos utilizar \'e a seguinte:
