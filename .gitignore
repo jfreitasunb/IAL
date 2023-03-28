@@ -25,3 +25,6 @@ IAL.pdf
 *.synctex(busy)
 listas/lista_modulo_1.pdf
 listas/lista_1_modulo_1.pdf
+*.nav
+apresentacoes/aula_01/apresentacao_curso.pdf
+*.snm
