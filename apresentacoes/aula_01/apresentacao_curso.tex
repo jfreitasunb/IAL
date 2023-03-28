@@ -14,7 +14,7 @@
 \input{../configuracoes_latex/ambientes}
 \input{../configuracoes_latex/comandos_personalizados}
 
-\title{Apresentação do curso e noções iniciais}
+\title{Apresentação do curso e conceitos iniciais}
 \author[\autor]{\autor}
 \institute[\instituto]{\instituto}
 \date{}
@@ -29,40 +29,43 @@
     \begin{frame}
         {\bf Conteúdo a ser visto no curso:}
         \begin{enumerate}[label={\roman*})]
-            \item Matrizes e sistemas lineares.
+            \item Matrizes e sistemas lineares.\pause
 
-            \item Determinantes.
+            \item Determinantes.\pause
 
-            \item Espaços vetoriais.
+            \item Espaços vetoriais.\pause
 
-            \item Transformações Lineares.
+            \item Transformações Lineares.\pause
 
-            \item Autovalores e autovetores.
+            \item Autovalores e autovetores.\pause
 
-            \item Diagonalização de operadores.
+            \item Diagonalização de operadores.\pause
 
-            \item Espaços vetoriais com produto interno.
+            \item Espaços vetoriais com produto interno.\pause
         \end{enumerate}
     \end{frame}
 
     \begin{frame}
         {\bf Bibliografia:}
         \begin{enumerate}[label={\arabic*})]
-            \item H. Anton, C. Rorres: {\it {\'A}lgebra Linear com Aplicações}, $10^a$ Ed., Editora Bookman, 2012.
+            \item H. Anton, C. Rorres: {\it {\'A}lgebra Linear com Aplicações}, $10^a$ Ed., Editora Bookman, 2012.\pause
 
-        \item C. H. Edwards, D. E. Penney: {\it Introdução à Álgebra Linear}, Editora Prentice-Hall do Brasil.
+        \item C. H. Edwards, D. E. Penney: {\it Introdução à Álgebra Linear}, Editora Prentice-Hall do Brasil.\pause
 
-            \item S. Lang: {\it Álgebra Linear}, Editora Moderna, 2003.
+            \item S. Lang: {\it Álgebra Linear}, Editora Moderna, 2003.\pause
 
-            \item T. S. Blyth, E. F. Robertson: {\it Basic Linear Algebra}, $2^a$ Ed., Springer, 2002.
+            \item T. S. Blyth, E. F. Robertson: {\it Basic Linear Algebra}, $2^a$ Ed., Springer, 2002.\pause
         \end{enumerate}
     \end{frame}
 
     \begin{frame}
-        {\bf{Sistema de avaliação:}} Três módulos, 1 avalição por módulo.
-            Nota $M_i$, $i=1$, 2, 3. A nota final ($NF$) de cada estudante ser\'a dada por:
+        {\bf{Sistema de avaliação:}} Três módulos, 1 avalição por módulo.\pause
+
+            Nota $M_i$, $i=1$, 2, 3 para cada prova.\pause
+
+            A nota final ($NF$) de cada estudante ser\'a dada por:\pause
         \[
-            NF = \dfrac{2M_1 + 3M_2 + 4M_3}{9}, \quad 0 \le NF \le 10.
+            NF = \dfrac{2M_1 + 3M_2 + 4M_3}{9}, \quad 0 \le NF \le 10.\pause
         \]
         Ser\'a considerado aprovado o estudante que obtiver $NF \ge 5$.
     \end{frame}
@@ -85,16 +88,16 @@
     \end{frame}
 
     \begin{frame}
-        \begin{definicao}\label{corpo}\index{Corpos}
-	Um conjunto n\~ao vazio $\cp{K}$ \'e chamado de \textbf{corpo} se em $\cp{K}$ podemos definir duas opera\c{c}\~oes, denotadas por $+$ (e chamada de \textbf{adi\c{c}\~ao}) e $\cdot$ (e chamada de \textbf{multiplica\c{c}\~ao}) de modo que
-	\begin{align*}
-            a &+ b \in \cp{K}\\
-	    a &\cdot b \in \cp{K}
-	\end{align*}
-	para todos $a$, $b \in \cp{K}$ e que satisfa\c{c}am as seguintes propriedades:
+        \begin{definicao}
+	    Um conjunto n\~ao vazio $\cp{K}$ \'e chamado de \textbf{corpo} \pause se em $\cp{K}$ podemos definir duas opera\c{c}\~oes, denotadas por $+$ (chamada de \textbf{adi\c{c}\~ao}) \pause e $\cdot$ (chamada de \textbf{multiplica\c{c}\~ao}) \pause de modo que:
+            \begin{align*}
+                a &+ b \in \cp{K}\\
+    	        a &\cdot b \in \cp{K}\pause
+            \end{align*}
+            para todos $a$, $b \in \cp{K}$ \pause e que satisfa\c{c}am as seguintes propriedades:\pause
 	    \begin{enumerate}[label={\roman*})]
-		\item \textbf{Comutatividade da adi\c{c}\~ao}: $a + b = b + a$ para todos $a$, $b \in \cp{K}$;
-		\item \textbf{Associatividade da adi\c{c}\~ao}: $a + (b + c) = (a + b) + c$, para todos $a$, $b$ e $c \in \cp{K}$;
+                \item \textbf{Comutatividade da adi\c{c}\~ao}: para todos $a$, $b \in \cp{K}$, \pause vale: \pause $a + b = b + a$;\pause
+		\item \textbf{Associatividade da adi\c{c}\~ao}: para todos $a$, $b$ e $c \in \cp{K}$ vale: \pause $a + (b + c) = (a + b) + c$;
                 \seti
             \end{enumerate}
         \end{definicao}
@@ -104,14 +107,14 @@
         \begin{definicao}
             \begin{enumerate}[label={\roman*})]
                 \conti
-		\item \textbf{Elemento neutro da adi\c{c}\~ao}: Existe um elemento em $\cp{K}$, denotado por $0_\cp{K}$ ou simplesmente $0$ e chamado de \textbf{elemento neutro da adi\c{c}\~ao}, que satisfaz
+		\item \textbf{Elemento neutro da adi\c{c}\~ao}: Existe um elemento em $\cp{K}$, denotado por $0_\cp{K}$ \pause ou simplesmente $0$ e chamado de \textbf{elemento neutro da adi\c{c}\~ao}, \pause que satisfaz\pause
 		\[
-			a + 0_\cp{K} = a = 0_\cp{K} + a
+                    a + 0_\cp{K} = a\pause = 0_\cp{K} + a\pause
 		\]
-		para todo $a \in \cp{K}$.
-		\item \textbf{Elemento oposto da adi\c{c}\~ao}: Para cada $a \in \cp{K}$, existe um elemento em $\cp{K}$, denotado por $-a$ e chamado de \textbf{oposto} de $a$ ou \textbf{inverso aditivo} de $a$ tal que
+		para todo $a \in \cp{K}$.\pause
+		\item \textbf{Elemento oposto da adi\c{c}\~ao}: Para cada $a \in \cp{K}$, \pause existe um elemento em $\cp{K}$, denotado por $-a$ \pause e chamado de \textbf{oposto} de $a$ \pause ou \textbf{inverso aditivo} de $a$ tal que\pause
 		\[
-			a + (-a) = 0_\cp{K} = (-a) + a.
+                    a + (-a) = 0_\cp{K}\pause = (-a) + a.
 		\]
 
                 \seti
@@ -124,13 +127,8 @@
             \begin{enumerate}[label={\roman*})]
                 \conti
 
-		\item \textbf{Comutatividade da multiplica\c{c}\~ao}: $a \cdot b = b \cdot a$ para todos $a$, $b \in \cp{K}$;
-		\item \textbf{Associatividade da multiplica\c{c}\~ao}: $a \cdot (b \cdot c) = (a \cdot b) \cdot c$, para todos $a$, $b$ e $c \in \cp{K}$;
-		\item \textbf{Elemento neutro da multiplica\c{c}\~ao}: Existe um elemento em $\cp{K}$, denotado por $1_\cp{K}$ ou simplesmente $1$ e chamado de \textbf{elemento neutro da multiplica\c{c}\~ao} ou \textbf{unidade}, que satisfaz
-		\[
-			a \cdot 1_\cp{K} = a = 1_\cp{K} \cdot a
-		\]
-		para todo $a \in \cp{K}$.
+		\item \textbf{Comutatividade da multiplica\c{c}\~ao}: para todos $a$, $b \in \cp{K}$ \pause vale: $a \cdot b = b \cdot a$;\pause
+		\item \textbf{Associatividade da multiplica\c{c}\~ao}: para todos $a$, $b$ e $c \in \cp{K}$\pause vale: $a \cdot (b \cdot c) = (a \cdot b) \cdot c$;\pause
 	
                 \seti
             \end{enumerate}
@@ -142,53 +140,80 @@
             \begin{enumerate}[label={\roman*})]
                 \conti
 
-	\item \textbf{Elemento inverso da multiplica\c{c}\~ao}: Para cada $a \in \cp{K}$, $a \ne 0_{\cp{K}}$, existe um elemento em $\cp{K}$, denotado por $a^{-1}$ e chamado de \textbf{inverso multiplicativo} de $a$
-		tal que
+		\item \textbf{Elemento neutro da multiplica\c{c}\~ao}: Existe um elemento em $\cp{K}$, \pause denotado por $1_\cp{K}$ \pause ou simplesmente $1$ \pause e chamado de \textbf{elemento neutro da multiplica\c{c}\~ao} \pause ou \textbf{unidade}, que satisfaz:\pause
 		\[
-			a \cdot a^{-1} = 1_\cp{K} = a^{-1} \cdot a.
+			a \cdot 1_\cp{K} = a \pause = 1_\cp{K} \cdot a\pause
 		\]
-		\item \textbf{Distributividade da soma em rela\c{c}\~ao \`a multiplica\c{c}\~ao}: $(a + b)\cdot c = a\cdot c + b\cdot c$, para todos $a$, $b$ e $c \in \cp{K}$.
+		para todo $a \in \cp{K}$.\pause
+            \item \textbf{Elemento inverso da multiplica\c{c}\~ao}: Para cada $a \in \cp{K}$, \pause $a \ne 0_{\cp{K}}$, \pause existe um elemento em $\cp{K}$, \pause denotado por $a^{-1}$ \pause e chamado de \textbf{inverso multiplicativo} de $a$ tal que\pause
+		\[
+			a \cdot a^{-1} = 1_\cp{K} \pause = a^{-1} \cdot a.
+		\]
+                \seti
+            \end{enumerate}
+        \end{definicao}
+    \end{frame}
+    
+    \begin{frame}
+        \begin{definicao}
+            \begin{enumerate}[label={\roman*})]
+                \conti
+
+		\item \textbf{Distributividade da soma em rela\c{c}\~ao \`a multiplica\c{c}\~ao}: para todos $a$, $b$ e $c \in \cp{K}$ \pause vale:
+                    \[
+                        (a + b)\cdot c = a\cdot c + b\cdot c.
+                    \]
 	    \end{enumerate}
         \end{definicao}
     \end{frame}
 
     \begin{frame}
-        Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, +, \cdot)$. Quando n\~ao houver chance de confus\~ao em rela\c{c}\~ao \`as opera\c{c}\~oes de soma e multiplica\c{c}\~ao envolvidas no corpo $(\cp{K}, +, \cdot)$, vamos simplesmente dizer que $\cp{K}$ \'e um corpo. Os elementos de um corpo $\cp{K}$ s\~ao chamados de \textbf{escalares}.
+        Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, +, \cdot)$. \pause
+        
+        \vspace{.3cm}
+
+        Quando n\~ao houver chance de confus\~ao em rela\c{c}\~ao \`as opera\c{c}\~oes de soma e multiplica\c{c}\~ao envolvidas no corpo $(\cp{K}, +, \cdot)$, \pause vamos simplesmente dizer que $\cp{K}$ \'e um corpo. \pause
+
+        \vspace{.3cm}
+
+        Os elementos de um corpo $\cp{K}$ s\~ao chamados de \textbf{escalares}.
     \end{frame}
     
     \begin{frame}
     
-        Considere $\cp{K} = \rac$, $\real$ ou
+        Considere $\cp{K} = \rac$, \pause $\real$ \pause ou
         \[
-    	    \complex = \{a + bi \mid a, b \in \real, i^2 = -1\}.
+    	    \complex = \pause \{a + bi \pause \mid a, b \in \real, \pause i^2 = -1\}.\pause
         \]
-        Então vale sempre que:
+        Então vale sempre que:\pause
 
         \begin{enumerate}[label={\roman*})]
-	    \item $x + y = y + x$, para todos $x$, $y \in \cp{K}$;
-            \item $(x + y) + z = x + (y + z)$, para todos $x$, $y$ e $z \in \cp{K}$;
-            \item existe $0$ em $\cp{K}$ tal que $x + 0 = x$ para todo $x \in \cp{K}$;
-            \item para cada $x \in \cp{K}$, existe $y \in \cp{K}$ tal que $x + y = 0$. Tal $y$ é escrito como $y = -x$;
-            \item $xy = yx$ para todos $x$, $y \in \cp{K}$;
-            \item $(xy)z = x(yz)$ para todos $x$, $y$ e $z \in \cp{K}$;
-            \item existe $1 \in \cp{K}$ tal que $1x = x$ para todo $x \in \cp{K}$
-            \item para todo $x \in \cp{K}$, $x \ne 0$, existe $y \in \cp{K}$ tal que $xy =1$. Tal $y$ é escrito como $y = x^{-1}$;
-            \item $(x + y)z = xz + yz$ para todos $x$, $y$ e $z \in \cp{K}$.
+	    \item $x + y = y + x$, para todos $x$, $y \in \cp{K}$;\pause
+            \item $(x + y) + z = x + (y + z)$, para todos $x$, $y$ e $z \in \cp{K}$;\pause
+            \item existe $0$ em $\cp{K}$ tal que $x + 0 = x$ para todo $x \in \cp{K}$;\pause
+            \item para cada $x \in \cp{K}$, existe $y \in \cp{K}$ tal que $x + y = 0$. Tal $y$ é escrito como $y = -x$;\pause
+            \item $xy = yx$ para todos $x$, $y \in \cp{K}$;\pause
+            \item $(xy)z = x(yz)$ para todos $x$, $y$ e $z \in \cp{K}$;\pause
+            \item existe $1 \in \cp{K}$ tal que $1x = x$ para todo $x \in \cp{K}$;\pause
+            \item para todo $x \in \cp{K}$, $x \ne 0$, existe $y \in \cp{K}$ tal que $xy =1$. Tal $y$ é escrito como $y = x^{-1}$;\pause
+            \item $(x + y)z = xz + yz$ para todos $x$, $y$ e $z \in \cp{K}$.\pause
         \end{enumerate}
     \end{frame}
     
     \begin{frame}
         \begin{enumerate}[label={\roman*})]
-            \item Assim $(\cp{K}, +, \cdot)$ é um corpo.
+            \item Assim $(\cp{K}, +, \cdot)$ é um corpo.\pause
 
-            \item Durante todo esse curso o conjunto $\cp{K}$ será usado para representar um dos conjuntos: $\rac$, $\real$ ou $\complex$.
+            \vspace{.3cm}
+
+            \item Durante todo esse curso o conjunto $\cp{K}$ será usado para representar um dos conjuntos: $\rac$, $\real$ ou $\complex$.\pause
         \end{enumerate}
     \end{frame}
 
     \begin{frame}
-        Vamos trabalhar também com o conjunto de matrizes com entradas em $\cp{K}$:
+        Vamos trabalhar também com o conjunto de matrizes com entradas em $\cp{K}$:\pause
         \[
-            M_{m \times n}(\cp{K}) = 
+            M_{p \times q}(\cp{K}) = 
             \left\{
                 \begin{bmatrix}
                     a_{11} & a_{12} & \cdots & a_{1n}\\
@@ -196,15 +221,17 @@
 		    \vdots & & & \vdots\\
 		    a_{m1} & a_{m2} & \cdots & a_{mn}
                 \end{bmatrix}
-                \mid a_{ij} \in \cp{K},\ 1 \le i \le m,\ 1 \le j \le n
-	    \right\}
+                \mid a_{ij} \in \cp{K},\ 1 \le i \le p,\ 1 \le j \le q
+	    \right\}\pause
         \]
+    \end{frame}
 
-        Em $M_{r\times s}(\cp{K})$ vamos admitir definidas as operações de soma de matrizes e multiplicação de matriz por escalar.
+    \begin{frame}
+        Em $M_{p\times q}(\cp{K})$ vamos admitir definidas as operações de soma de matrizes \pause e multiplicação de matriz por escalar.\pause
 
-        Vamos também admitir as seguintes propriedades como verdadeiras:
+        Vamos também admitir as seguintes propriedades como verdadeiras:\pause
         \begin{proposicao}
-            Dadas matrizes $A$, $B$ e $C \in M_{n\times n}(\cp{K})$ e escalares $\alpha$, $\lambda \in \cp{K}$ vale:
+            Dadas matrizes $A$, $B$ e $C \in M_{p\times q}(\cp{K})$ \pause e escalares $\alpha$, $\lambda \in \cp{K}$ vale:\pause
             \begin{enumerate}[label={\roman*})]
                 \item $(A + B) + C = A + (B + C)$
                 \item $A + B = B + A$
