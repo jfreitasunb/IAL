@@ -133,25 +133,25 @@ Durante o restante dessas notas o conjunto $\cp{K}$ representará um dos conjunt
 
 Aqui vamos recordar algumas propriedades b\'asicas de matrizes. Para isso seja $\cp{K}$ um corpo.\index{Matriz}
 
-Sejam $m$, $n$ dois inteiros positivos. Uma \textbf{matriz $m$ por $n$ $A$ sobre $\cp{K}$} \'e dada por $m \times n$ valores $a_{ij} \in K$, com $1 \le i \le m$, $1 \le j \le n$ agrupadas em $m$ linhas e $n$ colunas, que ser\'a representada por
+Sejam $p$, $q$ dois inteiros positivos. Uma \textbf{matriz $p$ por $q$ $A$ sobre $\cp{K}$} \'e dada por $p \times q$ valores $a_{ij} \in K$, com $1 \le i \le p$, $1 \le j \le q$ agrupadas em $p$ linhas e $q$ colunas, que ser\'a representada por
 \[
-	A = (a_{ij})_{m\times n} = \begin{pmatrix}
-		a_{11} & a_{12} & \cdots & a_{1n}\\
-		a_{21} & a_{22} & \cdots & a_{2n}\\
+	A = (a_{ij})_{p\times q} = \begin{pmatrix}
+		a_{11} & a_{12} & \cdots & a_{1q}\\
+		a_{21} & a_{22} & \cdots & a_{2q}\\
 		\vdots & & & \vdots\\
-		a_{m1} & a_{m2} & \cdots & a_{mn}
+		a_{p1} & a_{p2} & \cdots & a_{pq}
 	\end{pmatrix} \quad\mbox{ou}\quad
-	A = (a_{ij})_{m\times n} = \begin{bmatrix}
-		a_{11} & a_{12} & \cdots & a_{1n}\\
-		a_{21} & a_{22} & \cdots & a_{2n}\\
+	A = [a_{ij}]_{p\times q} = \begin{bmatrix}
+		a_{11} & a_{12} & \cdots & a_{1q}\\
+		a_{21} & a_{22} & \cdots & a_{2q}\\
 		\vdots & & & \vdots\\
-		a_{m1} & a_{m2} & \cdots & a_{mn}
+		a_{p1} & a_{p2} & \cdots & a_{pq}
 	\end{bmatrix}.
 \]
 
 Neste caso $A$ denota a matriz em si e o elemento de $A$ que ocorre na linha \textbf{i} e na coluna \textbf{j} é representado por $a_{ij}$.
 
-Uma matriz $A$ com $m$ linhas e $n$ colunas é dita possuir \textbf{ordem}\index{Matriz!ordem}, ou \textbf{tamanho}, $m \times n$.
+Uma matriz $A$ com $p$ linhas e $q$ colunas é dita possuir \textbf{ordem}\index{Matriz!ordem}, ou \textbf{tamanho}, $p\times q$.
 
 \begin{exemplo}
 	A matriz $A$ dada a seguir:
@@ -177,36 +177,35 @@ Uma matriz $A$ com $m$ linhas e $n$ colunas é dita possuir \textbf{ordem}\index
 \begin{definicao}
 	Seja
 	\[
-		A = (a_{ij})_{m\times n} = \begin{bmatrix}
-			a_{11} & a_{12} & \cdots & a_{1n}\\
-			a_{21} & a_{22} & \cdots & a_{2n}\\
+		A = (a_{ij})_{p\times q} = \begin{bmatrix}
+			a_{11} & a_{12} & \cdots & a_{1q}\\
+			a_{21} & a_{22} & \cdots & a_{2q}\\
 			\vdots & & & \vdots\\
-			a_{m1} & a_{m2} & \cdots & a_{mn}
+			a_{p1} & a_{p2} & \cdots & a_{pq}
 		\end{bmatrix}
 	\]
-	uma matriz de ordem $m \times n$ com entradas num corpo $\cp{K}$.
+	uma matriz de ordem $p\times q$ com entradas num corpo $\cp{K}$.
 
 	\begin{enumerate}
-		\item Se $m \ne n$, $A$ é chamada de uma \textbf{matriz retangular}.\index{Matriz!retangular}
+		\item Se $p \ne q$, $A$ é chamada de uma \textbf{matriz retangular}.\index{Matriz!retangular}
 
-		\item Se $A$ tem ordem $m \times 1$, isto é, se $A$ possui $m$ linhas e somente \textbf{uma coluna}, dizemos que $A$ é uma \textbf{matriz coluna}\index{Matriz!coluna}. Nesse caso $A$ tem a forma:
+		\item Se $A$ tem ordem $p \times 1$, isto é, se $A$ possui $p$ linhas e somente \textbf{uma coluna}, dizemos que $A$ é uma \textbf{matriz coluna}\index{Matriz!coluna}. Nesse caso $A$ tem a forma:
 		\[
-			A = \begin{pmatrix}a_{11}\\a_{21}\\\vdots\\a_{m - 11}\\a_{m1}\end{pmatrix}.
+			A = \begin{pmatrix}a_{11}\\a_{21}\\\vdots\\a_{p - 11}\\a_{p1}\end{pmatrix}.
 		\]
-		\item Se $A$ tem ordem $1 \times n$, isto é, se $A$ possui somente \textbf{uma linhas} e $n$ colunas, dizemos que $A$ é uma \textbf{matriz linha}\index{Matriz!linha}. Nesse caso $A$ tem a forma:
+		\item Se $A$ tem ordem $1 \times q$, isto é, se $A$ possui somente \textbf{uma linhas} e $q$ colunas, dizemos que $A$ é uma \textbf{matriz linha}\index{Matriz!linha}. Nesse caso $A$ tem a forma:
 		\[
-			A = \begin{pmatrix}a_{11} & a_{12} & \cdots & a_{1n-1} & a_{1n}\end{pmatrix}.
+			A = \begin{pmatrix}a_{11} & a_{12} & \cdots & a_{1n-1} & a_{1q}\end{pmatrix}.
 		\]
-		\item Se $m = n$, então $A$ é chamada de \textbf{matriz quadrada} e a ordem de $A$ é $n \times n$ ou simplesmente $n$. Neste caso $A$ tem a forma:
+		\item Se $p = q$, então $A$ é chamada de \textbf{matriz quadrada} e a ordem de $A$ é $p \times p$ ou simplesmente $p$. Neste caso $A$ tem a forma:
 		\[
-			A = (a_{ij})_{n\times n} = \begin{pmatrix}
-				a_{11} & a_{12} & \cdots & a_{1n}\\
-				a_{21} & a_{22} & \cdots & a_{2n}\\
+			A = (a_{ij})_{p\times p} = \begin{pmatrix}
+				a_{11} & a_{12} & \cdots & a_{1p}\\
+				a_{21} & a_{22} & \cdots & a_{2p}\\
 				\vdots & & & \vdots\\
-				a_{n1} & a_{n2} & \cdots & a_{nn}
+				a_{p1} & a_{p2} & \cdots & a_{pp}
 			\end{pmatrix}.
 		\]
-
 	\end{enumerate}
 \end{definicao}
 
@@ -250,19 +249,19 @@ Uma matriz $A$ com $m$ linhas e $n$ colunas é dita possuir \textbf{ordem}\index
 Seja
 \[
 	A = \begin{bmatrix}
-		a_{11} & a_{21} & \cdots & a_{1n}\\
-		a_{21} & a_{22} & \cdots & a_{2n}\\
+		a_{11} & a_{21} & \cdots & a_{1q}\\
+		a_{21} & a_{22} & \cdots & a_{2q}\\
 		\vdots & \vdots & & \vdots\\
-		a_{m1} & a_{m2} & \cdots & a_{mn}
+		a_{p1} & a_{p2} & \cdots & a_{pq}
 	\end{bmatrix}
 \]
-uma matriz de ordem $m \times n$. Denotamos a $i$-ésima linha, $1 \le i \le m$, de $A$ por
+uma matriz de ordem $p\times q$. Denotamos a $i$-ésima linha, $1 \le i \le p$, de $A$ por
 \[
-	A_i = \begin{bmatrix}a_{i1} & a_{i2} & \cdots & a_{in}\end{bmatrix}.
+	A_i = \begin{bmatrix}a_{i1} & a_{i2} & \cdots & a_{iq}\end{bmatrix}.
 \]
-Denotamos a $j$-ésima coluna, $1 \le j \le n$, de $A$ por
+Denotamos a $j$-ésima coluna, $1 \le j \le q$, de $A$ por
 \[
-	A^j = \begin{bmatrix}a_{1j} \\ a_{2j} \\ \vdots \\ a_{mj}\end{bmatrix}.
+	A^j = \begin{bmatrix}a_{1j} \\ a_{2j} \\ \vdots \\ a_{pj}\end{bmatrix}.
 \]
 
 \begin{exemplo}
@@ -292,23 +291,23 @@ Denotamos a $j$-ésima coluna, $1 \le j \le n$, de $A$ por
 	\end{align*}
 \end{exemplo}
 
-Dada uma matriz quadrada de ordem $n$
+Dada uma matriz quadrada de ordem $p$
 \[
 	A = \begin{pmatrix}
-		a_{11} & a_{21} & \cdots & a_{1n}\\
-		a_{21} & a_{22} & \cdots & a_{2n}\\
+		a_{11} & a_{21} & \cdots & a_{1p}\\
+		a_{21} & a_{22} & \cdots & a_{2p}\\
 		\vdots & \vdots & & \vdots\\
-		a_{n1} & a_{n2} & \cdots & a_{nn}
+		a_{p1} & a_{p2} & \cdots & a_{pp}
 	\end{pmatrix}
 \]
 os elementos $a_{ij}$ de $A$ com $i = j$ formam a \textbf{diagonal princial} de $A$:\index{Matriz!diagonal principal}
 \[
 	\begin{pmatrix}
-		\tikzmarknode{top}{a_{11}} & a_{12} & a_{13} & \cdots  & a_{1n}\\
+		\tikzmarknode{top}{a_{11}} & a_{12} & a_{13} & \cdots  & a_{1p}\\
 		a_{21} & a_{22} \phantom{-} & a_{23} & \cdots  & a_{2n}\\
-		a_{31} & a_{32}\phantom{-} & a_{33} \phantom{-1} & \cdots  & a_{3n}\\
+		a_{31} & a_{32}\phantom{-} & a_{33} \phantom{-1} & \cdots  & a_{3p}\\
 		\vdots  & \vdots   & \vdots  & \vdots  & \vdots\\
-		a_{n1} & a_{n2} & a_{n3} & \cdots  & \tikzmarknode{bottom}{a_{nn}}\\
+		a_{p1} & a_{p2} & a_{p3} & \cdots  & \tikzmarknode{bottom}{a_{pp}}\\
 	\end{pmatrix}
 \]
 
@@ -316,14 +315,14 @@ os elementos $a_{ij}$ de $A$ com $i = j$ formam a \textbf{diagonal princial} de 
 	\draw[red, opacity=.5, line width=5mm, line cap=round] (top.north west) -- (bottom.south east);
 \end{tikzpicture}
 
-Os elementos $a_{ij}$ com $i + j = n + 1$ formam a \textbf{diagonal secundária} de $A$:\index{Matriz!diagonal secundária}
+Os elementos $a_{ij}$ com $i + j = p + 1$ formam a \textbf{diagonal secundária} de $A$:\index{Matriz!diagonal secundária}
 \[
 	\begin{pmatrix}
-		a_{11} & a_{12} & a_{13} & \cdots  & a_{1n-1} & \tikzmarknode{top_right}{a_{1n}}\\
-		a_{21} & a_{22} & a_{23} & \cdots  & a_{2n-1} & a_{2n}\\
-		a_{31} & a_{32} & a_{33} & \cdots  & \phantom{-}a_{3n-1} & a_{3n}\\
+		a_{11} & a_{12} & a_{13} & \cdots  & a_{1p-1} & \tikzmarknode{top_right}{a_{1p}}\\
+		a_{21} & a_{22} & a_{23} & \cdots  & a_{2p-1} & a_{2p}\\
+		a_{31} & a_{32} & a_{33} & \cdots  & \phantom{-}a_{3p-1} & a_{3p}\\
 		\vdots  & \vdots   & \vdots  & \vdots  & \vdots\\
-		\tikzmarknode{bottom_left}{a_{n1}} & \phantom{-} a_{n2} & a_{n3} & \cdots  & a_{nn-1} & {a_{nn}}\\
+		\tikzmarknode{bottom_left}{a_{p1}} & \phantom{-} a_{p2} & a_{p3} & \cdots  & a_{pp-1} & {a_{pp}}\\
 	\end{pmatrix}
 \]
 
@@ -341,7 +340,7 @@ Os elementos $a_{ij}$ com $i + j = n + 1$ formam a \textbf{diagonal secundária}
                 a_{n1} & \cdots & a_{nn}
             \end{bmatrix}
     \]
-    uma matriz quadrada de ordem $n$. Dizemos que:
+    uma matriz quadrada de ordem $p$. Dizemos que:
     \begin{enumerate}
         \item $A$ é uma \textbf{matriz diagonal}\index{Matriz!diagonal} se $a_{ij} = 0$ para todo $i \ne j$. Assim $A$ é uma matriz da forma
             \[
@@ -427,8 +426,7 @@ Os elementos $a_{ij}$ com $i + j = n + 1$ formam a \textbf{diagonal secundária}
 \end{exemplos}
 
 \begin{definicao}
-    Seja $A$ uma matriz de ordem $m \times n$. Dizemos que $A$ é uma \textbf{matriz nula}\index{Matriz!nula} se $a_{ij} = 0$ para todo $1 \le i \le m$ e todo $1 \le j
-    \le n$. Neste caso escrevemos $A_{m \times n} = 0_{m \times n}$.
+    Seja $A$ uma matriz de ordem $p\times q$. Dizemos que $A$ é uma \textbf{matriz nula}\index{Matriz!nula} se $a_{ij} = 0$ para todo $1 \le i \le p$ e todo $1 \le j \le p$. Neste caso escrevemos $A_{p\times q} = 0_{p\times q}$.
 \end{definicao}
 
 \begin{exemplo}
@@ -440,13 +438,13 @@ Os elementos $a_{ij}$ com $i + j = n + 1$ formam a \textbf{diagonal secundária}
 \end{exemplo}
 
 \begin{notacao}
-	Denotaremos o conjunto de todas as matrizes $m \times n$ sobre $\cp{K}$ por $M_{m\times n}(\cp{K})$, onde $\cp{K} = \rac$, $\real$ ou $\complex$. Assim
+	Denotaremos o conjunto de todas as matrizes $p\times q$ sobre $\cp{K}$ por $M_{p\times q}(\cp{K})$, onde $\cp{K} = \rac$, $\real$ ou $\complex$. Assim
 	\[
-		M_{m \times n}(\cp{K}) = \left\{\begin{bmatrix}
-			a_{11} & a_{12} & \cdots & a_{1n}\\
-			a_{21} & a_{22} & \cdots & a_{2n}\\
+		M_{p\times q}(\cp{K}) = \left\{\begin{bmatrix}
+			a_{11} & a_{12} & \cdots & a_{1p}\\
+			a_{21} & a_{22} & \cdots & a_{2p}\\
 			\vdots & & & \vdots\\
-		a_{m1} & a_{m2} & \cdots & a_{mn}\end{bmatrix} \mid a_{ij} \in \cp{K},\ 1 \le i \le m,\ 1 \le j \le n
+			a_{p1} & a_{p2} & \cdots & a_{pq}\end{bmatrix} \mid a_{ij} \in \cp{K},\ 1 \le i \le p,\ 1 \le j \le q
 		\right\}
 	\]
 \end{notacao}
@@ -457,56 +455,56 @@ Por exemplo,
 \]
 
 
-No caso em que $m = n$ iremos escrever simplesmente
+No caso em que $p = q = n$ iremos escrever simplesmente
 \[
 	M_{n\times n}(\cp{K}) = M_n(\cp{K}).
 \]
 
 Nesse conjunto podemos definir as seguintes opera\c{c}\~oes:
 \begin{enumerate}
-    \item \textit{Igualdade de matrizes:}\index{Matriz!igualdade} Sejam $A = (a_{ij})$ e $B = (b_{ij})$ matrizes em $M_{m \times n}(\cp{K})$. Então dizemos que $A$
-        e $B$ são \textbf{iguais} quando $a_{ij} = b_{ij}$ para todo $1 \le i \le m$ e todo $1 \le j \le n$.
+    \item \textit{Igualdade de matrizes:}\index{Matriz!igualdade} Sejam $A = (a_{ij})$ e $B = (b_{ij})$ matrizes em $M_{p\times q}(\cp{K})$. Então dizemos que $A$
+        e $B$ são \textbf{iguais} quando $a_{ij} = b_{ij}$ para todo $1 \le i \le p$ e todo $1 \le j \le q$.
 
-    \item \textit{Soma de matrizes:}\index{Matrizes!soma} Se $A = (a_{ij})$, $B = (b_{ij}) \in M_{m\times n}(\cp{K})$, ent\~ao a
-        \textbf{soma} $A + B$ \'e a matriz $C = (c_{ij}) \in M_{m\times n}(\cp{K})$, tal que, para cada par $(i,j)$ temos $c_{ij} = a_{ij} + b_{ij}$, ou seja,
+    \item \textit{Soma de matrizes:}\index{Matrizes!soma} Se $A = (a_{ij})$, $B = (b_{ij}) \in M_{p\times q}(\cp{K})$, ent\~ao a
+        \textbf{soma} $A + B$ \'e a matriz $C = (c_{ij}) \in M_{p\times q}(\cp{K})$, tal que, para cada par $(i,j)$ temos $c_{ij} = a_{ij} + b_{ij}$, ou seja,
 	\begin{align*}
 		C = A + B &= \begin{pmatrix}
-		a_{11} & a_{12} & \cdots & a_{1n}\\
-		a_{21} & a_{22} & \cdots & a_{2n}\\
+		a_{11} & a_{12} & \cdots & a_{1q}\\
+		a_{21} & a_{22} & \cdots & a_{2q}\\
 		\vdots & & & \vdots\\
-		a_{m1} & a_{m2} & \cdots & a_{mn}
+		a_{p1} & a_{p2} & \cdots & a_{pq}
 	\end{pmatrix} + \begin{pmatrix}
-		b_{11} & b_{12} & \cdots & b_{1n}\\
-		b_{21} & b_{22} & \cdots & b_{2n}\\
+		b_{11} & b_{12} & \cdots & b_{1q}\\
+		b_{21} & b_{22} & \cdots & b_{2q}\\
 		\vdots & & & \vdots\\
-		b_{m1} & b_{m2} & \cdots & b_{mn}
+		b_{p1} & b_{p2} & \cdots & b_{pq}
 	\end{pmatrix}\\ &= \begin{pmatrix}
-		a_{11} + b_{11} & a_{12} + b_{12} & \cdots & a_{1n} + b_{1n}\\
-		a_{21} + b_{21} & a_{22} + b_{22}& \cdots & a_{2n} + b_{1n}\\
+		a_{11} + b_{11} & a_{12} + b_{12} & \cdots & a_{1q} + b_{1q}\\
+		a_{21} + b_{21} & a_{22} + b_{22}& \cdots & a_{2q} + b_{1q}\\
 		\vdots & & & \vdots\\
-		a_{m1} + b_{m1} & a_{m2} + b_{m2}& \cdots & a_{mn} + b_{mn}
+		a_{p1} + b_{p1} & a_{p2} + b_{p2}& \cdots & a_{pq} + b_{pq}
 	\end{pmatrix}
 	\end{align*}
 
-    \item \textit{Diferença de matrizes:}\index{Matrizes!diferença} Se $A = (a_{ij})$, $B = (b_{ij}) \in M_{m\times n}(\cp{K})$, ent\~ao a
-        \textbf{diferença} $A - B$ \'e a matriz $C = (c_{ij}) \in M_{m\times n}(\cp{K})$, tal que, para cada par $(i,j)$ temos $c_{ij} =
+    \item \textit{Diferença de matrizes:}\index{Matrizes!diferença} Se $A = (a_{ij})$, $B = (b_{ij}) \in M_{p\times q}(\cp{K})$, ent\~ao a
+        \textbf{diferença} $A - B$ \'e a matriz $C = (c_{ij}) \in M_{p\times q}(\cp{K})$, tal que, para cada par $(i,j)$ temos $c_{ij} =
         a_{ij} - b_{ij}$, ou seja,
 	\begin{align*}
 		C = A - B &= \begin{pmatrix}
-		a_{11} & a_{12} & \cdots & a_{1n}\\
-		a_{21} & a_{22} & \cdots & a_{2n}\\
+		a_{11} & a_{12} & \cdots & a_{1q}\\
+		a_{21} & a_{22} & \cdots & a_{2q}\\
 		\vdots & & & \vdots\\
-		a_{m1} & a_{m2} & \cdots & a_{mn}
+		a_{p1} & a_{p2} & \cdots & a_{pq}
 	\end{pmatrix} - \begin{pmatrix}
 		b_{11} & b_{12} & \cdots & b_{1n}\\
 		b_{21} & b_{22} & \cdots & b_{2n}\\
 		\vdots & & & \vdots\\
-		b_{m1} & b_{m2} & \cdots & b_{mn}
+		b_{p1} & b_{p2} & \cdots & b_{pq}
 	\end{pmatrix}\\ &= \begin{pmatrix}
-		a_{11} - b_{11} & a_{12} - b_{12} & \cdots & a_{1n} - b_{1n}\\
-		a_{21} - b_{21} & a_{22} - b_{22}& \cdots & a_{2n} - b_{1n}\\
+		a_{11} - b_{11} & a_{12} - b_{12} & \cdots & a_{1q} - b_{1q}\\
+		a_{21} - b_{21} & a_{22} - b_{22}& \cdots & a_{2q} - b_{1q}\\
 		\vdots & & & \vdots\\
-		a_{m1} - b_{m1} & a_{m2} - b_{m2}& \cdots & a_{mn} - b_{mn}
+		a_{p1} - b_{p1} & a_{p2} - b_{p2}& \cdots & a_{pq} - b_{pq}
 	\end{pmatrix}
 	\end{align*}
 \end{enumerate}
@@ -526,12 +524,12 @@ Nesse conjunto podemos definir as seguintes opera\c{c}\~oes:
 \end{exemplo}
 
 \begin{proposicao}
-	Dadas matrizes $A$, $B$ e $C \in M_{n\times n}(\cp{K})$ vale:
+	Dadas matrizes $A$, $B$ e $C \in M_{p\times q}(\cp{K})$ vale:
 	\begin{enumerate}[label={\roman*})]
 		\item $(A + B) + C = A + (B + C)$
 		\item $A + B = B + A$
-        \item $0_{m \times n} + A = A = A + 0_{m \times n}$
-        \item $A - A = 0_{m \times n}$.
+        \item $0_{p\times q} + A = A = A + 0_{p\times q}$
+        \item $A - A = 0_{p\times q}$.
 	\end{enumerate}
 \end{proposicao}
 
@@ -540,18 +538,18 @@ Nesse conjunto podemos definir as seguintes opera\c{c}\~oes:
 \end{observacao}
 
 \begin{definicao}
-    Seja $A = (a_{ij}) \in M_{m\times n}(\cp{K})$ e $\lambda \in \cp{K}$ definimos o \textbf{produto escalar}\index{Matriz!produto escalar} de $\lambda$ por $A$ como sendo a matriz $B = (b_{ij}) \in M_{m\times n}(\cp{K})$ onde para cada para $(i,j)$ $b_{ij} = \lambda a_{ij}$:
+    Seja $A = (a_{ij}) \in M_{p\times q}(\cp{K})$ e $\lambda \in \cp{K}$ definimos o \textbf{produto escalar}\index{Matriz!produto escalar} de $\lambda$ por $A$ como sendo a matriz $B = (b_{ij}) \in M_{p\times q}(\cp{K})$ onde para cada para $(i,j)$ temos $b_{ij} = \lambda a_{ij}$:
 	\begin{align*}
 		\lambda A = \lambda \begin{pmatrix}
-		a_{11} & a_{12} & \cdots & a_{1n}\\
-		a_{21} & a_{22} & \cdots & a_{2n}\\
+		a_{11} & a_{12} & \cdots & a_{1q}\\
+		a_{21} & a_{22} & \cdots & a_{2q}\\
 		\vdots & & & \vdots\\
-		a_{m1} & a_{m2} & \cdots & a_{mn}
+		a_{p1} & a_{p2} & \cdots & a_{pq}
 	\end{pmatrix} = \begin{pmatrix}
-		\lambda a_{11} & \lambda a_{12} & \cdots & \lambda a_{1n}\\
-		\lambda a_{21} & \lambda a_{22} & \cdots & \lambda a_{2n}\\
+		\lambda a_{11} & \lambda a_{12} & \cdots & \lambda a_{1q}\\
+		\lambda a_{21} & \lambda a_{22} & \cdots & \lambda a_{2q}\\
 		\vdots & & & \vdots\\
-		\lambda a_{m1} & \lambda a_{m2} & \cdots & \lambda a_{mn}
+		\lambda a_{p1} & \lambda a_{p2} & \cdots & \lambda a_{pq}
 	\end{pmatrix}.
 	\end{align*}
 \end{definicao}
@@ -573,18 +571,18 @@ Nesse conjunto podemos definir as seguintes opera\c{c}\~oes:
 \end{exemplo}
 
 \begin{proposicao}
-    Sejam $A \in M_{m\times n}(\cp{K})$ e  $B \in M_{m\times n}(\cp{K})$ e $\alpha$, $\lambda \in \cp{K}$, ent\~ao:
+    Sejam $A \in M_{p\times q}(\cp{K})$ e  $B \in M_{p\times q}(\cp{K})$ e $\alpha$, $\lambda \in \cp{K}$, ent\~ao:
 	\begin{enumerate}[label={\roman*})]
 		\item $(\alpha\lambda) A = \alpha(\lambda A) = \lambda(\alpha A)$
 		\item $(\alpha + \lambda)A = \alpha A + \lambda A$
         \item $\alpha(A + B) = \alpha A + \alpha B$
         \item $1A = A$ e $(-1)A = -A$
-        \item  $0A = 0_{m \times n}$
+        \item  $0A = 0_{p\times q}$
 	\end{enumerate}
 \end{proposicao}
 
 \begin{observacao}
-    Dadas matrizes $A_1$, $A_2$, \dots, $A_l \in M_{m \times n}(\cp{K})$ e escalares $\lambda_1$, $\lambda_2$, \dots, $\lambda_l \in \cp{K}$
+    Dadas matrizes $A_1$, $A_2$, \dots, $A_l \in M_{p\times q}(\cp{K})$ e escalares $\lambda_1$, $\lambda_2$, \dots, $\lambda_l \in \cp{K}$
     podemos definir a soma
     \[
         \lambda_1 A_1 + \lambda_2 A_2 + \cdots + \lambda_l A_l
@@ -602,8 +600,8 @@ Nesse conjunto podemos definir as seguintes opera\c{c}\~oes:
 \end{observacao}
 
 \begin{definicao}
-    Seja $A = (a_{ij})_{m \times n}$ uma matriz de ordem $m \times n$. A \textbf{matriz transposta}\index{Matriz!transposta} é a matriz
-    denotada por $A^T = (b_{ij})$ com $b_{ij} = a_{ji}$ para todo $1 \le i \le n$, $1 \le j \le m$, de ordem $n \times m$.
+    Seja $A = (a_{ij})_{p\times q}$ uma matriz de ordem $p\times q$. A \textbf{matriz transposta}\index{Matriz!transposta} é a matriz
+    denotada por $A^T = (b_{ij})$ com $b_{ij} = a_{ji}$ para todo $1 \le i \le p$, $1 \le j \le q$, de ordem $q \times p$.
 \end{definicao}
 
 \begin{exemplos}
@@ -663,7 +661,7 @@ Nesse conjunto podemos definir as seguintes opera\c{c}\~oes:
 
 
 \begin{proposicao}
-    Sejam $A$, $B \in M_{m \times n}(\cp{K})$ e $\alpha \in \cp{K}$. Então:
+    Sejam $A$, $B \in M_{p\times q}(\cp{K})$ e $\alpha \in \cp{K}$. Então:
     \begin{enumerate}
         \item $(A^T)^T = A$
 
@@ -676,7 +674,7 @@ Nesse conjunto podemos definir as seguintes opera\c{c}\~oes:
 \end{proposicao}
 
 \begin{definicao}
-    Seja $A \in M_n(\cp{K})$. Definimos o \textbf{traço}\index{Matriz!traço} como o escalar dado por
+    Seja $A \in M_n(\cp{K})$. Definimos o \textbf{traço}\index{Matriz!traço} da matriz $A$ como o escalar dado por
     \[
         \tr{A} = a_{11} + a_{22} + \cdots + a_{nn},
     \]
@@ -793,31 +791,31 @@ Nesse conjunto podemos definir as seguintes opera\c{c}\~oes:
 
 
 \begin{definicao}
-	Sejam $A = (a_{ij}) \in M_{m\times n}(\cp{K})$ e $B = (b_{ij}) \in M_{n\times p}(\cp{K})$, definimos o \textbf{produto de $A$ por
-    $B$}\index{Matrizes!produto de} como sendo a matriz $C = (c_{ij}) \in M_{m\times p}(\cp{K})$ tal que
+	Sejam $A = (a_{ij}) \in M_{p\times q}(\cp{K})$ e $B = (b_{ij}) \in M_{q\times r}(\cp{K})$, definimos o \textbf{produto de $A$ por
+    $B$}\index{Matrizes!produto de} como sendo a matriz $C = (c_{ij}) \in M_{p\times r}(\cp{K})$ tal que
 	\[
-        c_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{in}b_{nj},
+        c_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{iq}b_{qj},
 	\]
-	para $i = 1$, \dots, $m$ e $j = 1$, \dots, $p$. Isto \'e,
+	para $i = 1$, \dots, $p$ e $j = 1$, \dots, $r$. Isto \'e,
 	\begin{align*}
 		A\cdot B &= \begin{pmatrix}
-		a_{11} & a_{12} & \cdots & a_{1n}\\
-		a_{21} & a_{22} & \cdots & a_{2n}\\
+		a_{11} & a_{12} & \cdots & a_{1q}\\
+		a_{21} & a_{22} & \cdots & a_{2q}\\
 		\vdots & & & \vdots\\
-		a_{m1} & a_{m2} & \cdots & a_{mn}
+		a_{p1} & a_{p2} & \cdots & a_{pq}
 	\end{pmatrix}\cdot \begin{pmatrix}
-		b_{11} & b_{12} & \cdots & b_{1p}\\
-		b_{21} & b_{22} & \cdots & b_{2p}\\
+		b_{11} & b_{12} & \cdots & b_{1r}\\
+		b_{21} & b_{22} & \cdots & b_{2r}\\
 		\vdots & & & \vdots\\
-		b_{n1} & b_{n2} & \cdots & b_{np}
+		b_{q1} & b_{q2} & \cdots & b_{qr}
         \end{pmatrix} \\ &= \begin{pmatrix}
-        a_{11}b_{11} + a_{12}b_{21} + \cdots + a_{1n}b_{n1} & a_{11}b_{12} + a_{12}b_{22} + \cdots + a_{1n}b_{n2} & \dots & a_{11}b_{1p} +
-        a_{12}b_{2p} + \\ & & & \cdots + a_{1n}b_{np}\\
-        a_{21}b_{11} + a_{22}b_{21} + \cdots + a_{2n}b_{n1} & a_{21}b_{12} + a_{22}b_{22} + \cdots + a_{2n}b_{n2} & \dots & a_{21}b_{1p} +
-        a_{12}b_{2p} +\\ & & & \cdots + a_{1n}b_{np}\\
+        a_{11}b_{11} + a_{12}b_{21} + \cdots + a_{1q}b_{q1} & a_{11}b_{12} + a_{12}b_{22} + \cdots + a_{1q}b_{q2} & \dots & a_{11}b_{1r} +
+        a_{12}b_{2r} + \\ & & & \cdots + a_{1r}b_{qr}\\
+        a_{21}b_{11} + a_{22}b_{21} + \cdots + a_{2q}b_{q1} & a_{21}b_{12} + a_{22}b_{22} + \cdots + a_{2q}b_{q2} & \dots & a_{21}b_{1r} +
+        a_{12}b_{2r} +\\ & & & \cdots + a_{1q}b_{qr}\\
         \vdots & \vdots & \cdots & \vdots\\
-         a_{m1}b_{11} + a_{m2}b_{21} + \cdots + a_{mn}b_{n1} & a_{m1}b_{12} + a_{m2}b_{22} + \cdots + a_{mn}b_{n2} & \dots & a_{m1}b_{1p} +
-         a_{m2}b_{2p} + \\ & & & \cdots + a_{mn}b_{np}\\
+         a_{p1}b_{11} + a_{p2}b_{21} + \cdots + a_{pq}b_{n1} & a_{p1}b_{12} + a_{p2}b_{22} + \cdots + a_{pq}b_{q2} & \dots & a_{p1}b_{1r} +
+         a_{p2}b_{2r} + \\ & & & \cdots + a_{pq}b_{qr}\\
         \end{pmatrix}
 	\end{align*}
 \end{definicao}
