@@ -29,7 +29,7 @@
     \end{align*}
     Encontre:
     \begin{multicols}{3}
-        \begin{enumerate}[label={\arabic*})]
+        \begin{enumerate}[label={\alph*})]
             \item $A + B$
             \item $3B$
             \item $2A - B$
@@ -54,7 +54,7 @@
     \vspace{.3cm}
 
     \questao{} Nos itens abaixo são dadas duas matrizes $A$ e $B$ e dois números $c$ e $d$. Calcule a matriz $cA + dB$.
-    \begin{enumerate}
+    \begin{enumerate}[label={\alph*})]
         \item $A = \begin{pmatrix}3 & -5\\2 & \phantom{-} 7\end{pmatrix}$, $B = \begin{pmatrix}-1 & \phantom{-} 0\\\phantom{-} 3 & -4\end{pmatrix}$, $c = 3$, $d = 4$
         \item $A = \begin{pmatrix}\phantom{-} 2 & 0 & -3\\-1 & 5 & \phantom{-} 6\end{pmatrix}$, $B = \begin{pmatrix}-2 & 3 & 1\\\phantom{-} 7 & 1 & 5\end{pmatrix}$, $c = 5$, $d = -3$
         \item $A = \begin{pmatrix}5 & \phantom{-} 0\\0 & \phantom{-} 7\\3 & -1\end{pmatrix}$, $B = \begin{pmatrix}-4 & 5\\\phantom{-} 3 & 2\\\phantom{-} 7 & 4\end{pmatrix}$, $c = -2$, $d = 4$
@@ -64,7 +64,7 @@
     \vspace{.3cm}
 
     \questao{}\label{igualdade_de_matrizes} Nos itens abaixo encontre os valores de $a$, $b$, $c$ e $d$ de modo que as igualdades sejam verdadeiras:
-    \begin{enumerate}
+    \begin{enumerate}[label={\alph*})]
         \item $\begin{bmatrix}\phantom{-} a & 3\\-1 & a + b\end{bmatrix} = \begin{bmatrix}4 & d - 2c\\d - 2c & -2\end{bmatrix}$
         \item $\begin{bmatrix}a - b & b + a\\3d + c & 2d - c\end{bmatrix} = \begin{bmatrix}8 & 1\\7 & 6\end{bmatrix}$.
     \end{enumerate}
@@ -81,7 +81,7 @@
     \end{align*}
     Determine quais das operações a seguir estão definidas. Para aquelas que estiverem definidas, determine a ordem da matriz resultante. Quando não estiver definida, explique por que não está definida.
     \begin{multicols}{2}
-        \begin{enumerate}[label={\arabic*})]
+        \begin{enumerate}[label={\alph*})]
             \item $AB$
 
             \item $BC$
@@ -117,7 +117,7 @@
         D = \begin{pmatrix}\phantom{-} 5 & \phantom{-} 0 & 1 & 1\\-3 & \phantom{-} 1 & 4 & 1\\\phantom{-} 2 & \phantom{-} 2 & 0 & 3\\\phantom{-} 1 & -1 & 0 & 0\end{pmatrix}.
     \end{align*}
     Calcule os seguintes produtos:
-    \begin{enumerate}
+    \begin{enumerate}[label={\alph*})]
         \item $(AB)D^t$
         \item $3(A^tB^t) + C^t$
         \item $C^tB$
@@ -126,7 +126,7 @@
     \vspace{.3cm}
     
     \questao{}Para as matrizes do Exercício \ref{operacoes_matrizes} calcule os produtos a seguir, se estiverem definidos.
-    \begin{enumerate}
+    \begin{enumerate}[label={\alph*})]
         \item $E^tA$
         \item $(A^t + E)D$
         \item $C^tB$
@@ -146,7 +146,7 @@
     \vspace{.3cm}
     
     \questao{} Em cada item abaixo, encontre a matriz $A = (a_{ij})$ de ordem $4 \times 4$ satisfazendo a condição dada.
-    \begin{enumerate}
+    \begin{enumerate}[label={\alph*})]
         \item $a_{ij} = i + j$
         \item $a_{ij} = i^{j - 1}$
         \item $a_{ij} = \begin{cases}1 & \mbox{ se } |i - j| <1\\-1 & \mbox{ se } |i - j| \le 1\end{cases}$
@@ -155,7 +155,7 @@
     \vspace{.3cm}
 
     \questao{} Em cada item abaixo, encontre uma matriz $A = (a_{ij})$ de ordem $5 \times 5$ satisfazendo a condição dada. Dê um exemplo com números e também escreva a forma geral usando letras ao invés de números.
-    \begin{enumerate}
+    \begin{enumerate}[label={\alph*})]
         \item $a_{ij} = 0$ se $i \ne j$
         \item $a_{ij} = 0$ se $i > j$
         \item $a_{ij} = 0$ se $i < j$
@@ -174,7 +174,7 @@
     \vspace{.3cm}
 
     \questao{} Calcule o \textit{traço} das seguintes matrizes:
-    \begin{enumerate}
+    \begin{enumerate}[label={\alph*})]
         \item $A = \begin{pmatrix}2 & \phantom{-} 3 & \phantom{-} 0\\1 & -2 & -3\\3 & -5 & \phantom{-} 2\end{pmatrix}$
         \item $B = \begin{pmatrix}\phantom{-} 5 & \phantom{-} 3 & 0 & \phantom{-} 2 & \phantom{-} 4\\-1 & \phantom{-} 1 & 0 & \phantom{-} 2 & -8\\\phantom{-} 0 & -5 & 2 & \phantom{-} 0 & -1\\\phantom{-} 2 & \phantom{-} 3 & 4 & -3 & -3\end{pmatrix}$
         \item $C = \begin{pmatrix}1 & \phantom{-} 0 & \phantom{-} 0 & 0\\0 & -2 & -3 & 1\\2 & \phantom{-} 4 & -2 & 2\\4 & -1 & \phantom{-} 3 & 0\end{pmatrix}$
@@ -186,7 +186,7 @@
         \[
             A = \begin{pmatrix}a & b & -5\\c & d & \phantom{-} 0\\5 & 0 & \phantom{-} 0\end{pmatrix}.
         \]
-        \begin{enumerate}
+        \begin{enumerate}[label={\alph*})]
             \item Se $A$ é simétrica, encontre o valor de $2a + b + c - 3d$.
             \item Se $A$ é anti-simétrica, encontre o valor de $2a + b + c - 3d$.
         \end{enumerate}
