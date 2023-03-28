@@ -1,0 +1,77 @@
+%!TEX program = xelatex
+\def\ano{2023}
+\def\semestre{1}
+\def\disciplina{Introdução à Álgebra Linear}
+\def\turma{3}
+\def\autor{Jos\'e Ant\^onio O. Freitas}
+\def\instituto{MAT-UnB}
+
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+% \mode<presentation>
+\input{../configuracoes_latex/pacotes}
+\input{../configuracoes_latex/ambientes}
+\input{../configuracoes_latex/comandos_personalizados}
+
+\title{Apresentação do curso e noções iniciais}
+\author[\autor]{\autor}
+\institute[\instituto]{\instituto}
+\date{}
+
+\begin{document}
+    \begin{frame}
+        \maketitle
+    \end{frame}
+
+    \logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
+
+    \begin{frame}
+        \textbf{Conteúdo a ser visto no curso:}
+        \begin{enumerate}[label={\roman*})]
+            \item Matrizes e sistemas lineares. Determinantes.
+
+            \item Espaços vetoriais. Transformações Lineares.
+
+            \item Autovalores e autovetores. Diagonalização de operadores. Espaços vetoriais com produto interno.
+        \end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+        {\bf Bibliografia:}
+        \begin{enumerate}[label={\arabic*})]
+            \item H. Anton, C. Rorres: {\it {\'A}lgebra Linear com Aplicações}, $10^a$ Ed., Editora Bookman, 2012.
+
+        \item C. H. Edwards, D. E. Penney: {\it Introdução à Álgebra Linear}, Editora Prentice-Hall do Brasil.
+
+            \item S. Lang: {\it Álgebra Linear}, Editora Moderna, 2003.
+
+            \item T. S. Blyth, E. F. Robertson: {\it Basic Linear Algebra}, $2^a$ Ed., Springer, 2002.
+        \end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+        {\bf{Sistema de avaliação:}} três módulos, 1 avalição por módulo.
+            Nota $M_i$, $i=1$, 2, 3. A nota final ($NF$) de cada estudante ser\'a dada por:
+        \[
+            NF = \dfrac{2M_1 + 3M_2 + 4M_3}{9}, \quad 0 \le NF \le 10.
+        \]
+        Ser\'a considerado aprovado o estudante que obtiver $NF \ge 5$.
+    \end{frame}
+
+    \begin{frame}
+        \begin{center}
+            \begin{tabular}{c|c|c}
+                \hline\hline
+                \hspace{1cm}{\bf Prova}\hspace{1cm} & \hspace{3cm}{\bf Data}\hspace{3cm} & \hspace{1.7cm}{\bf Hor\'{a}rio}\hspace{1.7cm} \\
+                \hline\hline
+                $P_1$ & 25/04/23 (terça-feira) \phantom{x} & 19:00 - 20:40 \\
+                \hline
+                $P_2$ & 08/06/23 (quinta-feira) \phantom{x} & 19:00 - 20:40 \\
+                \hline
+                $P_3$ & 20/07/23 (quinta-feira) \phantom{x} & 19:00 - 20:40 \\
+                \hline\hline
+            \end{tabular}
+        \end{center}
+    \end{frame}
+\end{document}
