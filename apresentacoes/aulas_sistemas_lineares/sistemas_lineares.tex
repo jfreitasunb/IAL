@@ -27,6 +27,28 @@
     \logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
 
     \begin{frame}
+        Seja $\cp{K} = \rac$, $\real$ ou $\complex$.\pause
+
+        \vspace{.3cm}
+
+        Vamos trabalhar com \textbf{equações lineares} \pause em $q$ variáveis $x_1$, $x_2$, \dots, $x_q$ \pause que são equações que podem ser escritas na forma
+        \begin{equation}\label{equacao_linear}
+            a_1x_1 \pause + a_2x_2 + \pause \cdots + a_qx_q \pause = b
+        \end{equation}
+
+        onde $a_1$, $a_2$, \dots, $a_q$, \pause $b$ são escalares no corpo $\cp{K}$, \pause sendo que nem todos os coeficientes $a_i$ são nulos.
+        
+        \vspace{.3cm}
+
+        No caso em que $b = 0$, a equação \eqref{equacao_linear} tem a forma
+        \begin{equation}
+            a_1x_1 + a_2x_2 + \cdots + a_qx_q = 0
+        \end{equation}
+        e é chamada de uma \textbf{equação linear homogênea}.
+        
+    \end{frame}
+
+    \begin{frame}
         Seja $\cp{K} = \real$.\pause
 
         \vspace{.3cm}
@@ -89,14 +111,20 @@
 
         \vspace{.3cm}
 
-        Agora considere variáveis $x_1$, $x_2$, \dots, $x_q$ \pause todas assumindo valores em $\cp{K}$.\pause
+        Vamos trabalhar com \textbf{equações lineares} em $q$ variáveis $x_1$, $x_2$, \dots, $x_q$ \pause que são equações que podem ser escritas na forma
+        \[
+            a_1x_1 + a_2x_2 + \cdots + a_qx_q = b
+        \]
 
+        onde $a_1$, $a_2$, \dots, $a_n$, $b$ são escalares no corpo $\cp{K}$, sendo que nem todos os coeficientes $a_i$ são nulos.
+        \end{frame}
+    
+        \begin{frame}
+ 
         \vspace{.3cm}
 
         Escolha escalares $b_1$, \dots, $b_p$ \pause e $a_{ij}$, \pause $1 \le i \le p$, $1 \le j \le q$ todos em $\cp{K}$.
-    \end{frame}
-    
-    \begin{frame}
+
         Queremos saber se é possível encontrar valores para  $x_1$, $x_2$, \dots, $x_q$ \pause de modo que o seguinte conjunto de equações sejam válidas: \pause
         \begin{equation}\label{sistemalinear}\index{Sistema Linear}
 	    \begin{cases}
