@@ -184,23 +184,35 @@
 
     \begin{frame}
 
-        Escolha escalares $b_1$, \dots, $b_p$ \pause e $a_{ij}$, \pause $1 \le i \le p$, $1 \le j \le q$ todos em $\cp{K}$.
-
-        Queremos saber se é possível encontrar valores para  $x_1$, $x_2$, \dots, $x_q$ \pause de modo que o seguinte conjunto de equações sejam válidas: \pause
-        \begin{equation}\label{sistemalinear}\index{Sistema Linear}
-	    \begin{cases}
-                a_{11}x_1 + a_{12}x_2 + \cdots + a_{1q}x_q = b_1\\\pause
-                a_{21}x_1 + a_{22}x_2 + \cdots + a_{2q}x_q = b_2\\\pause
-                \qquad \vdots\\
-                a_{p1}x_1 + a_{p2}x_2 + \cdots + a_{pq}x_q = b_p\pause
-            \end{cases}
-        \end{equation}
-        
-        O conjunto de equações em \eqref{sistemalinear} é chamado de um \pause \textbf{sistema de $p$ equa\c{c}\~oes lineares \pause a $q$ inc\'ognitas} $x_1$, $x_2$, \dots, $x_q$\pause , ou simplesmente de um \textbf{sistema linear}, nas incógnitas \pause $x_1$, $x_2$, \dots, $x_q$.\pause
+        Escolha escalares $b_1$, \dots, $b_n$ \pause e $a_{ij}$, \pause $1 \le i \le m$, $1 \le j \le n$ todos em $\cp{K}$.
 
         \vspace{.3cm}
 
-        Toda $q$-upla $(\alpha_1, \alpha_2, \dots, \alpha_q)$ \pause onde $\alpha_i \in \cp{K}$ para $1 \le i \le q$, \pause que satisfazem a cada uma das equa\c{c}\~oes de \eqref{sistemalinear} \pause \'e chamada de uma \textbf{solu\c{c}\~ao} do sistema.
+        Queremos saber se é possível encontrar valores para  $x_1$, $x_2$, \dots, $x_n$ \pause de modo que o seguinte conjunto de equações sejam válidas: \pause
+        \begin{equation}\label{sistema_linear_geral}
+	    \begin{cases}
+                a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1\\\pause
+                a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2\\\pause
+                \qquad \vdots\\
+                a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_n\pause
+            \end{cases}
+        \end{equation}
+        
+        O conjunto de equações em \eqref{sistema_linear_geral} é chamado de um \pause \textbf{sistema de $m$ equa\c{c}\~oes lineares \pause a $n$ inc\'ognitas} $x_1$, $x_2$, \dots, $x_n$\pause , ou simplesmente de um \textbf{sistema linear}, nas incógnitas \pause $x_1$, $x_2$, \dots, $x_n$.\pause
+    \end{frame}
+
+    \begin{frame}
+        \vspace{.3cm}
+
+        Uma solução de um sistema linear do tipo \eqref{sistema_linear_geral}\pause
+        \[
+            x_1 = \alpha_1, \pause x_2 = \alpha_2, \pause \dots, x_n = \alpha_n\pause
+        \]
+        onde $\alpha_1$, $\alpha_2$, \dots, $\alpha_n \in \cp{K}$, \pause pode ser escrita como\pause
+        \[
+            (\alpha_1, \alpha_2, \dots, \alpha_n)\pause
+        \]
+        e é chamada de uma \textbf{ênupla ordenada} ou uma \textbf{n-upla ordenada}.
     \end{frame}
 
     \begin{frame}
@@ -221,7 +233,7 @@
     \end{frame}
 
     \begin{frame}
-        No caso de um sistema linear da forma \eqref{sistemalinear}, \pause o processo para encontrar suas soluções ser\'a feito mediante o uso de 3 tipos de opera\c{c}\~oes. \pause S\~ao elas:\pause
+        No caso de um sistema linear da forma \eqref{sistema_linear_geral}, \pause o processo para encontrar suas soluções ser\'a feito mediante o uso de 3 tipos de opera\c{c}\~oes. \pause S\~ao elas:\pause
         \begin{itemize}
 	    \item[$e_1$)] Troca da posi\c{c}\~ao de duas equa\c{c}\~oes.\pause
 	    \item[$e_2$)] Multiplica\c{c}\~ao de uma equa\c{c}\~ao por um escalar n\~ao nulo.\pause
