@@ -237,6 +237,7 @@
             Todo sistema linear do tipo \eqref{sistema_linear_geral} tem zero, \pause uma \pause ou uma infinidade de soluções. \pause Não existem outras possibilidades.
         \end{teorema}
     \end{frame}
+
     \begin{frame}
         No caso de um sistema linear da forma \eqref{sistema_linear_geral}, \pause o processo para encontrar suas soluções ser\'a feito mediante o uso de 3 tipos de opera\c{c}\~oes. \pause S\~ao elas:\pause
         \begin{itemize}
@@ -247,4 +248,36 @@
 
         Estas tr\^es opera\c{c}\~oes s\~ao chamadas de \pause \textbf{opera\c{c}\~oes elementares}.
     \end{frame}
+
+    \begin{frame}
+        Uma outra matriz que podemos associar ao sistema \eqref{sistema_linear_geral} \'e\pause
+        \[
+	    \begin{bmatrix}
+                a_{11} & a_{12} & \cdots & a_{1n} & b_1\\
+		a_{21} & a_{22} & \cdots & a_{2n} & b_2\\
+		\vdots & \vdots & \vdots & \vdots & \vdots\\
+		a_{m1} & a_{m2} & \cdots & a_{mn} & b_m\\
+            \end{bmatrix}
+        \]
+
+        que \'e chamada de \textbf{matriz ampliada do sistema} \pause ou \textbf{matriz aumentada do sistema}.
+    \end{frame}
+
+    \begin{frame}
+        Na forma matricial \pause as opera\c{c}\~oes elementares s\~ao descritas como:\pause
+
+        \vspace{.3cm}
+
+        \begin{itemize}
+            \item[$e_1$)] Trocar a $i$-\'esima linha de $A$ \pause pela $j$-\'esima linha de $A$: \pause $L_i \leftrightarrow L_j$;\pause
+
+            \vspace{.3cm}
+
+            \item[$e_2$)] Multiplica\c{c}\~ao da $i$-\'esima linha de $A$ \pause por um escalar $\alpha \in \cp{K}$ n\~ao nulo: \pause $L_i \rightarrow \alpha L_i$;\pause
+ 
+            \vspace{.3cm}
+
+           \item[$e_3$)] Substitui\c{c}\~ao da $i$-\'esima linha de $A$ \pause pela $i$-\'esima linha mais $\alpha$ vezes a $j$-\'esima linha: \pause $L_i \rightarrow L_i + \alpha L_j$.
+        \end{itemize}
+\end{frame}
 \end{document}
