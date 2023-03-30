@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+
+\begin{document}
+\tdplotsetmaincoords{70}{110}
+{\begin{tikzpicture}[tdplot_main_coords,font=\sffamily,fill opacity=0.3]
+ \draw[fill=red] (-3,0,-3) -- (-3,0,0) -- (3,0,0) -- (3,0,-3) --  cycle;
+ \draw[fill=green] (-3,2,-3) -- (-3,0,0) -- (3,0,0) -- (3,2,-3)  -- cycle;
+ \draw[fill=blue] (-3,-3,0) -- (-3,3,0) -- (3,3,0) -- (3,-3,0) --  cycle;
+ \draw[fill=green] (-3,-2,3) -- (-3,0,0) -- (3,0,0) -- (3,-2,3)  -- cycle;
+ \draw[fill=red] (-3,0,3) -- (-3,0,0) -- (3,0,0) -- (3,0,3) --  cycle;
+ \draw[thick,red](-3,0,0)--(3,0,0);
+\end{tikzpicture}}
+\end{document}
