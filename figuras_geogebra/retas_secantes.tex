@@ -11,22 +11,20 @@
 \begin{axis}[
 x=1cm,y=1cm,
 axis lines=middle,
-xlabel = $x$,
-ylabel = $y$,
-ymajorgrids=true,
-xmajorgrids=true,
-xmin=-1,
-xmax=4,
-ymin=-4,
-ymax=4,
-xtick={-1,0,...,4},
-ytick={-4,-3,...,4},]
-\clip(-5,-9) rectangle (6,9);
-\draw [line width=2pt,color=ffqqqq,domain=-4.56:11.72] plot(\x,{(--3-2*\x)/1});
-\draw [line width=2pt,color=qqqqff,domain=-4.56:11.72] plot(\x,{(--2-3*\x)/-1});
+xticklabels={,,},
+yticklabels={,,},
+xlabel=$x$,
+ylabel=$y$,
+xmin=-4,
+xmax=6.3,
+ymin=-3,
+ymax=5.5,]
+\clip(-11.14,-9.9) rectangle (19.26,9.8);
+\draw [line width=2pt,color=ffqqqq,domain=-11.14:19.26] plot(\x,{(--8.94--7.92*\x)/7.58});
+\draw [line width=2pt,color=qqqqff,domain=-11.14:19.26] plot(\x,{(--34.824-8.66*\x)/8.24});
 \begin{scriptsize}
-\draw[color=ffqqqq] (2,-3.3) node {$2x + y = 3$};
-\draw[color=qqqqff] (3,3.2) node {$3x - y = 2$};
+\draw[color=ffqqqq] (4.2,3.7) node {$a_{11}x + a_{12}y = b_1$};
+\draw[color=qqqqff] (4.2,2) node {$a_{21}x + a_{22}y = b_2$};
 \end{scriptsize}
 \end{axis}
 \end{tikzpicture}
