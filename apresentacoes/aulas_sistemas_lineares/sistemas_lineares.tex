@@ -66,6 +66,32 @@
 
         Existem valores de $x$, $y \in \cp{K}$ que satisfazem as duas equações simultaneamente?
     \end{frame}
+
+    \begin{frame}
+        \definecolor{qqqqff}{rgb}{0,0,1}
+        \definecolor{ffqqqq}{rgb}{1,0,0}
+        \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+            \begin{axis}[
+                x=1cm,y=1cm,
+                axis lines=middle,
+                xticklabels={,,},
+                yticklabels={,,},
+                xlabel=$x$,
+                ylabel=$y$,
+                xmin=-5.3,
+                xmax=6.3,
+                ymin=-2.3,
+                ymax=6.3,]
+                \clip(-5.348257839721257,-2.722123627069193) rectangle (8.807994044102577,6.451500126592963);
+                \draw [line width=5.2pt,dash pattern=on 1pt off 1pt,color=ffqqqq,domain=-5.348257839721257:8.807994044102577] plot(\x,{(--4-1*\x)/2});
+                \draw [line width=2pt,color=qqqqff,domain=-5.348257839721257:8.807994044102577] plot(\x,{(--8-2*\x)/4});
+                \begin{scriptsize}
+                    \draw[color=ffqqqq] (-3.8,5) node {$a_{11}x + a_{12}y = b_1$};
+                    \draw[color=qqqqff] (-3.8,2.8) node {$a_{21}x + a_{22}y = b_2$};
+                \end{scriptsize}
+            \end{axis}
+            \end{tikzpicture}
+    \end{frame}
     
     \begin{frame}
         Neste caso temos as seguintes possibilidades:\pause
@@ -136,7 +162,7 @@
                 a_{p1}x_1 + a_{p2}x_2 + \cdots + a_{pq}x_q = 0_\cp{K}\pause
             \end{cases}
         \end{equation}
-        \'e um \textbf{sistema linear homog\^eneo}, \pause ou que cada uma de suas equa\c{c}\~oes \'e homog\^enea. \pause
+        \'e um \textbf{sistema linear homog\^eneo}. \pause
 
         \vspace{.3cm}
 
