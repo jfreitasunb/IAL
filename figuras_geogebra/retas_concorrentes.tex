@@ -11,22 +11,20 @@
 \begin{axis}[
 x=1cm,y=1cm,
 axis lines=middle,
-xlabel = $x$,
-ylabel = $y$,
-ymajorgrids=true,
-xmajorgrids=true,
-xmin=-5,
-xmax=5,
-ymin=-2.4,
-ymax=6.4,
-xtick={-5,-4,...,5},
-ytick={-2,-1,...,6},]
-\clip(-5.348257839721256,-2.470663889659164) rectangle (5.492450839733311,6.451500126592963);
-\draw [line width=5.2pt,dash pattern=on 1pt off 1pt,color=ffqqqq,domain=-5.348257839721256:5.492450839733311] plot(\x,{(--2-1*\x)/2});
-\draw [line width=2pt,color=qqqqff,domain=-5.348257839721256:5.492450839733311] plot(\x,{(--4-2*\x)/4});
+xticklabels={,,},
+yticklabels={,,},
+xlabel=$x$,
+ylabel=$y$,
+xmin=-5.3,
+xmax=6.3,
+ymin=-2.3,
+ymax=6.3,]
+\clip(-5.348257839721257,-2.722123627069193) rectangle (8.807994044102577,6.451500126592963);
+\draw [line width=5.2pt,dash pattern=on 1pt off 1pt,color=ffqqqq,domain=-5.348257839721257:8.807994044102577] plot(\x,{(--4-1*\x)/2});
+\draw [line width=2pt,color=qqqqff,domain=-5.348257839721257:8.807994044102577] plot(\x,{(--8-2*\x)/4});
 \begin{scriptsize}
-\draw[color=ffqqqq] (-3.528685362236719,3.7273529713176528) node {$x + 2y = 2$};
-\draw[color=qqqqff] (-3.563965012116757,1.940469659886918) node {$2x + 4y = 4$};
+\draw[color=ffqqqq] (-3.8,5) node {$a_{11}x + a_{12}y = b_1$};
+\draw[color=qqqqff] (-3.8,2.8) node {$a_{21}x + a_{22}y = b_2$};
 \end{scriptsize}
 \end{axis}
 \end{tikzpicture}
