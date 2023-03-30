@@ -279,5 +279,32 @@
 
            \item[$e_3$)] Substitui\c{c}\~ao da $i$-\'esima linha de $A$ \pause pela $i$-\'esima linha mais $\alpha$ vezes a $j$-\'esima linha: \pause $L_i \rightarrow L_i + \alpha L_j$.
         \end{itemize}
-\end{frame}
+    \end{frame}
+
+    \begin{frame}
+        \begin{definicao}\label{linhareduzida}
+            Uma matriz $A$ $m \times n$ \'e \pause dita estar na \textbf{forma escalonada reduzida por linhas} se:\pause
+            \begin{enumerate}[label={\roman*})]
+                \item O primeiro elemento n\~ao nulo \pause em cada linha n\~ao nula de $A$ \pause \'e $1$. \pause Dizemos que esse número 1 é um \textbf{pivô}.\pause
+
+                \vspace{.3cm}
+
+                \item Toda linha de $A$ cujos elementos s\~ao todos nulos \pause ocorre abaixo de todas as linhas que possuem um elemento n\~ao-nulo.\pause 
+ 
+                \vspace{.3cm}
+
+                \item Se as linhas 1, 2, \dots, $r$ s\~ao as linhas n\~ao-nulas de $A$ \pause e se o \textbf{pivô} da linha $i$ ocorre na coluna $k_i$,\pause  $i = 1$, \dots, $r$, \pause ent\~ao $k_1 < k_2 < \cdots < k_r$.\pause
+ 
+                \vspace{.3cm}
+
+                \item Cada coluna de $A$ que cont\'em um \textbf{pivô} \pause tem todos os seus outros elementos nulos.
+            \end{enumerate}
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{observacao}
+            Uma matriz que satisfaz as três primeiras propriedades da definição anterior \pause é dita estar na \textbf{forma escalonada por linhas}, \pause ou simplesmente, em \textbf{forma escalonada}.
+        \end{observacao}
+    \end{frame}
 \end{document}
