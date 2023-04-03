@@ -305,7 +305,9 @@ Estas tr\^es opera\c{c}\~oes s\~ao chamadas de  \textbf{opera\c{c}\~oes elementa
 	\end{solucao}
 \end{exemplos}
 
-Uma outra matriz que podemos associar ao sistema \eqref{sistema_linear_geral} \'e
+Observe nos exemplos anteriores que a aplicação das operações elementares afeta somente os coeficientes das variáveis e os termos independentes. As variáveis do sistema permanecem inalteradas durante todo o processo. Assim não precisamos ficar repetindo as variáveis o tempo todo. Podemos tratar somente com seus coeficientes e os termos independetes do sistema.
+
+A partir dessa observação, podemos associar ao sistema \eqref{sistema_linear_geral} uma matriz contendo os coeficientes de cada equação junto com seus respectivos termos independentes. Obtemos assim a matriz
 \[
 \begin{bmatrix}
         a_{11} & a_{12} & \cdots & a_{1n} & b_1\\
@@ -317,6 +319,15 @@ a_{m1} & a_{m2} & \cdots & a_{mn} & b_m\\
 
 que \'e chamada de \textbf{matriz ampliada do sistema}  ou \textbf{matriz aumentada do sistema}.
 
+Para destacar que a última coluna dessa matriz contém os termos independentes do sistema podemos também escrever:
+\[
+    \begin{amatrix}{4}
+        a_{11} & a_{12} & \cdots & a_{1n} & b_1\\
+	a_{21} & a_{22} & \cdots & a_{2n} & b_2\\
+	\vdots & \vdots & \vdots & \vdots & \vdots\\
+	a_{m1} & a_{m2} & \cdots & a_{mn} & b_m\\
+    \end{amatrix}
+\]
 
 
 Na forma matricial  as opera\c{c}\~oes elementares s\~ao descritas como:
