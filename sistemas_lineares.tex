@@ -329,46 +329,35 @@ Para destacar que a última coluna dessa matriz contém os termos independentes 
     \end{amatrix}
 \]
 
-
-Na forma matricial  as opera\c{c}\~oes elementares s\~ao descritas como:
+Na forma matricial as opera\c{c}\~oes elementares s\~ao descritas como:
 
 \vspace{.3cm}
 
 \begin{itemize}
-    \item[$e_1$)] Trocar a $i$-\'esima linha de $A$  pela $j$-\'esima linha de $A$:  $L_i \leftrightarrow L_j$;
+    \item[$e_1$)] Trocar a $i$-\'esima linha de $A$ pela $j$-\'esima linha de $A$: $L_i \leftrightarrow L_j$;
 
-    \vspace{.3cm}
+    \item[$e_2$)] Multiplica\c{c}\~ao da $i$-\'esima linha de $A$ por um escalar $\alpha \in \cp{K}$ n\~ao nulo: $L_i \rightarrow \alpha L_i$;
 
-    \item[$e_2$)] Multiplica\c{c}\~ao da $i$-\'esima linha de $A$  por um escalar $\alpha \in \cp{K}$ n\~ao nulo:  $L_i \rightarrow \alpha L_i$;
-
-    \vspace{.3cm}
-
-   \item[$e_3$)] Substitui\c{c}\~ao da $i$-\'esima linha de $A$  pela $i$-\'esima linha mais $\alpha$ vezes a $j$-\'esima linha:  $L_i \rightarrow L_i + \alpha L_j$.
+   \item[$e_3$)] Substitui\c{c}\~ao da $i$-\'esima linha de $A$ pela $i$-\'esima linha mais $\alpha$ vezes a $j$-\'esima linha: $L_i \rightarrow L_i + \alpha L_j$.
 \end{itemize}
 
-
+O que iremos fazer para resolver um sistema linear do tipo \eqref{sistema_linear_geral} é aplicar operações operações elementares na linhas da matriz ampliada até que ela esteja num formato especial. Esse formato que buscamos é o seguinte:
 
 \begin{definicao}\label{linhareduzida}
     Uma matriz $A$ $m \times n$ \'e  dita estar na \textbf{forma escalonada reduzida por linhas} se:
     \begin{enumerate}[label={\roman*})]
-        \item O primeiro elemento n\~ao nulo  em cada linha n\~ao nula de $A$  \'e $1$.  Dizemos que esse número 1 é um \textbf{pivô}.
+        \item O primeiro elemento n\~ao nulo em cada linha n\~ao nula de $A$ \'e $1$. Dizemos que esse número 1 é um \textbf{pivô}.
 
-        \vspace{.3cm}
+        \item Toda linha de $A$ cujos elementos s\~ao todos nulos ocorre abaixo de todas as linhas que possuem um elemento n\~ao-nulo. 
 
-        \item Toda linha de $A$ cujos elementos s\~ao todos nulos  ocorre abaixo de todas as linhas que possuem um elemento n\~ao-nulo. 
+        \item Se as linhas 1, 2, \dots, $r$ s\~ao as linhas n\~ao-nulas de $A$ e se o \textbf{pivô} da linha $i$ ocorre na coluna $k_i$, $i = 1$, \dots, $r$, ent\~ao $k_1 < k_2 < \cdots < k_r$.
 
-        \vspace{.3cm}
-
-        \item Se as linhas 1, 2, \dots, $r$ s\~ao as linhas n\~ao-nulas de $A$  e se o \textbf{pivô} da linha $i$ ocorre na coluna $k_i$,  $i = 1$, \dots, $r$,  ent\~ao $k_1 < k_2 < \cdots < k_r$.
-
-        \vspace{.3cm}
-
-        \item Cada coluna de $A$ que cont\'em um \textbf{pivô}  tem todos os seus outros elementos nulos.
+        \item Cada coluna de $A$ que cont\'em um \textbf{pivô} tem todos os seus outros elementos nulos.
     \end{enumerate}
 \end{definicao}
 
 \begin{observacao}
-    Uma matriz que satisfaz as três primeiras propriedades da definição anterior  é dita estar na \textbf{forma escalonada por linhas},  ou simplesmente, em \textbf{forma escalonada}.
+    Uma matriz que satisfaz as três primeiras propriedades da definição anterior é dita estar na \textbf{forma escalonada por linhas}, ou simplesmente, em \textbf{forma escalonada}.
 \end{observacao}
 
 Seja $\cp{K}$ um corpo. Consideremos o problema de determinar $n$ escalares, ou seja, $n$ elementos $x_1$, $x_2$, \dots, $x_n$ em $\cp{K}$ que satisfa\c{c}am simultaneamente as equa\c{c}\~oes
