@@ -1,7 +1,292 @@
 %!TEX root = IAL.tex
 
 \chapter{Sistemas Lineares}
+
+Ao longo de todo esse capítulo o conjunto $\cp{K}$ será considerado como sendo um dos conjuntos: $\rac$, $\real$ ou $\complex$.
+
 \section{Sistemas Lineares}\label{ssub:sistemas_lineares}
+Vamos trabalhar com \textbf{equações lineares}\index{Sistemas Lineares!Equação linear} em $n$ variáveis $x_1$, $x_2$, \dots, $x_n$ que são equações que podem ser escritas na forma
+\begin{equation}\label{equacao_linear}
+    a_1x_1  + a_2x_2 +  \cdots + a_qx_q  = b,
+\end{equation}
+onde $a_1$, $a_2$, \dots, $a_q$, $b$ são escalares no corpo $\cp{K}$, sendo que nem todos os coeficientes $a_i$ são nulos.
+
+No caso em que $b = 0$,  a equação \eqref{equacao_linear} tem a forma
+\begin{equation}
+    a_1x_1 + a_2x_2 + \cdots + a_qx_q = 0
+\end{equation}
+e é chamada de uma \textbf{equação linear homogênea}\index{Sistemas Lineares!Equação linear homogênea}.
+
+\begin{exemplos}
+	\begin{enumerate}
+		\item Equações da forma
+			\begin{enumerate}
+				\item $x_1 + 2x_2 - 3x_3 = 10$, em $\cp{K} = \rac$
+				\item $2x_1 + 0x_2 + \sqrt{2}x_3 - 4x_4 = 0$, em $\cp{K} = \real$, que será escrita como $2x_1 + 0x_2 + \sqrt{2}x_3 - 4x_4 = 0$
+				\item $ix_1 + (2 +i)x_2 = 3 + 2i$, em $\cp{K} = \complex$
+			\end{enumerate}
+		são exemplos de \textbf{equações lineares}.
+
+		\item Já equações na forma
+			\begin{enumerate}
+				\item $x_1^2 + 2x_2 - 3x_3 = 0$ em $\cp{K} = \real$
+				\item $x_1 + 2\sin(x_2) + 3x_3 + x_ 4 = 1$ em $\cp{K} = \real$
+				\item $2x_1 + 3x_2 - 4x_3^{-1} = 2$ em $\cp{K} = \rac$
+			\end{enumerate}
+		não são equações lineares e portanto não serão abordadas nesse curso.
+	\end{enumerate}
+\end{exemplos}
+
+Considerenado $\cp{K} = \real$, queremos analisar um conjuto de equações lineares do tipo:
+
+\begin{align}
+    \begin{cases}\label{sistema_linear_2x2}
+        ax + by = b_1\\
+        cx + dy = b_2
+    \end{cases}
+\end{align}
+onde $a$, $b$, $c$, $d$, $b_1$, $b_2 \in \cp{K}$.
+
+Queremos saber se é possível encontrar valores para $x$, $y$ no conjunto $\real$ de modo que essas duas equações sejam simultaneamente verdadeiras? Caso existam, gostaríamos de determinar todos os possíveis valores que $x$ e $y$ podem assumir.
+
+
+\definecolor{qqqqff}{rgb}{0,0,1}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\begin{center}
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+        \begin{axis}[
+            x=1cm,y=1cm,
+            axis lines=middle,
+            xticklabels={,,},
+            yticklabels={,,},
+            xlabel=$x$,
+            ylabel=$y$,
+            xmin=-2,
+            xmax=5,
+            ymin=-1.3,
+            ymax=3,]
+            \draw [line width=5.2pt,dash pattern=on 1pt off 1pt,color=ffqqqq,domain=-1.348257839721257:5.807994044102577] plot(\x,{(--4-1*\x)/2});
+            \draw [line width=2pt,color=qqqqff,domain=-1.348257839721257:5.807994044102577] plot(\x,{(--8-2*\x)/4});
+            \begin{scriptsize}
+                \draw[color=ffqqqq] (1.8,2) node {$a_{11}x + a_{12}y = b_1$};
+                \draw[color=qqqqff] (3,1.5) node {$a_{21}x + a_{22}y = b_2$};
+            \end{scriptsize}
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+Existem infinitos valores de $x$, $y \in \cp{K}$  que satisfazem as duas equações simultanemente.  Neste caso dizemos que o sistema \eqref{sistema_linear_2x2}  é \textbf{possível e indeterminado}.
+
+
+
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\begin{center}
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+        \begin{axis}[
+            x=1cm,y=1cm,
+            axis lines=middle,
+            xticklabels={,,},
+            yticklabels={,,},
+            xlabel=$x$,
+            ylabel=$y$,
+            xmin=-5.3,
+            xmax=6.3,
+            ymin=-1,
+            ymax=4.3,]
+            \draw [line width=2pt,color=qqqqff,domain=-5:6] plot(\x,{(--4-1*\x)/5});
+            \draw [line width=2pt,color=ffqqqq,domain=-5:6] plot(\x,{(--16-1*\x)/5});
+            \begin{scriptsize}
+                \draw[color=qqqqff] (-3.8,2.2) node {$a_{21}x + a_{22}y = b_2$};
+                \draw[color=ffqqqq] (-3.8,3.4) node {$a_{11}x + a_{12}y = b_1$};
+            \end{scriptsize}
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+Não existem valores de $x$, $y \in \cp{K}$  satisfazendo as duas equações simultaneamente.  Nesse caso dizemos que o sistema \eqref{sistema_linear_2x2}  é \textbf{impossível}.
+
+
+
+
+\definecolor{qqqqff}{rgb}{0,0,1}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\begin{center}
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+        \begin{axis}[
+            x=1cm,y=1cm,
+            axis lines=middle,
+            xticklabels={,,},
+            yticklabels={,,},
+            xlabel=$x$,
+            ylabel=$y$,
+            xmin=-2,
+            xmax=4.3,
+            ymin=-2,
+            ymax=3.5,]
+            \draw [line width=2pt,color=ffqqqq,domain=-4:5] plot(\x,{(--4.94--7.92*\x)/7.58});
+            \draw [line width=2pt,color=qqqqff,domain=-4:5] plot(\x,{(--4.824-8.66*\x)/8.24});
+            \begin{scriptsize}
+                \draw[color=ffqqqq] (2.9,2) node {$a_{11}x + a_{12}y = b_1$};
+                \draw[color=qqqqff] (2.7,-0.5) node {$a_{21}x + a_{22}y = b_2$};
+            \end{scriptsize}
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+Nesca caso existe um único conjunto de valores $x = \alpha \in \cp{K}$ e $y = \lambda \in \cp{K}$  que satisfaz as duas equações simultaneamente.  Neste caso dizemos que o sistema \eqref{sistema_linear_2x2}  é \textbf{possível e determinado}.
+
+
+
+Esse mesmo tipo de análise pode ser aplicada num sistema da forma
+\begin{align}
+    \begin{cases}\label{sistema_linear_3x3}
+        a_1x + a_2y + a_3z = b_1\\
+        a_4x + a_5y + a_6z = b_2\\
+        a_7x + a_8y + a_9z = b_3
+    \end{cases}
+\end{align}
+onde $a_i \in \cp{K}$ para $1 \le i \le 9$ e $b_j \in \cp{K}$ para $1 \le j \le 3$.
+
+\vspace{.3cm}
+
+Existem valores de $x$, $y$ e $z \in \cp{K}$ que satisfaçam as três equações simultaneamente?
+
+
+
+Como no caso anterior, temos as seguintes possibilidades:
+\begin{enumerate}[label={\roman*})]
+    \item Existe um único conjunto de valores $x = \alpha \in \cp{K}$, $y = \lambda \in \cp{K}$ e $z = \gamma \in \cp{K}$  que satisfaz as três equações simultaneamente.  Neste caso dizemos que o sistema \eqref{sistema_linear_3x3}  é \textbf{possível e determinado}.
+
+    \item Existem infinitos valores de $x$, $y$, $z \in \cp{K}$  que satisfazem as três equações simultanemente.  Neste caso dizemos que o sistema \eqref{sistema_linear_3x3}  é \textbf{possível e indeterminado}.
+
+    \item Não existem valores de $x$, $y$, $z \in \cp{K}$  satisfazendo as três equações simultaneamente.  Nesse caso dizemos que o sistema \eqref{sistema_linear_3x3}  é \textbf{impossível}.
+\end{enumerate}
+
+
+
+
+Escolha escalares $b_1$, \dots, $b_m$  e $a_{ij}$,  $1 \le i \le m$, $1 \le j \le n$ todos em $\cp{K}$.
+
+\vspace{.3cm}
+
+Queremos saber se é possível encontrar valores para  $x_1$, $x_2$, \dots, $x_n$  de modo que o seguinte conjunto de equações sejam válidas: 
+\begin{equation}\label{sistema_linear_geral}
+\begin{cases}
+        a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1\\
+        a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2\\
+        \qquad \vdots\\
+        a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m
+    \end{cases}
+\end{equation}
+
+O conjunto de equações em \eqref{sistema_linear_geral} é chamado de um  \textbf{sistema de $m$ equa\c{c}\~oes lineares  a $n$ inc\'ognitas} $x_1$, $x_2$, \dots, $x_n$ , ou simplesmente de um \textbf{sistema linear}, nas incógnitas  $x_1$, $x_2$, \dots, $x_n$.
+
+
+
+\vspace{.3cm}
+
+Uma solução de um sistema linear do tipo \eqref{sistema_linear_geral}
+\[
+    x_1 = \alpha_1,  x_2 = \alpha_2,  \dots, x_n = \alpha_n
+\]
+onde $\alpha_1$, $\alpha_2$, \dots, $\alpha_n \in \cp{K}$,  pode ser escrita como
+\[
+    (\alpha_1, \alpha_2, \dots, \alpha_n)
+\]
+e é chamada de uma \textbf{ênupla ordenada} ou uma \textbf{n-upla ordenada}.
+
+
+
+Se $b_1 = b_2 = \cdots = b_m = 0_\cp{K} \in K$,  dizemos que o sistema
+\begin{equation}\label{sistemalinearhomogeneo}\index{Sistema Linear}
+    \begin{cases}
+        a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = 0_\cp{K}\\
+        a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = 0_\cp{K}\\
+        \qquad \vdots\\
+        a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = 0_\cp{K}
+    \end{cases}
+\end{equation}
+\'e um \textbf{sistema linear homog\^eneo}. 
+
+\vspace{.3cm}
+
+Observe que tal sistema sempre possui solu\c{c}\~ao,  a saber, $x_1 = x_2 = \cdots = x_n = 0_\cp{K}$.
+
+
+
+\begin{teorema}
+    Todo sistema linear do tipo \eqref{sistema_linear_geral} tem zero,  uma  ou uma infinidade de soluções.  Não existem outras possibilidades.
+\end{teorema}
+
+
+
+No caso de um sistema linear da forma \eqref{sistema_linear_geral},  o processo para encontrar suas soluções ser\'a feito mediante o uso de 3 tipos de opera\c{c}\~oes.  S\~ao elas:
+\begin{itemize}
+\item[$e_1$)] Troca da posi\c{c}\~ao de duas equa\c{c}\~oes.
+\item[$e_2$)] Multiplica\c{c}\~ao de uma equa\c{c}\~ao por um escalar n\~ao nulo.
+\item[$e_3$)] Substitui\c{c}\~ao de uma equa\c{c}\~ao pela soma desta equa\c{c}\~ao com alguma outra.
+\end{itemize}
+
+Estas tr\^es opera\c{c}\~oes s\~ao chamadas de  \textbf{opera\c{c}\~oes elementares}.
+
+
+
+Uma outra matriz que podemos associar ao sistema \eqref{sistema_linear_geral} \'e
+\[
+\begin{bmatrix}
+        a_{11} & a_{12} & \cdots & a_{1n} & b_1\\
+a_{21} & a_{22} & \cdots & a_{2n} & b_2\\
+\vdots & \vdots & \vdots & \vdots & \vdots\\
+a_{m1} & a_{m2} & \cdots & a_{mn} & b_m\\
+    \end{bmatrix}
+\]
+
+que \'e chamada de \textbf{matriz ampliada do sistema}  ou \textbf{matriz aumentada do sistema}.
+
+
+
+Na forma matricial  as opera\c{c}\~oes elementares s\~ao descritas como:
+
+\vspace{.3cm}
+
+\begin{itemize}
+    \item[$e_1$)] Trocar a $i$-\'esima linha de $A$  pela $j$-\'esima linha de $A$:  $L_i \leftrightarrow L_j$;
+
+    \vspace{.3cm}
+
+    \item[$e_2$)] Multiplica\c{c}\~ao da $i$-\'esima linha de $A$  por um escalar $\alpha \in \cp{K}$ n\~ao nulo:  $L_i \rightarrow \alpha L_i$;
+
+    \vspace{.3cm}
+
+   \item[$e_3$)] Substitui\c{c}\~ao da $i$-\'esima linha de $A$  pela $i$-\'esima linha mais $\alpha$ vezes a $j$-\'esima linha:  $L_i \rightarrow L_i + \alpha L_j$.
+\end{itemize}
+
+
+
+\begin{definicao}\label{linhareduzida}
+    Uma matriz $A$ $m \times n$ \'e  dita estar na \textbf{forma escalonada reduzida por linhas} se:
+    \begin{enumerate}[label={\roman*})]
+        \item O primeiro elemento n\~ao nulo  em cada linha n\~ao nula de $A$  \'e $1$.  Dizemos que esse número 1 é um \textbf{pivô}.
+
+        \vspace{.3cm}
+
+        \item Toda linha de $A$ cujos elementos s\~ao todos nulos  ocorre abaixo de todas as linhas que possuem um elemento n\~ao-nulo. 
+
+        \vspace{.3cm}
+
+        \item Se as linhas 1, 2, \dots, $r$ s\~ao as linhas n\~ao-nulas de $A$  e se o \textbf{pivô} da linha $i$ ocorre na coluna $k_i$,  $i = 1$, \dots, $r$,  ent\~ao $k_1 < k_2 < \cdots < k_r$.
+
+        \vspace{.3cm}
+
+        \item Cada coluna de $A$ que cont\'em um \textbf{pivô}  tem todos os seus outros elementos nulos.
+    \end{enumerate}
+\end{definicao}
+
+\begin{observacao}
+    Uma matriz que satisfaz as três primeiras propriedades da definição anterior  é dita estar na \textbf{forma escalonada por linhas},  ou simplesmente, em \textbf{forma escalonada}.
+\end{observacao}
+
 Seja $\cp{K}$ um corpo. Consideremos o problema de determinar $n$ escalares, ou seja, $n$ elementos $x_1$, $x_2$, \dots, $x_n$ em $\cp{K}$ que satisfa\c{c}am simultaneamente as equa\c{c}\~oes
 \begin{equation}\label{sistemalinear}\index{Sistema Linear}
 	\begin{cases}
