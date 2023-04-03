@@ -211,7 +211,60 @@ No caso de um sistema linear da forma \eqref{sistema_linear_geral},  o processo 
 
 Estas tr\^es opera\c{c}\~oes s\~ao chamadas de  \textbf{opera\c{c}\~oes elementares}.
 
+\begin{exemplos}
+	Utilizando somente operações elementares encontre as soluções dos seguintes sistemas lineares:
+	\begin{enumerate}
+		\item $\begin{cases}x + y = 4\\3x + 3y = 6\end{cases}$
 
+		\item $\begin{cases}x + y + 2z = 9\\ 2x + 4y - 3z = 1\\ 3x + 6y - 5z = 0\end{cases}$
+	\end{enumerate}
+
+	\begin{solucao}
+		\begin{enumerate}
+			\item Neste caso podemos somar a segunda equação do sistema com ela mesma mais -3 vezes a primeira equação:
+				\[
+					\begin{cases}
+						x + 4 = 4\\
+						3x + 3y + (-3x) + (-3y) = 4 + (-3)\cdot 4
+					\end{cases}
+				\]
+			que resulta em
+			\[
+				\begin{cases}
+					x + 4 = 4\\
+					0 = -6
+				\end{cases}
+			\]
+			e a segunda equação desse sistema é uma contradição. Logo não existem valores para $x$ e $y$ em $\real$ que satisfazem as duas equações desse sistema simultaneamente. Portanto tal sistema é um \textbf{sistema impossível}.
+                    \item Denote as linhas desse sistema por $L_1$, $L_2$ e $L_3$. Começamos trocando a linha 2, $L_2$, por ela mesma somanda com -2 vezes a linha 1, $L_1$. Denotemos essa operação por $L_2 \to L_2 - 2L_1$. Com essa operação obtemos o sistema
+                        \[
+                            \begin{cases}
+                                x + y + 2z = 9\\
+                                \phantom{2x +} 2y - 7z = -17\\
+                                3x + 6y - 5z = 0
+                            \end{cases}
+                        \]
+                        Agora trocamos a linha 3 por ela mesma menos 3 vezes a linha 1: $L_3 \to L_3 - 3L_1$. Após essa operação o sistema anterior torna-se
+                        \[
+                            \begin{cases}
+                                x + y + 2z = 9\\
+                                \phantom{2x +} 2y - 7z = -17\\
+                                \phantom{3x +} 3y - 11z = -27
+                            \end{cases}
+                        \]
+                        Multiplicando a segunda linha por 1/2: $L_2 \to \frac{1}{2}L_2$ obtemos:
+                        \[
+                            \begin{cases}
+                                x + y + 2z = 9\\
+                                \phantom{2x +} y - \dfrac{7}{2}z = -\dfrac{17}{2}\\
+                                \phantom{3x +} 3y - 11z = -27
+                            \end{cases}
+                        \]
+
+
+		\end{enumerate}
+	\end{solucao}
+\end{exemplos}
 
 Uma outra matriz que podemos associar ao sistema \eqref{sistema_linear_geral} \'e
 \[
