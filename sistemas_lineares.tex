@@ -49,6 +49,11 @@ onde $a$, $b$, $c$, $d$, $b_1$, $b_2 \in \cp{K}$.
 
 Queremos saber se é possível encontrar valores para $x$, $y$ no conjunto $\real$ de modo que essas duas equações sejam simultaneamente verdadeiras? Caso existam, gostaríamos de determinar todos os possíveis valores que $x$ e $y$ podem assumir.
 
+Observe que cada equação linear em \eqref{sistema_linear_2x2} representa uma reta no plano cartesiano. Assim queremos determinar se essas restas possuem alguma interseção.
+
+Mas sabemos que duas retas no plano podem ser coincidentes, paralelas ou se interceptam em um único ponto.
+
+Assim se as retas do sistema \eqref{sistema_linear_2x2} são \textbf{coincidentes}, existem infinitos valores de $x$, $y \in \cp{K}$ que satisfazem as duas equações simultanemente. Neste caso dizemos que o sistema \eqref{sistema_linear_2x2} é \textbf{possível e indeterminado}.
 
 \definecolor{qqqqff}{rgb}{0,0,1}
 \definecolor{ffqqqq}{rgb}{1,0,0}
@@ -75,9 +80,7 @@ Queremos saber se é possível encontrar valores para $x$, $y$ no conjunto $\rea
     \end{tikzpicture}
 \end{center}
 
-Existem infinitos valores de $x$, $y \in \cp{K}$  que satisfazem as duas equações simultanemente.  Neste caso dizemos que o sistema \eqref{sistema_linear_2x2}  é \textbf{possível e indeterminado}.
-
-
+Agora se as retas em \eqref{sistema_linear_2x2} são \textbf{paralelas}, não existem valores de $x$, $y \in \cp{K}$ satisfazendo as duas equações simultaneamente. Nesse caso dizemos que o sistema \eqref{sistema_linear_2x2} é \textbf{impossível}.
 
 \definecolor{ffqqqq}{rgb}{1,0,0}
 \definecolor{qqqqff}{rgb}{0,0,1}
@@ -104,10 +107,7 @@ Existem infinitos valores de $x$, $y \in \cp{K}$  que satisfazem as duas equaç�
     \end{tikzpicture}
 \end{center}
 
-Não existem valores de $x$, $y \in \cp{K}$  satisfazendo as duas equações simultaneamente.  Nesse caso dizemos que o sistema \eqref{sistema_linear_2x2}  é \textbf{impossível}.
-
-
-
+Por fim, as retas em \eqref{sistema_linear_2x2} podem se \textbf{interceptar}. Nesse caso existe um único conjunto de valores $x = \alpha \in \cp{K}$ e $y = \lambda \in \cp{K}$ que satisfaz as duas equações simultaneamente. Neste caso dizemos que o sistema \eqref{sistema_linear_2x2} é \textbf{possível e determinado}.
 
 \definecolor{qqqqff}{rgb}{0,0,1}
 \definecolor{ffqqqq}{rgb}{1,0,0}
@@ -134,10 +134,6 @@ Não existem valores de $x$, $y \in \cp{K}$  satisfazendo as duas equações sim
     \end{tikzpicture}
 \end{center}
 
-Nesca caso existe um único conjunto de valores $x = \alpha \in \cp{K}$ e $y = \lambda \in \cp{K}$  que satisfaz as duas equações simultaneamente.  Neste caso dizemos que o sistema \eqref{sistema_linear_2x2}  é \textbf{possível e determinado}.
-
-
-
 Esse mesmo tipo de análise pode ser aplicada num sistema da forma
 \begin{align}
     \begin{cases}\label{sistema_linear_3x3}
@@ -152,8 +148,6 @@ onde $a_i \in \cp{K}$ para $1 \le i \le 9$ e $b_j \in \cp{K}$ para $1 \le j \le 
 
 Existem valores de $x$, $y$ e $z \in \cp{K}$ que satisfaçam as três equações simultaneamente?
 
-
-
 Como no caso anterior, temos as seguintes possibilidades:
 \begin{enumerate}[label={\roman*})]
     \item Existe um único conjunto de valores $x = \alpha \in \cp{K}$, $y = \lambda \in \cp{K}$ e $z = \gamma \in \cp{K}$  que satisfaz as três equações simultaneamente.  Neste caso dizemos que o sistema \eqref{sistema_linear_3x3}  é \textbf{possível e determinado}.
@@ -164,11 +158,7 @@ Como no caso anterior, temos as seguintes possibilidades:
 \end{enumerate}
 
 
-
-
-Escolha escalares $b_1$, \dots, $b_m$  e $a_{ij}$,  $1 \le i \le m$, $1 \le j \le n$ todos em $\cp{K}$.
-
-\vspace{.3cm}
+Agora, de modo geral queremos trabalhar com uma quantidade qualquer de equações. Para isso começamos escolhendo escalares $b_1$, \dots, $b_m$  e $a_{ij}$,  $1 \le i \le m$, $1 \le j \le n$ todos em $\cp{K}$.
 
 Queremos saber se é possível encontrar valores para  $x_1$, $x_2$, \dots, $x_n$  de modo que o seguinte conjunto de equações sejam válidas: 
 \begin{equation}\label{sistema_linear_geral}
@@ -180,11 +170,7 @@ Queremos saber se é possível encontrar valores para  $x_1$, $x_2$, \dots, $x_n
     \end{cases}
 \end{equation}
 
-O conjunto de equações em \eqref{sistema_linear_geral} é chamado de um  \textbf{sistema de $m$ equa\c{c}\~oes lineares  a $n$ inc\'ognitas} $x_1$, $x_2$, \dots, $x_n$ , ou simplesmente de um \textbf{sistema linear}, nas incógnitas  $x_1$, $x_2$, \dots, $x_n$.
-
-
-
-\vspace{.3cm}
+O conjunto de equações em \eqref{sistema_linear_geral} é chamado de um  \textbf{sistema de $m$ equa\c{c}\~oes lineares  a $n$ inc\'ognitas}\index{Sistema Linear} $x_1$, $x_2$, \dots, $x_n$ , ou simplesmente de um \textbf{sistema linear}, nas incógnitas  $x_1$, $x_2$, \dots, $x_n$.
 
 Uma solução de um sistema linear do tipo \eqref{sistema_linear_geral}
 \[
@@ -194,8 +180,7 @@ onde $\alpha_1$, $\alpha_2$, \dots, $\alpha_n \in \cp{K}$,  pode ser escrita com
 \[
     (\alpha_1, \alpha_2, \dots, \alpha_n)
 \]
-e é chamada de uma \textbf{ênupla ordenada} ou uma \textbf{n-upla ordenada}.
-
+e é chamada de uma \textbf{ênupla ordenada}\index{Sistemas linears!ênupla ordenada} ou uma \textbf{n-upla ordenada}.
 
 
 Se $b_1 = b_2 = \cdots = b_m = 0_\cp{K} \in K$,  dizemos que o sistema
@@ -207,19 +192,15 @@ Se $b_1 = b_2 = \cdots = b_m = 0_\cp{K} \in K$,  dizemos que o sistema
         a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = 0_\cp{K}
     \end{cases}
 \end{equation}
-\'e um \textbf{sistema linear homog\^eneo}. 
-
-\vspace{.3cm}
+\'e um \textbf{sistema linear homog\^eneo}.\index{Sistema linear!homogêneo} 
 
 Observe que tal sistema sempre possui solu\c{c}\~ao,  a saber, $x_1 = x_2 = \cdots = x_n = 0_\cp{K}$.
 
-
+Para o caso de sistemas lineares temos o seguinte resultado:
 
 \begin{teorema}
     Todo sistema linear do tipo \eqref{sistema_linear_geral} tem zero,  uma  ou uma infinidade de soluções.  Não existem outras possibilidades.
 \end{teorema}
-
-
 
 No caso de um sistema linear da forma \eqref{sistema_linear_geral},  o processo para encontrar suas soluções ser\'a feito mediante o uso de 3 tipos de opera\c{c}\~oes.  S\~ao elas:
 \begin{itemize}
