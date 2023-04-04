@@ -198,7 +198,7 @@
             \end{cases}
         \end{equation}
         
-        O conjunto de equações em \eqref{sistema_linear_geral} é chamado de um \pause \textbf{sistema de $m$ equa\c{c}\~oes lineares \pause a $n$ inc\'ognitas} $x_1$, $x_2$, \dots, $x_n$\pause , ou simplesmente de um \textbf{sistema linear}, nas incógnitas \pause $x_1$, $x_2$, \dots, $x_n$.\pause
+        O conjunto de equações em \eqref{sistema_linear_geral} é chamado de um \pause \textbf{sistema de $m$ equa\c{c}\~oes lineares \pause a $n$ inc\'ognitas} $x_1$, $x_2$, \dots, $x_n$\pause , ou simplesmente de um \textbf{sistema linear}, nas incógnitas \pause $x_1$, $x_2$, \dots, $x_n$.
     \end{frame}
 
     \begin{frame}
@@ -212,7 +212,7 @@
         \[
             (\alpha_1, \alpha_2, \dots, \alpha_n)\pause
         \]
-        e é chamada de uma \textbf{ênupla ordenada} ou uma \textbf{n-upla ordenada}.
+        e é chamada de uma \textbf{ênupla ordenada} \pause ou uma \textbf{n-upla ordenada}.
     \end{frame}
 
     \begin{frame}
@@ -293,7 +293,7 @@
  
                 \vspace{.3cm}
 
-                \item Se as linhas 1, 2, \dots, $r$ s\~ao as linhas n\~ao-nulas de $A$ \pause e se o \textbf{pivô} da linha $i$ ocorre na coluna $k_i$,\pause  $i = 1$, \dots, $r$, \pause ent\~ao $k_1 < k_2 < \cdots < k_r$.\pause
+                \item Se as linhas 1, 2, \dots, $r$ s\~ao as linhas n\~ao-nulas de $A$ \pause e se o \textbf{pivô} da linha $i$ ocorre na coluna $k_i$, \pause $i = 1$, \dots, $r$, \pause ent\~ao $k_1 < k_2 < \cdots < k_r$.\pause
  
                 \vspace{.3cm}
 
@@ -310,7 +310,7 @@
 
     \begin{frame}
         \begin{definicao}
-	    Se $A$ e $B$ s\~ao matrizes $m \times n$, \pause dizemos que $B$ \'e \textbf{linha-equivalente} \pause a $A$, \pause se $B$ for obtida de $A$ \pause atrav\'es de uma quantidade finita de opera\c{c}\~oes elementares sobre as linhas de $A$.
+	    Se $A$ e $B$ s\~ao matrizes $m \times n$, \pause dizemos que $B$ \'e \textbf{linha-equivalente} \pause a $A$, \pause se $B$ for obtida de $A$ \pause atrav\'es de uma quantidade finita de opera\c{c}\~oes elementares sobre as linhas de $A$.\pause
         \end{definicao}
         
         \vspace{.6cm}
@@ -333,7 +333,7 @@
     \end{frame}
 
     \begin{frame}
-        O \textbf{método de eliminação de Gauss} \pause ou \textbf{método de eleminação gaussiana} \pause consiste em substituir um dado sistema de equações lineares\pause  por outro \textbf{equivalente}, que seja mais simples de ser solucionado \pause e que tenha a mesma solução do sistema original.\pause
+        O \textbf{método de eliminação de Gauss} \pause ou \textbf{método de eleminação gaussiana} \pause consiste em substituir um dado sistema de equações lineares \pause por outro \textbf{equivalente}, que seja mais simples de ser solucionado \pause e que tenha a mesma solução do sistema original.\pause
 
         \begin{definicao}[Método de eliminaçao de Gauss]
             Seja $A$ a matriz ampliada de um sistema linear. \pause O método de \textbf{eliminação de Gauss} consiste em:\pause
@@ -342,7 +342,7 @@
 
                 \item Use operações elementares nas linhas de $A$ para reduzir a matriz ampliada à \textbf{forma escalonada por linhas}.\pause
                 
-                \item Quando a matriz ampliada estiver na forma escalonada usando substituição de trás para a frente, \pause resolva o sistema equivalente que corresponde a matriz escalonada reduzida por linhas.
+                \item Quando a matriz ampliada estiver na forma escalonada, usando substituição de trás para a frente, \pause resolva o sistema equivalente que corresponde a matriz escalonada reduzida por linhas.
             \end{enumerate}
         \end{definicao}
     \end{frame}
@@ -356,5 +356,18 @@
                 \item Faça a linha contendo este \textbf{pivô} ir para a parte de cima e volte ao passo (a) para repetir o procedimento com o restante da submatriz. Pare quando toda a matriz estiver na forma escalonada por linhas.
             \end{enumerate}
         \end{observacao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{definicao}
+            O \textbf{posto}, denotado $\p{A}$ ou $p(A)$, de uma matriz $A$ é número de linhas não nulas de qualquer uma de suas formas escalonadas por linhas.
+        \end{definicao}
+
+        \begin{teorema}[Teorema do Posto]
+            Seja $A$ a matriz dos coeficientes de um sistema linear com $n$ variáveis. Então
+            \[
+                \mbox{número de variáveis livres } = n - \p{A}.
+            \]
+        \end{teorema}
     \end{frame}
 \end{document}
