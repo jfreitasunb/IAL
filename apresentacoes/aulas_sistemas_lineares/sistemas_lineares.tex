@@ -350,23 +350,38 @@
     \begin{frame}
         \begin{observacao}
             \begin{enumerate}[label=({\alph*})]
-                \item Localize a coluna mais à esquerda que não é toda formada por zeros.
-                \item Crie um \textbf{pivô} no topo desta coluna.
-                \item Use o \textbf{pivô} para criar zeros abaixo dele.
-                \item Faça a linha contendo este \textbf{pivô} ir para a parte de cima e volte ao passo (a) para repetir o procedimento com o restante da submatriz. Pare quando toda a matriz estiver na forma escalonada por linhas.
+                \item Localize a coluna mais à esquerda que não é toda formada por zeros.\pause
+                
+                \vspace{.3cm}
+
+                \item Crie um \textbf{pivô} no topo desta coluna.\pause
+                 
+                \vspace{.3cm}
+
+                \item Use o \textbf{pivô} para criar zeros abaixo dele.\pause
+ 
+                \vspace{.3cm}
+
+                \item Faça a linha contendo este \textbf{pivô} ir para a parte de cima \pause e volte ao passo (a) para repetir o procedimento com o restante da submatriz. \pause Pare quando toda a matriz estiver na forma escalonada por linhas.
             \end{enumerate}
         \end{observacao}
     \end{frame}
 
     \begin{frame}
         \begin{definicao}
-            O \textbf{posto}, denotado $\p{A}$ ou $p(A)$, de uma matriz $A$ é número de linhas não nulas de qualquer uma de suas formas escalonadas por linhas.
+            Seja $A$ a matriz ampliada de um sistema linear. \pause Se $A$ está na forma escalonada reduzida por linhas, \pause então as variáveis desse sistema \pause que não correspondem aos pivôs \pause são chamadas de \textbf{variáveis livres}.
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{definicao}
+            O \textbf{posto}, \pause denotado $\p{A}$ \pause ou $p(A)$, \pause de uma matriz $A$ \pause é número de linhas não nulas \pause de qualquer uma de suas formas escalonadas por linhas.\pause
         \end{definicao}
 
         \begin{teorema}[Teorema do Posto]
-            Seja $A$ a matriz dos coeficientes de um sistema linear com $n$ variáveis. Então
+            Seja $A$ a matriz dos coeficientes de um sistema linear\pause  com $n$ variáveis. Então\pause
             \[
-                \mbox{número de variáveis livres } = n - \p{A}.
+                \mbox{número de variáveis livres } = \pause n - \p{A}.
             \]
         \end{teorema}
     \end{frame}
