@@ -517,66 +517,64 @@ O que iremos fazer para resolver um sistema linear do tipo \eqref{sistema_linear
     $A \rightarrow B$  ou $A \sim B$.
 \end{notacao}
     
+\begin{teorema}
+    Duas matrizes $A$ e $B$ são equivalentes por linha se, e somente, se elas puderem ser reduzidas à mesma forma escalonada por linhas.
+\end{teorema}
 
-    
-        \begin{teorema}
-            Duas matrizes $A$ e $B$ são equivalentes por linha se, e somente, se elas puderem ser reduzidas à mesma forma escalonada por linhas.
-        \end{teorema}
-    
 
-    
-        \begin{teorema}
-            Se as matrizes ampliadas  de dois sistemas lineares são equivalentes por linhas,  então os dois sistemas possuem as mesmas soluções.
-        \end{teorema}
-    
 
-    
-        O \textbf{método de eliminação de Gauss}  ou \textbf{método de eleminação gaussiana}  consiste em substituir um dado sistema de equações lineares  por outro \textbf{equivalente}, que seja mais simples de ser solucionado  e que tenha a mesma solução do sistema original.
+\begin{teorema}
+    Se as matrizes ampliadas  de dois sistemas lineares são equivalentes por linhas,  então os dois sistemas possuem as mesmas soluções.
+\end{teorema}
 
-        \begin{definicao}[Método de eliminaçao de Gauss]
-            Seja $A$ a matriz ampliada de um sistema linear.  O método de \textbf{eliminação de Gauss} consiste em:
-            \begin{enumerate}[label={\roman*})]
-                \item Escreva a matriz ampliada do sistema de equações lineares.
 
-                \item Use operações elementares nas linhas de $A$ para reduzir a matriz ampliada à \textbf{forma escalonada por linhas}.
-                
-                \item Quando a matriz ampliada estiver na forma escalonada, usando substituição de trás para a frente,  resolva o sistema equivalente que corresponde a matriz escalonada reduzida por linhas.
-            \end{enumerate}
-        \end{definicao}
-    
-    
-    
-        \begin{observacao}
-            \begin{enumerate}[label=({\alph*})]
-                \item Localize a coluna mais à esquerda que não é toda formada por zeros.
-                
-                \vspace{.3cm}
 
-                \item Crie um \textbf{pivô} no topo desta coluna.
-                 
-                \vspace{.3cm}
+O \textbf{método de eliminação de Gauss}  ou \textbf{método de eleminação gaussiana}  consiste em substituir um dado sistema de equações lineares  por outro \textbf{equivalente}, que seja mais simples de ser solucionado  e que tenha a mesma solução do sistema original.
 
-                \item Use o \textbf{pivô} para criar zeros abaixo dele.
- 
-                \vspace{.3cm}
+\begin{definicao}[Método de eliminaçao de Gauss]
+    Seja $A$ a matriz ampliada de um sistema linear.  O método de \textbf{eliminação de Gauss} consiste em:
+    \begin{enumerate}[label={\roman*})]
+        \item Escreva a matriz ampliada do sistema de equações lineares.
 
-                \item Faça a linha contendo este \textbf{pivô} ir para a parte de cima  e volte ao passo (a) para repetir o procedimento com o restante da submatriz.  Pare quando toda a matriz estiver na forma escalonada por linhas.
-            \end{enumerate}
-        \end{observacao}
-    
-        \begin{definicao}
-            Seja $A$ a matriz ampliada de um sistema linear.  Se $A$ está na forma escalonada reduzida por linhas,  então as variáveis desse sistema  que não correspondem aos pivôs  são chamadas de \textbf{variáveis livres}.
-        \end{definicao}
-    
-        \begin{definicao}
-            O \textbf{posto},  denotado $\p{A}$  ou $p(A)$,  de uma matriz $A$  é número de linhas não nulas  de qualquer uma de suas formas escalonadas por linhas.
-        \end{definicao}
+        \item Use operações elementares nas linhas de $A$ para reduzir a matriz ampliada à \textbf{forma escalonada por linhas}.
+        
+        \item Quando a matriz ampliada estiver na forma escalonada, usando substituição de trás para a frente,  resolva o sistema equivalente que corresponde a matriz escalonada reduzida por linhas.
+    \end{enumerate}
+\end{definicao}
 
-        \begin{teorema}[Teorema do Posto]
-            Seja $A$ a matriz dos coeficientes de um sistema linear  com $n$ variáveis. Então
-            \[
-                \mbox{número de variáveis livres } =  n - \p{A}.
-            \]
-        \end{teorema}
+
+
+\begin{observacao}
+    \begin{enumerate}[label=({\alph*})]
+        \item Localize a coluna mais à esquerda que não é toda formada por zeros.
+        
+        \vspace{.3cm}
+
+        \item Crie um \textbf{pivô} no topo desta coluna.
+         
+        \vspace{.3cm}
+
+        \item Use o \textbf{pivô} para criar zeros abaixo dele.
+
+        \vspace{.3cm}
+
+        \item Faça a linha contendo este \textbf{pivô} ir para a parte de cima  e volte ao passo (a) para repetir o procedimento com o restante da submatriz.  Pare quando toda a matriz estiver na forma escalonada por linhas.
+    \end{enumerate}
+\end{observacao}
+
+\begin{definicao}
+    Seja $A$ a matriz ampliada de um sistema linear.  Se $A$ está na forma escalonada reduzida por linhas,  então as variáveis desse sistema  que não correspondem aos pivôs  são chamadas de \textbf{variáveis livres}.
+\end{definicao}
+
+\begin{definicao}
+    O \textbf{posto},  denotado $\p{A}$  ou $p(A)$,  de uma matriz $A$  é número de linhas não nulas  de qualquer uma de suas formas escalonadas por linhas.
+\end{definicao}
+
+\begin{teorema}[Teorema do Posto]
+    Seja $A$ a matriz dos coeficientes de um sistema linear  com $n$ variáveis. Então
+    \[
+        \mbox{número de variáveis livres } =  n - \p{A}.
+    \]
+\end{teorema}
     
 \end{exemplos}
