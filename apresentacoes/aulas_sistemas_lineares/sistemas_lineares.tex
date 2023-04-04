@@ -307,4 +307,37 @@
             Uma matriz que satisfaz as três primeiras propriedades da definição anterior \pause é dita estar na \textbf{forma escalonada por linhas}, \pause ou simplesmente, em \textbf{forma escalonada}.
         \end{observacao}
     \end{frame}
+
+    \begin{frame}
+        \begin{definicao}
+	    Se $A$ e $B$ s\~ao matrizes $m \times n$, \pause dizemos que $B$ \'e \textbf{linha-equivalente} \pause a $A$, \pause se $B$ for obtida de $A$ \pause atrav\'es de uma quantidade finita de opera\c{c}\~oes elementares sobre as linhas de $A$.
+        \end{definicao}
+        
+        \vspace{.6cm}
+
+        \begin{notacao}
+	    $A \rightarrow B$ \pause ou $A \sim B$.
+        \end{notacao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{teorema}
+            Duas matrizes $A$ e $B$ são equivalentes por linha se, e somente, se elas puderem ser reduzidas à mesma forma escalonada por linhas.
+        \end{teorema}
+    \end{frame}
+
+    \begin{frame}
+        O \textbf{método de eliminação de Gauss} \pause ou \textbf{método de eleminação gaussiana} \pause consiste em substituir um dado sistema de equações lineares\pause  por outro \textbf{equivalente}, que seja mais simples de ser solucionado \pause e que tenha a mesma solução do sistema original.\pause
+
+        \begin{definicao}[Método de eliminaçao de Gauss]
+            Seja $A$ a matriz ampliada de um sistema linear. \pause O método de \textbf{eliminação de Gauss} consiste em:\pause
+            \begin{enumerate}[label={\roman*})]
+                \item Escreva a matriz ampliada do sistema de equações lineares.\pause
+
+                \item Use operações elementares nas linhas de $A$ para reduzir a matriz ampliada à \textbf{forma escalonada por linhas}.\pause
+                
+                \item Quando a matriz ampliada estiver na forma escalonada usando substituição de trás para a frente, \pause resolva o sistema equivalente que corresponde a matriz escalonada reduzida por linhas.
+            \end{enumerate}
+        \end{definicao}
+    \end{frame}
 \end{document}
