@@ -512,11 +512,98 @@ O que iremos fazer para resolver um sistema linear do tipo \eqref{sistema_linear
 \begin{definicao}
     Se $A$ e $B$ s\~ao matrizes $m \times n$, dizemos que $B$ \'e \textbf{linha-equivalente}\index{Matrizes!linha-equivalente} a $A$, se $B$ for obtida de $A$ atrav\'es de uma quantidade finita de opera\c{c}\~oes elementares sobre as linhas de $A$.
 \end{definicao}
-        
+
 \begin{notacao}
     $A \rightarrow B$ ou $A \sim B$.
 \end{notacao}
-    
+
+\begin{exemplos}
+    \begin{enumerate}
+        \item As matrizes
+            \[
+                A = \begin{pmatrix}
+                        1 & 2 & -1 & 0\\
+                        0 & 1 & 3 & 4\\
+                        2 & 0 & 1 & 3
+                    \end{pmatrix}
+                    \mbox{ e }
+                B = \begin{pmatrix}
+                        0 & 1 & 3 & 4\\
+                        1 & 2 & -1 & 0\\
+                        2 & 0 & 1 & 3
+                    \end{pmatrix}
+            \]
+            são matrizes linha-equivalentes pois podemos obter a matriz $B$ de $A$ trocando a primeira linha de $A$ com a segunda linha. Assim $B \sim A$.
+            
+            Observe que também podemos obter a matriz $A$ a partir de $B$ simplesmente trocando a primeira linha de $B$ com a segunda linha. Logo $A \sim B$.
+        \item As matrizes
+            \[
+                C = \begin{pmatrix}
+                        1 & 0 & 3 & 0\\
+                        2 & 1 & 0 & 1\\
+                        -1 & 3 & 2 & 1
+                    \end{pmatrix}
+                    \mbox{ e }
+                D = \begin{pmatrix}
+                        1 & 0 & 3 & 0\\
+                        4 & 1 & 6 & 1\\
+                        0 & 3 & 5 & 1
+                    \end{pmatrix}
+            \]
+            também são linha-equivalentes. De fato, partindo de $C$ podemos efetuar as seguintes operações elementares:
+            \begin{align*}
+                C &= \begin{pmatrix}
+                    1 & 0 & 3 & 0\\
+                    2 & 1 & 0 & 1\\
+                    -1 & 3 & 2 & 1
+                \end{pmatrix}
+                \begin{array}{l}
+                    \phantom{x}\\ L_2 \to L_2 + 2L_1\\\phantom{x}
+                \end{array} \sim
+                \begin{pmatrix}
+                    1 & 0 & 3 & 0\\
+                    4 & 1 & 6 & 1\\
+                    -1 & 3 & 2 & 1
+                \end{pmatrix}
+                \begin{array}{l}
+                    \phantom{x}\\ \phantom{x}\\ L_3 \to L_2 + L_1
+                \end{array}\\ \sim
+                  &\begin{pmatrix}
+                    1 & 0 & 3 & 0\\
+                    4 & 1 & 6 & 1\\
+                    0 & 3 & 5 & 1
+                \end{pmatrix} = D
+            \end{align*}
+            Assim $D \sim C$.
+
+            Poderíamos fazer o contrário, começar de $D$ e obter a matriz $C$:
+            \begin{align*}
+                D &= \begin{pmatrix}
+                    1 & 0 & 3 & 0\\
+                    4 & 1 & 6 & 1\\
+                    0 & 3 & 5 & 1
+                \end{pmatrix}
+                \begin{array}{l}
+                    \phantom{x}\\ L_2 \to L_2 - 2L_1\\\phantom{x}
+                \end{array} \sim
+                \begin{pmatrix}
+                    1 & 0 & 3 & 0\\
+                    2 & 1 & 0 & 1\\
+                    0 & 3 & 5 & 1
+                \end{pmatrix}
+                \begin{array}{l}
+                    \phantom{x}\\ \phantom{x}\\ L_3 \to L_3 - L_1
+                \end{array}\\ \sim
+                  &\begin{pmatrix}
+                    1 & 0 & 3 & 0\\
+                    2 & 1 & 0 & 1\\
+                    -1 & 3 & 2 & 1
+                \end{pmatrix} = C
+            \end{align*}
+
+            Assim $C \sim D$.
+    \end{enumerate}
+\end{exemplos}
 \begin{teorema}
     Duas matrizes $A$ e $B$ são equivalentes por linha se, e somente, se elas puderem ser reduzidas à mesma forma escalonada por linhas.
 \end{teorema}
@@ -549,6 +636,162 @@ O \textbf{método de eliminação de Gauss}\index{Sistemas lineares!método de e
         \item Faça a linha contendo este \textbf{pivô} ir para a parte de cima e volte ao passo (a) para repetir o procedimento com o restante da submatriz. Pare quando toda a matriz estiver na forma escalonada por linhas.
     \end{enumerate}
 \end{observacao}
+
+\begin{exemplos}
+    \begin{enumerate}
+        \item Encontre a solução do seguinte sistema em $\rac$:
+        \[
+            \begin{cases}
+                6x_3 + 19x_5 + 11x_6 = -27\\
+                3x_1 + 12x_2 + 9x_3 - 6x_4 + 26x_5 + 31x_6 = -63\\
+                x_1 + 4x_2 + 3x_3 - 2x_4 + 10x_5 + 9x_6 = -17\\
+                -x_1 - 4x_2 - 4x_3 + 2x_4 - 13x_5 - 11x_6 = 22
+            \end{cases}
+        \]
+        \item Considere o seguinte sistema em $\real$:
+        \[
+            \begin{cases}
+                2x_1 + 4x_5 = 16\\
+                5x_1 - 2x_2 = 4\\
+                10x_1 - 4x_2 = 3
+            \end{cases}
+        \]
+    \end{enumerate}
+    \begin{solucao}
+        \begin{enumerate}
+            \item Primeiro montamos a matriz ampliada do sistema:
+            \[
+                \begin{amatrix}{6}
+                    0 & 0 & 6 & 0 & 19 & 11 & -27\\
+                    3 & 12 & 9 & -6 & 26 & 31 & -63\\
+                    1 & 4 & 3 & -2 & 10 & 9 & -17\\
+                    -1 & -4 & -4 & 2 & -13 & -11 & 22
+                \end{amatrix}
+            \]
+            O primeiro passo e colocar um pivô na primeira linha. Para isso podemos trocar as linhas 1 e 3 de posição: $L_1 \leftrightarrow L_3$:
+            \[
+               \begin{amatrix}{6}
+                    1 & 4 & 3 & -2 & 10 & 9 & -17\\
+                    3 & 12 & 9 & -6 & 26 & 31 & -63\\
+                    0 & 0 & 6 & 0 & 19 & 11 & -27\\
+                    -1 & -4 & -4 & 2 & -13 & -11 & 22
+               \end{amatrix}
+            \]
+            Agora vamos zerar todos os elementos na primeira coluna abaixo do 1:
+            \begin{align*}
+                &\begin{amatrix}{6}
+                    1 & 4 & 3 & -2 & 10 & 9 & -17\\
+                    3 & 12 & 9 & -6 & 26 & 31 & -63\\
+                    0 & 0 & 6 & 0 & 19 & 11 & -27\\
+                    -1 & -4 & -4 & 2 & -13 & -11 & 22
+                \end{amatrix}
+                \begin{array}{l}
+                    \phantom{x}\\L_2 \to L_2 - 3L_1\\\phantom{x}\\L_4 \to L_4 + L_1
+                \end{array}\sim\\
+                &\begin{amatrix}{6}
+                    1 & 4 & 3 & -2 & 10 & 9 & -17\\
+                    0 & 0 & 0 & 0 & -4 & 4 & -12\\
+                    0 & 0 & 6 & 0 & 19 & 11 & -27\\
+                    0 & 0 & -1 & 0 & -3 & -2 & 5
+                \end{amatrix}
+            \end{align*}
+            Na quarta linha temos um -1 na terceira coluna. Por isso, podemos trocar a segunda e a quarta linhas de posição: $L_2 \leftrightarrow L_4$
+            \[
+                \begin{amatrix}{6}
+                    1 & 4 & 3 & -2 & 10 & 9 & -17\\
+                    0 & 0 & -1 & 0 & -3 & -2 & 5\\
+                    0 & 0 & 6 & 0 & 19 & 11 & -27\\
+                    0 & 0 & 0 & 0 & -4 & 4 & -12
+                \end{amatrix}
+            \]
+            Multiplicamos a segunda linha por -1 para obter um pivô na terceira coluna:
+            \[
+                \begin{amatrix}{6}
+                    1 & 4 & 3 & -2 & 10 & 9 & -17\\
+                    0 & 0 & 1 & 0 & 3 & 2 & -5\\
+                    0 & 0 & 6 & 0 & 19 & 11 & -27\\
+                    0 & 0 & 0 & 0 & -4 & 4 & -12
+                \end{amatrix}
+            \]
+            Agora vamos zerar todos os coeficientes que estão na terceira coluna e abaixo do pivô:
+            \begin{align*}
+                &\begin{amatrix}{6}
+                    1 & 4 & 3 & -2 & 10 & 9 & -17\\
+                    0 & 0 & 1 & 0 & 3 & 2 & -5\\
+                    0 & 0 & 6 & 0 & 19 & 11 & -27\\
+                    0 & 0 & 0 & 0 & -4 & 4 & -12
+                \end{amatrix}
+                \begin{array}{l}
+                    \phantom{x}\\ \phantom{x}\\ L_3 \to L_3 - 6L_2\\ \phantom{x} 
+                \end{array}\sim\\
+                &\begin{amatrix}{6}
+                    1 & 4 & 3 & -2 & 10 & 9 & -17\\
+                    0 & 0 & 1 & 0 & 3 & 2 & -5\\
+                    0 & 0 & 0 & 0 & 1 & -1 & 3\\
+                    0 & 0 & 0 & 0 & -4 & 4 & -12
+                \end{amatrix}
+            \end{align*}
+            Como na terceira linha já temos um pivô na quinta coluna, vamos somente zerar os coeficientes abaixo desse pivô.
+            \begin{align*}
+                &\begin{amatrix}{6}
+                    1 & 4 & 3 & -2 & 10 & 9 & -17\\
+                    0 & 0 & 1 & 0 & 3 & 2 & -5\\
+                    0 & 0 & 0 & 0 & 1 & -1 & 3\\
+                    0 & 0 & 0 & 0 & -4 & 4 & -12
+                \end{amatrix}
+                \begin{array}{l}
+                    \phantom{x}\\ \phantom{x}\\ \phantom{x}\\ L_4 \to L_4 - 4L_3 
+                \end{array}\sim\\
+                &\begin{amatrix}{6}
+                    1 & 4 & 3 & -2 & 10 & 9 & -17\\
+                    0 & 0 & 1 & 0 & 3 & 2 & -5\\
+                    0 & 0 & 0 & 0 & 1 & -1 & 3\\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0
+                \end{amatrix}
+            \end{align*}
+            Como essa matriz está na forma escalonada temos o seguinte sistema:
+            \[
+                \begin{cases}
+                    x_1 + 4x_2 + 3x_3 - 2x_4 + 10x_5 + 9x_6 = -17\\
+                    x_3 + 3x_5 + 2x_6 = -5\\
+                    x_5 - x_6 = 3
+                \end{cases}
+            \]
+            As variáveis $x_2$, $x_4$ e $x_6$ são chamadas de \textbf{variáveis livres} do sistema linear pois não estão associadas a nenhum \textbf{pivô} na matriz escalonada desse sistema.
+            Da terceira equação temos
+            \[
+                x_5 = 3 + x_6.
+            \]
+            Substituindo esse valor na segunda equação:
+            \begin{align*}
+                x_3 + 3(3 + x_6) + 2x_6 = -5\\
+                x_3 + 9 + 3x_6 + 2x_6 = -5\\
+                x_3 = -15 - 5x_6
+            \end{align*}
+            Finalmente, substituindo os valores encontrados para $x_3$ e $x_5$ na primeira equação:
+            \begin{align*}
+                x_1 + 4x_2 + 3(-14 - 5x_6) - 2x_4 + 10(3 + x_6) + 9x_6 = -17\\
+                x_1 + 4x_2 - 42 - 15x_6 - 2x_4 + 30 + 10x_6 + 9x_6 = -17\\
+                x_1 = -5 - 4x_2 + 2x_4 - 4x_6
+            \end{align*}
+
+            Fazendo $x_2 = s$, $x_4 = t$ e $x_6 = z$ com $s$, $t$ e $z \in \rac$ podemos escrever
+            \begin{align*}
+                x_1 &= -5 - 4s + 2t - 4z\\
+                x_2 &= s\\
+                x_3 &= -15 - 5z\\
+                x_4 &= t\\
+                x_5 &= 3 + z\\
+                x_6 &= z
+            \end{align*}
+            Nesse caso temos um sistema \textbf{possível e indeterminado}. O sistema admite infinitas soluções. Podemos escrever as soluções desse sistema como o conjunto
+            \[
+                S = \{(-5 - 4s + 2t - 4z, s, -14 - 5z, t, 3 + z, z) \mid s, t, z \in \rac\}
+            \]
+            que é chamado de \textbf{conjunto-solução} do sistema linear.
+        \end{enumerate}
+    \end{solucao}
+\end{exemplos}
 
 \begin{definicao}
     Seja $A$ a matriz ampliada de um sistema linear. Se $A$ está na forma escalonada reduzida por linhas, então as variáveis desse sistema que não correspondem aos pivôs são chamadas de \textbf{variáveis livres}.\index{Sistemas lineares!variáveis livres}
