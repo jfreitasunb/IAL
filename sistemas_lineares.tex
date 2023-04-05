@@ -224,7 +224,7 @@ Estas tr\^es opera\c{c}\~oes s\~ao chamadas de  \textbf{opera\c{c}\~oes elementa
 	\begin{enumerate}[label={\arabic*})]
 		\item $\begin{cases}x + y = 4\\3x + 3y = 6\end{cases}$
 
-		\item $\begin{cases}x + y + 2z = 9\\ 2x + 4y - 3z = 1\\ 3x + 6y - 5z = 0\end{cases}$
+		\item $\begin{cases}x + y + 2z = 9\\ 2x + 4y - 3z = 1\\ 3x + 6y - 3z = 0\end{cases}$
 	\end{enumerate}
 
 	\begin{solucao}
@@ -232,14 +232,14 @@ Estas tr\^es opera\c{c}\~oes s\~ao chamadas de  \textbf{opera\c{c}\~oes elementa
 			\item Neste caso podemos somar a segunda equação do sistema com ela mesma mais -3 vezes a primeira equação:
 				\[
 					\begin{cases}
-						x + 4 = 4\\
+						x + y = 4\\
 						3x + 3y + (-3x) + (-3y) = 4 + (-3)\cdot 4
 					\end{cases}
 				\]
 			que resulta em
 			\[
 				\begin{cases}
-					x + 4 = 4\\
+					x + y = 4\\
 					0 = -6
 				\end{cases}
 			\]
@@ -249,7 +249,7 @@ Estas tr\^es opera\c{c}\~oes s\~ao chamadas de  \textbf{opera\c{c}\~oes elementa
                             \begin{cases}
                                 x + y + 2z = 9\\
                                 2y - 7z = -17\\
-                                3x + 6y - 5z = 0
+                                3x + 6y - 3z = 0
                             \end{cases}
                         \]
                         Agora trocamos a linha 3 por ela mesma menos 3 vezes a linha 1 ($L_3 \to L_3 - 3L_1$). Após essa operação o sistema anterior torna-se
@@ -257,7 +257,7 @@ Estas tr\^es opera\c{c}\~oes s\~ao chamadas de  \textbf{opera\c{c}\~oes elementa
                             \begin{cases}
                                 x + y + 2z = 9\\
                                 2y - 7z = -17\\
-                                3y - 11z = -27
+                                3y - 9z = -27
                             \end{cases}
                         \]
                         Multiplicando a segunda linha por 1/2 ($L_2 \to \frac{1}{2}L_2$) obtemos:
@@ -265,7 +265,7 @@ Estas tr\^es opera\c{c}\~oes s\~ao chamadas de  \textbf{opera\c{c}\~oes elementa
                             \begin{cases}
                                 x + y + 2z = 9\\
                                 y - (7/2)z = -17/2\\
-                                3y - 11z = -27
+                                3y - 9z = -27
                             \end{cases}
                         \]
                         Agora vamos multiplicar a segunda linha por -3 e somar com a terceira linha ($L_3 \to L_3 - 3L_2$).
@@ -273,15 +273,15 @@ Estas tr\^es opera\c{c}\~oes s\~ao chamadas de  \textbf{opera\c{c}\~oes elementa
                             \begin{cases}
                                 x + y + 2z = 9\\
                                 y - (7/2)z = -17/2\\
-                                - (1/2)z = -3/2
+                                3/2z = -3/2
                             \end{cases}
                         \]
-                        Podemos multiplicar a terceira linha por -2 ($L_3 \to -2L_3$) para obter:
+                        Podemos multiplicar a terceira linha por 2/3 ($L_3 \to \dfrac{2}{3}L_3$) para obter:
                         \[
                             \begin{cases}
                                 x + y + 2z = 9\\
                                 y - (7/2)z = -17/2\\
-                                z = 3
+                                z = -1
                             \end{cases}
                         \]
                         Troque a primeira linha por ela mesma menos a segunda linha ($L_1 \to L_1 - L_2$):
@@ -289,26 +289,26 @@ Estas tr\^es opera\c{c}\~oes s\~ao chamadas de  \textbf{opera\c{c}\~oes elementa
                             \begin{cases}
                                 x + (11/2)z = 35/2\\
                                 y - (7/2)z = -17/2\\
-                                z = 3
+                                z = -1
                             \end{cases}
                         \]
                         Agora trocamos a segunda linha por ela mesma mais 7/2 vezes a terceira linha ($L_2 \to L_2 + (7/2)L_3$):
                         \[
                             \begin{cases}
                                 x + (11/2)z = 35/2\\
-                                y  = 2\\
-                                z = 3
+                                y  = -12\\
+                                z = -1
                             \end{cases}
                         \]
                         Finalmente, trocando a primeira linha por ela mesma menos (11/2) vezes a terceira linha ($L_1 \to L_1 - (11/2)L_3$) obtemos
                         \[
                             \begin{cases}
-                                x = 1\\
-                                y = 2\\
-                                z = 3
+                                x = 23\\
+                                y = -12\\
+                                z = -1
                             \end{cases}
                         \]
-                        Assim vemos que o sistema tem uma única solução que é $x = 1$, $y = 2$ e $z = 3$.
+                        Assim vemos que o sistema tem uma única solução que é $x = 23$, $y = -12$ e $z = -1$.
 		\end{enumerate}
 	\end{solucao}
 \end{exemplos}
@@ -479,7 +479,7 @@ O que iremos fazer para resolver um sistema linear do tipo \eqref{sistema_linear
                         L_1 \to L_1 + 3L_2\\\phantom{x}\\\phantom{x}
                     \end{array} \sim\\
                     &\begin{bmatrix}
-        		1 & 0 & -5/2 & -1/2\\
+        		1 & 0 & -7/2 & -1/2\\
                         0 & 1 & -3/2 & -1/2\\
 		        0 & 0 & 0 & 0
                     \end{bmatrix}
@@ -487,7 +487,7 @@ O que iremos fazer para resolver um sistema linear do tipo \eqref{sistema_linear
                 Essa última matriz está na forma escalonada reduzida por linhas. Assim obtemos o sistema
                 \[
                     \begin{cases}
-                        x_1 - (5/2)x_3 = -1/2\\
+                        x_1 - (7/2)x_3 = -1/2\\
                         x_2 - (3/2)x_3 = -1/2
                     \end{cases}.
                 \]
@@ -498,11 +498,11 @@ O que iremos fazer para resolver um sistema linear do tipo \eqref{sistema_linear
                 \]
                 e substituindo essa equação na primeira encontramos
                 \[
-                    x_1 = -\dfrac{3}{4} + \dfrac{15}{4}x_3.
+                    x_1 = -\dfrac{1}{2} + \dfrac{7}{2}x_3.
                 \]
                 Portanto fazendo $x_3 = t \in \real$ a solução desse sistema pode ser escrita como
                 \[
-                    x_1 = -\dfrac{3}{4} + \dfrac{15}{4}t, x_2 = -\dfrac{1}{2} + \dfrac{3}{2}t, x_3 = t, t \in \real.
+                    x_1 = -\dfrac{1}{2} + \dfrac{7}{2}t, x_2 = -\dfrac{1}{2} + \dfrac{3}{2}t, x_3 = t, t \in \real.
                 \]
                 Logo o sistema é possível e indeterminado.
             \end{solucao}
@@ -775,7 +775,7 @@ O \textbf{método de eliminação de Gauss}\index{Sistemas lineares!método de e
             \begin{align*}
                 x_3 + 3(3 + x_6) + 2x_6 = -5\\
                 x_3 + 9 + 3x_6 + 2x_6 = -5\\
-                x_3 = -15 - 5x_6
+                x_3 = -14 - 5x_6
             \end{align*}
             Finalmente, substituindo os valores encontrados para $x_3$ e $x_5$ na primeira equação:
             \begin{align*}
@@ -788,7 +788,7 @@ O \textbf{método de eliminação de Gauss}\index{Sistemas lineares!método de e
             \begin{align*}
                 x_1 &= -5 - 4s + 2t - 4z\\
                 x_2 &= s\\
-                x_3 &= -15 - 5z\\
+                x_3 &= -14 - 5z\\
                 x_4 &= t\\
                 x_5 &= 3 + z\\
                 x_6 &= z
@@ -835,46 +835,46 @@ O \textbf{método de eliminação de Gauss}\index{Sistemas lineares!método de e
                     \end{array}\sim
                     \begin{amatrix}{2}
                         1 & 2 & 8\\
-                        0 & -12 & -36\\
-                        0 & -24 & -77
+                        0 & -8 & -36\\
+                        0 & -16 & -77
                     \end{amatrix}
                 \end{align*}
                 Agora vamos criar um pivô na segunda linha, segunda coluna. Para isso fazemos:
                 \begin{align*}
                     \begin{amatrix}{2}
                         1 & 2 & 8\\
-                        0 & -12 & -36\\
-                        0 & -24 & -77
+                        0 & -8 & -36\\
+                        0 & -16 & -77
                     \end{amatrix}
                     \begin{array}{l}
-                        \phantom{x}\\L_2 \to -\dfrac{1}{12}\\\phantom{x}
+                        \phantom{x}\\L_2 \to -\dfrac{1}{8}\\\phantom{x}
                     \end{array}\sim
                     \begin{amatrix}{2}
                         1 & 2 & 8\\
-                        0 & 1 & 3\\
-                        0 & -24 & -77
+                        0 & 1 & 9/4\\
+                        0 & -16 & -77
                     \end{amatrix}
                 \end{align*}
                 Por último podemos zerar o coeficiente abaixo do pivô da segunda linha:
                 \begin{align*}
                     \begin{amatrix}{2}
                         1 & 2 & 8\\
-                        0 & 1 & 3\\
-                        0 & -24 & -77
+                        0 & 1 & 9/4\\
+                        0 & -16 & -77
                     \end{amatrix}
                     \begin{array}{l}
-                        \phantom{x}\\\phantom{x}\\L_3 \to L_3 + 24L_2!
+                        \phantom{x}\\\phantom{x}\\L_3 \to L_3 + 16L_2!
                     \end{array}\sim
                     \begin{amatrix}{2}
                         1 & 2 & 8\\
-                        0 & 1 & 3\\
+                        0 & 1 & 9/4\\
                         0 & 0 & -5
                     \end{amatrix}
                 \end{align*}
                 Dessa última matriz, obtemos o sistema
                 \[
                     \begin{cases}
-                        x_1 - 2x_2 = 3\\
+                        x_1 - 2x_2 = 8\\
                         x_2 = 3\\
                         0 = -5
                     \end{cases}
