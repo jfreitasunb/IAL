@@ -153,16 +153,45 @@ Temos então as seguintes possibilidades:
         \begin{figure}[h]
             \centering
             \includegraphics[scale=0.6]{3-planos-solucao-unica.pdf}
+                \caption{Solução única}
         \end{figure}
     \item Os três planos se interceptam em infinitos pontos. Existem infinitos valores de $x$, $y$, $z \in \cp{K}$ que satisfazem as três equações simultanemente. Neste caso dizemos que o sistema \eqref{sistema_linear_3x3} é \textbf{possível e indeterminado}.
         \begin{figure}[h]
             \centering
-            \includegraphics[scale=0.6]{2-planos-coincidentes-infinitas-solucoes-intersecao-reta.pdf}
+            \begin{subfigure}{.32\textwidth}
+                \centering
+                \includegraphics[width=\linewidth]{2-planos-coincidentes-infinitas-solucoes-intersecao-reta.pdf}
+                \caption{Infinitas soluções}
+            \end{subfigure}
+            \begin{subfigure}{.32\textwidth}
+                \centering
+                \includegraphics[width=\linewidth]{3-planos-coincidentes-infinitas-solucoes.pdf}
+                \caption{Infinitas soluções}
+            \end{subfigure}
+            \begin{subfigure}{.32\textwidth}
+                \centering
+                \includegraphics[width=\linewidth]{2-planos-coincidentes-terceiro-fora-infinitas-solucoes-intersecao-reta.pdf}
+                \caption{Infinitas soluções}
+            \end{subfigure}
         \end{figure}
     \item Os três planos não possuem uma interseção em comum. Neste caso não existem valores de $x$, $y$, $z \in \cp{K}$  satisfazendo as três equações simultaneamente. Assim dizemos que o sistema \eqref{sistema_linear_3x3}  é \textbf{impossível}.
         \begin{figure}[h]
             \centering
-            \includegraphics[scale=0.6]{3-planos-paralelos-nenhuma-solucao.pdf}
+            \begin{subfigure}{.32\textwidth}
+                \centering
+                \includegraphics[width=\linewidth]{3-planos-paralelos-nenhuma-solucao.pdf}
+                \caption{Nenhuma solução}
+		\end{subfigure}
+            \begin{subfigure}{.32\textwidth}
+                \centering
+                \includegraphics[width=\linewidth]{2-planos-paralelos-nenhuma-solucao.pdf}
+                 \caption{Nenhuma solução}
+              \end{subfigure}
+            \begin{subfigure}{.32\textwidth}
+                \centering  
+		   \includegraphics[width=\linewidth]{3-planos-sem-nenhuma-intersecao-dois-a-dois-retas-nenhuma-solucao.pdf}
+		    \caption{Nenhuma solução}
+	       \end{subfigure}
         \end{figure}
 \end{enumerate}
 
@@ -337,6 +366,53 @@ Para destacar que a última coluna dessa matriz contém os termos independentes 
     \end{amatrix}
 \]
 
+\begin{exemplos}
+    Escreva a matriz ampliada dos seguintes sistemas lineares:
+    \begin{enumerate}[label={\arabic*})]
+        \item \[\begin{cases} x_1 + x_2 - 3x_3 + x_4 = -1\\ 2x_1 - 3x_2 + x_4 = 0\\ 3x_1 + 2x_3 = -3\\ x_1 + x_4 = -2\end{cases}\]
+        \item \[\begin{cases} x_1 + x_2 - 3x_3 + x_4 = -2\\ 2x_1 - 3x_2 + x_4 = 0\end{cases}\]
+        \item \[\begin{cases} 2x_1 - 5x_2 + 4x_3 - 7x_4 + 8x_5 = 0\\ 3x_1 - 7x_2 + 2x_4 - 9x_5 = 0\\ 5x_3 + 8x_4 = 0\\ x_3 - x_4 = 0\end{cases}\]
+    \end{enumerate}
+    \begin{solucao}
+        \begin{enumerate}[label={\arabic*})]
+            \item Neste caso a matriz ampliada é:
+                \[
+                    \begin{amatrix}{4}
+                        1 & 1 & -3 & 1 & -1\\
+                        2 & -3 & 0 & 1 & 0\\
+                        3 & 0 & 2 & 0 & -3\\
+                        1 & 0 & 0 & 1 & -2
+                    \end{amatrix}
+                \]
+            \item Neste caso a matriz ampliada é:
+                \[
+                    \begin{amatrix}{4}
+                        1 & 1 & -3 & 1 & -2\\
+                        2 & -3 & 0 & 1 & 0\\
+                    \end{amatrix}
+                \]
+            \item Neste caso a matriz ampliada é:
+                \[
+                    \begin{amatrix}{5}
+                        2 & -5 & 4 & -7 & 8 & 0\\
+                        3 & -7 & 0 & 2 & -9 & 0\\
+                        0 & 0 & 5 & 8 & 0 & 0\\
+                        0 & 0 & 1 & -1 & 0 & 0
+                    \end{amatrix}
+                \]
+                Como a última coluna dessa matriz é composta somente de zeros podemos omití-la e escrever:
+                \[
+                    \begin{bmatrix}
+                        2 & -5 & 4 & -7 & 8\\
+                        3 & -7 & 0 & 2 & -9\\
+                        0 & 0 & 5 & 8 & 0\\
+                        0 & 0 & 1 & -1 & 0 
+                    \end{bmatrix}
+                \]
+
+        \end{enumerate}
+    \end{solucao}
+\end{exemplos}
 Na forma matricial as opera\c{c}\~oes elementares s\~ao descritas como:
 
 \vspace{.3cm}
