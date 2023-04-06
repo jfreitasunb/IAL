@@ -165,39 +165,8 @@
   \end{enumerate}
 \end{exercicio}
 
-\begin{exercicio}
-  Determine o n\'umero de solu\c{c}\~oes do sistema
-  \[
-    \begin{cases}
-      x + 2y - 3z = 4\\
-      4x + y + 2z = 6\\
-      x + 2y + (\alpha^2 - 19)z = \alpha,  
-    \end{cases}
-\]
-em fun\c{c}\~ao do par\^ametro:
-\begin{enumerate}[label={\alph*})]
-   \item $\alpha \in \real$;
-   \item $\alpha \in \rac$?
- \end{enumerate} 
-\end{exercicio}
-
-\begin{exercicio}
-  Considere o sistema linear
-  \[
-    \begin{cases}
-      (k + 2)x + 2ky - z = 1\\
-      x - 2y + kz = -k\\
-      y + z = k
-    \end{cases}.
-  \]
-  \begin{enumerate}[label={\alph*})]
-    \item Para quais valores de $k \in \real$ o sistema admite solu\c{c}\~ao \'unica? Determine a solu\c{c}\~ao, caso exista.
-    \item Para quais valores de $k \in \real$ o sistema admite infinitas solu\c{c}\~oes? Determine tais solu\c{c}\~oes, caso existam.
-  \end{enumerate}
-\end{exercicio}
-
-Nos exerc{\'\i}cios \ref{sistemalinearinicio} \`a \ref{sistemalinearfim}, encontre a solu\c{c}\~ao geral dos seguintes sistemas lineares. Encontre o posto e a nulidade do sistema.
-\begin{exercicio}\label{sistemalinearinicio}
+Nos exerc{\'\i}cios \ref{sistema_linear_inicio_eliminacao} \`a \ref{sistema_linear_eliminacao}, encontre a solu\c{c}\~ao geral dos seguintes sistemas lineares usando o método de eliminação gaussiana.
+\begin{exercicio}\label{sistema_linear_inicio_eliminacao}
   $
     \begin{cases}
       x + y + z = 4\\
@@ -266,7 +235,7 @@ Nos exerc{\'\i}cios \ref{sistemalinearinicio} \`a \ref{sistemalinearfim}, encont
   \end{solucao}
 \end{exercicio}
 
-\begin{exercicio}
+\begin{exercicio}\label{sistema_linear_eliminacao}
   $
     \begin{cases}
       ix + iy = 0\\
@@ -279,7 +248,9 @@ Nos exerc{\'\i}cios \ref{sistemalinearinicio} \`a \ref{sistemalinearfim}, encont
   \end{solucao}
 \end{exercicio}
 
-\begin{exercicio}
+Nos exerc{\'\i}cios \ref{sistema_linear_inicio_gauss-jordan} \`a \ref{sistema_linear_fim_gauss-jordan}, encontre a solu\c{c}\~ao geral dos seguintes sistemas lineares usando o método de eliminação de Gauss-Jordan.
+
+\begin{exercicio}\label{sistema_linear_inicio_gauss-jordan}
   $
     \begin{cases}
       x_1 + x_2 + x_3 + x_4 = 0\\
@@ -353,7 +324,7 @@ Nos exerc{\'\i}cios \ref{sistemalinearinicio} \`a \ref{sistemalinearfim}, encont
   \end{solucao}
 \end{exercicio}
 
-\begin{exercicio}\label{sistemalinearfim}
+\begin{exercicio}\label{sistema_linear_fim_gauss-jordan}
   $
     \begin{cases}
       3x + 2y - 4z = 1\\
@@ -367,6 +338,37 @@ Nos exerc{\'\i}cios \ref{sistemalinearinicio} \`a \ref{sistemalinearfim}, encont
 \begin{solucao}
   N\~ao existe solu\c{c}\~ao.
 \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Determine o n\'umero de solu\c{c}\~oes do sistema
+  \[
+    \begin{cases}
+      x + 2y - 3z = 4\\
+      4x + y + 2z = 6\\
+      x + 2y + (\alpha^2 - 19)z = \alpha,  
+    \end{cases}
+\]
+em fun\c{c}\~ao do par\^ametro:
+\begin{enumerate}[label={\alph*})]
+   \item $\alpha \in \real$;
+   \item $\alpha \in \rac$?
+ \end{enumerate} 
+\end{exercicio}
+
+\begin{exercicio}
+  Considere o sistema linear
+  \[
+    \begin{cases}
+      (k + 2)x + 2ky - z = 1\\
+      x - 2y + kz = -k\\
+      y + z = k
+    \end{cases}.
+  \]
+  \begin{enumerate}[label={\alph*})]
+    \item Para quais valores de $k \in \real$ o sistema admite solu\c{c}\~ao \'unica? Determine a solu\c{c}\~ao, caso exista.
+    \item Para quais valores de $k \in \real$ o sistema admite infinitas solu\c{c}\~oes? Determine tais solu\c{c}\~oes, caso existam.
+  \end{enumerate}
 \end{exercicio}
 
 Nos exerc{\'\i}cios \ref{sistemasinicio} \`a \ref{sistemasfim}, encontre o(s) valor(es) de $\lambda$ tal(is) que:
