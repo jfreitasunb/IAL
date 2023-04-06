@@ -13,3 +13,13 @@
 \usetikzlibrary{lindenmayersystems}
 \usetikzlibrary[shadings]
 \usepackage{tikz-3dplot}
+%-------------amatrix
+% Augmented matrix.  Usage (note the argument does not count the aug col):
+% \begin{amatrix}{2}
+%   1  2  3 \\  4  5  6
+% \end{amatrix}
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{r}|r@{}}
+}{%
+  \end{array}\right)
+}
