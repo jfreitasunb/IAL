@@ -91,18 +91,6 @@
 \end{exercicio}
 
 \begin{exercicio}
-  Seja $A$ uma matriz $m \times n$ com entradas no corpo $\cp{K}$. Mostre que a matriz linha-reduzida \`a forma em escada que \'e linha-equivalente \`a $A$ \'e \'unica.
-\end{exercicio}
-
-\begin{exercicio}
-  Sejam $A$, $R \in M_{m \times n}(\cp{K})$ e $B$, $C \in M_{m \times 1}(\cp{K})$. Mostre que se $[A | B]$ e $[R | C]$ s\~ao matrizes linha-equivalentes, ent\~ao os sistemas lineares
-  \[
-    AX = B \quad {e} \quad RX = C,
-  \]
-  s\~ao equivalentes.
-\end{exercicio}
-
-\begin{exercicio}
   Seja
   \[
     A = \begin{bmatrix}
@@ -240,19 +228,6 @@ Nos exerc{\'\i}cios \ref{sistemalinearinicio} \`a \ref{sistemalinearfim}, encont
 \begin{exercicio}
   $
     \begin{cases}
-      (2 + 3\sqrt{2})x_1 - 3x_2 + x_3 = 0\\
-      (1 - \sqrt{2})x_1 + \sqrt{2}x_3 = 0
-    \end{cases}
-  $
-  em $\rac[\sqrt{2}]$.
-  \begin{solucao}
-    $p = 2$, Nulidade = 1, $S = \{(x, y, z) \mid x, y, z \in \rac[\sqrt{2}]\} = $ \\ $\left\{\left((2 + \sqrt{2})z, \dfrac{11 + 8\sqrt{2}}{3}z, z\right) \mid z \in \rac[\sqrt{2}]\right\}$
-  \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-  $
-    \begin{cases}
       ix + iy = 0\\
       2ix - y = 0\\
     \end{cases}
@@ -275,20 +250,6 @@ Nos exerc{\'\i}cios \ref{sistemalinearinicio} \`a \ref{sistemalinearfim}, encont
   em $\real$.
   \begin{solucao}
     $p = 4$, Nulidade = 0, $S = \{(1, -1, 2, -2)\}$
-  \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-  $
-    \begin{cases}
-      \overline{1}x + \overline{2}y + \overline{1}z + \overline{3}w = \overline{0}\\
-      \overline{1}x + \overline{10}y + \overline{1}w = \overline{0}\\
-      \overline{1}y + \overline{10}z + \overline{1}w = \overline{0}
-    \end{cases}
-  $
-  em $\integer_{13}$.
-  \begin{solucao}
-    $p = 3$, Nulidade = 1, $S = \{(x, y, z, w) \mid x, y, z, w \in \integer_{13}\} = \{(\overline{5}w, \overline{2}w,w, w) \mid w \in \integer_{13}\}$
   \end{solucao}
 \end{exercicio}
 
@@ -350,21 +311,6 @@ Nos exerc{\'\i}cios \ref{sistemalinearinicio} \`a \ref{sistemalinearfim}, encont
     $p = 3$, Nulidade = 3, $S = \{(x_1, x_2, x_3, x_4, x_5, x_6) \mid x_1, x_2, x_3, x_4, x_5, x_6 \in \real\} = $\\ $\{(-3x_2 - 4x_4 - 2x_5, x_2, -2x_4, x_4, x_5, 1/3) \mid x_2, x_4, x_5 \in \real\}$
   \end{solucao}
 \end{exercicio}
-
-\begin{exercicio}
-  $
-    \begin{cases}
-      x + 2z = 1\\
-      (2 - \sqrt{2})x + 2y + 6z = 2 + \sqrt{2}\\
-      \sqrt{2}x - y + (-1 + \sqrt{2})z = 1 + \sqrt{2}
-    \end{cases}
-  $
-  em $\rac[\sqrt{2}]$.
-  \begin{solucao}
-    N\~ao existe solu\c{c}\~ao.
-  \end{solucao}
-\end{exercicio}
-
 
 \begin{exercicio}\label{sistemalinearfim}
   $
@@ -497,44 +443,6 @@ Nos exerc{\'\i}cios \ref{sistemasinicio} \`a \ref{sistemasfim}, encontre o(s) va
   \end{solucao}
 \end{exercicio}
 
-\begin{exercicio}
-  $
-    \begin{cases}
-      \overline{1}x_1 + \overline{1}x_2 + \overline{1}x_3= \overline{2}\\
-      \overline{1}x_1 + \overline{2}x_2 + \overline{1}x_3 = \overline{4}\\
-      \overline{2}x_1 + \overline{2}x_2 + \overline{4}x_3 = \overline{3}\\
-      \overline{3}x_1 + \overline{3}x_2 + \overline{3}x_3 + (\lambda^2 + \overline{2})x_4 = \lambda + \overline{4}
-    \end{cases}
-  $
-  em $\integer_5$.
-  \begin{solucao}
-    \begin{enumerate}[label={\alph*})]
-      \item O sistema sempre tem solu\c{c}\~ao \'unica, independente de $\lambda$.
-      \item N\~ao existe tal $\lambda$.
-      \item N\~ao existe tal $\lambda$.
-    \end{enumerate}
-  \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-  $
-    \begin{cases}
-      \overline{1}x_1 + \overline{1}x_2 + \overline{1}x_3 = \overline{3}\\
-      \overline{1}x_1 + \overline{2}x_2 + \overline{1}x_3 = \overline{5}\\
-      \overline{2}x_1 + \overline{2}x_2 + \overline{4}x_3 = \overline{1}\\
-      \overline{3}x_1 + \overline{3}x_2 + \overline{3}x_3 + (\lambda^2 + \overline{2})x_4 = \lambda + \overline{5}
-    \end{cases}
-  $
-  em $\integer_7$.
-  \begin{solucao}
-    \begin{enumerate}[label={\alph*})]
-      \item O sistema sempre tem solu\c{c}\~ao \'unica, independente de $\lambda$.
-      \item N\~ao existe tal $\lambda$.
-      \item N\~ao existe tal $\lambda$.
-    \end{enumerate}
-  \end{solucao}
-\end{exercicio}
-
 \begin{exercicio}\label{sistemasfim}
   $
     \begin{cases}
@@ -652,41 +560,6 @@ Nos exerc{\'\i}cios \ref{matrizinversainicio} \`a \ref{matrizinversafim}, encont
 
 \begin{exercicio}
   $
-    A = \begin{pmatrix}
-        \overline{4} & \overline{0} & \overline{1}\\
-        \overline{1} & \overline{1} & \overline{0}\\
-        \overline{3} & \overline{0} & \overline{1}
-    \end{pmatrix}
-  $
-  em $\integer_5$.
-  \begin{solucao}
-    $
-      A^{-1} = \begin{pmatrix}
-        \overline{1} & \overline{0} & \overline{4}\\
-        \overline{4} & \overline{1} & \overline{1}\\
-        \overline{2} & \overline{0} & \overline{4}
-      \end{pmatrix}
-    $
-  \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-  $
-    A = \begin{bmatrix}
-        \overline{1} & \overline{4} & \overline{3} & \overline{3}\\
-        \overline{1} & \overline{6} & \overline{0} & \overline{0}\\
-        \overline{1} & \overline{6} & \overline{4} & \overline{4}\\
-        \overline{1} & \overline{6} & \overline{5} & \overline{5}
-      \end{bmatrix}
-  $
-  em $\integer_7$.
-  \begin{solucao}
-    N\~ao existe inversa.
-  \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-  $
     A =\begin{bmatrix}
         2 & 4\\
         4 & 8
@@ -760,19 +633,6 @@ Nos exerc{\'\i}cios \ref{matrizinversainicio} \`a \ref{matrizinversafim}, encont
       \end{bmatrix}
     $
   \end{solucao}
-\end{exercicio}
-
-\begin{center}
-  Exerc{\'\i}cio Extra!
-\end{center}
-\begin{exercicio}
-  Uma rela\c{c}\~ao $\sim$ em um conjunto de objetos $U$ \'e uma \textbf{rela\c{c}\~ao de equival\^encia} se as seguintes propriedades s\~ao satisfeitas:
-  \begin{enumerate}
-    \item \textit{Reflexiva}: Para todo $x \in U$ temos $x \sim x$.
-    \item \textit{Simetria}: Para $x$, $y \in U$ se $x \sim y$, ent\~ao $y \sim x$.
-    \item \textit{Transitiva}: Para $x$, $y$ e $z \in U$, se $x \sim y$ e $y \sim z$, ent\~ao $x \sim z$.
-  \end{enumerate}
-  Mostre que linha-equival\^encia de matrizes \'e uma rela\c{c}\~ao de equival\^encia.
 \end{exercicio}
 
 \newpage
