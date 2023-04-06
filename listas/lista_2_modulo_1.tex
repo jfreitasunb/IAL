@@ -1,0 +1,787 @@
+%!TEX program = xelatex
+\def\numeromodulo{1}
+\def\numerolista{1}
+\documentclass[12pt]{exam}
+
+\input{../configuracoes/variaveis_listas}
+\input{../configuracoes/pacotes}
+\input{../configuracoes/configuracoes_paginas}
+\input{../configuracoes/comandos_personalizados}
+\newcommand{\integer}{\mathbb{Z}}
+\begin{document}
+
+  \Opensolutionfile{ans}[ans1]
+  \begin{center}
+    {\Large\bf \disciplina\ - Turma \turma\ -- \semestre$^{o}$/\ano} \\ \vspace{9pt} {\large\bf
+        $\numerolista^a$ Lista de Exerc{\'\i}cios -- Módulo \numeromodulo}\\ \vspace{9pt} Prof. Jos{\'e} Ant{\^o}nio O. Freitas
+  \end{center}
+  \hrule
+
+\vesp{.6}
+\begin{exercicio}
+  Descrever explicitamente todas as poss{\'\i}veis formas que uma matriz $2 \times 2$ linha-reduzidas \`a forma em escada pode assumir.
+\end{exercicio}
+
+\begin{exercicio}
+  Descrever explicitamente todas as poss{\'\i}veis formas que uma matriz $3 \times 3$ linha-reduzidas \`a forma em escada pode assumir.
+\end{exercicio}
+
+\begin{exercicio}
+  Descrever explicitamente todas as poss{\'\i}veis formas que uma matriz $4 \times 4$ linha-reduzidas \`a forma em escada pode assumir.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja
+  \[
+    A = \begin{bmatrix}
+      x & y\\
+      z & t
+    \end{bmatrix}
+  \]
+  uma matriz $2 \times 2$ com elementos complexos. Suponhamos que $A$ seja linha-reduzida e tamb\'em que $x + y + z + t = 0$. Mostre que existem exatamente tr\^es destas matrizes.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $\cp{K}$ um corpo. Dados $a$, $b$, $c$, $d$, $e$, $f \in \cp{K}$, mostre que as duas matrizes seguintes s\~ao linha-equivalentes, se supormos que $ad - bc \ne 0_{\cp{K}}$:
+  \[
+    \begin{amatrix}{2}
+      a & b & e\\
+      c & d & f
+    \end{amatrix} \sim \begin{amatrix}{2}
+      1_{\cp{K}} & 0_{\cp{K}} & (de - bf)(ad - bc)^{-1}\\
+      0_{\cp{K}} & 1_{\cp{K}} & (af - ce)(ad - bc)^{-1}
+    \end{amatrix}
+  \]
+  onde $(ad - bc)^{-1}$ \'e o inverso multiplicativo de $ad - bc$ no corpo $\cp{K}$.
+\end{exercicio}
+
+\begin{exercicio}
+  Qual o erro na seguinte sequ\^encia de opera\c{c}\~oes elementares?
+    \begin{align*}
+      \begin{amatrix}{3} 
+        1 & 0 & 2 & 3 \\ 
+        0 & 1 & 2& 3 \\
+        2 & 0 & 1 & 4 \\
+      \end{amatrix} 
+      \stackrel{L_1 \to L_1+L_2}{
+      \stackrel{L_2 \to L_1-L_2}{ 
+      \stackrel{L_3 \to  L_1+2L_2}{\sim}}}
+      \begin{amatrix}{3} 
+      1 & 1 & 4 & 6 \\
+      1 & \!\!-1 & 0& 0 \\
+      1 & 2 & 6 & 9 
+      \end{amatrix}
+    \end{align*}
+\end{exercicio}
+
+\begin{exercicio}
+  Demonstrar que as duas matrizes seguintes \textbf{n\~ao} s\~ao linha-equivalentes:
+  \[
+    \begin{bmatrix}
+      2 & 0 & 0\\
+      a & -1 & 0\\
+      b & c & 3
+    \end{bmatrix} \qquad
+    \begin{bmatrix}
+      1 & 1 & 2\\
+      -2 & 0 & -1\\
+      1 & 3 & 5
+    \end{bmatrix}.
+  \]
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $A$ uma matriz $m \times n$ com entradas no corpo $\cp{K}$. Mostre que a matriz linha-reduzida \`a forma em escada que \'e linha-equivalente \`a $A$ \'e \'unica.
+\end{exercicio}
+
+\begin{exercicio}
+  Sejam $A$, $R \in M_{m \times n}(\cp{K})$ e $B$, $C \in M_{m \times 1}(\cp{K})$. Mostre que se $[A | B]$ e $[R | C]$ s\~ao matrizes linha-equivalentes, ent\~ao os sistemas lineares
+  \[
+    AX = B \quad {e} \quad RX = C,
+  \]
+  s\~ao equivalentes.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja
+  \[
+    A = \begin{bmatrix}
+      3 & -1 & 2\\
+      2 & 1 & 1\\
+      1 & -3 & 0
+    \end{bmatrix}.
+  \]
+  Para que valores
+  \[
+    Y = \begin{bmatrix}
+      y_1\\
+      y_2\\
+      y_3
+    \end{bmatrix}
+  \]
+  o sistema $AX = Y$ admite solu\c{c}\~ao? Considere $y_i \in \real$, $i=1$, 2, 3.
+\end{exercicio}
+
+\begin{exercicio}
+  Determine o n\'umero de solu\c{c}\~oes do sistema
+  \[
+    \begin{cases}
+      x + 2y - 3z = 4\\
+      4x + y + 2z = 6\\
+      x + 2y + (\alpha^2 - 19)z = \alpha,  
+    \end{cases}
+\]
+em fun\c{c}\~ao do par\^ametro:
+\begin{enumerate}[label={\alph*})]
+   \item $\alpha \in \real$;
+   \item $\alpha \in \rac$?
+ \end{enumerate} 
+\end{exercicio}
+
+\begin{exercicio}
+  Considere o sistema linear
+  \[
+    \begin{cases}
+      (k + 2)x + 2ky - z = 1\\
+      x - 2y + kz = -k\\
+      y + z = k
+    \end{cases}.
+  \]
+  \begin{enumerate}[label={\alph*})]
+    \item Para quais valores de $k \in \real$ o sistema admite solu\c{c}\~ao \'unica? Determine a solu\c{c}\~ao, caso exista.
+    \item Para quais valores de $k \in \real$ o sistema admite infinitas solu\c{c}\~oes? Determine tais solu\c{c}\~oes, caso existam.
+  \end{enumerate}
+\end{exercicio}
+
+Nos exerc{\'\i}cios \ref{sistemalinearinicio} \`a \ref{sistemalinearfim}, encontre a solu\c{c}\~ao geral dos seguintes sistemas lineares. Encontre o posto e a nulidade do sistema.
+\begin{exercicio}\label{sistemalinearinicio}
+  $
+    \begin{cases}
+      x + y + z = 4\\
+      2x + 5y - 2z = 3\\
+      x + 7y - 7z = 5
+    \end{cases}
+  $
+  em $\rac$.
+  \begin{solucao}
+    N\~ao existe solu\c{c}\~ao.
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      x - 2y + 3z = 0\\
+      2x + 5y + 6z = 0
+    \end{cases}
+  $
+  em $\real$.
+  \begin{solucao}
+    $p = 2$, Nulidade = 1, $S = \{(x, y, z) \mid z, y, z \in \real\} = \{(-3z, 0, z) \mid z \in \real\}$
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      x_1 + x_2 + 2x_3 = 8\\
+      -x_1 - 2x_2 + 3x_3 = 1\\
+      3x_1 - 7x_2 + 4x_3 = 10
+    \end{cases}
+  $
+  em $\real$.
+  \begin{solucao}
+    $p = 3$, Nulidade = 0, $S = \{(3, 1, 2)\}$
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      2x_1 + 2x_2 + 2x_3 = 0\\
+      -2x_1 + 5x_2 + 2x_3 = 1\\
+      8x_1 + x_2 + 4x_3 = -1
+    \end{cases}
+  $
+  em $\real$.
+  \begin{solucao}
+    $p = 2$, Nulidade = 1, $S = \{(x_1, x_2, x_3) \mid x_1, x_2, x_3 \in \real\} = \{(-1/7 - (3/7)x_3, 1/7 - (4/7)x_3, x_3) \mid x_3 \in \real\}$
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      \phantom{2x_1} - 2x_2 + 3x_3 = 1\\
+      3x_1 + 6x_2 - 3x_3 = -2\\
+      6x_1 + 6x_2 + 3x_3 = 5
+    \end{cases}
+  $
+  em $\real$.
+  \begin{solucao}
+    O sistema n\~ao tem solu\c{c}\~ao.
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      \overline{1}x + \overline{2}y + \overline{3}z = \overline{0}\\
+      \overline{2}x + \overline{1}y + \overline{3}z = \overline{0}\\
+      \overline{3}x + \overline{2}y + \overline{1}z = \overline{0}
+    \end{cases}
+  $
+  em $\integer_5$.
+  \begin{solucao}
+    $p = 3$, Nulidade = 0, $S = \{(\overline{0},\overline{0},\overline{0})\}$
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      (2 + 3\sqrt{2})x_1 - 3x_2 + x_3 = 0\\
+      (1 - \sqrt{2})x_1 + \sqrt{2}x_3 = 0
+    \end{cases}
+  $
+  em $\rac[\sqrt{2}]$.
+  \begin{solucao}
+    $p = 2$, Nulidade = 1, $S = \{(x, y, z) \mid x, y, z \in \rac[\sqrt{2}]\} = $ \\ $\left\{\left((2 + \sqrt{2})z, \dfrac{11 + 8\sqrt{2}}{3}z, z\right) \mid z \in \rac[\sqrt{2}]\right\}$
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      ix + iy = 0\\
+      2ix - y = 0\\
+    \end{cases}
+  $
+  em $\complex$.
+  \begin{solucao}
+    $p = 2$, Nulidade = 0, $S = \{(0, 0)\}$
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      x_1 + x_2 + x_3 + x_4 = 0\\
+      x_1 + x_2 + x_3 - x_4 = 4\\
+      x_1 + x_2 - x_3 + x_4 = -4\\
+      x_1 - x_2 + x_3 + x_4 = 2\\
+    \end{cases}
+  $
+  em $\real$.
+  \begin{solucao}
+    $p = 4$, Nulidade = 0, $S = \{(1, -1, 2, -2)\}$
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      \overline{1}x + \overline{2}y + \overline{1}z + \overline{3}w = \overline{0}\\
+      \overline{1}x + \overline{10}y + \overline{1}w = \overline{0}\\
+      \overline{1}y + \overline{10}z + \overline{1}w = \overline{0}
+    \end{cases}
+  $
+  em $\integer_{13}$.
+  \begin{solucao}
+    $p = 3$, Nulidade = 1, $S = \{(x, y, z, w) \mid x, y, z, w \in \integer_{13}\} = \{(\overline{5}w, \overline{2}w,w, w) \mid w \in \integer_{13}\}$
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      -2x_2 + 3x_3 = 1\\
+      3x_1 + 6x_2 - 3x_3 = -1\\
+      6x_1 + 6x_2 + 3x_3 = 5
+    \end{cases}
+  $
+  em $\real$.
+  \begin{solucao}
+    N\~ao existe solu\c{c}\~ao.
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      2x_1 + x_2 + (6 + 6i)x_3 + 8x_4 = 0\\
+      x_1 + x_2 + (2 + 5i)x_3 + (5  i)x_4 = 0\\
+      (2 + 2i)x_1 + 2x_2 + (2 + 14i)x_3 + (14 + 8i)x_4 =0\\
+      (-1 - i)x_1 - x_2 - (3 + 3i)x_3 + (-6 + 2i)x_4 = 0
+    \end{cases}
+  $
+  em $\complex$.
+  \begin{solucao}
+    $p = 2$, Nulidade = 2, $S = \{(x_1, x_2, x_3, x_4) \mid x_1, x_2, x_3, x_4 \in \complex\} = $\\ $\{(-(2 + i)x_3 - (3 - i)x_4,-3ix_3 - 2x_4, x_3, x_4) \mid x_3, x_4 \in \complex\}$
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      x_1 + 2x_2 - 3x_4 + x_5 = 2\\
+      x_1 + 2x_2 + x_3 - 3x_4 + x_5 + 2x_6 = 3\\
+      x_1 + 2x_2 - 3x_4 + 2x_5 + x_6 = 4\\
+      3x_1 + 6x_2 + x_3 - 9x_4 + 4x_5 + 3x_6 = 9
+    \end{cases}
+  $
+  em $\real$.
+  \begin{solucao}
+    $p = 3$, Nulidade = 3, $S = \{(x_1, x_2, x_3, x_4, x_5, x_6) \mid x_1, x_2, x_3, x_4, x_5, x_6 \in \real\} = $\\ $\{(x_6 + 3x_4 - 2x_2, x_2, 1 - 2x_6, x_4, 2 - x_6, x_6) \mid x_2, x_4, x_6 \in \real\}$
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      x_1 + 3x_2 - 2x_3 + 2x_5 = 0\\
+      2x_1 + 6x_2 - 5x_3 - 2x_4 + 4x_5 - 3x_6 = -1\\
+      5x_3 + 10x_4 + 15x_6 = 5\\
+      2x_1 + 6x_2 + 8x_4 + 4x_5 + 18x_6 = 6
+    \end{cases}
+  $
+  em $\real$.
+  \begin{solucao}
+    $p = 3$, Nulidade = 3, $S = \{(x_1, x_2, x_3, x_4, x_5, x_6) \mid x_1, x_2, x_3, x_4, x_5, x_6 \in \real\} = $\\ $\{(-3x_2 - 4x_4 - 2x_5, x_2, -2x_4, x_4, x_5, 1/3) \mid x_2, x_4, x_5 \in \real\}$
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      x + 2z = 1\\
+      (2 - \sqrt{2})x + 2y + 6z = 2 + \sqrt{2}\\
+      \sqrt{2}x - y + (-1 + \sqrt{2})z = 1 + \sqrt{2}
+    \end{cases}
+  $
+  em $\rac[\sqrt{2}]$.
+  \begin{solucao}
+    N\~ao existe solu\c{c}\~ao.
+  \end{solucao}
+\end{exercicio}
+
+
+\begin{exercicio}\label{sistemalinearfim}
+  $
+    \begin{cases}
+      3x + 2y - 4z = 1\\
+      x - y + z = 3\\
+      x - y - 3z = -3\\
+      3x + 3y - 5z =0\\
+      -x + y + z = 1
+    \end{cases}
+  $
+  em $\rac$.
+\begin{solucao}
+  N\~ao existe solu\c{c}\~ao.
+\end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Seja
+  \[
+    A =\begin{bmatrix}
+      1 & 0 & 5\\
+      1 & 1 & 1\\
+      0 & 1 & -4
+    \end{bmatrix}.
+  \]
+  \begin{enumerate}[label={\alph*})]
+    \item Encontre a solu\c{c}\~ao geral do sistema $(A + 4I_3)X = 0$ em $\real$.
+    \item Encontre a solu\c{c}\~ao geral do sistema $(A - 2I_3)X = 0$ em $\real$.
+  \end{enumerate}
+  \begin{solucao}
+    \begin{enumerate}[label={\alph*})]
+      \item $S = \{(-\alpha, 0, \alpha) \mid \alpha \in \real\}$.
+      \item $S = \{(5\alpha, 6\alpha, \alpha) \mid \alpha \in \real\}$.
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+Nos exerc{\'\i}cios \ref{sistemasinicio} \`a \ref{sistemasfim}, encontre o(s) valor(es) de $\lambda$ tal(is) que:
+\begin{enumerate}[label={\alph*})]
+  \item o sistema tem solu\c{c}\~ao \'unica;
+  \item o sistema tem v\'arias solu\c{c}\~oes;
+  \item o sistema n\~ao tem solu\c{c}\~ao.
+\end{enumerate}
+
+\begin{exercicio}\label{sistemasinicio}
+  $
+    \begin{cases}
+      x + \lambda y = 1\\
+      \lambda x + y = 1
+    \end{cases}
+  $
+  em $\real$.
+  \begin{solucao}
+    \begin{enumerate}[label={\alph*})]
+      \item $\lambda ne -1$ e $\lambda \ne 1$.
+      \item $\lambda = 1$.
+      \item $\lambda = -1$.
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      (\lambda - 2)x + y = 0\\
+      x + (\lambda - 2)y = 0
+    \end{cases}
+  $
+  em $\real$.
+  \begin{solucao}
+    \begin{enumerate}[label={\alph*})]
+      \item $\lambda \ne 1$ e $\lambda \ne 3$
+      \item $\lambda = 1$ e $\lambda = 3$.
+      \item N\~ao existe tal $\lambda$.
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      x + 2y - 3z = 4\\
+      3x - y + 5z = 2\\
+      4x + y + (\lambda^2 - 14)z = \lambda + 2
+    \end{cases}
+  $
+  em $\real$.
+  \begin{solucao}
+    \begin{enumerate}[label={\alph*})]
+      \item $\lambda \ne \pm 4$.
+      \item $\lambda = 4$.
+      \item $\lambda = -4$.
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      x + y + z = 2\\
+      2x + 3y + 2z = 5\\
+      2x + 3y + (\lambda^2 - 1)z = \lambda + 1
+    \end{cases}
+  $
+  em $\rac$.
+  \begin{solucao}
+    \begin{enumerate}[label={\alph*})]
+      \item N\~ao existe tal $\lambda$.
+      \item N\~ao existe tal $\lambda$.
+      \item N\~ao existe tal $\lambda$.
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      x_1 + \lambda x_2 + (1 + 4\lambda )x_3 = 1 + 4\lambda \\
+      2x_1 + (\lambda  + 1)x_2 + (2 + 7\lambda )x_3 = 1 + 7\lambda \\
+      3x_1 + (\lambda  + 2)x_2 + (3 + 9\lambda )x_3 = 1 + 9\lambda 
+    \end{cases}  
+  $
+  \begin{solucao}
+    \begin{enumerate}[label={\alph*})]
+      \item $\lambda \ne 0$ e $\lambda \ne 1$.
+      \item $\lambda = 0$.
+      \item $\lambda = 1$.
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      \overline{1}x_1 + \overline{1}x_2 + \overline{1}x_3= \overline{2}\\
+      \overline{1}x_1 + \overline{2}x_2 + \overline{1}x_3 = \overline{4}\\
+      \overline{2}x_1 + \overline{2}x_2 + \overline{4}x_3 = \overline{3}\\
+      \overline{3}x_1 + \overline{3}x_2 + \overline{3}x_3 + (\lambda^2 + \overline{2})x_4 = \lambda + \overline{4}
+    \end{cases}
+  $
+  em $\integer_5$.
+  \begin{solucao}
+    \begin{enumerate}[label={\alph*})]
+      \item O sistema sempre tem solu\c{c}\~ao \'unica, independente de $\lambda$.
+      \item N\~ao existe tal $\lambda$.
+      \item N\~ao existe tal $\lambda$.
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    \begin{cases}
+      \overline{1}x_1 + \overline{1}x_2 + \overline{1}x_3 = \overline{3}\\
+      \overline{1}x_1 + \overline{2}x_2 + \overline{1}x_3 = \overline{5}\\
+      \overline{2}x_1 + \overline{2}x_2 + \overline{4}x_3 = \overline{1}\\
+      \overline{3}x_1 + \overline{3}x_2 + \overline{3}x_3 + (\lambda^2 + \overline{2})x_4 = \lambda + \overline{5}
+    \end{cases}
+  $
+  em $\integer_7$.
+  \begin{solucao}
+    \begin{enumerate}[label={\alph*})]
+      \item O sistema sempre tem solu\c{c}\~ao \'unica, independente de $\lambda$.
+      \item N\~ao existe tal $\lambda$.
+      \item N\~ao existe tal $\lambda$.
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}\label{sistemasfim}
+  $
+    \begin{cases}
+      x + y = 2\\
+      y + z = 2\\
+      x + z = 2\\
+      x + y + \lambda z = 0
+    \end{cases}
+  $
+  em $\real$.
+  \begin{solucao}
+    \begin{enumerate}[label={\alph*})]
+      \item $\lambda = -2$
+      \item N\~ao existe tal $\lambda$.
+      \item $\lambda \ne -2$.
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  Encontre condi\c{c}\~oes sobre os $b_i \in \real$ para que cada um dos sistemas tenha solu\c{c}\~ao.
+  \begin{enumerate}[label={\alph*})]
+    \item $\begin{cases}
+      x_1 - 2x_2 + 5x_3 = b_1\\
+      4x_1 - 5x_2 + 8x_3 = b_2\\
+      -3x_1 + 3x_2 - 3x_3 = b_3
+    \end{cases}$
+
+    \item $\begin{cases}
+      x_1 - 2x_2 - x_3 = b_1\\
+      -4x_1 + 5x_2 + 2x_3 = b_2\\
+      -4x_1 + 7x_2 + 4x_3 = b_3
+    \end{cases}$
+  \end{enumerate}
+  \begin{solucao}
+    \begin{enumerate}[label={\alph*})]
+      \item $b_3 - b_1 + b_2 = 0$
+      \item O sistema tem solu\c{c}\~ao para todos os valores reais de $b_1$, $b_2$ e $b_3$.
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+Nos exerc{\'\i}cios \ref{matrizinicio} \`a \ref{matrizfim}, mostre que $B$ \'e a inversa de $A$.
+\begin{exercicio}\label{matrizinicio}
+  \[
+    A =\begin{bmatrix}
+      1 & -1\\
+      2 & 3
+    \end{bmatrix}, B =\begin{bmatrix}
+      3/5 & 1/5\\
+      -2/5 & 1/5
+    \end{bmatrix}
+  \]
+\end{exercicio}
+
+\begin{exercicio}
+  \[
+    A =\begin{bmatrix}
+      -2 & 2 & 3\\
+      1 & -1 & 0\\
+      0 & 1 & 4
+    \end{bmatrix}, B =\begin{bmatrix}
+      -4/3 & -5/3 & 1\\
+      -4/3 & -8/3 & 1\\
+      1/3 & 2/3 & 0
+    \end{bmatrix}
+  \]
+\end{exercicio}
+
+\begin{exercicio}\label{matrizfim}
+  \[
+    A =\begin{bmatrix}
+      2 & -17 & 11\\
+      -1 & 11 & -7\\
+      0 & 3 & -2
+    \end{bmatrix}, B =\begin{bmatrix}
+      1 & 1 & 2\\
+      2 & 4 & -3\\
+      3 & 6 & -5
+    \end{bmatrix}
+  \]
+\end{exercicio}
+
+Nos exerc{\'\i}cios \ref{matrizinversainicio} \`a \ref{matrizinversafim}, encontre a inversa da matriz dada, se existir.
+
+\begin{exercicio}\label{matrizinversainicio}
+  $
+    A =\begin{bmatrix}
+        1 & 2\\
+        3 & 7
+    \end{bmatrix}
+  $
+  \begin{solucao}
+    $A^{-1} =\begin{bmatrix}
+      7 & -2\\
+      -3 & 1
+    \end{bmatrix}$
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    A =\begin{bmatrix}
+        -7 & 33\\
+        4 & 19
+    \end{bmatrix}
+  $
+  \begin{solucao}
+    $A^{-1} =\begin{bmatrix}
+      -19 & -33\\
+      -4 & -7
+    \end{bmatrix}$
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    A = \begin{pmatrix}
+        \overline{4} & \overline{0} & \overline{1}\\
+        \overline{1} & \overline{1} & \overline{0}\\
+        \overline{3} & \overline{0} & \overline{1}
+    \end{pmatrix}
+  $
+  em $\integer_5$.
+  \begin{solucao}
+    $
+      A^{-1} = \begin{pmatrix}
+        \overline{1} & \overline{0} & \overline{4}\\
+        \overline{4} & \overline{1} & \overline{1}\\
+        \overline{2} & \overline{0} & \overline{4}
+      \end{pmatrix}
+    $
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    A = \begin{bmatrix}
+        \overline{1} & \overline{4} & \overline{3} & \overline{3}\\
+        \overline{1} & \overline{6} & \overline{0} & \overline{0}\\
+        \overline{1} & \overline{6} & \overline{4} & \overline{4}\\
+        \overline{1} & \overline{6} & \overline{5} & \overline{5}
+      \end{bmatrix}
+  $
+  em $\integer_7$.
+  \begin{solucao}
+    N\~ao existe inversa.
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    A =\begin{bmatrix}
+        2 & 4\\
+        4 & 8
+    \end{bmatrix}
+  $
+  \begin{solucao}
+    N\~ao possui inversa.
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    A =\begin{bmatrix}
+        1 & 1 & 1\\
+        3 & 5 & 4\\
+        3 & 6 & 5
+      \end{bmatrix}
+    $
+  \begin{solucao}
+    $
+      A^{-1} =\begin{bmatrix}
+        1 & 1 & -1\\
+        -3 & 2 & -1\\
+        3 & -3 & 2
+      \end{bmatrix}
+    $
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    A =\begin{bmatrix}
+        1 & 2 & -1\\
+        3 & 7 & -10\\
+        7 & 16 & -21
+    \end{bmatrix}
+  $
+  \begin{solucao}
+    N\~ao tem inversa.
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  $
+    A =\begin{bmatrix}
+        -8 & 0 & 0 & 0\\
+        0 & 1 & 0 & 0\\
+        0 & 0 & 0 & 0\\
+        0 & 0 & 0 & -5
+    \end{bmatrix}
+  $
+  \begin{solucao}
+   N\~ao existe inversa.
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}\label{matrizinversafim}
+  $
+    A =\begin{bmatrix}
+        1 & 1 & 2\\
+        3 & 1 & 0\\
+        -2 & 0 & 3
+    \end{bmatrix}
+  $
+  \begin{solucao}
+    $
+      A^{-1} =\begin{bmatrix}
+        -3/2 & 3/2 & 1\\
+        9/2 & -7/2 & -3\\
+        -1 & 1 & 1
+      \end{bmatrix}
+    $
+  \end{solucao}
+\end{exercicio}
+
+\begin{center}
+  Exerc{\'\i}cio Extra!
+\end{center}
+\begin{exercicio}
+  Uma rela\c{c}\~ao $\sim$ em um conjunto de objetos $U$ \'e uma \textbf{rela\c{c}\~ao de equival\^encia} se as seguintes propriedades s\~ao satisfeitas:
+  \begin{enumerate}
+    \item \textit{Reflexiva}: Para todo $x \in U$ temos $x \sim x$.
+    \item \textit{Simetria}: Para $x$, $y \in U$ se $x \sim y$, ent\~ao $y \sim x$.
+    \item \textit{Transitiva}: Para $x$, $y$ e $z \in U$, se $x \sim y$ e $y \sim z$, ent\~ao $x \sim z$.
+  \end{enumerate}
+  Mostre que linha-equival\^encia de matrizes \'e uma rela\c{c}\~ao de equival\^encia.
+\end{exercicio}
+
+\newpage
+\Closesolutionfile{ans}
+\hrule
+\begin{center}
+{\large\bf RESPOSTAS}
+\end{center}
+\hrule
+\input{ans1}
+
+\end{document}
