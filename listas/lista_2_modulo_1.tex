@@ -31,86 +31,6 @@
 \end{exercicio}
 
 \begin{exercicio}
-  Seja
-  \[
-    A = \begin{bmatrix}
-      x & y\\
-      z & t
-    \end{bmatrix}
-  \]
-  uma matriz $2 \times 2$ com elementos complexos. Suponhamos que $A$ seja linha-reduzida e tamb\'em que $x + y + z + t = 0$. Mostre que existem exatamente tr\^es destas matrizes.
-\end{exercicio}
-
-\begin{exercicio}
-  Seja $\cp{K}$ um corpo. Dados $a$, $b$, $c$, $d$, $e$, $f \in \cp{K}$, mostre que as duas matrizes seguintes s\~ao linha-equivalentes, se supormos que $ad - bc \ne 0_{\cp{K}}$:
-  \[
-    \begin{amatrix}{2}
-      a & b & e\\
-      c & d & f
-    \end{amatrix} \sim \begin{amatrix}{2}
-      1_{\cp{K}} & 0_{\cp{K}} & (de - bf)(ad - bc)^{-1}\\
-      0_{\cp{K}} & 1_{\cp{K}} & (af - ce)(ad - bc)^{-1}
-    \end{amatrix}
-  \]
-  onde $(ad - bc)^{-1}$ \'e o inverso multiplicativo de $ad - bc$ no corpo $\cp{K}$.
-\end{exercicio}
-
-\begin{exercicio}
-  Qual o erro na seguinte sequ\^encia de opera\c{c}\~oes elementares?
-    \begin{align*}
-      \begin{amatrix}{3} 
-        1 & 0 & 2 & 3 \\ 
-        0 & 1 & 2& 3 \\
-        2 & 0 & 1 & 4 \\
-      \end{amatrix} 
-      \stackrel{L_1 \to L_1+L_2}{
-      \stackrel{L_2 \to L_1-L_2}{ 
-      \stackrel{L_3 \to  L_1+2L_2}{\sim}}}
-      \begin{amatrix}{3} 
-      1 & 1 & 4 & 6 \\
-      1 & \!\!-1 & 0& 0 \\
-      1 & 2 & 6 & 9 
-      \end{amatrix}
-    \end{align*}
-\end{exercicio}
-
-\begin{exercicio}
-  Demonstrar que as duas matrizes seguintes \textbf{n\~ao} s\~ao linha-equivalentes:
-  \[
-    \begin{bmatrix}
-      2 & 0 & 0\\
-      a & -1 & 0\\
-      b & c & 3
-    \end{bmatrix} \qquad
-    \begin{bmatrix}
-      1 & 1 & 2\\
-      -2 & 0 & -1\\
-      1 & 3 & 5
-    \end{bmatrix}.
-  \]
-\end{exercicio}
-
-\begin{exercicio}
-  Seja
-  \[
-    A = \begin{bmatrix}
-      3 & -1 & 2\\
-      2 & 1 & 1\\
-      1 & -3 & 0
-    \end{bmatrix}.
-  \]
-  Para que valores
-  \[
-    Y = \begin{bmatrix}
-      y_1\\
-      y_2\\
-      y_3
-    \end{bmatrix}
-  \]
-  o sistema $AX = Y$ admite solu\c{c}\~ao? Considere $y_i \in \real$, $i=1$, 2, 3.
-\end{exercicio}
-
-\begin{exercicio}
   Determine o n\'umero de solu\c{c}\~oes do sistema
   \[
     \begin{cases}
@@ -208,20 +128,6 @@ Nos exerc{\'\i}cios \ref{sistemalinearinicio} \`a \ref{sistemalinearfim}, encont
   em $\real$.
   \begin{solucao}
     O sistema n\~ao tem solu\c{c}\~ao.
-  \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-  $
-    \begin{cases}
-      \overline{1}x + \overline{2}y + \overline{3}z = \overline{0}\\
-      \overline{2}x + \overline{1}y + \overline{3}z = \overline{0}\\
-      \overline{3}x + \overline{2}y + \overline{1}z = \overline{0}
-    \end{cases}
-  $
-  em $\integer_5$.
-  \begin{solucao}
-    $p = 3$, Nulidade = 0, $S = \{(\overline{0},\overline{0},\overline{0})\}$
   \end{solucao}
 \end{exercicio}
 
@@ -326,27 +232,6 @@ Nos exerc{\'\i}cios \ref{sistemalinearinicio} \`a \ref{sistemalinearfim}, encont
 \begin{solucao}
   N\~ao existe solu\c{c}\~ao.
 \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-  Seja
-  \[
-    A =\begin{bmatrix}
-      1 & 0 & 5\\
-      1 & 1 & 1\\
-      0 & 1 & -4
-    \end{bmatrix}.
-  \]
-  \begin{enumerate}[label={\alph*})]
-    \item Encontre a solu\c{c}\~ao geral do sistema $(A + 4I_3)X = 0$ em $\real$.
-    \item Encontre a solu\c{c}\~ao geral do sistema $(A - 2I_3)X = 0$ em $\real$.
-  \end{enumerate}
-  \begin{solucao}
-    \begin{enumerate}[label={\alph*})]
-      \item $S = \{(-\alpha, 0, \alpha) \mid \alpha \in \real\}$.
-      \item $S = \{(5\alpha, 6\alpha, \alpha) \mid \alpha \in \real\}$.
-    \end{enumerate}
-  \end{solucao}
 \end{exercicio}
 
 Nos exerc{\'\i}cios \ref{sistemasinicio} \`a \ref{sistemasfim}, encontre o(s) valor(es) de $\lambda$ tal(is) que:
