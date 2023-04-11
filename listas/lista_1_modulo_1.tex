@@ -1,5 +1,4 @@
 %!TEX program = xelatex
-
 \def\numeromodulo{1}
 \def\numerolista{1}
 \documentclass[12pt]{exam}
@@ -8,17 +7,20 @@
 \input{../configuracoes/pacotes}
 \input{../configuracoes/configuracoes_paginas}
 \input{../configuracoes/comandos_personalizados}
-
+\newcommand{\integer}{\mathbb{Z}}
 \begin{document}
-    \begin{center}
+
+  \Opensolutionfile{ans}[ans1]
+  \begin{center}
     {\Large\bf \disciplina\ - Turma \turma\ -- \semestre$^{o}$/\ano} \\ \vspace{9pt} {\large\bf
         $\numerolista^a$ Lista de Exerc{\'\i}cios -- Módulo \numeromodulo}\\ \vspace{9pt} Prof. Jos{\'e} Ant{\^o}nio O. Freitas
-    \end{center}
-    \hrule
+  \end{center}
+  \hrule
 
-    \vspace{.6cm}
+\vesp{.6}
 
-    \questao{}\label{operacoes_matrizes} Sejam
+\begin{exercicio}
+  \label{operacoes_matrizes} Sejam
     \begin{align*}
         A = \begin{pmatrix}1 & 2 & \phantom{-} 3\\2 & 1 & -1\end{pmatrix},
         B = \begin{pmatrix}-2 & 0 & 1\\\phantom{-} 3 & 0 & 1\end{pmatrix},
@@ -50,28 +52,40 @@
             \item $-2F$
         \end{enumerate}
     \end{multicols}
-    
-    \vspace{.3cm}
+  \begin{solucao}
+    \begin{enumerate}[label={\alph*})]
+      \item Sim
+      \item Não
+      \item Sim
+      \item Não
+      \item Sim
+      \item Não
+      \item Não
+      \item Sim
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
 
-    \questao{} Nos itens abaixo são dadas duas matrizes $A$ e $B$ e dois números $c$ e $d$. Calcule a matriz $cA + dB$.
+\begin{exercicio}
+    Nos itens abaixo são dadas duas matrizes $A$ e $B$ e dois números $c$ e $d$. Calcule a matriz $cA + dB$.
     \begin{enumerate}[label={\alph*})]
         \item $A = \begin{pmatrix}3 & -5\\2 & \phantom{-} 7\end{pmatrix}$, $B = \begin{pmatrix}-1 & \phantom{-} 0\\\phantom{-} 3 & -4\end{pmatrix}$, $c = 3$, $d = 4$
         \item $A = \begin{pmatrix}\phantom{-} 2 & 0 & -3\\-1 & 5 & \phantom{-} 6\end{pmatrix}$, $B = \begin{pmatrix}-2 & 3 & 1\\\phantom{-} 7 & 1 & 5\end{pmatrix}$, $c = 5$, $d = -3$
         \item $A = \begin{pmatrix}5 & \phantom{-} 0\\0 & \phantom{-} 7\\3 & -1\end{pmatrix}$, $B = \begin{pmatrix}-4 & 5\\\phantom{-} 3 & 2\\\phantom{-} 7 & 4\end{pmatrix}$, $c = -2$, $d = 4$
         \item $A = \begin{pmatrix}2 & -1 & \phantom{-} 0\\4 & \phantom{-} 0 & -3\\5 & -2 & \phantom{-} 7\end{pmatrix}$, $B = \begin{pmatrix}6 & -3 & -4\\5 & \phantom{-} 2 & -1\\0 & \phantom{-} 7 & \phantom{-} 9\end{pmatrix}$, $c = 7$, $d = 5$
     \end{enumerate}
+\end{exercicio}
 
-    \vspace{.3cm}
-
-    \questao{}\label{igualdade_de_matrizes} Nos itens abaixo encontre os valores de $a$, $b$, $c$ e $d$ de modo que as igualdades sejam verdadeiras:
+\begin{exercicio}
+    \label{igualdade_de_matrizes} Nos itens abaixo encontre os valores de $a$, $b$, $c$ e $d$ de modo que as igualdades sejam verdadeiras:
     \begin{enumerate}[label={\alph*})]
         \item $\begin{bmatrix}\phantom{-} a & 3\\-1 & a + b\end{bmatrix} = \begin{bmatrix}4 & d - 2c\\d - 2c & -2\end{bmatrix}$
         \item $\begin{bmatrix}a - b & b + a\\3d + c & 2d - c\end{bmatrix} = \begin{bmatrix}8 & 1\\7 & 6\end{bmatrix}$.
     \end{enumerate}
+\end{exercicio}
 
-    \vspace{.3cm}
-
-    \questao{} Suponha que $A$, $B$, $C$, $D$ e $E$ sejam matrizes tais que:
+\begin{exercicio}
+    Suponha que $A$, $B$, $C$, $D$ e $E$ sejam matrizes tais que:
     \begin{align*}
         A &= (a_{ij})_{4 \times 5}
         B = (b_{ij})_{4 \times 5}
@@ -98,18 +112,18 @@
 
         \end{enumerate}
     \end{multicols}
+\end{exercicio}
 
-    \vspace{.3cm}
+\begin{exercicio}
+    No Exercício \ref{operacoes_matrizes} encontre $A^t$, $B^t$, $C^t$, $D^t$, $E^t$ e $F^t$.
+\end{exercicio}
 
-    \questao{} No Exercício \ref{operacoes_matrizes} encontre $A^t$, $B^t$, $C^t$, $D^t$, $E^t$ e $F^t$.
+\begin{exercicio}
+    Encontre a transposta de todas as matrizes que aparecem no Exercício \ref{igualdade_de_matrizes}.
+\end{exercicio}
 
-    \vspace{.3cm}
-
-    \questao{} Encontre a transposta de todas as matrizes que aparecem no Exercício \ref{igualdade_de_matrizes}.
-
-    \vspace{.3cm}
-
-    \questao{} Considere as matrizes
+\begin{exercicio}
+    Considere as matrizes
     \begin{align*}
         A = \begin{pmatrix}\phantom{-} 5 & \phantom{-} 0 & \phantom{-} 6\\-8 & \phantom{-} 0 & \phantom{-} 3\\-2 & \phantom{-} 2 & \phantom{-} 7\\1 & -1 & -5\end{pmatrix},
         B = \begin{pmatrix}1 & 3 & \phantom{-} 2 & \phantom{-} 4\\7 & 1 & -3 & \phantom{-} 4\\0 & 0 & \phantom{-} 3 & -2\end{pmatrix},
@@ -122,10 +136,10 @@
         \item $3(A^tB^t) + C^t$
         \item $C^tB$
     \end{enumerate}
+\end{exercicio}
 
-    \vspace{.3cm}
-    
-    \questao{}Para as matrizes do Exercício \ref{operacoes_matrizes} calcule os produtos a seguir, se estiverem definidos.
+\begin{exercicio}
+    Para as matrizes do Exercício \ref{operacoes_matrizes} calcule os produtos a seguir, se estiverem definidos.
     \begin{enumerate}[label={\alph*})]
         \item $E^tA$
         \item $(A^t + E)D$
@@ -134,7 +148,10 @@
         \item $A^tB$
         \item $B^tD$
     \end{enumerate}
-    \questao{} Seja
+\end{exercicio}
+
+\begin{exercicio}
+    Seja
     \[
         A = \begin{bmatrix}2 & x^2\\2x - 1 & 0\end{bmatrix}.
     \]
@@ -142,47 +159,48 @@
     \[
         A^t = A.
     \]
+\end{exercicio}
 
-    \vspace{.3cm}
-    
-    \questao{} Em cada item abaixo, encontre a matriz $A = (a_{ij})$ de ordem $4 \times 4$ satisfazendo a condição dada.
+\begin{exercicio}
+    Em cada item abaixo, encontre a matriz $A = (a_{ij})$ de ordem $4 \times 4$ satisfazendo a condição dada.
     \begin{enumerate}[label={\alph*})]
         \item $a_{ij} = i + j$
         \item $a_{ij} = i^{j - 1}$
         \item $a_{ij} = \begin{cases}\phantom{-} 1 & \mbox{ se } |i - j| > 1\\-1 & \mbox{ se } |i - j| \le 1\end{cases}$
     \end{enumerate}
-    
-    \vspace{.3cm}
+\end{exercicio}
 
-    \questao{} Em cada item abaixo, encontre uma matriz $A = (a_{ij})$ de ordem $5 \times 5$ satisfazendo a condição dada. Dê um exemplo com números e também escreva a forma geral usando letras ao invés de números.
+\begin{exercicio}
+    Em cada item abaixo, encontre uma matriz $A = (a_{ij})$ de ordem $5 \times 5$ satisfazendo a condição dada. Dê um exemplo com números e também escreva a forma geral usando letras ao invés de números.
     \begin{enumerate}[label={\alph*})]
         \item $a_{ij} = 0$ se $i \ne j$
         \item $a_{ij} = 0$ se $i > j$
         \item $a_{ij} = 0$ se $i < j$
         \item $a_{ij} = 0$ se $|i - j| > 1$.
     \end{enumerate}
-    \vspace{.3cm}
+\end{exercicio}
 
-    \questao{} Quais das seguintes matrizes são simétricas?
+\begin{exercicio}
+    Quais das seguintes matrizes são simétricas?
     \begin{align*}
         A = \begin{pmatrix}2 & -1\\1 & \phantom{-} 2\end{pmatrix},
         B = \begin{pmatrix}\pi & 0\\0 & \sqrt{2}\end{pmatrix},
         C = \begin{pmatrix}-2 & 1 & \phantom{-} 4\\\phantom{-} 1 & 3 & \phantom{-} 1\\\phantom{-} 4 & 3 & -1\end{pmatrix},
         D = \begin{pmatrix}0 & 0 & \phantom{-} 1\\0 & 2 & -1\\1 & 3 & \phantom{-} 4\end{pmatrix}.
     \end{align*}
+\end{exercicio}
 
-    \vspace{.3cm}
-
-    \questao{} Calcule o \textit{traço} das seguintes matrizes:
+\begin{exercicio}
+    Calcule o \textit{traço} das seguintes matrizes:
     \begin{enumerate}[label={\alph*})]
         \item $A = \begin{pmatrix}2 & \phantom{-} 3 & \phantom{-} 0\\1 & -2 & -3\\3 & -5 & \phantom{-} 2\end{pmatrix}$
         \item $B = \begin{pmatrix}\phantom{-} 5 & \phantom{-} 3 & 0 & \phantom{-} 2 & \phantom{-} 4\\-1 & \phantom{-} 1 & 0 & \phantom{-} 2 & -8\\\phantom{-} 0 & -5 & 2 & \phantom{-} 0 & -1\\\phantom{-} 2 & \phantom{-} 3 & 4 & -3 & -3\end{pmatrix}$
         \item $C = \begin{pmatrix}1 & \phantom{-} 0 & \phantom{-} 0 & 0\\0 & -2 & -3 & 1\\2 & \phantom{-} 4 & -2 & 2\\4 & -1 & \phantom{-} 3 & 0\end{pmatrix}$
     \end{enumerate}
+\end{exercicio}
 
-    \vspace{.3cm}
-
-    \questao{}Considere a matriz
+\begin{exercicio}
+    Considere a matriz
         \[
             A = \begin{pmatrix}a & b & -5\\c & d & \phantom{-} 0\\5 & 0 & \phantom{-} 0\end{pmatrix}.
         \]
@@ -190,12 +208,23 @@
             \item Se $A$ é simétrica, encontre o valor de $2a + b + c - 3d$.
             \item Se $A$ é anti-simétrica, encontre o valor de $2a + b + c - 3d$.
         \end{enumerate}
+\end{exercicio}
 
-    \vspace{.3cm}
-
-    \questao{}Se a matriz
+\begin{exercicio}
+    Se a matriz
         \[
             A = \begin{pmatrix}1 & 3 + x & 2\\1 - x & 2 & y + 1\\2 & 5 - y & 3\end{pmatrix}
         \]
         é simétrica, qual é o valor de $3x + y$?
+\end{exercicio}
+
+\newpage
+\Closesolutionfile{ans}
+\hrule
+\begin{center}
+{\large\bf RESPOSTAS}
+\end{center}
+\hrule
+\input{ans1}
+
 \end{document}
