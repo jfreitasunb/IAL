@@ -54,12 +54,12 @@
     \end{multicols}
   \begin{solucao}
     \begin{enumerate}[label={\alph*})]
-        \item $A + B = \begin{pmatrix} -1 & 2 & 4\\5 & 1 & 0\end{pmatrix}$
-        \item $3B = \begin{pmatrix} -6 & 0 & 3\\9 & 0 & 3\end{pmatrix}$
+        \item $A + B = \begin{pmatrix} -1 & 2 & 4\\\phantom{-} 5 & 1 & 0\end{pmatrix}$
+        \item $3B = \begin{pmatrix} -6 & 0 & 3\\\phantom{-} 9 & 0 & 3\end{pmatrix}$
         \item $2A - B = \begin{pmatrix} 4 & 4 & 5\\1 & 2 & -3\end{pmatrix}$
         \item $3(A - \dfrac{1}{2}B) = \begin{pmatrix} 0 & 6 & 21/2\\21/2 & 3 & -3/2\end{pmatrix}$
-        \item $A + 2B = \begin{pmatrix} -3 & 2 & 5\\8 & 1 & 1\end{pmatrix}$
-        \item $2C + D = \begin{pmatrix} -4\\ 7\\ 10\end{pmatrix}$
+        \item $A + 2B = \begin{pmatrix} -3 & 2 & \phantom{-} 5\\\phantom{-} 8 & 1 & 1\end{pmatrix}$
+        \item $2C + D = \begin{pmatrix} -4\\ \phantom{-} 7\\ \phantom{-} 10\end{pmatrix}$
         \item $\dfrac{2}{3}D - C = \begin{pmatrix} -1/3\\ 0\\ -8/3\end{pmatrix}$
         \item $3E + 4F = \begin{pmatrix} 22 & 9\end{pmatrix}$
         \item $E - F = \begin{pmatrix} -2 & -4\end{pmatrix}$
@@ -86,10 +86,10 @@
     \end{enumerate}
     \begin{solucao}
         \begin{enumerate}[label={\alph*})]
-            \item $3A + 4B = \begin{pmatrix}-13 & -15\\18 & 5\end{pmatrix}$
-            \item $5A - 3B = \begin{pmatrix}16 & -9 & -18\\-26 & 22 & 15\end{pmatrix}$
-            \item $-2A + 4B = \begin{pmatrix}-26 & 20\\12 & -6\\22 & 18\end{pmatrix}$
-            \item $7A + 5B = \begin{pmatrix}44 & -22 & -20\\53 & 10 & 16\\35 & 21 & 94\end{pmatrix}$
+            \item $3A + 4B = \begin{pmatrix}-13 & -15\\18 & \phantom{-} 5\end{pmatrix}$
+            \item $5A - 3B = \begin{pmatrix}\phantom{-} 16 & -9 & -18\\-26 & \phantom{-} 22 & \phantom{-} 15\end{pmatrix}$
+            \item $-2A + 4B = \begin{pmatrix}-26 & 20\\\phantom{-} 12 & -6\\\phantom{-} 22 & 18\end{pmatrix}$
+            \item $7A + 5B = \begin{pmatrix}44 & -22 & -20\\53 & \phantom{-} 10 &\phantom{-} 16\\35 &\phantom{-} 21 & \phantom{-} 94\end{pmatrix}$
         \end{enumerate}
     \end{solucao}
 \end{exercicio}
@@ -151,11 +151,11 @@
 \begin{exercicio}
     No Exercício \ref{operacoes_matrizes} encontre $A^t$, $B^t$, $C^t$, $D^t$, $E^t$ e $F^t$.
     \begin{solucao}
-        $A^t = \begin{pmatrix}1 & 2\\2 & 1\\3 & -1\end{pmatrix}$
-        $B^t = \begin{pmatrix}-2 & 3\\0 & 0\\1 & 1\end{pmatrix}$
+        $A^t = \begin{pmatrix}1 & \phantom{-} 2\\2 & \phantom{-} 1\\3 & -1\end{pmatrix}$
+        $B^t = \begin{pmatrix}-2 & 3\\\phantom{-} 0 & 0\\\phantom{-} 1 & 1\end{pmatrix}$
         $C^t = \begin{pmatrix}-1 & 2 & 4\end{pmatrix}$
         $D^t = \begin{pmatrix}-2 & 3 & 2\end{pmatrix}$
-        $E^t = \begin{pmatrix}2\\ -1\end{pmatrix}$
+        $E^t = \begin{pmatrix}\phantom{-} 2\\ -1\end{pmatrix}$
         $F^t = \begin{pmatrix}4\\3\end{pmatrix}$
     \end{solucao}
 \end{exercicio}
@@ -180,31 +180,33 @@
     \end{enumerate}
     \begin{solucao}
         \begin{enumerate}
-            \item $(AB)D^t = \begin{pmatrix}66 & 135 & 54 & -5\\-93 & -90 & -162 & 8\\
-                55 & -16 & -22 & 14\\ -29 & -7 & 20 & -7\end{pmatrix}$
-            \item $3(A^tB^t) + C^t = \begin{pmatrix}-38 & 112 & -26\\6 & -30 & 25\\41 & 13 & 95\end{pmatrix}$
-            \item $C^tB = \begin{pmatrix}8 & 3 & -6 & 12\\0 & 0 & 3 & -2\\9 & 5 & 9 & 8\end{pmatrix}$
+            \item $(AB)D^t = \begin{pmatrix}\phantom{-} 66 & 135 & \phantom{-} 54 & -5\\-93 & -90 & -162 & \phantom{-} 8\\
+                \phantom{-} 55 & -16 & -22 \phantom{-} & 14\\ -29 & -7 & \phantom{-} 20 & -7\end{pmatrix}$
+            \item $3(A^tB^t) + C^t = \begin{pmatrix}-38 & 112 & -26\\\phantom{-} 6 & -30 & \phantom{-} 25\\\phantom{-} 41 & \phantom{-} 13 & \phantom{-} 95\end{pmatrix}$
+            \item $C^tB = \begin{pmatrix}8 & 3 & -6 & 12\\0 & 0 & \phantom{-} 3 & -2\\9 & 5 & \phantom{-} 9 & \phantom{-} 8\end{pmatrix}$
         \end{enumerate}
     \end{solucao}
 \end{exercicio}
 
 \begin{exercicio}
     Para as matrizes do Exercício \ref{operacoes_matrizes} calcule os produtos a seguir, se estiverem definidos.
-    \begin{enumerate}[label={\alph*})]
-        \item $E^tA$
-        \item $(A^t + E)D$
-        \item $C^tB$
-        \item $B^tE$
-        \item $A^tB$
-        \item $B^tD$
-    \end{enumerate}
+    \begin{multicols}{2}
+        \begin{enumerate}[label={\alph*})]
+            \item $E^tA$
+            \item $(A^t + E)D$
+            \item $C^tB$
+            \item $B^tE$
+            \item $A^tB$
+            \item $B^tD$
+        \end{enumerate}
+    \end{multicols}
     \begin{solucao}
         \begin{enumerate}[label={\alph*})]
             \item $E^tA$ não está definido.
             \item $(A^t + E)D$ não está definido.
             \item $C^tB$ não está definido.
             \item $B^tE$ não está definido.
-            \item $A^tB = \begin{pmatrix}4 & 0 & 3\\-1 & 0 & 3\\-9 & 0 & 2\end{pmatrix}$
+            \item $A^tB = \begin{pmatrix}\phantom{-} 4 & 0 & 3\\-1 & 0 & 3\\-9 & 0 & 2\end{pmatrix}$
             \item $B^tD$ não está definido.
         \end{enumerate}
     \end{solucao}
