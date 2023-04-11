@@ -1114,62 +1114,135 @@ Todavia podemos continuar aplicando operações elementares até que a matriz at
                 \begin{array}{l}
                     \phantom{x}\\L_2 \to L_2 - 2L_1\\L_3 \to L_3 - 4L_1
                 \end{array}\sim
-        \begin{amatrix}{3}
-            1 & 2 & -1 & 9\\
-            0 & -5 & 3 & -18\\
-            0 & -9 & 5 & -32
-        \end{amatrix}
-        \begin{array}{l}
-            \phantom{x}\\L_2 \to -\dfrac{1}{5}L_2 \\\phantom{x}
-        \end{array}\sim\\
-        &\begin{amatrix}{3}
-            1 & 2 & -1 & 9\\
-            0 & 1 & -3/5 & 18/5\\
-            0 & -9 & 5 & -32
-        \end{amatrix}
-        \begin{array}{l}
-            \phantom{x}\\\phantom{x}\\L_3 \to L_3 + 9L_2
-        \end{array}\sim
-        \begin{amatrix}{3}
-            1 & 2 & -1 & 9\\
-            0 & 1 & -3/5 & 18/5\\
-            0 & 0 & -2/5 & 2/5
-        \end{amatrix}
-        \begin{array}{l}
-            \phantom{x}\\\phantom{x}\\L_3 \to -\dfrac{5}{2}L_3
-        \end{array}\sim\\
-        &\begin{amatrix}{3}
-            1 & 2 & -1 & 9\\
-            0 & 1 & -3/5 & 18/5\\
-            0 & 0 & 1 & -1
-        \end{amatrix}
-        \begin{array}{l}
-            \phantom{x}\\L_2 \to L_2 +\dfrac{3}{5}L_3\\\phantom{x}\\\phantom{x}
-        \end{array}\sim
-        \begin{amatrix}{3}
-            1 & 2 & -1 & 9\\
-            0 & 1 & 0 & 3\\
-            0 & 0 & 1 & -1
-        \end{amatrix}
-        \begin{array}{l}
-            L_1 \to L_1 - 2L_2\\\phantom{x}\\\phantom{x}
-        \end{array}\sim\\
-        &\begin{amatrix}{3}
-            1 & 0 & -1 & 3\\
-            0 & 1 & 0 & 3\\
-            0 & 0 & 1 & -1
-        \end{amatrix}
-        \begin{array}{l}
-            L_1 \to L_1 + L_3\\\phantom{x}\\\phantom{x}
-        \end{array}\sim
-        \begin{amatrix}{3}
-            1 & 0 & 0 & 2\\
-            0 & 1 & 0 & 3\\
-            0 & 0 & 1 & -1
-        \end{amatrix}
-    \end{align*}
-        Assim o posto da matriz é 3 e o número de variáveis livres é 0.
-        O sistema admite solução única $x_1 = 2$, $x_2 = 3$ e $x_3 = -1$, que pode ser denotada como $S = \{(2,3,-1)\}$.
+                \begin{amatrix}{3}
+                    1 & 2 & -1 & 9\\
+                    0 & -5 & 3 & -18\\
+                    0 & -9 & 5 & -32
+                \end{amatrix}
+                \begin{array}{l}
+                    \phantom{x}\\L_2 \to -\dfrac{1}{5}L_2 \\\phantom{x}
+                \end{array}\sim\\
+                &\begin{amatrix}{3}
+                    1 & 2 & -1 & 9\\
+                    0 & 1 & -3/5 & 18/5\\
+                    0 & -9 & 5 & -32
+                \end{amatrix}
+                \begin{array}{l}
+                    \phantom{x}\\\phantom{x}\\L_3 \to L_3 + 9L_2
+                \end{array}\sim
+                \begin{amatrix}{3}
+                    1 & 2 & -1 & 9\\
+                    0 & 1 & -3/5 & 18/5\\
+                    0 & 0 & -2/5 & 2/5
+                \end{amatrix}
+                \begin{array}{l}
+                    \phantom{x}\\\phantom{x}\\L_3 \to -\dfrac{5}{2}L_3
+                \end{array}\sim\\
+                &\begin{amatrix}{3}
+                    1 & 2 & -1 & 9\\
+                    0 & 1 & -3/5 & 18/5\\
+                    0 & 0 & 1 & -1
+                \end{amatrix}
+                \begin{array}{l}
+                    \phantom{x}\\L_2 \to L_2 +\dfrac{3}{5}L_3\\\phantom{x}\\\phantom{x}
+                \end{array}\sim
+                \begin{amatrix}{3}
+                    1 & 2 & -1 & 9\\
+                    0 & 1 & 0 & 3\\
+                    0 & 0 & 1 & -1
+                \end{amatrix}
+                \begin{array}{l}
+                    L_1 \to L_1 - 2L_2\\\phantom{x}\\\phantom{x}
+                \end{array}\sim\\
+                &\begin{amatrix}{3}
+                    1 & 0 & -1 & 3\\
+                    0 & 1 & 0 & 3\\
+                    0 & 0 & 1 & -1
+                \end{amatrix}
+                \begin{array}{l}
+                    L_1 \to L_1 + L_3\\\phantom{x}\\\phantom{x}
+                \end{array}\sim
+                \begin{amatrix}{3}
+                    1 & 0 & 0 & 2\\
+                    0 & 1 & 0 & 3\\
+                    0 & 0 & 1 & -1
+                \end{amatrix}
+            \end{align*}
+            Assim o posto da matriz é 3 e o número de variáveis livres é 0.
+            O sistema admite solução única $x_1 = 2$, $x_2 = 3$ e $x_3 = -1$, que pode ser denotada como $S = \{(2,3,-1)\}$.
+
+            \item A matriz ampliada do sistema é
+                \[
+                    \begin{amatrix}{4}
+                        1 & 1 & 2 & 1 & 0\\
+                        1 & -1 & -1 & 1 & 0\\
+                        0 & 1 & 1 & 0 & 0\\
+                        1 & 1 & 0 & 1 & 0
+                    \end{amatrix}.
+                \]
+            Como a última coluna dessa matriz é nula podemos omití-la na hora de aplicar o método de Gauss-Jordan.
+            \begin{align*}
+                &\begin{pmatrix}
+                    1 & 1 & 2 & 1\\
+                    1 & -1 & -1 & 1\\
+                    0 & 1 & 1 & 0\\
+                    1 & 1 & 0 & 1
+                \end{pmatrix}
+                \begin{array}{l}
+                    \phantom{x}\\L_2 \to L_2 - L_1\\\phantom{x}\\L_4 \to L_4 - L_1
+                \end{array}\sim
+                \begin{pmatrix}
+                    1 & 1 & 2 & 1\\
+                    0 & -2 & -3 & 1\\
+                    0 & 1 & 1 & 0\\
+                    0 & 0 & -2 & 0
+                \end{pmatrix}
+                \begin{array}{l}
+                    \phantom{x}\\L_2 \leftrightarrow L_3\\\phantom{x}\\\phantom{x}
+                \end{array}\sim\\
+                &\begin{pmatrix}
+                    1 & 1 & 2 & 1\\
+                    0 & 1 & 1 & 0\\
+                    0 & -2 & -3 & 0\\
+                    0 & 0 & -2 & 0
+                \end{pmatrix}
+                \begin{array}{l}
+                    L_1 \to L_1 - L_2\\\phantom{x}\\L_3 \to L_3 + 2L_2\\\phantom{x}
+                \end{array}\sim
+                \begin{pmatrix}
+                    1 & 0 & 1 & 1\\
+                    0 & 1 & 1 & 0\\
+                    0 & 0 & -1 & 0\\
+                    0 & 0 & -2 & 0
+                \end{pmatrix}
+                \begin{array}{l}
+                    \phantom{x}\\\phantom{x}\\L_3 \to -L_3\\\phantom{x}
+                \end{array}\sim\\
+                &\begin{pmatrix}
+                    1 & 0 & 1 & 1\\
+                    0 & 1 & 1 & 0\\
+                    0 & 0 & 1 & 0\\
+                    0 & 0 & -2 & 0
+                \end{pmatrix}
+                \begin{array}{l}
+                    L_1 \to L_1 - L_3\\L_2 \to L_2 - L_3\\\phantom{x}\\L_4 \to L_4 + 2L_3
+                \end{array}\sim
+                \begin{pmatrix}
+                    1 & 0 & 0 & 1\\
+                    0 & 1 & 0 & 0\\
+                    0 & 0 & 1 & 0\\
+                    0 & 0 & 0 & 0
+                \end{pmatrix}
+            \end{align*}
+            Neste caso o posto é 3 e o número de variáveis livres é 1. A solução desse sistema é
+            \[
+                x_2 = x_3 = 0, x_1 = -x_4
+            \]
+            que pode ser dada pelo conjunto
+            \[
+                S = \{(-x_4, 0, 0, x_4) \mid x_4 \in \real\}.
+            \]
+
     \end{enumerate}
 \end{solucao}
 \end{exemplo}
