@@ -206,17 +206,45 @@ Nos exerc{\'\i}cios \ref{matrizinversainicio} \`a \ref{matrizinversafim}, encont
 
 Nos exercícios a seguir veremos algumas aplicações de sistemas lineares.
 
-\noindent\textbf{Análise de Redes}
-Redes aparecem em várias situações práticas: redes de transporte, redes de comunicação e redes econômicas, entre outros.
+\noindent\textbf{Análise de Redes}: Redes aparecem em várias situações práticas: redes de transporte, redes de comunicação e redes econômicas, entre outros.
 
 Para nós, uma \textbf{rede} consiste em um número finito de \textbf{nós}, também chamdados \textbf{junções} ou \textbf{vértices}, conectados por uma série de segmentos
 dirigidos, conhecidos como \textbf{ramos} ou \textbf{arcos}. Cada ramo é rotulado com um \textbf{fluxo} que representa a quantidade de alguma mercadoria que pode fluir ao longo ou através daquele ramo na direção indicada. A regra fundamental que governa o fluxo através de uma rede é a \textbf{conservação de fluxo}:
 \begin{center}
   \textit{Em cada nó, o fluxo de entrada é igual ao fluxo de saída.}
 \end{center}
-Por exemplo,
+Por exemplo, para uma rede de um único nó:
+\begin{figure}[!h]
+\centering
+\input{../diagramas_aplicacoes/diagrama_simples.tex}
+\end{figure}
+devemos ter
+\[
+	f_1 + f_2 = 50.
+\]
 
-
+Já no caso de uma rede como abaixo:
+\begin{figure}[!h]
+\centering
+\input{../diagramas_aplicacoes/diagrama_exemplo.tex}
+\end{figure}
+temos o seguinte:
+\begin{enumerate}
+	\item para o \textbf{nó} A temos a equação: $15 = f_1 + f_4$
+	\item para o \textbf{nó} B temos a equação: $f_1 = f_2 + 10$
+	\item para o \textbf{nó} C temos a equação: $f_2 + f_3 + 5 = 30$
+	\item para o \textbf{nó} D temos a equação: $f+4 + 20 = f_3$
+\end{enumerate}
+Que produz o seguinte sistema:
+\[
+	\begin{cases}
+		f_1 + f_4 = 15\\
+		f_1 - f_2 = 10\\
+		f_2 + f_3 = 25\\
+		f_3 - f_4 = 20
+	\end{cases}
+\]
+Nesse caso podemos usar os métodos aprendidos para resolver tal sistema linear.
 \newpage
 \Closesolutionfile{ans}
 \hrule
