@@ -1431,4 +1431,8 @@ A lei fundamental da eletricidade é a lei de Ohm, que estabelece exatamente qua
 \textbf{Lei de Ohm}: $ E = RI$, 
 onde $E$ é medida em \textit{volts},a resistência em \textit{ohms} e a corrente em \textit{amperes}.
 
-A corrente sai pelo terminal positivo de uma bateria e entra pelo terminal negativo, viajando por um ou mais circuitos fechados no processo. Em um diagrama de um circuito elétrico, baterias são representadas por (em que o terminal positivo é indicado pela barra vertical mais longa), e resistores são representados por . As duas leis a seguir, descobertas por Kirchhoff, regem os circuitos elétricos. A primeira é uma lei de ``converservação de fluxo'' em cada nó e a segunda é uma lei de ``balanceamento da voltagem''  ao longo de cada circuito.
+A corrente sai pelo terminal positivo de uma bateria e entra pelo terminal negativo, viajando por um ou mais circuitos fechados no processo. Em um diagrama de um circuito elétrico, baterias são representadas por
+\begin{tikzpicture}[circuit ee IEC]
+  \draw (-1, 0) to [battery] (0, 0) {};
+\end{tikzpicture}
+(em que o terminal positivo é indicado pela barra vertical mais longa), e resistores são representados por . As duas leis a seguir, descobertas por Kirchhoff, regem os circuitos elétricos. A primeira é uma lei de ``converservação de fluxo'' em cada nó e a segunda é uma lei de ``balanceamento da voltagem''  ao longo de cada circuito.
