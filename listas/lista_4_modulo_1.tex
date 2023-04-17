@@ -20,7 +20,36 @@
 \vesp{.6}
 
 \begin{exercicio}
+  A figura abaixo mostra uma rede de canos de água com fluxo medido em litros por minuto.
+  \begin{enumerate}
+    \item Monte e resolva um sistema de equações lineares para encontrar os fluxos possíveis.
+    \item Se o fluxo através de $AB$ é restrito a 5L/min, qual será o fluxo através dos outros dois ramos?
+    \item Quais são os fluxos mínimo e máximos possíveis através de cada ramo?
+  \end{enumerate}
   \begin{solucao}
+    \begin{enumerate}
+      \item $\begin{cases}f_1 = 30 - t\\f_2 = -10 + t\\f_3 = t\end{cases}$
+      \item $f_1 = 15$, $f_3 = 15$
+      \item $0 \le f_1 \le 20$, $0 \le f_2 \le 20$, $10 \le f_3 \le 30$
+    \end{enumerate}
+  \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+  A figura abaixo mostra uma rede viária de ruas de mão única com fluxo de tráfego nos sentidos indicados. As taxas
+  de fluxo ao longo das ruas são medidas pelo número médio de veículos por hora.
+  \begin{enumerate}
+    \item Monte um sistema linear cuja solução forneça as taxas de fluxo desconhecidas.
+    \item Resolva o sistema para as taxas de fluxo desconhecidas.
+    \item Se o fluxo ao longo da rua de $A$ para $B$ precisar ser reduzido em virtude de uma obra, qual será o fluxo mínimo necessário
+      para manter o tráfego fluindo em todas as ruas?
+  \end{enumerate}
+  \begin{solucao}
+    \begin{enumerate}
+      \item $\begin{cases}x_3 - x_4 = -500\\-x_1 + x_4 = 100\\x_1 - x_2 = 300\\x_2 - x_3 = 100\end{cases}$
+      \item $x_1 = -100 +t$, $x_2 = -400 + t$, $x_3 = -500 + t$, $x_4 = t$
+      \item $t = 500$
+    \end{enumerate}
   \end{solucao}
 \end{exercicio}
 
