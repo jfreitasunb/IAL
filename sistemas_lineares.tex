@@ -1382,27 +1382,13 @@ Vamos escrever simplesmente
 
 \subsection{Análise de Redes}
 
-
-Redes aparecem em várias situações práticas:  redes de transporte,  redes de comunicação  e redes econômicas, entre outros.
-
-\vspace{1cm}
-
-Para nós, uma \textbf{rede} consiste em um número finito de \textbf{nós},  também chamdados \textbf{junções} ou \textbf{vértices},  conectados por uma série de segmentos dirigidos,  conhecidos como \textbf{ramos} ou \textbf{arcos}.
-
-\vspace{1cm}
-
-Cada ramo é rotulado com um \textbf{fluxo}  que representa a quantidade de alguma mercadoria  que pode fluir ao longo ou através daquele ramo na direção indicada.
-
-
-
+Redes aparecem em várias situações práticas: redes de transporte, redes de comunicação e redes econômicas, entre outros. Para nós, uma \textbf{rede} consiste em um número finito de \textbf{nós}, também chamdados \textbf{junções} ou \textbf{vértices}, conectados por uma série de segmentos dirigidos, conhecidos como \textbf{ramos} ou \textbf{arcos}. Cada ramo é rotulado com um \textbf{fluxo} que representa a quantidade de alguma mercadoria  que pode fluir ao longo ou através daquele ramo na direção indicada.
 
 A regra fundamental que governa o fluxo através de uma rede é a \textbf{conservação de fluxo}:
 
 \begin{definicao}
   \textit{Em cada nó, o fluxo de entrada é igual ao fluxo de saída.}
 \end{definicao}
-
-
 
 Por exemplo, para uma rede de um único nó:
 \begin{figure}[!h]
@@ -1414,23 +1400,17 @@ devemos ter:
     f_1 + f_2 = 50.
 \]
 
-
-
 \begin{figure}[!h]
     \centering
     \input{diagramas_aplicacoes/diagrama_exemplo.tex}
 \end{figure}
 
-
-
 \begin{enumerate}[label={\roman*})]
-    \item para o \textbf{nó} A temos a equação:  $15 = f_1 + f_4$
-    \item para o \textbf{nó} B temos a equação:  $f_1 = f_2 + 10$
-    \item para o \textbf{nó} C temos a equação:  $f_2 + f_3 + 5 = 30$
-    \item para o \textbf{nó} D temos a equação:  $f_4 + 20 = f_3$
+    \item para o \textbf{nó} A temos a equação: $15 = f_1 + f_4$
+    \item para o \textbf{nó} B temos a equação: $f_1 = f_2 + 10$
+    \item para o \textbf{nó} C temos a equação: $f_2 + f_3 + 5 = 30$
+    \item para o \textbf{nó} D temos a equação: $f_4 + 20 = f_3$
 \end{enumerate}
-
-
 
 Que produz o seguinte sistema:
 \[
@@ -1441,6 +1421,7 @@ Que produz o seguinte sistema:
         f_3 - f_4 = 20
     \end{cases}
 \]
+
 Nesse caso podemos usar o método de eliminação de Gauss-Jordan para resolver tal sistema linear e encontrar:
 \begin{align*}
     f_1 &= 15 - t\\
@@ -1449,40 +1430,24 @@ Nesse caso podemos usar o método de eliminação de Gauss-Jordan para resolver 
     f_4 &= t
 \end{align*}
 
+Circuitos elétricos formam um tipo especializado de rede com informações sobre fontes de energia, tais como baterias, e dispositivos alimentados por essas fontes, tais como lâmpadas ou motores.
 
-
-Circuitos elétricos formam um tipo especializado de rede com informações sobre fontes de energia,  tais como baterias,  e dispositivos alimentados por essas fontes, tais como lâmpadas ou motores.
-
-\vspace{1cm}
-
-A lei fundamental da eletricidade é a \textrm{lei de Ohm},  que estabelece exatamente quanta força elétrica $E$  é necessária para fazer uma corrente $I$  atravessar um resistor $R$.
-
-\vspace{1cm}
+A lei fundamental da eletricidade é a \textrm{lei de Ohm}, que estabelece exatamente quanta força elétrica $E$ é necessária para fazer uma corrente $I$ atravessar um resistor $R$.
 
 \begin{definicao}[Lei de Ohm]
     \[
         E = RI,
     \] 
-    onde $E$ é medida em \textrm{volts},  a resistência $R$ em \textrm{ohms}  e a corrente $I$ em \textrm{amperes}.
+    onde $E$ é medida em \textrm{volts}, a resistência $R$ em \textrm{ohms} e a corrente $I$ em \textrm{amperes}.
 \end{definicao}
 
-
-
-
-
-A corrente sai pelo terminal positivo de uma bateria  e entra pelo terminal negativo,  viajando por um ou mais circuitos fechados no processo.
-
-\vspace{1cm}
-
-Em um diagrama de um circuito elétrico, baterias são representadas por
+A corrente sai pelo terminal positivo de uma bateria e entra pelo terminal negativo, viajando por um ou mais circuitos fechados no processo. Em um diagrama de um circuito elétrico, baterias são representadas por
 \begin{center}
     \begin{tikzpicture}[circuit ee IEC]
         \draw (-1, 0) to [battery] (0, 0) {};
     \end{tikzpicture}
 \end{center}
 em que o terminal positivo é indicado pela barra vertical mais longa.
-
-\vspace{1cm}
 
 Resistores são representados por
 \begin{center}
@@ -1493,27 +1458,17 @@ Resistores são representados por
     \end{tikzpicture}
 \end{center}
 
-
-
-As duas leis a seguir, descobertas por Kirchhoff,  regem os circuitos elétricos.  A primeira é uma lei de ``converservação de fluxo'' em cada nó:
-
-\vspace{1.5cm}
+As duas leis a seguir, descobertas por Kirchhoff, regem os circuitos elétricos. A primeira é uma lei de ``converservação de fluxo'' em cada nó:
 
 \begin{definicao}[Lei da Corrente (nós)]
-    A soma das correntes que entram em qualquer nó  é igual à soma das correntes que saem dele.
+    A soma das correntes que entram em qualquer nó é igual à soma das correntes que saem dele.
 \end{definicao}
 
-
-
 A segunda é uma lei de ``balanceamento da voltagem'' ao longo de cada circuito:
-
-\vspace{1.5cm}
 
 \begin{definicao}[Lei da Voltagem (circuitos)]
     A soma das quedas de voltagem ao longo de qualquer circuito  é igual à voltagem total em torno do circuito (fornecida pelas baterias).
 \end{definicao}
-
-
 
 \begin{figure}[!h]
     \centering
@@ -1521,57 +1476,33 @@ A segunda é uma lei de ``balanceamento da voltagem'' ao longo de cada circuito:
     \caption{$I_1 = I_2 + I_3$}
 \end{figure}
 
-
-
 \begin{figure}[!h]
     \centering
     \input{diagramas_aplicacoes/diagrama_circuito_um_resistor.tex}
     \caption{$4I = 10$}
 \end{figure}
 
-
-
 \begin{figure}[!h]
     \centering
     \input{diagramas_aplicacoes/diagrama_circuito_quatro_resistores.tex}
 \end{figure}
 
+Neste caso a corrente $I_1$ flui pelo ramo superior $BCA$. A corrente $I_2$ pelo ramo do meio, $AB$. A corrente $I_3$ pelo ramo inferior, $BDA$. No nó $A$ temos: $I_1 + I_3 = I_2$. (Que é a mesma equação no nó $B$.)  Essa equação pode ser escrita como
 
-
-Neste caso a corrente $I_1$ flui pelo ramo superior $BCA$.
-
-\vspace{1cm}
-
-A corrente $I_2$ pelo ramo do meio, $AB$.
-
-\vspace{1cm}
-
-A corrente $I_3$ pelo ramo inferior, $BDA$.
-
-\vspace{1cm}
-
-No nó $A$ temos: $I_1 + I_3 = I_2$.  (Que é a mesma equação no nó $B$.)  Essa equação pode ser escrita como
 \[
     I_1 - I_2 + I_3 = 0.
 \]
 
 
-
-Agora vamos aplicar a lei da voltagem para cada circuito.
-
-\vspace{1cm}
-
-Para o circuito $CABC$,  as quedas de voltagem nos resistores são  $2I_1$,  $I_2$  e $2I_1$.  Assim temos a equação
+Agora vamos aplicar a lei da voltagem para cada circuito. Para o circuito $CABC$, as quedas de voltagem nos resistores são $2I_1$, $I_2$ e $2I_1$. Assim temos a equação
 \[
     4I_1 + I_2 = 8.
 \]
 
-Para o circuito $DABD$,  as quedas de voltagem nos resistores são  $4I_3$,  $I_2$. Assim temos a equação
+Para o circuito $DABD$, as quedas de voltagem nos resistores são $4I_3$, $I_2$. Assim temos a equação
 \[
     4I_3 + I_2 = 16.
 \]
-
-
 
 Com isso temos o seguinte sistema linear.
 \[
@@ -1586,35 +1517,29 @@ Aplicando o método de eliminação de Gauss-Jordan obtemos a solução
     $I_1 = 1 \mbox{ ampere}$, $I_2 = 4 \mbox{ amperes}$ $I_1 = 3 \mbox{ amperes}$.
 \end{center}
 
-
-
 \begin{figure}[!h]
     \centering
     \input{diagramas_aplicacoes/diagrama_circuito_uma_unica_fonte_energia.tex}
 \end{figure}
 
-
-
-A lei da corrente de Kirchhoff  fornece as seguintes equações nos quatro nós:
+A lei da corrente de Kirchhoff fornece as seguintes equações nos quatro nós:
 \begin{center}
     \begin{tabular}{lc}
-        \textbf{Nó B:}  & $I - I_1 - I_4 = 0$\\
-        \textbf{Nó C:}  & $I_1 - I_2 - I_3 = 0$\\
-        \textbf{Nó D:}  & $I - I_2 - I_5 = 0$\\
-        \textbf{Nó B:}  & $I_3 + I_4 - I_5 = 0$
+        \textbf{Nó B:} & $I - I_1 - I_4 = 0$\\
+        \textbf{Nó C:} & $I_1 - I_2 - I_3 = 0$\\
+        \textbf{Nó D:} & $I - I_2 - I_5 = 0$\\
+        \textbf{Nó B:}& $I_3 + I_4 - I_5 = 0$
     \end{tabular}
 \end{center}
 
 Para os circuitos obtemos
 \begin{center}
     \begin{tabular}{lc}
-        \textbf{Circuito $ABEDA$:}  & $I_4 + 2I_5 = 10$\\
-        \textbf{Circuito $BCED$:}  & $2I_1 + 2I_3 - I_4 = 0$\\
-        \textbf{Circuito $CDEC$:}  & $I_2 - 2I_5 - 2I_3 = 0$
+        \textbf{Circuito $ABEDA$:} & $I_4 + 2I_5 = 10$\\
+        \textbf{Circuito $BCED$:} & $2I_1 + 2I_3 - I_4 = 0$\\
+        \textbf{Circuito $CDEC$:} & $I_2 - 2I_5 - 2I_3 = 0$
     \end{tabular}
 \end{center}
-
-
 
 Essas equações produzem o sistema linear:
 \[
@@ -1630,7 +1555,6 @@ Essas equações produzem o sistema linear:
 \]
 Cuja solução é: $I = 7$, $I_1 = I_5 = 3$, $I_2 = I_4 = 4$ e $I_3 = -1$.
 
-
 \begin{observacao}
-    Há uma única fonte de energia neste caso.  Assim a bateria de 10 volts fornece uma corrente de 7 amperes ao circuito.  Usando a lei de Ohm, $E = RI$,  obtemos $R = 10/7$.  Assim, todo o circuito comporta-se como se houvesse um único resistor de $10/7$ ohms.  Esse valor é chamado de \textrm{resistência efetiva},  $R_{ef}$, do circuito.
+    Há uma única fonte de energia neste caso. Assim a bateria de 10 volts fornece uma corrente de 7 amperes ao circuito. Usando a lei de Ohm, $E = RI$, obtemos $R = 10/7$. Assim, todo o circuito comporta-se como se houvesse um único resistor de $10/7$ ohms. Esse valor é chamado de \textrm{resistência efetiva}, $R_{ef}$, do circuito.
 \end{observacao}
