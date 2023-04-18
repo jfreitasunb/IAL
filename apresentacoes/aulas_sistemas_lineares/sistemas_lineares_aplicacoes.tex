@@ -189,5 +189,55 @@
         \end{center}
     \end{frame}
 
+    \begin{frame}
+        \begin{figure}[!h]
+            \centering
+            \input{../../diagramas_aplicacoes/diagrama_circuito_uma_unica_fonte_energia.tex}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}
+        A lei da corrente de Kirchhoff fornece as seguintes equações nos quatro nós:
+        \begin{center}
+            \begin{tabular}{lc}
+                \textbf{Nó B:} & $I - I_1 - I_4 = 0$\\
+                \textbf{Nó C:} & $I_1 - I_2 - I_3 = 0$\\
+                \textbf{Nó D:} & $I - I_2 - I_5 = 0$\\
+                \textbf{Nó B:} & $I_3 + I_4 - I_5 = 0$
+            \end{tabular}
+        \end{center}
+
+        Para os circuitos obtemos
+        \begin{center}
+            \begin{tabular}{lc}
+                \textbf{Circuito $ABEDA$:} & $I_4 + 2I_5 = 10$\\
+                \textbf{Circuito $BCED$:} & $2I_1 + 2I_3 - I_4 = 0$\\
+                \textbf{Circuito $CDEC$:} & $I_2 - 2I_5 - 2I_3 = 0$
+            \end{tabular}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}
+        Essas equações produzem o sistema linear:
+        \[
+            \begin{cases}
+                I - I_1 - I_4 = 0\\
+                I_1 - I_2 - I_3 = 0\\
+                I - I_2 - I_5 = 0\\
+                I_3 + I_4 - I_5 = 0\\
+                I_4 + 2I_5 = 10\\
+                2I_1 + 2I_3 - I_4 = 0\\
+                I_2 - 2I_5 - 2I_3 = 0
+            \end{cases}
+        \]
+        Cuja solução é: $I = 7$, $I_1 = I_5 = 3$, $I_2 = I_4 = 4$ e $I_3 = -1$.
+    \end{frame}
+
+    \begin{frame}
+        \begin{observacao}
+            Há uma única fonte de energia neste caso. Assim a bateria de 10 volts fornece uma corrente de 7 amperes ao circuito. Usando a lei de Ohm, $E = RI$, obtemos $R = 10/7$. Assim, todo o circuito comporta-se como se houvesse um único resistor de $10/7$ ohms. Esse valor é chamado de \textrm{resistência efetiva}, $R_{ef}$, do circuito.
+        \end{observacao}
+    \end{frame}
+
 
 \end{document}
