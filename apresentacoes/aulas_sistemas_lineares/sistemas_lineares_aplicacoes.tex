@@ -82,4 +82,112 @@
         \]
         Nesse caso podemos usar os métodos aprendidos para resolver tal sistema linear.
     \end{frame}
+
+    \begin{frame}
+        Circuitos elétricos formam um tipo especializado de rede com informações obre fontes de energia, tais como baterias, e dispositivos alimentados por essas fontes, tais como lâmpadas ou motores.
+
+        A lei fundamental da eletricidade é a lei de Ohm, que estabelece exatamente quanto força elétrica $E$ é necessária para fazer uma corrente $I$ atravessar um reistor $R$.
+
+        \textbf{Lei de Ohm}: $ E = RI$, 
+            onde $E$ é medida em \textit{volts},a resistência em \textit{ohms} e a corrente em \textit{amperes}.
+    \end{frame}
+
+    \begin{frame}
+
+        A corrente sai pelo terminal positivo de uma bateria e entra pelo terminal negativo, viajando por um ou mais circuitos fechados no processo. 
+
+        Em um diagrama de um circuito elétrico, baterias são representadas por
+        \begin{center}
+            \begin{tikzpicture}[circuit ee IEC]
+                \draw (-1, 0) to [battery] (0, 0) {};
+            \end{tikzpicture}
+        \end{center}
+        em que o terminal positivo é indicado pela barra vertical mais longa.
+
+        Resistores são representados por
+        \begin{center}
+            \begin{tikzpicture}[circuit ee IEC]
+                \begin{scope}[set resistor graphic=var resistor IEC graphic]
+                    \draw (0,1) to [resistor] (3,1);
+                \end{scope}
+            \end{tikzpicture}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}
+        As duas leis a seguir, descobertas por Kirchhoff, regem os circuitos elétricos. A primeira é uma lei de ``converservação de fluxo'' em cada nó:
+        \begin{definicao}[Lei da Corrente (nós)]
+            A soma das correntes que entram em qualquer nó é igual à soma das corretnes que saem dele.
+        \end{definicao}
+
+        A segunda é uma lei de ``balanceamento da voltagem''  ao longo de cada circuito:
+
+        \begin{definicao}[Lei da Voltagem (circuitos)]
+            A soma das quedas de voltagem ao longo de qualquer circuito é igual à voltagem total em torno do circuito (fornecida pelas baterias).
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{figure}[!h]
+            \centering
+            \input{../../diagramas_aplicacoes/diagrama_corrente_simples.tex}
+            \caption{$I_1 = I_2 + I_3$}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}
+        \begin{figure}[!h]
+            \centering
+            \input{../../diagramas_aplicacoes/diagrama_circuito_um_resistor.tex}
+            \caption{$4I = 10$}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}
+        \begin{figure}[!h]
+            \centering
+            \input{../../diagramas_aplicacoes/diagrama_circuito_quatro_resistores.tex}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}
+        Neste caso a corrente $I_1$ flui pelo ramo superior $BCA$; a corrente $I_2$ pelo ramo do meio, $AB$, e a corrente $I_3$ pelo ramo inferior, $BDA$.
+
+        No nó $A$ temos: $I_1 + I_3 = I_2$. (Que é a mesma equação no nó $B$.) Essa equação pode ser escrita como
+        \[
+            I_1 - I_2 + I_3 = 0.
+        \]
+    \end{frame}
+
+    \begin{frame}
+        Agora vamos aplicar a lei da voltagem para cada circuito.
+
+        Para o circuito $CABC$, as quedas de voltagem nos resistores são $2I_1$, $I_2$ e $2I_1$. Assim temos a equação
+        \[
+            4I_1 + I_2 = 8.
+        \]
+
+        Para o circuito $DABD$ temos as quedas de voltagem nos resistores são $4I_3$, $I_2$. Assim temos a equação
+        \[
+            4I_3 + I_2 = 16.
+        \]
+
+    \end{frame}
+
+    \begin{frame}
+        Com isso temos o seguinte sistema linear.
+        \[
+            \begin{cases}
+                I_1 - I_2 + I_3 = 0\\
+                4I_1 + I_2 = 8\\
+                I_2 + 4I_3 = 16
+            \end{cases}
+        \]
+        Aplicando o método de eliminação de Gauss-Jordan obtemos a solução
+        \begin{center}
+            $I_1 = 1 \mbox{ ampere}$, $I_2 = 4 \mbox{ amperes}$ $I_1 = 3 \mbox{ amperes}$.
+        \end{center}
+    \end{frame}
+
+
 \end{document}
