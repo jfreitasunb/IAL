@@ -1608,13 +1608,13 @@ A esse sistema podemos associar algumas matrizes. A saber:
         \vdots & \vdots & \cdots & \vdots\\
         a_{m1} & a_{m2} & \cdots & a_{mn}
     \end{pmatrix}, \quad
-    X = \begin{pmatrix}
+    x = \begin{pmatrix}
         x_1\\
         x_2\\
         \vdots\\
         x_n
     \end{pmatrix},\quad 
-    B = \begin{pmatrix}
+    b = \begin{pmatrix}
         b_1\\
         b_2\\
         \vdots\\
@@ -1622,29 +1622,29 @@ A esse sistema podemos associar algumas matrizes. A saber:
     \end{pmatrix}
 \]
 
-A partir dessas matrizes o sistema linear anterior pode ser escrito como a equa\c{c}\~ao matricial:
+A partir dessas matrizes o sistema linear anterior pode ser escrito como:
 \[
-    AX = B
+    Ax = b.
 \]
+Tal forma de escrever o sistema linear é chamada de \textbf{equa\c{c}\~ao matricial} do sistema.
 
 No caso em que
 \[
-    B = \begin{pmatrix}
+    b = \begin{pmatrix}
         0\\0\\\vdots\\0
     \end{pmatrix}
 \]
 Vamos escrever simplesmente
 \[
-    AX = 0.
+    Ax = 0.
 \]
 
 \begin{teorema}
-    Seja $A$ uma matriz invert{\'\i}vel de ordem $n$. Para cada matriz $B$ de ordem $n\times 1$ o sistema linear de forma matricial
-    $AX = B$ admite solu\c{c}\~ao \'unica que \'e dada por
+    Seja $A$ uma matriz invert{\'\i}vel de ordem $n$. Para cada matriz $b$ de ordem $n\times 1$ o sistema linear de forma matricial $Ax = b$ admite solu\c{c}\~ao \'unica que \'e dada por
     \[
-        X = \begin{pmatrix}
+        x = \begin{pmatrix}
             x_1 \\ x_2 \\ \vdots \\ x_n
-        \end{pmatrix} = A^{-1}B.
+        \end{pmatrix} = A^{-1}b.
     \]
 \end{teorema}
 
