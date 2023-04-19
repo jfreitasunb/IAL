@@ -1263,6 +1263,61 @@ Todavia podemos continuar aplicando opera\c{c}\~oes elementares at\'e que a matr
     ou \textbf{singular}.
 \end{definicao}
 
+\begin{exemplos}
+\begin{enumerate}
+    \item A matriz
+    \[
+       A = \begin{pmatrix}
+            -1 & -1 & 0\\
+            0 & -1 & -1\\
+            1 & -1 & -3
+        \end{pmatrix}
+    \]
+    é invertível e sua inversa é a matriz
+    \[
+       B = \begin{pmatrix}
+            -2 & 3 & 1\\
+            1 & -3 & 1\\
+            -1 & 2 & -1
+        \end{pmatrix}.
+    \]
+    \item A matriz
+    \[
+        C = \begin{pmatrix}1 & -1 & 0\\2 & 5 & 0\\3 & 6 & 0\end{pmatrix}
+    \]
+    é singular.
+\end{enumerate}
+    
+    \begin{solucao}
+    \begin{enumerate}
+        \item De fato,
+        \begin{align*}
+            AB &= \begin{pmatrix} -1 & -1 & 0\\ 0 & -1 & -1\\ 1 & -1 & -3\end{pmatrix}
+            \begin{pmatrix}-2 & 3 & 1\\ 1 & -3 & 1\\ -1 & 2 & -1\end{pmatrix} = 
+            \begin{pmatrix} 1 & 0 & 0\\ 0 & 1 & 0\\ 0 & 0 & 1\end{pmatrix} = I_3\\
+            BA &= \begin{pmatrix}-2 & 3 & 1\\ 1 & -3 & 1\\ -1 & 2 & -1\end{pmatrix}
+            \begin{pmatrix} -1 & -1 & 0\\ 0 & -1 & -1\\ 1 & -1 & -3\end{pmatrix} = \begin{pmatrix} 1 & 0 & 0\\ 0 & 1 & 0\\ 0 & 0 & 1\end{pmatrix} = I_3.
+        \end{align*}
+        Logo, $AB = I_3 = BA$ e com isso $A$ é invertível e sua inversa é $B$.
+
+        \item De fato, para toda matriz
+        \[
+            D = \begin{pmatrix}d_{11} & d_{12} & d_{13}\\ d_{21} & d_{22} & d_{23}\\d_{31} & d_{32} & d_{33}\end{pmatrix}
+        \]
+        temos
+        \begin{align*}
+            DC &= \begin{pmatrix}d_{11} & d_{12} & d_{13}\\ d_{21} & d_{22} & d_{23}\\d_{31} & d_{32} & d_{33}\end{pmatrix}
+            \begin{pmatrix}1 & -1 & 0\\2 & 5 & 0\\3 & 6 & 0\end{pmatrix}\\ &= \begin{pmatrix}
+                d_{11}\cdot 1 + d_{12}\cdot 2 + d_{13}\cdot 3 & d_{11}\cdot(-1) + d_{12}\cdot 5 + d_{13}\cdot 6 & 0\\
+                d_{21}\cdot 1 + d_{22}\cdot 2 + d_{23}\cdot 3 & d_{21}\cdot(-1) + d_{22}\cdot 5 + d_{23}\cdot 6 & 0\\
+                d_{31}\cdot 1 + d_{32}\cdot 2 + d_{33}\cdot 3 & d_{31}\cdot(-1) + d_{32}\cdot 5 + d_{33}\cdot 6 & 0
+            \end{pmatrix} \ne \begin{pmatrix}1 & 0 & 0\\0 & 1 & 0\\0 & 0 & 1\end{pmatrix}
+        \end{align*}
+        Logo $C$ é uma matriz não invertível ou singular.
+    \end{enumerate}
+    \end{solucao}
+\end{exemplos}
+
 \begin{teorema}
     Se $B$ e $C$ s\~ao ambas inversas da matriz $A$, ent\~ao $B = C$.
 \end{teorema}
