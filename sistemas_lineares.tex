@@ -1648,6 +1648,53 @@ Vamos escrever simplesmente
     \]
 \end{teorema}
 
+\begin{exemplo}
+    Considere o sistema linear:
+    \[
+        \begin{cases}
+            -2x + 3y - z = 6\\
+            x - 3y + z = -2\\
+            -x + 2y - z = 0
+        \end{cases}.
+    \]
+    A matriz dos coeficientes desse sistema é
+    \[
+        A = \begin{bmatrix}
+            -2 & 3 & -1\\
+            1 & -3 & 1\\
+            -1 & 2 & -1
+        \end{bmatrix}
+    \]
+    que sabemos que é invertível e
+    \[
+        A^{-1} = \begin{bmatrix}
+            -1 & -1 & 0\\
+            0 & -1 & -1\\
+            1 & -1 & -3
+        \end{bmatrix}.
+    \]
+    Logo a solução desse sistema é dada por
+    \[
+        \begin{bmatrix}x\\y\\z\end{bmatrix} = 
+        \begin{bmatrix}
+            -1 & -1 & 0\\
+            0 & -1 & -1\\
+            1 & -1 & -3
+        \end{bmatrix}
+        \begin{bmatrix}
+            6\\
+            -2\\
+            0
+        \end{bmatrix} =
+        \begin{bmatrix}
+            -4\\
+            2\\
+            8
+        \end{bmatrix},
+    \]
+    isto é, $S = \{(-4, 2, 8)\}$.
+\end{exemplo}
+
 \begin{definicao}
     Uma matriz $n\times n$ que pode ser obtida da matriz identidade $I_n$, de tamanho $n\times n$, efetuando uma 
     \'unica opera\c{c}\~ao elementar sobre linhas \'e chamada de \textbf{matriz elementar}.
