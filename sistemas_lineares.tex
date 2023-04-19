@@ -1955,91 +1955,118 @@ A segunda é uma lei de ``balanceamento da voltagem'' ao longo de cada circuito:
     A soma das quedas de voltagem ao longo de qualquer circuito  é igual à voltagem total em torno do circuito (fornecida pelas baterias).
 \end{definicao}
 
+
+Para o caso de um diagrama como mostrado na figura \ref{correntedividindo} a aplicação da lei das correntes nos dá $I_1 = I_2 + I_3$, que podemos escrever como $I_1 - I_2 - I_3 = 0$.
 \begin{figure}[!h]
     \centering
     \input{diagramas_aplicacoes/diagrama_corrente_simples.tex}
     \caption{$I_1 = I_2 + I_3$}
+    \label{correntedividindo}
 \end{figure}
 
+Já para um circutio como mostrado na figura \ref{circuitocomumrsistor}, basta usar a lei de Ohm para determinar a queda na corrente que passa pelo resistor. Assim $4I = 10$.
 \begin{figure}[!h]
     \centering
     \input{diagramas_aplicacoes/diagrama_circuito_um_resistor.tex}
     \caption{$4I = 10$}
+    \label{circuitocomumrsistor}
 \end{figure}
 
-\begin{figure}[!h]
-    \centering
-    \input{diagramas_aplicacoes/diagrama_circuito_quatro_resistores.tex}
-\end{figure}
+\begin{exemplos}
+    \begin{enumerate}
+        \item Considere o circuito da figura \ref{circuitoduasbaterias}. Encontre as correntes $I_1$, $I_2$, $I_3$, $I_4$ e $I_5$.
 
-Neste caso a corrente $I_1$ flui pelo ramo superior $BCA$. A corrente $I_2$ pelo ramo do meio, $AB$. A corrente $I_3$ pelo ramo inferior, $BDA$. No nó $A$ temos: $I_1 + I_3 = I_2$. (Que é a mesma equação no nó $B$.)  Essa equação pode ser escrita como
+        \begin{figure}[!h]
+            \centering
+            \input{diagramas_aplicacoes/diagrama_circuito_quatro_resistores.tex}
+            \caption{Duas baterias}
+            \label{circuitoduasbaterias}
+        \end{figure}
 
-\[
-    I_1 - I_2 + I_3 = 0.
-\]
+        \item O circuito mostrado na figura \ref{circuitocomumaunicafonte} tem uma única fonte de energia $A$ e cinco resistores. Encontre as correntes $I$, $I_1$, $I_2$, $I_3$, $I_4$ e $I_5$.
+
+        \begin{figure}[!h]
+            \centering
+            \input{diagramas_aplicacoes/diagrama_circuito_uma_unica_fonte_energia.tex}
+            \caption{Circuito com uma única fonte}
+            \label{circuitocomumaunicafonte}
+        \end{figure}
+    \end{enumerate}
+    \begin{solucao}
+        \begin{enumerate}
+            \item Esse circuito tem duas baterias e quatro resistores. Começamos pelo ramo superior desse circuito, $BCA$. Para esse ramo temos somente a corrente $I_1$ fluindo.  Já para o ramo central, $AB$, temos a corrente $I_2$ fluindo por esse ramo. Finalmente, para o ramo inferiro, $BDA$, há a presença da corrente $I_3$.
+
+            Aplicando a lei da corrente para o nó $A$ obtemos a equação $I_1 + I_3 = I_2$. (Que será a mesma equação no nó $B$.) Tal equação pode ser escrita como
+            \[
+                I_1 - I_2 + I_3 = 0.
+            \]
+
+            Agora vamos aplicar a lei da voltagem para cada circuito. Para o circuito $CABC$, as quedas de voltagem nos resistores são: $2I_1$, $I_2$ e $2I_1$. Assim temos a equação
+            \begin{equation}\label{equacaocircuitoCABC}
+                4I_1 + I_2 = 8.
+            \end{equation}
+
+            Para o circuito $DABD$, as quedas de voltagem nos resistores são: $4I_3$, $I_2$. Assim temos a equação
+            \begin{equation}\label{equacaocircuitoDABD}
+                4I_3 + I_2 = 16.
+            \end{equation}
+
+            Poderíamos ainda percorrer o circuito $CADBC$. Mas nesse caso, estaríamos ``andando contra o fluxo''. Com isso tratarímos as voltagens e correntes com sinal negativo. Com isso, obteríamos as equações $2I_1 + 2I_1 - 4I_3 = 8 - 16 = -8$. Assim $4I_1 - 4I_3 = -8$, que é justamente a diferença das equações \eqref{equacaocircuitoCABC} e \eqref{equacaocircuitoDABD}. Se incluímos essa equação no sistema linear ela será anulada durante a aplicação do método de Gauss-Jordan, assim podemos ignorá-la.
+
+            Com isso temos o seguinte sistema linear:
+            \[
+                \begin{cases}
+                    I_1 - I_2 + I_3 = 0\\
+                    4I_1 + I_2 = 8\\
+                    I_2 + 4I_3 = 16
+                \end{cases}
+            \]
+
+            Aplicando o método de eliminação de Gauss-Jordan obtemos a solução
+            \begin{center}
+                $I_1 = 1 \mbox{ ampere}$, $I_2 = 4 \mbox{ amperes}$ $I_1 = 3 \mbox{ amperes}$.
+            \end{center}
+
+            \item Aplicando lei da corrente de Kirchhoff aos nós desse circuito, obtemos:
+            \begin{center}
+                \begin{tabular}{lc}
+                    \textbf{Nó B:} & $I - I_1 - I_4 = 0$\\
+                    \textbf{Nó C:} & $I_1 - I_2 - I_3 = 0$\\
+                    \textbf{Nó D:} & $I - I_2 - I_5 = 0$\\
+                    \textbf{Nó B:}& $I_3 + I_4 - I_5 = 0$
+                \end{tabular}
+            \end{center}
+
+            Considerando agora os circuitos básicos, a lei da voltagem fornece:
+            \begin{center}
+                \begin{tabular}{lc}
+                    \textbf{Circuito $ABEDA$:} & $I_4 + 2I_5 = 10$\\
+                    \textbf{Circuito $BCED$:} & $2I_1 + 2I_3 - I_4 = 0$\\
+                    \textbf{Circuito $CDEC$:} & $I_2 - 2I_5 - 2I_3 = 0$
+                \end{tabular}
+            \end{center}
+            Essas equações produzem o sistema linear:
+            \[
+                \begin{cases}
+                    I - I_1 - I_4 = 0\\
+                    I_1 - I_2 - I_3 = 0\\
+                    I - I_2 - I_5 = 0\\
+                    I_3 + I_4 - I_5 = 0\\
+                    I_4 + 2I_5 = 10\\
+                    2I_1 + 2I_3 - I_4 = 0\\
+                    I_2 - 2I_5 - 2I_3 = 0
+                \end{cases}
+            \]
+            Cuja solução é: $I = 7$, $I_1 = I_5 = 3$, $I_2 = I_4 = 4$ e $I_3 = -1$.
+        \end{enumerate}
+    \end{solucao}
+\end{exemplos}
 
 
-Agora vamos aplicar a lei da voltagem para cada circuito. Para o circuito $CABC$, as quedas de voltagem nos resistores são $2I_1$, $I_2$ e $2I_1$. Assim temos a equação
-\[
-    4I_1 + I_2 = 8.
-\]
+\begin{observacoes}
+    \begin{enumerate}
+        \item Um valor negativo na corrente significa que a corrente no ramo correspondente flui no sentido oposto ao mostrado no diagrama do circuito.
 
-Para o circuito $DABD$, as quedas de voltagem nos resistores são $4I_3$, $I_2$. Assim temos a equação
-\[
-    4I_3 + I_2 = 16.
-\]
-
-Com isso temos o seguinte sistema linear.
-\[
-    \begin{cases}
-        I_1 - I_2 + I_3 = 0\\
-        4I_1 + I_2 = 8\\
-        I_2 + 4I_3 = 16
-    \end{cases}
-\]
-Aplicando o método de eliminação de Gauss-Jordan obtemos a solução
-\begin{center}
-    $I_1 = 1 \mbox{ ampere}$, $I_2 = 4 \mbox{ amperes}$ $I_1 = 3 \mbox{ amperes}$.
-\end{center}
-
-\begin{figure}[!h]
-    \centering
-    \input{diagramas_aplicacoes/diagrama_circuito_uma_unica_fonte_energia.tex}
-\end{figure}
-
-A lei da corrente de Kirchhoff fornece as seguintes equações nos quatro nós:
-\begin{center}
-    \begin{tabular}{lc}
-        \textbf{Nó B:} & $I - I_1 - I_4 = 0$\\
-        \textbf{Nó C:} & $I_1 - I_2 - I_3 = 0$\\
-        \textbf{Nó D:} & $I - I_2 - I_5 = 0$\\
-        \textbf{Nó B:}& $I_3 + I_4 - I_5 = 0$
-    \end{tabular}
-\end{center}
-
-Para os circuitos obtemos
-\begin{center}
-    \begin{tabular}{lc}
-        \textbf{Circuito $ABEDA$:} & $I_4 + 2I_5 = 10$\\
-        \textbf{Circuito $BCED$:} & $2I_1 + 2I_3 - I_4 = 0$\\
-        \textbf{Circuito $CDEC$:} & $I_2 - 2I_5 - 2I_3 = 0$
-    \end{tabular}
-\end{center}
-
-Essas equações produzem o sistema linear:
-\[
-    \begin{cases}
-        I - I_1 - I_4 = 0\\
-        I_1 - I_2 - I_3 = 0\\
-        I - I_2 - I_5 = 0\\
-        I_3 + I_4 - I_5 = 0\\
-        I_4 + 2I_5 = 10\\
-        2I_1 + 2I_3 - I_4 = 0\\
-        I_2 - 2I_5 - 2I_3 = 0
-    \end{cases}
-\]
-Cuja solução é: $I = 7$, $I_1 = I_5 = 3$, $I_2 = I_4 = 4$ e $I_3 = -1$.
-
-\begin{observacao}
-    Há uma única fonte de energia neste caso. Assim a bateria de 10 volts fornece uma corrente de 7 amperes ao circuito. Usando a lei de Ohm, $E = RI$, obtemos $R = 10/7$. Assim, todo o circuito comporta-se como se houvesse um único resistor de $10/7$ ohms. Esse valor é chamado de \textrm{resistência efetiva}, $R_{ef}$, do circuito.
-\end{observacao}
+        \item Há uma única fonte de energia neste caso. Assim a bateria de 10 volts fornece uma corrente de 7 amperes ao circuito. Usando a lei de Ohm, $E = RI$, obtemos $R = 10/7$. Assim, todo o circuito comporta-se como se houvesse um único resistor de $10/7$ ohms. Esse valor é chamado de \textrm{resistência efetiva}, $R_{ef}$, do circuito.
+    \end{enumerate}
+\end{observacoes}
