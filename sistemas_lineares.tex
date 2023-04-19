@@ -1380,11 +1380,113 @@ Todavia podemos continuar aplicando opera\c{c}\~oes elementares at\'e que a matr
     \end{enumerate}
 \end{proposicao}
 
+Agora temos duas questões para responder:
 \begin{enumerate}[label={\arabic*})]
     \item Seja $A$ uma matriz quadrada de ordem $n$. Como podemos encontrar a inversa de $A$, se existir.
 
     \item Dada uma matriz $A$, como podemos decidir se $A$ \'e invert{\'\i}vel?
 \end{enumerate}
+
+Para responder à primeira pergunta vamos começar um caso simples. Considere a seguinte matriz de ordem 2:
+\[
+    A = \begin{pmatrix}
+        1 & 2\\1 & 3
+    \end{pmatrix}.
+\]
+Como podemos tentar determinar se existe uma inversa para essa matriz? Se tal matriz existir ela será também uma matriz de ordem 2 e precisará satisfazer
+\[
+    AB = I_2 = BA.
+\]
+Suponha então que
+\[
+    B = \begin{pmatrix}
+        x & y\\z & t
+    \end{pmatrix}.
+\]
+Vamos tentar encontrar $B$ de modo que $AB = I_2$. Para isso vamos desenvolder esse produto e igualar as matrizes:
+\begin{align*}
+    AB &= I_2\\
+    \begin{pmatrix}1 & 2\\1 & 3\end{pmatrix}\begin{pmatrix}x & y\\z & t\end{pmatrix} &= \begin{pmatrix}1 & 0\\0 & 1\end{pmatrix}\\
+    \begin{pmatrix}x + 2z & y + 2t\\x + 3z & y + 3t\end{pmatrix} &= \begin{pmatrix}1 & 0\\0 & 1\end{pmatrix}
+\end{align*}
+
+Que produz os seguintes sistemas lineares:
+\begin{align}
+    \begin{cases}\label{primeirosistema}
+        x + 2z = 1\\
+        x + 3z = 0
+    \end{cases}\\
+    \begin{cases}\label{segundosistema}
+        y + 2t = 0\\
+        y + 3t = 1
+    \end{cases}
+\end{align}
+Assim precisamos resolver esses dois sistemas para encontrar a matriz $B$.
+
+Aplicando o método de eliminação de Gauss-Jordan no sistema \eqref{primeirosistema}:
+\begin{align*}
+    \begin{amatrix}{2}
+        1 & 2 & 1\\
+        1 & 3 & 0
+    \end{amatrix}
+    \begin{array}{l}
+        \phantom{x}\\L_2 \to L_2 - L_1
+    \end{array}\sim
+    \begin{amatrix}{2}
+        1 & 2 & 1\\
+        0 & 1 & 1
+    \end{amatrix}
+    \begin{array}{l}
+        L_1 \to L_1 - 2L_2\\\phantom{x}
+    \end{array}\sim
+    \begin{amatrix}{2}
+        1 & 0 & 3\\
+        0 & 1 & -1
+    \end{amatrix}.
+\end{align*}
+Nesse caso o sistema \eqref{primeirosistema} é um sistema possível e determinado com solução dada por $x = 3$ e $z = -1$.
+
+Agora, usando o método de Gauss-Jordan no sistema \eqref{segundosistema}:
+\begin{align*}
+    \begin{amatrix}{2}
+        1 & 2 & 0\\
+        1 & 3 & 1
+    \end{amatrix}
+    \begin{array}{l}
+        \phantom{x}\\L_2 \to L_2 - L_1
+    \end{array}\sim
+    \begin{amatrix}{2}
+        1 & 2 & 0\\
+        0 & 1 & 1
+    \end{amatrix}
+    \begin{array}{l}
+        L_1 \to L_1 - 2L_2\\\phantom{x}
+    \end{array}\sim
+    \begin{amatrix}{2}
+        1 & 0 & -2\\
+        0 & 1 & 1
+    \end{amatrix}.
+\end{align*}
+
+Nesse caso o sistema \eqref{segundosistema} é um sistema possível e determinado com solução dada por $y = -2$ e $t = 1$.
+
+Logo
+\[
+    B = \begin{pmatrix}
+        3 & -2\\
+        -1 & 1
+    \end{pmatrix}
+\]
+e $AB = I_2 = BA$. Portanto, $A$ é invertível e $A^{-1} = B$.
+
+Observe que na hora de resolver o sistema \eqref{segundosistema}, a matriz de coeficientes é a mesma e também  aplicamos as mesmas operações elementares. Poderíamos ter resolvido os dois sistemas simultaneamente considere a matriz ampliada dos dois sistemas. Nesse caso montamos a matriz
+\[
+    \left[\begin{array}{cc|cc}
+        1 & 2 & 1 & 0\\
+        1 & 3 & 0 & 1
+    \end{array}\right]
+\]
+e aplicamos operações elementares nessa matriz até o que o lado esquerdo dela esteja na forma escalonada reduzida por linhas. Se isso acontecer, a matriz que resultante no lado direito será a inversa da matriz $A$.
 
 Considere o sistema linear: 
 \begin{equation}
