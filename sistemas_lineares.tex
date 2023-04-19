@@ -1333,7 +1333,7 @@ Todavia podemos continuar aplicando opera\c{c}\~oes elementares at\'e que a matr
     \]
     Como $C\cdot I_n = C$ e usando a associatividade do produto de matrizes podemos escrever essa última igualdade como
     \[
-        (C\ccdot A)\cdot B = C.
+        (C\cdot A)\cdot B = C.
     \]
     Mas $C\cdot A = I_n$, logo temos
     \[
@@ -1352,6 +1352,22 @@ Todavia podemos continuar aplicando opera\c{c}\~oes elementares at\'e que a matr
         (AB)^{-1} = B^{-1} A^{-1}.
     \]
 \end{proposicao}
+\begin{prova}
+    Como $A$ e $B$ são invertíveis então
+    \begin{align*}
+        A\cdot A^{-1} = I_n = A^{-1}\cdot A\\
+        B\cdot B^{-1} = I_n = B^{-1}\cdot B.
+    \end{align*}
+    Assim
+    \begin{align*}
+        (A\cdot B)\cdot (B^{-1}\cdot A^{-1}) = A \cdot (B \cdot B^{-1})\cdot A^{-1} = (A \cdot I_n) \cdot A^{-1} = A\cdot A^{-1} = I_n\\
+        (B^{-1}\cdot A^{-1}) \cdot (A\cdot B) = B^{-1}\cdot (A^{-1} \cdot A)\cdot B = (B^{-1} \cdot I_n) \cdot B = B^{-1}\cdot A = I_n.
+    \end{align*}
+    Portanto $AB$ é invertível e
+    \[
+        (A\cdot B)^{-1} = B^{-1}\cdot A^{-1}.
+    \]
+\end{prova}
 
 \begin{proposicao}
     Seja $A$ uma matriz invert{\'\i}vel e $n$ um n\'umero inteiro n\~ao negativo. Ent\~ao:
