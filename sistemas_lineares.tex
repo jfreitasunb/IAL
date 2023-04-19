@@ -1765,21 +1765,80 @@ Vamos escrever simplesmente
     $m \times n$, ent\~ao o produto $EA$ \'e a matriz que resulta quando essa mesma opera\c{c}\~ao com linhas \'e efetuada em $A$.
 \end{teorema}
 
+\begin{exemplo}
+    Considere a matriz
+    \[
+        A = \begin{pmatrix}
+            1 & 0 & 2 & 3\\
+            2 & -1 & 3 & 6\\
+            1 & 4 & 4 & 0
+        \end{pmatrix}.
+    \]
+    Aplicando a operação elementar $L_2 \to L_2 - 2L_1$ em $A$ obtemos:
+    \[
+        \begin{pmatrix}
+            1 & 0 & 2 & 3\\
+            2 & -1 & 3 & 6\\
+            1 & 4 & 4 & 0
+        \end{pmatrix}
+        \begin{array}{l}
+            \phantom{x}\\L_2 \to L_2 - 2L_1\\\phantom{x}
+        \end{array}\sim
+        \begin{pmatrix}
+            1 & 0 & 2 & 3\\
+            0 & -1 & -1 & 0\\
+            1 & 4 & 4 & 0
+        \end{pmatrix}.
+    \]
+    Agora considere a matriz elementar $E_1$ obtida pela operação $L_2 \to L_2 - 2L_1$ aplicada na matriz identidade $I_3$:
+    \[
+        I_3 = \begin{pmatrix}
+            1 & 0 & 0\\
+            0 & 1 & 0\\
+            0 & 0 & 1
+        \end{pmatrix}
+        \begin{array}{l}
+            \phantom{x}\\L_2 \to L_2 - 2L_1\\\phantom{x}
+        \end{array}\sim
+        \begin{pmatrix}
+            1 & 0 & 0\\
+            -2 & 1 & 0\\
+            0 & 0 & 1
+        \end{pmatrix} = E_1
+    \]
+    Fazendo
+    \[
+        E_1A = \begin{pmatrix}
+            1 & 0 & 2 & 3\\
+            2 & -1 & 3 & 6\\
+            1 & 4 & 4 & 0
+        \end{pmatrix}
+        \begin{pmatrix}
+            1 & 0 & 0\\
+            -2 & 1 & 0\\
+            0 & 0 & 1
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            1 & 0 & 2 & 3\\
+            0 & -1 & -1 & 0\\
+            1 & 4 & 4 & 0
+        \end{pmatrix}
+    \]
+\end{exemplo}
+
 \begin{teorema}
     Qualquer matriz elementar \'e invert{\'\i}vel, e a inversa tamb\'em \'e uma matriz elementar.
 \end{teorema}
 
 \begin{teorema}
-    Se $A$ \'e uma matriz $n \times n$, ent\~ao as seguintes afirma\c{c}\~oes s\~ao equivalentes, ou seja, s\~ao todas verdadeiras  
-    ou todas falsas.
+    Se $A$ é uma matriz $n \times n$, então as seguintes afirmações são equivalentes, ou seja, são todas verdadeiras ou todas falsas:
     \begin{enumerate}[label={\roman*})]
-        \item $A$ \'e invert{\'\i}vel.
-        
-        \item $AX = 0$ tem somente a solu\c{c}\~ao trivial.
-
-        \item A forma escalonada reduzida por linhas de $A$ \'e $I_n$.
-
+        \item $A$ é invertível.
+        \item $AX = 0$ tem somente a solução trivial.
+        \item A forma escalonada reduzida por linhas de $A$ é $I_n$.
         \item $A$ pode ser expressa como um produto de matrizes elementares.
+        \item $AX = B$ é possível e determinado com cada matriz $b$ de tamanho $n \times 1$.
+        \item $Ax = b$ tem exatamente uma solução com cada matriz $b$ de tamanho $n \times 1$.
     \end{enumerate}
 \end{teorema}
 
