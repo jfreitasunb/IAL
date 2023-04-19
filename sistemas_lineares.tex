@@ -1321,6 +1321,26 @@ Todavia podemos continuar aplicando opera\c{c}\~oes elementares at\'e que a matr
 \begin{teorema}
     Se $B$ e $C$ s\~ao ambas inversas da matriz $A$, ent\~ao $B = C$.
 \end{teorema}
+\begin{prova}
+    Suponha que $B$ e $C$ são matrizes inversas de uma matriz quadrada $A$. Assim
+    \begin{align*}
+        A\cdot B = I_n = B\cdot A\\
+        A\cdot C = I_n = C\cdot A
+    \end{align*}
+    Mas de $A\cdot B = I_n$, podemos multiplicar os dois lados dessa igualdade pela matriz $C$ do lado esquerdo obtendo
+    \[
+        C\cdot (A\cdot B) = C\cdot I_n.
+    \]
+    Como $C\cdot I_n = C$ e usando a associatividade do produto de matrizes podemos escrever essa última igualdade como
+    \[
+        (C\ccdot A)\cdot B = C.
+    \]
+    Mas $C\cdot A = I_n$, logo temos
+    \[
+        I_n\cdot B = C
+    \]
+    e com isso $B = C$, como queríamos.
+\end{prova}
 
 \begin{notacao}
     Se $A$ \'e uma matriz invert{\'\i}vel e $B$ \'e a sua inversa, vamos escrever $B = A^{-1}$.
