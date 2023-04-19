@@ -1369,6 +1369,14 @@ Todavia podemos continuar aplicando opera\c{c}\~oes elementares at\'e que a matr
     \]
 \end{prova}
 
+\begin{teorema}
+    Seja $A$ uma matriz quadrada de ordem $n$.
+    \begin{enumerate}
+        \item Se $B$ for uma matriz quadrada satisfazendo $BA = I_n$, então $B = A^{-1}$.
+        \item Se $B$ for uma matriz quadrada satisfazendo $AB = I_n$, então $B = A^{-1}$.
+    \end{enumerate}
+\end{teorema}
+
 \begin{proposicao}
     Seja $A$ uma matriz invert{\'\i}vel e $n$ um n\'umero inteiro n\~ao negativo. Ent\~ao:
     \begin{enumerate}[label={\roman*})]
@@ -1834,10 +1842,10 @@ Vamos escrever simplesmente
     Se $A$ é uma matriz $n \times n$, então as seguintes afirmações são equivalentes, ou seja, são todas verdadeiras ou todas falsas:
     \begin{enumerate}[label={\roman*})]
         \item $A$ é invertível.
-        \item $AX = 0$ tem somente a solução trivial.
+        \item $Ax = 0$ tem somente a solução trivial.
         \item A forma escalonada reduzida por linhas de $A$ é $I_n$.
         \item $A$ pode ser expressa como um produto de matrizes elementares.
-        \item $AX = B$ é possível e determinado com cada matriz $b$ de tamanho $n \times 1$.
+        \item $Ax = b$ é possível para cada matriz $b$ de tamanho $n \times 1$.
         \item $Ax = b$ tem exatamente uma solução com cada matriz $b$ de tamanho $n \times 1$.
     \end{enumerate}
 \end{teorema}

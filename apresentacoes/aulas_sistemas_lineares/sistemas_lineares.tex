@@ -512,13 +512,13 @@
                 \vdots & \vdots & \cdots & \vdots\\
                 a_{m1} & a_{m2} & \cdots & a_{mn}
             \end{pmatrix}, \quad\pause
-            X = \begin{pmatrix}
+            x = \begin{pmatrix}
                 x_1\\
                 x_2\\
                 \vdots\\
                 x_n
             \end{pmatrix},\quad \pause
-            B = \begin{pmatrix}
+            x = \begin{pmatrix}
                 b_1\\
                 b_2\\
                 \vdots\\
@@ -530,28 +530,28 @@
     \begin{frame}
         A partir dessas matrizes o sistema linear anterior pode ser escrito como a equação matricial:\pause
         \[
-            AX = B.\pause
+            Ax = b.\pause
         \]
 
         No caso em que
         \[
-            B = \begin{pmatrix}
+            b = \begin{pmatrix}
                 0\\0\\\vdots\\0
             \end{pmatrix}\pause
         \]
 
         Vamos escrever simplesmente
         \[
-            AX = 0.
+            Ax = 0.
         \]
     \end{frame}
 
     \begin{frame}
         \begin{teorema}
             Seja $A$ uma matriz invertível de ordem $n$. \pause Para cada matriz $B$ de ordem $n\times 1$ \pause o sistema linear de forma matricial
-            $AX = B$ \pause admite solução única que é dada por\pause
+            $Ax = b$ \pause admite solução única que é dada por\pause
             \[
-                X = \begin{pmatrix}
+                x = \begin{pmatrix}
                     x_1 \\ x_2 \\ \vdots \\ x_n
                 \end{pmatrix} \pause = A^{-1}B.
             \]
@@ -586,7 +586,7 @@
                 
                 \vspace{1cm}
 
-                \item $AX = 0$ \pause tem somente a solução trivial.\pause
+                \item $Ax = 0$ \pause tem somente a solução trivial.\pause
                  
                 \vspace{1cm}
 
@@ -606,11 +606,11 @@
                  
                 \vspace{1cm}
 
-                \item $AX = B$ é possível e determinado \pause com cada matriz $b$ de tamanho $n \times 1$.\pause
+                \item $Ax = b$ é possível \pause para cada matriz $b$ de tamanho $n \times 1$.\pause
                  
                 \vspace{1cm}
 
-                \item $Ax = b$ tem exatamente uma solução \pause com cada matriz $b$ de tamanho $n \times 1$.
+                \item $Ax = b$ tem exatamente uma solução \pause para cada matriz $b$ de tamanho $n \times 1$.
             \end{enumerate}
         \end{teorema}
     \end{frame}
