@@ -1696,9 +1696,69 @@ Vamos escrever simplesmente
 \end{exemplo}
 
 \begin{definicao}
-    Uma matriz $n\times n$ que pode ser obtida da matriz identidade $I_n$, de tamanho $n\times n$, efetuando uma 
-    \'unica opera\c{c}\~ao elementar sobre linhas \'e chamada de \textbf{matriz elementar}.
+    Uma matriz $n\times n$ que pode ser obtida da matriz identidade $I_n$, de tamanho $n\times n$, efetuando uma \'unica opera\c{c}\~ao elementar sobre linhas \'e chamada de \textbf{matriz elementar}.
 \end{definicao}
+
+\begin{exemplos}
+    \begin{enumerate}
+        \item A matriz $E_1 = \begin{pmatrix}1 & 0\\0 & -3\end{pmatrix}$ é uma matriz elementar uma vez que pode ser obtida da matriz identidade $I_2$ pela aplicação da operação elementar $L_2 \to -3L_2$:
+        \[
+            I_2 = \begin{pmatrix}
+                1 & 0\\
+                0 & 1
+            \end{pmatrix}
+            \begin{array}{l}
+                \phantom{x}\\L_2 \to -3L_2
+            \end{array}\sim
+            \begin{pmatrix}
+                1 & 0\\
+                0 & -3
+            \end{pmatrix} = E_1.
+        \]
+        \item A matriz $E_2 = \begin{pmatrix}1 & 0 & 1\\0 & 1 & 0\\0 & 0 & 1\end{pmatrix}$ é uma matriz elementar uma vez que pode ser obtida da matriz identidade $I_3$ pela aplicação da operação elementar $L_1 \to L_1 + L_2$:
+        \[
+            I_3 = \begin{pmatrix}
+                1 & 0 & 0\\
+                0 & 1 & 0\\
+                0 & 0 & 1
+            \end{pmatrix}
+            \begin{array}{l}
+                L_2 \to -3L_2\phantom{x}\\\phantom{x}
+            \end{array}\sim
+            \begin{pmatrix}
+                1 & 0 & 1\\
+                0 & 1 & 0\\
+                0 & 0 & 1
+            \end{pmatrix} = E_2.
+        \]
+        \item A matriz $E_3 = \begin{pmatrix}-2 & 0 & 0 & 0\\0 & 1 & 0 & 0\\0 & 1 & 1 & 0\\0 & 0 & 0 & 1\end{pmatrix}$ não é uma matriz elementar uma vez que não pode ser obtida da matriz identidade $I_4$ pela aplicação de uma única operação elementar. Nesse caso precisamos aplicar duas operações elementares para obter a matriz $E_3$:
+        \[
+            I_4 = \begin{pmatrix}
+                1 & 0 & 0 & 0\\
+                0 & 1 & 0 & 0\\
+                0 & 0 & 1 & 0\\
+                0 & 0 & 0 & 1
+            \end{pmatrix}
+            \begin{array}{l}
+                L_1 \to -2L_1\\\phantom{x}\\L_3 \to L_3 + L_2\\\phantom{x}
+            \end{array}\sim
+            \begin{pmatrix}
+                -2 & 0 & 0 & 0\\
+                0 & 1 & 0 & 0\\
+                0 & 1 & 1 & 0\\
+                0 & 0 & 0 & 1
+            \end{pmatrix} = E_3.
+        \]
+        \item Para uma matriz de ordem 2 as possíveis matrizes elementares são:
+        \[
+            \begin{bmatrix}0 & 1\\1 & 0\end{bmatrix},
+            \begin{bmatrix}\lambda & 0\\0 & 1\end{bmatrix}\ \lambda \ne 0,
+            \begin{bmatrix}1 & 0\\0 & \alpha\end{bmatrix}\ \alpha \ne 0,
+            \begin{bmatrix}1 & \beta\\0 & 1\end{bmatrix},
+            \begin{bmatrix}1 & 0\\\gamma & 1\end{bmatrix},
+        \]
+    \end{enumerate}
+\end{exemplos}
 
 \begin{teorema}
     Se a matriz elementar $E$ \'e o resultado de efetuar uma certa opera\c{c}\~ao com as linhas de $I_m$ e se $A$ \'e uma matriz 
