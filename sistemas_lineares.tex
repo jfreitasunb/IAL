@@ -1846,7 +1846,7 @@ Vamos escrever simplesmente
         \item A forma escalonada reduzida por linhas de $A$ é $I_n$.
         \item $A$ pode ser expressa como um produto de matrizes elementares.
         \item $Ax = b$ é possível para cada matriz $b$ de tamanho $n \times 1$.
-        \item $Ax = b$ tem exatamente uma solução com cada matriz $b$ de tamanho $n \times 1$.
+        \item $Ax = b$ tem exatamente uma solução para cada matriz $b$ de tamanho $n \times 1$.
     \end{enumerate}
 \end{teorema}
 
@@ -1862,12 +1862,15 @@ A regra fundamental que governa o fluxo através de uma rede é a \textbf{conser
   \textit{Em cada nó, o fluxo de entrada é igual ao fluxo de saída.}
 \end{definicao}
 
-Por exemplo, para uma rede de um único nó:
+Por exemplo, considere uma rede de um único nó, como na figura \ref{redenosimples}:
 \begin{figure}[!h]
     \centering
     \input{diagramas_aplicacoes/diagrama_simples.tex}
+    \caption{Rede formada por um único nó}
+    \label{redenosimples}
 \end{figure}
-devemos ter:
+
+Neste caso aplicando a conservação de fluxo, devemos ter:
 \[
     f_1 + f_2 = 50.
 \]
