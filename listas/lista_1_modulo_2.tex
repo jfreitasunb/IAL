@@ -1,0 +1,276 @@
+%!TEX program = xelatex
+\def\numeromodulo{2}
+\def\numerolista{1}
+\documentclass[12pt]{exam}
+
+\input{../configuracoes/variaveis_listas}
+\input{../configuracoes/pacotes}
+\input{../configuracoes/configuracoes_paginas}
+\input{../configuracoes/comandos_personalizados}
+\newcommand{\integer}{\mathbb{Z}}
+\begin{document}
+
+  \Opensolutionfile{ans}[ans1]
+  \begin{center}
+    {\Large\bf \disciplina\ - Turma \turma\ -- \semestre$^{o}$/\ano} \\ \vspace{9pt} {\large\bf
+        $\numerolista^a$ Lista de Exerc{\'\i}cios -- Módulo \numeromodulo}\\ \vspace{9pt} Prof. Jos{\'e} Ant{\^o}nio O. Freitas
+  \end{center}
+  \hrule
+
+\vesp{.6}
+
+\begin{exercicio}
+  Mostre que os seguintes conjuntos s\~ao espa\c{c}os vetoriais:
+  \begin{enumerate}[label={\alph*})]
+    \item $\complex^n$ \'e um espa\c{c}o vetorial sobre $\real$ se definirmos:
+    \begin{itemize}
+      \item $(a_1, a_2, \dots, a_n) \oplus (b_1, b_2, \dots,b_n) = (a_1 + b_1, a_2 + b_2,\dots, a_n + b_n)$ para todos $(a_1, a_2, \dots,a_n)$ ,$(b_1, b_2, \dots,b_n) \in \complex^n$;
+      \item $\alpha \otimes (a_1, a_2, \dots,a_n) = (\alpha a_1, \alpha a_2, \dots, \alpha a_n)$ para todo $\alpha \in \real$ e todo $(a_1, a_2, \dots, a_n) \in \complex^n$.
+    \end{itemize}
+    \item Considere o conjunto dos polin\^omios
+    \[
+      \mathcal{P}(\cp{K}) = \{ p(x) = a_nx^n + a_{n - 1}x^{n - 1} + \cdots + a_1x + a_0 \mid a_i \in \cp{K}, i = 1, 2, \dots, n; n \ge 0 \}.
+    \]
+    Dados $p(x) = a_nx^n + a_{n - 1}x^{n - 1} + \cdots + a_1x + a_0$ e $q(x) = b_mx^m + b_{m - 1}x^{m - 1} + \cdots + b_1x + b_0$ em $\mathcal{P}(\cp{K})$, suponha que $n < m$ e defina:
+    \begin{itemize}
+      \item $p(x) \oplus q(x) = b_mx^m + b_{m - 1}x^{m - 1} + \cdots + b_{n + 1}x^{n + 1} + (a_n + b_n)x^n + (a_1 + b_1)x + (a_0 + b_0)$
+      \item $\alpha\otimes p(x) = \alpha a_nx^n + \alpha a_{n - 1}x^{n - 1} + \cdots + \alpha a_1x + \alpha a_0$.
+    \end{itemize}
+
+    \item Defina
+    \[
+      \mathcal{P}_5(\real) = \{ p(x) = a_5x^5 + a_4x^4 + a_3x^3 + a_2x^2 + a_1x + a_0 \mid a_i \in \real, 0 \le i \le 5 \}.
+    \]
+    Considere as opera\c{c}\~oes de soma e produto definidas em $\mathcal{P}(\cp{K})$ e mostre que $\mathcal{P}_5(\real)$ \'e um $\real$-espa\c{c}o vetorial.
+
+    \item Defina
+    \[
+      \mathcal{P}_5(\complex) = \{ p(x) = a_5x^5 + a_4x^4 + a_3x^3 + a_2x^2 + a_1x + a_0 \mid a_i \in \complex, 0 \le i \le 5 \}.
+    \]
+    Considere as opera\c{c}\~oes de soma e produto definidas em $\mathcal{P}(\cp{K})$ e mostre que $\mathcal{P}_5(\complex)$ \'e um $\real$-espa\c{c}o vetorial.
+
+    \item Defina
+    \[
+      \mathcal{P}_5(\complex) = \{ p(x) = a_5x^5 + a_4x^4 + a_3x^3 + a_2x^2 + a_1x + a_0 \mid a_i \in \complex, 0 \le i \le 5 \}.
+    \]
+    Considere as opera\c{c}\~oes de soma e produto definidas em $\mathcal{P}(\cp{K})$ e mostre que $\mathcal{P}_5(\complex)$ \'e um $\complex$-espa\c{c}o vetorial.
+
+    \item Para cada $m \ge 0$ defina
+    \[
+      \mathcal{P}_m(\cp{K}) = \{ p(x) = a_nx^n + a_{n - 1}x^{n - 1} + \cdots + a_1x + a_0 \mid a_i \in \cp{K}, 0 \le n \le m \}.
+    \]
+    Considere as opera\c{c}\~oes de soma e produto definidas em $\mathcal{P}(\cp{K})$.
+
+    \item O conjunto das matrizes $\cp{M}_{p \times q}(\cp{K})$ com coeficientes em $\cp{K}$ \'e um $\cp{K}$-espa\c{c}o vetorial com a soma usual de matrizes e a multiplica\c{c}\~ao por escalar usual.
+
+    \item Sejam $X$ um conjunto qualquer n\~ao vazio e $\mathcal{F}(X, \cp{K})$ o conjunto de todas as fun\c{c}\~oes $f : X \to \cp{K}$. Defina as seguintes opera\c{c}\~oes em $\mathcal{F}(X, \cp{K})$:
+    \begin{itemize}
+      \item  para $f$, $g \in \mathcal{F}(X, \cp{K})$, defina a fun\c{c}\~ao $f + g : X \to \cp{K}$ dada por $(f\oplus g)(x) = f(x) + g(x)$ para cada $x \in X$.
+      \item para $f \in \mathcal{F}(X, \cp{K})$ e $\alpha \in \cp{K}$, defina a fun\c{c}\~ao $\alpha \otimes f: X \to \cp{K}$ dada por $(\alpha f)(x) = \alpha f(x)$ para cada $x \in X$.
+    \end{itemize}
+  \end{enumerate}
+\end{exercicio}
+
+% \begin{exercicio}
+%   Considere o seguinte sistema linear homog\^eneo
+%     \begin{equation}\label{sistemahomogeneo}
+%       \begin{cases}
+%         \alpha_{11}x_1 + \alpha_{12}x_2 + \cdots + \alpha_{1n}x_n = 0_\cp{K}\\
+%         \vdots\\
+%         \alpha_{m1}x_1 + \alpha_{m2}x_2 + \cdots + \alpha_{mn}x_n = 0_\cp{K}
+%       \end{cases}
+%     \end{equation}
+%     onde $\alpha_{ij} \in \cp{K}$ para $1 \le i \le m$ e $1 \le j \le n$. Seja 
+%     \[
+%     \mathcal{S} = \{(a_1, \dots, a_n) \in \cp{K}^n \mid (a_1, \dots, a_n) \mbox{\'e solu\c{c}\~ao de } \eqref{sistemahomogeneo}\}
+%     \]
+%     o conjunto de todas as solu\c{c}\~oes deste sistema. Mostre que $\mathcal{S}$ \'e um $\cp{K}$-espa\c{c}o vetorial.
+% \end{exercicio}
+
+\begin{exercicio}
+  Mostre que $\rac[\sqrt{2}]$ \'e um espa\c{c}o vetorial sobre $\rac$.
+\end{exercicio}
+
+\begin{exercicio}
+  Suponha que estejam definidas as seguintes opera\c{c}\~oes no conjunto $V = \{(a, b) \in \real^2 \mid a, b > 0\}$:
+  \begin{itemize}
+    \item $(a, b) \oplus (c, d) = (ac, bd)$, para todos $(a,b)$, $(c,d) \in V$.
+    \item $\alpha (a, b) = (a^\alpha, b^\alpha)$ para todo $\alpha \in \real$ e $(a, b) \in V$.
+  \end{itemize}
+  Prove que $V$ com essa opera\c{c}\~oes \'e um $\real$-espa\c{c}o vetorial.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $V$ um espa\c{c}o vetorial sobre um corpo $\cp{K}$.
+  \begin{enumerate}[label={\alph*})]
+    \item Mostre que o vetor nulo de $V$ \'e \'unico.
+    \item Mostre que o vetor oposto \'e \'unico.
+    \item Mostre que $0_\cp{K} v = 0_V$ para todo $v \in V$.
+    \item Mostre que $\alpha 0_V = 0_V$ para todo $\alpha \in \cp{K}$.
+    \item Mostre que se $\alpha v = 0_V$, com $\alpha \in \cp{K}$ e $v \in V$, ent\~ao $\alpha = 0_\cp{K}$ ou $v = 0_V$.
+  \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Mostre que, para cada n\'umero inteiro $n \ge 3$, \'e poss{\'\i}vel encontrar um conjunto gerador de $\real^3$ com $n$ elementos.
+\end{exercicio}
+
+\begin{exercicio}
+  Mostre tamb\'em que n\~ao existe nenhum conjunto gerador de $\real^3$ com menos de $3$ elementos.
+\end{exercicio}
+
+\begin{exercicio}
+  \'E poss{\'\i}vel encontrar um conjunto gerador de $\mathcal{P}(\real)$ com uma quantidade finita de elementos?
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $\cp{K}^n$ um $\cp{K}$-espa\c{c}o vetorial com as opera\c{c}\~oes usuais. Defina
+  \begin{align*}
+    e_1 &= (1_\cp{K}, 0_\cp{K}, 0_\cp{K} \dots, 0_\cp{K})\\
+    e_2 &= (0_\cp{K}, 1_\cp{K}, 0_\cp{K}, \dots, 0_\cp{K})\\
+    e_3 &= (0_\cp{K}, 0_\cp{K}, 1_\cp{K}, \dots, 0_\cp{K})\\
+    &\vdots\\
+    e_n &= (0_\cp{K}, 0_\cp{K}, 0_\cp{K}, \dots, 1_\cp{K}).
+  \end{align*}
+  Mostre que
+  \[
+    \mathcal{B} = \{e_1, e_2, e_3, \dots, e_n\}
+  \]
+  \'e uma base de $\cp{K}^n$ como um $\cp{K}$-espa\c{c}o vetorial. Tal base \'e chamada de \textbf{base can\^onica} de $\cp{K}^n$.
+\end{exercicio}
+
+\begin{exercicio}
+Seja $\mathcal{B}$ um conjunto gerador de um espa\c{c}o vetorial $V$. Mostre que todo subconjunto de $V$ que cont\'em $\mathcal{B}$ \'e um conjunto gerador de $V$.
+\end{exercicio}
+
+\begin{exercicio}
+  Ache uma base de $\cp{M}_{2 \times 3}(\complex)$ como um:
+  \begin{enumerate}[label={\alph*})]
+     \item $\complex$-espa\c{c}o vetorial. Quantos elementos tem?
+     \item $\real$-espa\c{c}o vetorial. Quantos elementos tem?
+   \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Ache uma base de $\cp{M}_{2 \times 3}(\integer_7)$ como um espa\c{c}o vetorial sobre $\integer_7$.
+\end{exercicio}
+
+\begin{exercicio}
+  Ache uma base de $\cp{M}_{3 \times 2}(\integer_{11})$ como um espa\c{c}o vetorial sobre $\integer_{11}$.
+\end{exercicio}
+
+\begin{exercicio}
+  Ache uma base de $\cp{M}_{p \times q}(\complex)$ como um:
+  \begin{enumerate}[label={\alph*})]
+     \item $\complex$-espa\c{c}o vetorial. Quantos elementos tem?
+     \item $\real$-espa\c{c}o vetorial. Quantos elementos tem?
+   \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Se $\cp{K} = \integer_2$, o subconjunto $\{(\overline{1}, \overline{1}, \overline{0}), (\overline{1}, \overline{0}, \overline{1}), (\overline{0}, \overline{1}, \overline{1})\}$ de $\cp{K}^3$ \'e L.D.? E se $\cp{K} = \integer_{13}$?
+\end{exercicio}
+
+\begin{exercicio}
+  Mostre que $\{ (z_1, z_2), (w_1, w_2)\} \subseteq \complex^2$ \'e L.D. se, e somente se, $z_1w_2 = z_2w_1$.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $\mathcal{B}$ um subconjunto de um espa\c{c}o vetorial $V$. Mostre que $\mathcal{B}$ \'e L.D. se, e somente se, existir $u \in \mathcal{B}$ que pode ser escrito como combina\c{c}\~ao linear dos elementos de $\mathcal{B} \backslash \{v\}$.
+\end{exercicio}
+\begin{exercicio}
+  Sob que condi\c{c}\~oes impostas ao escalar $\alpha \in \complex$ os vetores $(0,1,\alpha)$, $(\alpha,0,1)$ e $(1 + \alpha, 1, \alpha)$ formam uma base de $\complex^3$?
+\end{exercicio}
+
+\begin{exercicio}
+  Mostre que se dois vetores s\~ao L.D., ent\~ao um deles \'e m\'ultiplo do outro.
+\end{exercicio}
+
+\begin{exercicio}
+  Os vetores $v_1 = (1,1,2,4)$, $v_2 = (2,-1,-5,2)$, $v_3 = (1,-1,-4,0)$ e $v_4 = (2,1,1,6)$ s\~ao L.I. em $\real^4$?
+\end{exercicio}
+
+\begin{exercicio}
+  Mostre que $\mathcal{B} = \{v_1 = (1,0,-1);v_2=(1,2,1);v_3=(0,-3,2)\}$ \'e uma base de $\real^3$. Exprimir cada um dos vetores da base can\^onica como combina\c{c}\~oes lineares dos elementos de $\mathcal{B}$.
+\end{exercicio}
+
+\begin{exercicio}
+  Determinar tr\^es vetores de $\real^3$ que sejam L.D. e tais que dois quaisquer deles sejam L.I..
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $V$ um espa\c{c}o de dimens\~ao $n \ge 1$. Mostre que:
+  \begin{enumerate}[label={\alph*})]
+    \item todo conjunto de vetores com mais de que $n$ elementos \'e linearmente dependente.
+    \item nenhum conjunto com menos do que $n$ elementos pode gerar $V$.
+  \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao n\~ao necessariamente finita e seja $\mathcal{B}$ um conjunto L.I. em V. Mostre que se existir um elemento $v \in V$ que n\~ao seja combina\c{c}\~ao linear de elementos de $\mathcal{B}$, ent\~ao $\mathcal{B}' = \mathcal{B} \cup \{v\}$ \'e L.I.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. Mostre que todo subconjunto de um conjunto L.I. \'e L.I.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $\mathcal{B} = \{(i, 1-i, 2); (2,1,-i);(5-2i,4,-1-i)\}$ um subconjunto de $\complex^3$.
+  \begin{enumerate}[label={\alph*})]
+    \item Considerando $\complex^3$ como um $\complex$-espa\c{c}o vetorial, $\mathcal{B}$ \'e um conjunto L.I.?
+    \item Considerando $\complex^3$ como um $\real$-espa\c{c}o vetorial, $\mathcal{B}$ \'e um conjunto L.I.?
+  \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $V = \mathcal{P}_5(\real)$ um $\real$-espa\c{c}o vetorial. Mostre que $\mathcal{B} = \{1, 2+x, 3x-x^2,x-x^3, x^4, x^5\}$ \'e base de $V$.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $V = \mathcal{P}_3(\real)$ um $\real$-espa\c{c}o vetorial. Mostre que $\mathcal{B} = \{1, 2+x, 3x-x^2,x-x^3\}$ \'e base de $V$.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $V = \mathcal{P}_3(\complex)$ um $\real$-espa\c{c}o vetorial. Mostre que $\mathcal{B} = \{1, i, x, ix, x^2, ix^2, x^3, ix^3\}$ \'e base de $V$.
+\end{exercicio}
+
+\begin{exercicio}
+  Encontre uma base de $\rac[\sqrt{2}]$ como um espa\c{c}o vetorial sobre $\rac$.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $V$ um $\real$-espa\c{c}o vetorial. Considere no conjunto
+  \[
+    V_\cp{C} = \{(u,w) \mid u, w \in V\}
+  \]
+  as seguintes opera\c{c}\~oes de adi\c{c}\~ao e multiplica\c{c}\~ao por um n\'umero complexo:
+  \begin{itemize}
+    \item $(u_1, w_1) + (u_2, w_2) = (u_1 + u_2, w_1 + w_2)$, para todos $(u_1, w_1)$, $(u_2, w_2) \in V_\cp{C}$;
+    \item $(\alpha + \beta i)(u, w) = (\alpha u - \beta w, \beta u + \alpha w)$, para todo $(u, w) \in V_\cp{C}$ e todo $\alpha + \beta i \in \cp{C}$.
+  \end{itemize}
+  \begin{enumerate}[label={\alph*})]
+    \item Mostre que $V_\cp{C}$ \'e um $\cp{C}$-espa\c{c}o vetorial.
+    \item Seja $\{v_1, v_2, \dots, v_n\} \sub V$ um subconjunto L.I.. Mostre que $\{(v_1,0); (v_2,0); \dots; (v_n, 0)\}$ e $\{(0, v_1); (0, v_2); \dots; (0, v_n)\}$ s\~ao subconjuntos L.I. em $V_\cp{C}$.
+  \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Para um $\cp{C}$-espa\c{c}o vetorial $V$, denote por $V_\real$ o conjunto $V$ visto como um $\real$-espa\c{c}o  vetorial. Mostre que se $\{v_1, v_2, \dots, v_n\}$ for um conjunto L.I. em $V$, ent\~ao $\{v_1, v_2, \dots, v_n\}$ e $\{v_1, v_2, \dots, v_n\} \cup \{iv_1, iv_2, \dots, iv_n\}$ s\~ao conjuntos L.I. em $V_\real$.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $\mathcal{B} = \{v_1, \ldots, v_n\}$ um subconjunto de um $\cp{K}$-espa\c{c}o vetorial $V$. Mostre que se todo vetor $w \in V$ pode ser escrito de modo \'unico como uma combina\c{c}\~ao linear dos elementos em $\mathcal{B}$, ent\~ao $\mathcal{B}$ \'e uma base de $V$.
+\end{exercicio}
+
+
+\newpage
+\Closesolutionfile{ans}
+\hrule
+\begin{center}
+{\large\bf RESPOSTAS}
+\end{center}
+\hrule
+\input{ans1}
+
+
+\end{document}
