@@ -31,21 +31,21 @@
 \definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (25.150000\du,10.000000\du)--(23.900000\du,10.000000\du);
+\draw (25.150000\du,10\du)--(23.900000\du,10\du);%Fio de contato com a bateria C pelo lado negativo
 \pgfsetbuttcap
 \pgfsetmiterjoin
 \pgfsetdash{}{0pt}
 \definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (23.900000\du,9.750000\du)--(23.900000\du,10.250000\du);
+\draw (23.900000\du,9.750000\du)--(23.900000\du,10.250000\du);%Lado negativo da bateria C
 \pgfsetbuttcap
 \pgfsetmiterjoin
 \pgfsetdash{}{0pt}
 \definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (23.400000\du,9.500000\du)--(23.400000\du,10.500000\du);
+\draw (23.400000\du,9.500000\du)--(23.400000\du,10.500000\du);%Lado positivo da bateria C
 \pgfsetbuttcap
 \pgfsetmiterjoin
 \pgfsetdash{}{0pt}
@@ -64,7 +64,7 @@
 \definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (23.400000\du,10.000000\du)--(22.150000\du,10.000000\du);
+\draw (23.400000\du,10\du)--(22.150000\du,10\du);%Fio de contato com a bateria C pelo lado positivo
 \pgfsetlinewidth{0.100000\du}
 \pgfsetdash{}{0pt}
 \pgfsetbuttcap
@@ -76,21 +76,21 @@
 \definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (24.750000\du,24.030000\du)--(23.500000\du,24.030000\du);
+\draw (24.750000\du,24\du)--(23.500000\du,24\du);%Fio de contato com a bateria D pelo lado negativo
 \pgfsetbuttcap
 \pgfsetmiterjoin
 \pgfsetdash{}{0pt}
 \definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (23.500000\du,23.780000\du)--(23.500000\du,24.280000\du);
+\draw (23.500000\du,23.780000\du)--(23.500000\du,24.280000\du);%Terminal negativo da bateria D
 \pgfsetbuttcap
 \pgfsetmiterjoin
 \pgfsetdash{}{0pt}
 \definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (23.000000\du,23.530000\du)--(23.000000\du,24.530000\du);
+\draw (23.000000\du,23.530000\du)--(23.000000\du,24.530000\du);%Terminal positivo da bateria D
 \pgfsetbuttcap
 \pgfsetmiterjoin
 \pgfsetdash{}{0pt}
@@ -109,7 +109,7 @@
 \definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (23.000000\du,24.030000\du)--(21.750000\du,24.030000\du);
+\draw (23.000000\du,24\du)--(21.750000\du,24\du);%Fio de contato com a bateria D pelo lado positivo
 \pgfsetlinewidth{0.100000\du}
 \pgfsetdash{}{0pt}
 \pgfsetbuttcap
@@ -122,6 +122,18 @@
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
 \draw (30.700000\du,12.100000\du)--(30.700000\du,13.000000\du)--(30.200000\du,13.100000\du)--(31.200000\du,13.300000\du)--(30.200000\du,13.500000\du)--(31.200000\du,13.700000\du)--(30.200000\du,13.900000\du)--(31.200000\du,14.100000\du)--(30.700000\du,14.200000\du)--(30.700000\du,15.100000\du);
+\pgfsetlinewidth{0.100000\du}%Resistor de 1 ohm acima de B
+\pgfsetdash{}{0pt}
+\pgfsetbuttcap
+\pgfsetmiterjoin
+\pgfsetlinewidth{0.100000\du}
+\pgfsetbuttcap
+\pgfsetmiterjoin
+\pgfsetdash{}{0pt}
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\pgfsetstrokeopacity{1.000000}
+\draw (15.3\du,19.220000\du)--(15.3\du,20.120000\du)--(14.839902\du,20.220000\du)--(15.839902\du,20.420000\du)--(14.839902\du,20.620000\du)--(15.839902\du,20.820000\du)--(14.839902\du,21.020000\du)--(15.839902\du,21.220000\du)--(15.3\du,21.320000\du)--(15.3\du,22.220000\du);%Resistor de 4 ohms abaixo de A
 \pgfsetlinewidth{0.100000\du}
 \pgfsetdash{}{0pt}
 \pgfsetbuttcap
@@ -133,19 +145,7 @@
 \definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (15.339902\du,19.220000\du)--(15.339902\du,20.120000\du)--(14.839902\du,20.220000\du)--(15.839902\du,20.420000\du)--(14.839902\du,20.620000\du)--(15.839902\du,20.820000\du)--(14.839902\du,21.020000\du)--(15.839902\du,21.220000\du)--(15.339902\du,21.320000\du)--(15.339902\du,22.220000\du);
-\pgfsetlinewidth{0.100000\du}
-\pgfsetdash{}{0pt}
-\pgfsetbuttcap
-\pgfsetmiterjoin
-\pgfsetlinewidth{0.100000\du}
-\pgfsetbuttcap
-\pgfsetmiterjoin
-\pgfsetdash{}{0pt}
-\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
-\pgfsetstrokecolor{dialinecolor}
-\pgfsetstrokeopacity{1.000000}
-\draw (22.400000\du,17.015000\du)--(23.300000\du,17.015000\du)--(23.400000\du,16.515000\du)--(23.600000\du,17.515000\du)--(23.800000\du,16.515000\du)--(24.000000\du,17.515000\du)--(24.200000\du,16.515000\du)--(24.400000\du,17.515000\du)--(24.500000\du,17.015000\du)--(25.400000\du,17.015000\du);
+\draw (22.400000\du,17\du)--(23.300000\du,17\du)--(23.400000\du,16.515000\du)--(23.600000\du,17.515000\du)--(23.800000\du,16.515000\du)--(24.000000\du,17.515000\du)--(24.200000\du,16.515000\du)--(24.400000\du,17.515000\du)--(24.500000\du,17\du)--(25.400000\du,17\du);%Resistor de 1 ohm entre A e B
 \pgfsetlinewidth{0.100000\du}
 \pgfsetdash{}{0pt}
 \pgfsetmiterjoin
@@ -158,7 +158,7 @@
 {\pgfsetcornersarced{\pgfpoint{0.000000\du}{0.000000\du}}\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (15.339902\du,22.220000\du)--(15.339902\du,24.020457\du)--(21.799992\du,24.020457\du)--(21.799992\du,24.045457\du);
+\draw (15.3\du,22.220000\du)--(15.3\du,24\du)--(21.799992\du,24\du)--(21.799992\du,24\du);%Contato entre o resistor de 4 ohms e a bateria D
 }}
 \pgfsetlinewidth{0.100000\du}
 \pgfsetdash{}{0pt}
@@ -172,7 +172,7 @@
 {\pgfsetcornersarced{\pgfpoint{0.000000\du}{0.000000\du}}\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (15.339902\du,19.220000\du)--(15.339902\du,18.170000\du)--(15.349592\du,18.170000\du)--(15.349592\du,10.000000\du)--(22.150000\du,10.000000\du);
+\draw (15.3\du,19.220000\du)--(15.3\du,18.170000\du)--(15.3\du,18.170000\du)--(15.3\du,10.000000\du)--(22.150000\du,10.000000\du);%Contato entre o resistor de 4 ohms e a bateria C
 }}
 \pgfsetlinewidth{0.100000\du}
 \pgfsetdash{}{0pt}
@@ -185,7 +185,7 @@
 \definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (15.312289\du,16.971314\du)--(22.400000\du,17.015000\du);
+\draw (15.312289\du,17\du)--(22.400000\du,17\du);%Contato entre o nó A e o resistor de 1 ohm
 }
 \pgfsetlinewidth{0.100000\du}
 \pgfsetdash{}{0pt}
@@ -199,7 +199,7 @@
 {\pgfsetcornersarced{\pgfpoint{0.000000\du}{0.000000\du}}\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (30.700000\du,15.100000\du)--(30.705389\du,15.100000\du)--(30.705389\du,24.030000\du)--(24.750000\du,24.030000\du);
+\draw (30.7\du,15.100000\du)--(30.7\du,15.100000\du)--(30.7\du,24\du)--(24.750000\du,24\du);%Contato entre o resistor de 1 ohm acima de B e a bateria D
 }}
 \pgfsetlinewidth{0.100000\du}
 \pgfsetdash{}{0pt}
@@ -212,7 +212,7 @@
 \definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (25.400000\du,17.015000\du)--(30.744105\du,16.999442\du);
+\draw (25.400000\du,17\du)--(30.744105\du,17\du);%Contato entre o resistor de 1 ohm e o nó B
 }
 \pgfsetlinewidth{0.100000\du}
 \pgfsetdash{}{0pt}
@@ -226,7 +226,7 @@
 {\pgfsetcornersarced{\pgfpoint{0.000000\du}{0.000000\du}}\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (25.174837\du,10.069183\du)--(25.174837\du,9.995606\du)--(30.700000\du,9.995606\du)--(30.700000\du,12.100000\du);
+\draw (25\du,10\du)--(30.7\du,10\du)--(30.7\du,12.100000\du);%Contato entre o resistor de 1 ohm e a bateria C
 }}
 \pgfsetlinewidth{0.100000\du}
 \pgfsetdash{}{0pt}
@@ -240,7 +240,7 @@
 \definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (18.663686\du,8.983091\du)--(21.338667\du,8.983091\du);
+\draw (18.663686\du,9\du)--(21.338667\du,9\du);%Seta à esquerda de C em I_1
 }
 \pgfsetlinewidth{0.100000\du}
 \pgfsetdash{}{0pt}
@@ -254,7 +254,7 @@
 \definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (26.003633\du,9.023995\du)--(28.678614\du,9.023995\du);
+\draw (26.003633\du,9\du)--(28.678614\du,9\du);%Seta à direita de C em I_1
 }
 \pgfsetlinewidth{0.100000\du}
 \pgfsetdash{}{0pt}
@@ -268,7 +268,7 @@
 \definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (18.468688\du,16.383941\du)--(21.143669\du,16.383941\du);
+\draw (18.468688\du,16.3\du)--(21.143669\du,16.3\du);%Seta à esquerda do resistor de 1 ohm em I_2
 }
 \pgfsetlinewidth{0.100000\du}
 \pgfsetdash{}{0pt}
@@ -282,7 +282,7 @@
 \definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (26.058633\du,16.518940\du)--(28.733613\du,16.518940\du);
+\draw (26.058633\du,16.3\du)--(28.733613\du,16.3\du);%Seta à direita do resistor de 1 ohm em I_2
 }
 \pgfsetlinewidth{0.100000\du}
 \pgfsetdash{}{0pt}
@@ -296,7 +296,7 @@
 \definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (18.598687\du,23.553889\du)--(21.273668\du,23.553889\du);
+\draw (18.598687\du,23.5\du)--(21.273668\du,23.5\du);%Seta à esquerda da bateria D em I_3
 }
 \pgfsetlinewidth{0.100000\du}
 \pgfsetdash{}{0pt}
@@ -310,7 +310,7 @@
 \definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
 \pgfsetstrokecolor{dialinecolor}
 \pgfsetstrokeopacity{1.000000}
-\draw (25.363638\du,23.488890\du)--(28.038618\du,23.488890\du);
+\draw (25.363638\du,23.5\du)--(28.038618\du,23.5\du);%Seta à direita da bateria D em I_3
 }
 \pgfsetlinewidth{0.100000\du}
 \pgfsetdash{}{0pt}
