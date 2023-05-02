@@ -1,0 +1,84 @@
+%!TEX program = xelatex
+\def\ano{2023}
+\def\semestre{1}
+\def\disciplina{Introdução à Álgebra Linear}
+\def\turma{3}
+\def\autor{Jos\'e Ant\^onio O. Freitas}
+\def\instituto{MAT-UnB}
+
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+% \mode<presentation>
+\input{../configuracoes_latex/pacotes}
+\input{../configuracoes_latex/ambientes}
+\input{../configuracoes_latex/comandos_personalizados}
+
+\title{Espaços Vetoriais}
+\author[\autor]{\autor}
+\institute[\instituto]{\instituto}
+\date{}
+
+\begin{document}
+    \begin{frame}
+        \maketitle
+    \end{frame}
+
+    \logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
+
+    \begin{frame}
+        No que se segue o conjunto $\cp{K}$ denotar\'a um corpo, em geral $\rac$, $real$ ou $\complex$.
+
+        \begin{definicao}
+    	    Um conjunto	n\~ao vazio $V$ \'e um \textbf{espa\c{c}o vetorial}\index{Espa\c{c}o Vetorial} sobre um corpo $\cp{K}$ se em seus elementos, chamados \textbf{vetores}, estiverem definidas duas opera\c{c}\~oes satisfazendo:
+    	    \begin{itemize}
+        		\item[A)] A cada par $u$, $w \in V$ corresponde um vetor $u + w \in V$, chamado \textbf{soma} de $u$ e $w$, de modo que:
+		        \item[A1)] $u + w = w + u$, para todos $u$, $w \in V$;
+	    	    \item[A2)] $(u + w) + x = u + (w + x)$, para todos $u$, $w$ e $x \in V$;
+	    	\end{itemize}
+	    \end{definicao}
+	\end{frame}
+
+	\begin{frame}
+	    \begin{definicao}
+	        \begin{itemize}
+        		\item[A3)] Existe em $V$ um vetor, denominado \textbf{vetor nulo} e denotado por $0_V$, tal que
+	    	    \[
+	        		0_V + u = u
+    		    \]
+    		    para todo $u \in V$.
+	        	\item[A4)] Para cada vetor $u \in V$, existe um vetor em $V$, denotado por $-u$ tal que
+    	    	\[
+		        	u + (-u) = 0_V.
+    	    	\]
+	    	\end{itemize}
+	    \end{definicao}
+	\end{frame}
+
+	\begin{frame}
+	    \begin{definicao}
+	        \begin{itemize}
+
+        		\item[M)] A cada par $\alpha \in \cp{K}$ e $u \in V$, corresponde um vetor $\alpha \cdot u \in V$, denominado \textbf{produto por escalar} de $\alpha$ por $u$ de modo que:
+		        \item[M1)] $(\alpha\beta)\cdot u = \alpha(\beta\cdot u)$ para todos $\alpha$, $\beta \in \cp{K}$ e todo $u \in V$;
+	    	    \item[M2)] $1_\cp{K}\cdot u = u$ para todo $u \in V$, onde $1_\cp{K}$ \'e o elemento neutro da multiplica\c{c}\~ao em $\cp{K}$.
+	    	\end{itemize}
+	    \end{definicao}
+	\end{frame}
+
+	\begin{frame}
+	    \begin{definicao}
+	        \begin{itemize}
+
+        		\item[D1)] $\alpha\cdot(u + w) = \alpha\cdot u + \alpha\cdot w$, para todo $\alpha \in \cp{K}$ e todos $u$, $w \in V$;
+	    	    \item[D2)] $(\alpha + \beta)\cdot u = \alpha\cdot u + \beta\cdot u$, para todos $\alpha$, $\beta \in \cp{K}$ e todo $u \in V$.
+	        \end{itemize}
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{observacao}
+	        Vamos usar a express\~ao $\cp{K}$-\textbf{espa\c{c}o vetorial} para nos referir a um espa\c{c}o vetorial $V$ sobre um corpo $\cp{K}$.
+        \end{observacao} 
+    \end{frame}
+\end{document}
