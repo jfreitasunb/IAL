@@ -29,12 +29,20 @@
     \begin{frame}
         No que se segue o conjunto $\cp{K}$ denotar\'a um corpo, em geral $\rac$, $real$ ou $\complex$.
 
+        \vspace{.3cm}
+
         \begin{definicao}
     	    Um conjunto	n\~ao vazio $V$ \'e um \textbf{espa\c{c}o vetorial}\index{Espa\c{c}o Vetorial} sobre um corpo $\cp{K}$ se em seus elementos, chamados \textbf{vetores}, estiverem definidas duas opera\c{c}\~oes satisfazendo:
     	    \begin{itemize}
         		\item[A)] A cada par $u$, $w \in V$ corresponde um vetor $u + w \in V$, chamado \textbf{soma} de $u$ e $w$, de modo que:
+
+                \vspace{.3cm}
+
 		        \item[A1)] $u + w = w + u$, para todos $u$, $w \in V$;
-	    	    \item[A2)] $(u + w) + x = u + (w + x)$, para todos $u$, $w$ e $x \in V$;
+	
+                \vspace{.3cm}
+
+        	    \item[A2)] $(u + w) + x = u + (w + x)$, para todos $u$, $w$ e $x \in V$;
 	    	\end{itemize}
 	    \end{definicao}
 	\end{frame}
@@ -47,7 +55,10 @@
 	        		0_V + u = u
     		    \]
     		    para todo $u \in V$.
-	        	\item[A4)] Para cada vetor $u \in V$, existe um vetor em $V$, denotado por $-u$ tal que
+	
+                \vspace{.3cm}
+
+             	\item[A4)] Para cada vetor $u \in V$, existe um vetor em $V$, denotado por $-u$ tal que
     	    	\[
 		        	u + (-u) = 0_V.
     	    	\]
@@ -58,10 +69,15 @@
 	\begin{frame}
 	    \begin{definicao}
 	        \begin{itemize}
-
         		\item[M)] A cada par $\alpha \in \cp{K}$ e $u \in V$, corresponde um vetor $\alpha \cdot u \in V$, denominado \textbf{produto por escalar} de $\alpha$ por $u$ de modo que:
-		        \item[M1)] $(\alpha\beta)\cdot u = \alpha(\beta\cdot u)$ para todos $\alpha$, $\beta \in \cp{K}$ e todo $u \in V$;
-	    	    \item[M2)] $1_\cp{K}\cdot u = u$ para todo $u \in V$, onde $1_\cp{K}$ \'e o elemento neutro da multiplica\c{c}\~ao em $\cp{K}$.
+		
+                \vspace{.3cm}
+
+	            \item[M1)] $(\alpha\beta)\cdot u = \alpha(\beta\cdot u)$ para todos $\alpha$, $\beta \in \cp{K}$ e todo $u \in V$;
+	    	
+                \vspace{.3cm}
+
+        	    \item[M2)] $1_\cp{K}\cdot u = u$ para todo $u \in V$, onde $1_\cp{K}$ \'e o elemento neutro da multiplica\c{c}\~ao em $\cp{K}$.
 	    	\end{itemize}
 	    \end{definicao}
 	\end{frame}
@@ -69,9 +85,11 @@
 	\begin{frame}
 	    \begin{definicao}
 	        \begin{itemize}
-
         		\item[D1)] $\alpha\cdot(u + w) = \alpha\cdot u + \alpha\cdot w$, para todo $\alpha \in \cp{K}$ e todos $u$, $w \in V$;
-	    	    \item[D2)] $(\alpha + \beta)\cdot u = \alpha\cdot u + \beta\cdot u$, para todos $\alpha$, $\beta \in \cp{K}$ e todo $u \in V$.
+	    	
+                \vspace{.3cm}
+
+	            \item[D2)] $(\alpha + \beta)\cdot u = \alpha\cdot u + \beta\cdot u$, para todos $\alpha$, $\beta \in \cp{K}$ e todo $u \in V$.
 	        \end{itemize}
         \end{definicao}
     \end{frame}
@@ -80,5 +98,25 @@
         \begin{observacao}
 	        Vamos usar a express\~ao $\cp{K}$-\textbf{espa\c{c}o vetorial} para nos referir a um espa\c{c}o vetorial $V$ sobre um corpo $\cp{K}$.
         \end{observacao} 
+    \end{frame}
+
+    \begin{frame}
+        \begin{definicao}
+	        Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$.
+	        Um vetor $w \in V$ \'e uma \textbf{combina\c{c}\~ao linear}\index{Espa\c{c}o Vetorial!Combina\c{c}\~ao linear} dos vetores $u_1$, $u_2$, \dots, $u_n \in V$ se existirem escalares $\alpha_1$, $\alpha_2$, \dots, $\alpha_n \in V$ tais que
+    	    \[
+	    	    w = \alpha_1 u_1 + \alpha_2u_2 + \cdots + \alpha_nu_n = \sum_{i = 1}^n \alpha_iu_i.
+        	\]
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{definicao}
+        	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. Um subconjunto n\~ao vazio $W$ de $V$ \'e um \textbf{subespa\c{c}o vetorial} de $V$ se a restri\c{c}\~ao das opera\c{c}o\~es de $V$ a $W$ torna $W$ um $\cp{K}$-espa\c{c}o vetorial.\index{Subespa\c{c}o}
+        \end{definicao}
+        
+        \begin{teorema}
+        	Um subconjunto n\~ao vazio $W$ de um $\cp{K}$-espa\c{c}o vetorial $V$ \'e um subespa\c{c}o de $V$ se, e somente se, para cada par de vetores $u_1$, $u_2 \in W$ e cada escalar $\lambda \in \cp{K}$, temos que $\lambda u_1 + u_2 \in W$.
+        \end{teorema}
     \end{frame}
 \end{document}
