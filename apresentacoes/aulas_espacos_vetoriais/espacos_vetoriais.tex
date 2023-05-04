@@ -20,108 +20,116 @@
 \date{}
 
 \begin{document}
-    \begin{frame}
-        \maketitle
-    \end{frame}
+\begin{frame}
+	\maketitle
+\end{frame}
 
-    \logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
+\logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
 
-    \begin{frame}
-        No que se segue o conjunto $\cp{K}$ denotar\'a um corpo, em geral $\rac$, $\real$ ou $\complex$.
+\begin{frame}
+	No que se segue o conjunto $\cp{K}$ denotar\'a um corpo, em geral $\rac$, $\real$ ou $\complex$.
 
-        \vspace{.3cm}
+	\vspace{.3cm}
 
-        \begin{definicao}
-    	    Um conjunto	n\~ao vazio $V$ \pause \'e um \textbf{espa\c{c}o vetorial}\index{Espa\c{c}o Vetorial} \pause sobre um corpo $\cp{K}$ \pause se em seus elementos, chamados \textbf{vetores}, \pause estiverem definidas duas 
-    	    opera\c{c}\~oes satisfazendo:\pause
-    	    \begin{itemize}
-        		\item[A)] A cada par $u$, $w \in V$ \pause corresponde um vetor $u + w \in V$, \pause chamado \textbf{soma} de $u$ e $w$, de modo que:\pause 
+	\begin{definicao}
+		Um conjunto	n\~ao vazio $V$ \pause \'e um \textbf{espa\c{c}o vetorial}\index{Espa\c{c}o Vetorial} \pause sobre um corpo $\cp{K}$ \pause se em seus elementos, chamados \textbf{vetores}, \pause estiverem definidas duas
+		opera\c{c}\~oes satisfazendo:\pause
+		\begin{itemize}
+			\item[A)] A cada par $u$, $w \in V$ \pause corresponde um vetor $u + w \in V$, \pause chamado \textbf{soma} de $u$ e $w$, de modo que:\pause
 
-                \vspace{.3cm}
+				\vspace{.3cm}
 
-		        \item[A1)] $u + w \pause = w + u$, \pause para todos $u$, $w \in V$;\pause 
-	
-                \vspace{.3cm}
+			\item[A1)] $u + w \pause = w + u$, \pause para todos $u$, $w \in V$;\pause
 
-        	    \item[A2)] $(u + w) \pause + x \pause = u + \pause (w + x)$, \pause para todos $u$, $w$, $x \in V$;
-	    	\end{itemize}
-	    \end{definicao}
-	\end{frame}
+				\vspace{.3cm}
 
-	\begin{frame}
-	    \begin{definicao}
-	        \begin{itemize}
-        		\item[A3)] Existe em $V$ um vetor, \pause denominado \textbf{vetor nulo} \pause e denotado por $0_V$, tal que\pause 
-	    	    \[
-	        		0_V + u \pause = u\pause 
-    		    \]
-    		    para todo $u \in V$.\pause 
-	
-                \vspace{.3cm}
+			\item[A2)] $(u + w) \pause + x \pause = u + \pause (w + x)$, \pause para todos $u$, $w$, $x \in V$;
+		\end{itemize}
+	\end{definicao}
+\end{frame}
 
-            \item[A4)] Para cada vetor $u \in V$, \pause existe um vetor em $V$, \pause denotado por $-u$ \pause e chamado de 
-                \textbf{vetor oposto}, tal que\pause 
-    	    	\[
-		        	u + (-u) \pause = 0_V.
-    	    	\]
-	    	\end{itemize}
-	    \end{definicao}
-	\end{frame}
+\begin{frame}
+	\begin{definicao}
+		\begin{itemize}
+			\item[A3)] Existe em $V$ um vetor, \pause denominado \textbf{vetor nulo} \pause e denotado por $0_V$, tal que\pause
+				\[
+					0_V + u \pause = u\pause
+				\]
+				para todo $u \in V$.\pause
 
-	\begin{frame}
-	    \begin{definicao}
-	        \begin{itemize}
-        		\item[M)] A cada par $\alpha \in \cp{K}$ \pause e $u \in V$, \pause corresponde um vetor $\alpha \cdot u \in V$, \pause denominado \textbf{produto por escalar} \pause de $\alpha$ por $u$ de modo que:\pause 
-		
-                \vspace{.3cm}
+				\vspace{.3cm}
 
-	            \item[M1)] $(\alpha\beta)\pause \cdot u = \pause \alpha(\pause \beta\cdot u)$ para todos $\alpha$, $\beta \in \cp{K}$ \pause e todo $u \in V$;\pause 
-	    	
-                \vspace{.3cm}
+			\item[A4)] Para cada vetor $u \in V$, \pause existe um vetor em $V$, \pause denotado por $-u$ \pause e chamado de
+				\textbf{vetor oposto}, tal que\pause
+				\[
+					u + (-u) \pause = 0_V.
+				\]
+		\end{itemize}
+	\end{definicao}
+\end{frame}
 
-        	    \item[M2)] $1_\cp{K}\cdot u \pause = u$ para todo $u \in V$, \pause onde $1_\cp{K}$ \'e o elemento neutro da multiplica\c{c}\~ao em $\cp{K}$.
-	    	\end{itemize}
-	    \end{definicao}
-	\end{frame}
+\begin{frame}
+	\begin{definicao}
+		\begin{itemize}
+			\item[M)] A cada par $\alpha \in \cp{K}$ \pause e $u \in V$, \pause corresponde um vetor $\alpha \cdot u \in V$, \pause denominado \textbf{produto por escalar} \pause de $\alpha$ por $u$ de modo que:\pause
 
-	\begin{frame}
-	    \begin{definicao}
-	        \begin{itemize}
-        		\item[D1)] $\alpha\pause \cdot(u + w) = \pause \alpha\cdot u \pause + \alpha\cdot w$, \pause para todo $\alpha \in \cp{K}$ \pause e todos $u$, $w \in V$;\pause 
-	    	
-                \vspace{.3cm}
+				\vspace{.3cm}
 
-	            \item[D2)] $(\alpha + \beta)\pause \cdot u \pause = \alpha\cdot u \pause + \beta\cdot u$, \pause para todos $\alpha$, $\beta \in \cp{K}$ \pause e todo $u \in V$.
-	        \end{itemize}
-        \end{definicao}
-    \end{frame}
+			\item[M1)] $(\alpha\beta)\pause \cdot u = \pause \alpha(\pause \beta\cdot u)$ para todos $\alpha$, $\beta \in \cp{K}$ \pause e todo $u \in V$;\pause
 
-    \begin{frame}
-        \begin{observacao}
-	        Vamos usar a express\~ao $\cp{K}$-\textbf{espa\c{c}o vetorial} \pause para nos referir a um espa\c{c}o vetorial $V$ sobre um corpo $\cp{K}$.
-        \end{observacao} 
-    \end{frame}
+				\vspace{.3cm}
 
-    \begin{frame}
-        \begin{definicao}
-	        Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$.\pause 
-	        Um vetor $w \in V$ \'e uma \textbf{combina\c{c}\~ao linear}\index{Espa\c{c}o Vetorial!Combina\c{c}\~ao linear} \pause dos vetores $u_1$, \pause $u_2$, \pause \dots, 
-	        $u_n \in V$ \pause se existirem escalares $\alpha_1$, \pause $\alpha_2$, \pause \dots, \pause $\alpha_n \in \cp{K}$ tais que\pause 
-    	    \[
-	    	    w = \alpha_1 u_1 + \pause \alpha_2u_2 + \pause \cdots + \pause \alpha_nu_n = \sum_{i = 1}^n \alpha_iu_i.
-        	\]
-        \end{definicao}
-    \end{frame}
+			\item[M2)] $1_\cp{K}\cdot u \pause = u$ para todo $u \in V$, \pause onde $1_\cp{K}$ \'e o elemento neutro da multiplica\c{c}\~ao em $\cp{K}$.
+		\end{itemize}
+	\end{definicao}
+\end{frame}
 
-    \begin{frame}
-        \begin{definicao}
-        	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. \pause Um subconjunto n\~ao vazio $W$ \pause de $V$ \'e um \textbf{subespa\c{c}o vetorial} de $V$ \pause se $W$ é um espaço vetorial 
-        	sobre $\cp{K}$ \pause com respeito às mesmas operações definidas em $V$.\pause 
-        \end{definicao}
-        
-        \begin{teorema}
-        	Um subconjunto n\~ao vazio $W$ \pause de um $\cp{K}$-espa\c{c}o vetorial $V$ \pause \'e um subespa\c{c}o de $V$ \pause se, e somente se, \pause para cada par de vetores $u_1$, 
-        	$u_2 \in W$ \pause e cada escalar $\lambda \in \cp{K}$, \pause temos que $\lambda u_1 + u_2 \in W$.
-        \end{teorema}
-    \end{frame}
+\begin{frame}
+	\begin{definicao}
+		\begin{itemize}
+			\item[D1)] $\alpha\pause \cdot(u + w) = \pause \alpha\cdot u \pause + \alpha\cdot w$, \pause para todo $\alpha \in \cp{K}$ \pause e todos $u$, $w \in V$;\pause
+
+				\vspace{.3cm}
+
+			\item[D2)] $(\alpha + \beta)\pause \cdot u \pause = \alpha\cdot u \pause + \beta\cdot u$, \pause para todos $\alpha$, $\beta \in \cp{K}$ \pause e todo $u \in V$.
+		\end{itemize}
+	\end{definicao}
+\end{frame}
+
+\begin{frame}
+	\begin{observacao}
+		Vamos usar a express\~ao $\cp{K}$-\textbf{espa\c{c}o vetorial} \pause para nos referir a um espa\c{c}o vetorial $V$ sobre um corpo $\cp{K}$.
+	\end{observacao}
+\end{frame}
+
+\begin{frame}
+	\begin{definicao}
+		Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$.\pause
+		Um vetor $w \in V$ \'e uma \textbf{combina\c{c}\~ao linear}\index{Espa\c{c}o Vetorial!Combina\c{c}\~ao linear} \pause dos vetores $u_1$, \pause $u_2$, \pause \dots,
+		$u_n \in V$ \pause se existirem escalares $\alpha_1$, \pause $\alpha_2$, \pause \dots, \pause $\alpha_n \in \cp{K}$ tais que\pause
+		\[
+			w = \alpha_1 u_1 + \pause \alpha_2u_2 + \pause \cdots + \pause \alpha_nu_n = \sum_{i = 1}^n \alpha_iu_i.
+		\]
+	\end{definicao}
+\end{frame}
+
+\begin{frame}
+	\begin{definicao}
+		Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. \pause Um subconjunto n\~ao vazio $W$ \pause de $V$ \'e um \textbf{subespa\c{c}o vetorial} de $V$ \pause se $W$ é um espaço vetorial
+		sobre $\cp{K}$ \pause com respeito às mesmas operações definidas em $V$.\pause
+	\end{definicao}
+
+	\begin{teorema}
+		Um subconjunto n\~ao vazio $W$ \pause de um $\cp{K}$-espa\c{c}o vetorial $V$ \pause \'e um subespa\c{c}o de $V$ \pause se, e somente se:
+		\begin{enumerate}[label={\roman*})]
+			\item para todos vetores $u_1$, $u_2 \in W$ \pause temos $u_1 + u_2 \in W$.\pause
+			\item para todo escalar $\lambda \in \cp{K}$ \pause e todo vetor $u \in W$, \pause temos $\lambda u\in W$.
+		\end{enumerate}
+	\end{teorema}
+\end{frame}
 \end{document}
+
+
+
+
+
