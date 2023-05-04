@@ -1,12 +1,12 @@
 %!TEX program = xelatex
 %!TEX root = IAL.tex
 
-\chapter{Espa\c{c}os Vetoriais}
+\chapter{Espaços Vetoriais}
 
 Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 
 \begin{definicao}
-	Um conjunto	n\~ao vazio $V$ \'e um \textbf{espa\c{c}o vetorial}\index{Espa\c{c}o Vetorial} sobre um corpo $\cp{K}$ se em seus elementos, 
+	Um conjunto	n\~ao vazio $V$ \'e um \textbf{espa\c{c}o vetorial}\index{Espaço Vetorial} sobre um corpo $\cp{K}$ se em seus elementos, 
 	chamados \textbf{vetores}\index{Espaço Vetorial!vetores}, estiverem definidas duas opera\c{c}\~oes satisfazendo:
 	\begin{itemize}
 		\item[A)] A cada par $u$, $w \in V$ corresponde um vetor $u + w \in V$, chamado \textbf{soma} de $u$ e $w$, de modo que:
@@ -108,7 +108,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 		\[
 			w = \alpha_1 u_1 + \alpha_2u_2 + \cdots + \alpha_nu_n = \sum_{i = 1}^n \alpha_iu_i.
 		\]
-		\item Seja $\mathcal{B}$ um subconjunto de $V$. Dizemos que $\mathcal{B}$ \'e um \textbf{conjunto gerador}\index{Espa\c{c}o Vetorial!conjunto gerador} (ou que $\mathcal{B}$ gera $V$) se todo elemento de $V$ for uma combina\c{c}\~ao linear de uma quantidade finita de elementos de $\mathcal{B}$.
+		\item Seja $\mathcal{B}$ um subconjunto de $V$. Dizemos que $\mathcal{B}$ \'e um \textbf{conjunto gerador}\index{Espaço Vetorial!conjunto gerador} (ou que $\mathcal{B}$ gera $V$) se todo elemento de $V$ for uma combina\c{c}\~ao linear de uma quantidade finita de elementos de $\mathcal{B}$.
 	\end{enumerate}
 \end{definicao}
 
@@ -207,13 +207,13 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \begin{definicao}
 	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial e $\mathcal{B}$ um subconjunto de $V$.
 	\begin{enumerate}[label={\roman*})]
-		\item Dizemos que $\mathcal{B}$ \'e \textbf{linearmente independente}\index{Espa\c{c}o Vetorial!conjunto L.I.} ou simplesmente \textbf{L.I.}, se o \'unico meio de escrevermos
+		\item Dizemos que $\mathcal{B}$ \'e \textbf{linearmente independente}\index{Espaço Vetorial!conjunto L.I.} ou simplesmente \textbf{L.I.}, se o \'unico meio de escrevermos
 		\[
 			0_V = \alpha_1 u_1 + \alpha_2 u_2 + \cdots + \alpha_n u_n
 		\]
 		onde $u_i \in \mathcal{B}$ e $\alpha_i \in \cp{K}$ com $i = 1$, 2, \dots, n \'e tomando $\alpha_1 = \alpha_2 = \cdots = \alpha_n = 0_\cp{K}$.
 
-		\item Dizemos que o conjunto $\mathcal{B}$ \'e \textbf{linearemente dependente}\index{Espa\c{c}o Vetorial!conjunto L.D.} ou simplesmente
+		\item Dizemos que o conjunto $\mathcal{B}$ \'e \textbf{linearemente dependente}\index{Espaço Vetorial!conjunto L.D.} ou simplesmente
 		\textbf{L.D.}, se existem vetores distintos $u_1$, $u_2$, \dots, $u_n \in \mathcal{B}$ e escalares $\alpha_1$, $\alpha_2$, \dots, $\alpha_n$ n\~ao todos nulos, tais que
 		\[
 			\alpha_1 u_1 + \alpha_2 u_2 + \cdots + \alpha_n u_n = 0_V.
@@ -252,7 +252,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \end{propriedades}
 
 \begin{definicao}
-	Seja $V$ um espa\c{c}o vetorial sobre o corpo $\cp{K}$. Dizemos que um subconjunto $\mathcal{B}$ de $V$ \'e uma \textbf{base}\index{Espa\c{c}o Vetorial!base} de $V$ se:
+	Seja $V$ um espa\c{c}o vetorial sobre o corpo $\cp{K}$. Dizemos que um subconjunto $\mathcal{B}$ de $V$ \'e uma \textbf{base}\index{Espaço Vetorial!base} de $V$ se:
 	\begin{enumerate}[label={\roman*})]
 		\item $\mathcal{B}$ for um conjunto gerador de $V$;
 		\item $\mathcal{B}$ for L.I.
@@ -281,7 +281,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \end{observacao}
 
 \begin{definicao}
-	Dizemos que um espa\c{c}o vetorial $V$ sobre um corpo $\cp{K}$ \'e \textbf{finitamente gerado}\index{Espa\c{c}o Vetorial!finitamente gerado} se ele possui um conjunto gerador finito.
+	Dizemos que um espa\c{c}o vetorial $V$ sobre um corpo $\cp{K}$ \'e \textbf{finitamente gerado}\index{Espaço Vetorial!finitamente gerado} se ele possui um conjunto gerador finito.
 \end{definicao}
 
 \begin{proposicao}\label{conjuntoLI}
@@ -336,7 +336,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \end{prova}
 
 \begin{definicao}
-	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. Se $V$ admite uma base finita, ent\~ao chamamos de \textbf{dimens\~ao}\index{Espa\c{c}o Vetorial!dimens\~ao} de $V$, e denotamos por $\dim_\cp{K} V$, o n\'umero de elementos em tal base.
+	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. Se $V$ admite uma base finita, ent\~ao chamamos de \textbf{dimens\~ao}\index{Espaço Vetorial!dimens\~ao} de $V$, e denotamos por $\dim_\cp{K} V$, o n\'umero de elementos em tal base.
 \end{definicao}
 
 \begin{exemplo}
