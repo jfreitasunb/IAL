@@ -301,15 +301,11 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \end{exemplo}
 
 \begin{definicao}
-	Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$.
-	\begin{enumerate}[label={\roman*})]
-		\item Um vetor $w \in V$ \'e uma \textbf{combina\c{c}\~ao linear}\index{Espaço Vetorial!combina\c{c}\~ao linear} dos vetores $u_1$, $u_2$, \dots, $u_n \in V$ se existirem escalares
-		      $\alpha_1$, $\alpha_2$, \dots, $\alpha_n \in \cp{K}$ tais que
-		      \[
-			      w = \alpha_1 u_1 + \alpha_2u_2 + \cdots + \alpha_nu_n = \sum_{i = 1}^n \alpha_iu_i.
-		      \]
-		\item Seja $\mathcal{B}$ um subconjunto de $V$. Dizemos que $\mathcal{B}$ \'e um \textbf{conjunto gerador}\index{Espaço Vetorial!conjunto gerador} (ou que $\mathcal{B}$ gera $V$) se todo elemento de $V$ for uma combina\c{c}\~ao linear de uma quantidade finita de elementos de $\mathcal{B}$.
-	\end{enumerate}
+	Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$. Um vetor $w \in V$ \'e uma \textbf{combina\c{c}\~ao linear}\index{Espaço Vetorial!combina\c{c}\~ao linear} dos vetores $u_1$, $u_2$, \dots, $u_n \in V$ se existirem escalares
+	$\alpha_1$, $\alpha_2$, \dots, $\alpha_n \in \cp{K}$ tais que
+	\[
+		w = \alpha_1 u_1 + \alpha_2u_2 + \cdots + \alpha_nu_n = \sum_{i = 1}^n \alpha_iu_i.
+	\]
 \end{definicao}
 
 \begin{exemplo}
@@ -360,34 +356,37 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 		      \[
 			      (a, b, c) = a(1, 0, 0) + b(0, 1, 0) + c(0, 0, 1).
 		      \]
-		      Assim qualquer vetor de $\real^3$ \'e uma combina\c{c}\~ao linear dos vetores $(1, 0 , 0)$, $(0, 1 , 0)$ e $(0, 0 , 1)$. Logo o conjunto $\mathcal{B} = \{(1, 0 , 0), (0, 1 , 0), (0, 0 , 1)\}$ \'e um conjunto gerador para $\real^3$.
-		\item $\mathcal{B}_1 = \{(1, 0 , 1), (1, 1 , 0), (1, 1 , 1), (-1, 0, 0), (-1, -1, 0), (-1, -1, -1)\}$ tamb\'em \'e um conjunto gerador para $\real^3$ como $\real$-espa\c{c}o vetorial. De fato, dado $(a, b, c) \in \real^3$, queremos encontrar $x_1$, $x_2$, $x_3$, $x_4$, $x_5$, $x_6 \in \real$ tais que
-		      \[
-			      (a, b, c) = x_1(1, 0 , 1) + x_2(1, 1 , 0) + x_3(1, 1 , 1) + x_4(-1, 0, 0) + x_5(-1, -1, 0) + x_6(-1, -1, -1).
-		      \]
-		      O que fornece o sistema
-		      \[
-			      \begin{cases}
-				      x_1 + x_2 + x_3 - x_4 - x_5 - x_6 = a \\
-				      x_2 + x_3 - x_5 - x_6 = b             \\
-				      x_1 + x_3 - x_6 = c
-			      \end{cases}
-		      \]
-		      cuja matriz escalonada reduzida por linhas \'e
-		      \[
-			      \begin{bmatrix}
-				      1 & 0 & 0 & -1           & \phantom{-}0 & \phantom{-}0 & a - b     \\
-				      0 & 1 & 0 & -1           & -1           & \phantom{-}0 & a - c     \\
-				      0 & 0 & 1 & \phantom{-}1 & \phantom{-}0 & -1           & b + c - a
-			      \end{bmatrix},
-		      \]
-		      assim o sistema \'e poss{\'\i}vel e indeterminado, com posto 3 e nulidade 3. Sua solu\c{c}\~ao \'e descrita pela equa\c{c}\~oes
-		      \begin{align*}
-			      x_1 & = a - b + x_4           \\
-			      x_2 & = a - c + x_4 + x_5     \\
-			      x_3 & = b + c - a - x_4 + x_6
-		      \end{align*}
-		      onde $x_4$, $x_5$ e $x_6 \in \real$. Portanto $\mathcal{B}_1$ \'e um conjunto gerador para $\real^3$.
+		      Assim qualquer vetor de $\real^3$ \'e uma combina\c{c}\~ao linear dos vetores $(1, 0 , 0)$, $(0, 1 , 0)$ e $(0, 0 , 1)$.
+		\item Qualquer vetor de $\real^3$ pode ser escrito como uma combinação linear dos vetores no conjunto: $\mathcal{B} = \{(1, 0 , 1), (1, 1 , 0), (1, 1 , 1), (-1, 0, 0), (-1, -1, 0), (-1, -1, -1)\}$.
+		      \begin{solucao}
+			      De fato, dado $(a, b, c) \in \real^3$, queremos encontrar $x_1$, $x_2$, $x_3$, $x_4$, $x_5$, $x_6 \in \real$ tais que
+			      \[
+				      (a, b, c) = x_1(1, 0 , 1) + x_2(1, 1 , 0) + x_3(1, 1 , 1) + x_4(-1, 0, 0) + x_5(-1, -1, 0) + x_6(-1, -1, -1).
+			      \]
+			      O que fornece o sistema
+			      \[
+				      \begin{cases}
+					      x_1 + x_2 + x_3 - x_4 - x_5 - x_6 = a \\
+					      x_2 + x_3 - x_5 - x_6 = b             \\
+					      x_1 + x_3 - x_6 = c
+				      \end{cases}
+			      \]
+			      cuja matriz escalonada reduzida por linhas \'e
+			      \[
+				      \begin{bmatrix}
+					      1 & 0 & 0 & -1           & \phantom{-}0 & \phantom{-}0 & a - b     \\
+					      0 & 1 & 0 & -1           & -1           & \phantom{-}0 & a - c     \\
+					      0 & 0 & 1 & \phantom{-}1 & \phantom{-}0 & -1           & b + c - a
+				      \end{bmatrix},
+			      \]
+			      assim o sistema \'e poss{\'\i}vel e indeterminado, com posto 3 e nulidade 3. Sua solu\c{c}\~ao \'e descrita pela equa\c{c}\~oes
+			      \begin{align*}
+				      x_1 & = a - b + x_4           \\
+				      x_2 & = a - c + x_4 + x_5     \\
+				      x_3 & = b + c - a - x_4 + x_6
+			      \end{align*}
+			      onde $x_4$, $x_5$ e $x_6 \in \real$. Portanto $\mathcal{B}_1$ \'e um conjunto gerador para $\real^3$.
+		      \end{solucao}
 		\item Seja $\mathcal{P}(\real)$ o conjunto dos polin\^omios em $\real$. O subconjunto $\mathcal{B} = \{1, x, x^2, \dots, x^n, \dots\}$ \'e um conjunto gerador de $\mathcal{P}(\real)$ visto como um $\real$-espa\c{c}o vetorial.
 		\item O conjunto $\mathcal{B} = \{(1, 0), (0, 1)\}$ gera $\complex^2$ como $\complex$-espa\c{c}o vetorial. No entanto, este conjunto n\~ao gera $\complex^2$ como $\real$-espa\c{c}o vetorial pois, por exemplo, $(i, 0)$ n\~ao \'e combina\c{c}\~ao linear dos vetores em $\mathcal{B}$. De fato, se $\alpha$ e $\beta$ s\~ao tais que
 		      \[
@@ -898,6 +897,9 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 	\end{enumerate}
 \end{exemplo}
 % section subespacos (end)
+
+
+
 
 
 
