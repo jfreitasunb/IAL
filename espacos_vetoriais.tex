@@ -45,6 +45,45 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 				\item $\alpha (a_1, a_2, a_3) = (\alpha a_1, \alpha a_2, \alpha a_3)$ para todo $\alpha \in \real$ e todo $(a_1, a_2, a_3) \in \real^3$.
 				Com estas opera\c{c}\~oes $\real^3$ \'e um espa\c{c}o vetorial sobre $\real$.
 			\end{itemize}
+			\begin{solucao}
+				De fato,
+				\begin{enumerate}
+					\item[A1)] $(a_1, a_2, a_3) + (b_1, b_2, b_3) = (a_1 + b_1, a_2 + b_2, a_3 + b_3) = (b_1 + a_1, b_2 + a_2, b_3 + a_3) = (b_1, b_2, b_3) + (a_1, a_2, a_3)$, para todos $(a_1, a_2, a_3)$, $(b_1, b_2, b_3) \in \real^3$.
+
+					\item[A2)] $[(a_1, a_2, a_3) + (b_1, b_2, b_3)] + (c_1, c_2, c_3) = (a_1 + b_1, a_2 + b_2, a_3 + b_3) + (c_1, c_2, c_3) = ((a_1 + b_1) + c_1, (a_2 + b_2) + c_2, (a_3 + b_3) + c_3) = (a_1 + (b_1 + c_1), a_2 + (b_2 + c_2), a_3 + (b_3 + c_3)) = (a_1, a_2, a_3) + (b_1 + c_1, b_2 + c_2, b_3 + c_3) = (a_1, a_2, a_3) + [(b_1, b_2, b_3) + (c_1, c_2, c_3)]$, para todos $(a_1, a_2, a_3)$, $(b_1, b_2, b_3)$, $(c_1, c_2, c_3) \in \real^3$.
+					
+					\item[A3)] Tome $0_V = (0, 0, 0)$. Ent\~ao para todo $(a_1, a_2, a_3) \in \real^3$ temos
+					\[
+						(a_1, a_2, a_3) + 0_V = (a_1, a_2, a_3) + (0, 0, 0) = (a_1 + 0, a_2 + 0, a_3 + 0) = (a_1, a_2, a_3).
+					\]
+					Logo $0_V = (0, 0, 0)$ \'e o vetor nulo de $\real^3$.
+				
+					\item[A4)] Dado $u = (a_1, a_2, a_3) \in \real^3$, tome $-u = (-a_1, -a_2, -a_3) \in \real^3$. Assim
+					\[
+						u + (-u) = (a_1, a_2, a_3) + (-a_1, -a_2, -a_3) = (a_1 - a_1, a_2 - a_2, a_3 - a_3) = (0, 0, 0) = 0_V.
+					\]
+					Logo $-u = (-a_1, -a_2, -a-3)$ é o vetor oposto de $u = (a_1, a_2, a_3)$ em $\real^3$.
+
+					\item[M1)] Dados $\alpha$, $\beta \in \real$ e $u = (a_1, a_2, a_3) \in \real^3$ temos:
+						\begin{align*}
+							(\alpha\beta)\cdot u &= (\alpha \beta)\cdot (a_1, a_2, a_3) = ((\alpha\beta)a_1, (\alpha\beta)a_2, (\alpha\beta)a_3) \\ &= (\alpha(\beta a_1), \alpha(\beta a_2), \alpha(\beta a_3)) = \alpha\cdot(\beta a_1, \beta a_2, \beta a_3)\\ & = \alpha\cdot(\beta\cdot(a_1, a_2, a_3)) = \alpha\cdot(\beta\cdot u)
+						\end{align*}
+
+					\item[M2)] $1_\real \cdot (a_1, a_2, a_3) = 1 \cdot (a_1, a_2, a_3) = (1\cdot a_1, 1\cdot a_2, 1\cdot a_3) = (a_1, a_2, a_3)$ para todo $(a_1, a_2, a_3) \in \real^3$.
+					
+					\item[D1)] Dados $\alpha \in \real$ e $u = (a_1, a_2, a_3)$, $w = (b_1, b_2, b_3) \in \real^3$ temos:
+						\begin{align*}
+							\alpha\cdot(u + w) &= \alpha\cdot[(a_1, a_2, a_3) + (b_1, b_2, b_3)] = \alpha\cdot(a_1 + b_1, a_2 + b_2, a_3 + b_3) \\ &= (\alpha(a_1 + b_2), \alpha(a_2 + b_2), \alpha(a_3 + b_3))\\ &= (\alpha a_1 + \alpha b_1, \alpha a_2 + \alpha b_2, \alpha a_3 + \alpha b_3) \\ &= (\alpha a_1, \alpha a_2, \alpha a_3) + (\alpha b_1, \alpha b_2, \alpha b_3)\\ &= \alpha\cdot(a_1, a_2, a_3) + \alpha\cdot(b_1, b_2, b_3) \\ &= \alpha\cdot u + \alpha\cdot w
+						\end{align*}
+
+					\item[D2)] Sejam $\alpha$, $\beta \in \real$ e $u = (a_1, a_2, a_3) \in \real^3$. Temos
+						\begin{align*}
+							(\alpha + \beta)\cdot u &= (\alpha + \beta)\cdot(u_1, u_2, u_ 3) = ((\alpha + \beta)a_1, (\alpha + \beta)a_2, (\alpha + \beta)a_3) \\ &= (\alpha a_1 + \beta a_1, \alpha a_2 + \beta a_2, \alpha a_3 + \beta a_3) \\ &= (\alpha a_1, \alpha a_2, \alpha a_3) + (\beta a_1, \beta a_2, \beta a_3) \\ &= \alpha\cdot(a_1, a_2, a_3) + \beta\cdot(a_1, a_2, a_3) \\ &= \alpha\cdot u + \beta\cdot u
+						\end{align*}
+			\end{enumerate}
+			Portanto $V = \real^3$ \'e um $\real$-espa\c{c}o vetorial.
+		\end{solucao}
+
 		\item $\complex^n$ \'e um espa\c{c}o vetorial sobre $\real$ se definirmos:
 		\begin{itemize}
 			\item $(a_1, a_2, \dots, a_n) + (b_1, b_2, \dots,b_n) = (a_1 + b_1, a_2 + b_2,\dots, a_n + b_n)$ para todos $(a_1, a_2, \dots,a_n)$ ,$(b_1, b_2, \dots,b_n) \in \complex^n$;
@@ -73,7 +112,6 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 				\item $\real^n$ \'e um espa\c{c}o vetorial sobre $\real$;
 				\item $\complex^n$ \'e um espa\c{c}o vetorial sobre $\complex$;
 			\end{itemize}
-
 		\end{itemize}
 		\item $\complex^n$ \'e um espa\c{c}o vetorial sobre $\real$ se definirmos:
 		\begin{itemize}
@@ -92,7 +130,6 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 		\end{itemize}
 		Assim $\mathcal{P}(\cp{K})$ \'e um $\cp{K}$-espa\c{c}o vetorial.
 		\item O conjunto das matrizes $\cp{M}_{p \times q}(\cp{K})$ com coeficientes em $\cp{K}$ \'e um $\cp{K}$-espa\c{c}o vetorial com a soma usual de matrizes e a multiplica\c{c}\~ao por escalar usual.
-
 
 		\item Seja $V = \{x \in \real \mid x > 0\} = \real_+^*$. Defina em $V$ as seguintes opera\c{c}\~oes:
 		\begin{align*}
