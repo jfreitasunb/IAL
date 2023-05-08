@@ -25,8 +25,40 @@
     \item $\complex^n$ \'e um espa\c{c}o vetorial sobre $\real$ se definirmos:
     \begin{itemize}
       \item $(a_1, a_2, \dots, a_n) \oplus (b_1, b_2, \dots,b_n) = (a_1 + b_1, a_2 + b_2,\dots, a_n + b_n)$ para todos $(a_1, a_2, \dots,a_n)$ ,$(b_1, b_2, \dots,b_n) \in \complex^n$;
+
       \item $\alpha \otimes (a_1, a_2, \dots,a_n) = (\alpha a_1, \alpha a_2, \dots, \alpha a_n)$ para todo $\alpha \in \real$ e todo $(a_1, a_2, \dots, a_n) \in \complex^n$.
     \end{itemize}
+
+    \item\label{itemb} Defina
+    \[
+      \mathcal{P}_5(\real) = \{ p(x) = a_5x^5 + a_4x^4 + a_3x^3 + a_2x^2 + a_1x + a_0 \mid a_i \in \real, 0 \le i \le 5 \}.
+    \]
+     Dados $p(x) = a_5x^5 + a_4x^4 + a_3x^3 + a_2x^2 + a_1x + a_0$ e $q(x) = b_5x^5 + b_4x^4 + b_3x^3 + b_2x^2 + b_1x + b_0$ em $\mathcal{P}_5(\real)$, defina:
+    \begin{itemize}
+      \item $p(x) \oplus q(x) =  (a_5 + b_n)x^n + (a_4 + b_4)x^4 + (a_3 + b_ 3)x^3 + (a_2 + b_2)x^2 + (a_1 + b_1)x + (a_0 + b_0)$
+      \item $\alpha\otimes p(x) = \alpha a_5x^5 + \alpha a_4x^4 + \alpha a_3x^3 + \alpha a_2x^2 + \alpha a_1x + \alpha a_0$.
+    \end{itemize}
+
+   Mostre que $\mathcal{P}_5(\real)$ \'e um $\real$-espa\c{c}o vetorial.
+
+    \item Defina
+    \[
+      \mathcal{P}_5(\complex) = \{ p(x) = a_5x^5 + a_4x^4 + a_3x^3 + a_2x^2 + a_1x + a_0 \mid a_i \in \complex, 0 \le i \le 5 \}.
+    \]
+    Considere as opera\c{c}\~oes de soma e produto como as definidas no item \ref{itemb}. Mostre que $\mathcal{P}_5(\complex)$ \'e um $\real$-espa\c{c}o vetorial.
+
+    \item Defina
+    \[
+      \mathcal{P}_5(\complex) = \{ p(x) = a_5x^5 + a_4x^4 + a_3x^3 + a_2x^2 + a_1x + a_0 \mid a_i \in \complex, 0 \le i \le 5 \}.
+    \]
+    Considere as opera\c{c}\~oes de soma e produto como as definidas em \ref{itemb}. Mostre que $\mathcal{P}_5(\complex)$ \'e um $\complex$-espa\c{c}o vetorial.
+
+    \item Para cada $m \ge 0$ defina
+    \[
+      \mathcal{P}_m(\cp{K}) = \{ p(x) = a_nx^n + a_{n - 1}x^{n - 1} + \cdots + a_1x + a_0 \mid a_i \in \cp{K}, 0 \le n \le m \}.
+    \]
+    Considere as opera\c{c}\~oes de soma e produto com as definidas em \ref{itemb}. Mostre que $\mathcal{P}_m(\cp{K})$ é um $\cp{K}$-espaço vetorial.
+    
     \item Considere o conjunto dos polin\^omios
     \[
       \mathcal{P}(\cp{K}) = \{ p(x) = a_nx^n + a_{n - 1}x^{n - 1} + \cdots + a_1x + a_0 \mid a_i \in \cp{K}, i = 1, 2, \dots, n; n \ge 0 \}.
@@ -36,30 +68,6 @@
       \item $p(x) \oplus q(x) = b_mx^m + b_{m - 1}x^{m - 1} + \cdots + b_{n + 1}x^{n + 1} + (a_n + b_n)x^n + (a_1 + b_1)x + (a_0 + b_0)$
       \item $\alpha\otimes p(x) = \alpha a_nx^n + \alpha a_{n - 1}x^{n - 1} + \cdots + \alpha a_1x + \alpha a_0$.
     \end{itemize}
-
-    \item Defina
-    \[
-      \mathcal{P}_5(\real) = \{ p(x) = a_5x^5 + a_4x^4 + a_3x^3 + a_2x^2 + a_1x + a_0 \mid a_i \in \real, 0 \le i \le 5 \}.
-    \]
-    Considere as opera\c{c}\~oes de soma e produto definidas em $\mathcal{P}(\cp{K})$ e mostre que $\mathcal{P}_5(\real)$ \'e um $\real$-espa\c{c}o vetorial.
-
-    \item Defina
-    \[
-      \mathcal{P}_5(\complex) = \{ p(x) = a_5x^5 + a_4x^4 + a_3x^3 + a_2x^2 + a_1x + a_0 \mid a_i \in \complex, 0 \le i \le 5 \}.
-    \]
-    Considere as opera\c{c}\~oes de soma e produto definidas em $\mathcal{P}(\cp{K})$ e mostre que $\mathcal{P}_5(\complex)$ \'e um $\real$-espa\c{c}o vetorial.
-
-    \item Defina
-    \[
-      \mathcal{P}_5(\complex) = \{ p(x) = a_5x^5 + a_4x^4 + a_3x^3 + a_2x^2 + a_1x + a_0 \mid a_i \in \complex, 0 \le i \le 5 \}.
-    \]
-    Considere as opera\c{c}\~oes de soma e produto definidas em $\mathcal{P}(\cp{K})$ e mostre que $\mathcal{P}_5(\complex)$ \'e um $\complex$-espa\c{c}o vetorial.
-
-    \item Para cada $m \ge 0$ defina
-    \[
-      \mathcal{P}_m(\cp{K}) = \{ p(x) = a_nx^n + a_{n - 1}x^{n - 1} + \cdots + a_1x + a_0 \mid a_i \in \cp{K}, 0 \le n \le m \}.
-    \]
-    Considere as opera\c{c}\~oes de soma e produto definidas em $\mathcal{P}(\cp{K})$.
 
     \item O conjunto das matrizes $\cp{M}_{p \times q}(\cp{K})$ com coeficientes em $\cp{K}$ \'e um $\cp{K}$-espa\c{c}o vetorial com a soma usual de matrizes e a multiplica\c{c}\~ao por escalar usual.
 
