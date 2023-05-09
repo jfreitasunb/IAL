@@ -432,37 +432,39 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 	\end{enumerate}
 \end{exemplo}
 
-%\begin{definicao}
-%	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. Um subconjunto n\~ao vazio $W$ de $V$ \'e um \textbf{subespa\c{c}o vetorial} de $V$ se a restri\c{c}\~ao das opera\c{c}o\~es de $V$ a $W$ torna $W$ um $\cp{K}$-espa\c{c}o vetorial.\index{Subespa\c{c}o}
-%\end{definicao}
-%
-%\begin{exemplo}
-%	\begin{enumerate}[label={\arabic*})]
-%		\item O subconjunto $W = \{0_V\}$ \'e um subespa\c{c}o vetorial de qualquer espa\c{c}o vetorial $V$. O pr\'oprio $V$ como subconjunto de $V$ \'e tamb\'em um subespa\c{c}o vetorial. Estes dois subespa\c{c}os s\~ao chamados de \textbf{subespa\c{c}os triviais}.
-%		\item Seja $V$ um $\cp{K}$-espa\c{c}o vetorial e $w \in V$. Ent\~ao o conjunto $\cp{K}w = \{\alpha w \mid \alpha \in \cp{K}\}$ \'e um subespa\c{c}o vetorial de $V$.
-%	\end{enumerate}
-%\end{exemplo}
-%
-%\begin{teorema}
-%	Um subconjunto n\~ao vazio $W$ de um $\cp{K}$-espa\c{c}o vetorial $V$ \'e um subespa\c{c}o de $V$ se, e somente se, para cada par de vetores $u_1$, $u_2 \in W$ e cada escalar $\lambda \in \cp{K}$, temos que $\lambda u_1 + u_2 \in W$.
-%\end{teorema}
-%\begin{prova}
-%	Exerc{\'\i}cio!
-%\end{prova}
-%
-%\begin{exemplo}
-%	\begin{enumerate}[label={\arabic*})]
-%		\item $V = \real^5$; $W = \{(0,x_2,x_3,x_4,x_5) \mid x_i \in \real\}$ \'e um subespa\c{c}o de $V$.
-%		\item $V = M_n(\cp{K})$; $UT_n(\cp{K}) = \left\{\begin{bmatrix}
-%				      a_{11}   & a_{12}   & \cdots & a_{1n} \\
-%				      0_\cp{K} & a_{22}   & \cdots & a_{2n} \\
-%				      \vdots                                \\
-%				      0_\cp{K} & 0_\cp{K} & \cdots & a_{nn}
-%			      \end{bmatrix} \mid a_{ij} \in \cp{K}\right\}$ \'e um subespa\c{c}o de $V$.
-%		\item $V = \real^2$; $W = \{(x,x^2) \mid x \in \real\}$ n\~ao \'e subespa\c{c}o. Por exemplo, $u = (1,1)$, $v = (2,4) \in W$ e no entanto $u + v \notin W$.
-%	\end{enumerate}
-%\end{exemplo}
-%
+\begin{definicao}
+	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. Um subconjunto n\~ao vazio $W$ de $V$ \'e um \textbf{subespa\c{c}o vetorial}\index{Espaço Vetorial!subespaço} de $V$ se $W$ é um espaço vetorial
+	sobre $\cp{K}$ com respeito às mesmas operações definidas em $V$.
+\end{definicao}
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item O subconjunto $W = \{0_V\}$ \'e um subespa\c{c}o vetorial de qualquer espa\c{c}o vetorial $V$. O pr\'oprio $V$ como subconjunto de $V$ \'e tamb\'em um subespa\c{c}o vetorial. Estes dois subespa\c{c}os s\~ao chamados de \textbf{subespa\c{c}os triviais}.
+		\item Seja $V$ um $\cp{K}$-espa\c{c}o vetorial e $w \in V$. Ent\~ao o conjunto $\cp{K}w = \{\alpha w \mid \alpha \in \cp{K}\}$ \'e um subespa\c{c}o vetorial de $V$.
+	\end{enumerate}
+\end{exemplo}
+
+\begin{teorema}
+	Um subconjunto n\~ao vazio $W$ de um $\cp{K}$-espa\c{c}o vetorial $V$ \'e um subespa\c{c}o de $V$ se, e somente se:
+	\begin{enumerate}[label={\roman*})]
+		\item para todos vetores $u_1$, $u_2 \in W$ temos $u_1 + u_2 \in W$.
+		\item para todo escalar $\lambda \in \cp{K}$ e todo vetor $u \in W$, temos $\lambda u\in W$.
+	\end{enumerate}
+\end{teorema}
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item $V = \real^5$; $W = \{(0,x_2,x_3,x_4,x_5) \mid x_i \in \real\}$ \'e um subespa\c{c}o de $V$.
+		\item $V = M_n(\cp{K})$; $UT_n(\cp{K}) = \left\{\begin{bmatrix}
+				      a_{11}   & a_{12}   & \cdots & a_{1n} \\
+				      0_\cp{K} & a_{22}   & \cdots & a_{2n} \\
+				      \vdots                                \\
+				      0_\cp{K} & 0_\cp{K} & \cdots & a_{nn}
+			      \end{bmatrix} \mid a_{ij} \in \cp{K}\right\}$ \'e um subespa\c{c}o de $V$.
+		\item $V = \real^2$; $W = \{(x,x^2) \mid x \in \real\}$ n\~ao \'e subespa\c{c}o. Por exemplo, $u = (1,1)$, $v = (2,4) \in W$ e no entanto $u + v \notin W$.
+	\end{enumerate}
+\end{exemplo}
+
 %\begin{proposicao}
 %	Se $W_1$ e $W_1$ s\~ao subespa\c{c}os de um $\cp{K}$-espa\c{c}o vetorial $V$ ent\~ao
 %	\begin{enumerate}[label={\roman*})]
