@@ -513,7 +513,27 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 			\end{align*}
 			e como $u_1$ é solução do sistema linear homogêneo \eqref{exemplosistemahomogeneosubespaco} então $\lambda u_1$ é um solução desse sistema, isto é, $\lambda u_1 \in S$. Portanto, pelo Teorema \ref{teoremasubespaco} $S$ é um subespaço vetorial de $\real^3$.
 		\end{solucao}
-		\item $V = \real^5$; $W = \{(0,x_2,x_3,x_4,x_5) \mid x_i \in \real\}$ \'e um subespa\c{c}o de $V$.
+	\item Considere $V = \real^5$ um espaço vetorial sobre $\real$. Tome o subconnjunto $W = \{(0,x_2,x_3,x_4,x_5) \in \real^5 \mid x_i \in \real, 1 \le i \le 5\}$. Então $W$ \'e um subespa\c{c}o de $V$.
+		\begin{solucao}
+			Como $x_2$, $x_3$, $x_4$ e $x_5$ são números reais quaisquer podemos tomar $x_2 = x_3 = x_4 = x_ 5 = 0$. Assim $(0, 0, 0, 0, 0) \in W$ e com isso $W \ne \emptyset$. Agora sejam $w_1$, $w_2 \in W$. Com isso
+			\begin{align*}
+				w_1 &= (0,x_2, x_3, x_4, x_5)\\
+				w_2 &= (0,y_2, y_3, y_4, y_5)
+			\end{align*}
+			onde $x_i$, $y_i \in \real$ para $1 \le i \le 5$. Assim
+			\[
+				w_1 + w_2 = (0,x_2, x_3, x_4, x_5) + (0,y_2, y_3, y_4, y_5) = (0, x_2 + y_2, x_3 + y_3, x_4 + y_4, x_5 + y_5)
+			\]
+			e então $w_1 + w_2 \in W$.
+
+			Agora tome $\lambda \in \real$ e $w = (0, x_2, x_3, x_4, x_5) \in W$. Então
+			\[
+				\lambda w = \lambda(0, x_2, x_3, x_4, x_5) = (0, \lambda x_2, \lambda x_3, \lambda x_4, \lambda x_5)
+			\]
+			e então $\lambda w \in W$. 
+
+			Portanto, pelo Teorema \ref{teoremasubespaco}, $W$ é um subespaço vetorial de $\real^5$.
+		\end{solucao}
 		\item $V = M_n(\cp{K})$; $UT_n(\cp{K}) = \left\{\begin{bmatrix}
 				      a_{11}   & a_{12}   & \cdots & a_{1n} \\
 				      0_\cp{K} & a_{22}   & \cdots & a_{2n} \\
