@@ -390,6 +390,48 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 			      \end{align*}
 			      onde $x_4$, $x_5$ e $x_6 \in \real$. Portanto qualquer vetor de $\real^3$ pode ser escrito como uma combinação linear dos elementos do conjunto $\mathcal{B}$.
 		      \end{solucao}
+
+		    \item O vetor
+		    	\[
+		    		w = \begin{bmatrix}
+		    			1 & 0\\
+		    			0 & 1
+		    		\end{bmatrix}
+		    	\]
+		    	é uma combinação linear dos vetores
+		    	\[
+		    		u_1 = \begin{bmatrix}3 & 6\\3 & -6\end{bmatrix},
+		    		u_2 = \begin{bmatrix}0 & -1\\-1 & 0\end{bmatrix},
+		    		u_3 = \begin{bmatrix}0 & -8\\-12 & -4\end{bmatrix},
+		    		u_4 = \begin{bmatrix}1 & 0\\-1 & 2\end{bmatrix}.
+		    	\]
+		    	\begin{solucao}
+		    		De fato, precisamos encontrar escalares $\alpha_1$, $\alpha_2$, $\alpha_3$, $\alpha_4 \in \rac$ tais que
+		    		\[ w = \alpha_1 u_1 + \alpha_2 w_2 + \alpha_3 u_3 + \alpha_4 u_4.\]
+		    		Com isso obtemos o sistema linear
+		    		\[
+		    			\begin{cases}
+		    				3\alpha_1 + \alpha_4 = 1\\
+		    				6\alpha_1 - \alpha_2 - 8\alpha_3 = 0\\
+		    				3\alpha_1 - \alpha_2 - 12 \alpha_3 - \alpha_4 = 0\\
+		    				-6\alpha_1 - 4\alpha_3 + 2\alpha_4 = 1
+		    			\end{cases}
+		    		\]
+		    		cuja matriz escalonada reduzida por linhas é
+		    		\[
+		    			\begin{amatrix}{4}
+		    				1 & 0 & 0 & 1/3 & 1/3\\
+		    				0 & 1 & 8 & 2 & 2\\
+		    				0 & 0 & 1 & 0 & -1/4\\
+		    				0 & 0 & 0 & 1 & 1/2
+		    			\end{amatrix}.
+		    		\]
+		    		Assim
+		    		\[\alpha_1 = 1/6, \alpha_2 = 3, \alpha_3 = -1/4, \alpha_4 = 1/2.\]
+
+
+
+		    	\end{solucao}
 	\end{enumerate}
 \end{exemplo}
 
