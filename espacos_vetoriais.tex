@@ -444,7 +444,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 	\end{enumerate}
 \end{exemplo}
 
-\begin{teorema}
+\begin{teorema}\label{teoremasubespaco}
 	Um subconjunto n\~ao vazio $W$ de um $\cp{K}$-espa\c{c}o vetorial $V$ \'e um subespa\c{c}o de $V$ se, e somente se:
 	\begin{enumerate}[label={\roman*})]
 		\item para todos vetores $u_1$, $u_2 \in W$ temos $u_1 + u_2 \in W$.
@@ -452,8 +452,67 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 	\end{enumerate}
 \end{teorema}
 
-\begin{exemplo}
+\begin{exemplos}
 	\begin{enumerate}[label={\arabic*})]
+		\item Considere o seguinte sistema linear homogêneo:
+			\begin{align}\label{exemplosistemahomogeneosubespaco}
+				\begin{cases}
+					2x_1 + 4x_2 + 6x_3 = 0\\
+					3x_1 - 2x_2 - 4x_3 = 0\\
+					x_1 + 2x_2 + 3x_3 = 0
+				\end{cases}
+			\end{align}
+			cuja solução é dada pelo conjunto:
+			\[
+				S = \{(t/4,13t/8,t) \mid t \in \real\}.
+			\]
+			Observer que $S \subseteq \real^3$. Agora $\real^3$ é um espaço vetorial sobre $\real$, como isso temos a seguinte pergunta: $S$ é um subespaço vetorial de $\real^3$?
+			\begin{solucao}
+				Primeiro observe que $S \ne \emptyset$ pois $(0,0,0) \in S$ e é uma solução para o sistema linear homogêneo. Assim podemos aplicar o Teorema \ref{teoremasubespaco}. Para isso sejam $u_1$, $u_2 \in S$ e $\lambda \in \real$.
+				Precisamos mostrar que $u_1 + u_2 \in S$ e que $\lambda u_1 \in S$. Mas como $u_1$, $u_2 \in S$ então
+				\[
+					u_1 = (t/4, -13t/8, t),
+					u_2 = (r/4, -13r/8,r)
+				\]
+				onde $t$, $r \in \real$. Assim
+				\[
+					u_1 + u_2 = ((t + r)/4, -13(t + r)/8, t + r)
+				\]
+				vamos substituir o valor de $u_1 + u_2$ no sistema linear para verificar se ainda é uma solução desse sistema. Com isso obtemos as equações:
+				\begin{align*}
+					2\dfrac{(t + r)}{4} + 4\dfrac{-13(t + r)}{8} + 6(t + r) &= (2\dfrac{t}{4} + 4\dfrac{-13t}{8} + 6t) + (2\dfrac{r}{4} + 4\dfrac{-13r}{8} + 6r)\\
+					3\dfrac{t + r}{4} - 2\dfrac{-13(t + r)}{8} - 4(t + r) &= (3\dfrac{t}{4} - 2\dfrac{-13t}{8} - 4t) + (3\dfrac{r}{4} - 2\dfrac{-13r}{8} - 4r)\\
+					\dfrac{t + r}{4} + 2\dfrac{-13(t + r)}{8} + 3(t + r) &= (\dfrac{t}{4} + 2\dfrac{-13t}{8} + 3t) + (\dfrac{r}{4} + 2\dfrac{-13r}{8} + 3r).
+				\end{align*}
+			Mas como $u_1$ e $u_2$ são soluções do sistema linear homogêneo \eqref{exemplosistemahomogeneosubespaco} então:
+			\[
+				\begin{cases}
+					2\dfrac{t}{4} + 4\dfrac{-13t}{8} + 6t = 0\\
+					3\dfrac{t}{4} - 2\dfrac{-13t}{8} - 4t = 0\\
+					\dfrac{t}{4} + 2\dfrac{-13t}{8} + 3t = 0
+				\end{cases}
+				\qquad e\qquad
+				\begin{cases}
+					2\dfrac{r}{4} + 4\dfrac{-13r}{8} + 6r = 0\\
+					3\dfrac{r}{4} - 2\dfrac{-13r}{8} - 4r = 0\\
+					\dfrac{r}{4} + 2\dfrac{-13r}{8} + 3r = 0
+				\end{cases}
+			\]
+			logo $u_1 + u_2$ continua sendo uma solução do sistema linear homogêneo \eqref{exemplosistemahomogeneosubespaco} e então $u_1 + u_2 \in S$.
+
+			Agora,
+			\[
+				\lambda u_1 = (\lambda t/4, -13\lambda t/4, \lambda t)
+			\]
+			e substuindo nas equações de \eqref{exemplosistemahomogeneosubespaco}
+			obtemos:
+			\begin{align*}
+				2\dfrac{\lambda t}{4} + 4\dfrac{-13\lambda t}{8} + 6\lambda t &= \lambda(2\dfrac{t}{8} + 4\dfrac{-13t}{8} + 6t)\\
+				3\dfrac{\lambda t}{4} - 2\dfrac{-13\lambda t}{8} - 4\lambda t &= \lambda(3\dfrac{t}{8} - 2\dfrac{-13t}{8} - 4t)\\
+				\dfrac{\lambda t}{4} + 2\dfrac{-13\lambda t}{8} + 3\lambda t &= \lambda(\dfrac{t}{8} + 2\dfrac{-13t}{8} + 3t)\\
+			\end{align*}
+			e como $u_1$ é solução do sistema linear homogêneo \eqref{exemplosistemahomogeneosubespaco} então $\lambda u_1$ é um solução desse sistema, isto é, $\lambda u_1 \in S$. Portanto, pelo Teorema \ref{teoremasubespaco} $S$ é um subespaço vetorial de $\real^3$.
+		\end{solucao}
 		\item $V = \real^5$; $W = \{(0,x_2,x_3,x_4,x_5) \mid x_i \in \real\}$ \'e um subespa\c{c}o de $V$.
 		\item $V = M_n(\cp{K})$; $UT_n(\cp{K}) = \left\{\begin{bmatrix}
 				      a_{11}   & a_{12}   & \cdots & a_{1n} \\
@@ -463,7 +522,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 			      \end{bmatrix} \mid a_{ij} \in \cp{K}\right\}$ \'e um subespa\c{c}o de $V$.
 		\item $V = \real^2$; $W = \{(x,x^2) \mid x \in \real\}$ n\~ao \'e subespa\c{c}o. Por exemplo, $u = (1,1)$, $v = (2,4) \in W$ e no entanto $u + v \notin W$.
 	\end{enumerate}
-\end{exemplo}
+\end{exemplos}
 
 %\begin{proposicao}
 %	Se $W_1$ e $W_1$ s\~ao subespa\c{c}os de um $\cp{K}$-espa\c{c}o vetorial $V$ ent\~ao
