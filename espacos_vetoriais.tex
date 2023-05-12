@@ -476,43 +476,17 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 				\]
 				onde $t$, $r \in \real$. Assim
 				\[
-					u_1 + u_2 = ((t + r)/4, -13(t + r)/8, t + r)
+					u_1 + u_2 = ((t + r)/4, -13(t + r)/8, t + r).
 				\]
-				vamos substituir o valor de $u_1 + u_2$ no sistema linear para verificar se ainda é uma solução desse sistema. Com isso obtemos as equações:
-				\begin{align*}
-					2\dfrac{(t + r)}{4} + 4\dfrac{-13(t + r)}{8} + 6(t + r) &= (2\dfrac{t}{4} + 4\dfrac{-13t}{8} + 6t) + (2\dfrac{r}{4} + 4\dfrac{-13r}{8} + 6r)\\
-					3\dfrac{t + r}{4} - 2\dfrac{-13(t + r)}{8} - 4(t + r) &= (3\dfrac{t}{4} - 2\dfrac{-13t}{8} - 4t) + (3\dfrac{r}{4} - 2\dfrac{-13r}{8} - 4r)\\
-					\dfrac{t + r}{4} + 2\dfrac{-13(t + r)}{8} + 3(t + r) &= (\dfrac{t}{4} + 2\dfrac{-13t}{8} + 3t) + (\dfrac{r}{4} + 2\dfrac{-13r}{8} + 3r).
-				\end{align*}
-			Mas como $u_1$ e $u_2$ são soluções do sistema linear homogêneo \eqref{exemplosistemahomogeneosubespaco} então:
-			\[
-				\begin{cases}
-					2\dfrac{t}{4} + 4\dfrac{-13t}{8} + 6t = 0\\
-					3\dfrac{t}{4} - 2\dfrac{-13t}{8} - 4t = 0\\
-					\dfrac{t}{4} + 2\dfrac{-13t}{8} + 3t = 0
-				\end{cases}
-				\qquad e\qquad
-				\begin{cases}
-					2\dfrac{r}{4} + 4\dfrac{-13r}{8} + 6r = 0\\
-					3\dfrac{r}{4} - 2\dfrac{-13r}{8} - 4r = 0\\
-					\dfrac{r}{4} + 2\dfrac{-13r}{8} + 3r = 0
-				\end{cases}
-			\]
-			logo $u_1 + u_2$ continua sendo uma solução do sistema linear homogêneo \eqref{exemplosistemahomogeneosubespaco} e então $u_1 + u_2 \in S$.
+				e com isso o vetor $u_1 + u_2$ está no formato de um elemento de $S$, logo $u_1 + u_2 \in S$.
+                Agora,
+                \[
+                    \lambda u_1 = (\lambda t/4, -13\lambda t/4, \lambda t)
+                \]
+			    e novamente o vetor $\lambda u_1$ está no formado de um elemento de $S$, logo $\lambda u_1 \in S$.
 
-			Agora,
-			\[
-				\lambda u_1 = (\lambda t/4, -13\lambda t/4, \lambda t)
-			\]
-			e substuindo nas equações de \eqref{exemplosistemahomogeneosubespaco}
-			obtemos:
-			\begin{align*}
-				2\dfrac{\lambda t}{4} + 4\dfrac{-13\lambda t}{8} + 6\lambda t &= \lambda(2\dfrac{t}{8} + 4\dfrac{-13t}{8} + 6t)\\
-				3\dfrac{\lambda t}{4} - 2\dfrac{-13\lambda t}{8} - 4\lambda t &= \lambda(3\dfrac{t}{8} - 2\dfrac{-13t}{8} - 4t)\\
-				\dfrac{\lambda t}{4} + 2\dfrac{-13\lambda t}{8} + 3\lambda t &= \lambda(\dfrac{t}{8} + 2\dfrac{-13t}{8} + 3t)\\
-			\end{align*}
-			e como $u_1$ é solução do sistema linear homogêneo \eqref{exemplosistemahomogeneosubespaco} então $\lambda u_1$ é um solução desse sistema, isto é, $\lambda u_1 \in S$. Portanto, pelo Teorema \ref{teoremasubespaco} $S$ é um subespaço vetorial de $\real^3$.
-		\end{solucao}
+                Portanto, pelo Teorema \ref{teoremasubespaco} $S$ é um subespaço vetorial de $\real^3$.
+		  \end{solucao}
 	\item Considere $V = \real^5$ um espaço vetorial sobre $\real$. Tome o subconnjunto $W = \{(0,x_2,x_3,x_4,x_5) \in \real^5 \mid x_i \in \real, 1 \le i \le 5\}$. Então $W$ \'e um subespa\c{c}o de $V$.
 		\begin{solucao}
 			Como $x_2$, $x_3$, $x_4$ e $x_5$ são números reais quaisquer podemos tomar $x_2 = x_3 = x_4 = x_ 5 = 0$. Assim $(0, 0, 0, 0, 0) \in W$ e com isso $W \ne \emptyset$. Agora sejam $w_1$, $w_2 \in W$. Com isso
@@ -530,13 +504,13 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 			\[
 				\lambda w = \lambda(0, x_2, x_3, x_4, x_5) = (0, \lambda x_2, \lambda x_3, \lambda x_4, \lambda x_5)
 			\]
-			e então $\lambda w \in W$. 
+			e então $\lambda w \in W$.
 
 			Portanto, pelo Teorema \ref{teoremasubespaco}, $W$ é um subespaço vetorial de $\real^5$.
 		\end{solucao}
 
 	\item Considere $V = M_n(\cp{K})$ um espaço vetorial sobre $\cp{K}$. Seja
-		\[ 
+		\[
 			W = UT_n(\cp{K}) = \left\{
 				\begin{bmatrix}
 				      a_{11}   & a_{12}   & \cdots & a_{1n} \\
@@ -581,7 +555,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 				\begin{align*}
 					A &= \begin{bmatrix}1 & 2\\3 & 0\end{bmatrix} \in T,\\
 					B &= \begin{bmatrix}2 & 0\\1 & 1\end{bmatrix} \in T,
-				\end{align*}	
+				\end{align*}
 				e no entanto
 				\[
 					A + B = \begin{bmatrix}1 & 2\\3 & 0\end{bmatrix} +
@@ -625,7 +599,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 	Dados dois subespaços vetoriais $W_1$ e $W_2$ de um $\cp{K}$-espaço vetorial $V$, definimos a interseção de $W_1$ e $W_2$ como o subconjunto
 	\[
 		W_1 \cap W_2 = \{u \in V \mid u\in W_1 \mbox{ e } u \in W_2\}.\
-	\]	
+	\]
 \end{definicao}
 
 \begin{teorema}
