@@ -479,6 +479,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 					u_1 + u_2 = ((t + r)/4, -13(t + r)/8, t + r).
 				\]
 				e com isso o vetor $u_1 + u_2$ está no formato de um elemento de $S$, logo $u_1 + u_2 \in S$.
+
                 Agora,
                 \[
                     \lambda u_1 = (\lambda t/4, -13\lambda t/4, \lambda t)
@@ -619,14 +620,14 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
                 -1 & 2\\-2 & 3
             \end{pmatrix},
             w = \begin{pmatrix}
-                3 & -1\\1 & 1
+                3 & -1\\1 & \phantom{-}1
             \end{pmatrix}.
         \]
         Encontre $W = Span(u, w)$.
         \begin{solucao}
             Por definição
             \begin{align*}
-                W &= Span(u, w) = \{\alpha u + \beta w \mid \alpha, \beta \in \real\} \\ &= \left\{\alpha\begin{pmatrix}-1 & 2\\-2 & 3\end{pmatrix} + \beta \begin{pmatrix}3 & -1\\1 & 1\end{pmatrix} \mid \alpha, \beta \in \real\right\} \\ &= \left\{\begin{pmatrix}-\alpha & 2\alpha\\-2\alpha & 3\alpha\end{pmatrix} + \begin{pmatrix}3\beta & -\beta\\\beta & \beta\end{pmatrix} \mid \alpha, \beta \in \real\right\} \\ &= \left\{\begin{pmatrix}-\alpha + 3\beta & 2\alpha - \beta\\-2\alpha + \beta & 3\alpha + \beta\end{pmatrix} \mid \alpha, \beta \in \real\right\}.
+                W &= Span(u, w) = \{\alpha u + \beta w \mid \alpha, \beta \in \real\} \\ &= \left\{\alpha\begin{pmatrix}-1 & 2\\-2 & 3\end{pmatrix} + \beta \begin{pmatrix}3 & -1\\1 & \phantom{-}1\end{pmatrix} \mid \alpha, \beta \in \real\right\} \\ &= \left\{\begin{pmatrix}-\alpha & 2\alpha\\-2\alpha & 3\alpha\end{pmatrix} + \begin{pmatrix}3\beta & -\beta\\\beta & \beta\end{pmatrix} \mid \alpha, \beta \in \real\right\} \\ &= \left\{\begin{pmatrix}-\alpha + 3\beta & 2\alpha - \beta\\-2\alpha + \beta & 3\alpha + \beta\end{pmatrix} \mid \alpha, \beta \in \real\right\}.
             \end{align*}
             Agora dada uma matriz $A \in V$, quando $A \in W$? Para determinar isso seja
             \[
