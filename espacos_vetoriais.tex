@@ -588,19 +588,19 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 	é um subespaço vetorial de $V$.
 \end{proposicao}
 
-\begin{exemplos}
+\begin{exemplos}\label{exemplosespacosgerados}
     \begin{enumerate}
-        \item Seja $V = \real^2$ um espaço vetorial sobre $\real$. Tome os vetores $e_1 = (1,0)$ e $e_2 = (0, 1)$. Temos
+        \item\label{exemplor2} Seja $V = \real^2$ um espaço vetorial sobre $\real$. Tome os vetores $e_1 = (1,0)$ e $e_2 = (0, 1)$. Temos
         \begin{align*}
             W &= Span(e_1, e_2) = \{ae_1 + be_2 \mid a, b \in \real\} = \{a(1, 0) + b(0, 1) \mid a, b \in \real\} \\ &= \{(a, 0) + (0, b) \mid a, b \in \real\} = \{(a, b) \mid a, b \in \real\} = \real^2.
         \end{align*}
 
-        \item Considere agora $V = \real^3 = \{(x , y, z) \mid x, y, z \in \real\}$ um $\real$-espaço vetorial. Dados os vetores $e_1 = (1,0, 0)$, $e_2 = (0, 1, 0)$ e $e_3 = (0, 0, 1)$ então
+        \item\label{exemplor3} Considere agora $V = \real^3 = \{(x , y, z) \mid x, y, z \in \real\}$ um $\real$-espaço vetorial. Dados os vetores $e_1 = (1,0, 0)$, $e_2 = (0, 1, 0)$ e $e_3 = (0, 0, 1)$ então
         \begin{align*}
             W &= Span(e_1, e_2, e_3) = \{ae_1 + be_2 + ce_3 \mid a, b, c \in \real\} \\ &= \{a(1, 0, 0) + b(0, 1, 0) + c(0, 0, 1) \mid a, b, c \in \real\} \\ &= \{(a, 0, 0) + (0, b, 0) + (0, 0, c) \mid a, b, c \in \real\} \\ &= \{(a, b, c) \mid a, b, c \in \real\} = \real^3.
         \end{align*}
 
-        \item De modo geral, para $V = \cp{K}^n$ um espaço vetorial sobre o corpo $\cp{K}$ tomando
+        \item\label{exemplokn} De modo geral, para $V = \cp{K}^n$ um espaço vetorial sobre o corpo $\cp{K}$ tomando
         \begin{align*}
             e_1 &= (1, 0, 0, 0, \dots, 0 , 0)\\
             e_2 &= (0, 1, 0, 0, \dots, 0 , 0)\\
@@ -747,12 +747,71 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
     \]
 \end{definicao}
 
+
+\begin{exemplos}
+    \begin{enumerate}
+        \item Conforme visto nos Exemplos \ref{exemplosespacosgerados}, itens \ref{exemplor2}, \ref{exemplor3} e \ref{exemplokn}, os espaços vetorias $\real^2$, $\real^3$ e $\cp{K}^n$ são todos espaços finitamente gerados.
+
+        \item Considere $M_2(\complex)$ um $\complex$-espaço vetorial. Dadas as matrizes
+        \begin{align*}
+            E_{11} &= \begin{bmatrix}1 & 0\\0 & 1\end{bmatrix},
+            E_{12} = \begin{bmatrix}0 & 1\\0 &0 \end{bmatrix},\\
+            E_{21} &= \begin{bmatrix}1 & 0\\0 & 0\end{bmatrix},
+            E_{22} = \begin{bmatrix}0 & 1\\0 & 0\end{bmatrix}.
+        \end{align*}
+        Então
+        \[
+            M_2(\complex) = Span(E_{11}, E_{12}, E_{12}, E_{22}),
+        \]
+        ou seja, $M_2(\complex)$ é um espaço vetorial finitamente gerado.
+
+        \item Agora tome $V = M_2(\complex)$ como um espaço vetorial sobre $\real$. Então as matrizes do exemplo anterior não geram o espaço vetorial $V$. Para ver isso, tome
+        \[
+            \begin{bmatrix}
+                i & 0\\0 & 0
+            \end{bmatrix} \in M_2(\complex).
+        \]
+        Não existem escalares $\alpha_1$, $\alpha_2$, $\alpha_3$, $\alpha_4 \in \real$ tais que
+        \[
+            \alpha_1E_{11} + \alpha_2E_{12} + \alpha_3E_{21} + \alpha_4E_{22} = \begin{bmatrix}i & 0\\0 & 0\end{bmatrix}.
+        \]
+        Mas se consideramos as matrizes
+        \begin{align*}
+            E_{11} &= \begin{bmatrix}1 & 0\\0 & 1\end{bmatrix},
+            E_{12} = \begin{bmatrix}0 & 1\\0 &0 \end{bmatrix},\\
+            E_{21} &= \begin{bmatrix}1 & 0\\0 & 0\end{bmatrix},
+            E_{22} = \begin{bmatrix}0 & 1\\0 & 0\end{bmatrix},\\
+            F_{11} &= \begin{bmatrix}i & 0\\0 & 1\end{bmatrix},
+            F_{12} = \begin{bmatrix}0 & i\\0 &0 \end{bmatrix},\\
+            F_{21} &= \begin{bmatrix}i & 0\\0 & 0\end{bmatrix},
+            F_{22} = \begin{bmatrix}0 & i\\0 & 0\end{bmatrix}.
+        \end{align*}
+        Então $M_2(\complex)$ é um espaço vetorial sobre $\real$ finitamente gerado e
+        \[
+            M_2(\complex) = Span(E_{11}, E_{12}, E_{12}, F_{22}, F_{11}, F_{12}, F_{12}, F_{22}).
+        \]
+
+        \item No caso geral, considere $V = M_{p \times q}(\cp{K})$ um $\cp{K}$-espaço vetorial. Tome as matrizes
+         \[
+            E_{ij} = \begin{cases}
+                a_{ij} = 1\\
+                0, \mbox{ caso contrário}
+                \end{cases}.
+         \]
+         Então
+         \[
+            M_{p \times q}(\cp{K}) = Span(E_{11}, E_{12}, \dots, E_{1q}, E_{21}, E_{22}, \dots, E_{2q}, \dots, E_{p1}, E_{pq}, \dots, E_{pq}).
+         \]
+    \end{enumerate}
+\end{exemplos}
+
 \begin{definicao}
 	Dados dois subespaços vetoriais $W_1$ e $W_2$ de um $\cp{K}$-espaço vetorial $V$, definimos a interseção de $W_1$ e $W_2$ como o subconjunto
 	\[
 		W_1 \cap W_2 = \{u \in V \mid u\in W_1 \mbox{ e } u \in W_2\}.\
 	\]
 \end{definicao}
+
 
 \begin{teorema}
 	Dados $W_1$, $W_2$ dois subespaços de um $\cp{K}$-espaço vetorial $V$, então $W_1 \cap W_2$ também é um subespaço vetorial de $V$.
