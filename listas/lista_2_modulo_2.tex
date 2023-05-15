@@ -1,0 +1,34 @@
+%!TEX program = xelatex
+\def\numeromodulo{2}
+\def\numerolista{2}
+\documentclass[12pt]{exam}
+
+\input{../configuracoes/variaveis_listas}
+\input{../configuracoes/pacotes}
+\input{../configuracoes/configuracoes_paginas}
+\input{../configuracoes/comandos_personalizados}
+\newcommand{\integer}{\mathbb{Z}}
+\begin{document}
+
+  \Opensolutionfile{ans}[ans1]
+  \begin{center}
+    {\Large\bf \disciplina\ - Turma \turma\ -- \semestre$^{o}$/\ano} \\ \vspace{9pt} {\large\bf
+        $\numerolista^a$ Lista de Exerc{\'\i}cios -- Módulo \numeromodulo}\\ \vspace{9pt} Prof. Jos{\'e} Ant{\^o}nio O. Freitas
+  \end{center}
+  \hrule
+
+\vesp{.6}
+
+
+
+%\newpage
+%\Closesolutionfile{ans}
+%\hrule
+%\begin{center}
+%{\large\bf RESPOSTAS}
+%\end{center}
+%\hrule
+%\input{ans1}
+
+
+\end{document}
