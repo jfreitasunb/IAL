@@ -21,179 +21,179 @@
 
 \begin{document}
 \begin{frame}
-	\maketitle
+  \maketitle
 \end{frame}
 
 \logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
 
 \begin{frame}
-	No que se segue o conjunto $\cp{K}$ denotar\'a um corpo, em geral $\rac$, $\real$ ou $\complex$.
+  No que se segue o conjunto $\cp{K}$ denotar\'a um corpo, em geral $\rac$, $\real$ ou $\complex$.
 
-	\vspace{.3cm}
+  \vspace{.3cm}
 
-	\begin{definicao}
-		Um conjunto	n\~ao vazio $V$ \pause \'e um \textbf{espa\c{c}o vetorial}\index{Espa\c{c}o Vetorial} \pause sobre um corpo $\cp{K}$ \pause se em seus elementos, chamados \textbf{vetores}, \pause estiverem definidas duas
-		opera\c{c}\~oes satisfazendo:\pause
-		\begin{itemize}
-			\item[A)] A cada par $u$, $w \in V$ \pause corresponde um vetor $u + w \in V$, \pause chamado \textbf{soma} de $u$ e $w$, de modo que:\pause
+  \begin{definicao}
+    Um conjunto n\~ao vazio $V$ \pause \'e um \textbf{espa\c{c}o vetorial}\index{Espa\c{c}o Vetorial} \pause sobre um corpo $\cp{K}$ \pause se em seus elementos, chamados \textbf{vetores}, \pause estiverem definidas duas
+    opera\c{c}\~oes satisfazendo:\pause
+    \begin{itemize}
+      \item[A)] A cada par $u$, $w \in V$ \pause corresponde um vetor $u + w \in V$, \pause chamado \textbf{soma} de $u$ e $w$, de modo que:\pause
 
-				\vspace{.3cm}
+        \vspace{.3cm}
 
-			\item[A1)] $u + w \pause = w + u$, \pause para todos $u$, $w \in V$;\pause
+      \item[A1)] $u + w \pause = w + u$, \pause para todos $u$, $w \in V$;\pause
 
-				\vspace{.3cm}
+        \vspace{.3cm}
 
-			\item[A2)] $(u + w) \pause + x \pause = u + \pause (w + x)$, \pause para todos $u$, $w$, $x \in V$;
-		\end{itemize}
-	\end{definicao}
+      \item[A2)] $(u + w) \pause + x \pause = u + \pause (w + x)$, \pause para todos $u$, $w$, $x \in V$;
+    \end{itemize}
+  \end{definicao}
 \end{frame}
 
 \begin{frame}
-	\begin{definicao}
-		\begin{itemize}
-			\item[A3)] Existe em $V$ um vetor, \pause denominado \textbf{vetor nulo} \pause e denotado por $0_V$, tal que\pause
-				\[
-					0_V + u \pause = u\pause
-				\]
-				para todo $u \in V$.\pause
+  \begin{definicao}
+    \begin{itemize}
+      \item[A3)] Existe em $V$ um vetor, \pause denominado \textbf{vetor nulo} \pause e denotado por $0_V$, tal que\pause
+        \[
+          0_V + u \pause = u\pause
+        \]
+        para todo $u \in V$.\pause
 
-				\vspace{.3cm}
+        \vspace{.3cm}
 
-			\item[A4)] Para cada vetor $u \in V$, \pause existe um vetor em $V$, \pause denotado por $-u$ \pause e chamado de
-				\textbf{vetor oposto}, tal que\pause
-				\[
-					u + (-u) \pause = 0_V.
-				\]
-		\end{itemize}
-	\end{definicao}
+      \item[A4)] Para cada vetor $u \in V$, \pause existe um vetor em $V$, \pause denotado por $-u$ \pause e chamado de
+        \textbf{vetor oposto}, tal que\pause
+        \[
+          u + (-u) \pause = 0_V.
+        \]
+    \end{itemize}
+  \end{definicao}
 \end{frame}
 
 \begin{frame}
-	\begin{definicao}
-		\begin{itemize}
-			\item[M)] A cada par $\alpha \in \cp{K}$ \pause e $u \in V$, \pause corresponde um vetor $\alpha \cdot u \in V$, \pause denominado \textbf{produto por escalar} \pause de $\alpha$ por $u$ de modo que:\pause
+  \begin{definicao}
+    \begin{itemize}
+      \item[M)] A cada par $\alpha \in \cp{K}$ \pause e $u \in V$, \pause corresponde um vetor $\alpha \cdot u \in V$, \pause denominado \textbf{produto por escalar} \pause de $\alpha$ por $u$ de modo que:\pause
 
-				\vspace{.3cm}
+        \vspace{.3cm}
 
-			\item[M1)] $(\alpha\beta)\pause \cdot u = \pause \alpha(\pause \beta\cdot u)$ para todos $\alpha$, $\beta \in \cp{K}$ \pause e todo $u \in V$;\pause
+      \item[M1)] $(\alpha\beta)\pause \cdot u = \pause \alpha(\pause \beta\cdot u)$ para todos $\alpha$, $\beta \in \cp{K}$ \pause e todo $u \in V$;\pause
 
-				\vspace{.3cm}
+        \vspace{.3cm}
 
-			\item[M2)] $1_\cp{K}\cdot u \pause = u$ para todo $u \in V$, \pause onde $1_\cp{K}$ \'e o elemento neutro da multiplica\c{c}\~ao em $\cp{K}$.
-		\end{itemize}
-	\end{definicao}
+      \item[M2)] $1_\cp{K}\cdot u \pause = u$ para todo $u \in V$, \pause onde $1_\cp{K}$ \'e o elemento neutro da multiplica\c{c}\~ao em $\cp{K}$.
+    \end{itemize}
+  \end{definicao}
 \end{frame}
 
 \begin{frame}
-	\begin{definicao}
-		\begin{itemize}
-			\item[D1)] $\alpha\pause \cdot(u + w) = \pause \alpha\cdot u \pause + \alpha\cdot w$, \pause para todo $\alpha \in \cp{K}$ \pause e todos $u$, $w \in V$;\pause
+  \begin{definicao}
+    \begin{itemize}
+      \item[D1)] $\alpha\pause \cdot(u + w) = \pause \alpha\cdot u \pause + \alpha\cdot w$, \pause para todo $\alpha \in \cp{K}$ \pause e todos $u$, $w \in V$;\pause
 
-				\vspace{.3cm}
+        \vspace{.3cm}
 
-			\item[D2)] $(\alpha + \beta)\pause \cdot u \pause = \alpha\cdot u \pause + \beta\cdot u$, \pause para todos $\alpha$, $\beta \in \cp{K}$ \pause e todo $u \in V$.
-		\end{itemize}
-	\end{definicao}
+      \item[D2)] $(\alpha + \beta)\pause \cdot u \pause = \alpha\cdot u \pause + \beta\cdot u$, \pause para todos $\alpha$, $\beta \in \cp{K}$ \pause e todo $u \in V$.
+    \end{itemize}
+  \end{definicao}
 \end{frame}
 
 \begin{frame}
-	\begin{observacao}
-		Vamos usar a express\~ao $\cp{K}$-\textbf{espa\c{c}o vetorial} \pause para nos referir a um espa\c{c}o vetorial $V$ sobre um corpo $\cp{K}$.
-	\end{observacao}
+  \begin{observacao}
+    Vamos usar a express\~ao $\cp{K}$-\textbf{espa\c{c}o vetorial} \pause para nos referir a um espa\c{c}o vetorial $V$ sobre um corpo $\cp{K}$.
+  \end{observacao}
 \end{frame}
 
 \begin{frame}
-	\begin{definicao}
-		Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$.\pause
-		Um vetor $w \in V$ \'e uma \textbf{combina\c{c}\~ao linear}\index{Espa\c{c}o Vetorial!Combina\c{c}\~ao linear} \pause dos vetores $u_1$, \pause $u_2$, \pause \dots,
-		$u_n \in V$ \pause se existirem escalares $\alpha_1$, \pause $\alpha_2$, \pause \dots, \pause $\alpha_n \in \cp{K}$ tais que\pause
-		\[
-			w = \alpha_1 u_1 + \pause \alpha_2u_2 + \pause \cdots + \pause \alpha_nu_n = \sum_{i = 1}^n \alpha_iu_i.
-		\]
-	\end{definicao}
+  \begin{definicao}
+    Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$.\pause
+    Um vetor $w \in V$ \'e uma \textbf{combina\c{c}\~ao linear}\index{Espa\c{c}o Vetorial!Combina\c{c}\~ao linear} \pause dos vetores $u_1$, \pause $u_2$, \pause \dots,
+    $u_n \in V$ \pause se existirem escalares $\alpha_1$, \pause $\alpha_2$, \pause \dots, \pause $\alpha_n \in \cp{K}$ tais que\pause
+    \[
+      w = \alpha_1 u_1 + \pause \alpha_2u_2 + \pause \cdots + \pause \alpha_nu_n = \sum_{i = 1}^n \alpha_iu_i.
+    \]
+  \end{definicao}
 \end{frame}
 
 \begin{frame}
-	\begin{definicao}
-		Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. \pause Um subconjunto n\~ao vazio $W$ \pause de $V$ \'e um \textbf{subespa\c{c}o vetorial} de $V$ \pause se $W$ é um espaço vetorial
-		sobre $\cp{K}$ \pause com respeito às mesmas operações definidas em $V$.\pause
-	\end{definicao}
+  \begin{definicao}
+    Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. \pause Um subconjunto n\~ao vazio $W$ \pause de $V$ \'e um \textbf{subespa\c{c}o vetorial} de $V$ \pause se $W$ é um espaço vetorial
+    sobre $\cp{K}$ \pause com respeito às mesmas operações definidas em $V$.\pause
+  \end{definicao}
 
-	\begin{teorema}
-		Um subconjunto n\~ao vazio $W$ \pause de um $\cp{K}$-espa\c{c}o vetorial $V$ \pause \'e um subespa\c{c}o de $V$ \pause se, e somente se:
-		\begin{enumerate}[label={\roman*})]
-			\item para todos vetores $u_1$, $u_2 \in W$ \pause temos $u_1 + u_2 \in W$.\pause
-			\item para todo escalar $\lambda \in \cp{K}$ \pause e todo vetor $u \in W$, \pause temos $\lambda u\in W$.
-		\end{enumerate}
-	\end{teorema}
+  \begin{teorema}
+    Um subconjunto n\~ao vazio $W$ \pause de um $\cp{K}$-espa\c{c}o vetorial $V$ \pause \'e um subespa\c{c}o de $V$ \pause se, e somente se:
+    \begin{enumerate}[label={\roman*})]
+      \item para todos vetores $u_1$, $u_2 \in W$ \pause temos $u_1 + u_2 \in W$.\pause
+      \item para todo escalar $\lambda \in \cp{K}$ \pause e todo vetor $u \in W$, \pause temos $\lambda u\in W$.
+    \end{enumerate}
+  \end{teorema}
 \end{frame}
 
 \begin{frame}
-	\begin{definicao}
-		Seja $V$ um $\cp{K}$-espaço vetorial. \pause Fixado vetores $v_1$, $v_2$, \dots, $v_n \in V$ \pause o conjunto
-		\[
-			W = \{\alpha_1v_1 \pause + \alpha_2v_2 \pause + \cdots + \alpha_nv_n \pause \mid \alpha_i \in \cp{K}\}\pause
-		\]
-		é chamado de \textbf{espaço gerado} \pause por $\{v_1, v_2, \dots, v_n\}$ \pause e os vetores $\{v_1, v_2, \dots, v_n\}$ \pause são chamados de \textbf{geradores} de $W$.\pause
-	\end{definicao}
+  \begin{definicao}
+    Seja $V$ um $\cp{K}$-espaço vetorial. \pause Fixado vetores $v_1$, $v_2$, \dots, $v_n \in V$ \pause o conjunto
+    \[
+      W = \{\alpha_1v_1 \pause + \alpha_2v_2 \pause + \cdots + \alpha_nv_n \pause \mid \alpha_i \in \cp{K}\}\pause
+    \]
+    é chamado de \textbf{espaço gerado} \pause por $\{v_1, v_2, \dots, v_n\}$ \pause e os vetores $\{v_1, v_2, \dots, v_n\}$ \pause são chamados de \textbf{geradores} de $W$.\pause
+  \end{definicao}
 
-	\begin{notacao}
-		O espaço gerado $W = \{\alpha_1v_1 + \alpha_2v_2 + \cdots + \alpha_nv_n\}$ \pause pode ser escrito como $W = Span(v_1, v_2, \dots, v_n)$ \pause ou $W = <v_1, v_2, \dots, v_n>$ \pause ou ainda como $W = [v_1, v_2, \dots, v_n]$.
-	\end{notacao}
+  \begin{notacao}
+    O espaço gerado $W = \{\alpha_1v_1 + \alpha_2v_2 + \cdots + \alpha_nv_n\}$ \pause pode ser escrito como $W = Span(v_1, v_2, \dots, v_n)$ \pause ou $W = <v_1, v_2, \dots, v_n>$ \pause ou ainda como $W = [v_1, v_2, \dots, v_n]$.
+  \end{notacao}
 \end{frame}
 
 \begin{frame}
-	\begin{proposicao}
-		Seja $V$ um $\cp{K}$-espaço vetorial. \pause Fixado vetores $v_1$, $v_2$, \dots, $v_n \in V$ \pause o conjunto
-		\[
-			W = \{\alpha_1v_1 \pause + \alpha_2v_2 \pause + \cdots + \alpha_nv_n \pause \mid \alpha_i \in \cp{K}\}\pause
-		\]
-		é um subespaço vetorial de $V$.
-	\end{proposicao}
+  \begin{proposicao}
+    Seja $V$ um $\cp{K}$-espaço vetorial. \pause Fixado vetores $v_1$, $v_2$, \dots, $v_n \in V$ \pause o conjunto
+    \[
+      W = \{\alpha_1v_1 \pause + \alpha_2v_2 \pause + \cdots + \alpha_nv_n \pause \mid \alpha_i \in \cp{K}\}\pause
+    \]
+    é um subespaço vetorial de $V$.
+  \end{proposicao}
 \end{frame}
 
 \begin{frame}
-	\begin{definicao}
-		Um espaço vetorial $V$ é chamado de \textbf{finitamente gerado} \pause se existe um conjunto finito \pause de vetores $\{v_1, v_2, \dots, v_n\}$ em $V$ \pause tais que\pause
-		\[
-			V = \pause Span(v_1, v_2, \dots, v_n).
-		\]
-	\end{definicao}
+  \begin{definicao}
+    Um espaço vetorial $V$ é chamado de \textbf{finitamente gerado} \pause se existe um conjunto finito \pause de vetores $\{v_1, v_2, \dots, v_n\}$ em $V$ \pause tais que\pause
+    \[
+      V = \pause Span(v_1, v_2, \dots, v_n).
+    \]
+  \end{definicao}
 \end{frame}
 
 \begin{frame}
-	\begin{definicao}
-		Dados dois subespaços vetoriais $W_1$ \pause e $W_2$ \pause de um $\cp{K}$-espaço vetorial $V$, \pause definimos a interseção de $W_1$ e $W_2$ \pause como o subconjunto
-		\[
-			W_1 \cap W_2 \pause = \{u \in V \pause \mid u\in W_1\pause \mbox{ e } u \in W_2\}.\pause
-		\]
-	\end{definicao}
+  \begin{definicao}
+    Dados dois subespaços vetoriais $W_1$ \pause e $W_2$ \pause de um $\cp{K}$-espaço vetorial $V$, \pause definimos a interseção de $W_1$ e $W_2$ \pause como o subconjunto
+    \[
+      W_1 \cap W_2 \pause = \{u \in V \pause \mid u\in W_1\pause \mbox{ e } u \in W_2\}.\pause
+    \]
+  \end{definicao}
 
-	\vspace{1cm}
+  \vspace{1cm}
 
-	\begin{teorema}
-		Dados $W_1$, $W_2$ dois subespaços de um $\cp{K}$-espaço vetorial $V$, \pause então $W_1 \cap W_2$ também é um subespaço vetorial de $V$.
-	\end{teorema}
+  \begin{teorema}
+    Dados $W_1$, $W_2$ dois subespaços de um $\cp{K}$-espaço vetorial $V$, \pause então $W_1 \cap W_2$ também é um subespaço vetorial de $V$.
+  \end{teorema}
 \end{frame}
 
 \begin{frame}
-	\begin{observacao}
-		Se $W_1$ e $W_2$ são subespaços de $V$, \pause então nem sempre o conjunto $W_1 \cup W_2 \pause = \{u \in V \pause \mid u \in W_1 \pause \mbox{ ou } u \in W_2\}$ \pause é um subespaço de $V$.
-	\end{observacao}
+  \begin{observacao}
+    Se $W_1$ e $W_2$ são subespaços de $V$, \pause então nem sempre o conjunto $W_1 \cup W_2 \pause = \{u \in V \pause \mid u \in W_1 \pause \mbox{ ou } u \in W_2\}$ \pause é um subespaço de $V$.
+  \end{observacao}
 \end{frame}
 
 \begin{frame}
-	\begin{definicao}
-		Dados dois subespaços $U$ e $W$ \pause de um $\cp{K}$-espaço vetorial $V$, \pause definimos a \textbf{soma de $U$ e $W$} \pause como o subconjunto
-		\[
-			U + W \pause = \{u + w \pause \mid u \in U, \pause w \in W\}.\pause
-		\]
-	\end{definicao}
+  \begin{definicao}
+    Dados dois subespaços $U$ e $W$ \pause de um $\cp{K}$-espaço vetorial $V$, \pause definimos a \textbf{soma de $U$ e $W$} \pause como o subconjunto
+    \[
+      U + W \pause = \{u + w \pause \mid u \in U, \pause w \in W\}.\pause
+    \]
+  \end{definicao}
 
-	\vspace*{1cm}
+  \vspace*{1cm}
 
-	\begin{teorema}
-		Dados dois subespaços $U$ e $W$ de um $\cp{K}$-espaço vetorial $V$, \pause então $U + W$ é um subespaço de $V$.
-	\end{teorema}
+  \begin{teorema}
+    Dados dois subespaços $U$ e $W$ de um $\cp{K}$-espaço vetorial $V$, \pause então $U + W$ é um subespaço de $V$.
+  \end{teorema}
 \end{frame}
 \end{document}
