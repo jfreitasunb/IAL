@@ -822,6 +822,14 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 	Se $W_1$ e $W_2$ são subespaços de $V$, então nem sempre o conjunto $W_1 \cup W_2 = \{u \in V \mid u \in W_1 \mbox{ ou } u \in W_2\}$ é um subespaço de $V$.
 \end{observacao}
 
+\begin{exemplo}
+	No $\real$-espaço vetorial $\real^2$ sejam $W_1 = Span((1,0))$ e $W_2 = Span((0, 1))$ subespaços. Então
+	\[
+		W_1 \cup W_2 = \{(x, y) \in \real^2 \mid (x, y) \in W_1 \mbox{ ou } (x, y) \in W_2\} = \{(\alpha, 0); (0, \beta) \mid \alpha, \beta \in \real\}.
+	\]
+	Observer que $u_1 = (1, 0) \in W_1$, $u_2 = (0, 1) \in W_2$ e no entanto $u_1 + u_2 = (1, 1) \notin W_1 \cup W_2$. Assim $W_1 \cup W_2$ não é um subespaço vetorial de $\real^2$.
+\end{exemplo}
+
 \begin{definicao}
 	Dados dois subespaços $U$ e $W$ de um $\cp{K}$-espaço vetorial $V$, definimos a \textbf{soma de $U$ e $W$}\index{Espaço vetorial!soma} como o subconjunto
 	\[
