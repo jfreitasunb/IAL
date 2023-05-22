@@ -1258,6 +1258,110 @@ Esse caso motiva a seguinte definição:
     \item Se $V$ possui uma base com infinitos vetores,  então $\dim V = \infty$.
   \end{enumerate}
 \end{observacoes}
+
+\begin{exemplos}
+	Considere $V = \real^2$ um espaço vetorial sobre $\real$. 
+	\begin{enumerate}
+		\item Já vimos que o conjunto $\{(1, 0); (0, 1)\}$ é L.I. e gera $\real^2$. Logo o conjunto $\{(1, 0); (0, 1)\}$ é uma base
+			para $\real^2$, como um $\real$-espaço vetorial.
+
+			Mais ainda, vimos também que o conjunto $\{(1, 2); (1, 3)\}$ também é L.I. e gera $\real^2$. Portanto o conjunto $\{(1, 2); (1, 3)\}$ também é uma base
+			para $\real^2$, como um $\real$-espaço vetorial.
+
+			Com isso um espaço vetorial $V$ não possui somente uma única base, mas todas as bases terão o mesmo número de vetores, como veremos em breve.
+
+		\item O conjunto $\{(1, 2); (1, 3); (1, 5)\}$ não é uma base para $\real^2$. Apesar desse conjunto gerar $\real^2$ ele não é linearmente independente. Logo não é uma base.
+
+		\item O conjunto $\{(0, 1)\}$ é linearmente independente mas não gera $\real^2$. Portanto também não é uma base para $\real^2$.
+	\end{enumerate}
+\end{exemplos}
+
+As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases canônicas} dos espaços vetoriais $V$ sobre o corpo $\cp{K}$ dado.
+\begin{exemplos}
+	\begin{enumerate}
+		\item Considerendo $V = \real$, $\cp{K} = \real$ uma base para esse espaço é dada pelo conjunto $\mathcal{B} = \{1\}$ pois tal conjunto é L.I. e gera $V$. Portanto $\dim_\real\real = 1$.
+
+		\item Considerendo $V = \cp{K}^n$, $\cp{K}$ uma base para esse espaço é dada pelo conjunto $\mathcal{B} = \{e_1, e_2, e_3, \dots, e_n\}$ onde
+			\begin{align*}
+				e_1 &= (1, 0, 0, \dots, 0)\\
+				e_2 &= (0, 1, 0, \dots, 0)\\
+				e_3 &= (0, 0, 1, \dots, 0)\\
+						&\vdots\\
+				e_n &= (0, 0, 0, \dots, 1)
+			\end{align*}
+			pois tal conjunto é L.I. e gera $V$. Portanto $\dim_\cp{K}\cp{K} = n$.
+
+		\item Seja $V = M_2(\real)$ um $\real$-espaço vetorial. Sejam
+			\[
+				E_{11} = \begin{bmatrix}1 & 0\\0 & 0\end{bmatrix},
+				E_{12} = \begin{bmatrix}0 & 1\\0 & 0\end{bmatrix},
+				E_{21} = \begin{bmatrix}0 & 0\\1 & 0\end{bmatrix},
+				E_{22} = \begin{bmatrix}0 & 0\\0 & 1\end{bmatrix}.
+			\]
+			Então o conjunto $\mathcal{B} = \{E_{11}, E_{12}, E_{21}, E_{22}\}$ é L.I. e gera $M_2(\real)$. Logo é uma base para $M_2(\real)$ como um $\real$-espaço vetorial. Portanto $\dim_\real M_2(\real) = 4$.
+
+		\item Agora seja $V = M_2(\complex)$ um $\real$-espaço vetorial. Tomando as matrizes
+			\[
+				E_{11} = \begin{bmatrix}1 & 0\\0 & 0\end{bmatrix},
+				E_{12} = \begin{bmatrix}0 & 1\\0 & 0\end{bmatrix},
+				E_{21} = \begin{bmatrix}0 & 0\\1 & 0\end{bmatrix},
+				E_{22} = \begin{bmatrix}0 & 0\\0 & 1\end{bmatrix},
+			\]
+			vemos que o conjunto $\mathcal{B} = \{E_{11}, E_{12}, E_{21}, E_{22}\}$ é L.I. mas não gera $M_2(\real)$. Por exemplo, não existes escalares reais $x$, $y$, $z$ e $w$ tais que
+			\[
+				\begin{bmatrix}i & 0 \\0 & 0\end{bmatrix} = xE_{11} + yE_{12} + zE_{21} + wE_{22}.
+			\]
+			Nesse caso precisamos adicionar as matrizes
+			\[
+				F_{11} = \begin{bmatrix}i & 0\\0 & 0\end{bmatrix},
+				F_{12} = \begin{bmatrix}0 & i\\0 & 0\end{bmatrix},
+				F_{21} = \begin{bmatrix}0 & 0\\i & 0\end{bmatrix},
+				F_{22} = \begin{bmatrix}0 & 0\\0 & i\end{bmatrix},
+			\]
+			Com a adição dessa matrizes o conjunto $\mathcal{B} = \{E_{12}, E_{12}, E_{21}, E_{22}, F_{12}, F_{12}, F_{21}, F_{22}\}$ continua sendo linearmente independente e gera $V = M_2(\complex)$
+			como um $\real$-espaço vetorial Logo é uma base para $M_2(\complex)$ como um $\real$-espaço vetorial. Portanto $\dim_\real M_2(\complex) = 8$.
+
+			\item Seja $V = M_2(\complex)$ um $\complex$-espaço vetorial. Sejam
+			\[
+				E_{11} = \begin{bmatrix}1 & 0\\0 & 0\end{bmatrix},
+				E_{12} = \begin{bmatrix}0 & 1\\0 & 0\end{bmatrix},
+				E_{21} = \begin{bmatrix}0 & 0\\1 & 0\end{bmatrix},
+				E_{22} = \begin{bmatrix}0 & 0\\0 & 1\end{bmatrix}.
+			\]
+			Então o conjunto $\mathcal{B} = \{E_{11}, E_{12}, E_{21}, E_{22}\}$ é L.I. e gera $M_2(\complex)$. Logo é uma base para $M_2(\complex)$ como um $\complex$-espaço vetorial. 
+			Portanto $\dim_\complex M_2(\complex) = 4$.
+
+		\item Seja $V = M_{p \times q}(\cp{K})$ um $\cp{K}$-espaço vetorial. Tome as matrizes $E_{ij}$ definidas como
+			\[
+				E_{ij} = \begin{cases}a_{ij} = 1\\0, \mbox{caso contrário}\end{cases}
+			\]
+			Então o conjunto $\mathcal{B} = \{E_{11}, E_{12}, \dots, E_{1q}, E_{21}, E_{22}, \dots, E_{2q}, \dots, E_{p1}, E_{p2}, \dots, E_{pq}\}$ é linearmente independente e 
+			gera $V = M_{p \times q}(\cp{K})$ como um $\cp{K}$-espaço vetorial. Logo é uma base para $V = M_{p \times q}(\cp{K})$ como um $\cp{K}$-espaço vetorial 
+			e com isso, $\dim_{\cp{K}}M_{p \times q}(\cp{K}) = pq$.
+
+		\item Se $V = \{0_v\}$ então $V$ não possui base. Apesar do conjunto $\{0_v\}$ gerar $V$ ele não é linearmente independente. Portanto $\dim_\cp{K}V = 0$.
+
+		\item Considere $V = \mathcal{P}_n(\real) = \{a_0 + a_1x + a_2x^2 + \cdots, a_{n - 1}x^{n - 1} + a_nx^n \mid a_i \in \real, i = 0, 1, 2, \dots, n - 1, n\}$ um $\real$-espaço vetorial. 
+			Então o conjunto $\mathcal{B} = \{1, x, x^2, \dots, x^{n - 1}, x^n\}$ é L.I. e gera $V$. Logo é uma base para $V$ como um $\real$-espaço vetorial. Portanto $\dim_\real\mathcal{P}_n(\real) = n + 1$.
+
+		\item Agora considere
+			\[
+				V = \mathcal{P}(\real) = \{a_0 + a_1x + a_2x^2 + \cdots + a_mx^m \mid a_i \in \real,\ 0 \le i \le m,\ m \in \n\}
+			\]
+			como um $\real$-espaço vetorial. Então $V$ não possui uma base contendo uma quantidade finita de vetores. De fato, suponha que o conjunto $\mathcal{B} = \{1, x, x^2, \dots, x^m\}$ seja uma base para $V$.
+			Então $V = Span(1, x, x^2, \dots, x^m)$. Mas o vetor $x^{m + 1} \in V$, logo existem escalares, não todos nulos, tais que
+			\[
+				x^{m + 1} = b_0 + b_1x + b_2x^2 + \cdots + b_mx^m
+			\]
+			que é a mesma coisa que escrever
+			\[
+				x^{m + 1} - b_mx^m - \cdots - b_2x^2 - b_1x - b_0 = 0.
+			\]
+			Dessa última expressão segue que o polinômio $p(x) = x^{m + 1} - b_mx^m - \cdots - b_2x^2 - b_1x - b_0$ possui infinitas raizes reais. O que é impossível e então o 
+			conjunto $\mathcal{B} = \{1, x, x^2, \dots, x^m\}$ não gera $V = \mathcal{P}(\real)$ para nenhum $m \in \n$. Portanto $\dim_\real\mathcal{P}(\real) = \infty$.
+ 
+	\end{enumerate}
+\end{exemplos}
 %\begin{proposicao}
 %	Se $W_1$ e $W_1$ s\~ao subespa\c{c}os de um $\cp{K}$-espa\c{c}o vetorial $V$ ent\~ao
 %	\begin{enumerate}[label={\roman*})]
