@@ -895,6 +895,99 @@ Nesse caso também temos
 \[
 	\real^2 = Span(v_1, v_2).
 \]
+
+Agora, tomando $v_1 = (1, 2)$, $v_2 = (1, 3)$ e $v_3 = (1, 5)$ também temos
+\[
+	\real^2 = [v_1, v_2, v_n] = \{\alpha_1v_1 + \alpha_2v_2 + \alpha_3v_3 \mid \alpha_1, \alpha_2, \alpha_3 \in \real\}.
+\]
+De fato, como $\real^2 = [v_1, v_2]$ então todo vetor $w \in \real^2$ pode ser escrito como
+\[
+	w = av_1 + bv_2
+\]
+para certos escalares $a$, $b \in \real$. Assim podemos escrever também
+\[
+	w = av_1 + bv_2 + 0v_3
+\]
+e com isso $w \in [v_1, v_2, v_3]$. Logo $[v_1, v_2] \subset [v_1, v_2, v_3]$.
+
+Por outro lado, tomando $u \in [v_1, v_2, v_3]$ então existem escalares $\alpha_1$, $\alpha_2$, $\alpha_3 \in \real$ tais que
+\[
+	u = \alpha_1v_1 + \alpha_2v_2 + \alpha_3v_3.
+\]
+Mas, observe que $v_3 = -2v_1 + 3v_2$, daí
+\begin{align*}
+	u = \alpha_1v_1 + \alpha_2v_2 + \alpha_3v_3 \\ &= \alpha_1v_1 + \alpha_2v_2 + \alpha_3(-2v_1 + 3v_2) \\&=
+	\alpha_1v_1 + \alpha_2v_2 -2\alpha_3v_1 + 3\alpha_3v_2 \\ &= (\alpha_1 - 2\alpha_3)v_1 + (\alpha_2 + 3\alpha_3)v_2
+\end{align*}
+e com isso, $u \in [v_1, v_2]$. Ou seja, $[v_1, v_2, v_3] \subset [v_1, v_2]$.
+
+Portanto,
+\[
+	[v_1, v_2] = [v_1, v_2, v_3]
+\]
+ou seja
+\[
+	\real^2 = [v_1, v_2] = [v_1, v_2, v_3].
+\]
+
+Qual é a diferença entre escrever $\real^2 = [v_1, v_2]$ e $\real^2 = [v_1, v_2, v_3]$?
+
+Seja $w = (x, y) \in \real^2$. Quando escrevemos $\real^2 = [v_1, v_2]$ os escalares $a$, $b \in \real$ que aparecem na combinação linear
+\[
+	w = av_1 + bv_2
+\]
+são únicos e dados por
+\[
+	a = 3x - y,\ b = y - 2x.
+\]
+
+Agora, quando escrevemos $\real^2 = [v_1, v_2, v_3]$, existem escalares $a$, $b$ e $c \in \real$ tais que
+\begin{align*}
+	w &= \alpha_1v_1 + \alpha_2v_2 + \alpha_3v_3\\
+	(x, y) &= \alpha_1(1, 2) + \alpha_2(1, 3) + \alpha_3(1, 5)
+\end{align*}
+que resulta no sistema linear
+\[
+	\begin{cases}
+		\alpha_1 + \alpha_2 + \alpha_3 = x\\
+		2\alpha_1 + 3\alpha_2 + 5\alpha_3 = y
+	\end{cases}
+\]
+que escalonando:
+\begin{align*}
+	\begin{amatrix}{3}
+		1 & 1 & 1 & x\\
+		2 & 3 & 5 & y
+	\end{amatrix}
+	\begin{array}{l}
+		\phantom{x}\\L_2 \to L_2 - 2L_1
+	\end{array}\sim
+	\begin{amatrix}{3}
+		1 & 1 & 1 & x\\
+		0 & 1 & 3 & y - 2x
+	\end{amatrix}
+	\begin{array}{l}
+		L_1 \to L_1 - L_2\\\phantom{x}
+	\end{array}\sim
+	\begin{amatrix}{3}
+		1 & 0 & -2 & 3x - y\\
+		0 & 1 & 3 & y - 2x
+	\end{amatrix}
+\end{align*}
+
+A solução desse sistema é dada por
+\begin{align*}
+	\alpha_1 &= (3x - y) + 2\alpha_3\\
+	\alpha_2 &= (y - 2x) - 3\alpha_3
+\end{align*}
+onde $alpha_3 \in \real$. Logo existem infinitas formas de escrever um mesmo vetor $w = (x, y)$ como
+combinação linear de $v_1$, $v_2$ e $v_3$. Por exemplo, para o vetor nulo $(0, 0)$ obtemos
+\begin{align*}
+	(0, 0) &= 0v_1 + 0v_2 + 0v_3\\
+	(0, 0) &= 2v_1 - 3v_2 + v_3\\
+	(0, 0) &= 2\sqrt{2}v_1 - 3\sqrt{2}v_2 + \sqrt{2}v_3\\
+				 &\vdots
+\end{align*}
 %\begin{proposicao}
 %	Se $W_1$ e $W_1$ s\~ao subespa\c{c}os de um $\cp{K}$-espa\c{c}o vetorial $V$ ent\~ao
 %	\begin{enumerate}[label={\roman*})]
