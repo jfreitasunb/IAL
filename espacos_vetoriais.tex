@@ -1084,8 +1084,8 @@ Esse caso motiva a seguinte definição:
 		\item No $\rac$-espaço vetorial $M_2(\rac)$ considere os vetores
 			\[
 				v_1 = \begin{bmatrix}1 & 0\\1 & 1\end{bmatrix},
-				v_2 = \begin{bmatrix}-1 & 1\\1 & 0\end{bmatrix},
-				v_3 = \begin{bmatrix}-2 & 2\\3 & 4\end{bmatrix}.
+				v_2 = \begin{bmatrix}-1 & 1\\\phantom{-} 1 & 0\end{bmatrix},
+				v_3 = \begin{bmatrix}-2 & 2\\\phantom{-} 3 & 4\end{bmatrix}.
 			\]
 			O conjunto $\{u_1, u_2, u_3\}$ é L.D. ou L.I.?
 			\begin{solucao}
@@ -1096,12 +1096,12 @@ Esse caso motiva a seguinte definição:
 				Temos
 				\begin{align*}
 					x\begin{bmatrix}1 & 0\\1 & 1\end{bmatrix}
-					+ y\begin{bmatrix}-1 & 1\\1 & 0\end{bmatrix}
-					+ z\begin{bmatrix}-2 & 2\\3 & 4\end{bmatrix}
+					+ y\begin{bmatrix}-1 & 1\\\phantom{-} 1 & 0\end{bmatrix}
+					+ z\begin{bmatrix}-2 & 2\\\phantom{-} 3 & 4\end{bmatrix}
 															 &= \begin{bmatrix}0 & 0\\0 & 0\end{bmatrix}
 					\\\begin{bmatrix}x & 0\\x & x\end{bmatrix}
-					+ \begin{bmatrix}-y & y\\y & 0\end{bmatrix}
-					+ \begin{bmatrix}-2z & 2z\\3z & 4z\end{bmatrix}
+					+ \begin{bmatrix}-y & y\\\phantom{-} y & 0\end{bmatrix}
+					+ \begin{bmatrix}-2z & 2z\\\phantom{-} 3z & 4z\end{bmatrix}
 															 &= \begin{bmatrix}0 & 0\\0 & 0\end{bmatrix}.
 					\\\begin{bmatrix} x - y - 2z & y + 2z\\x + y + 3z & x + 4z\end{bmatrix} &= \begin{bmatrix}0 & 0\\0 & 0\end{bmatrix}
 				\end{align*}
@@ -1118,45 +1118,45 @@ Esse caso motiva a seguinte definição:
 				\begin{align*}
 					\begin{bmatrix}
 						1 & -1 & -2\\
-						0 & 1 & 2\\
-						1 & 1 & 1\\
-						1 & 0 & 4
+						0 & \phantom{-} 1 & \phantom{-} 2\\
+						1 & \phantom{-} 1 & \phantom{-} 1\\
+						1 & \phantom{-} 0 & \phantom{-} 4
 					\end{bmatrix}
 					\begin{array}{l}
 						\phantom{x}\\\phantom{x}\\L_3 \to L_3 - L_1\\L_4 \to L_4 - L_1
 					\end{array}&\sim
 					\begin{bmatrix}
 						1 & -1 & -2\\
-						0 & 1 & 2\\
-						0 & 2 & 3\\
-						0 & 0 & 6
+						0 & \phantom{-} 1 & \phantom{-} 2\\
+						0 & \phantom{-} 2 & \phantom{-} 3\\
+						0 & \phantom{-} 0 & \phantom{-} 6
 					\end{bmatrix}
 					\begin{array}{l}
 						\phantom{x}\\\phantom{x}\\L_3 \to L_3 - 2L_1\\L_4 \to L_4 - L_2
 					\end{array}\\&\sim
 					\begin{bmatrix}
 						1 & -1 & -2\\
-						0 & 1 & 2\\
-						0 & 0 & -1\\
-						0 & 0 & 4
+						0 & \phantom{-} 1 & \phantom{-} 2\\
+						0 & \phantom{-} 0 & -1\\
+						0 & \phantom{-} 0 & \phantom{-} 4
 					\end{bmatrix}
 					\begin{array}{l}
 						\phantom{x}\\\phantom{x}\\L_3 \to -L_3\\\phantom{x}
 					\end{array}\\&\sim
 					\begin{bmatrix}
 						1 & -1 & -2\\
-						0 & 1 & 2\\
-						0 & 0 & 1\\
-						0 & 0 & 4
+						0 & \phantom{-} 1 & \phantom{-} 2\\
+						0 & \phantom{-} 0 & \phantom{-} 1\\
+						0 & \phantom{-} 0 & \phantom{-} 4
 					\end{bmatrix}
 					\begin{array}{l}
 						\phantom{x}\\\phantom{x}\\\phantom{x}\\L_4 \to L_4 - 4L_3
 					\end{array}\\&\sim
 					\begin{bmatrix}
 						1 & -1 & -2\\
-						0 & 1 & 2\\
-						0 & 0 & 1\\
-						0 & 0 & 0
+						0 & \phantom{-} 1 & \phantom{-} 2\\
+						0 & \phantom{-} 0 & \phantom{-} 1\\
+						0 & \phantom{-} 0 & \phantom{-} 0
 					\end{bmatrix}
 				\end{align*}
 				Logo a solução do sistema é $x = y = z = 0$ e então o conjunto $\{u_1, u_2, u_3\}$ é linearmente independente.
@@ -1359,7 +1359,6 @@ As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases can�
 			\]
 			Dessa última expressão segue que o polinômio $p(x) = x^{m + 1} - b_mx^m - \cdots - b_2x^2 - b_1x - b_0$ possui infinitas raizes reais. O que é impossível e então o 
 			conjunto $\mathcal{B} = \{1, x, x^2, \dots, x^m\}$ não gera $V = \mathcal{P}(\real)$ para nenhum $m \in \n$. Portanto $\dim_\real\mathcal{P}(\real) = \infty$.
- 
 	\end{enumerate}
 \end{exemplos}
 %\begin{proposicao}
