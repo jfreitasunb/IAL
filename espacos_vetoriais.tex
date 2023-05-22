@@ -1191,6 +1191,73 @@ Esse caso motiva a seguinte definição:
 	\end{enumerate}
 \end{exemplos}
 
+\begin{proposicao}
+  Seja $V$ um espaço vetorial sobre $\cp{K}$. Então:
+  \begin{enumerate}[label={\roman*})]
+    \item O vetor nulo é linearmente dependente.
+
+    \item Todo vetor $v \ne 0_V$  é linearmente independente.
+    
+    \item Dado um conjunto de vetores $\{v_1, v_2, \dots, v_n\}$  se $v_i = 0_V$ para algum $i$,  então $\{v_1, v_2, \dots, v_n\}$ é L.D.
+
+    \item Se os vetores $\{v_1, v_2, \dots, v_n\}$ são L.D.,  então qualquer outro conjunto de vetores que contenha $\{v_1, v_2, \dots, v_n\}$  também é L.D. 
+    
+    \item Se $\{v_1, v_2, \dots, v_n\}$ é L.I.,  então qualquer subconjunto $\{v_{i_1}, v_{i_2}, \dots, v_{i_s}\}$  com $s < n$ também é L.I. 
+    
+    \item Seja $\{v_1, v_2, \dots, v_n\}$ um conjunto L.I.  Se $w$ é um vetor de $V$ tal que $\{v_1, v_2, \dots, v_n, w\}$  é L.D.,  então $w$ é uma combinação linear de $v_1$, $v_2$, \dots, $v_n$.
+  \end{enumerate}
+\end{proposicao}
+
+\begin{observacao}
+	Seja $V$ um $\cp{K}$-espaço vetorial. Se todo subconjunto próprio de $\{v_1, v_2, \dots, v_n\}$, isto é, todo subconjunto diferente de $\{v_1, v_2, \dots, v_n\}$ é L.I. não quer dizer que
+	$\{v_1, v_2, \dots, v_n\}$ é L.I.. Por exemplo, seja $V= \real^2$ um $\real$-espaço vetorial e considere o conjunto $\{(1,2), (1, 3), (1, 4)\}$. Observe que
+	\begin{enumerate}
+		\item $\{(1,2)\}$ é L.I.
+		\item $\{(1,4)\}$ é L.I.
+		\item $\{(1,5)\}$ é L.I.
+		\item $\{(1,2);(1,3)\}$ é L.I.
+		\item $\{(1,2);(1,5)\}$ é L.I.
+		\item $\{(1,3);(1,5)\}$ é L.I.
+	\end{enumerate}
+	e no entanto $\{(1, 2); (1, 3); (1, 5)\}$ é L.D. pois, por exemplo,
+	\[
+		2(1, 2) - 3(1, 3) + (1, 5) = (0, 0).
+	\]
+\end{observacao}
+\begin{proposicao}
+  Sejam $V$ um $\cp{K}$-espaço vetorial,  $n \ge 2$ e $\{v_1, v_2, \dots, v_n\}$ vetores de $V$.  Então $\{v_1, v_2, \dots, v_n\}$ é L.D.  se, e somente se, pelo menos um vetor $v_j$  for 
+  combinação linear dos demais $n - 1$ de $\{v_1, v_2, \dots, v_n\}$.
+\end{proposicao}
+
+\begin{definicao}
+  Seja $V$ um $\cp{K}$-espaço vetorial.  Um conjunto de vetores $\{v_1, v_2, \dots, v_n\}$  é chamado de uma \textbf{base}  de $V$ se: 
+  \begin{enumerate}[label={\roman*})]
+    \item $\{v_1, v_2, \dots, v_n\}$ é L.I. 
+
+    \item $V = Span(v_1, v_2, \dots, v_n)$,  ou seja, $\{v_1, v_2, \dots, v_n\}$ gera $V$.
+  \end{enumerate}
+\end{definicao}
+
+\begin{teorema}
+  Seja $V$ um espaço vetorial sobre $\cp{K}$.  Se $\{v_1, v_2, \dots, v_n\}$ é uma base de $V$,  então todo conjunto de vetores de $V$  com mais de $n$ elementos  é L.D. 
+\end{teorema}
+
+\begin{corolario}
+  Dado um $\cp{K}$-espaço vetorial $V$,  então quaisquer duas bases de $V$ possuem o mesmo número de vetores.
+\end{corolario}
+
+\begin{definicao}
+  Seja $V$ um espaço vetorial sobre $\cp{K}$.  A \textbf{dimensão} de $V$  é o número de vetores de uma base de $V$,  quando essa base é constituída de uma quantidade finita de vetores. 
+  Nesse caso vamos denotar esse número por $\dim_\cp{K}V$  ou simplesmente $\dim V$. 
+\end{definicao}
+
+\begin{observacoes}
+  \begin{enumerate}[label={\roman*})]
+    \item Se $V$ não possui base,  então $\dim V = 0$. 
+
+    \item Se $V$ possui uma base com infinitos vetores,  então $\dim V = \infty$.
+  \end{enumerate}
+\end{observacoes}
 %\begin{proposicao}
 %	Se $W_1$ e $W_1$ s\~ao subespa\c{c}os de um $\cp{K}$-espa\c{c}o vetorial $V$ ent\~ao
 %	\begin{enumerate}[label={\roman*})]
