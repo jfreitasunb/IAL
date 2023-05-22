@@ -6,22 +6,22 @@
 Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 
 \begin{definicao}
-	Um conjunto	n\~ao vazio $V$ \'e um \textbf{espa\c{c}o vetorial}\index{Espaço Vetorial} sobre um corpo $\cp{K}$ se em seus elementos,
-	chamados \textbf{vetores}\index{Espaço Vetorial!vetores}, estiverem definidas duas opera\c{c}\~oes satisfazendo:
+	Um conjunto	n\~ao vazio $V$ \'e um \textbf{espa\c{c}o vetorial}\index{Espaço vetorial} sobre um corpo $\cp{K}$ se em seus elementos,
+	chamados \textbf{vetores}\index{Espaço vetorial!vetores}, estiverem definidas duas opera\c{c}\~oes satisfazendo:
 	\begin{itemize}
 		\item[A)] A cada par $u$, $w \in V$ corresponde um vetor $u + w \in V$, chamado \textbf{soma} de $u$ e $w$, de modo que:
 		\item[A1)] $u + w = w + u$, para todos $u$, $w \in V$;
 		\item[A2)] $(u + w) + x = u + (w + x)$, para todos $u$, $w$, $x \in V$;
-		\item[A3)] Existe em $V$ um vetor, denominado \textbf{vetor nulo}\index{Espaço Vetorial!vetor nulo} e denotado por $0_V$, tal que
+		\item[A3)] Existe em $V$ um vetor, denominado \textbf{vetor nulo}\index{Espaço vetorial!vetor nulo} e denotado por $0_V$, tal que
 			\[
 				0_V + u = u
 			\]
 			para todo $u \in V$.
-		\item[A4)] Para cada vetor $u \in V$, existe um vetor em $V$, denotado por $-u$ e chamado de \textbf{vetor oposto},\index{Espaço Vetorial!vetor oposto} tal que
+		\item[A4)] Para cada vetor $u \in V$, existe um vetor em $V$, denotado por $-u$ e chamado de \textbf{vetor oposto},\index{Espaço vetorial!vetor oposto} tal que
 			\[
 				u + (-u) = 0_V.
 			\]
-		\item[M)] A cada par $\alpha \in \cp{K}$ e $u \in V$, corresponde um vetor $\alpha \cdot u \in V$, denominado \textbf{produto por escalar}\index{Espaço Vetorial!produto por escalar} de $\alpha$ por $u$ de modo que:
+		\item[M)] A cada par $\alpha \in \cp{K}$ e $u \in V$, corresponde um vetor $\alpha \cdot u \in V$, denominado \textbf{produto por escalar}\index{Espaço vetorial!produto por escalar} de $\alpha$ por $u$ de modo que:
 		\item[M1)] $(\alpha\beta)\cdot u = \alpha(\beta\cdot u)$ para todos $\alpha$, $\beta \in \cp{K}$ e todo $u \in V$;
 		\item[M2)] $1_\cp{K}\cdot u = u$ para todo $u \in V$, onde $1_\cp{K}$ \'e o elemento neutro da multiplica\c{c}\~ao em $\cp{K}$.
 		\item[D1)] $\alpha\cdot(u + w) = \alpha\cdot u + \alpha\cdot w$, para todo $\alpha \in \cp{K}$ e todos $u$, $w \in V$;
@@ -301,7 +301,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \end{exemplo}
 
 \begin{definicao}
-	Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$. Um vetor $w \in V$ \'e uma \textbf{combina\c{c}\~ao linear}\index{Espaço Vetorial!combina\c{c}\~ao linear} dos vetores $u_1$, $u_2$, \dots, $u_n \in V$ se existirem escalares
+	Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$. Um vetor $w \in V$ \'e uma \textbf{combina\c{c}\~ao linear}\index{Espaço vetorial!combina\c{c}\~ao linear} dos vetores $u_1$, $u_2$, \dots, $u_n \in V$ se existirem escalares
 	$\alpha_1$, $\alpha_2$, \dots, $\alpha_n \in \cp{K}$ tais que
 	\[
 		w = \alpha_1 u_1 + \alpha_2u_2 + \cdots + \alpha_nu_n = \sum_{i = 1}^n \alpha_iu_i.
@@ -433,7 +433,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \end{exemplo}
 
 \begin{definicao}
-	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. Um subconjunto n\~ao vazio $W$ de $V$ \'e um \textbf{subespa\c{c}o vetorial}\index{Espaço Vetorial!subespaço} de $V$ se $W$ é um espaço vetorial
+	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. Um subconjunto n\~ao vazio $W$ de $V$ \'e um \textbf{subespa\c{c}o vetorial}\index{Espaço vetorial!subespaço} de $V$ se $W$ é um espaço vetorial
 	sobre $\cp{K}$ com respeito às mesmas operações definidas em $V$.
 \end{definicao}
 
@@ -993,14 +993,14 @@ Esse caso motiva a seguinte definição:
 \begin{definicao}
   Seja $V$ um $\cp{K}$-espaço vetorial. Dados vetores $v_1$, $v_2$, \dots, $v_n$ em $V$ dizemos que:
   \begin{enumerate}[label={\roman*})]
-    \item o conjunto $\{v_1, v_2, \dots, v_n\}$ é \textbf{linearmente dependente} ou que os vetores $v_1$, $v_2$, \dots, $v_n$ são \textbf{linearmente dependentes}, 
+    \item o conjunto $\{v_1, v_2, \dots, v_n\}$ é \textbf{linearmente dependente}\index{Espaço vetorial!vetores linearmente dependente} ou que os vetores $v_1$, $v_2$, \dots, $v_n$ são \textbf{linearmente dependentes}, 
     	abreviado como L.D, se existem escalares
       $\alpha_1$, $\alpha_2$, \dots, $\alpha_n \in \cp{K}$, \textbf{não todos nulos}, tais que
       \[
         \alpha_1v_1 + \alpha_2v_2 + \cdots + \alpha_nv_n = 0_V.
       \]
 
-    \item o conjunto $\{v_1, v_2, \dots, v_n\}$ é \textbf{linearmente independente} ou que os vetores $v_1$, $v_2$, \dots, $v_n$ 
+    \item o conjunto $\{v_1, v_2, \dots, v_n\}$ é \textbf{linearmente independente}\index{Espaço vetorial!vetores linearmente independente} ou que os vetores $v_1$, $v_2$, \dots, $v_n$ 
     	são \textbf{linearmente independentes}, abreviado como L.I, se dados escalares
       $\alpha_1$, $\alpha_2$, \dots, $\alpha_n \in \cp{K}$  tais que
       \[
@@ -1230,7 +1230,7 @@ Esse caso motiva a seguinte definição:
 \end{proposicao}
 
 \begin{definicao}
-  Seja $V$ um $\cp{K}$-espaço vetorial.  Um conjunto de vetores $\{v_1, v_2, \dots, v_n\}$  é chamado de uma \textbf{base}  de $V$ se: 
+  Seja $V$ um $\cp{K}$-espaço vetorial.  Um conjunto de vetores $\{v_1, v_2, \dots, v_n\}$  é chamado de uma \textbf{base}\index{Espaço vetorial!base}  de $V$ se: 
   \begin{enumerate}[label={\roman*})]
     \item $\{v_1, v_2, \dots, v_n\}$ é L.I. 
 
@@ -1247,7 +1247,7 @@ Esse caso motiva a seguinte definição:
 \end{corolario}
 
 \begin{definicao}
-  Seja $V$ um espaço vetorial sobre $\cp{K}$.  A \textbf{dimensão} de $V$  é o número de vetores de uma base de $V$,  quando essa base é constituída de uma quantidade finita de vetores. 
+  Seja $V$ um espaço vetorial sobre $\cp{K}$.  A \textbf{dimensão}\index{Espaço vetorial!base} de $V$  é o número de vetores de uma base de $V$,  quando essa base é constituída de uma quantidade finita de vetores. 
   Nesse caso vamos denotar esse número por $\dim_\cp{K}V$  ou simplesmente $\dim V$. 
 \end{definicao}
 
@@ -1276,7 +1276,7 @@ Esse caso motiva a seguinte definição:
 	\end{enumerate}
 \end{exemplos}
 
-As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases canônicas} dos espaços vetoriais $V$ sobre o corpo $\cp{K}$ dado.
+As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases canônicas}\index{Espaço vetorial!base canônica} dos espaços vetoriais $V$ sobre o corpo $\cp{K}$ dado.
 \begin{exemplos}
 	\begin{enumerate}
 		\item Considerendo $V = \real$, $\cp{K} = \real$ uma base para esse espaço é dada pelo conjunto $\mathcal{B} = \{1\}$ pois tal conjunto é L.I. e gera $V$. Portanto $\dim_\real\real = 1$.
