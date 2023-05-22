@@ -993,8 +993,8 @@ Esse caso motiva a seguinte definição:
 \begin{definicao}
   Seja $V$ um $\cp{K}$-espaço vetorial. Dados vetores $v_1$, $v_2$, \dots, $v_n$ em $V$ dizemos que:
   \begin{enumerate}[label={\roman*})]
-    \item o conjunto $\{v_1, v_2, \dots, v_n\}$ é \textbf{linearmente dependente}\index{Espaço vetorial!vetores linearmente dependente} ou que os vetores $v_1$, $v_2$, \dots, $v_n$ são \textbf{linearmente dependentes}, 
-    	abreviado como L.D, se existem escalares
+    \item o conjunto $\{v_1, v_2, \dots, v_n\}$ é \textbf{linearmente dependente}\index{Espaço vetorial!vetores linearmente dependente} ou que os vetores $v_1$, $v_2$, \dots, $v_n$ 
+    	são \textbf{linearmente dependentes}, abreviado como L.D, se existem escalares
       $\alpha_1$, $\alpha_2$, \dots, $\alpha_n \in \cp{K}$, \textbf{não todos nulos}, tais que
       \[
         \alpha_1v_1 + \alpha_2v_2 + \cdots + \alpha_nv_n = 0_V.
@@ -1176,8 +1176,8 @@ Esse caso motiva a seguinte definição:
 				$\alpha_0 = \alpha_1 = \alpha_2 = \alpha_3 = \alpha_4 = \alpha_5 = 0$ e com isso o conjunto $\{1, x, x^2, x^3, x^4, x^5\}$ é linearmente independente.
 			\end{solucao}
 			
-		\item Seja $V$ um $\cp{K}$-espaço vetorial. Dados vetores não nulos $v_1$ e $v_2$ em $V$ então o conjunto $\{v_1, v_2\}$ é linearmente dependente quando existem escalares não nulos $a$, $b \in \cp{K}$
-			tais que
+		\item Seja $V$ um $\cp{K}$-espaço vetorial. Dados vetores não nulos $v_1$ e $v_2$ em $V$ então o conjunto $\{v_1, v_2\}$ é linearmente dependente quando existem escalares 
+			não nulos $a$, $b \in \cp{K}$ tais que
 			\begin{align*}
 				av_1 + bv_2 &= 0_v\\
 				av_1 &= -bv_2\\
@@ -1196,15 +1196,15 @@ Esse caso motiva a seguinte definição:
   \begin{enumerate}[label={\roman*})]
     \item O vetor nulo é linearmente dependente.
 
-    \item Todo vetor $v \ne 0_V$  é linearmente independente.
+    \item Todo vetor $v \ne 0_V$ é linearmente independente.
     
-    \item Dado um conjunto de vetores $\{v_1, v_2, \dots, v_n\}$  se $v_i = 0_V$ para algum $i$,  então $\{v_1, v_2, \dots, v_n\}$ é L.D.
+    \item Dado um conjunto de vetores $\{v_1, v_2, \dots, v_n\}$  se $v_i = 0_V$ para algum $i$, então $\{v_1, v_2, \dots, v_n\}$ é L.D.
 
-    \item Se os vetores $\{v_1, v_2, \dots, v_n\}$ são L.D.,  então qualquer outro conjunto de vetores que contenha $\{v_1, v_2, \dots, v_n\}$  também é L.D. 
+    \item Se os vetores $\{v_1, v_2, \dots, v_n\}$ são L.D., então qualquer outro conjunto de vetores que contenha $\{v_1, v_2, \dots, v_n\}$ também é L.D. 
     
-    \item Se $\{v_1, v_2, \dots, v_n\}$ é L.I.,  então qualquer subconjunto $\{v_{i_1}, v_{i_2}, \dots, v_{i_s}\}$  com $s < n$ também é L.I. 
+    \item Se $\{v_1, v_2, \dots, v_n\}$ é L.I., então qualquer subconjunto $\{v_{i_1}, v_{i_2}, \dots, v_{i_s}\}$ com $s < n$ também é L.I. 
     
-    \item Seja $\{v_1, v_2, \dots, v_n\}$ um conjunto L.I.  Se $w$ é um vetor de $V$ tal que $\{v_1, v_2, \dots, v_n, w\}$  é L.D.,  então $w$ é uma combinação linear de $v_1$, $v_2$, \dots, $v_n$.
+    \item Seja $\{v_1, v_2, \dots, v_n\}$ um conjunto L.I. Se $w$ é um vetor de $V$ tal que $\{v_1, v_2, \dots, v_n, w\}$ é L.D., então $w$ é uma combinação linear de $v_1$, $v_2$, \dots, $v_n$.
   \end{enumerate}
 \end{proposicao}
 
@@ -1225,37 +1225,37 @@ Esse caso motiva a seguinte definição:
 	\]
 \end{observacao}
 \begin{proposicao}
-  Sejam $V$ um $\cp{K}$-espaço vetorial,  $n \ge 2$ e $\{v_1, v_2, \dots, v_n\}$ vetores de $V$.  Então $\{v_1, v_2, \dots, v_n\}$ é L.D.  se, e somente se, pelo menos um vetor $v_j$  for 
+  Sejam $V$ um $\cp{K}$-espaço vetorial, $n \ge 2$ e $\{v_1, v_2, \dots, v_n\}$ vetores de $V$. Então $\{v_1, v_2, \dots, v_n\}$ é L.D. se, e somente se, pelo menos um vetor $v_j$ for 
   combinação linear dos demais $n - 1$ de $\{v_1, v_2, \dots, v_n\}$.
 \end{proposicao}
 
 \begin{definicao}
-  Seja $V$ um $\cp{K}$-espaço vetorial.  Um conjunto de vetores $\{v_1, v_2, \dots, v_n\}$  é chamado de uma \textbf{base}\index{Espaço vetorial!base}  de $V$ se: 
+  Seja $V$ um $\cp{K}$-espaço vetorial. Um conjunto de vetores $\{v_1, v_2, \dots, v_n\}$ é chamado de uma \textbf{base}\index{Espaço vetorial!base} de $V$ se: 
   \begin{enumerate}[label={\roman*})]
     \item $\{v_1, v_2, \dots, v_n\}$ é L.I. 
 
-    \item $V = Span(v_1, v_2, \dots, v_n)$,  ou seja, $\{v_1, v_2, \dots, v_n\}$ gera $V$.
+    \item $V = Span(v_1, v_2, \dots, v_n)$, ou seja, $\{v_1, v_2, \dots, v_n\}$ gera $V$.
   \end{enumerate}
 \end{definicao}
 
 \begin{teorema}
-  Seja $V$ um espaço vetorial sobre $\cp{K}$.  Se $\{v_1, v_2, \dots, v_n\}$ é uma base de $V$,  então todo conjunto de vetores de $V$  com mais de $n$ elementos  é L.D. 
+  Seja $V$ um espaço vetorial sobre $\cp{K}$. Se $\{v_1, v_2, \dots, v_n\}$ é uma base de $V$, então todo conjunto de vetores de $V$ com mais de $n$ elementos é L.D. 
 \end{teorema}
 
 \begin{corolario}
-  Dado um $\cp{K}$-espaço vetorial $V$,  então quaisquer duas bases de $V$ possuem o mesmo número de vetores.
+  Dado um $\cp{K}$-espaço vetorial $V$, então quaisquer duas bases de $V$ possuem o mesmo número de vetores.
 \end{corolario}
 
 \begin{definicao}
-  Seja $V$ um espaço vetorial sobre $\cp{K}$.  A \textbf{dimensão}\index{Espaço vetorial!base} de $V$  é o número de vetores de uma base de $V$,  quando essa base é constituída de uma quantidade finita de vetores. 
-  Nesse caso vamos denotar esse número por $\dim_\cp{K}V$  ou simplesmente $\dim V$. 
+  Seja $V$ um espaço vetorial sobre $\cp{K}$. A \textbf{dimensão}\index{Espaço vetorial!base} de $V$ é o número de vetores de uma base de $V$, quando essa base é constituída de 
+  uma quantidade finita de vetores. Nesse caso vamos denotar esse número por $\dim_\cp{K}V$ ou simplesmente $\dim V$. 
 \end{definicao}
 
 \begin{observacoes}
   \begin{enumerate}[label={\roman*})]
-    \item Se $V$ não possui base,  então $\dim V = 0$. 
+    \item Se $V$ não possui base, então $\dim V = 0$. 
 
-    \item Se $V$ possui uma base com infinitos vetores,  então $\dim V = \infty$.
+    \item Se $V$ possui uma base com infinitos vetores, então $\dim V = \infty$.
   \end{enumerate}
 \end{observacoes}
 
