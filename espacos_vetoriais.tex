@@ -1080,6 +1080,53 @@ Esse caso motiva a seguinte definição:
 			cuja solução é dada por $y = -z/2$, $x =-z/2$, $z \in \real$. Portanto esse
 			sistema homogêneo admite solucão não trivial e então o conjunto
 			$\{v_1 = (1, -2, 3), v_2 = (5, 6, -1), v_3 = (3, 2, 1)\}$ é linearmente dependente.
+
+		\item No $\rac$-espaço vetorial $M_2(\rac)$ considere os vetores
+			\[
+				v_1 = \begin{bmatrix}1 & 0\\1 & 1\end{bmatrix},
+				v_2 = \begin{bmatrix}-1 & 1\\1 & 0\end{bmatrix},
+				v_3 = \begin{bmatrix}-2 & 2\\3 & 4\end{bmatrix}.
+			\]
+			O conjunto $\{u_1, u_2, u_3\}$ é L.D. ou L.I.?
+			\begin{solucao}
+				Para determinar isso, sejam $x$, $y$ e $z \in \rac$ tais que
+				\[
+					xu_1 + yu_2 + zu_3 = 0_{M_2(\rac)}.
+				\]
+				Temos
+				\begin{align*}
+					x\begin{bmatrix}1 & 0\\1 & 1\end{bmatrix}
+					+ y\begin{bmatrix}-1 & 1\\1 & 0\end{bmatrix}
+					+ z\begin{bmatrix}-2 & 2\\3 & 4\end{bmatrix}
+															 &= \begin{bmatrix}0 & 0\\0 & 0\end{bmatrix}
+					\\\begin{bmatrix}x & 0\\x & x\end{bmatrix}
+					+ \begin{bmatrix}-y & y\\y & 0\end{bmatrix}
+					+ \begin{bmatrix}-2z & 2z\\3z & 4z\end{bmatrix}
+															 &= \begin{bmatrix}0 & 0\\0 & 0\end{bmatrix}.
+					\\\begin{bmatrix} x - y - 2z & y + 2z\\x + y + 3z & x + 4z\end{bmatrix} &= \begin{bmatrix}0 & 0\\0 & 0\end{bmatrix}
+				\end{align*}
+				com isso obtemos o sistema homogêneo:
+				\[
+					\begin{cases}
+						x - y - 2z = 0\\
+						y + 2z = 0\\
+						x + y + z = 0\\
+						x + 4z = 0
+					\end{cases}
+				\]
+				Escalonando
+				\begin{align*}
+					\begin{bmatrix}
+						1 & -1 & -2\\
+						0 & 1 & 2\\
+						1 & 1 & 1\\
+						1 & 0 & 4
+					\end{bmatrix}
+					\begin{array}{l}
+						l
+					\end{array}
+				\end{align*}
+			\end{solucao}
 	\end{enumerate}
 \end{exemplos}
 
