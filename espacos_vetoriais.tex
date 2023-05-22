@@ -1174,10 +1174,20 @@ Esse caso motiva a seguinte definição:
 				\]
 				Essa expressão significa que o polinômio $p(x) = \alpha_0 + \alpha_1x + \alpha_2x^2 + \alpha_3x^3 + \alpha_4x^4 + \alpha_5x^5$ possui infinitas raizes em $\real$, o que é impossível. Logo
 				$\alpha_0 = \alpha_1 = \alpha_2 = \alpha_3 = \alpha_4 = \alpha_5 = 0$ e com isso o conjunto $\{1, x, x^2, x^3, x^4, x^5\}$ é linearmente independente.
-
 			\end{solucao}
-
-
+			
+		\item Seja $V$ um $\cp{K}$-espaço vetorial. Dados vetores não nulos $v_1$ e $v_2$ em $V$ então o conjunto $\{v_1, v_2\}$ é linearmente dependente quando existem escalares não nulos $a$, $b \in \cp{K}$
+			tais que
+			\begin{align*}
+				av_1 + bv_2 &= 0_v\\
+				av_1 &= -bv_2\\
+				v_1 &= -\dfrac{b}{a}v_2
+			\end{align*}
+			Fazendo $-b/a = \lambda \in \cp{K}$ podemos escrever
+			\[
+				v_1 = \lambda v_2 \mbox{ ou } v_2 = \dfrac{1}{\lambda}v_1.
+			\]
+			Portanto, um conjunto contendo somente dois vetores é linearmente dependente se, e somente se, os vetores são múltiplos escalares um do outro.
 	\end{enumerate}
 \end{exemplos}
 
