@@ -1009,6 +1009,80 @@ Esse caso motiva a seguinte definição:
       então $\alpha_1 = \alpha_2 = \cdots = \alpha_n = 0$.
   \end{enumerate}
 \end{definicao}
+
+\begin{exemplos}
+	\begin{enumerate}
+		\item Considere o $\real$-espaço vetorial $\real^2$. O conjunto $\{(1, 0); (0, 1)\}$ é linearmente independente, pois se $a$, $b \in \real$ são tais que
+			\[
+				a(1, 0) + b(0, 1) = (0, 0)
+			\]
+			segue que $a = b = 0$.
+		\item Considere o $\real$-espaço vetorial $\real^2$. O conjunto $\{(1, 2); (1, 3)\}$ é linearmente independente, 
+			pois vimos no exemplo anterior que para todo $(x, y) \in \real^2$, existem únicos 
+			$a$, $b \in \real$ dados por $a = 3x - y$ e $b = y - 2x$, de modo que
+			\[
+				a(1, 1) + b(1, 3) = (x, y).
+			\]
+			Assim se $a$, $b \in \real$ são tais que
+			\[
+				a(1, 2) + b(1, 3) = (x, y)
+			\]
+			então segue que $a = b = 0$.
+
+		\item No $\real$-espaço vetorial $\real^3$ o conjunto $\{v_1 = 1, -2, 3), v_2 = (5, 6, -1), v_3 = (3, 2, 1)\}$ é linearmente dependente. De fato,
+			sejam $x$, $y$ e $z \in \real$ tais que
+			\begin{align*}
+				xv_1 + yv_2 + zv_3 &= (0, 0, 0)\\
+				x(1, -2, 3) + y(5, 6, -1) + z(3, 2, 1) &= (0, 0, 0)\\
+				(x, -2x, 3x) + (5y, 6y, -y) + (3z, 2z, z) &= (0, 0, 0)\\
+				(x + 5y + 3z, -2x + 6y + 2z, 3x - y + z) &= (0, 0, 0)
+			\end{align*}
+			que resulta no sistema linear homogêneo:
+			\[
+				\begin{cases}
+					x + 5y + 3z = 0\\
+					-2x + 6y + 2z = 0\\
+					3x - y + z = 0
+				\end{cases}
+			\]
+			Escalonando esse sistema:
+			\begin{align*}
+				\begin{bmatrix}
+					1 & 5 & 3\\
+					-2 & 6 & 2\\
+					3 & -1 & 1
+				\end{bmatrix}
+				\begin{array}{l}
+					\phantom{x}\\L_2 \to L_2 + 2L_1\\L_3 \to L_3 - 3L_1
+				\end{array}&\sim
+				\begin{bmatrix}
+					1 & 5 & 3\\
+					0 & 16 & 8\\
+					0 & -16 & -8
+				\end{bmatrix}
+				\begin{array}{l}
+					\phantom{x}\\L_2 \to (-1/16)L_2\phantom{x}
+				\end{array}\\&\sim
+				\begin{bmatrix}
+					1 & 5 & 3\\
+					0 & 1 & 1/2\\
+					0 & -16 & -8
+				\end{bmatrix}
+				\begin{array}{l}
+					\phantom{x}\\\phantom{x}\\L_3 \to L_3 + 16L_2
+				\end{array}\\&\sim
+				\begin{bmatrix}
+					1 & 5 & 3\\
+					0 & 1 & 1/2\\
+					0 & 0 & 0
+				\end{bmatrix}
+			\end{align*}
+			cuja solução é dada por $y = -z/2$, $x =-z/2$, $z \in \real$. Portanto esse
+			sistema homogêneo admite solucão não trivial e então o conjunto
+			$\{v_1 = 1, -2, 3), v_2 = (5, 6, -1), v_3 = (3, 2, 1)\}$ é linearmente dependente.
+	\end{enumerate}
+\end{exemplos}
+
 %\begin{proposicao}
 %	Se $W_1$ e $W_1$ s\~ao subespa\c{c}os de um $\cp{K}$-espa\c{c}o vetorial $V$ ent\~ao
 %	\begin{enumerate}[label={\roman*})]
