@@ -37,39 +37,11 @@
 \end{exercicio}
 
 \begin{exercicio}
-  Seja
-  \[
-    \mathcal{C}[0,1] = \{ f : [0,1] \to \real \mid f \mbox{ \'e cont{\'\i}nua}\}
-  \]
-  um $\real$-espa\c{c}o vetorial. Defina
-  \[
-    f_1(t) = t\qquad \mbox{ e }\qquad f_2(t) = t^4
-  \]
-  para $0 \le t \le 1$. Sejam
-  \begin{align*}
-    W_1 &= \{ \alpha f_1 + \beta f_2 \mid \alpha, \beta \in \real\}\\
-    W_2 &= \left\{ g(t) \in \mathcal{C}[0,1] \mid \int_0^1tg(t)\,dt = 0 \mbox{ e } \int_0^1t^4g(t)\,dt = 0\right\}.
-  \end{align*}
-  Mostre que $W_1$ e $W_2$ s\~ao subespa\c{c}os vetoriais de $\mathcal{C}[0,1]$.
-\end{exercicio}
-\begin{exercicio}
-  Sejam $W_1$ e $W_2$ subespa\c{c}os de um $\cp{K}$-espa\c{c}o vetorial $V$.
-  \begin{enumerate}[label={\alph*})]
-    \item D\^e um exemplo mostrando que $W_1 \cup W_2$ pode n\~ao ser subespa\c{c}o de $V$.
-    \item Prove que $W_1 \cup W_2$ \'e um subespa\c{c}o de $V$ se, e somente se, $W_1 \subseteq W_2$ ou $W_2 \subseteq W_1$.
-  \end{enumerate}
-\end{exercicio}
-
-\begin{exercicio}
   Sejam $W_1$ e $W_2$ subespa\c{c}os de um espa\c{c}o vetorial $V$ sobre $\cp{K}$ tais que $W_1 \cap W_2 = \{0_V\}$,
   \begin{enumerate}[label={\alph*})]
     \item Mostre que se $\mathcal{B}_1$ e $\mathcal{B}_2$ s\~ao conjuntos L.I. em $W_1$ e $W_2$, respectivamente, ent\~ao $\mathcal{B}_1 \cup \mathcal{B}_2$ \'e L.I. em $V$.
     \item Mostre que se $\mathcal{B}_1$ e $\mathcal{B}_2$ s\~ao bases de $W_1$ e $W_2$, respectivamente, ent\~ao $\mathcal{B}_1 \cup \mathcal{B}_2$ \'e base de $W_1 + W_2$.
   \end{enumerate}
-\end{exercicio}
-
-\begin{exercicio}
-  Sejam $V$ um $\cp{K}$-espa\c{c}o vetorial e $S \sub V $ um subconjunto n\~ao vazio de $V$. Mostre que $S$ \'e um subespa\c{c}o vetorial de $V$ se, e somente se, $S + S \sub S$ e $\lambda S \sub S$ para cada $\lambda \in \cp{K}$.
 \end{exercicio}
 
 \begin{exercicio}
@@ -82,24 +54,6 @@
 \end{exercicio}
 
 \begin{exercicio}
-  Seja $V$ um $\cp{K}$-espa\c{c}o vetorial e $\{v_1,\dots,v_n\} \sub V$. Mostre que $[v_1,\dots,v_n]$ \'e um $\cp{K}$-subespa\c{c}o vetorial de $V$.
-\end{exercicio}
-
-\begin{exercicio}
-  Considere o subespa\c{c}o $S = [(1,1,-2,4),(1,1,-1,2),(1,4,-4,8)]$ de $\real^4$.
-  \begin{enumerate}[label={\alph*})]
-    \item O vetor $(2/3, 1, -1, 2)$ pertence a $S$?
-    \item O vetor $(0, 0, 1, 1)$ pertence a $S$?
-  \end{enumerate}
-  \begin{solucao}
-    \begin{enumerate}[label={\alph*})]
-      \item Sim.
-      \item N\~ao.
-    \end{enumerate}
-  \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
   Sejam $u = (2, 0 , -1)$, $v = (3, 1 , 0)$ e $w = (1, -1 , c)$ onde $c \in \real$. Para qual(is) valor(es) de $c \in \real$ o conjunto $\{u, v, w\}$ \'e uma base de $\real^3$?
 \end{exercicio}
 
@@ -109,23 +63,6 @@
 
 \begin{exercicio}
   Em $\real^4$ seja $W_1$ o subespa\c{c}o gerado por $(1,1,1,0)$ e $(0,-4,1,5)$ e seja $W_2$ o subespa\c{c}o gerado por $(0,-2,1,2)$ e $(1,-1,1,3)$. Determine $\dim_\real(W_1 + W_2)$ e $\dim_\real(W_1 \cap W_2)$.
-\end{exercicio}
-
-\begin{exercicio}
-  Seja $W$ o subespa\c{c}o de $M_2(\real)$ definido por
-  \[
-    W = \left\{\begin{bmatrix}2a & a + 2b\\0 & a - b\end{bmatrix} \mid a, b \in \real\right\}.
-  \]
-  \begin{enumerate}[label={\alph*})]
-      \item $\begin{bmatrix}0 & -2\\0 & 1\end{bmatrix} \in W$?
-      \item $\begin{bmatrix}0 & 2\\3 & 1\end{bmatrix} \in W$?
-    \end{enumerate}
-  \begin{solucao}
-  \begin{enumerate}[label={\alph*})]
-      \item Sim.
-      \item N\~ao.
-    \end{enumerate}
-  \end{solucao}
 \end{exercicio}
 
 \begin{exercicio}
@@ -165,7 +102,6 @@ Encontre uma base e a dimens\~ao de $W$.
 \begin{exercicio}
   Considere o subespa\c{c}o de $\real^4$ gerado pelos vetores $v_1 = (1, -1, 0, 0)$, $v_2 = (0, 0, 1, 1)$, $v_3 = (2, -2, 1, 1)$ e $v_4 = (1, 0, 0, 0)$.
   \begin{enumerate}[label={\alph*})]
-    \item O vetor $(2, -3, 2, 2) \in [v_1, v_2, v_3, v_4]$? Justifique.
     \item Exiba uma base para $[v_1, v_2, v_3, v_4]$. Qual \'e a dimens\~ao?
     \item $[v_1, v_2, v_3, v_4] = \real^4$? Por qu\^e?
   \end{enumerate}
@@ -176,24 +112,6 @@ Encontre uma base e a dimens\~ao de $W$.
       \item N\~ao.
     \end{enumerate}
   \end{solucao}
-\end{exercicio}
-
-
-\begin{exercicio}
-  Considere o sistema linear
-  \begin{equation}\label{sistema}
-    \begin{cases}
-      2x_1 + 4x_2 - 6x_3 = \alpha\\
-      x_1 - x_2 + 4x_3 = \beta\\
-      6x_2 - 14x_3 = \gamma
-    \end{cases}.
-  \end{equation}
-  Seja $W = \{(x_1, x_2, x_3) \in \real^3 \mid (x_1, x_2, x_3) \mbox{\'e solu\c{c}\~ao de } \eqref{sistema}\}$.
-  \begin{enumerate}[label={\alph*})]
-    \item Que condi\c{c}\~oes devemos impor a $\alpha$, $\beta$ e $\gamma$ para que $W$ seja subespa\c{c}o vetorial de $\real^3$.
-    \item Nas condi\c{c}\~oes determinadas em \textit{a)} encontre uma base para $W$.
-    \item Que rela\c{c}\~ao existe entre a dimens\~ao de $W$ e o grau de liberdade do sistema?
-  \end{enumerate}
 \end{exercicio}
 
 \begin{exercicio}
