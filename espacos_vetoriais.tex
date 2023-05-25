@@ -1377,8 +1377,8 @@ As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases can�
         Como $W = Span(v_1, v_2, v_3, v_4)$, então o conjunto $\{v_1, v_2, v_3, v_4\}$ gera $W$. Para que esse conjunto também seja uma base de $W$ ele precisa ser L.I.. Para verificar isso, sejam $a_1$, $a_2$, $a_3$, $a_4 \in \real$ tais que
         \begin{align*}
           a_1v_1 + a_2v_2 + a_3v_3 + a_4v_4 &= (0, 0, 0, 0)\\
-          a_1(1, -1, 0, 0) + a_2(0, 0, 1, 1) + a_3(2, -2, 1, 1) + a_4(1, 0, 0, 0) = (0, 0, 0, 0)\\
-          (a_1, -a_1, 0, 0) + (0, 0, a_2, a_2) + (2a_3, -2a_3, a_3, a_3) + (a_4, 0, 0, 0) = (0, 0, 0, 0)
+          a_1(1, -1, 0, 0) + a_2(0, 0, 1, 1) + a_3(2, -2, 1, 1) + a_4(1, 0, 0, 0) &= (0, 0, 0, 0)\\
+          (a_1, -a_1, 0, 0) + (0, 0, a_2, a_2) + (2a_3, -2a_3, a_3, a_3) + (a_4, 0, 0, 0) &= (0, 0, 0, 0)
         \end{align*}
         que resulta no sistema
         \[
@@ -1392,10 +1392,10 @@ As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases can�
         A matriz do sistema é:
         \[
           \begin{bmatrix}
-            1 & 0 & 2 & 1\\
+            \phantom{-}1 & 0 & \phantom{-}2 & 1\\
             -1 & 0 & -2 & 0\\
-            0 & 1 & 1 & 0\\
-            0 & 1 & 1 & 0
+            \phantom{-}0 & 1 & \phantom{-}1 & 0\\
+            \phantom{-}0 & 1 & \phantom{-}1 & 0
           \end{bmatrix}
         \]
         cuja solução é dada por
@@ -1413,19 +1413,19 @@ As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases can�
         onde $x$, $y$, $z \in \real$ possui matriz de coeficientes:
         \begin{align*}
           \begin{bmatrix}
-            1 & 2 & 1\\
+            \phantom{-}1 & \phantom{-}2 & 1\\
             -1 & -2 & 0\\
-            0 & 1 & 0\\
-            0 & 1 & 0
+            \phantom{-}0 & \phantom{-}1 & 0\\
+            \phantom{-}0 & \phantom{-}1 & 0
           \end{bmatrix}
           \begin{array}{l}
             \phantom{x}\\L_2 \to L2 + L_1\\\phantom{x}\\L_4 \to L_4 - L_3
           \end{array}\sim
           \begin{bmatrix}
-            1 & 2 & 1\\
+            1 & 2 & \phantom{-}1\\
             0 & 0 & -1\\
-            0 & 1 & 0\\
-            0 & 0 & 0
+            0 & 1 & \phantom{-}0\\
+            0 & 0 & \phantom{-}0
           \end{bmatrix}
         \end{align*}
         cuja solução será $x = y = z = 0$. Portanto, $\{v_1, v_3, v_4\}$ gera $W$ e é L.I., logo é uma base para $W = Span(v_1, v_2, v_3, v_4) = Span(v_1, v_3, v_4)$ e com isso $\dim_\real W = 3$.
