@@ -1325,7 +1325,7 @@ As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases can�
       Com a adição dessa matrizes o conjunto $\mathcal{B} = \{E_{12}, E_{12}, E_{21}, E_{22}, F_{12}, F_{12}, F_{21}, F_{22}\}$ continua sendo linearmente independente e gera $V = M_2(\complex)$
       como um $\real$-espaço vetorial Logo é uma base para $M_2(\complex)$ como um $\real$-espaço vetorial. Portanto $\dim_\real M_2(\complex) = 8$.
 
-      \item Seja $V = M_2(\complex)$ um $\complex$-espaço vetorial. Sejam
+    \item\label{basecanonicaM2complexo} Seja $V = M_2(\complex)$ um $\complex$-espaço vetorial. Sejam
       \[
         E_{11} = \begin{bmatrix}1 & 0\\0 & 0\end{bmatrix},
         E_{12} = \begin{bmatrix}0 & 1\\0 & 0\end{bmatrix},
@@ -1549,3 +1549,45 @@ As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases can�
   \]
  e vamos dizer que esse vetor  é o \textbf{vetor das coordenadas de $u$ com respeito à base $\mathcal{B}$}.
 \end{notacao}
+
+\begin{exemplos}
+  \begin{enumerate}
+    \item Considere $V = \real^2$ um espaço vetorial sobre $\real$. Tomando a base canônica de $\real^2$, $\mathcal{B} = \{e_1 = (1, 0); e_2 = (0, 1)\}$ temos
+      \[
+        (x, y) = xe_1 + ye_2[
+      \]
+      para todo $(x, y) \in \real^2$. Assim as coordenadas de um vetor qualquer $u = (x, y)$ em relação à base $\mathcal{B} = \{e_1 = (1, 0); e_2 = (0, 1)\}$ são
+      \[
+        [u]_\mathcal{B} = [(x, y)]_\mathcal{B} = \begin{bmatrix}x\\y\end{bmatrix}_\mathcal{B}.
+      \]
+
+    \item Agora em $V = \real^2$, também como um $\real$-espaço vetorial, podemos considerar a base $\mathcal{B}_1 = \{v_1 = (1, 2); v_2 = (1, 3)\}$. Com respeito à essa base, um vetor qualquer $u = (x, y) \in \real^2$ é escrito como
+      \[
+        x = (x, y) = (3x - y)v_1 + (y - 2x)v_2.
+      \]
+      Logo as coordenadas do vetor $u$ com relação à base $\mathcal{B}_1$ são:
+      \[
+        [u]_{\mathcal{B}_1} = [(x, y)]_{\mathcal{B}_1} = \begin{bmatrix}3x - y\\y - 2x\end{bmatrix}_{\mathcal{B}_1}.
+      \]
+      Por exemplo,
+      \begin{align*}
+        [(1, 0)]_\mathcal{B} = \begin{bmatrix}3\\-2\end{bmatrix}_\mathcal{B},
+        [(0, 1)]_\mathcal{B} = \begin{bmatrix}-1\\1\end{bmatrix}_\mathcal{B},
+        [(0, 0)]_\mathcal{B} = \begin{bmatrix}0\\0\end{bmatrix}_\mathcal{B},
+        [(1, 2)]_\mathcal{B} = \begin{bmatrix}1\\0\end{bmatrix}_\mathcal{B},
+        [(1, 3)]_\mathcal{B} = \begin{bmatrix}0\\1\end{bmatrix}_\mathcal{B},
+      \end{align*}
+
+    \item Seja $V = M_2(\complex)$ um espaço vetorial sobre $\complex$ e considere a base canônica de $M_2(\complex)$ $\mathcal{B}$, dada em \ref{basecanonicaM2complexo}. Para todo vetor
+      \[
+        u = \begin{bmatrix}
+          a_{11} & a_{12}\\
+          a_{21} & a_{22}
+        \end{bmatrix}
+      \]
+      as coordenadas de $u$ em relação a essa base serão:
+      \[
+        [u]_\mathcal{B} = \begin{bmatrix}a_{11}\\a_{12}\\a_{21}\\a_{22}\end{bmatrix}_\mathcal{B}.
+      \]
+  \end{enumerate}
+\end{exemplos}
