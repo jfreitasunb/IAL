@@ -1430,6 +1430,96 @@ As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases can�
 				\end{align*}
 				cuja solução será $x = y = z = 0$. Portanto, $\{v_1, v_3, v_4\}$ gera $W$ e é L.I., logo é uma base para $W = Span(v_1, v_2, v_3, v_4) = Span(v_1, v_3, v_4)$ e com isso $\dim_\real W = 3$.
 			\end{solucao}
+
+		\item Prove que o conjunto
+			\[
+				\mathcal{B} = \{4 + 6x + x^2; -1 + 4x + 2x^2; 5 + 2x + x^2\}
+			\]
+			é uma base para $\mathcal{P}_2(\rac)$ como um espaço vetorial sobre $\rac$.
+			\begin{solucao}
+				Para provar que $\mathcal{B}$ é uma base para $\mathcal{P}_2(\rac)$ precisamos mostrar que $\mathcal{B}$ gera $\mathcal{P}_2(\rac)$ e é L.I.
+
+				Primeiro mostremos que todo vetor de $\mathcal{P}_2(\rac)$ é uma combinação linear dos vetores de $\mathcal{B}$. Para isso seja $p(x) = a + bx + cx^2 \in \mathcal{P}_2(\rac)$. Queremos saber se existem escalares $\alpha_0$, $\alpha_1$, $\alpha_2 \in \real$ tais que:
+				\begin{align*}
+					\alpha_0(4 + 6x + x^2) + \alpha_1(-1 + 4x + 2x^2) + \alpha_2(5 + 2x + x^2) &= a + bx + cx^2\\
+					4\alpha_0 + 6\alpha_0 x + \alpha_0 x^2 - \alpha_1 + 4\alpha_1 x + 2\alpha_1 x^2 + 5\alpha_2 + 2\alpha_2 x + \alpha_2 x^2 &= a + bx + cx^2\\
+					(4\alpha_0 - \alpha_1 + 5\alpha_2) + (6\alpha_0 + 4\alpha_1 + 2\alpha_2)x + \alpha_0 + 2\alpha_1 + \alpha_2)x^2 &= a + bx + cx^2
+				\end{align*}
+				Assim, obtemos o sistema linear
+				\begin{align}\label{sistemapolinomios}
+					\begin{cases}
+						4\alpha_0 - \alpha_1 + 5\alpha_2  a\\
+						6\alpha_0 + 4\alpha_1 + 2\alpha_2 = b\\
+						\alpha_0 + 2\alpha_1 + \alpha_2 = c
+					\end{cases}
+				\end{align}	
+				Montando a matriz ampliada e escalonando:
+				\begin{align}\label{escalonamentopolinomios}
+					\begin{amatrix}{3}
+						4 & -1 & 5 & a\\
+						6 & 4 & 2 & b\\
+						1 & 2 & 1 & c
+					\end{amatrix}
+					\begin{array}{l}
+						L_1 \leftrightarrow L_3\\\phantom{x}\\\phantom{x}
+					\end{array}\nonumber&\sim
+					\begin{amatrix}{3}
+						1 & 2 & 1 & c\\
+						6 & 4 & 2 & b\\
+						4 & -1 & 5 & a
+					\end{amatrix}
+					\begin{array}{l}
+						\phantom{x}\\L_2 \to L_2 - 6L_1\\L_3 \to L_3 - 4L_1
+					\end{array}\\\nonumber&\sim
+					\begin{amatrix}{3}
+						1 & 2 & 1 & c\\
+						0 & -10 & -10 & b - 6c\\
+						0 & -9 & 1 & a - 4c
+					\end{amatrix}
+					\begin{array}{l}
+						\phantom{x}\\L_2 \to (-1/10)L_2\\\phantom{x}
+					\end{array}\\\nonumber&\sim
+					\begin{amatrix}{3}
+						1 & 2 & 1 & c\\
+						0 & 1 & 1 & (6c - b)/10\\
+						0 & -9 & 1 & a - 4c
+					\end{amatrix}
+					\begin{array}{l}
+						\phantom{x}\\\phantom{x}\\L_3 \to L_3 + 9L_2
+					\end{array}\\\nonumber&\sim
+					\begin{amatrix}{3}
+						1 & 2 & 1 & c\\
+						0 & 1 & 1 & (6c - b)/10\\
+						0 & 0 & 10 & a - 4c + 9(6c - b)/10
+					\end{amatrix}
+					\begin{array}{l}
+						\phantom{x}\\\phantom{x}\\L_3 \to (1/10)L_3
+					\end{array}\\&\sim
+					\begin{amatrix}{3}
+						1 & 2 & 1 & c\\
+						0 & 1 & 1 & (6c - b)/10\\
+						0 & 0 & 1 & (a - 4c + 9(6c - b)/10)10
+					\end{amatrix}
+				\end{align}
+				independente dos valores de $a$, $b$ e $c$ esse sistema sempre possui solução. Portanto qualquer vetor de $\mathcal{P}_2(\rac)$ é uma combinação linear dos vetores em $\mathcal{B}$, isto é, $\mathcal{B}$ gera $\mathcal{P}_2(\rac)$.
+
+				Agora precisamos provar que $\mathcal{B}$ é L.I.. Para isso, sejam $\beta_0$, $\beta_1$, $\beta_2 \in \rac$ tais que
+				\[
+					\beta_0(4 + 6x + x^2) + \beta_1(-1 + 4x + 2x^2) + \beta_2(5 + 2x + x^2) = 0.
+				\]
+				O sistema que obteremos dessa equação é o mesmo que aparece em \eqref{sistemapolinomios} somente fazendo $a = b = c = 0$. Assim a matriz que obteremos após o escalonamento é a mesma obtida em \eqref{escalonamentopolinomios}, novamente fazendo $a = b = c = 0$:
+				\[
+					\begin{amatrix}{3}
+						1 & 2 & 1 & 0\\
+						0 & 1 & 1 & 0\\
+						0 & 0 & 1 & 0
+					\end{amatrix}
+				\]
+				cuja solução é $\beta_0 = \beta_1 = \beta_2 = 0$. Logo $\mathcal{B}$ é linearmente independente.
+
+				Portanto $\mathcal{B}$ é uma base para $\mathcal{P}_2(\rac)$ como um $\rac$-espaço vetorial.
+			\end{solucao}
+
 	\end{enumerate}
 \end{exemplos}
 %\begin{proposicao}
