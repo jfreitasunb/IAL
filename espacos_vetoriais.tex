@@ -1519,9 +1519,36 @@ As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases can�
 
         Portanto $\mathcal{B}$ é uma base para $\mathcal{P}_2(\rac)$ como um $\rac$-espaço vetorial.
       \end{solucao}
-
   \end{enumerate}
 \end{exemplos}
+
+\begin{teorema}
+  Seja $V$ um espaço vetorial sobre um corpo $\cp{K}$  com $\dim_\cp{K}V = n$.  Se o conjunto $\{v_1, v_2, \dots, v_n\}$  é linearmente independente,  então o conjunto $\{v_1, v_2, \dots, v_n\}$ é uma base de $V$.
+\end{teorema}
+
+\begin{teorema}
+ Seja $V$ um $\cp{K}$-espaço vetorial  e $\mathcal{B} = \{v_1, v_2, \dots, v_n\}$ uma base de $V$.  Então todo vetor $u \in V$  pode ser escrito, de forma única,  como uma combinação linear dos vetores de $\mathcal{B}$.
+\end{teorema}
+
+\begin{definicao}
+  Sejam $V$ um $\cp{K}$-espaço vetorial  e $\mathcal{B} = \{v_1, v_2, \dots, v_n\}$ uma base de $V$,  isto é, $\dim_\cp{K}V = n$.  Para cada vetor $u \in V$  podemos escrever
+  \[
+    u = \alpha_1v_1 + \alpha_2v_2 + \cdots + \alpha_nv_n
+  \]
+  para únicos escalares  $\alpha_1$, $\alpha_2$, \dots, $\alpha_n \in \cp{K}$.  Tais escalares são chamados de \textbf{coordenadas de $v$ com respeito à base $\mathcal{B}$}.
+\end{definicao}
+
+\begin{notacao}
+  Se $u = \alpha_1v_1 + \alpha_2v_2 + \cdots + \alpha_nv_n$,  então vamos denotar as coordenadas de $u$  em relação à base $\mathcal{B}$ por
+  \[
+    u_\mathcal{B} = (\alpha_1, \alpha_2, \dots, \alpha_n)
+  \]
+  ou por
+  \[
+    [u]_\mathcal{B} = \begin{bmatrix}\alpha_1\\\alpha_2\\ \vdots\\ \alpha_n\end{bmatrix}_\mathcal{B}
+  \]
+ e vamos dizer que esse vetor  é o \textbf{vetor das coordenadas de $u$ com respeito à base $\mathcal{B}$}.
+\end{notacao}
 %\begin{proposicao}
 % Se $W_1$ e $W_1$ s\~ao subespa\c{c}os de um $\cp{K}$-espa\c{c}o vetorial $V$ ent\~ao
 % \begin{enumerate}[label={\roman*})]
