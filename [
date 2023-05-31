@@ -1710,17 +1710,17 @@ As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases can�
             \phantom{x}\\L_2 \to L_2 - L_1\\\phantom{x}
           \end{array}\sim
           \begin{bmatrix}
-            1 & 0 & \phantom{-} 1\\
+            1 & 0 & 1\\
             0 & 1 & -1\\
-            0 & 1 & \phantom{-} 1
+            0 & 1 & 1
           \end{bmatrix}
           \begin{array}{l}
             \phantom{x}\\\phantom{x}\\L_3 \to L_3 - L_2
           \end{array}\sim
           \begin{bmatrix}
-            1 & 0 & \phantom{-} 1\\
+            1 & 0 & 1\\
             0 & 1 & -1\\
-            0 & 0 & \phantom{-} 2
+            0 & 0 & 2
           \end{bmatrix}
         \end{align*}
         cuja solução é $a = b = c = 0$. Logo $S$ é linearmente independente e assim pelo item \ref{LIbase} do Teorema \ref{ResumoLDLI} segue que esse conjunto é uma base para $V = \mathcal{P}_2(\rac)$ como um espaço vetorial sobre $\rac$.
@@ -1741,7 +1741,7 @@ As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases can�
   Nos casos seguintes estenda o conjunto dado $S$ para uma base do $\cp{K}$-espaço vetorial dado.
   \begin{enumerate}
     \item $V = \mathcal{P}_2(\real)$, $\cp{K} = \real$, $S = \{1 + x, 1 - x\}$
-    \item $V = M_2(\real)$, $\cp{K} = \real$, $S = \left\{\begin{bmatrix}0 & 1\\0 & 1\end{bmatrix}, \begin{bmatrix}1 & 1\\0 & 1\end{bmatrix}\right\}$
+    \item $V = M_2(\real)$, $\cp{K} = \real$, $S = \{\begin{bmatrix}0 & 1\\0 & 1\end{bmatrix}, \begin{bmatrix}1 & 1\\0 & 1\end{bmatrix}\}$
   \end{enumerate}
   \begin{solucao}
     \begin{enumerate}
@@ -1796,7 +1796,7 @@ As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases can�
         \]
         temos que essa matriz não é uma combinação linear dos elementos de $S$. Portanto o conjunto
         \[
-          \left\{\begin{bmatrix}0 & 1\\0 & 1\end{bmatrix}, \begin{bmatrix}1 & 1\\0 & 1\end{bmatrix}, \begin{bmatrix}1 & 0\\2 & 2\end{bmatrix}\right\}
+          \{\begin{bmatrix}0 & 1\\0 & 1\end{bmatrix}, \begin{bmatrix}1 & 1\\0 & 1\end{bmatrix}, \begin{bmatrix}1 & 0\\2 & 2\end{bmatrix}\}
         \]
         é linearmente independente, pelo item \ref{acrescentaviraLD} da Proposição \ref{propriedadesbasicasLDLI}.
 
@@ -1809,7 +1809,7 @@ As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases can�
         \]
         o conjunto 
         \[
-          S = \left\{\begin{bmatrix}0 & 1\\0 & 1\end{bmatrix}, \begin{bmatrix}1 & 1\\0 & 1\end{bmatrix}, \begin{bmatrix}1 & 0\\2 & 2\end{bmatrix}, \begin{bmatrix}0 & 1\\1 & 0\end{bmatrix}\right\}
+          S = \{\begin{bmatrix}0 & 1\\0 & 1\end{bmatrix}, \begin{bmatrix}1 & 1\\0 & 1\end{bmatrix}, \begin{bmatrix}1 & 0\\2 & 2\end{bmatrix}, \begin{bmatrix}0 & 1\\1 & 0\end{bmatrix}\}
         \]
         é linearmente independente. Para ver isso vamos montar a matriz com as entradas dos elementos de $S$ como colunas:
         \begin{align*}
@@ -1832,19 +1832,19 @@ As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases can�
             \phantom{x}\\L_2 \to L_2 - L_1
           \end{array}\\&\sim
           \begin{bmatrix}
-            1 & 1 & \phantom{-} 2 & 0\\
+            1 & 1 & 2 & 0\\
             0 & 0 & -2 & 1\\
-            0 & 0 & \phantom{-} 2 & 1\\
-            0 & 1 & \phantom{-} 1 & 0
+            0 & 0 & 2 & 1\\
+            0 & 1 & 1 & 0
           \end{bmatrix}
           \begin{array}{l}
             \phantom{x}\\\phantom{x}\\L_3 \to L_3 + L_2
           \end{array}\\&\sim
           \begin{bmatrix}
-            1 & 1 & \phantom{-} 2 & 0\\
+            1 & 1 & 2 & 0\\
             0 & 0 & -2 & 1\\
-            0 & 0 & \phantom{-}  & 0\\
-            0 & 1 & \phantom{-} 1 & 0
+            0 & 0 &  & 0\\
+            0 & 1 & 1 & 0
           \end{bmatrix}
         \end{align*}
         e assim o sistema linear homogêneo associado à essa matriz tem solução única $x = y = z = t = 0$. Portanto $S$ é linearmente independente e pelo item \ref{LIbase} do Teorema \ref{ResumoLDLI} é uma base para $M_2(\real)$ como um espaço vetorial sobre $\real$.
