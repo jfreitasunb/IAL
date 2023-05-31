@@ -1653,16 +1653,16 @@ As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases can�
   \end{enumerate}
 \end{teorema}
 
-\begin{teorema}
+\begin{teorema}\label{ResumoLDLI}
   Seja $V$ um espaço vetorial sobre $\cp{K}$ com $\dim_\cp{K} V = n$. Então: 
   \begin{enumerate}[label={\roman*})]
-    \item Qualquer conjunto linearmente independente em $V$ contém no máximo $n$ vetores. 
+    \item\label{maximoLI} Qualquer conjunto linearmente independente em $V$ contém no máximo $n$ vetores. 
         
-    \item Qualquer conjunto gerador de $V$ contém no mínimo $n$ vetores. 
+    \item\label{minimogerador} Qualquer conjunto gerador de $V$ contém no mínimo $n$ vetores. 
         
-    \item Qualquer conjunto linearmente independente em $V$ contendo exatamente $n$ vetores é uma base de $V$. 
+    \item\label{LIbase} Qualquer conjunto linearmente independente em $V$ contendo exatamente $n$ vetores é uma base de $V$. 
       
-    \item Qualquer conjunto gerador de $V$ com exatamente $n$ vetores, é uma base de $V$. 
+    \item\label{geraBase} Qualquer conjunto gerador de $V$ com exatamente $n$ vetores, é uma base de $V$. 
         
     \item Qualquer conjunto linearmente independente em $V$ pode ser estendido para uma base de $V$. 
         
@@ -1679,6 +1679,53 @@ As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases can�
     
     \item $V = \mathcal{P}_2(\rac)$, $\cp{K} = \rac$, $S = \{1 + x; x + x^2; 1 + x^2\}$
   \end{enumerate}
+
+  \begin{solucao}
+    \begin{enumerate}
+      \item Como $\dim_\real\mathcal{P}_3(\real) = 4$ e o conjunto $S$ contém 5 elementos, então item \ref{maximoLI} do Teorema \ref{ResumoLDLI} segue que esse conjunto é obrigatoriamente linearmente dependente. Portanto não é uma base para $V = \mathcal{P}_2(\real)$ como um $\real$-espaço vetorial.
+
+      \item Nesse caso $\dim_\real M_{2 \times 3}(\real) = 6$ e o conjunto $S$ contém 4 elementos. Daí pelo item \ref{minimogerador} do Teorema \ref{ResumoLDLI} segue que esse conjunto não gera $V$ como um $\real$-espaço vetorial, logo não é um base.
+
+      \item Aqui, $\dim_\rac\mathcal{P}_2(\rac) = 3$ e como $S$ contém 3 elementos esse conjunto pode ser uma base. Para verificar podemos usar o item \ref{LIbase} ou o item \ref{geraBase} do Teorema \ref{ResumoLDLI}. Provemos que esse conjunto é linearmente independente. Para tal sejam $a$, $b$, $c \in \rac$ tais que
+        \begin{align*}
+          a(1 + x) + b(x + x^2) + c(1 + x^2) = 0\\
+          (a + c) + (a + b)x + (b + c)x^2 = 0.
+        \end{align*}
+        Com isso obtemos o sistema linear
+        \[
+          \begin{cases}
+            a + c = 0\\
+            a + b = 0\\
+            b + c = 0
+          \end{cases}
+        \]
+        Escalonando esse sistema:
+        \begin{align*}
+          \begin{bmatrix}
+            1 & 0 & 1\\
+            1 & 1 & 0\\
+            0 & 1 & 1
+          \end{bmatrix}
+          \begin{array}{l}
+            \phantom{x}\\L_2 \to L_2 - L_1\\\phantom{x}
+          \end{array}\sim
+          \begin{bmatrix}
+            1 & 0 & 1\\
+            0 & 1 & -1\\
+            0 & 1 & 1
+          \end{bmatrix}
+          \begin{array}{l}
+            \phantom{x}\\\phantom{x}\\L_3 \to L_3 - L_2
+          \end{array}\sim
+          \begin{bmatrix}
+            1 & 0 & 1\\
+            0 & 1 & -1\\
+            0 & 0 & 2
+          \end{bmatrix}
+        \end{align*}
+        cuja solução é $a = b = c = 0$. Logo $S$ é linearmente independente e assim pelo item \ref{LIbase} do Teorema \ref{ResumoLDLI} segue que esse conjunto é uma base para $V = \mathcal{P}_2(\rac)$ como um espaço vetorial sobre $\rac$.
+    \end{enumerate}
+  \end{solucao}
 \end{exemplos}
       
 \begin{teorema}
