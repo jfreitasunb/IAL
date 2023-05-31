@@ -1191,7 +1191,7 @@ Esse caso motiva a seguinte definição:
   \end{enumerate}
 \end{exemplos}
 
-\begin{proposicao}
+\begin{proposicao}\label{propriedadesbasicasLDLI}
   Seja $V$ um espaço vetorial sobre $\cp{K}$. Então:
   \begin{enumerate}[label={\roman*})]
     \item O vetor nulo é linearmente dependente.
@@ -1204,7 +1204,7 @@ Esse caso motiva a seguinte definição:
     
     \item Se $\{v_1, v_2, \dots, v_n\}$ é L.I., então qualquer subconjunto $\{v_{i_1}, v_{i_2}, \dots, v_{i_s}\}$ com $s < n$ também é L.I. 
     
-    \item Seja $\{v_1, v_2, \dots, v_n\}$ um conjunto L.I. Se $w$ é um vetor de $V$ tal que $\{v_1, v_2, \dots, v_n, w\}$ é L.D., então $w$ é uma combinação linear de $v_1$, $v_2$, \dots, $v_n$.
+    \item\label{acrescentaviraLD} Seja $\{v_1, v_2, \dots, v_n\}$ um conjunto L.I. Se $w$ é um vetor de $V$ tal que $\{v_1, v_2, \dots, v_n, w\}$ é L.D., então $w$ é uma combinação linear de $v_1$, $v_2$, \dots, $v_n$.
   \end{enumerate}
 \end{proposicao}
 
@@ -1772,8 +1772,82 @@ As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases can�
           \end{cases}
         \]
         cuja solução é $a = b = c = 0$. Logo o conjunto $\{1 + x; 1 - x; x^2\}$ é linearmente independente e assim pelo item \ref{LIbase} do Teorema \ref{ResumoLDLI} é uma base para $\mathcal{P}_2(\real)$ como um $\real$-espaço vetorial.
+
+      \item Como $\dim M_2(\real) = 4$ e os vetores em $S$ são linearmente independentes, precisamos acrescentar mais dois vetores nesse conjunto para obter uma base para $M_2(\real)$. Para encontrar um primeiro vetor vamos determinar quando uma matriz de $M_2(\real)$ pode ser escrita como uma combinação linear dos elementos de $S$. Para tal sejam $a$, $b \in \real$ tais que
+        \begin{align*}
+          \begin{bmatrix}x & y\\z & t\end{bmatrix} = a\begin{bmatrix} 0 & 1\\0 & 1\end{bmatrix} + b\begin{bmatrix} 1 & 1\\0 & 1\end{bmatrix} 
+          \begin{bmatrix}x & y\\z & t\end{bmatrix} = \begin{bmatrix} 0 & a\\0 & a\end{bmatrix} + b\begin{bmatrix} b & b\\0 & b\end{bmatrix} 
+        \end{align*}
+        que resulta no sistema
+        \[
+          \begin{cases}
+            b = x\\
+            a + b = y\\
+            z = 0\\
+            b = t
+          \end{cases}
+        \]
+        com isso devemos ter $x = t$, $z = 0$ e $t$ pode ser qualquer número real. Assim tomando a matriz
+        \[
+          \begin{bmatrix}
+            1 & 0\\
+            2 & 2
+          \end{bmatrix}
+        \]
+        temos que essa matriz não é uma combinação linear dos elementos de $S$. Portanto o conjunto
+        \[
+          \{\begin{bmatrix}0 & 1\\0 & 1\end{bmatrix}, \begin{bmatrix}1 & 1\\0 & 1\end{bmatrix}, \begin{bmatrix}1 & 0\\2 & 2\end{bmatrix}\}
+        \]
+        é linearmente independente, pelo item \ref{acrescentaviraLD} da Proposição \ref{propriedadesbasicasLDLI}.
+
+        Agora escolhendo. por exemplo, a matriz
+        \[
+          \begin{bmatrix}
+            0 & 1\\
+            1 & 0
+          \end{bmatrix}
+        \]
+        o conjunto 
+        \[
+          S = \{\begin{bmatrix}0 & 1\\0 & 1\end{bmatrix}, \begin{bmatrix}1 & 1\\0 & 1\end{bmatrix}, \begin{bmatrix}1 & 0\\2 & 2\end{bmatrix}, \begin{bmatrix}0 & 1\\1 & 0\end{bmatrix}\}
+        \]
+        é linearmente independente. Para ver isso vamos montar a matriz com as entradas dos elementos de $S$ como colunas:
+        \begin{align*}
+          \begin{bmatrix}
+            0 & 1 & 1 & 0\\
+            1 & 1 & 0 & 1\\
+            0 & 0 & 2 & 1\\
+            1 & 1 & 2 & 0
+          \end{bmatrix}
+          \begin{array}{l}
+            L_1 \leftrightarrow L_4
+          \end{array}&\sim
+          \begin{bmatrix}
+            1 & 1 & 2 & 0\\
+            1 & 1 & 0 & 1\\
+            0 & 0 & 2 & 1\\
+            0 & 1 & 1 & 0
+          \end{bmatrix}
+          \begin{array}{l}
+            \phantom{x}\\L_2 \to L_2 - L_1
+          \end{array}\\&\sim
+          \begin{bmatrix}
+            1 & 1 & 2 & 0\\
+            0 & 0 & -2 & 1\\
+            0 & 0 & 2 & 1\\
+            0 & 1 & 1 & 0
+          \end{bmatrix}
+          \begin{array}{l}
+            \phantom{x}\\\phantom{x}\\L_3 \to L_3 + L_2
+          \end{array}\\&\sim
+          \begin{bmatrix}
+            1 & 1 & 2 & 0\\
+            0 & 0 & -2 & 1\\
+            0 & 0 &  & 0\\
+            0 & 1 & 1 & 0
+          \end{bmatrix}
+        \end{align*}
+        e assim o sistema linear homogêneo associado à essa matriz tem solução única $x = y = z = t = 0$. Portanto $S$ é linearmente independente e pelo item \ref{LIbase} do Teorema \ref{ResumoLDLI} é uma base para $M_2(\real)$ como um espaço vetorial sobre $\real$.
     \end{enumerate}
   \end{solucao}
-\end{exemplos}
-
 \end{exemplos}
