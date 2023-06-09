@@ -435,4 +435,46 @@
   \end{teorema}
 \end{frame}
 
+\begin{frame}
+	Se mudarmos a base de um espaço vetorial $V$ de alguma base velha $\mathcal{B} = \{u_1, u_2, \dots, u_n\}$ para uma base nova $\mathcal{C} = \{w_1, w_2, \dots, w_n\}$, então, dado qualquer vetor $v \in V$, o velho vetor de coordenadas $[v]_\mathcal{B}$ está relacionado com o novo vetor de coordenadas $[v]_\mathcal{C}$ pela equação
+	\begin{equation}
+		[v]_\mathcal{B} = P[v]_\mathcal{C}
+	\end{equation}
+	onde as colunas de $P$ são os vetores de coordenadas dos vetores da base nova em relação à base velha; ou seja, os vetores coluna de $P$ são
+	\begin{equation}
+		[w_1]_\mathcal{B}, [w_2]_\mathcal{B}, \dots, [w_n]_\mathcal{B}
+	\end{equation}
+\end{frame}
+
+\begin{frame}
+	\begin{teorema}
+		Se $P$ for a matriz de transição de uma base $\mathcal{B}$ para uma base $\mathcal{C}$ de um espaço vetorial $V$ de dimensão finita, então $P$ é invertível e $P^{-1}$ é a matriz de transição de $\mathcal{C}$ para $\mathcal{B}$.
+	\end{teorema}
+\end{frame}
+
+\begin{frame}
+	\begin{tcolorbox}[colback=green!30, colframe=green!80!blue, title=Procedimento para calcular $P_{\mathcal{B} \to \mathcal{C}}$]
+			\begin{tabular}{ll}
+				Passo 1. & Montamos a matriz $[\mathcal{C} | \mathcal{B}]$.\\
+				\\
+				Passo 2. & Reduzimos a matriz do Passo 1 à forma escalonada\\
+				& reduzida usando operações elementares com as linhas.\\
+				\\
+				Passo 3. & A matriz resultante é$[I | P_{\mathcal{B} \to \mathcal{C}}]$.\\
+				\\
+				Passo 4. & Extraímos a matriz $P_{\mathcal{B} \to \mathcal{C}}$ do lado direito da matriz do\\
+				& Passo 3.
+			\end{tabular}
+	\end{tcolorbox}		
+\end{frame}
+
+\begin{frame}
+	\begin{teorema}
+		Sejam $\mathcal{C} = \{u_1, u_2, \dots, u_n\}$ uma base qualquer do espaço vetorial $\real^n$ e $\mathcal{B} = \{e_1, e_2, \dots, e_n\}$ a base canônica de $\real^n$. Se os vetores dessas bases forem escritos em forma de colunas, então
+		\[
+			P_{\mathcal{C} \to \mathcal{B}} = [u_1 | u_2 | \dots | u_n].
+		\]
+	\end{teorema}
+\end{frame}
+
 \end{document}
