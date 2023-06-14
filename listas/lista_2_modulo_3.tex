@@ -169,12 +169,6 @@
         \]
         uma base ordenada.
 
-        \item $T : \mathcal{P}_3(\real) \to \real^2$ dada por
-        \[
-        T(p) = \left(\int_{-1}^0p(x)dx, \int_0^1p(x)dx\right).
-        \]
-        Considere $\mathcal{P}_3(\real)$ e $\real^2$ como $\real$-espa\c{c}os vetoriais e $\mathcal{B}_1 = \{1, 1-x, 1 - x^2, 1 + x^3\}$ e $\mathcal{B}_2 = \{(1,1), (1,-2)\}$ bases ordenadas de $\mathcal{P}_3(\real)$ e $\real^2$, respectivamente.
-
         \item $T : \complex^3 \to \complex$ dada por $T(x,y,z) = x + 2y + iz$. Considere $\complex^3$ e $\complex$ como $\complex$-espa\c{c}os vetoriais e $\mathcal{B}_1 = \{(1,0,0); (0,1,0); (0,0,1)\}$ e $\mathcal{B}_2 = \{i\}$ bases ordenadas de $\complex^2$ e $\complex$, respectivamente.
 
         \item $F : \mathcal{P}_3(\real) \to \mathcal{P}_4(\real)$ dada por $(Fp)(x) = xp(x + 1)$. Considere $\mathcal{P}_3(\real)$ e $\mathcal{P}_4(\real)$ como $\real$-espa\c{c}os vetoriais e $\mathcal{B}_1 = \{1, x, x^2, x^3\}$ e $\mathcal{B}_2 = \{1, x, x^2, x^3, x^4\}$ bases ordenadas de $\mathcal{P}_3(\real)$ e $\mathcal{P}_4(\real)$, respectivamente.
@@ -310,10 +304,6 @@
 \end{exercicio}
 
 \begin{exercicio}
-    Sejam $T : V \to W$ e $S : W \to U$ transforma\c{c}\~oes lineares. Mostre que $S \comp T : V \to U$ \'e uma transforma\c{c}\~ao linear.
-\end{exercicio}
-
-\begin{exercicio}
     Seja $T : \real^2 \to \real^2$ uma transforma\c{c}\~ao linear definida por
     \[
     T(x,y) = (-y,x).
@@ -342,28 +332,6 @@
 \end{exercicio}
 
 \begin{exercicio}
-    Seja $T : V \to W$ um isomorfismo, onde $V$ e $W$ s\~ao $\cp{K}$-espa\c{c}os vetoriais. Seja $G : W \to V$ definida por: $G(w) = v$ se, e somente se, $T(v) = w$, para todo $w \in W$. Mostre que:
-    \begin{enumerate}[label=({\alph*})]
-        \item $G$ \'e uma transforma\c{c}\~ao linear.
-        \item $T\circ G = Id_W$, onde $Id_V : W \to W$ tal que $Id_W(x) = x$, para todo $x \in W$.
-        \item $G\circ T = Id_V$, onde $Id_V : V \to V$ tal que $Id_V(y) = y$, para todo $y \in V$.
-    \end{enumerate}
-    A transforma\c{c}\~ao linear $G$ \'e chamada de \textbf{inversa} de $T$ e ser\'a denotada por $G = T^{-1}$.
-\end{exercicio}
-
-\begin{exercicio}
-    Sejam $V$ e $W$ dois espa\c{c}os vetoriais sobre $\cp{K}$ tais que $\dim_\cp{K}V = \dim_\cp{K}W = n \ge 1$ e considere $\mathcal{B}_1$ e $\mathcal{B}_2$ bases ordenadas de $V$ e $W$, respectivamente. Mostre que:
-    \begin{enumerate}[label=({\alph*})]
-        \item Se uma transforma\c{c}\~ao linear $T : V \to W$ \'e um isomorfismo, ent\~ao a matriz $[T]_{\mathcal{B}_1,\mathcal{B}_2}$ \'e invert{\'\i}vel.
-        \item Se uma transforma\c{c}\~ao linear $T : V \to W$ tal que a matriz $[T]_{\mathcal{B}_1,\mathcal{B}_2}$ \'e invert{\'\i}vel , ent\~ao $T$ \'e um isomorfismo.
-        \item Mostre que se $T$ \'e um isomorfismo, ent\~ao
-        \[
-        \left([T]_{\mathcal{B}_1,\mathcal{B}_2}\right)^{-1} = [T^{-1}]_{\mathcal{B}_1,\mathcal{B}_2}.
-        \]
-    \end{enumerate}
-\end{exercicio}
-
-\begin{exercicio}
     Seja $T : \real^3 \to \real^3$ uma transforma\c{c}\~ao linear cuja matriz com rela\c{c}\~ao \`a base ordenada can\^onica, $\mathcal{B} = \{(1,0,0); (0,1,0); (0,0,1)\}$, seja
     \[
     [T]_\mathcal{B} = \begin{pmatrix}
@@ -385,32 +353,6 @@
                 1 & 0 & \phantom{-}0
             \end{bmatrix}$
             \item[c)] N\~ao.
-        \end{enumerate}
-    \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-    Seja $T : \z_7^3 \to \z_7^3$ uma transforma\c{c}\~ao linear cuja matriz com rela\c{c}\~ao \`a base ordenada can\^onica, $\mathcal{B} = \{(\overline{1}, \overline{0}, \overline{0}); (\overline{0}, \overline{1}, \overline{0}); (\overline{0}, \overline{0}, \overline{1})\}$, seja
-    \[
-    [T]_\mathcal{B} = \begin{pmatrix}
-        \overline{1} & \overline{1} & \overline{0}\\
-        \overline{6} & \overline{0} & \overline{1}\\
-        \overline{0} & \overline{6} & \overline{6}
-    \end{pmatrix}.
-    \]
-    \begin{enumerate}[label=({\alph*})]
-        \item Determine $T(x,y,z)$.
-        \item Qual \'e a matriz de $T$ com rela\c{c}\~ao \`a base $\mathcal{B}_1 = \{(\overline{6},\overline{1},\overline{0});(\overline{1},\overline{6},\overline{1});(\overline{0},\overline{1},\overline{6})\}$?
-        \item A transforma\c{c}\~ao $T$ \'e invert{\'\i}vel? Justifique.
-    \end{enumerate}
-    \begin{solucao}
-        \begin{enumerate}
-            \item[b)] $[T]_{\mathcal{B}_1} = \begin{pmatrix}
-                \overline{5} & \overline{2} & \overline{5}\\
-                \overline{5} & \overline{2} & \overline{6}\\
-                \overline{6} & \overline{2} & \overline{5}
-            \end{pmatrix}$
-            \item[c)] Sim
         \end{enumerate}
     \end{solucao}
 \end{exercicio}
@@ -460,14 +402,6 @@
 \end{exercicio}
 
 \begin{exercicio}
-    Seja $T : \real^3 \to \real^2$ e $S : \real^2 \to \real^3$ transforma\c{c}\~oes lineares.
-    \begin{enumerate}[label=({\alph*})]
-        \item Prove que $S \circ T$ n\~ao \'e invert{\'\i}vel.
-        \item Achar um exemplo em que $T\circ S$ n\~ao \'e invert{\'\i}vel e um outro em que $T\circ S$ \'e invert{\'\i}vel.
-    \end{enumerate}
-\end{exercicio}
-
-\begin{exercicio}
     Seja $V$ um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao 2 e seja $\mathcal{B}$ uma base ordenada de $V$. Se $T: V \to V$ \'e uma transforma\c{c}\~ao linear tal que
     \[
     [T]_\mathcal{B} = \begin{bmatrix}
@@ -510,14 +444,6 @@
             \end{bmatrix}$
         \end{enumerate}
     \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-    Sejam $T, S : V \to W$ duas transforma\c{c}\~oes lineares, onde $V$ e $W$ s\~ao $\cp{K}$-espa\c{c}os vetoriais de dimens\~ao finita. Sejam $\mathcal{B}$ e $\mathcal{C}$ bases de $V$ e $W$, respectivamente e $\lambda \in \cp{K}$. Mostre que:
-    \begin{enumerate}[label=({\alph*})]
-        \item $[T + S]_{\mathcal{B}, \mathcal{C}} = [T]_{\mathcal{B}, \mathcal{C}} + [S]_{\mathcal{B}, \mathcal{C}}$.
-        \item $[\lambda T]_{\mathcal{B}, \mathcal{C}} = \lambda [T]_{\mathcal{B}, \mathcal{C}}$.
-    \end{enumerate}
 \end{exercicio}
 
 \begin{exercicio}
