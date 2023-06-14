@@ -20,535 +20,535 @@
 \vesp{.6}
 
 \begin{exercicio}
-	Prove que cada uma das fun\c{c}\~oes abaixo \'e uma transforma\c{c}\~ao linear.
-	\begin{enumerate}[label=({\alph*})]
-		\item $D : \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dada por
-		\[
-		D(a_0 + a_1x + a_2x^2 + \cdots + a_nx^n) = a_1 + 2a_2x + \cdots + na_nx^{n - 1}.
-		\]
-		Considere $\mathcal{P}(\complex)$ um $\complex$-espa\c{c}o vetorial.
-		\item $T : \mathcal{C}([a,b], \real) \to \real$ dada por
-		\[
-		T(f(x)) = \int_a^bf(x)dx.
-		\]
-		Considere $\mathcal{C}([a,b], \real)$ e $\real$ como $\real$-espa\c{c}os vetoriais.
-		\item $F : \mathcal{P}_2(\real) \to \mathcal{P}_2(\real)$ dada por $F(p(t)) = t^2p''(x)$. Considere $\mathcal{P}_2(\real)$ um $\real$-espa\c{c}o vetorial.
-		\item $G : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $G(X) = MX + X$ onde
-		\[
-		M = \begin{pmatrix}
-			1 & 0\\
-			0 & 0
-		\end{pmatrix}.
-		\]
-		Considere $\cp{M}_2(\real)$ um $\real$-espa\c{c}o vetorial.
-		\item $H : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $H(x) = MX - XM$ onde
-		\[
-		M = \begin{pmatrix}
-			1 & 2\\
-			0 & 1
-		\end{pmatrix}.
-		\]
-		Considere $\cp{M}_2(\real)$ um $\real$-espa\c{c}o vetorial.
-		\item $T : \mathcal{P}_3(\real) \to \real^2$ dada por
-		\[
-		T(p) = \left(\int_{-1}^0p(x)dx, \int_0^1p(x)dx\right).
-		\]
-		Considere $\mathcal{P}_3(\real)$ e $\real^2$ como $\real$-espa\c{c}os vetoriais.
-		\item $T : \complex^3 \to \complex$ dada por $T(x,y,z) = x + 2y + iz$. Considere $\complex^3$ e $\complex^2$ como $\complex$-espa\c{c}os vetoriais.
-		\item $F : \mathcal{P}_3(\real) \to \mathcal{P}_4(\real)$ dada por $(Fp)(x) = xp(x + 1)$. Considere $\mathcal{P}_3(\real)$ e $\mathcal{P}_4(\real)$ como $\real$-espa\c{c}os vetoriais.
-		\item $G : \real^2 \to \mathcal{P}_2(\real)$ dada por $T(a,b) = ax^2 + bx + (a + b)$. Considere $\real^2$ e $\mathcal{P}_2(\real)$ como $\real$-espa\c{c}os vetoriais.
-	\end{enumerate}
+  Prove que cada uma das fun\c{c}\~oes abaixo \'e uma transforma\c{c}\~ao linear.
+  \begin{enumerate}[label=({\alph*})]
+    \item $D : \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dada por
+    \[
+    D(a_0 + a_1x + a_2x^2 + \cdots + a_nx^n) = a_1 + 2a_2x + \cdots + na_nx^{n - 1}.
+    \]
+    Considere $\mathcal{P}(\complex)$ um $\complex$-espa\c{c}o vetorial.
+    \item $T : \mathcal{C}([a,b], \real) \to \real$ dada por
+    \[
+    T(f(x)) = \int_a^bf(x)dx.
+    \]
+    Considere $\mathcal{C}([a,b], \real)$ e $\real$ como $\real$-espa\c{c}os vetoriais.
+    \item $F : \mathcal{P}_2(\real) \to \mathcal{P}_2(\real)$ dada por $F(p(t)) = t^2p''(x)$. Considere $\mathcal{P}_2(\real)$ um $\real$-espa\c{c}o vetorial.
+    \item $G : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $G(X) = MX + X$ onde
+    \[
+    M = \begin{pmatrix}
+      1 & 0\\
+      0 & 0
+    \end{pmatrix}.
+    \]
+    Considere $\cp{M}_2(\real)$ um $\real$-espa\c{c}o vetorial.
+    \item $H : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $H(x) = MX - XM$ onde
+    \[
+    M = \begin{pmatrix}
+      1 & 2\\
+      0 & 1
+    \end{pmatrix}.
+    \]
+    Considere $\cp{M}_2(\real)$ um $\real$-espa\c{c}o vetorial.
+    \item $T : \mathcal{P}_3(\real) \to \real^2$ dada por
+    \[
+    T(p) = \left(\int_{-1}^0p(x)dx, \int_0^1p(x)dx\right).
+    \]
+    Considere $\mathcal{P}_3(\real)$ e $\real^2$ como $\real$-espa\c{c}os vetoriais.
+    \item $T : \complex^3 \to \complex$ dada por $T(x,y,z) = x + 2y + iz$. Considere $\complex^3$ e $\complex^2$ como $\complex$-espa\c{c}os vetoriais.
+    \item $F : \mathcal{P}_3(\real) \to \mathcal{P}_4(\real)$ dada por $(Fp)(x) = xp(x + 1)$. Considere $\mathcal{P}_3(\real)$ e $\mathcal{P}_4(\real)$ como $\real$-espa\c{c}os vetoriais.
+    \item $G : \real^2 \to \mathcal{P}_2(\real)$ dada por $T(a,b) = ax^2 + bx + (a + b)$. Considere $\real^2$ e $\mathcal{P}_2(\real)$ como $\real$-espa\c{c}os vetoriais.
+  \end{enumerate}
 \end{exercicio}
 
 \begin{exercicio}
-	Consideremos uma transforma\c{c}\~ao linear $T : V \to W$, onde $V$ e $W$ s\~ao $\cp{K}$-espa\c{c}os vetoriais tais que $\dim_\cp{K}W < \dim_\cp{K}V < \infty$.
-	\begin{enumerate}[label=({\alph*})]
-		\item Prove que existe um elemento n\~ao nulo $u \in V$ tal que $T(u) = 0_W$.
-		\item Se $\mathcal{B}$ \'e uma base arbitr\'aria de $V$, existe sempre um vetor $u \in \mathcal{B}$ tal que $T(u) = 0_W$? Prove ou d\^e um contra-exemplo.
-	\end{enumerate}
+  Consideremos uma transforma\c{c}\~ao linear $T : V \to W$, onde $V$ e $W$ s\~ao $\cp{K}$-espa\c{c}os vetoriais tais que $\dim_\cp{K}W < \dim_\cp{K}V < \infty$.
+  \begin{enumerate}[label=({\alph*})]
+    \item Prove que existe um elemento n\~ao nulo $u \in V$ tal que $T(u) = 0_W$.
+    \item Se $\mathcal{B}$ \'e uma base arbitr\'aria de $V$, existe sempre um vetor $u \in \mathcal{B}$ tal que $T(u) = 0_W$? Prove ou d\^e um contra-exemplo.
+  \end{enumerate}
 \end{exercicio}
 
 
 \begin{exercicio}
-	Seja $V$ um $\cp{K}$-espa\c{c}o vetorial e $T : V \to V$ uma transforma\c{c}\~ao linear. Dado $\lambda \in \cp{K}$, defina
-	\[
-	V_\lambda = \{ u \in V \mid T(u) = \lambda u\}.
-	\]
-	Mostre que $V_\lambda$ \'e um $\cp{K}$-subespa\c{c}o vetorial de $V$.
+  Seja $V$ um $\cp{K}$-espa\c{c}o vetorial e $T : V \to V$ uma transforma\c{c}\~ao linear. Dado $\lambda \in \cp{K}$, defina
+  \[
+  V_\lambda = \{ u \in V \mid T(u) = \lambda u\}.
+  \]
+  Mostre que $V_\lambda$ \'e um $\cp{K}$-subespa\c{c}o vetorial de $V$.
 \end{exercicio}
 
 \begin{exercicio}
-	Considere a fun\c{c}\~ao $T : \complex \to \cp{M}_2(\real)$ dada por
-	\[
-	T(x + yi) = \begin{pmatrix}
-		x + 7y & 5y\\
-		-10y & x - 7y
-	\end{pmatrix}.
-	\]
-	Considerando $\complex$ como um espa\c{c}o vetorial sobre $\real$:
-	\begin{enumerate}[label=({\alph*})]
-		\item Prove que $T$ \'e uma transforma\c{c}\~ao linear.
-		\item Prove que $T(z_1\cdot z_2) = T(z_1)\cdot T(z_2)$ para todos $z_1$, $z_2 \in \complex$.
-	\end{enumerate}
+  Considere a fun\c{c}\~ao $T : \complex \to \cp{M}_2(\real)$ dada por
+  \[
+  T(x + yi) = \begin{pmatrix}
+    x + 7y & 5y\\
+    -10y & x - 7y
+  \end{pmatrix}.
+  \]
+  Considerando $\complex$ como um espa\c{c}o vetorial sobre $\real$:
+  \begin{enumerate}[label=({\alph*})]
+    \item Prove que $T$ \'e uma transforma\c{c}\~ao linear.
+    \item Prove que $T(z_1\cdot z_2) = T(z_1)\cdot T(z_2)$ para todos $z_1$, $z_2 \in \complex$.
+  \end{enumerate}
 \end{exercicio}
 
 \begin{exercicio}
-	Sejam $T : V \to W$ e $S : W \to W_1$ transforma\c{c}\~oes lineares. Mostre que $S \comp T : V \to W_1$ \'e uma transforma\c{c}\~ao linear.
+  Sejam $T : V \to W$ e $S : W \to W_1$ transforma\c{c}\~oes lineares. Mostre que $S \comp T : V \to W_1$ \'e uma transforma\c{c}\~ao linear.
 \end{exercicio}
 
 \begin{exercicio}
-	Determine uma transforma\c{c}\~ao linear $T : \real^3 \to \real^3$ tal que:
-	\begin{enumerate}[label=({\alph*})]
-		\item $\dim_\real \ker T = 0$;
-		\item $\dim_\real \ker T = 1$;
-		\item $\dim_\real \ker T = 2$;
-		\item $\dim_\real \ker T = 3$.
-	\end{enumerate}
+  Determine uma transforma\c{c}\~ao linear $T : \real^3 \to \real^3$ tal que:
+  \begin{enumerate}[label=({\alph*})]
+    \item $\dim_\real \ker T = 0$;
+    \item $\dim_\real \ker T = 1$;
+    \item $\dim_\real \ker T = 2$;
+    \item $\dim_\real \ker T = 3$.
+  \end{enumerate}
 \end{exercicio}
 
 \begin{exercicio}
-	Considere $\real^4$ e seus subespa\c{c}os $V = [(1,0,1,1);(0,-1,-1,-1)]$ e $W = \{(x,y,z,t) \in \real^4 \mid x + y = 0,\ t + z = 0\}$. Determine uma transforma\c{c}\~ao linear $T : \real^4 \to \real^4$ tal que $\ker T = V$ e $\im T = W$.
+  Considere $\real^4$ e seus subespa\c{c}os $V = [(1,0,1,1);(0,-1,-1,-1)]$ e $W = \{(x,y,z,t) \in \real^4 \mid x + y = 0,\ t + z = 0\}$. Determine uma transforma\c{c}\~ao linear $T : \real^4 \to \real^4$ tal que $\ker T = V$ e $\im T = W$.
 \end{exercicio}
 
 \begin{exercicio}
-	Determine o n\'ucleo e a imagem das seguintes transforma\c{c}\~oes lineares:
-	\begin{enumerate}[label=({\alph*})]
-		\item $T : \real^2 \to \real^2$ dada por $T(x,y) = (x - y, x + y)$.
-		\item $T : \complex^2 \to \real^2$ dada por $T(x + yi,z + ti) = (x + 2z, -x + 2t)$.
-	\end{enumerate}
+  Determine o n\'ucleo e a imagem das seguintes transforma\c{c}\~oes lineares:
+  \begin{enumerate}[label=({\alph*})]
+    \item $T : \real^2 \to \real^2$ dada por $T(x,y) = (x - y, x + y)$.
+    \item $T : \complex^2 \to \real^2$ dada por $T(x + yi,z + ti) = (x + 2z, -x + 2t)$.
+  \end{enumerate}
 \end{exercicio}
 
 \begin{exercicio}
-	Seja $T : \real^2 \to \real^2$ uma transforma\c{c}\~ao linear tal que $T(1,1) = (1,0)$ e $T(1,-1) = (0,1)$. Encontre $T(1,0)$ e $T(1,2)$.
-	\begin{solucao}
-		$T(1,0) = (1/2,1/2)$ e $T(0,2) = (1,-1)$.
-	\end{solucao}
+  Seja $T : \real^2 \to \real^2$ uma transforma\c{c}\~ao linear tal que $T(1,1) = (1,0)$ e $T(1,-1) = (0,1)$. Encontre $T(1,0)$ e $T(1,2)$.
+  \begin{solucao}
+    $T(1,0) = (1/2,1/2)$ e $T(0,2) = (1,-1)$.
+  \end{solucao}
 \end{exercicio}
 
 \begin{exercicio}
-	Ache uma transforma\c{c}\~ao linear $T : \real^4 \to \real^4$ tal que
-	\begin{align*}
-		\ker T &= [(1,0,0,1);(-1,0,0,1)]\\
-		\im T &= [(1,-1,0,2);(0,1,-1,0)].
-	\end{align*}
+  Ache uma transforma\c{c}\~ao linear $T : \real^4 \to \real^4$ tal que
+  \begin{align*}
+    \ker T &= [(1,0,0,1);(-1,0,0,1)]\\
+    \im T &= [(1,-1,0,2);(0,1,-1,0)].
+  \end{align*}
 \end{exercicio}
 
 \begin{exercicio}
-	Seja $V$ um espa\c{c}o vetorial de dimens\~ao $n$ sobre $\cp{K}$.
-	\begin{enumerate}[label=({\alph*})]
-		\item Se $n$ for {\'\i}mpar, prove que n\~ao existe nenhuma transforma\c{c}\~ao linear $T : V \to V$ tal que $\im T = \ker T$.
-		\item Mostre que a afirma\c{c}\~ao (a) \'e falsa se $n$ for par.
-	\end{enumerate}
+  Seja $V$ um espa\c{c}o vetorial de dimens\~ao $n$ sobre $\cp{K}$.
+  \begin{enumerate}[label=({\alph*})]
+    \item Se $n$ for {\'\i}mpar, prove que n\~ao existe nenhuma transforma\c{c}\~ao linear $T : V \to V$ tal que $\im T = \ker T$.
+    \item Mostre que a afirma\c{c}\~ao (a) \'e falsa se $n$ for par.
+  \end{enumerate}
 \end{exercicio}
 
 \begin{exercicio}
-	Sejam $V$, $W$ espa\c{c}os vetoriais sobre $\cp{K}$ e $T : V \to W$ uma transforma\c{c}\~ao linear.
-	\begin{enumerate}[label=({\alph*})]
-		\item Prove que $T$ \'e injetora se, e somente se, $T$ leva cada subconjunto L.I. de $V$ em um subconjunto L.I. de $W$.
-		\item Prove que se  conjunto $\{T(u_1),\dots,T(u_n)\}$ for L.I. em $W$, ent\~ao $\{u_1,\dots,u_n\}$ \'e L.I. em $V$.
-	\end{enumerate}
+  Sejam $V$, $W$ espa\c{c}os vetoriais sobre $\cp{K}$ e $T : V \to W$ uma transforma\c{c}\~ao linear.
+  \begin{enumerate}[label=({\alph*})]
+    \item Prove que $T$ \'e injetora se, e somente se, $T$ leva cada subconjunto L.I. de $V$ em um subconjunto L.I. de $W$.
+    \item Prove que se  conjunto $\{T(u_1),\dots,T(u_n)\}$ for L.I. em $W$, ent\~ao $\{u_1,\dots,u_n\}$ \'e L.I. em $V$.
+  \end{enumerate}
 \end{exercicio}
 
 \begin{exercicio}
-	Dada uma transforma\c{c}\~ao linear $T : U \to U$, considere a seguinte afirma\c{c}\~ao:
-	\begin{itemize}
-		\item[($\star$)] se $\{u_1,\dots,u_r\}$ forma uma base de $\ker T$ e $\{w_1,\dots,w_s\}$ for uma base de $\im T$, ent\~ao $\{u_1,\dots,u_r,w_1,\dots,w_s\}$ ser\'a uma base de $U$.
-	\end{itemize}
-	\begin{enumerate}[label=({\alph*})]
-		\item D\^e um exemplo de uma transforma\c{c}\~ao linear $T$ que satisfa\c{c}a a condi\c{c}\~ao ($\star$), com $\dim_\cp{K}\ker T \ne 0 \ne \dim_\cp{K}\im T$.
-		\item Mostre que nem toda transforma\c{c}\~ao linear $T$ satisfaz ($\star$).
-	\end{enumerate}
+  Dada uma transforma\c{c}\~ao linear $T : U \to U$, considere a seguinte afirma\c{c}\~ao:
+  \begin{itemize}
+    \item[($\star$)] se $\{u_1,\dots,u_r\}$ forma uma base de $\ker T$ e $\{w_1,\dots,w_s\}$ for uma base de $\im T$, ent\~ao $\{u_1,\dots,u_r,w_1,\dots,w_s\}$ ser\'a uma base de $U$.
+  \end{itemize}
+  \begin{enumerate}[label=({\alph*})]
+    \item D\^e um exemplo de uma transforma\c{c}\~ao linear $T$ que satisfa\c{c}a a condi\c{c}\~ao ($\star$), com $\dim_\cp{K}\ker T \ne 0 \ne \dim_\cp{K}\im T$.
+    \item Mostre que nem toda transforma\c{c}\~ao linear $T$ satisfaz ($\star$).
+  \end{enumerate}
 \end{exercicio}
 
 \begin{exercicio}
-	Sejam $V$ um espa\c{c}o vetorial sobre $\cp{K}$ e $T : V \to V$ uma transforma\c{c}\~ao linear. Prove que as seguintes condi\c{c}\~oes s\~ao equivalentes:
-	\begin{enumerate}[label=({\alph*})]
-		\item $\ker T \cap \im T = \{0_V\}$.
-		\item Se $(T\circ T)(u) = 0_V$ para $u \in V$, ent\~ao $T(u) = 0_V$.
-	\end{enumerate}
+  Sejam $V$ um espa\c{c}o vetorial sobre $\cp{K}$ e $T : V \to V$ uma transforma\c{c}\~ao linear. Prove que as seguintes condi\c{c}\~oes s\~ao equivalentes:
+  \begin{enumerate}[label=({\alph*})]
+    \item $\ker T \cap \im T = \{0_V\}$.
+    \item Se $(T\circ T)(u) = 0_V$ para $u \in V$, ent\~ao $T(u) = 0_V$.
+  \end{enumerate}
 \end{exercicio}
 
 Nos exerc{\'\i}cios \eqref{nucleo_imagem_inicio} \`a \eqref{nucleo_imagem_fim}, encontre uma base e a dimens\~ao de:
 \begin{enumerate}[label=({\alph*})]
-	\item $\ker F$
-	\item $\im F$
+  \item $\ker F$
+  \item $\im F$
 \end{enumerate}
 
 \begin{exercicio}\label{nucleo_imagem_inicio}
-	Seja $F : \real^4 \to \real^3$ a transforma\c{c}\~ao linear definida por
-	\[
-	F(x,y,s,t) = (x - y + s + t, x + 2s - t, x + y + 3s - 3t).
-	\]
-	\begin{solucao}
-		\begin{enumerate}[label=({\alph*})]
-			\item $\dim_\real\im F = 2$
-			\item $\dim_\real\ker F = 2$
-		\end{enumerate}
-	\end{solucao}
+  Seja $F : \real^4 \to \real^3$ a transforma\c{c}\~ao linear definida por
+  \[
+  F(x,y,s,t) = (x - y + s + t, x + 2s - t, x + y + 3s - 3t).
+  \]
+  \begin{solucao}
+    \begin{enumerate}[label=({\alph*})]
+      \item $\dim_\real\im F = 2$
+      \item $\dim_\real\ker F = 2$
+    \end{enumerate}
+  \end{solucao}
 \end{exercicio}
 
 \begin{exercicio}
-	Seja $F : \mathcal{P}_3(\real) \to \mathcal{P}_4(\real)$ dada por $(Fp)(x) = xp(x + 1)$. Considere $\mathcal{P}_3(\real)$ e $\mathcal{P}_4(\real)$ como $\real$-espa\c{c}os vetoriais.
+  Seja $F : \mathcal{P}_3(\real) \to \mathcal{P}_4(\real)$ dada por $(Fp)(x) = xp(x + 1)$. Considere $\mathcal{P}_3(\real)$ e $\mathcal{P}_4(\real)$ como $\real$-espa\c{c}os vetoriais.
 \end{exercicio}
 
 \begin{exercicio}
-	Seja $G : \real^2 \to \mathcal{P}_2(\real)$ dada por $T(a,b) = ax^2 + bx + (a + b)$. Considere $\real^2$ e $\mathcal{P}_2(\real)$ como $\real$-espa\c{c}os vetoriais.
+  Seja $G : \real^2 \to \mathcal{P}_2(\real)$ dada por $T(a,b) = ax^2 + bx + (a + b)$. Considere $\real^2$ e $\mathcal{P}_2(\real)$ como $\real$-espa\c{c}os vetoriais.
 \end{exercicio}
 
 \begin{exercicio}
-	Seja $F : \mathcal{P}_2(\real) \to \mathcal{P}_2(\real)$ dada por $F(p(t)) = t^2p''(t)$. Considere $\mathcal{P}_2(\real)$ um $\real$-espa\c{c}o vetorial.
+  Seja $F : \mathcal{P}_2(\real) \to \mathcal{P}_2(\real)$ dada por $F(p(t)) = t^2p''(t)$. Considere $\mathcal{P}_2(\real)$ um $\real$-espa\c{c}o vetorial.
 \end{exercicio}
 
 \begin{exercicio}
-	Seja $G : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $G(X) = MX + X$ onde
-	\[
-	M = \begin{pmatrix}
-		1 & 0\\
-		0 & 0
-	\end{pmatrix}.
-	\]
-	Considere $\cp{M}_2(\real)$ um $\real$-espa\c{c}o vetorial.
+  Seja $G : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $G(X) = MX + X$ onde
+  \[
+  M = \begin{pmatrix}
+    1 & 0\\
+    0 & 0
+  \end{pmatrix}.
+  \]
+  Considere $\cp{M}_2(\real)$ um $\real$-espa\c{c}o vetorial.
 \end{exercicio}
 
 
 \begin{exercicio}
-	Seja $F : \mathcal{P}_2(\z_5) \to \mathcal{P}_2(\z_5)$ dada por $F(p(t)) = t^2p''(x)$. Considere $\mathcal{P}_2(\z_5)$ um $\z_5$-espa\c{c}o vetorial.
+  Seja $F : \mathcal{P}_2(\z_5) \to \mathcal{P}_2(\z_5)$ dada por $F(p(t)) = t^2p''(x)$. Considere $\mathcal{P}_2(\z_5)$ um $\z_5$-espa\c{c}o vetorial.
 \end{exercicio}
 
 \begin{exercicio}
-	Seja $G : \cp{M}_2(\z_5) \to \cp{M}_2(\z_5)$ dada por $G(X) = MX + X$ onde
-	\[
-	M = \begin{pmatrix}
-		\overline{1} & \overline{0}\\
-		\overline{0} & \overline{0}
-	\end{pmatrix}.
-	\]
-	Considere $\cp{M}_2(\z_5)$ um $\z_5$-espa\c{c}o vetorial.
+  Seja $G : \cp{M}_2(\z_5) \to \cp{M}_2(\z_5)$ dada por $G(X) = MX + X$ onde
+  \[
+  M = \begin{pmatrix}
+    \overline{1} & \overline{0}\\
+    \overline{0} & \overline{0}
+  \end{pmatrix}.
+  \]
+  Considere $\cp{M}_2(\z_5)$ um $\z_5$-espa\c{c}o vetorial.
 \end{exercicio}
 
 \begin{exercicio}
-	Seja $D : \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dada por
-	\[
-	D(a_0 + a_1x + a_2x^2 + \cdots + a_nx^n) = a_1 + 2a_2x + \cdots + na_nx^{n - 1}.
-	\]
-	Considere $\mathcal{P}(\complex)$ um $\complex$-espa\c{c}o vetorial.
+  Seja $D : \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dada por
+  \[
+  D(a_0 + a_1x + a_2x^2 + \cdots + a_nx^n) = a_1 + 2a_2x + \cdots + na_nx^{n - 1}.
+  \]
+  Considere $\mathcal{P}(\complex)$ um $\complex$-espa\c{c}o vetorial.
 \end{exercicio}
 
 \begin{exercicio}
-	Seja $F : \real^3 \to \real^3$ a transforma\c{c}\~ao linear definida por
-	\[
-	F(x,y,z) = (x + 2y - z, y + z, x + y - 2z).
-	\]
-	\begin{solucao}
-		\begin{enumerate}[label=({\alph*})]
-			\item $\dim_\real\im F = 2$
-			\item $\dim_\real\ker F = 1$
-		\end{enumerate}
-	\end{solucao}
+  Seja $F : \real^3 \to \real^3$ a transforma\c{c}\~ao linear definida por
+  \[
+  F(x,y,z) = (x + 2y - z, y + z, x + y - 2z).
+  \]
+  \begin{solucao}
+    \begin{enumerate}[label=({\alph*})]
+      \item $\dim_\real\im F = 2$
+      \item $\dim_\real\ker F = 1$
+    \end{enumerate}
+  \end{solucao}
 \end{exercicio}
 
 \begin{exercicio}
-	Seja $F : \cp{M}_3(\real) \to \cp{M}_3(\real)$ a transforma\c{c}\~ao linear definida por
-	\[
-	F(A) = AM - MA,
-	\]
-	onde $M = \begin{bmatrix}
-		1 & \phantom{-}2 & 0\\0 & \phantom{-}3 & 1\\0 & -1 & 1
-	\end{bmatrix}$ e $\cp{M}_3(\real)$ \'e um $\real$-espa\c{c}o vetorial.
-	\begin{solucao}
-		\begin{enumerate}[label=({\alph*})]
-			\item $\dim_\real\im F = 2$
-			\item $\dim_\real\ker F = 2$
-		\end{enumerate}
-	\end{solucao}
+  Seja $F : \cp{M}_3(\real) \to \cp{M}_3(\real)$ a transforma\c{c}\~ao linear definida por
+  \[
+  F(A) = AM - MA,
+  \]
+  onde $M = \begin{bmatrix}
+    1 & \phantom{-}2 & 0\\0 & \phantom{-}3 & 1\\0 & -1 & 1
+  \end{bmatrix}$ e $\cp{M}_3(\real)$ \'e um $\real$-espa\c{c}o vetorial.
+  \begin{solucao}
+    \begin{enumerate}[label=({\alph*})]
+      \item $\dim_\real\im F = 2$
+      \item $\dim_\real\ker F = 2$
+    \end{enumerate}
+  \end{solucao}
 \end{exercicio}
 
 \begin{exercicio}\label{nucleo_imagem_fim}
-	Seja $F : \cp{M}_2(\complex) \to \cp{M}_2(\complex)$ a transforma\c{c}\~ao linear definida por
-	\[
-	F(A) = AM - MA,
-	\]
-	onde $M = \begin{bmatrix}
-		1 & 2\\0 & 3
-	\end{bmatrix}$ e $\cp{M}_2(\complex)$ \'e um $\complex$-espa\c{c}o vetorial.
-	\begin{solucao}
-		\begin{enumerate}[label=({\alph*})]
-			\item $\dim_\real\im F = 2$
-			\item $\dim_\real\ker F = 2$
-		\end{enumerate}
-	\end{solucao}
+  Seja $F : \cp{M}_2(\complex) \to \cp{M}_2(\complex)$ a transforma\c{c}\~ao linear definida por
+  \[
+  F(A) = AM - MA,
+  \]
+  onde $M = \begin{bmatrix}
+    1 & 2\\0 & 3
+  \end{bmatrix}$ e $\cp{M}_2(\complex)$ \'e um $\complex$-espa\c{c}o vetorial.
+  \begin{solucao}
+    \begin{enumerate}[label=({\alph*})]
+      \item $\dim_\real\im F = 2$
+      \item $\dim_\real\ker F = 2$
+    \end{enumerate}
+  \end{solucao}
 \end{exercicio}
 
 
 \begin{exercicio}
-	Encontre uma transforma\c{c}\~ao linear $F : \real^3 \to \real^4$, cuja imagem \'e gerada por $w_1 = (1,2,0,-4)$ e $w_2 = (2,0,-1,-3)$.
+  Encontre uma transforma\c{c}\~ao linear $F : \real^3 \to \real^4$, cuja imagem \'e gerada por $w_1 = (1,2,0,-4)$ e $w_2 = (2,0,-1,-3)$.
 \end{exercicio}
 
 \begin{exercicio}
-	Encontre uma transforma\c{c}\~ao linear $G : \z_{19}^3 \to \z_{19}^4$, cuja imagem \'e gerada por $w_1 = (\overline{11},\overline{3},\overline{0},\overline{15})$ e $w_2 = (\overline{2},\overline{1},\overline{18},\overline{17})$.
+  Encontre uma transforma\c{c}\~ao linear $G : \z_{19}^3 \to \z_{19}^4$, cuja imagem \'e gerada por $w_1 = (\overline{11},\overline{3},\overline{0},\overline{15})$ e $w_2 = (\overline{2},\overline{1},\overline{18},\overline{17})$.
 \end{exercicio}
 
 \begin{exercicio}
-	Encontre uma transforma\c{c}\~ao linear $T : \real^3 \to \cp{M}_{3 \times 1}(\real)$, cuja imagem \'e gerada por
-	\[
-	v_1 = \begin{bmatrix}
-		1\\2\\3
-	\end{bmatrix}, v_2 = \begin{bmatrix}
-		4\\5\\6
-	\end{bmatrix}.
-	\]
+  Encontre uma transforma\c{c}\~ao linear $T : \real^3 \to \cp{M}_{3 \times 1}(\real)$, cuja imagem \'e gerada por
+  \[
+  v_1 = \begin{bmatrix}
+    1\\2\\3
+  \end{bmatrix}, v_2 = \begin{bmatrix}
+    4\\5\\6
+  \end{bmatrix}.
+  \]
 \end{exercicio}
 
 \begin{exercicio}
-	Encontre uma transforma\c{c}\~ao linear $T : \cp{M}_{1 \times 4}(\real) \to \real^5$ , cujo kernel \'e gerado por
-	\[
-	v_1 = \begin{bmatrix}
-		1 & 2 & 3 & 4
-	\end{bmatrix}, v_2 = \begin{bmatrix}
-		0 & 1 & 1 & 1
-	\end{bmatrix}.
-	\]
+  Encontre uma transforma\c{c}\~ao linear $T : \cp{M}_{1 \times 4}(\real) \to \real^5$ , cujo kernel \'e gerado por
+  \[
+  v_1 = \begin{bmatrix}
+    1 & 2 & 3 & 4
+  \end{bmatrix}, v_2 = \begin{bmatrix}
+    0 & 1 & 1 & 1
+  \end{bmatrix}.
+  \]
 \end{exercicio}
 
 \begin{exercicio}
-	Nos casos abaixo construa uma transforma\c{c}\~ao linear $T : V \to W$ satisfazendo as condi\c{c}\~oes dadas:
-	\begin{enumerate}[label=({\alph*})]
-		\item $V = \real^3$, $W = \real^2$, $\cp{K} = \real$, $\dim_\cp{K} \ker T = 1$, $\dim_\cp{K} \im T = 2$
-		\item $V = \real^3$, $W = \cp{M}_{3\times 1}(\complex)$, $\cp{K} = \real$, $\dim_\cp{K} \ker T = 2$, $\dim_\cp{K} \im T = 1$
-		\item $V = \real^3$, $W = \cp{M}_{3\times 1}(\real)$, $\cp{K} = \real$, $\dim_\cp{K} \ker T = 0$, $\dim_\cp{K} \im T = 3$
-		\item $V = \real^3$, $W = \cp{M}_{3\times 1}(\real)$, $\cp{K} = \real$, $\dim_\cp{K} \ker T = 3$, $\dim_\cp{K} \im T = 0$
-		\item $V = \cp{M}_{3\times 1}(\complex)$, $W = \real^3$, $\cp{K} = \real$, $\dim_\cp{K} \ker T = 3$, $\dim_\cp{K} \im T = 3$
-		\item $V = \cp{M}_{3\times 1}(\z_{11})$, $W = \z_{11}^3$, $\cp{K} = \z_{11}$, $\dim_\cp{K} \ker T = 3$, $\dim_\cp{K} \im T = 3$
-		\item $V = \mathcal{P}_5(\real)$, $W = \real^4$, $\cp{K} = \real$, $\dim_\cp{K} \ker T = 4$, $\dim_\cp{K} \im T = 2$
-		\item $V = \mathcal{P}_5(\complex)$, $W = \complex^5$, $\cp{K} = \complex$, $\dim_\cp{K} \ker T = 1$, $\dim_\cp{K} \im T = 5$
-		\item $V = \mathcal{P}_5(\complex)$, $W = \cp{M}_{3\times 2}(\complex)$, $\cp{K} = \complex$, $\dim_\cp{K} \ker T = 2$, $\dim_\cp{K} \im T = 4$
-		\item $V = \mathcal{P}_4(\real)$, $W = \cp{M}_{2\times 2}(\real)$, $\cp{K} = \real$, $\dim_\cp{K} \ker T = 3$, $\dim_\cp{K} \im T = 2$
-		\item $V = \mathcal{P}_4(\z_5)$, $W = \cp{M}_{2\times 2}(\z_5)$, $\cp{K} = \z_5$, $\dim_\cp{K} \ker T = 3$, $\dim_\cp{K} \im T = 2$
-	\end{enumerate}
+  Nos casos abaixo construa uma transforma\c{c}\~ao linear $T : V \to W$ satisfazendo as condi\c{c}\~oes dadas:
+  \begin{enumerate}[label=({\alph*})]
+    \item $V = \real^3$, $W = \real^2$, $\cp{K} = \real$, $\dim_\cp{K} \ker T = 1$, $\dim_\cp{K} \im T = 2$
+    \item $V = \real^3$, $W = \cp{M}_{3\times 1}(\complex)$, $\cp{K} = \real$, $\dim_\cp{K} \ker T = 2$, $\dim_\cp{K} \im T = 1$
+    \item $V = \real^3$, $W = \cp{M}_{3\times 1}(\real)$, $\cp{K} = \real$, $\dim_\cp{K} \ker T = 0$, $\dim_\cp{K} \im T = 3$
+    \item $V = \real^3$, $W = \cp{M}_{3\times 1}(\real)$, $\cp{K} = \real$, $\dim_\cp{K} \ker T = 3$, $\dim_\cp{K} \im T = 0$
+    \item $V = \cp{M}_{3\times 1}(\complex)$, $W = \real^3$, $\cp{K} = \real$, $\dim_\cp{K} \ker T = 3$, $\dim_\cp{K} \im T = 3$
+    \item $V = \cp{M}_{3\times 1}(\z_{11})$, $W = \z_{11}^3$, $\cp{K} = \z_{11}$, $\dim_\cp{K} \ker T = 3$, $\dim_\cp{K} \im T = 3$
+    \item $V = \mathcal{P}_5(\real)$, $W = \real^4$, $\cp{K} = \real$, $\dim_\cp{K} \ker T = 4$, $\dim_\cp{K} \im T = 2$
+    \item $V = \mathcal{P}_5(\complex)$, $W = \complex^5$, $\cp{K} = \complex$, $\dim_\cp{K} \ker T = 1$, $\dim_\cp{K} \im T = 5$
+    \item $V = \mathcal{P}_5(\complex)$, $W = \cp{M}_{3\times 2}(\complex)$, $\cp{K} = \complex$, $\dim_\cp{K} \ker T = 2$, $\dim_\cp{K} \im T = 4$
+    \item $V = \mathcal{P}_4(\real)$, $W = \cp{M}_{2\times 2}(\real)$, $\cp{K} = \real$, $\dim_\cp{K} \ker T = 3$, $\dim_\cp{K} \im T = 2$
+    \item $V = \mathcal{P}_4(\z_5)$, $W = \cp{M}_{2\times 2}(\z_5)$, $\cp{K} = \z_5$, $\dim_\cp{K} \ker T = 3$, $\dim_\cp{K} \im T = 2$
+  \end{enumerate}
 \end{exercicio}
 
 % \begin{exercicio}
-	%   Sejam $\mathcal{B} = \{(1,0);(0,1)\}$, $\mathcal{B}_1 = \{(-1,1);(1,1)\}$, $\mathcal{B}_2 = \{(\sqrt{3},-1);(\sqrt{3},1)\}$ e $\mathcal{B}_3 = \{(2,0);(0,2)\}$ bases ordenadas de $\real^2$.
-	%   \begin{enumerate}[label=({\alph*})]
-		%     \item Quais s\~ao as coordenadas do vetor $v = (3,-2)$ em rela\c{c}\~ao \`a base:
-		%     \begin{enumerate}[label=({\roman*})]
-			%       \item $\mathcal{B}$
-			%       \item $\mathcal{B}_1$
-			%       \item $\mathcal{B}_2$
-			%       \item $\mathcal{B}_3$
-			%     \end{enumerate}
-		%     \item Ache a matriz de mudan\c{c}a de base nos seguintes casos:
-		%     \begin{enumerate}[label=({\roman*})]
-			%       \item $[I]_{\mathcal{B},\mathcal{B}_1}$
-			%       \item $[I]_{\mathcal{B}_1,\mathcal{B}}$
-			%       \item $[I]_{\mathcal{B}_2,\mathcal{B}}$
-			%       \item $[I]_{\mathcal{B}_3,\mathcal{B}}$
-			%     \end{enumerate}
-		%     \item As coordenadas de um vetor $v \in \real^2$ em rela\c{c}\~ao \`a base $\mathcal{B}_1$ s\~ao dadas por
-		%     \[
-		%       [v]_{\mathcal{B}_1} = \begin{bmatrix}
-			%         4\\0
-			%       \end{bmatrix}.
-		%     \]
-		%     Quais as coordenadas de $v$ em rela\c{c}\~ao \`a base:
-		%     \begin{enumerate}[label=({\roman*})]
-			%       \item $\mathcal{B}$
-			%       \item $\mathcal{B}_2$
-			%       \item $\mathcal{B}_3$
-			%     \end{enumerate}
-		%   \end{enumerate}
-	% \end{exercicio}
+  %   Sejam $\mathcal{B} = \{(1,0);(0,1)\}$, $\mathcal{B}_1 = \{(-1,1);(1,1)\}$, $\mathcal{B}_2 = \{(\sqrt{3},-1);(\sqrt{3},1)\}$ e $\mathcal{B}_3 = \{(2,0);(0,2)\}$ bases ordenadas de $\real^2$.
+  %   \begin{enumerate}[label=({\alph*})]
+    %     \item Quais s\~ao as coordenadas do vetor $v = (3,-2)$ em rela\c{c}\~ao \`a base:
+    %     \begin{enumerate}[label=({\roman*})]
+      %       \item $\mathcal{B}$
+      %       \item $\mathcal{B}_1$
+      %       \item $\mathcal{B}_2$
+      %       \item $\mathcal{B}_3$
+      %     \end{enumerate}
+    %     \item Ache a matriz de mudan\c{c}a de base nos seguintes casos:
+    %     \begin{enumerate}[label=({\roman*})]
+      %       \item $[I]_{\mathcal{B},\mathcal{B}_1}$
+      %       \item $[I]_{\mathcal{B}_1,\mathcal{B}}$
+      %       \item $[I]_{\mathcal{B}_2,\mathcal{B}}$
+      %       \item $[I]_{\mathcal{B}_3,\mathcal{B}}$
+      %     \end{enumerate}
+    %     \item As coordenadas de um vetor $v \in \real^2$ em rela\c{c}\~ao \`a base $\mathcal{B}_1$ s\~ao dadas por
+    %     \[
+    %       [v]_{\mathcal{B}_1} = \begin{bmatrix}
+      %         4\\0
+      %       \end{bmatrix}.
+    %     \]
+    %     Quais as coordenadas de $v$ em rela\c{c}\~ao \`a base:
+    %     \begin{enumerate}[label=({\roman*})]
+      %       \item $\mathcal{B}$
+      %       \item $\mathcal{B}_2$
+      %       \item $\mathcal{B}_3$
+      %     \end{enumerate}
+    %   \end{enumerate}
+  % \end{exercicio}
 
 % \begin{exercicio}
-	%   Se
-	%   \[
-	%     [I]_{\mathcal{B}_1,\mathcal{B}_2} = \begin{bmatrix}
-		%       1 & 1 & 0\\
-		%       0 & -1 & 1\\
-		%       1 & 0 & 1
-		%     \end{bmatrix}
-	%   \]
-	%   encontre:
-	%   \begin{enumerate}[label=({\alph*})]
-		%     \item $[v]_{\mathcal{B}_1}$ onde $[v]_{\mathcal{B}_2} = \begin{bmatrix}
-			%       -1\\2\\3
-			%     \end{bmatrix}$
-		%     \item $[v]_{\mathcal{B}_2}$ onde $[v]_{\mathcal{B}_1} = \begin{bmatrix}
-			%       -1\\2\\3
-			%     \end{bmatrix}$
-		%   \end{enumerate}
-	% \end{exercicio}
+  %   Se
+  %   \[
+  %     [I]_{\mathcal{B}_1,\mathcal{B}_2} = \begin{bmatrix}
+    %       1 & 1 & 0\\
+    %       0 & -1 & 1\\
+    %       1 & 0 & 1
+    %     \end{bmatrix}
+  %   \]
+  %   encontre:
+  %   \begin{enumerate}[label=({\alph*})]
+    %     \item $[v]_{\mathcal{B}_1}$ onde $[v]_{\mathcal{B}_2} = \begin{bmatrix}
+      %       -1\\2\\3
+      %     \end{bmatrix}$
+    %     \item $[v]_{\mathcal{B}_2}$ onde $[v]_{\mathcal{B}_1} = \begin{bmatrix}
+      %       -1\\2\\3
+      %     \end{bmatrix}$
+    %   \end{enumerate}
+  % \end{exercicio}
 
 % \begin{exercicio}
-	%   Seja $T : \real^2 \to \real^2$ uma transforma\c{c}\~ao linear definida por
-	%   \[
-	%     T(x,y) = (-y,x).
-	%   \]
-	%   \begin{enumerate}[label=({\alph*})]
-		%     \item Qual \'e a matriz de $T$ em rela\c{c}\~ao \`a base ordenada can\^onica de $\real^2$?
-		%     \item Qual \'e a matriz de $T$ em rela\c{c}\~ao \`a base ordenada $\mathcal{B}_1 = \{w_1 = (1,2); w_2 = (1,-1)\}$?
-		%     \item Exiba a matriz $P$ tal que $[T]_{\mathcal{B}} = P^{-1}[T]_{\mathcal{B}_1}P$.
-		%   \end{enumerate}
-	% \end{exercicio}
+  %   Seja $T : \real^2 \to \real^2$ uma transforma\c{c}\~ao linear definida por
+  %   \[
+  %     T(x,y) = (-y,x).
+  %   \]
+  %   \begin{enumerate}[label=({\alph*})]
+    %     \item Qual \'e a matriz de $T$ em rela\c{c}\~ao \`a base ordenada can\^onica de $\real^2$?
+    %     \item Qual \'e a matriz de $T$ em rela\c{c}\~ao \`a base ordenada $\mathcal{B}_1 = \{w_1 = (1,2); w_2 = (1,-1)\}$?
+    %     \item Exiba a matriz $P$ tal que $[T]_{\mathcal{B}} = P^{-1}[T]_{\mathcal{B}_1}P$.
+    %   \end{enumerate}
+  % \end{exercicio}
 
 % \begin{exercicio}
-	%   Seja $T : V \to W$ um isomorfismo, onde $V$ e $W$ s\~ao $\cp{K}$-espa\c{c}os vetoriais. Seja $G : W \to V$ definida por: $G(w) = v$ se, e somente se, $T(v) = w$, para todo $w \in V$. Mostre que:
-	%   \begin{enumerate}[label=({\alph*})]
-		%     \item $G$ \'e uma transforma\c{c}\~ao linear.
-		%     \item $T\circ G = Id_W$, onde $Id_V : W \to W$ tal que $Id_W(x) = x$, para todo $x \in W$.
-		%     \item $G\circ T = Id_V$, onde $Id_V : V \to V$ tal que $Id_V(y) = y$, para todo $y \in V$.
-		%   \end{enumerate}
-	%   A transforma\c{c}\~ao linear $G$ \'e chamada de \textbf{inversa} de $T$ e ser\'a denotada por $G = T^{-1}$.
-	% \end{exercicio}
+  %   Seja $T : V \to W$ um isomorfismo, onde $V$ e $W$ s\~ao $\cp{K}$-espa\c{c}os vetoriais. Seja $G : W \to V$ definida por: $G(w) = v$ se, e somente se, $T(v) = w$, para todo $w \in V$. Mostre que:
+  %   \begin{enumerate}[label=({\alph*})]
+    %     \item $G$ \'e uma transforma\c{c}\~ao linear.
+    %     \item $T\circ G = Id_W$, onde $Id_V : W \to W$ tal que $Id_W(x) = x$, para todo $x \in W$.
+    %     \item $G\circ T = Id_V$, onde $Id_V : V \to V$ tal que $Id_V(y) = y$, para todo $y \in V$.
+    %   \end{enumerate}
+  %   A transforma\c{c}\~ao linear $G$ \'e chamada de \textbf{inversa} de $T$ e ser\'a denotada por $G = T^{-1}$.
+  % \end{exercicio}
 
 % \begin{exercicio}
-	%   Seja $T : \real^3 \to \real^3$ uma transforma\c{c}\~ao linear cuja matriz com rela\c{c}\~ao \`a base can\^onica seja
-	%   \[
-	%     \begin{pmatrix}
-		%       1 & 1 & 0\\
-		%       -1 & 0 & 1\\
-		%       0 & -1 & -1
-		%     \end{pmatrix}.
-	%   \]
-	%     \begin{enumerate}[label=({\alph*})]
-		%       \item Determine $T(x,y,z)$.
-		%       \item Qual \'e a matriz de $T$ com rela\c{c}\~ao \`a base $\mathcal{B} = \{(-1,1,0);(1,-1,1);(0,1,-1)\}$?
-		%       \item A transforma\c{c}\~ao $T$ \'e invert{\'\i}vel? Justifique.
-		%     \end{enumerate}
-	% \end{exercicio}
+  %   Seja $T : \real^3 \to \real^3$ uma transforma\c{c}\~ao linear cuja matriz com rela\c{c}\~ao \`a base can\^onica seja
+  %   \[
+  %     \begin{pmatrix}
+    %       1 & 1 & 0\\
+    %       -1 & 0 & 1\\
+    %       0 & -1 & -1
+    %     \end{pmatrix}.
+  %   \]
+  %     \begin{enumerate}[label=({\alph*})]
+    %       \item Determine $T(x,y,z)$.
+    %       \item Qual \'e a matriz de $T$ com rela\c{c}\~ao \`a base $\mathcal{B} = \{(-1,1,0);(1,-1,1);(0,1,-1)\}$?
+    %       \item A transforma\c{c}\~ao $T$ \'e invert{\'\i}vel? Justifique.
+    %     \end{enumerate}
+  % \end{exercicio}
 
 % \begin{exercicio}
-	%   Sejam $V$ e $W$ dois espa\c{c}os vetoriais sobre $\cp{K}$ tais que $\dim_\cp{K}V = \dim_\cp{K}W = n \ge 1$ e considere $\mathcal{B}_1$ e $\mathcal{B}_2$ bases ordenadas de $V$ e $W$, respectivamente. Mostre que:
-	%   \begin{enumerate}[label=({\alph*})]
-		%     \item Se uma transforma\c{c}\~ao linear $T : V \to W$ \'e um isomorfismo, ent\~ao a matriz $[T]_{\mathcal{B}_1,\mathcal{B}_2}$ \'e invert{\'\i}vel.
-		%     \item Se uma transforma\c{c}\~ao linear $T : V \to W$ tal que a matriz $[T]_{\mathcal{B}_1,\mathcal{B}_2}$ \'e invert{\'\i}vel , ent\~ao $T$ \'e um isomorfismo.
-		%     \item Mostre que se $T$ \'e um isomorfismo, ent\~ao
-		%     \[
-		%       \left([T]_{\mathcal{B}_1,\mathcal{B}_2}\right)^{-1} = [T^{-1}]_{\mathcal{B}_1,\mathcal{B}_2}.
-		%     \]
-		%   \end{enumerate}
-	% \end{exercicio}
+  %   Sejam $V$ e $W$ dois espa\c{c}os vetoriais sobre $\cp{K}$ tais que $\dim_\cp{K}V = \dim_\cp{K}W = n \ge 1$ e considere $\mathcal{B}_1$ e $\mathcal{B}_2$ bases ordenadas de $V$ e $W$, respectivamente. Mostre que:
+  %   \begin{enumerate}[label=({\alph*})]
+    %     \item Se uma transforma\c{c}\~ao linear $T : V \to W$ \'e um isomorfismo, ent\~ao a matriz $[T]_{\mathcal{B}_1,\mathcal{B}_2}$ \'e invert{\'\i}vel.
+    %     \item Se uma transforma\c{c}\~ao linear $T : V \to W$ tal que a matriz $[T]_{\mathcal{B}_1,\mathcal{B}_2}$ \'e invert{\'\i}vel , ent\~ao $T$ \'e um isomorfismo.
+    %     \item Mostre que se $T$ \'e um isomorfismo, ent\~ao
+    %     \[
+    %       \left([T]_{\mathcal{B}_1,\mathcal{B}_2}\right)^{-1} = [T^{-1}]_{\mathcal{B}_1,\mathcal{B}_2}.
+    %     \]
+    %   \end{enumerate}
+  % \end{exercicio}
 
 \begin{exercicio}
-	Mostre que cada uma das transforma\c{c}\~oes lineares de $\real^3$ em $\real^3$ a seguir \'e invert{\'\i}vel e determine a transforma\c{c}\~ao linear inversa:
-	\begin{enumerate}[label=({\alph*})]
-		\item $T(x,y,z) = (x - 3y - 2z, y - 4z, -z)$
-		\item $T(x,y,z) = (x, x - y, 2x + y -z)$
-	\end{enumerate}
-\end{exercicio}
-
-\begin{exercicio}
-	Seja $\cp{K}$ um corpo e $T : \cp{K}^2 \to \cp{K}^2$ a transforma\c{c}\~ao linear dada por $T(x_1,x_2) = (x_1 + x_2, x_1)$ para todo $(x_1,x_2) \in \cp{K}^2$. Prove que $T$ \'e um isomorfismo e exiba $T^{-1}$.
+  Mostre que cada uma das transforma\c{c}\~oes lineares de $\real^3$ em $\real^3$ a seguir \'e invert{\'\i}vel e determine a transforma\c{c}\~ao linear inversa:
+  \begin{enumerate}[label=({\alph*})]
+    \item $T(x,y,z) = (x - 3y - 2z, y - 4z, -z)$
+    \item $T(x,y,z) = (x, x - y, 2x + y -z)$
+  \end{enumerate}
 \end{exercicio}
 
 \begin{exercicio}
-	Seja $T : \complex^3 \to \complex^3$ a transforma\c{c}\~ao linear definida por $T(1,0,0) = (1,0,i)$, $T(0,1,0) = (0,1,1)$ e $T(0,0,1) = (i,1,0)$. Decida se $T$ \'e invert{\'\i}vel.
+  Seja $\cp{K}$ um corpo e $T : \cp{K}^2 \to \cp{K}^2$ a transforma\c{c}\~ao linear dada por $T(x_1,x_2) = (x_1 + x_2, x_1)$ para todo $(x_1,x_2) \in \cp{K}^2$. Prove que $T$ \'e um isomorfismo e exiba $T^{-1}$.
 \end{exercicio}
 
 \begin{exercicio}
-	Seja $T : \real^3 \to \real^2$ e $S : \real^2 \to \real^3$ transforma\c{c}\~oes lineares.
-	\begin{enumerate}[label=({\alph*})]
-		\item Prove que $S \circ T$ n\~ao \'e invert{\'\i}vel.
-		\item Achar um exemplo em que $T\circ S$ n\~ao \'e invert{\'\i}vel e um outro em que $T\circ S$ \'e invert{\'\i}vel.
-	\end{enumerate}
+  Seja $T : \complex^3 \to \complex^3$ a transforma\c{c}\~ao linear definida por $T(1,0,0) = (1,0,i)$, $T(0,1,0) = (0,1,1)$ e $T(0,0,1) = (i,1,0)$. Decida se $T$ \'e invert{\'\i}vel.
+\end{exercicio}
+
+\begin{exercicio}
+  Seja $T : \real^3 \to \real^2$ e $S : \real^2 \to \real^3$ transforma\c{c}\~oes lineares.
+  \begin{enumerate}[label=({\alph*})]
+    \item Prove que $S \circ T$ n\~ao \'e invert{\'\i}vel.
+    \item Achar um exemplo em que $T\circ S$ n\~ao \'e invert{\'\i}vel e um outro em que $T\circ S$ \'e invert{\'\i}vel.
+  \end{enumerate}
 \end{exercicio}
 
 % \begin{exercicio}
-	%   Seja $V$ um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao 2 e seja $\mathcal{B}$ uma base ordenada de $V$. Se $T: V \to V$ \'e uma transforma\c{c}\~ao linear tal que
-	%   \[
-	%     [T]_\mathcal{B} = \begin{bmatrix}
-		%       a & b\\
-		%       c & d
-		%     \end{bmatrix},
-	%   \]
-	%   mostre que $T^2 - (a + d)T + (ad - bc)I = 0$.
-	% \end{exercicio}
+  %   Seja $V$ um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao 2 e seja $\mathcal{B}$ uma base ordenada de $V$. Se $T: V \to V$ \'e uma transforma\c{c}\~ao linear tal que
+  %   \[
+  %     [T]_\mathcal{B} = \begin{bmatrix}
+    %       a & b\\
+    %       c & d
+    %     \end{bmatrix},
+  %   \]
+  %   mostre que $T^2 - (a + d)T + (ad - bc)I = 0$.
+  % \end{exercicio}
 
 % \begin{exercicio}
-	%   Seja $T : \real^3 \to \real^3$ uma transforma\c{c}\~ao linear definida por
-	%   \[
-	%     T(x,y,z) = (3x + z,-2x + y,-x+2y + 4z).
-	%   \]
-	%   \begin{enumerate}[label=({\alph*})]
-		%     \item Qual \'e a matriz de $T$ em rela\c{c}\~ao \`a base ordenada can\^onica de $\real^3$?
-		%     \item Qual \'e a matriz de $T$ em rela\c{c}\~ao \`a base ordenada $\mathcal{B}_1 = \{w_1 = (1,0,1); w_2 = (-1,2,1); w_3 = (2,1,1)\}$?
-		%     \item Exiba a matriz $P$ tal que $[T]_{\mathcal{B}} = P^{-1}[T]_{\mathcal{B}_1}P$.
-		%     \item Mostrar que $T$ \'e invert{\'\i}vel e achar uma express\~ao para $T^{-1}$.
-		%   \end{enumerate}
-	% \end{exercicio}
+  %   Seja $T : \real^3 \to \real^3$ uma transforma\c{c}\~ao linear definida por
+  %   \[
+  %     T(x,y,z) = (3x + z,-2x + y,-x+2y + 4z).
+  %   \]
+  %   \begin{enumerate}[label=({\alph*})]
+    %     \item Qual \'e a matriz de $T$ em rela\c{c}\~ao \`a base ordenada can\^onica de $\real^3$?
+    %     \item Qual \'e a matriz de $T$ em rela\c{c}\~ao \`a base ordenada $\mathcal{B}_1 = \{w_1 = (1,0,1); w_2 = (-1,2,1); w_3 = (2,1,1)\}$?
+    %     \item Exiba a matriz $P$ tal que $[T]_{\mathcal{B}} = P^{-1}[T]_{\mathcal{B}_1}P$.
+    %     \item Mostrar que $T$ \'e invert{\'\i}vel e achar uma express\~ao para $T^{-1}$.
+    %   \end{enumerate}
+  % \end{exercicio}
 
 % \begin{exercicio}
-	%   Sejam $T, S : V \to W$ duas transforma\c{c}\~oes lineares, onde $V$ e $W$ s\~ao $\cp{K}$-espa\c{c}os vetoriais de dimens\~ao finita. Sejam $\mathcal{B}$ e $\mathcal{C}$ bases de $V$ e $W$, respectivamente e $\lambda \in \cp{K}$. Mostre que:
-	%   \begin{enumerate}[label=({\alph*})]
-		%     \item $[T + S]_{\mathcal{B}, \mathcal{C}} = [T]_{\mathcal{B}, \mathcal{C}} + [S]_{\mathcal{B}, \mathcal{C}}$.
-		%     \item $[\lambda T]_{\mathcal{B}, \mathcal{C}} = \lambda [T]_{\mathcal{B}, \mathcal{C}}$.
-		%   \end{enumerate}
-	% \end{exercicio}
+  %   Sejam $T, S : V \to W$ duas transforma\c{c}\~oes lineares, onde $V$ e $W$ s\~ao $\cp{K}$-espa\c{c}os vetoriais de dimens\~ao finita. Sejam $\mathcal{B}$ e $\mathcal{C}$ bases de $V$ e $W$, respectivamente e $\lambda \in \cp{K}$. Mostre que:
+  %   \begin{enumerate}[label=({\alph*})]
+    %     \item $[T + S]_{\mathcal{B}, \mathcal{C}} = [T]_{\mathcal{B}, \mathcal{C}} + [S]_{\mathcal{B}, \mathcal{C}}$.
+    %     \item $[\lambda T]_{\mathcal{B}, \mathcal{C}} = \lambda [T]_{\mathcal{B}, \mathcal{C}}$.
+    %   \end{enumerate}
+  % \end{exercicio}
 
 % \begin{exercicio}
-	%   Seja $T : \real^3 \to \real^3$ uma transforma\c{c}\~ao linear tal que em rela\c{c}\~ao \`a base can\^onica $\mathcal{B} = \{(1,0,0); (0,1,0); (0,0,1)\}$:
-	%   \[
-	%     [T]_\mathcal{B} =\begin{bmatrix}
-		%       1 & 2 & 1\\
-		%       0 & 1 & 1\\
-		%       -1 & 3 & 4
-		%     \end{bmatrix}.
-	%   \]
-	%   Ache uma base de $\im T$ e uma base de $\ker T$.
-	% \end{exercicio}
+  %   Seja $T : \real^3 \to \real^3$ uma transforma\c{c}\~ao linear tal que em rela\c{c}\~ao \`a base can\^onica $\mathcal{B} = \{(1,0,0); (0,1,0); (0,0,1)\}$:
+  %   \[
+  %     [T]_\mathcal{B} =\begin{bmatrix}
+    %       1 & 2 & 1\\
+    %       0 & 1 & 1\\
+    %       -1 & 3 & 4
+    %     \end{bmatrix}.
+  %   \]
+  %   Ache uma base de $\im T$ e uma base de $\ker T$.
+  % \end{exercicio}
 
 % \begin{exercicio}
-	%   Seja $T : \cp{M}_2(\complex) \to \cp{M}_2(\complex)$ uma transforma\c{c}\~ao linear dada por
-	%   \[
-	%     T \begin{pmatrix}
-		%       x & y\\
-		%       z & w
-		%     \end{pmatrix} = \begin{pmatrix}
-		%       0 & x\\
-		%       z - w & 0
-		%     \end{pmatrix},
-	%   \]
-	%   onde $\cp{M}_2(\complex)$ \'e um $\complex$-espa\c{c}o vetorial
-	%   e
-	%   \[
-	%       \mathcal{B}_1 = \left\{u_1 = \begin{bmatrix}
-		%         1 & 0\\0 & 0
-		%       \end{bmatrix}, u_2 = \begin{bmatrix}
-		%         0 & 1\\0 & 0
-		%       \end{bmatrix}, u_3 = \begin{bmatrix}
-		%         0 & 0\\1 & 0
-		%       \end{bmatrix}, u_4 = \begin{bmatrix}
-		%         0 & 0\\0 & 1
-		%       \end{bmatrix}\right\}
-	%   \]
-	%     \begin{enumerate}[label=({\alph*})]
-		%       \item Determine a matriz de $T$ com rela\c{c}\~ao \`a base can\^onica $\mathcal{B}_1$.
-		%       \item Determine a matriz de $T$ com rela\c{c}\~ao \`a base
-		%       \[
-		%         \mathcal{B}_2 = \left\{\begin{pmatrix}
-			%           1 & 0\\
-			%           0 & 1
-			%         \end{pmatrix}; \begin{pmatrix}
-			%           0 & 1\\
-			%           1 & 0
-			%         \end{pmatrix}; \begin{pmatrix}
-			%           1 & 0\\
-			%           1 & 1
-			%         \end{pmatrix}; \begin{pmatrix}
-			%           0 & 1\\
-			%           0 & 1
-			%         \end{pmatrix}\right\}
-		%       \]
-		%       de $\cp{M}_2(\complex)$.
-		%       \item Exiba a matriz $P$ tal que $[T]_{\mathcal{B}_2} = P^{-1}[T]_{\mathcal{B}_1}P$.
-		%     \end{enumerate}
-	% \end{exercicio}
+  %   Seja $T : \cp{M}_2(\complex) \to \cp{M}_2(\complex)$ uma transforma\c{c}\~ao linear dada por
+  %   \[
+  %     T \begin{pmatrix}
+    %       x & y\\
+    %       z & w
+    %     \end{pmatrix} = \begin{pmatrix}
+    %       0 & x\\
+    %       z - w & 0
+    %     \end{pmatrix},
+  %   \]
+  %   onde $\cp{M}_2(\complex)$ \'e um $\complex$-espa\c{c}o vetorial
+  %   e
+  %   \[
+  %       \mathcal{B}_1 = \left\{u_1 = \begin{bmatrix}
+    %         1 & 0\\0 & 0
+    %       \end{bmatrix}, u_2 = \begin{bmatrix}
+    %         0 & 1\\0 & 0
+    %       \end{bmatrix}, u_3 = \begin{bmatrix}
+    %         0 & 0\\1 & 0
+    %       \end{bmatrix}, u_4 = \begin{bmatrix}
+    %         0 & 0\\0 & 1
+    %       \end{bmatrix}\right\}
+  %   \]
+  %     \begin{enumerate}[label=({\alph*})]
+    %       \item Determine a matriz de $T$ com rela\c{c}\~ao \`a base can\^onica $\mathcal{B}_1$.
+    %       \item Determine a matriz de $T$ com rela\c{c}\~ao \`a base
+    %       \[
+    %         \mathcal{B}_2 = \left\{\begin{pmatrix}
+      %           1 & 0\\
+      %           0 & 1
+      %         \end{pmatrix}; \begin{pmatrix}
+      %           0 & 1\\
+      %           1 & 0
+      %         \end{pmatrix}; \begin{pmatrix}
+      %           1 & 0\\
+      %           1 & 1
+      %         \end{pmatrix}; \begin{pmatrix}
+      %           0 & 1\\
+      %           0 & 1
+      %         \end{pmatrix}\right\}
+    %       \]
+    %       de $\cp{M}_2(\complex)$.
+    %       \item Exiba a matriz $P$ tal que $[T]_{\mathcal{B}_2} = P^{-1}[T]_{\mathcal{B}_1}P$.
+    %     \end{enumerate}
+  % \end{exercicio}
 
 \newpage
 \Closesolutionfile{ans}
 \hrule
 \begin{center}
-	{\large\bf RESPOSTAS}
+  {\large\bf RESPOSTAS}
 \end{center}
 \hrule
 \input{ans1}
