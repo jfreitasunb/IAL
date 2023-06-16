@@ -27,45 +27,40 @@
 \logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
 
 \begin{frame}
-
-\begin{definicao}
-		Sejam $(V, +, \cdot)$ e $(W, \oplus, \otimes)$ espaços vetoriais sobre um corpo $\cp{K}$. Uma função $T : V \to W$ é uma \textbf{transformação linear} se
-		\begin{enumerate}[label={\roman*})]
-			\item $T(u_1 + u_2) = T(u_1) \oplus T(u_2)$ para todos $u_1$, $u_2 \in V$;
-			\item $T(\lambda \cdot u) = \lambda \otimes T(u)$ para todo $\lambda \in \cp{K}$ e todo $u \in V$.
-		\end{enumerate}
-	\end{definicao}
-
+    \begin{definicao}
+        Sejam $(V, +, \cdot)$ e $(W, \oplus, \otimes)$ espaços vetoriais sobre um corpo $\cp{K}$. Uma função $T : V \to W$ é uma \textbf{transformação linear} se
+        \begin{enumerate}[label={\roman*})]
+            \item $T(u_1 + u_2) = T(u_1) \oplus T(u_2)$ para todos $u_1$, $u_2 \in V$;
+            \item $T(\lambda \cdot u) = \lambda \otimes T(u)$ para todo $\lambda \in \cp{K}$ e todo $u \in V$.
+        \end{enumerate}
+    \end{definicao}
 \end{frame}
 
 \begin{frame}
+    \begin{observacao}
+        Para simplificar a notação, vamos adotar os mesmos símbolos para indicar a soma e o produto por escalar nos espaços vetoriais que aparecerão no decorrer do texto. No entanto, o leitor deve estar ciente que estes símbolos podem ter significados diferentes, dependendo do espaço vetorial em questão.
+    \end{observacao}
 
-	\begin{observacao}
-		Para simplificar a notação, vamos adotar os mesmos símbolos para indicar a soma e o produto por escalar nos espaços vetoriais que aparecerão no decorrer do texto. No entanto, o leitor deve estar ciente que estes símbolos podem ter significados diferentes, dependendo do espaço vetorial em questão.
-	\end{observacao}
-
-	\begin{lema}
-		Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$. Então uma função $T : V \to W$ é uma transformação linear se, e somente se,
-		\[
-			T(\lambda u_1 + u_2) = \lambda T(u_1) + T(u_2),
-		\]
-		para todos $u_1$, $u_2 \in V$ e todo $\lambda \in \cp{K}$.
-	\end{lema}
-
+    \begin{lema}
+        Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$. Então uma função $T : V \to W$ é uma transformação linear se, e somente se,
+        \[
+            T(\lambda u_1 + u_2) = \lambda T(u_1) + T(u_2),
+        \]
+        para todos $u_1$, $u_2 \in V$ e todo $\lambda \in \cp{K}$.
+    \end{lema}
 \end{frame}
 
 \begin{frame}
+    \begin{lema}
+        Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$ e $T : V \to W$ uma transformação linear. Então:
+        \begin{enumerate}[label={\roman*})]\label{transformacao_linear_propriedades_basicas}
+            \item $T(0_V) = 0_W$, onde $0_V$ e $0_W$ denotam os vetores nulos de $V$ e $W$, respectivamente.
 
-	\begin{lema}
-		Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$ e $T : V \to W$ uma transformação linear. Então:
-		\begin{enumerate}[label={\roman*})]\label{transformacao_linear_propriedades_basicas}
-			\item $T(0_V) = 0_W$, onde $0_V$ e $0_W$ denotam os vetores nulos de $V$ e $W$, respectivamente.
+            \item $T(-u) = -T(u)$, para cada $u \in V$.
 
-			\item $T(-u) = -T(u)$, para cada $u \in V$.
-
-			\item $T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_mu_m) = \alpha_1 T(u_1) + \alpha_2 T(u_2) + \cdots + \alpha_m T(u_m)$, onde $\alpha_i \in \cp{K}$ e $u_i \in V$ para $i = 1$, \dots, $m$.
-		\end{enumerate}
-	\end{lema}
+            \item $T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_mu_m) = \alpha_1 T(u_1) + \alpha_2 T(u_2) + \cdots + \alpha_m T(u_m)$, onde $\alpha_i \in \cp{K}$ e $u_i \in V$ para $i = 1$, \dots, $m$.
+        \end{enumerate}
+    \end{lema}
 \end{frame}
 
 \begin{frame}
@@ -102,4 +97,3 @@
 \end{frame}
 
 \end{document}
-
