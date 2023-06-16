@@ -24,12 +24,12 @@
   \maketitle
 \end{frame}
 
-\logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}} 
+\logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
 
 \begin{frame}
 
 \begin{definicao}
-	Sejam $(V, +, \cdot)$ e $(W, \oplus, \otimes)$ espa\c{c}os vetoriais sobre um corpo $\cp{K}$. Uma fun\c{c}\~ao $T : V \to W$ \'e uma \textbf{transforma\c{c}\~ao linear} se
+	Sejam $(V, +, \cdot)$ e $(W, \oplus, \otimes)$ espaços vetoriais sobre um corpo $\cp{K}$. Uma função $T : V \to W$ é uma \textbf{transformação linear} se
 	\begin{enumerate}[label={\roman*})]
 		\item $T(u_1 + u_2) = T(u_1) \oplus T(u_2)$ para todos $u_1$, $u_2 \in V$;
 		\item $T(\lambda \cdot u) = \lambda \otimes T(u)$ para todo $\lambda \in \cp{K}$ e todo $u \in V$.
@@ -41,11 +41,11 @@
 \begin{frame}
 
 \begin{observacao}
-	Para simplificar a nota\c{c}\~ao, vamos adotar os mesmos s{\'\i}mbolos para indicar a soma e o produto por escalar nos espa\c{c}os vetoriais que aparecer\~ao no decorrer do texto. No entanto, o leitor deve estar ciente que estes s{\'\i}mbolos podem ter significados diferentes, dependendo do espa\c{c}o vetorial em quest\~ao.
+	Para simplificar a notação, vamos adotar os mesmos símbolos para indicar a soma e o produto por escalar nos espaços vetoriais que aparecerão no decorrer do texto. No entanto, o leitor deve estar ciente que estes símbolos podem ter significados diferentes, dependendo do espaço vetorial em questão.
 \end{observacao}
 
 \begin{lema}
-	Sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$. Ent\~ao uma fun\c{c}\~ao $T : V \to W$ \'e uma transforma\c{c}\~ao linear se, e somente se,
+	Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$. Então uma função $T : V \to W$ é uma transformação linear se, e somente se,
 	\[
 	T(\lambda u_1 + u_2) = \lambda T(u_1) + T(u_2),
 	\]
@@ -57,12 +57,12 @@
 \begin{frame}
 
 \begin{lema}
-	Sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$ e $T : V \to W$ uma transforma\c{c}\~ao linear. Ent\~ao:
+	Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$ e $T : V \to W$ uma transformação linear. Então:
 	\begin{enumerate}[label={\roman*})]\label{transformacao_linear_propriedades_basicas}
 		\item $T(0_V) = 0_W$, onde $0_V$ e $0_W$ denotam os vetores nulos de $V$ e $W$, respectivamente.
-		
+
 		\item $T(-u) = -T(u)$, para cada $u \in V$.
-		
+
 		\item $T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_mu_m) = \alpha_1 T(u_1) + \alpha_2 T(u_2) + \cdots + \alpha_m T(u_m)$, onde $\alpha_i \in \cp{K}$ e $u_i \in V$ para $i = 1$, \dots, $m$.
 	\end{enumerate}
 \end{lema}
