@@ -28,7 +28,7 @@
 
 \begin{frame}
 
-	\begin{definicao}
+\begin{definicao}
 		Sejam $(V, +, \cdot)$ e $(W, \oplus, \otimes)$ espaços vetoriais sobre um corpo $\cp{K}$. Uma função $T : V \to W$ é uma \textbf{transformação linear} se
 		\begin{enumerate}[label={\roman*})]
 			\item $T(u_1 + u_2) = T(u_1) \oplus T(u_2)$ para todos $u_1$, $u_2 \in V$;
@@ -66,6 +66,39 @@
 			\item $T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_mu_m) = \alpha_1 T(u_1) + \alpha_2 T(u_2) + \cdots + \alpha_m T(u_m)$, onde $\alpha_i \in \cp{K}$ e $u_i \in V$ para $i = 1$, \dots, $m$.
 		\end{enumerate}
 	\end{lema}
+\end{frame}
+
+\begin{frame}
+    \begin{teorema}\label{existencia_de_transformacao_unica_dado_valores}
+        Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais. Se $\{u_1, \dots, u_n\}$ \'e uma base de $V$ e se $\{w_1, \dots, w_n\} \subseteq W$, ent\~ao existe uma \'unica transforma\c{c}\~ao linear $T : V \to W$ tal que $T(u_i) = w_i$ para cada $i = 1$, \dots, $n$.
+    \end{teorema}
+\end{frame}
+
+\begin{frame}
+    \begin{definicao}
+        Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais e $T : V \to W$ uma transforma\c{c}\~ao linear.
+        \begin{enumerate}[label={\roman*})]
+            \item O conjunto
+            \[
+            \ker T = \{u \in V \mid T(u) = 0_W\}
+            \]
+            \'e chamado de \textbf{kernel} ou \textbf{n\'ucleo} de $T$. (O n\'ucleo de $T$ tamb\'em pode ser denotado por $Nuc\ T$.)
+
+            \item O conjunto
+            \[
+            \im T = \{u \in W \mid \mbox{ existe } v \in V \mbox{ tal que } T(v) = u\}
+            \]
+            \'e chamado de \textbf{imagem} de $T$.
+        \end{enumerate}
+    \end{definicao}
+
+    \begin{proposicao}
+        Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais e $T : V \to W$ uma transforma\c{c}\~ao linear. Ent\~ao:
+        \begin{enumerate}[label={\roman*})]
+            \item $\ker T$ \'e um subespa\c{c}o de $V$;
+            \item $\im T$ \'e um subespa\c{c}o de $W$.
+        \end{enumerate}
+    \end{proposicao}
 \end{frame}
 
 \end{document}
