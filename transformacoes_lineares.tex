@@ -491,650 +491,650 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
   Observe que $T(1,0)$ n\~ao \'e m\'ultiplo de $T(0,i)$. Logo o conjunto $\{T(1,0); T(0,i)\}$ \'e uma base de $\im T$.
 \end{exemplo}
 
-\begin{teorema}[Teorema do N\'ucleo e da Imagem]\label{teorema_do_nucleo_e_da_imagem}
-  Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais com $\dim_\cp{K}V$ finita. Seja $T : V \to W$ uma transforma\c{c}\~ao linear. Ent\~ao
-  \[
-    \dim_\cp{K}V = \dim_\cp{K}\ker T + \dim_\cp{K}\im T.
-  \]
-\end{teorema}
-\begin{prova}
-  Suponha primeiro que $\ker T \ne \{0_V\}$. Seja $\mathcal{B}_1 = \{u_1, \dots, u_n\}$ uma base de $\ker T$. Podemos completar o conjunto $\mathcal{B}_1$ at\'e obter uma base $\mathcal{B} = \{u_1, \dots, u_n, v_1, \dots, v_r\}$ de $V$. Para demonstrar o teorema precisamos encontrar uma base de $\im T$ com $r$ elementos. Considere ent\~ao os seguintes elementos de $W$:
-  \[
-    T(u_1), \dots, T(u_n), T(v_1), \dots, T(v_r).
-  \]
-  Como $u_i \in \ker T$, ent\~ao $T(u_i) = 0_W$ para $i = 1$, \dots, $n$. Assim pelo Lema \ref{transformacao_gera_imagem}, $\mathcal{B}_2 = \{T(v_1), \dots, T(v_r)\}$ \'e um conjunto gerador de $\im T$. Precisamos mostrar que $\mathcal{B}_2$ \'e L.I. para que seja uma base de $\im T$. Para isso, sejam $\lambda_1$, \dots, $\lambda_r \in \cp{K}$ tais que
-  \[
-    \lambda_1T(v_1) + \cdots + \lambda_rT(v_r) = 0_W.
-  \]
-  Da{\'\i} $\lambda_1v_1 + \cdots + \lambda_rv_r \in \ker T$. Ent\~ao existem $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ tais que
-  \[
-    \lambda_1v_1 + \cdots + \lambda_rv_r = \alpha_1u_1 + \cdots + \alpha_nu_n,
-  \]
-  ou seja, $\lambda_1 = \cdots = \lambda_r = \alpha_1 = \cdots = \alpha_n = 0_\cp{K}$ pois $\{u_1, \dots, u_n, v_1, \dots, v_r\}$ \'e uma base de $V$. Portanto $\{T(v_1), \dots, T(v_r)\}$ \'e uma base de $\im T$. Logo
-  \[
-    \dim_\cp{K}V = \dim_\cp{K}\ker T + \dim_\cp{K}\im T.
-  \]
-  Agora, se $\ker T = \{0_V\}$, considere $\mathcal{B} = \{u_1, \dots, u_n\}$ uma base de $V$. De maneira an\'aloga ao caso anterior, mostra-se que $\{T(u_1), \dots, T(u_n)\}$ \'e uma base de $\im T$. Logo
-  \[
-    \dim_\cp{K}V = \dim_\cp{K}\ker T + \dim_\cp{K}\im T.
-  \]
-\end{prova}
-
-\section{Isomorfismos}
-
-\begin{definicao}
-  Sejam $V$ e $W$ espa\c{c}os vetoriais sobre o corpo $\cp{K}$ e seja $T : V \to W$ uma transforma\c{c}\~ao linear. Se $T$ \'e um isomorfismo, ent\~ao dizemos que $V$ e $W$ s\~ao \textbf{espa\c{c}os vetoriais isomorfos} e denotamos por $V \cong W$.
-\end{definicao}
-
-\begin{proposicao}\label{equivalencia_isomorfismo_dimensao_finita}
-  Sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$ tais que $\dim_\cp{K}V = \dim_\cp{K}W = n < \infty$ e seja $T : V \to W$ uma transforma\c{c}\~ao linear. Ent\~ao as seguintes afirma\c{c}\~oes s\~ao equivalentes:
-  \begin{enumerate}[label={\roman*})]
-    \item $T$ \'e um isomorfismo.
-    \item $T$ \'e injetora.
-    \item $T$ \'e sobrejetora.
-  \end{enumerate}
-\end{proposicao}
-\begin{prova}
-  As implica\c{c}\~oes $i) \Rightarrow ii) \Rightarrow iii)$ seguem da defini\c{c}\~ao de isomorfismo.
-  \begin{enumerate}
-    \item[$ii) \Rightarrow i)$] Suponha que $T$ \'e injetora. Queremos mostrar que $T$ \'e um isomorfismo. Assim s\'o precisamos mostrar que $T$ \'e sobrejetora. Como $T$ \'e injetora, ent\~ao pela Proposi\c{c}\~ao \ref{caracteriza_transformacao_injetora}, temos $\ker T = \{0_V\}$. Assim, pelo Teorema \ref{teorema_do_nucleo_e_da_imagem} temos
-    \[
-      \dim_\cp{K}\im T = \dim_\cp{K}V = \dim_\cp{K}W = n,
-    \]
-    logo $\im T = W$, isto \'e, $T$ \'e sobrejetora. Assim $T$ \'e um isomorfismo.
-
-    \item[$iii) \Rightarrow i)$] Suponha que $T$ \'e sobrejetora. Queremos mostrar que $T$ \'e um isomorfismo. Para isso, basta mostrar que $T$ \'e injetora. Como $T$ \'e sobrejetora, ent\~ao $\im T = W$ e da{\'\i} $\dim_\cp{K}\im T = n$. Assim, pelo Teorema \ref{teorema_do_nucleo_e_da_imagem} devemos ter $\dim_\cp{K}\ker T = 0$, ou seja, $\ker T = \{0_V\}$ e ent\~ao $T$ \'e injetora. Logo, $T$ \'e um isomorfismo.
-  \end{enumerate}
-\end{prova}
-
-\begin{exemplos}
-  \begin{enumerate}[label={\arabic*})]
-    \item Considere a transforma\c{c}\~ao linear $T : \real^2 \to \real^3$ dada por $T(x,y) = (-y, x, x+y)$. Pelo Teorema \ref{teorema_do_nucleo_e_da_imagem}, sabemos que $T$ n\~ao pode ser sobrejetora, logo $\dim_\real\im T \le 2$. Agora
-    \[
-      (x,y) \in \ker T \Leftrightarrow T(x,y) = (0,0,0) \Leftrightarrow (-y,x,x+y) = (0,0,0) \Leftrightarrow x = y = 0.
-    \]
-    Da{\'\i} $\ker T = \{(0,0)\}$ e ent\~ao $T$ \'e injetora.
-
-    Temos
-    \[
-      \im T = \{(-y,x,x+y) \in \real^3 \mid x, y \in \real\}.
-    \]
-    Note que
-    \[
-      (-y,x,x+y) = y(-1,0,1) + x(0,1,1)
-    \]
-    e ent\~ao $\{(-1,0,1);(0,1,1)\}$ gera $\im T$ e como estes vetores n\~ao s\~ao m\'ultiplos um do outro, eles formam uma base para $\im T$. Assim $\im T = [(-1,0,1);(0,1,1)]$ e $\dim_\real\im T = 2$.
-
-    \item Considere o espa\c{c}o vetorial $\mathcal{P}(\complex)$ sobre $\complex$ e seja $\mathcal{D} : \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dada por $\mathcal{D}(p(x)) = p'(x)$ a derivada de $p(x)$. Observe que $\ker D = \{p(x) = a \mid a \in \complex\}$. Al\'em disso, $\im \mathcal{D} = \mathcal{P}(\complex)$ pois todo elemento de $\mathcal{P}(\complex)$ tem uma primitiva.
-
-    \item Seja
-    \[
-      \cp{K}^\n = \{(a_i)_{i \in \n} = (a_1, a_2, \dots, a_n, \dots) \mid a_i \in \cp{K}, i \ge 1\}
-    \]
-    onde $\cp{K} = \real$ ou $\cp{K} = \complex$. Defina
-    \begin{itemize}
-      \item $(a_1,a_2,\dots,a_n,\dots) + (b_1,b_2,\dots,b_n,\dots) = (a_1+b_1,a_2+b_2,\dots,a_n+b_n,\dots)$
-
-      \item $\lambda(a_1,a_2,\dots,a_n,\dots) = (\lambda a_1,\lambda a_2,\dots,\lambda a_n,\dots)$
-    \end{itemize}
-    para todos $(a_1,a_2,\dots,a_n,\dots)$, $(b_1,b_2,\dots,b_n,\dots) \in \cp{K}^\n$ e todo $\lambda \in \cp{K}$. \'E f\'acil ver que $\cp{K}^\n$ \'e um $\cp{K}$-espa\c{c}o vetorial. Defina $T : \cp{K}^\n \to \cp{K}^\n$ dada por
-    \[
-      T((a_i)_{i\in\n}) = ((a_i)_{i+1\in\n}) = (a_2,a_3,\dots,a_n,\dots).
-    \]
-    \'E imediato ver que $T$ \'e uma transforma\c{c}\~ao linear. Al\'em disso, $T$ \'e sobrejetora pois dada uma sequ\^encia $(y_i)_{i\in\n}$, considere $x = (0,y_1,y_2,\dots,y_n,\dots) \in \cp{K}^\n$. Temos
-    \[
-      T(x) = (y_1,y_2,\dots,y_n,\dots),
-    \]
-    assim $\im T = \cp{K}^\n$. Al\'em disso, $T$ n\~ao \'e injetora pois dado $(x_1,0,0,\dots,0,\dots) \in \cp{K}^\n$ tempos
-    \[
-      T(x_1,0,0,\dots,0,\dots) = (0,0,0,\dots,0,\dots)
-    \]
-    e ent\~ao
-    \[
-      \ker T = \{(x_1,0,0,\dots,0) \mid x_1 \in \cp{K}\}.
-    \]
-  \end{enumerate}
-\end{exemplos}
-
-\begin{teorema}\label{teorema_espacos_isomorfos}
-  Dois $\cp{K}$-espa\c{c}os vetoriais de mesma dimens\~ao finita s\~ao isomorfos.
-\end{teorema}
-\begin{prova}
-  Se ambos os espa\c{c}os forem nulos, nada h\'a a fazer. Sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$ tais que $\dim_\cp{K}V = \dim_\cp{K}W = n < \infty$. Seja $\mathcal{A} = \{v_1,\dots,v_n\}$ e $\mathcal{B} = \{w_1,\dots,w_n\}$ bases de $V$ e $W$, respectivamente. Pelo Teorema \ref{existencia_de_transformacao_unica_dado_valores} sabemos que existe uma \'unica transforma\c{c}\~ao linear $T : V \to W$ tal que
-  \[
-    T(v_i) = w_i
-  \]
-  para $i=1$,\dots, $n$.
-
-  Vamos mostrar que $T$ \'e sobrejetora e da{\'\i} pela Proposi\c{c}\~ao \ref{equivalencia_isomorfismo_dimensao_finita}, $T$ ser\'a um isomorfismo. Para isto, seja $y \in W$ um elemento qualquer de $W$. Como $\mathcal{B}$ \'e uma base de $W$, existem escalares $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ tais que
-  \[
-    y = \sum_{i=1}^n\alpha_iw_i.
-  \]
-  Seja $x \in V$ dado por
-  \[
-    x = \sum_{i=1}^n\alpha_iv_i
-  \]
-  pois $\mathcal{A}$ \'e uma base de $V$. Temos
-  \[
-    T(x) = T(\sum_{i=1}^m\alpha_iv_i) = \sum_{i=1}^n\alpha_iT(v_i) = \sum_{i=1}^n\alpha_iw_i = y,
-  \]
-  logo $\im T = W$, ou seja, $T$ \'e sobrejetora.
-
-  Portanto $V$ e $W$ s\~ao isomorfos.
-\end{prova}
-
-\begin{corolario}
-  Todo $\cp{K}$-espa\c{c}o vetorial de dimens\~ao $n \ge 1$ \'e isomorfo a $\cp{K}^n$.
-\end{corolario}
-
-\begin{exemplos}
-  \begin{enumerate}[label={\arabic*})]
-    \item $\mathcal{P}_n(\cp{K}) \cong \cp{K}^{n+1}$.
-    \item $\cp{M}_{p\times q}(\cp{K}) \cong \cp{K}^{pq}$.
-  \end{enumerate}
-\end{exemplos}
-
-\section{Transforma\c{c}\~oes Lineares e Matrizes} % (fold)
-\label{sec:transformacoes_lineares_e_matrizes}
-
-Sejam $V$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao $n \ge 1$ e $\mathcal{B} = \{v_1,\dots,v_n\}$ uma base de $V$. Sabemos que cada elemento de $V$ se escreve de modo \'unico como combina\c{c}\~ao linear dos elementos de $\mathcal{B}$, isto \'e, dado $u \in V$ existem \'unicos escalares $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ tais que
-\[
-  u = \alpha_1v_1 + \cdots + \alpha_nv_n.
-\]
-
-Assim vamos fixar uma ordem para os elementos da base $\mathcal{B}$ e por isso vamos cham\'a-la de \textbf{base ordenada} de $V$. Pela unicidade dos elementos $\alpha_1$, \dots, $\alpha_n$ acima, podemos denotar o vetor $u$ por
-\[
-  [u]_\mathcal{B} = \begin{bmatrix}
-    \alpha_1\\
-    \vdots\\
-    \alpha_n
-  \end{bmatrix}_\mathcal{B}
-\]
-e dizemos que $\alpha_1$, \dots, $\alpha_n$ s\~ao as \textbf{coordenadas de $u$ em rela\c{c}\~ao \`a base ordenada $\mathcal{B}$}.
-
-\begin{exemplos}
-  \begin{enumerate}[label={\arabic*})]
-    \item Considere $V = \complex^2$ como um $\complex$-espa\c{c}o vetorial e seja $\mathcal{B} = \{(1,i);(i,0)\}$ uma base de $\complex^2$ \textit{(Verifique!)}. Dado o vetor $v = (i, 2+i) \in \complex^2$, quais suas coordenadas em rela\c{c}\~ao a tal base?
-    \begin{solucao}
-      As coordenadas de $v$ em rela\c{c}\~ao \`a base $\mathcal{B}$ ser\~ao $[v]_\mathcal{B} = (\alpha_1,\alpha_2)_\mathcal{B}$ onde $\alpha_1$, $\alpha_2 \in \complex^2$ s\~ao tais que
-      \[
-        v = \alpha_1(1,i) + \alpha_2(i,0).
-      \]
-      Resolvendo o sistema resultante obtemos $\alpha_1 = 1 - 2i$ e $\alpha_2 = 3 + i$. Assim
-      \[
-        [v]_\mathcal{B} = \begin{bmatrix}
-          1 - 2i\\
-          3 + i
-        \end{bmatrix}_\mathcal{B}.
-      \]
-    \end{solucao}
-
-    \item Agora considere $V = \complex^2$ como um $\real$-espa\c{c}o vetorial e seja $\mathcal{A} = \{(1,1);(i,0);(1,i);(0,1)\}$ uma base de $\complex^2$ \textit{(Verifique!)}. Dado o vetor $v = (i,2+i) \in \complex^2$, quais suas coordenadas em rela\c{c}\~ao a tal base?
-    \begin{solucao}
-      As coordenadas de $v$ em rela\c{c}\~ao \`a base $\mathcal{A}$ ser\~ao $[v]_\mathcal{A} = (\alpha_1,\alpha_2,\alpha_3,\alpha_4)_\mathcal{A}$ onde $\alpha_1$, $\alpha_2$, $\alpha_3$, $\alpha_4 \in \complex$ s\~ao tais que
-      \[
-        v = \alpha_1(1,1) + \alpha_2(i,0) + \alpha_3(1,i) + \alpha_4(0,1).
-      \]
-      Resolvendo o sistema resultante obtemos $\alpha_1 = -1$, $\alpha_2 = 1$, $\alpha_3 = 1$ e $\alpha_4 = 3$. Assim
-      \[
-        [v]_\mathcal{A} = \begin{bmatrix}
-          -1\\
-          \phantom{-}1\\
-          \phantom{-}1\\
-          \phantom{-}3
-        \end{bmatrix}_\mathcal{A}.
-      \]
-    \end{solucao}
-  \end{enumerate}
-\end{exemplos}
-
-Agora, sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$ tais que $\dim_\cp{K}V = p \ge 1$ e $\dim_\cp{K} W = q \ge 1$. Vamos fixar bases ordenadas $\mathcal{B}_1 = \{u_1,\dots,u_p\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_q\}$ de $V$ e $W$, respectivamente. Seja $T : V \to W$ uma transforma\c{c}\~ao linear. Sabemos pelo Teorema \ref{existencia_de_transformacao_unica_dado_valores} que $T$ fica completamente determinada se conhecermos seus valores na base de $V$. Assim
-\begin{align*}
-  T(u_1) &= a_{11}w_1 + a_{21}w_2 + \cdots + a_{q1}w_q\\
-  T(u_2) &= a_{12}w_1 + a_{22}w_2 + \cdots + a_{q2}w_q\\
-  &\vdots\\
-  T(u_p) &= a_{1p}w_1 + a_{2p}w_2 + \cdots + a_{qp}w_q
-\end{align*}
-para certos $a_{ij} \in \cp{K}$ onde $1 \le i \le q$ e $1 \le j \le p$.
-
-Agora, seja $x \in V$. Ent\~ao
-\[
-  x = \alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_pu_p
-\]
-onde $\alpha_1$, $\alpha_2$, \dots, $\alpha_p \in \cp{K}$. Da{\'\i}
-\begin{align*}
-  T(x) &= T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_pu_p) = \alpha_1T(u_1) + \alpha_2T(u_2) + \cdots + \alpha_pT(u_p)\\
-  &= \alpha_1(a_{11}w_1 + a_{21}w_2 + \cdots + a_{q1}w_q) + \alpha_2(a_{12}w_1 + a_{22}w_2 + \cdots + a_{q2}w_q) + \cdots \\
-  &+ \alpha_p(a_{1p}w_1 + a_{2p}w_2 + \cdots + a_{qp}w_q)\\
-  &= (\sum_{j=1}^p\alpha_j a_{1j})w_1 + (\sum_{j=1}^p\alpha_j a_{2j})w_2 + \cdots + (\sum_{j=1}^p\alpha_j a_{qj})w_q\\
-  &= \sum_{i=1}^q\left(\sum_{j=1}^p a_{ij}\alpha_j\right)w_i.
-\end{align*}
-Note que os escalares $\sum_{j=1}^p a_{1j}\alpha_j$, $\sum_{j=1}^p a_{2j}\alpha_j$, \dots, $\sum_{j=1}^p a_{qi}\alpha_j$ s\~ao as coordenadas do vetor $T(x)$ em rela\c{c}\~ao \`a base $\mathcal{B}_2$, isto \'e,
-\[
-  [T(x)]_{\mathcal{B}_2} = \begin{bmatrix}
-    \sum_{j=1}^p a_{1j}\alpha_j\\
-    \sum_{j=1}^p a_{2j}\alpha_j\\
-    \vdots\\
-    \sum_{j=1}^p a_{qj}\alpha_j
-  \end{bmatrix}.
-\]
-Por outro lado,
-\[
-  \underbrace{\begin{bmatrix}
-    a_{11} & a_{12} & \dots & a_{1p}\\
-    a_{21} & a_{22} & \dots & a_{2p}\\
-    \vdots & & \ddots & \vdots\\
-    a_{q1} & a_{q2} & \dots & a_{qp}
-  \end{bmatrix}}_{A}\begin{bmatrix}
-    \alpha_1\\
-    \alpha_2\\
-    \vdots\\
-    \alpha_p
-  \end{bmatrix} = \begin{bmatrix}
-    a_{11}\alpha_1 + a_{12}\alpha_2 + \cdots + a_{1p}\alpha_p\\
-    a_{21}\alpha_1 + a_{22}\alpha_2 + \cdots + a_{2p}\alpha_p\\
-    \vdots \\
-    a_{q1}\alpha_1 + a_{q2}\alpha_2 + \cdots + a_{qp}\alpha_p
-  \end{bmatrix}
-\]
-e da{\'\i} podemos escrever
-\[
-  [T(x)]_{\mathcal{B}_2} = A[x]_{\mathcal{B}_1}
-\]
-onde $A \in \cp{M}_{q\times p}(\cp{K})$.
-
-Agora seja $B \in \cp{M}_{q\times p}(\cp{K})$ onde
-\[
-  B = \begin{bmatrix}
-    b_{11} & b_{12} & \dots & b_{1p}\\
-    b_{21} & b_{22} & \dots & b_{2p}\\
-    \vdots & & \ddots & \vdots\\
-    b_{q1} & b_{q2} & \dots & b_{qp}
-  \end{bmatrix}.
-\]
-
-Seja $V_1$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao $p \ge 1$ e $W_1$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao $q \ge 1$. Tome $\mathcal{B}_1 = \{v_1,\dots,v_p\}$ e $\mathcal{B}_2 = \{l_1,\dots,l_q\}$ bases ordenadas de $V_1$ e $W_1$, respectivamente. Defina $G : V_1 \to W_1$ por
-\begin{align*}
-  G(v_1) &= b_{11}l_1 + b_{21}l_2 + \cdots + b_{q1}l_q\\
-  &\vdots\\
-  G(v_p) &= b_{1p}l_1 + b_{2p}l_2 + \cdots + b_{qp}l_q.
-\end{align*}
-Ent\~ao $G$ \'e uma transforma\c{c}\~ao linear  tal que
-\[
-  [G(x)]_{\mathcal{B}_2} = B[x]_{\mathcal{B}_1}
-\]
-para todo $x \in V$.
-
-Assim provamos o seguinte teorema:
-\begin{teorema}\label{teorema_toda_transformacao_matriz}
-  Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais de dimens\~oes $p \ge 1$ e $q \ge 1$, respectivamente. Sejam $\mathcal{B}_V$ e $\mathcal{B}_W$ bases ordenadas de $V$ e $W$, respectivamente. Ent\~ao para cada transforma\c{c}\~ao linear $T : V \to W$, existe uma matriz $A \in \cp{M}_{q\times p}(\cp{K})$ tal que
-  \[
-    [T(x)]_{\mathcal{B}_W} = A[x]_{\mathcal{B}_V}
-  \]
-  para todo vetor $x \in V$. Al\'em disso, a cada matriz $A \in \cp{M}_{q\times p}(\cp{K})$ corresponde uma transforma\c{c}\~ao linear $T : V \to W$ tal que
-  \[
-    [T(x)]_{\mathcal{B}_W} = A[x]_{\mathcal{B}_V}
-  \]
-  para todo $x \in V$.
-\end{teorema}
-
-\begin{definicao}
-  A matriz $A \in \cp{M}_{q\times p}(\cp{K})$ do Teorema \ref{teorema_toda_transformacao_matriz} \'e chamada de \textbf{matriz da transforma\c{c}\~ao linear} $T$ com respeito \`as bases ordenadas $\mathcal{B}_V$ e $\mathcal{B}_W$ e ser\'a denotada por
-  \[
-    A = [T]_{\mathcal{B}_{V},\mathcal{B}_{W}}.
-  \]
-  No caso em que $V = W$ e $\mathcal{B}_V = \mathcal{B}_W = \mathcal{B}$, denotaremos $[T]_{\mathcal{B}_{V},\mathcal{B}_{W}}$ simplesmente por $[T]_\mathcal{B}$.
-\end{definicao}
-
-\begin{exemplos}
-  \begin{enumerate}[label={\arabic*})]
-    \item Seja $T : \real^2 \to \real^2$ a transforma\c{c}\~ao linear definida por
-    \[
-      T(x,y) = (x,0).
-    \]
-    Considere $\real^2$ com a base can\^onica $\mathcal{B} = \{e_1=(1,0);e_2=(0,1)\}$. Encontre $[T]_\mathcal{B}$.
-    \begin{solucao}
-      Temos
-      \begin{align*}
-        T(e_1) &= (1,0) = 1(1,0) + 0(0,1)\\
-        T(e_2) &= (0,0) = 0(1,0) + 0(0,1).
-      \end{align*}
-      Logo a matriz de $T$ \'e
-      \[
-        [T]_\mathcal{B} = \begin{bmatrix}
-          1 & 0\\
-          0 & 0
-        \end{bmatrix}.
-      \]
-      Al\'em disso, dado $(x,y) \in \real^2$ temos
-      \[
-        (x,y) = xe_1 + ye_2
-      \]
-      e ent\~ao
-      \[
-        [(x,y)]_\mathcal{B} = \begin{bmatrix}
-          x\\y
-        \end{bmatrix}.
-      \]
-      Assim podemos escrever
-      \[
-        [T(x,y)]_\mathcal{B} = [T]_\mathcal{B}[(x,y)]_\mathcal{B} = \begin{bmatrix}
-          1 & 0\\
-          0 & 0
-        \end{bmatrix}\begin{bmatrix}
-          x\\y
-        \end{bmatrix}
-      \]
-      para todo $(x,y) \in \real^2$.
-    \end{solucao}
-
-    \item Seja $T : \real^3 \to \real^2$ tal que
-    \[
-      T(x,y,z) = (2x+y-z,3x-2y+4z).
-    \]
-    Considere as bases $\mathcal{B}_1 = \{(1,1,1);(1,1,0);(1,0,0)\}$ e $\mathcal{B}_2 = \{(1,3);(1,4)\}$. Encontre $[T]_{\mathcal{B}_{1},\mathcal{B}_{2}}$.
-    \begin{solucao}
-      Temos
-      \begin{align*}
-        T(1,1,1) &= (2,5) = 3(1,3) - 1(1,4)\\
-        T(1,1,0) &= (3,1) = 11(1,3) - 8(1,4)\\
-        T(1,0,0) &= (2,3) = 5(1,5) - 3(1,4)
-      \end{align*}
-      e da{\'\i}
-      \[
-        [T]_{\mathcal{B}_{1},\mathcal{B}_{2}} = \begin{bmatrix}
-          \phantom{-}3 & \phantom{-}11 & \phantom{-}5\\
-          -1 & -8 & -3
-        \end{bmatrix}.
-      \]
-      Agora considerando as bases $\mathcal{B}_3 = \{(1,0,0);(0,1,0);(0,0,1)\}$ e $\mathcal{B}_4 = \{(1,0);(0,1)\}$ obtemos
-      \begin{align*}
-        T(1,0,0) &= (2,3) = 2(1,0) + 3(0,1)\\
-        T(0,1,0) &= (1,-2) = 1(1,0) - 2(0,1)\\
-        T(0,0,1) &= (-1,4) = -1(1,0) + 4(0,1)
-      \end{align*}
-      e assim a matriz de $T$ ser\'a
-      \[
-        [T]_{\mathcal{B}_{3},\mathcal{B}_{4}} = \begin{bmatrix}
-          \phantom{-}2 & \phantom{-}1 & -1\\
-          \phantom{-}3 & -2 & \phantom{-}4
-        \end{bmatrix}.
-      \]
-    \end{solucao}
-  \end{enumerate}
-\end{exemplos}
-
-\begin{teorema}\label{matriz_da_composicao_de_transformacoes}
-  Sejam $F : U \to V$ e $G : V \to W$ duas transforma\c{c}\~oes lineares onde $U$, $V$ e $W$ s\~ao $\cp{K}$-espa\c{c}os vetoriais de dimens\~oes $n$, $m$ e $r$, respectivamente. Fixe bases ordenadas $\mathcal{B}_U$, $\mathcal{B}_V$ e $\mathcal{B}_W$ para $U$, $V$ e $W$, respectivamente. Ent\~ao $(G \circ F) : U \to W$ dada por $(G\circ F)(v) = G(F(v))$ \'e uma transforma\c{c}\~ao linear e
-  \[
-    [(G \circ F)]_{{\mathcal{B}_U},{\mathcal{B}_W}} = [G]_{{\mathcal{B}_V},{\mathcal{B}_W}}[F]_{{\mathcal{B}_U},{\mathcal{B}_V}}.
-  \]
-\end{teorema}
-\begin{prova}
-  \'E imediato verificar que $G\circ F$ \'e uma transforma\c{c}\~ao linear.
-
-  Sejam $\mathcal{B}_U = \{u_1,\dots,u_n\}$, $\mathcal{B}_V = \{v_1,\dots,v_m\}$ e $\mathcal{B}_W = \{w_1,\dots,w_r\}$ bases ordenadas para $U$, $V$ e $W$, respectivamente. Considere as matrizes
-  \begin{enumerate}[label=({\arabic*})]
-    \item $[F]_{{\mathcal{B}_U},{\mathcal{B}_V}} = (a_{ij})_{m\times n}$ onde $F(u_j) = a_{1j}v_1 + a_{2j}v_2 + \cdots + a_{mj}v_m$ para $j=1$, \dots, $n$;
-
-    \item $[G]_{{\mathcal{B}_V},{\mathcal{B}_W}} = (b_{ki})_{r\times m}$ onde $G(v_i) = b_{i1}w_1 + b_{i2}w_2 + \cdots + b_{ir}w_r$ para $i=1$, \dots, $m$;
-
-    \item $[G \circ F]_{{\mathcal{B}_U},{\mathcal{B}_W}} = (c_{kj})_{r\times n}$ onde $(G\circ F)(u_j) = c_{1j}w_1 + c_{2j}w_2 + \cdots + c_{rj}w_r$ para $j=1$, \dots, $n$.
-  \end{enumerate}
-
-  Vamos calcular $(G\circ F)(u_j)$ usando (1) e (2):
-  \begin{align*}
-    (G\circ F)(u_j) &= G(F(u_j)) = G(a_{1j}v_1 + a_{2j}v_2 + \cdots + a_{mj}v_m)\\
-    &= a_{1j}G(v_1) + a_{2j}G(v_2) + \cdots + a_{mj}G(v_m)\\
-    &= a_{1j}(b_{11}w_1 + b_{12}w_2 + \cdots + b_{1r}w_r) \\ &+ a_{2j}(b_{21}w_1 + b_{22}w_2 + \cdots + b_{2r}w_r) + \cdots \\ &+ a_{mj}(b_{m1}w_1 + b_{m2}w_2 + \cdots + b_{mr}w_r)\\
-    &= (a_{1j}b_{11} + a_{2j}b_{21} + \cdots + a_{mj}b_{m1})w_1 \\ &+ (a_{1j}b_{12} + a_{2j}b_{22} + \cdots + a_{mj}b_{m2})w_2 + \cdots \\ &+ (a_{1j}b_{1r} + a_{2j}b_{2r} + \cdots + a_{mj}b_{mr})w_r.
-  \end{align*}
-  Comparando essa \'ultima equa\c{c}\~ao com (3) e usando a unicidade dos escalares obtemos
-  \[
-    c_{kj} = a_{1j}b_{k1} + a_{2j}b_{k2} + \cdots + a_{mj}b_{km}
-  \]
-  para $j=1$, \dots, $n$ e $k = 1$, \dots, $r$. Isto \'e, para cada par $(j,k)$ o elemento $c_{kj}$ da matriz $[(G\circ F)]_{{\mathcal{B}_U},{\mathcal{B}_W}}$ \'e o elemento na posi\c{c}\~ao $(k,j)$ da matriz resultante da multiplica\c{c}\~ao de $[G]_{{\mathcal{B}_V},{\mathcal{B}_W}}$ por $[F]_{{\mathcal{B}_U},{\mathcal{B}_V}}$. Portanto
-  \[
-    [(G\circ F)]_{{\mathcal{B}_U},{\mathcal{B}_W}} = [G]_{{\mathcal{B}_V},{\mathcal{B}_W}}[F]_{{\mathcal{B}_U},{\mathcal{B}_V}}
-  \]
-  como quer{\'\i}amos.
-\end{prova}
-
-Vamos tratar, principalmente, com a representa\c{c}\~ao por matrizes de transforma\c{c}\~oes lineares de um espa\c{c}o em si mesmo. Lembre-se que esta matriz muda de acordo com a escolha da base. Assim, deve-se prestar aten\c{c}\~ao sempre \`a base escolhida. Assim como um espa\c{c}o vetorial pode ter v\'arias bases distintas, o que acontecer\'a com a matriz representante de uma transforma\c{c}\~ao linear quando mudamos a base ordenada? Vamos considerar $T : V \to V$ uma transforma\c{c}\~ao linear sobre o $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita $V$ e sejam
-\[
-  \mathcal{B}_1 = \{v_1,\dots,v_n\}, \quad \mathcal{B}_2 = \{w_1,\dots,w_n\}
-\]
-bases ordenadas de $V$. Qual a rela\c{c}\~ao entre as matrizes $[T]_{\mathcal{B}_1}$ e $[T]_{\mathcal{B}_2}$?
-
-Para responder a esta quest\~ao, primeiro vamos determinar uma rela\c{c}\~ao entre $[x]_{\mathcal{B}_1}$ e $[x]_{\mathcal{B}_2}$, para todo $x \in V$. Como $\mathcal{B}_1$ \'e uma base de $V$, ent\~ao existem $\alpha_{ij} \in \cp{K}$, $1 \le i,\ j \le n$ tais que
-\begin{align*}
-  w_1 &= \alpha_{11}v_1 + \cdots + \alpha_{n1}v_n\\
-  &\vdots\\
-  w_n &= \alpha_{1n}v_1 + \cdots + \alpha_{nn}v_n.
-\end{align*}
-Agora, dado $x \in V$, existem $\beta_1$, \dots, $\beta_n \in \cp{K}$ tais que
-\[
-  x = \beta_1w_1 + \cdots + \beta_nw_n.
-\]
-Da{\'\i}
-\begin{align*}
-  x &= \beta_1(\alpha_{11}v_1 + \cdots + \alpha_{n1}v_n) + \cdots + \beta_n(\alpha_{1n}v_1 + \cdots + \alpha_{nn}v_n)\\
-  &= (\beta_1\alpha_{11} + \beta_2\alpha_{12} + \cdots + \beta_n\alpha_{1n})v_1 + \cdots + (\beta_1\alpha_{n1} + \beta_2\alpha_{n2} + \cdots + \beta_n\alpha_{nn})v_n\\
-  &= \sum_{j=1}^n\beta_j\alpha_{1j}v_1 + \cdots + \sum_{j=1}^n\beta_j\alpha_{nj}v_n\\
-  &= \sum_{i=1}^n\left(\sum_{j=1}^n\beta_j\alpha_{ij}\right)v_i.
-\end{align*}
-Assim as coordenadas de $x$ em rela\c{c}\~ao \`a base $\mathcal{B}_1$ s\~ao
-\[
-  [x]_{\mathcal{B}_1} = \begin{bmatrix}
-    \sum_{j=1}^n\beta_j\alpha_{1j}\\
-    \vdots\\
-    \sum_{j=1}^n\beta_j\alpha_{nj}
-  \end{bmatrix}.
-\]
-Seja $P$ a matriz cuja entrada $(i,j)$ \'e o escalar $\alpha_{ij}$, isto \'e,
-\[
-  P = \begin{bmatrix}
-    \alpha_{11} & \cdots & \alpha_{1n}\\
-    \vdots & & \vdots\\
-    \alpha_{n1} & \cdots & \alpha_{nn}
-  \end{bmatrix}.
-\]
-Ent\~ao podemos escrever
-\[
-  [x]_{\mathcal{B}_1} = P \begin{bmatrix}
-    \beta_1\\
-    \vdots\\
-    \beta_n
-  \end{bmatrix} = P[x]_{\mathcal{B}_2}.
-\]
-Mais ainda, como $\mathcal{B}_1$ e $\mathcal{B}_2$ s\~ao bases de $V$, ent\~ao $[x]_{\mathcal{B}_1} = [0_V]_{\mathcal{B}_1}$ se, e somente se, $[x]_{\mathcal{B}_2} = [0_V]_{\mathcal{B}_2}$. Logo $P$ possui inversa. Assim mostramos o seguinte teorema:
-
-\begin{teorema}\label{teorema_mudanca_base}
-  Sejam $V$ um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao $n \ge 1$, $\mathcal{B}_1$ e $\mathcal{B}_2$ bases ordenadas de $V$. Ent\~ao existe uma \'unica matriz $P \in \cp{M}_n(\cp{K})$, necessariamente invert{\'\i}vel tal que
-  \begin{enumerate}[label={\roman*})]
-    \item $[x]_{\mathcal{B}_1} = P[x]_{\mathcal{B}_2}$
-    \item $[x]_{\mathcal{B}_2} = P^{-1}[x]_{\mathcal{B}_1}$
-  \end{enumerate}
-  para todo $x \in V$. As colunas de $P = \begin{bmatrix}
-    P_1 & P_2 & \cdots & P_n
-  \end{bmatrix}$ s\~ao dadas por
-  \[
-    P_j = [w_j]_{\mathcal{B}_1}
-  \]
-  para $j = 1$, \dots, $n$.
-\end{teorema}
-
-Al\'em disso, tamb\'em temos o seguinte teorema:
-
-\begin{teorema}\label{teorema_matriz_mudanca_base}
-  Seja $P \in \cp{M}_n(\cp{K})$ um matriz invert{\'\i}vel. Sejam $V$ um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao $n \ge 1$ e $\mathcal{B}_1$ uma base ordenada de $V$. Ent\~ao existe uma \'unica base ordenada $\mathcal{B}_2$ de $V$ tal que
-  \begin{enumerate}[label={\roman*})]
-    \item $[x]_{\mathcal{B}_1} = P[x]_{\mathcal{B}_2}$
-    \item $[x]_{\mathcal{B}_2} = P^{-1}[x]_{\mathcal{B}_1}$
-  \end{enumerate}
-  para todo $x \in V$.
-\end{teorema}
-
-\begin{definicao}
-  A matriz $P \in \cp{M}_n(\cp{K})$ do Teorema \ref{teorema_matriz_mudanca_base} \'e chamada de \textbf{matriz de mudan\c{c}a de base} e \'e denotada por $P = [I]_{{\mathcal{B}_1},{\mathcal{B}_2}}$.
-\end{definicao}
-
-Agora, sejam $T : V \to V$ uma transforma\c{c}\~ao linear, $\mathcal{B}_1 = \{v_1,\dots,v_n\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ bases ordenadas de $V$. Sabemos que existe $P \in \cp{M}_n(\cp{K})$ invert{\'\i}vel tal que
-\begin{equation}\label{equacao_mudanca_base}
-  [x]_{\mathcal{B}_1} = P[x]_{\mathcal{B}_2}
-\end{equation}
-para todo $x \in V$. Mas, para todo $x \in V$ temos
-\begin{equation}\label{equacao_coordenadas_imagem}
-  [T(x)]_{\mathcal{B}_1} = [T]_{\mathcal{B}_1}[x]_{\mathcal{B}_1}.
-\end{equation}
-Aplicando \eqref{equacao_mudanca_base} ao vetor $T(x)$ obtemos
-\begin{equation}\label{equacao_mudanca_base_imagem}
-  [T(x)]_{\mathcal{B}_1} = P[T(x)]_{\mathcal{B}_2}.
-\end{equation}
-Combinando \eqref{equacao_mudanca_base}, \eqref{equacao_coordenadas_imagem} e \eqref{equacao_mudanca_base_imagem}:
-\begin{align*}
-  [T]_{\mathcal{B}_1}[x]_{\mathcal{B}_1} &= [T(x)]_{\mathcal{B}_1} = P[T(x)]_{\mathcal{B}_2}\\
-  [T]_{\mathcal{B}_1}P[x]_{\mathcal{B}_2} &= P[T(x)]_{\mathcal{B}_2}\\
-  P^{-1}[T]_{\mathcal{B}_1}P[x]_{\mathcal{B}_2} &= [T(x)]_{\mathcal{B}_2} = [T]_{\mathcal{B}_2}[x]_{\mathcal{B}_2}.
-\end{align*}
-Da{\'\i}
-\[
-  P^{-1}[T]_{\mathcal{B}_1}P = [T]_{\mathcal{B}_2}
-\]
-o que responde nossa pergunta.
-
-Por outro lado, sabemos que existe uma \'unica transforma\c{c}\~ao linear $G : V \to V$ tal que
-\[
-  G(v_i) = w_i
-\]
-para $i = 1$, \dots, $n$. Mais ainda, tal transforma\c{c}\~ao linear \'e um isomorfismo. Afirmamos que a matriz $P$ acima \'e exatamente a matriz de $G$ em rela\c{c}\~ao \`a base $\mathcal{B}_1$. De fato, as entradas de $P$ s\~ao definidas por
-\[
-  w_i = \sum_{i=1}^n\alpha_{ij}v_i
-\]
-e como $G(v_i) = w_i$ podemos escrever
-\[
-  G(v_i) = w_i = \sum_{i=1}^n\alpha_{ij}v_i
-\]
-e ent\~ao por defini\c{c}\~ao $[G]_{\mathcal{B}_1} = P$. Desse modo, temos o seguinte teorema:
-
-\begin{teorema}
-  Sejam $V$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao finita, $\mathcal{B}_1 = \{v_1,\dots,v_n\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ bases ordenadas de $V$. Suponha que $T : V \to V$ \'e uma transforma\c{c}\~ao linear. Se $P = \begin{bmatrix}P_1 & P_2 & \dots & P_n
-  \end{bmatrix} \in \cp{M}_n(\cp{K})$ \'e uma matriz com colunas
-  \[
-    P_j = [w_j]_{\mathcal{B}_1}
-  \]
-  ent\~ao
-  \[
-    [T]_{\mathcal{B}_2} = P^{-1}[T]_{\mathcal{B}_1}P.
-  \]
-  Alternativamente, se $G$ \'e o isomorfismo de $V$ definido por $G(v_i) = w_i$, $i = 1$, \dots, $n$ ent\~ao
-  \[
-    [T]_{\mathcal{B}_2} = ([G]_{\mathcal{B}_1})^{-1}[T]_{\mathcal{B}_1}[G]_{\mathcal{B}_1}.
-  \]
-\end{teorema}
-
-\begin{definicao}
-  Sejam $A$, $B \in \cp{M}_n(\cp{K})$. Dizemos que $B$ \'e \textbf{semelhante} a $A$ sobre $\cp{K}$ se existe $P \in \cp{M}_n(\cp{K})$ invert{\'\i}vel tal que
-  \[
-    B = P^{-1}AP.
-  \]
-\end{definicao}
-
-\begin{exemplos}
-  \begin{enumerate}[label={\arabic*})]
-    \item Seja $T : \real^2 \to \real^2$ dada por $T(x,y) = (x,0)$. Sabemos que com rela\c{c}\~ao \`a base $\mathcal{B}_1 = \{e_1=(1,0);e_2=(0,1)\}$ a matriz de $T$ \'e
-    \[
-      [T_{\mathcal{B}_1} = \begin{bmatrix}
-        1 & 0\\
-        0 & 0
-      \end{bmatrix}.
-    \]
-    Agora, seja $\mathcal{B}_2$ a base de $\real^2$ formada por
-    \[
-      \mathcal{B}_2 = \{w_1 = (1,1);w_2=(2,1)\}.
-    \]
-    Ent\~ao
-    \begin{align*}
-      w_1 &= e_1 + e_2\\
-      w_2 &= 2e_1 + e_2.
-    \end{align*}
-    Assim $P$ \'e a matriz
-    \[
-      P = \begin{bmatrix}
-        1 & 2\\
-        1 & 1
-      \end{bmatrix}
-    \]
-    cuja inversa \'e
-    \[
-      P^{-1} = \begin{bmatrix}
-        -1 & \phantom{-}2\\
-        \phantom{-}1 & -1
-      \end{bmatrix}.
-    \]
-    Logo
-    \begin{align*}
-      [T]_{\mathcal{B}_2} &= P^{-1}[T]_{\mathcal{B}_1}P\\
-      [T]_{\mathcal{B}_2} &= \begin{bmatrix}
-        -1 & -2\\
-        \phantom{-}1 & \phantom{-}2
-      \end{bmatrix}.
-    \end{align*}
-
-    \item Seja $\mathcal{D} : \mathcal{P}_3(\real) \to \mathcal{P}_3(\real)$ a transforma\c{c}\~ao derivada. Considere a base $\mathcal{B}_1 = \{f_1 = 1; f_2 = x; f_3 = x^2; f_4 = x^3\}$. Tome $t \in \real$ e defina
-    \[
-      \mathcal{B}_2 = \{g_1 = 1; g_2 = (x + t); g_3 = (x + t)^2; g_4 = (x + t)^3\}.
-    \]
-    Assim
-    \begin{align*}
-      g_1 &= 1f_1 + 0f_2 + 0f_3 + 0f_4\\
-      g_2 &= tf_1 + xf_2 + 0f_3 + 0f_4\\
-      g_3 &= t^2f_1 + 2tf_2 + 1f_3 + 0f_4\\
-      g_4 &= t^3f_1 + 3t^2f_2 + 3tf_3 + 1f_4\\
-    \end{align*}
-    e ent\~ao
-    \[
-      P = \begin{bmatrix}
-        1 & t & t^2 & t^3\\
-        0 & 1 & 2t & 3t^2\\
-        0 & 0 & 1 & 3t\\
-        0 & 0 & 0 & 1
-      \end{bmatrix}
-    \]
-    \'e invert{\'\i}vel com
-    \[
-      P^{-1} = \begin{bmatrix}
-        1 & -t & \phantom{-}t^2 & -t^3\\
-        0 & \phantom{-}1 & -2t & \phantom{-}3t^2\\
-        0 & \phantom{-}0 & \phantom{-}1 & -3t\\
-        0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}1
-      \end{bmatrix}.
-    \]
-    Agora
-    \begin{align*}
-      D(f_1) &= 0\\
-      D(f_2) &= 1\\
-      D(f_3) &= 2x\\
-      D(f_4) &= 3x^2
-    \end{align*}
-    e ent\~ao
-    \[
-      [D]_{\mathcal{B}_1} = \begin{bmatrix}
-        0 & 1 & 0 & 0\\
-        0 & 0 & 2 & 0\\
-        0 & 0 & 0 & 3\\
-        0 & 0 & 0 & 0
-      \end{bmatrix}.
-    \]
-    Logo
-    \[
-      [D]_{\mathcal{B}_2} = P^{-1}[D]_{\mathcal{B}_1}P = \begin{bmatrix}
-        0 & 1 & 0 & 0\\
-        0 & 0 & 2 & 0\\
-        0 & 0 & 0 & 3\\
-        0 & 0 & 0 & 0
-      \end{bmatrix}.
-    \]
-  \end{enumerate}
-\end{exemplos}
-% section transformacoes_lineares_e_matrizes (end)
+%\begin{teorema}[Teorema do N\'ucleo e da Imagem]\label{teorema_do_nucleo_e_da_imagem}
+%  Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais com $\dim_\cp{K}V$ finita. Seja $T : V \to W$ uma transforma\c{c}\~ao linear. Ent\~ao
+%  \[
+%    \dim_\cp{K}V = \dim_\cp{K}\ker T + \dim_\cp{K}\im T.
+%  \]
+%\end{teorema}
+%\begin{prova}
+%  Suponha primeiro que $\ker T \ne \{0_V\}$. Seja $\mathcal{B}_1 = \{u_1, \dots, u_n\}$ uma base de $\ker T$. Podemos completar o conjunto $\mathcal{B}_1$ at\'e obter uma base $\mathcal{B} = \{u_1, \dots, u_n, v_1, \dots, v_r\}$ de $V$. Para demonstrar o teorema precisamos encontrar uma base de $\im T$ com $r$ elementos. Considere ent\~ao os seguintes elementos de $W$:
+%  \[
+%    T(u_1), \dots, T(u_n), T(v_1), \dots, T(v_r).
+%  \]
+%  Como $u_i \in \ker T$, ent\~ao $T(u_i) = 0_W$ para $i = 1$, \dots, $n$. Assim pelo Lema \ref{transformacao_gera_imagem}, $\mathcal{B}_2 = \{T(v_1), \dots, T(v_r)\}$ \'e um conjunto gerador de $\im T$. Precisamos mostrar que $\mathcal{B}_2$ \'e L.I. para que seja uma base de $\im T$. Para isso, sejam $\lambda_1$, \dots, $\lambda_r \in \cp{K}$ tais que
+%  \[
+%    \lambda_1T(v_1) + \cdots + \lambda_rT(v_r) = 0_W.
+%  \]
+%  Da{\'\i} $\lambda_1v_1 + \cdots + \lambda_rv_r \in \ker T$. Ent\~ao existem $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ tais que
+%  \[
+%    \lambda_1v_1 + \cdots + \lambda_rv_r = \alpha_1u_1 + \cdots + \alpha_nu_n,
+%  \]
+%  ou seja, $\lambda_1 = \cdots = \lambda_r = \alpha_1 = \cdots = \alpha_n = 0_\cp{K}$ pois $\{u_1, \dots, u_n, v_1, \dots, v_r\}$ \'e uma base de $V$. Portanto $\{T(v_1), \dots, T(v_r)\}$ \'e uma base de $\im T$. Logo
+%  \[
+%    \dim_\cp{K}V = \dim_\cp{K}\ker T + \dim_\cp{K}\im T.
+%  \]
+%  Agora, se $\ker T = \{0_V\}$, considere $\mathcal{B} = \{u_1, \dots, u_n\}$ uma base de $V$. De maneira an\'aloga ao caso anterior, mostra-se que $\{T(u_1), \dots, T(u_n)\}$ \'e uma base de $\im T$. Logo
+%  \[
+%    \dim_\cp{K}V = \dim_\cp{K}\ker T + \dim_\cp{K}\im T.
+%  \]
+%\end{prova}
+%
+%\section{Isomorfismos}
+%
+%\begin{definicao}
+%  Sejam $V$ e $W$ espa\c{c}os vetoriais sobre o corpo $\cp{K}$ e seja $T : V \to W$ uma transforma\c{c}\~ao linear. Se $T$ \'e um isomorfismo, ent\~ao dizemos que $V$ e $W$ s\~ao \textbf{espa\c{c}os vetoriais isomorfos} e denotamos por $V \cong W$.
+%\end{definicao}
+%
+%\begin{proposicao}\label{equivalencia_isomorfismo_dimensao_finita}
+%  Sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$ tais que $\dim_\cp{K}V = \dim_\cp{K}W = n < \infty$ e seja $T : V \to W$ uma transforma\c{c}\~ao linear. Ent\~ao as seguintes afirma\c{c}\~oes s\~ao equivalentes:
+%  \begin{enumerate}[label={\roman*})]
+%    \item $T$ \'e um isomorfismo.
+%    \item $T$ \'e injetora.
+%    \item $T$ \'e sobrejetora.
+%  \end{enumerate}
+%\end{proposicao}
+%\begin{prova}
+%  As implica\c{c}\~oes $i) \Rightarrow ii) \Rightarrow iii)$ seguem da defini\c{c}\~ao de isomorfismo.
+%  \begin{enumerate}
+%    \item[$ii) \Rightarrow i)$] Suponha que $T$ \'e injetora. Queremos mostrar que $T$ \'e um isomorfismo. Assim s\'o precisamos mostrar que $T$ \'e sobrejetora. Como $T$ \'e injetora, ent\~ao pela Proposi\c{c}\~ao \ref{caracteriza_transformacao_injetora}, temos $\ker T = \{0_V\}$. Assim, pelo Teorema \ref{teorema_do_nucleo_e_da_imagem} temos
+%    \[
+%      \dim_\cp{K}\im T = \dim_\cp{K}V = \dim_\cp{K}W = n,
+%    \]
+%    logo $\im T = W$, isto \'e, $T$ \'e sobrejetora. Assim $T$ \'e um isomorfismo.
+%
+%    \item[$iii) \Rightarrow i)$] Suponha que $T$ \'e sobrejetora. Queremos mostrar que $T$ \'e um isomorfismo. Para isso, basta mostrar que $T$ \'e injetora. Como $T$ \'e sobrejetora, ent\~ao $\im T = W$ e da{\'\i} $\dim_\cp{K}\im T = n$. Assim, pelo Teorema \ref{teorema_do_nucleo_e_da_imagem} devemos ter $\dim_\cp{K}\ker T = 0$, ou seja, $\ker T = \{0_V\}$ e ent\~ao $T$ \'e injetora. Logo, $T$ \'e um isomorfismo.
+%  \end{enumerate}
+%\end{prova}
+%
+%\begin{exemplos}
+%  \begin{enumerate}[label={\arabic*})]
+%    \item Considere a transforma\c{c}\~ao linear $T : \real^2 \to \real^3$ dada por $T(x,y) = (-y, x, x+y)$. Pelo Teorema \ref{teorema_do_nucleo_e_da_imagem}, sabemos que $T$ n\~ao pode ser sobrejetora, logo $\dim_\real\im T \le 2$. Agora
+%    \[
+%      (x,y) \in \ker T \Leftrightarrow T(x,y) = (0,0,0) \Leftrightarrow (-y,x,x+y) = (0,0,0) \Leftrightarrow x = y = 0.
+%    \]
+%    Da{\'\i} $\ker T = \{(0,0)\}$ e ent\~ao $T$ \'e injetora.
+%
+%    Temos
+%    \[
+%      \im T = \{(-y,x,x+y) \in \real^3 \mid x, y \in \real\}.
+%    \]
+%    Note que
+%    \[
+%      (-y,x,x+y) = y(-1,0,1) + x(0,1,1)
+%    \]
+%    e ent\~ao $\{(-1,0,1);(0,1,1)\}$ gera $\im T$ e como estes vetores n\~ao s\~ao m\'ultiplos um do outro, eles formam uma base para $\im T$. Assim $\im T = [(-1,0,1);(0,1,1)]$ e $\dim_\real\im T = 2$.
+%
+%    \item Considere o espa\c{c}o vetorial $\mathcal{P}(\complex)$ sobre $\complex$ e seja $\mathcal{D} : \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dada por $\mathcal{D}(p(x)) = p'(x)$ a derivada de $p(x)$. Observe que $\ker D = \{p(x) = a \mid a \in \complex\}$. Al\'em disso, $\im \mathcal{D} = \mathcal{P}(\complex)$ pois todo elemento de $\mathcal{P}(\complex)$ tem uma primitiva.
+%
+%    \item Seja
+%    \[
+%      \cp{K}^\n = \{(a_i)_{i \in \n} = (a_1, a_2, \dots, a_n, \dots) \mid a_i \in \cp{K}, i \ge 1\}
+%    \]
+%    onde $\cp{K} = \real$ ou $\cp{K} = \complex$. Defina
+%    \begin{itemize}
+%      \item $(a_1,a_2,\dots,a_n,\dots) + (b_1,b_2,\dots,b_n,\dots) = (a_1+b_1,a_2+b_2,\dots,a_n+b_n,\dots)$
+%
+%      \item $\lambda(a_1,a_2,\dots,a_n,\dots) = (\lambda a_1,\lambda a_2,\dots,\lambda a_n,\dots)$
+%    \end{itemize}
+%    para todos $(a_1,a_2,\dots,a_n,\dots)$, $(b_1,b_2,\dots,b_n,\dots) \in \cp{K}^\n$ e todo $\lambda \in \cp{K}$. \'E f\'acil ver que $\cp{K}^\n$ \'e um $\cp{K}$-espa\c{c}o vetorial. Defina $T : \cp{K}^\n \to \cp{K}^\n$ dada por
+%    \[
+%      T((a_i)_{i\in\n}) = ((a_i)_{i+1\in\n}) = (a_2,a_3,\dots,a_n,\dots).
+%    \]
+%    \'E imediato ver que $T$ \'e uma transforma\c{c}\~ao linear. Al\'em disso, $T$ \'e sobrejetora pois dada uma sequ\^encia $(y_i)_{i\in\n}$, considere $x = (0,y_1,y_2,\dots,y_n,\dots) \in \cp{K}^\n$. Temos
+%    \[
+%      T(x) = (y_1,y_2,\dots,y_n,\dots),
+%    \]
+%    assim $\im T = \cp{K}^\n$. Al\'em disso, $T$ n\~ao \'e injetora pois dado $(x_1,0,0,\dots,0,\dots) \in \cp{K}^\n$ tempos
+%    \[
+%      T(x_1,0,0,\dots,0,\dots) = (0,0,0,\dots,0,\dots)
+%    \]
+%    e ent\~ao
+%    \[
+%      \ker T = \{(x_1,0,0,\dots,0) \mid x_1 \in \cp{K}\}.
+%    \]
+%  \end{enumerate}
+%\end{exemplos}
+%
+%\begin{teorema}\label{teorema_espacos_isomorfos}
+%  Dois $\cp{K}$-espa\c{c}os vetoriais de mesma dimens\~ao finita s\~ao isomorfos.
+%\end{teorema}
+%\begin{prova}
+%  Se ambos os espa\c{c}os forem nulos, nada h\'a a fazer. Sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$ tais que $\dim_\cp{K}V = \dim_\cp{K}W = n < \infty$. Seja $\mathcal{A} = \{v_1,\dots,v_n\}$ e $\mathcal{B} = \{w_1,\dots,w_n\}$ bases de $V$ e $W$, respectivamente. Pelo Teorema \ref{existencia_de_transformacao_unica_dado_valores} sabemos que existe uma \'unica transforma\c{c}\~ao linear $T : V \to W$ tal que
+%  \[
+%    T(v_i) = w_i
+%  \]
+%  para $i=1$,\dots, $n$.
+%
+%  Vamos mostrar que $T$ \'e sobrejetora e da{\'\i} pela Proposi\c{c}\~ao \ref{equivalencia_isomorfismo_dimensao_finita}, $T$ ser\'a um isomorfismo. Para isto, seja $y \in W$ um elemento qualquer de $W$. Como $\mathcal{B}$ \'e uma base de $W$, existem escalares $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ tais que
+%  \[
+%    y = \sum_{i=1}^n\alpha_iw_i.
+%  \]
+%  Seja $x \in V$ dado por
+%  \[
+%    x = \sum_{i=1}^n\alpha_iv_i
+%  \]
+%  pois $\mathcal{A}$ \'e uma base de $V$. Temos
+%  \[
+%    T(x) = T(\sum_{i=1}^m\alpha_iv_i) = \sum_{i=1}^n\alpha_iT(v_i) = \sum_{i=1}^n\alpha_iw_i = y,
+%  \]
+%  logo $\im T = W$, ou seja, $T$ \'e sobrejetora.
+%
+%  Portanto $V$ e $W$ s\~ao isomorfos.
+%\end{prova}
+%
+%\begin{corolario}
+%  Todo $\cp{K}$-espa\c{c}o vetorial de dimens\~ao $n \ge 1$ \'e isomorfo a $\cp{K}^n$.
+%\end{corolario}
+%
+%\begin{exemplos}
+%  \begin{enumerate}[label={\arabic*})]
+%    \item $\mathcal{P}_n(\cp{K}) \cong \cp{K}^{n+1}$.
+%    \item $\cp{M}_{p\times q}(\cp{K}) \cong \cp{K}^{pq}$.
+%  \end{enumerate}
+%\end{exemplos}
+%
+%\section{Transforma\c{c}\~oes Lineares e Matrizes} % (fold)
+%\label{sec:transformacoes_lineares_e_matrizes}
+%
+%Sejam $V$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao $n \ge 1$ e $\mathcal{B} = \{v_1,\dots,v_n\}$ uma base de $V$. Sabemos que cada elemento de $V$ se escreve de modo \'unico como combina\c{c}\~ao linear dos elementos de $\mathcal{B}$, isto \'e, dado $u \in V$ existem \'unicos escalares $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ tais que
+%\[
+%  u = \alpha_1v_1 + \cdots + \alpha_nv_n.
+%\]
+%
+%Assim vamos fixar uma ordem para os elementos da base $\mathcal{B}$ e por isso vamos cham\'a-la de \textbf{base ordenada} de $V$. Pela unicidade dos elementos $\alpha_1$, \dots, $\alpha_n$ acima, podemos denotar o vetor $u$ por
+%\[
+%  [u]_\mathcal{B} = \begin{bmatrix}
+%    \alpha_1\\
+%    \vdots\\
+%    \alpha_n
+%  \end{bmatrix}_\mathcal{B}
+%\]
+%e dizemos que $\alpha_1$, \dots, $\alpha_n$ s\~ao as \textbf{coordenadas de $u$ em rela\c{c}\~ao \`a base ordenada $\mathcal{B}$}.
+%
+%\begin{exemplos}
+%  \begin{enumerate}[label={\arabic*})]
+%    \item Considere $V = \complex^2$ como um $\complex$-espa\c{c}o vetorial e seja $\mathcal{B} = \{(1,i);(i,0)\}$ uma base de $\complex^2$ \textit{(Verifique!)}. Dado o vetor $v = (i, 2+i) \in \complex^2$, quais suas coordenadas em rela\c{c}\~ao a tal base?
+%    \begin{solucao}
+%      As coordenadas de $v$ em rela\c{c}\~ao \`a base $\mathcal{B}$ ser\~ao $[v]_\mathcal{B} = (\alpha_1,\alpha_2)_\mathcal{B}$ onde $\alpha_1$, $\alpha_2 \in \complex^2$ s\~ao tais que
+%      \[
+%        v = \alpha_1(1,i) + \alpha_2(i,0).
+%      \]
+%      Resolvendo o sistema resultante obtemos $\alpha_1 = 1 - 2i$ e $\alpha_2 = 3 + i$. Assim
+%      \[
+%        [v]_\mathcal{B} = \begin{bmatrix}
+%          1 - 2i\\
+%          3 + i
+%        \end{bmatrix}_\mathcal{B}.
+%      \]
+%    \end{solucao}
+%
+%    \item Agora considere $V = \complex^2$ como um $\real$-espa\c{c}o vetorial e seja $\mathcal{A} = \{(1,1);(i,0);(1,i);(0,1)\}$ uma base de $\complex^2$ \textit{(Verifique!)}. Dado o vetor $v = (i,2+i) \in \complex^2$, quais suas coordenadas em rela\c{c}\~ao a tal base?
+%    \begin{solucao}
+%      As coordenadas de $v$ em rela\c{c}\~ao \`a base $\mathcal{A}$ ser\~ao $[v]_\mathcal{A} = (\alpha_1,\alpha_2,\alpha_3,\alpha_4)_\mathcal{A}$ onde $\alpha_1$, $\alpha_2$, $\alpha_3$, $\alpha_4 \in \complex$ s\~ao tais que
+%      \[
+%        v = \alpha_1(1,1) + \alpha_2(i,0) + \alpha_3(1,i) + \alpha_4(0,1).
+%      \]
+%      Resolvendo o sistema resultante obtemos $\alpha_1 = -1$, $\alpha_2 = 1$, $\alpha_3 = 1$ e $\alpha_4 = 3$. Assim
+%      \[
+%        [v]_\mathcal{A} = \begin{bmatrix}
+%          -1\\
+%          \phantom{-}1\\
+%          \phantom{-}1\\
+%          \phantom{-}3
+%        \end{bmatrix}_\mathcal{A}.
+%      \]
+%    \end{solucao}
+%  \end{enumerate}
+%\end{exemplos}
+%
+%Agora, sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$ tais que $\dim_\cp{K}V = p \ge 1$ e $\dim_\cp{K} W = q \ge 1$. Vamos fixar bases ordenadas $\mathcal{B}_1 = \{u_1,\dots,u_p\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_q\}$ de $V$ e $W$, respectivamente. Seja $T : V \to W$ uma transforma\c{c}\~ao linear. Sabemos pelo Teorema \ref{existencia_de_transformacao_unica_dado_valores} que $T$ fica completamente determinada se conhecermos seus valores na base de $V$. Assim
+%\begin{align*}
+%  T(u_1) &= a_{11}w_1 + a_{21}w_2 + \cdots + a_{q1}w_q\\
+%  T(u_2) &= a_{12}w_1 + a_{22}w_2 + \cdots + a_{q2}w_q\\
+%  &\vdots\\
+%  T(u_p) &= a_{1p}w_1 + a_{2p}w_2 + \cdots + a_{qp}w_q
+%\end{align*}
+%para certos $a_{ij} \in \cp{K}$ onde $1 \le i \le q$ e $1 \le j \le p$.
+%
+%Agora, seja $x \in V$. Ent\~ao
+%\[
+%  x = \alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_pu_p
+%\]
+%onde $\alpha_1$, $\alpha_2$, \dots, $\alpha_p \in \cp{K}$. Da{\'\i}
+%\begin{align*}
+%  T(x) &= T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_pu_p) = \alpha_1T(u_1) + \alpha_2T(u_2) + \cdots + \alpha_pT(u_p)\\
+%  &= \alpha_1(a_{11}w_1 + a_{21}w_2 + \cdots + a_{q1}w_q) + \alpha_2(a_{12}w_1 + a_{22}w_2 + \cdots + a_{q2}w_q) + \cdots \\
+%  &+ \alpha_p(a_{1p}w_1 + a_{2p}w_2 + \cdots + a_{qp}w_q)\\
+%  &= (\sum_{j=1}^p\alpha_j a_{1j})w_1 + (\sum_{j=1}^p\alpha_j a_{2j})w_2 + \cdots + (\sum_{j=1}^p\alpha_j a_{qj})w_q\\
+%  &= \sum_{i=1}^q\left(\sum_{j=1}^p a_{ij}\alpha_j\right)w_i.
+%\end{align*}
+%Note que os escalares $\sum_{j=1}^p a_{1j}\alpha_j$, $\sum_{j=1}^p a_{2j}\alpha_j$, \dots, $\sum_{j=1}^p a_{qi}\alpha_j$ s\~ao as coordenadas do vetor $T(x)$ em rela\c{c}\~ao \`a base $\mathcal{B}_2$, isto \'e,
+%\[
+%  [T(x)]_{\mathcal{B}_2} = \begin{bmatrix}
+%    \sum_{j=1}^p a_{1j}\alpha_j\\
+%    \sum_{j=1}^p a_{2j}\alpha_j\\
+%    \vdots\\
+%    \sum_{j=1}^p a_{qj}\alpha_j
+%  \end{bmatrix}.
+%\]
+%Por outro lado,
+%\[
+%  \underbrace{\begin{bmatrix}
+%    a_{11} & a_{12} & \dots & a_{1p}\\
+%    a_{21} & a_{22} & \dots & a_{2p}\\
+%    \vdots & & \ddots & \vdots\\
+%    a_{q1} & a_{q2} & \dots & a_{qp}
+%  \end{bmatrix}}_{A}\begin{bmatrix}
+%    \alpha_1\\
+%    \alpha_2\\
+%    \vdots\\
+%    \alpha_p
+%  \end{bmatrix} = \begin{bmatrix}
+%    a_{11}\alpha_1 + a_{12}\alpha_2 + \cdots + a_{1p}\alpha_p\\
+%    a_{21}\alpha_1 + a_{22}\alpha_2 + \cdots + a_{2p}\alpha_p\\
+%    \vdots \\
+%    a_{q1}\alpha_1 + a_{q2}\alpha_2 + \cdots + a_{qp}\alpha_p
+%  \end{bmatrix}
+%\]
+%e da{\'\i} podemos escrever
+%\[
+%  [T(x)]_{\mathcal{B}_2} = A[x]_{\mathcal{B}_1}
+%\]
+%onde $A \in \cp{M}_{q\times p}(\cp{K})$.
+%
+%Agora seja $B \in \cp{M}_{q\times p}(\cp{K})$ onde
+%\[
+%  B = \begin{bmatrix}
+%    b_{11} & b_{12} & \dots & b_{1p}\\
+%    b_{21} & b_{22} & \dots & b_{2p}\\
+%    \vdots & & \ddots & \vdots\\
+%    b_{q1} & b_{q2} & \dots & b_{qp}
+%  \end{bmatrix}.
+%\]
+%
+%Seja $V_1$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao $p \ge 1$ e $W_1$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao $q \ge 1$. Tome $\mathcal{B}_1 = \{v_1,\dots,v_p\}$ e $\mathcal{B}_2 = \{l_1,\dots,l_q\}$ bases ordenadas de $V_1$ e $W_1$, respectivamente. Defina $G : V_1 \to W_1$ por
+%\begin{align*}
+%  G(v_1) &= b_{11}l_1 + b_{21}l_2 + \cdots + b_{q1}l_q\\
+%  &\vdots\\
+%  G(v_p) &= b_{1p}l_1 + b_{2p}l_2 + \cdots + b_{qp}l_q.
+%\end{align*}
+%Ent\~ao $G$ \'e uma transforma\c{c}\~ao linear  tal que
+%\[
+%  [G(x)]_{\mathcal{B}_2} = B[x]_{\mathcal{B}_1}
+%\]
+%para todo $x \in V$.
+%
+%Assim provamos o seguinte teorema:
+%\begin{teorema}\label{teorema_toda_transformacao_matriz}
+%  Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais de dimens\~oes $p \ge 1$ e $q \ge 1$, respectivamente. Sejam $\mathcal{B}_V$ e $\mathcal{B}_W$ bases ordenadas de $V$ e $W$, respectivamente. Ent\~ao para cada transforma\c{c}\~ao linear $T : V \to W$, existe uma matriz $A \in \cp{M}_{q\times p}(\cp{K})$ tal que
+%  \[
+%    [T(x)]_{\mathcal{B}_W} = A[x]_{\mathcal{B}_V}
+%  \]
+%  para todo vetor $x \in V$. Al\'em disso, a cada matriz $A \in \cp{M}_{q\times p}(\cp{K})$ corresponde uma transforma\c{c}\~ao linear $T : V \to W$ tal que
+%  \[
+%    [T(x)]_{\mathcal{B}_W} = A[x]_{\mathcal{B}_V}
+%  \]
+%  para todo $x \in V$.
+%\end{teorema}
+%
+%\begin{definicao}
+%  A matriz $A \in \cp{M}_{q\times p}(\cp{K})$ do Teorema \ref{teorema_toda_transformacao_matriz} \'e chamada de \textbf{matriz da transforma\c{c}\~ao linear} $T$ com respeito \`as bases ordenadas $\mathcal{B}_V$ e $\mathcal{B}_W$ e ser\'a denotada por
+%  \[
+%    A = [T]_{\mathcal{B}_{V},\mathcal{B}_{W}}.
+%  \]
+%  No caso em que $V = W$ e $\mathcal{B}_V = \mathcal{B}_W = \mathcal{B}$, denotaremos $[T]_{\mathcal{B}_{V},\mathcal{B}_{W}}$ simplesmente por $[T]_\mathcal{B}$.
+%\end{definicao}
+%
+%\begin{exemplos}
+%  \begin{enumerate}[label={\arabic*})]
+%    \item Seja $T : \real^2 \to \real^2$ a transforma\c{c}\~ao linear definida por
+%    \[
+%      T(x,y) = (x,0).
+%    \]
+%    Considere $\real^2$ com a base can\^onica $\mathcal{B} = \{e_1=(1,0);e_2=(0,1)\}$. Encontre $[T]_\mathcal{B}$.
+%    \begin{solucao}
+%      Temos
+%      \begin{align*}
+%        T(e_1) &= (1,0) = 1(1,0) + 0(0,1)\\
+%        T(e_2) &= (0,0) = 0(1,0) + 0(0,1).
+%      \end{align*}
+%      Logo a matriz de $T$ \'e
+%      \[
+%        [T]_\mathcal{B} = \begin{bmatrix}
+%          1 & 0\\
+%          0 & 0
+%        \end{bmatrix}.
+%      \]
+%      Al\'em disso, dado $(x,y) \in \real^2$ temos
+%      \[
+%        (x,y) = xe_1 + ye_2
+%      \]
+%      e ent\~ao
+%      \[
+%        [(x,y)]_\mathcal{B} = \begin{bmatrix}
+%          x\\y
+%        \end{bmatrix}.
+%      \]
+%      Assim podemos escrever
+%      \[
+%        [T(x,y)]_\mathcal{B} = [T]_\mathcal{B}[(x,y)]_\mathcal{B} = \begin{bmatrix}
+%          1 & 0\\
+%          0 & 0
+%        \end{bmatrix}\begin{bmatrix}
+%          x\\y
+%        \end{bmatrix}
+%      \]
+%      para todo $(x,y) \in \real^2$.
+%    \end{solucao}
+%
+%    \item Seja $T : \real^3 \to \real^2$ tal que
+%    \[
+%      T(x,y,z) = (2x+y-z,3x-2y+4z).
+%    \]
+%    Considere as bases $\mathcal{B}_1 = \{(1,1,1);(1,1,0);(1,0,0)\}$ e $\mathcal{B}_2 = \{(1,3);(1,4)\}$. Encontre $[T]_{\mathcal{B}_{1},\mathcal{B}_{2}}$.
+%    \begin{solucao}
+%      Temos
+%      \begin{align*}
+%        T(1,1,1) &= (2,5) = 3(1,3) - 1(1,4)\\
+%        T(1,1,0) &= (3,1) = 11(1,3) - 8(1,4)\\
+%        T(1,0,0) &= (2,3) = 5(1,5) - 3(1,4)
+%      \end{align*}
+%      e da{\'\i}
+%      \[
+%        [T]_{\mathcal{B}_{1},\mathcal{B}_{2}} = \begin{bmatrix}
+%          \phantom{-}3 & \phantom{-}11 & \phantom{-}5\\
+%          -1 & -8 & -3
+%        \end{bmatrix}.
+%      \]
+%      Agora considerando as bases $\mathcal{B}_3 = \{(1,0,0);(0,1,0);(0,0,1)\}$ e $\mathcal{B}_4 = \{(1,0);(0,1)\}$ obtemos
+%      \begin{align*}
+%        T(1,0,0) &= (2,3) = 2(1,0) + 3(0,1)\\
+%        T(0,1,0) &= (1,-2) = 1(1,0) - 2(0,1)\\
+%        T(0,0,1) &= (-1,4) = -1(1,0) + 4(0,1)
+%      \end{align*}
+%      e assim a matriz de $T$ ser\'a
+%      \[
+%        [T]_{\mathcal{B}_{3},\mathcal{B}_{4}} = \begin{bmatrix}
+%          \phantom{-}2 & \phantom{-}1 & -1\\
+%          \phantom{-}3 & -2 & \phantom{-}4
+%        \end{bmatrix}.
+%      \]
+%    \end{solucao}
+%  \end{enumerate}
+%\end{exemplos}
+%
+%\begin{teorema}\label{matriz_da_composicao_de_transformacoes}
+%  Sejam $F : U \to V$ e $G : V \to W$ duas transforma\c{c}\~oes lineares onde $U$, $V$ e $W$ s\~ao $\cp{K}$-espa\c{c}os vetoriais de dimens\~oes $n$, $m$ e $r$, respectivamente. Fixe bases ordenadas $\mathcal{B}_U$, $\mathcal{B}_V$ e $\mathcal{B}_W$ para $U$, $V$ e $W$, respectivamente. Ent\~ao $(G \circ F) : U \to W$ dada por $(G\circ F)(v) = G(F(v))$ \'e uma transforma\c{c}\~ao linear e
+%  \[
+%    [(G \circ F)]_{{\mathcal{B}_U},{\mathcal{B}_W}} = [G]_{{\mathcal{B}_V},{\mathcal{B}_W}}[F]_{{\mathcal{B}_U},{\mathcal{B}_V}}.
+%  \]
+%\end{teorema}
+%\begin{prova}
+%  \'E imediato verificar que $G\circ F$ \'e uma transforma\c{c}\~ao linear.
+%
+%  Sejam $\mathcal{B}_U = \{u_1,\dots,u_n\}$, $\mathcal{B}_V = \{v_1,\dots,v_m\}$ e $\mathcal{B}_W = \{w_1,\dots,w_r\}$ bases ordenadas para $U$, $V$ e $W$, respectivamente. Considere as matrizes
+%  \begin{enumerate}[label=({\arabic*})]
+%    \item $[F]_{{\mathcal{B}_U},{\mathcal{B}_V}} = (a_{ij})_{m\times n}$ onde $F(u_j) = a_{1j}v_1 + a_{2j}v_2 + \cdots + a_{mj}v_m$ para $j=1$, \dots, $n$;
+%
+%    \item $[G]_{{\mathcal{B}_V},{\mathcal{B}_W}} = (b_{ki})_{r\times m}$ onde $G(v_i) = b_{i1}w_1 + b_{i2}w_2 + \cdots + b_{ir}w_r$ para $i=1$, \dots, $m$;
+%
+%    \item $[G \circ F]_{{\mathcal{B}_U},{\mathcal{B}_W}} = (c_{kj})_{r\times n}$ onde $(G\circ F)(u_j) = c_{1j}w_1 + c_{2j}w_2 + \cdots + c_{rj}w_r$ para $j=1$, \dots, $n$.
+%  \end{enumerate}
+%
+%  Vamos calcular $(G\circ F)(u_j)$ usando (1) e (2):
+%  \begin{align*}
+%    (G\circ F)(u_j) &= G(F(u_j)) = G(a_{1j}v_1 + a_{2j}v_2 + \cdots + a_{mj}v_m)\\
+%    &= a_{1j}G(v_1) + a_{2j}G(v_2) + \cdots + a_{mj}G(v_m)\\
+%    &= a_{1j}(b_{11}w_1 + b_{12}w_2 + \cdots + b_{1r}w_r) \\ &+ a_{2j}(b_{21}w_1 + b_{22}w_2 + \cdots + b_{2r}w_r) + \cdots \\ &+ a_{mj}(b_{m1}w_1 + b_{m2}w_2 + \cdots + b_{mr}w_r)\\
+%    &= (a_{1j}b_{11} + a_{2j}b_{21} + \cdots + a_{mj}b_{m1})w_1 \\ &+ (a_{1j}b_{12} + a_{2j}b_{22} + \cdots + a_{mj}b_{m2})w_2 + \cdots \\ &+ (a_{1j}b_{1r} + a_{2j}b_{2r} + \cdots + a_{mj}b_{mr})w_r.
+%  \end{align*}
+%  Comparando essa \'ultima equa\c{c}\~ao com (3) e usando a unicidade dos escalares obtemos
+%  \[
+%    c_{kj} = a_{1j}b_{k1} + a_{2j}b_{k2} + \cdots + a_{mj}b_{km}
+%  \]
+%  para $j=1$, \dots, $n$ e $k = 1$, \dots, $r$. Isto \'e, para cada par $(j,k)$ o elemento $c_{kj}$ da matriz $[(G\circ F)]_{{\mathcal{B}_U},{\mathcal{B}_W}}$ \'e o elemento na posi\c{c}\~ao $(k,j)$ da matriz resultante da multiplica\c{c}\~ao de $[G]_{{\mathcal{B}_V},{\mathcal{B}_W}}$ por $[F]_{{\mathcal{B}_U},{\mathcal{B}_V}}$. Portanto
+%  \[
+%    [(G\circ F)]_{{\mathcal{B}_U},{\mathcal{B}_W}} = [G]_{{\mathcal{B}_V},{\mathcal{B}_W}}[F]_{{\mathcal{B}_U},{\mathcal{B}_V}}
+%  \]
+%  como quer{\'\i}amos.
+%\end{prova}
+%
+%Vamos tratar, principalmente, com a representa\c{c}\~ao por matrizes de transforma\c{c}\~oes lineares de um espa\c{c}o em si mesmo. Lembre-se que esta matriz muda de acordo com a escolha da base. Assim, deve-se prestar aten\c{c}\~ao sempre \`a base escolhida. Assim como um espa\c{c}o vetorial pode ter v\'arias bases distintas, o que acontecer\'a com a matriz representante de uma transforma\c{c}\~ao linear quando mudamos a base ordenada? Vamos considerar $T : V \to V$ uma transforma\c{c}\~ao linear sobre o $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita $V$ e sejam
+%\[
+%  \mathcal{B}_1 = \{v_1,\dots,v_n\}, \quad \mathcal{B}_2 = \{w_1,\dots,w_n\}
+%\]
+%bases ordenadas de $V$. Qual a rela\c{c}\~ao entre as matrizes $[T]_{\mathcal{B}_1}$ e $[T]_{\mathcal{B}_2}$?
+%
+%Para responder a esta quest\~ao, primeiro vamos determinar uma rela\c{c}\~ao entre $[x]_{\mathcal{B}_1}$ e $[x]_{\mathcal{B}_2}$, para todo $x \in V$. Como $\mathcal{B}_1$ \'e uma base de $V$, ent\~ao existem $\alpha_{ij} \in \cp{K}$, $1 \le i,\ j \le n$ tais que
+%\begin{align*}
+%  w_1 &= \alpha_{11}v_1 + \cdots + \alpha_{n1}v_n\\
+%  &\vdots\\
+%  w_n &= \alpha_{1n}v_1 + \cdots + \alpha_{nn}v_n.
+%\end{align*}
+%Agora, dado $x \in V$, existem $\beta_1$, \dots, $\beta_n \in \cp{K}$ tais que
+%\[
+%  x = \beta_1w_1 + \cdots + \beta_nw_n.
+%\]
+%Da{\'\i}
+%\begin{align*}
+%  x &= \beta_1(\alpha_{11}v_1 + \cdots + \alpha_{n1}v_n) + \cdots + \beta_n(\alpha_{1n}v_1 + \cdots + \alpha_{nn}v_n)\\
+%  &= (\beta_1\alpha_{11} + \beta_2\alpha_{12} + \cdots + \beta_n\alpha_{1n})v_1 + \cdots + (\beta_1\alpha_{n1} + \beta_2\alpha_{n2} + \cdots + \beta_n\alpha_{nn})v_n\\
+%  &= \sum_{j=1}^n\beta_j\alpha_{1j}v_1 + \cdots + \sum_{j=1}^n\beta_j\alpha_{nj}v_n\\
+%  &= \sum_{i=1}^n\left(\sum_{j=1}^n\beta_j\alpha_{ij}\right)v_i.
+%\end{align*}
+%Assim as coordenadas de $x$ em rela\c{c}\~ao \`a base $\mathcal{B}_1$ s\~ao
+%\[
+%  [x]_{\mathcal{B}_1} = \begin{bmatrix}
+%    \sum_{j=1}^n\beta_j\alpha_{1j}\\
+%    \vdots\\
+%    \sum_{j=1}^n\beta_j\alpha_{nj}
+%  \end{bmatrix}.
+%\]
+%Seja $P$ a matriz cuja entrada $(i,j)$ \'e o escalar $\alpha_{ij}$, isto \'e,
+%\[
+%  P = \begin{bmatrix}
+%    \alpha_{11} & \cdots & \alpha_{1n}\\
+%    \vdots & & \vdots\\
+%    \alpha_{n1} & \cdots & \alpha_{nn}
+%  \end{bmatrix}.
+%\]
+%Ent\~ao podemos escrever
+%\[
+%  [x]_{\mathcal{B}_1} = P \begin{bmatrix}
+%    \beta_1\\
+%    \vdots\\
+%    \beta_n
+%  \end{bmatrix} = P[x]_{\mathcal{B}_2}.
+%\]
+%Mais ainda, como $\mathcal{B}_1$ e $\mathcal{B}_2$ s\~ao bases de $V$, ent\~ao $[x]_{\mathcal{B}_1} = [0_V]_{\mathcal{B}_1}$ se, e somente se, $[x]_{\mathcal{B}_2} = [0_V]_{\mathcal{B}_2}$. Logo $P$ possui inversa. Assim mostramos o seguinte teorema:
+%
+%\begin{teorema}\label{teorema_mudanca_base}
+%  Sejam $V$ um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao $n \ge 1$, $\mathcal{B}_1$ e $\mathcal{B}_2$ bases ordenadas de $V$. Ent\~ao existe uma \'unica matriz $P \in \cp{M}_n(\cp{K})$, necessariamente invert{\'\i}vel tal que
+%  \begin{enumerate}[label={\roman*})]
+%    \item $[x]_{\mathcal{B}_1} = P[x]_{\mathcal{B}_2}$
+%    \item $[x]_{\mathcal{B}_2} = P^{-1}[x]_{\mathcal{B}_1}$
+%  \end{enumerate}
+%  para todo $x \in V$. As colunas de $P = \begin{bmatrix}
+%    P_1 & P_2 & \cdots & P_n
+%  \end{bmatrix}$ s\~ao dadas por
+%  \[
+%    P_j = [w_j]_{\mathcal{B}_1}
+%  \]
+%  para $j = 1$, \dots, $n$.
+%\end{teorema}
+%
+%Al\'em disso, tamb\'em temos o seguinte teorema:
+%
+%\begin{teorema}\label{teorema_matriz_mudanca_base}
+%  Seja $P \in \cp{M}_n(\cp{K})$ um matriz invert{\'\i}vel. Sejam $V$ um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao $n \ge 1$ e $\mathcal{B}_1$ uma base ordenada de $V$. Ent\~ao existe uma \'unica base ordenada $\mathcal{B}_2$ de $V$ tal que
+%  \begin{enumerate}[label={\roman*})]
+%    \item $[x]_{\mathcal{B}_1} = P[x]_{\mathcal{B}_2}$
+%    \item $[x]_{\mathcal{B}_2} = P^{-1}[x]_{\mathcal{B}_1}$
+%  \end{enumerate}
+%  para todo $x \in V$.
+%\end{teorema}
+%
+%\begin{definicao}
+%  A matriz $P \in \cp{M}_n(\cp{K})$ do Teorema \ref{teorema_matriz_mudanca_base} \'e chamada de \textbf{matriz de mudan\c{c}a de base} e \'e denotada por $P = [I]_{{\mathcal{B}_1},{\mathcal{B}_2}}$.
+%\end{definicao}
+%
+%Agora, sejam $T : V \to V$ uma transforma\c{c}\~ao linear, $\mathcal{B}_1 = \{v_1,\dots,v_n\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ bases ordenadas de $V$. Sabemos que existe $P \in \cp{M}_n(\cp{K})$ invert{\'\i}vel tal que
+%\begin{equation}\label{equacao_mudanca_base}
+%  [x]_{\mathcal{B}_1} = P[x]_{\mathcal{B}_2}
+%\end{equation}
+%para todo $x \in V$. Mas, para todo $x \in V$ temos
+%\begin{equation}\label{equacao_coordenadas_imagem}
+%  [T(x)]_{\mathcal{B}_1} = [T]_{\mathcal{B}_1}[x]_{\mathcal{B}_1}.
+%\end{equation}
+%Aplicando \eqref{equacao_mudanca_base} ao vetor $T(x)$ obtemos
+%\begin{equation}\label{equacao_mudanca_base_imagem}
+%  [T(x)]_{\mathcal{B}_1} = P[T(x)]_{\mathcal{B}_2}.
+%\end{equation}
+%Combinando \eqref{equacao_mudanca_base}, \eqref{equacao_coordenadas_imagem} e \eqref{equacao_mudanca_base_imagem}:
+%\begin{align*}
+%  [T]_{\mathcal{B}_1}[x]_{\mathcal{B}_1} &= [T(x)]_{\mathcal{B}_1} = P[T(x)]_{\mathcal{B}_2}\\
+%  [T]_{\mathcal{B}_1}P[x]_{\mathcal{B}_2} &= P[T(x)]_{\mathcal{B}_2}\\
+%  P^{-1}[T]_{\mathcal{B}_1}P[x]_{\mathcal{B}_2} &= [T(x)]_{\mathcal{B}_2} = [T]_{\mathcal{B}_2}[x]_{\mathcal{B}_2}.
+%\end{align*}
+%Da{\'\i}
+%\[
+%  P^{-1}[T]_{\mathcal{B}_1}P = [T]_{\mathcal{B}_2}
+%\]
+%o que responde nossa pergunta.
+%
+%Por outro lado, sabemos que existe uma \'unica transforma\c{c}\~ao linear $G : V \to V$ tal que
+%\[
+%  G(v_i) = w_i
+%\]
+%para $i = 1$, \dots, $n$. Mais ainda, tal transforma\c{c}\~ao linear \'e um isomorfismo. Afirmamos que a matriz $P$ acima \'e exatamente a matriz de $G$ em rela\c{c}\~ao \`a base $\mathcal{B}_1$. De fato, as entradas de $P$ s\~ao definidas por
+%\[
+%  w_i = \sum_{i=1}^n\alpha_{ij}v_i
+%\]
+%e como $G(v_i) = w_i$ podemos escrever
+%\[
+%  G(v_i) = w_i = \sum_{i=1}^n\alpha_{ij}v_i
+%\]
+%e ent\~ao por defini\c{c}\~ao $[G]_{\mathcal{B}_1} = P$. Desse modo, temos o seguinte teorema:
+%
+%\begin{teorema}
+%  Sejam $V$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao finita, $\mathcal{B}_1 = \{v_1,\dots,v_n\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ bases ordenadas de $V$. Suponha que $T : V \to V$ \'e uma transforma\c{c}\~ao linear. Se $P = \begin{bmatrix}P_1 & P_2 & \dots & P_n
+%  \end{bmatrix} \in \cp{M}_n(\cp{K})$ \'e uma matriz com colunas
+%  \[
+%    P_j = [w_j]_{\mathcal{B}_1}
+%  \]
+%  ent\~ao
+%  \[
+%    [T]_{\mathcal{B}_2} = P^{-1}[T]_{\mathcal{B}_1}P.
+%  \]
+%  Alternativamente, se $G$ \'e o isomorfismo de $V$ definido por $G(v_i) = w_i$, $i = 1$, \dots, $n$ ent\~ao
+%  \[
+%    [T]_{\mathcal{B}_2} = ([G]_{\mathcal{B}_1})^{-1}[T]_{\mathcal{B}_1}[G]_{\mathcal{B}_1}.
+%  \]
+%\end{teorema}
+%
+%\begin{definicao}
+%  Sejam $A$, $B \in \cp{M}_n(\cp{K})$. Dizemos que $B$ \'e \textbf{semelhante} a $A$ sobre $\cp{K}$ se existe $P \in \cp{M}_n(\cp{K})$ invert{\'\i}vel tal que
+%  \[
+%    B = P^{-1}AP.
+%  \]
+%\end{definicao}
+%
+%\begin{exemplos}
+%  \begin{enumerate}[label={\arabic*})]
+%    \item Seja $T : \real^2 \to \real^2$ dada por $T(x,y) = (x,0)$. Sabemos que com rela\c{c}\~ao \`a base $\mathcal{B}_1 = \{e_1=(1,0);e_2=(0,1)\}$ a matriz de $T$ \'e
+%    \[
+%      [T_{\mathcal{B}_1} = \begin{bmatrix}
+%        1 & 0\\
+%        0 & 0
+%      \end{bmatrix}.
+%    \]
+%    Agora, seja $\mathcal{B}_2$ a base de $\real^2$ formada por
+%    \[
+%      \mathcal{B}_2 = \{w_1 = (1,1);w_2=(2,1)\}.
+%    \]
+%    Ent\~ao
+%    \begin{align*}
+%      w_1 &= e_1 + e_2\\
+%      w_2 &= 2e_1 + e_2.
+%    \end{align*}
+%    Assim $P$ \'e a matriz
+%    \[
+%      P = \begin{bmatrix}
+%        1 & 2\\
+%        1 & 1
+%      \end{bmatrix}
+%    \]
+%    cuja inversa \'e
+%    \[
+%      P^{-1} = \begin{bmatrix}
+%        -1 & \phantom{-}2\\
+%        \phantom{-}1 & -1
+%      \end{bmatrix}.
+%    \]
+%    Logo
+%    \begin{align*}
+%      [T]_{\mathcal{B}_2} &= P^{-1}[T]_{\mathcal{B}_1}P\\
+%      [T]_{\mathcal{B}_2} &= \begin{bmatrix}
+%        -1 & -2\\
+%        \phantom{-}1 & \phantom{-}2
+%      \end{bmatrix}.
+%    \end{align*}
+%
+%    \item Seja $\mathcal{D} : \mathcal{P}_3(\real) \to \mathcal{P}_3(\real)$ a transforma\c{c}\~ao derivada. Considere a base $\mathcal{B}_1 = \{f_1 = 1; f_2 = x; f_3 = x^2; f_4 = x^3\}$. Tome $t \in \real$ e defina
+%    \[
+%      \mathcal{B}_2 = \{g_1 = 1; g_2 = (x + t); g_3 = (x + t)^2; g_4 = (x + t)^3\}.
+%    \]
+%    Assim
+%    \begin{align*}
+%      g_1 &= 1f_1 + 0f_2 + 0f_3 + 0f_4\\
+%      g_2 &= tf_1 + xf_2 + 0f_3 + 0f_4\\
+%      g_3 &= t^2f_1 + 2tf_2 + 1f_3 + 0f_4\\
+%      g_4 &= t^3f_1 + 3t^2f_2 + 3tf_3 + 1f_4\\
+%    \end{align*}
+%    e ent\~ao
+%    \[
+%      P = \begin{bmatrix}
+%        1 & t & t^2 & t^3\\
+%        0 & 1 & 2t & 3t^2\\
+%        0 & 0 & 1 & 3t\\
+%        0 & 0 & 0 & 1
+%      \end{bmatrix}
+%    \]
+%    \'e invert{\'\i}vel com
+%    \[
+%      P^{-1} = \begin{bmatrix}
+%        1 & -t & \phantom{-}t^2 & -t^3\\
+%        0 & \phantom{-}1 & -2t & \phantom{-}3t^2\\
+%        0 & \phantom{-}0 & \phantom{-}1 & -3t\\
+%        0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}1
+%      \end{bmatrix}.
+%    \]
+%    Agora
+%    \begin{align*}
+%      D(f_1) &= 0\\
+%      D(f_2) &= 1\\
+%      D(f_3) &= 2x\\
+%      D(f_4) &= 3x^2
+%    \end{align*}
+%    e ent\~ao
+%    \[
+%      [D]_{\mathcal{B}_1} = \begin{bmatrix}
+%        0 & 1 & 0 & 0\\
+%        0 & 0 & 2 & 0\\
+%        0 & 0 & 0 & 3\\
+%        0 & 0 & 0 & 0
+%      \end{bmatrix}.
+%    \]
+%    Logo
+%    \[
+%      [D]_{\mathcal{B}_2} = P^{-1}[D]_{\mathcal{B}_1}P = \begin{bmatrix}
+%        0 & 1 & 0 & 0\\
+%        0 & 0 & 2 & 0\\
+%        0 & 0 & 0 & 3\\
+%        0 & 0 & 0 & 0
+%      \end{bmatrix}.
+%    \]
+%  \end{enumerate}
+%\end{exemplos}
+%% section transformacoes_lineares_e_matrizes (end)
