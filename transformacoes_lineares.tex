@@ -197,6 +197,18 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
   \end{enumerate}
 \end{exemplo}
 
+Sejam $V$ e $W$ espaços vetoriais sobre um corpo $\cp{K}$. Considere $\mathcal{B} = \{v_1, v_2, \dots, v_n\}$ uma base de $V$ e $T \colon V \to W$ uma transformação linear.
+
+Como $\mathcal{B}$ é um base de $V$, então para todo $u \in V$ existem únicos escalares $\alpha_1$, $\alpha_2$, \dots, $\alpha_n \in \cp{K}$ tais que
+\[
+    u = \alpha_1v_1 + \alpha_2v_2 + \cdots + \alpha_nv_n.
+\]
+Assim
+\begin{align*}
+    T(u) &= T(\alpha_1v_1 + \alpha_2v_2 + \cdots + \alpha_nv_n) = T(\alpha_1v_1) + T(\alpha_2v_2) + \cdots + T(\alpha_nv_n) \\ &= \alpha_1T(v_1) + \alpha_2T(v_2) + \cdots + \alpha_nT(v_n),
+\end{align*}
+isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer a transformação $T$ basta conhecer seus valores em uma base de $V$. Mais ainda, temos o seguinte resultado:
+
 \begin{teorema}\label{existencia_de_transformacao_unica_dado_valores}
   Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais. Se $\{u_1, \dots, u_n\}$ \'e uma base de $V$ e se $\{w_1, \dots, w_n\} \subseteq W$, ent\~ao existe uma \'unica transforma\c{c}\~ao linear $T \colon V \to W$ tal que $T(u_i) = w_i$ para cada $i = 1$, \dots, $n$.
 \end{teorema}
