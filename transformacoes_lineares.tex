@@ -213,24 +213,60 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
   Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais. Se $\{u_1, \dots, u_n\}$ \'e uma base de $V$ e se $\{w_1, \dots, w_n\} \subseteq W$, ent\~ao existe uma \'unica transforma\c{c}\~ao linear $T \colon V \to W$ tal que $T(u_i) = w_i$ para cada $i = 1$, \dots, $n$.
 \end{teorema}
 
-\begin{exemplo}
-  Os vetores $v_1 = (1,2)$ e $v_2 = (3,4)$ s\~ao L.I em $\real^2$ e assim formam uma base de $\real^2$. Assim pelo Teorema \ref{existencia_de_transformacao_unica_dado_valores}, sabemos que existe uma \'unica transforma\c{c}\~ao linear $T : \real^2 \to \real^3$ tal que
-  \begin{align*}
-    T(v_1) &= T(1,2) = (3,2,1)\\
-    T(v_2) &= T(3,4) = (6,5,4).
-  \end{align*}
-  Determine $T(1,0)$.
-\end{exemplo}
-\begin{solucao}
-  Inicialmente escrevemos $(1,0)$ como combina\c{c}\~ao linear de $v_1$ e $v_2$:
-  \[
-    (1, 0) = \alpha(1,2) + \beta(3,4).
-  \]
-  Obtendo $\alpha = -2$ e $\beta = 1$. Assim
-  \[
-    T(1,0) = T(-2(1,2) + (3,4)) = -2T(1,2) + T(3,4) = (0,1,2).
-  \]
-\end{solucao}
+\begin{exemplos}
+    \begin{enumerate}[label={\arabic*})]
+        \item Seja $\mathcal{B} = \{v_1 = (0, 1, 0); v_2 = (1, 0, 1); v_3 = (1, 1, 0)\}$ uma base de $\real^3$. Dada $T \colon \real^3 \to \real^2$ tal que
+        \begin{align*}
+            T(v_1) &= (1, -2)\\
+            T(v_2) &= (3, 0)\\
+            T(v_3) &= (1, 1)
+        \end{align*}
+        Determine $T(x, y, z)$ para todo $(x, y, z) \in \real^3$ e depois calcule $T(1, 2, 3)$.
+        \begin{solucao}
+            Como $\mathcal{B}$ é base de $\real^3$, então para todo $(x, y, z) \in \real^3$ existem $a$, $b$, $c \in \real$ tais que:
+            \begin{align*}
+                (x, y, z) = a(0, 1, 0) + b(1, 0, 1) + c(1, 1, 0)
+            \end{align*}
+            daí obtemos
+            \[
+                \begin{cases}
+                    b + c = x\\
+                    a + c = y\\
+                    b = z
+                \end{cases}
+            \]
+            Assim $a = y - x + z$, $b = z$ e $c = x - z$. Logo
+            \[
+                (x, y, z) = (y - x + z)v_1 + zv_2 + (x - z)v_3.
+            \]
+            Agora, aplicando a transformação $T$ na expressão anterior:
+            \begin{align*}
+                T(x, y, z) &= T((y - x + z)v_1 + zv_2 + (x - z)v_3) \\ &= (y - x + z)T(v_1) + zT(v_2) + (x - z)T(v_3) \\ &= (y - x + z)(1, -2) + z(3, 0) + (x - z)(1, 1) \\ &= (y - x + z, -2y - 2z + 2x) + (3z, 0) + (x - z, x - z) \\ &= (y - 3z, 3x - 2y - 3z) \in \real^2.
+            \end{align*}
+
+            Assim
+            \begin{align*}
+                T(1, 2, 3) = (2 - 3\cdot3, 3\cdot 1 - 2 \cdot 2 - 3 \cdot 3) = (-4, -10).
+            \end{align*}
+        \end{solucao}
+        \item Os vetores $v_1 = (1,2)$ e $v_2 = (3,4)$ s\~ao L.I em $\real^2$ e assim formam uma base de $\real^2$. Assim pelo Teorema \ref{existencia_de_transformacao_unica_dado_valores}, sabemos que existe uma \'unica transforma\c{c}\~ao linear $T : \real^2 \to \real^3$ tal que
+        \begin{align*}
+            T(v_1) &= T(1,2) = (3,2,1)\\
+            T(v_2) &= T(3,4) = (6,5,4).
+        \end{align*}
+        Determine $T(1,0)$.
+        \begin{solucao}
+            Inicialmente escrevemos $(1,0)$ como combina\c{c}\~ao linear de $v_1$ e $v_2$:
+            \[
+            (1, 0) = \alpha(1,2) + \beta(3,4).
+            \]
+            Obtendo $\alpha = -2$ e $\beta = 1$. Assim
+            \[
+            T(1,0) = T(-2(1,2) + (3,4)) = -2T(1,2) + T(3,4) = (0,1,2).
+            \]
+        \end{solucao}
+    \end{enumerate}
+\end{exemplos}
 
 \begin{definicao}
   Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais e $T : V \to W$ uma transforma\c{c}\~ao linear.
