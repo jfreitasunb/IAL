@@ -61,7 +61,7 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
   \end{enumerate}
 \end{prova}
 
-\begin{lema}
+\begin{lema}\label{condicaoalternativaTL}
     Sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$. Ent\~ao uma fun\c{c}\~ao $T \colon V \to W$ \'e uma transforma\c{c}\~ao linear se, e somente se,
     \[
     T(\lambda u_1 + u_2) = \lambda T(u_1) + T(u_2),
@@ -156,19 +156,32 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
         0_\cp{K} & c - b
       \end{bmatrix}.
     \]
-    Ent\~ao $T$ \'e uma transforma\c{c}\~ao linear. De fato, dados $(a, b, c)$, $(d, e, f) \in \cp{K}^3$ e $\lambda \in \cp{K}$ temos
-    \begin{align*}
-      T(\lambda(a,b,c) + (d,e,f)) &= T(\lambda a + d, \lambda b + e, \lambda c + f) \\ &= \begin{bmatrix}
-        (\lambda a + d) + (\lambda b + e) & 0_\cp{K}\\
-        0_\cp{K} & (\lambda c + f) - (\lambda b + e)
-      \end{bmatrix} \\ &= \begin{bmatrix}
-        \lambda a + \lambda b & 0_\cp{K}\\
-        0_\cp{K} & \lambda c - \lambda b
-      \end{bmatrix} + \begin{bmatrix}
-        d + e & 0_\cp{K}\\
-        0_\cp{K} & f - e
-      \end{bmatrix} \\ &= \lambda T(a,b,c) + T(d,e,f).
-    \end{align*}
+    Ent\~ao $T$ \'e uma transforma\c{c}\~ao linear.
+    \begin{solucao}
+        Vamos usar o Lema \ref{condicaoalternativaTL}. Para isso, sejam $(a, b, c)$, $(d, e, f) \in \cp{K}^3$ e $\lambda \in \cp{K}$. Temos:
+        \begin{align*}
+            T(\lambda(a,b,c) + (d,e,f)) &= T(\lambda a + d, \lambda b + e, \lambda c + f) \\ &= \begin{bmatrix}
+            (\lambda a + d) + (\lambda b + e) & 0_\cp{K}\\
+            0_\cp{K} & (\lambda c + f) - (\lambda b + e)
+            \end{bmatrix} \\ &= \begin{bmatrix}
+            \lambda a + \lambda b & 0_\cp{K}\\
+            0_\cp{K} & \lambda c - \lambda b
+            \end{bmatrix} + \begin{bmatrix}
+            d + e & 0_\cp{K}\\
+            0_\cp{K} & f - e
+        \end{bmatrix} \\ &= \lambda T(a,b,c) + T(d,e,f).
+        \end{align*}
+        Logo, $T$ é uma transformação linear.
+    \end{solucao}
+
+    \item Seja $T \colon \mathcal{P}_n(\real) \to \mathcal{P}_{n + 1}(\real)$ dada por $T(p(x)) = xp(x)$. Então $T$ é uma transformação linear.
+    \begin{solucao}
+        Aqui também vamos usar o Lema \ref{condicaoalternativaTL}. Para isso, sejam $p(x)$, $q(x) \in \mathcal{P}_n(\real)$ e $\lambda \in \real$. Temos:
+        \begin{align*}
+            T(\lambda p(x) + q(x)) &= x(\lambda p(x) + q(x)) = x\lambda p(x) + xq(x) \\ &= \lambda xp(x) + xq(x) \\ &= \lambda T(p(x)) + T(q(x)).
+        \end{align*}
+        Logo, $T$ é uma transformação linear.
+    \end{solucao}
 
     \item Seja $\mathcal{P}(\complex)$ um $\complex$-espa\c{c}o vetorial e considere $D \colon \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dado por
     \[
