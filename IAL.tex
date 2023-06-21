@@ -21,7 +21,7 @@
 %
 % 1) pdflatex IAL
 % 2) makeindex IAL.idx -s indexstyle.ist
-% 3) biber IAL 
+% 3) biber IAL
 % 4) pdflatex IAL x 2
 %
 % After this, when you wish to update the bibliography/index use the appropriate
@@ -34,23 +34,23 @@
 \def\semestre{1}
 
 %----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
 \documentclass[
-	11pt, % Default font size, select one of 10pt, 11pt or 12pt
-	fleqn, % Left align equations
-	a4paper, % Paper size, use either 'a4paper' for A4 size or 'letterpaper' for US letter size
-	%oneside, % Uncomment for oneside mode, this doesn't start new chapters and parts on odd pages (adding an empty page if required), this mode is more suitable if the book is to be read on a screen instead of printed
+    11pt, % Default font size, select one of 10pt, 11pt or 12pt
+    fleqn, % Left align equations
+    a4paper, % Paper size, use either 'a4paper' for A4 size or 'letterpaper' for US letter size
+    %oneside, % Uncomment for oneside mode, this doesn't start new chapters and parts on odd pages (adding an empty page if required), this mode is more suitable if the book is to be read on a screen instead of printed
 ]{LegrandOrangeBook}
 
 % Book information for PDF metadata, remove/comment this block if not required
 \hypersetup{
-	pdftitle={Title}, % Title field
-	pdfauthor={Author}, % Author field
-	pdfsubject={Subject}, % Subject field
-	pdfkeywords={Keyword1, Keyword2, ...}, % Keywords
-	pdfcreator={LaTeX}, % Content creator field
+    pdftitle={Title}, % Title field
+    pdfauthor={Author}, % Author field
+    pdfsubject={Subject}, % Subject field
+    pdfkeywords={Keyword1, Keyword2, ...}, % Keywords
+    pdfcreator={LaTeX}, % Content creator field
 }
 
 \addbibresource{bibliografia.bib} % Bibliography file
@@ -63,13 +63,13 @@
 \input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
 
 \tikzset{
-	>=stealth,
-	bullet/.style={
-		fill=black,
-		circle,
-		minimum width=1pt,
-		inner sep=1pt
-	}
+    >=stealth,
+    bullet/.style={
+        fill=black,
+        circle,
+        minimum width=1pt,
+        inner sep=1pt
+    }
 }
 
 %----------------------------------------------------------------------------------------
@@ -77,23 +77,22 @@
 \begin{document}
 
 %----------------------------------------------------------------------------------------
-%	TITLE PAGE
+%   TITLE PAGE
 %----------------------------------------------------------------------------------------
 
 \begingroup
 \thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
-	\node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background}};
-	\draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Introdução à Álgebra Linear\\[15pt] % Book title
-			{\Large Notas de Aula \semestre/\ano}\\[20pt] % Subtitle
-			{\huge Jos\'e Ant\^onio O. Freitas}\\
-			{\large \today}}}; % Author name
-
+    \node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background}};
+    \draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Introdução à Álgebra Linear\\[15pt] % Book title
+            {\Large Notas de Aula \semestre/\ano}\\[20pt] % Subtitle
+            {\huge Jos\'e Ant\^onio O. Freitas}\\
+            {\large \today}}}; % Author name
 \end{tikzpicture}
 \vfill
 \endgroup
 %----------------------------------------------------------------------------------------
-%	COPYRIGHT PAGE
+%   \COPYRIGHT PAGE
 %----------------------------------------------------------------------------------------
 \newpage
 ~\vfill
@@ -102,7 +101,7 @@
 \noindent \ccbyncsa\ Este texto est\'a licenciado sob uma \textbf{Licen\c{c}a Creative Commons Atribui\c{c}\~ao-N\~aoComercial-CompartilhaIgual 3.0 Brasil} \href{http://creativecommons.org/licenses/by-nc-sa/3.0/br/deed.pt\_BR}{\textit{http://creativecommons.org/licenses/by-nc-sa/3.0/br/deed.pt\_BR}}\\ % Copyright notice
 
 %----------------------------------------------------------------------------------------
-%	TABLE OF CONTENTS
+%   TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
 \pagestyle{empty} % Disable headers and footers for the following pages
 
@@ -113,16 +112,16 @@
 \cleardoublepage % Start the following content on a new page
 
 %----------------------------------------------------------------------------------------
-%	Capítulos
+%   Capítulos
 %----------------------------------------------------------------------------------------
 \include{matrizes}
 \include{sistemas_lineares}
 \include{espacos_vetoriais}
-% \include{transformacoes_lineares}
+\include{transformacoes_lineares}
 % \include{formas_canonicas}
 % \include{produto_interno}
 %----------------------------------------------------------------------------------------
-%	BIBLIOGRAPHY
+%   BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
 \chapterimage{} % Chapter heading image
 \chapterspaceabove{2.5cm} % Whitespace from the top of the page to the chapter title on chapter pages
@@ -137,7 +136,7 @@
 \printbibliography[heading=bibempty, type=book] % Output book bibliography entries
 
 %----------------------------------------------------------------------------------------
-%	INDEX
+%   INDEX
 %----------------------------------------------------------------------------------------
 
 \cleardoublepage % Make sure the index starts on an odd (right side) page
