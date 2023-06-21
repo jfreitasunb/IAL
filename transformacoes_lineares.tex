@@ -8,7 +8,7 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \section{Conceitos B\'asicos}
 
 \begin{definicao}
-  Sejam $(V, +, \cdot)$ e $(W, \oplus, \otimes)$ espa\c{c}os vetoriais sobre um corpo $\cp{K}$. Uma fun\c{c}\~ao $T : V \to W$ \'e uma \textbf{transforma\c{c}\~ao linear} se
+  Sejam $(V, +, \cdot)$ e $(W, \oplus, \otimes)$ espa\c{c}os vetoriais sobre um corpo $\cp{K}$. Uma fun\c{c}\~ao $T \colon V \to W$ \'e uma \textbf{transforma\c{c}\~ao linear}\index{Transformação linear} se
   \begin{enumerate}[label={\roman*})]
     \item $T(u_1 + u_2) = T(u_1) \oplus T(u_2)$ para todos $u_1$, $u_2 \in V$;
     \item $T(\lambda \cdot u) = \lambda \otimes T(u)$ para todo $\lambda \in \cp{K}$ e todo $u \in V$.
@@ -17,14 +17,14 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 
 \begin{observacoes}
     \begin{enumerate}[label={\roman*})]
-        \item Se $T \colon V \to V$ é uma transformação linear de $V$ em $V$, então $T$ é chamada de um \textbf{operador linear}.
+        \item Se $T \colon V \to V$ é uma transformação linear de $V$ em $V$, então $T$ é chamada de um \textbf{operador linear}.\index{Transformação linear!Operador linear}
 
         \item Para simplificar a notação, vamos adotar os mesmos símbolos para indicar a soma e o produto por escalar nos espaços vetoriais que aparecerão no decorrer do conteúdo. No entanto, deve-se estar ciente que estes símbolos podem ter significados diferentes, dependendo do espaço vetorial em questão.
     \end{enumerate}
 \end{observacoes}
 
 \begin{lema}
-  Sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$ e $T : V \to W$ uma transforma\c{c}\~ao linear. Ent\~ao:
+  Sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$ e $T \colon V \to W$ uma transforma\c{c}\~ao linear. Ent\~ao:
   \begin{enumerate}[label={\roman*})]\label{transformacao_linear_propriedades_basicas}
     \item $T(0_V) = 0_W$, onde $0_V$ e $0_W$ denotam os vetores nulos de $V$ e $W$, respectivamente.
 
@@ -62,7 +62,7 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \end{prova}
 
 \begin{lema}
-    Sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$. Ent\~ao uma fun\c{c}\~ao $T : V \to W$ \'e uma transforma\c{c}\~ao linear se, e somente se,
+    Sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$. Ent\~ao uma fun\c{c}\~ao $T \colon V \to W$ \'e uma transforma\c{c}\~ao linear se, e somente se,
     \[
     T(\lambda u_1 + u_2) = \lambda T(u_1) + T(u_2),
     \]
@@ -74,13 +74,13 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 
 \begin{exemplo}
   \begin{enumerate}[label={\arabic*})]
-    \item Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais. A fun\c{c}\~ao $T : V \to W$ dada por $T(u) = 0_W$ para todo $u \in V$ \'e uma transforma\c{c}\~ao linear.
+    \item Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais. A fun\c{c}\~ao $T \colon V \to W$ dada por $T(u) = 0_W$ para todo $u \in V$ \'e uma transforma\c{c}\~ao linear.
 
-    \item Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. A fun\c{c}\~ao $T : V \to V$ dada por $T(u) = u$ para todo $u \in V$ \'e uma transforma\c{c}\~ao linear.
+    \item Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. A fun\c{c}\~ao $T \colon V \to V$ dada por $T(u) = u$ para todo $u \in V$ \'e uma transforma\c{c}\~ao linear.
 
-    \item Considere $\real$ como um $\real$-espa\c{c}o vetorial. Dado $a \in \real$, defina $T_a : \real \to \real$ por $T_a(x) = ax$ para todo $x \in \real$. Ent\~ao $T_a$ \'e uma transforma\c{c}\~ao linear. Agora, seja $T : \real \to \real$ dada por $T(x) = e^x$. Ent\~ao $T$ n\~ao \'e uma transforma\c{c}\~ao linear pois $T(0) \ne 0$.
+    \item Considere $\real$ como um $\real$-espa\c{c}o vetorial. Dado $a \in \real$, defina $T_a \colon \real \to \real$ por $T_a(x) = ax$ para todo $x \in \real$. Ent\~ao $T_a$ \'e uma transforma\c{c}\~ao linear. Agora, seja $T \colon \real \to \real$ dada por $T(x) = e^x$. Ent\~ao $T$ n\~ao \'e uma transforma\c{c}\~ao linear pois $T(0) \ne 0$.
 
-    \item Sejam $\cp{K}^3$ e $\cp{M}_2(\cp{K})$ $\cp{K}$-espa\c{c}os vetoriais. Defina $T : \cp{K}^3 \to \cp{M}_2(\cp{K})$ por
+    \item Sejam $\cp{K}^3$ e $\cp{M}_2(\cp{K})$ $\cp{K}$-espa\c{c}os vetoriais. Defina $T \colon \cp{K}^3 \to \cp{M}_2(\cp{K})$ por
     \[
       T(a, b, c) = \begin{bmatrix}
         a+b & 0_\cp{K}\\
@@ -101,19 +101,19 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
       \end{bmatrix} \\ &= \lambda T(a,b,c) + T(d,e,f).
     \end{align*}
 
-    \item Seja $\mathcal{P}(\complex)$ um $\complex$-espa\c{c}o vetorial e considere $D : \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dado por
+    \item Seja $\mathcal{P}(\complex)$ um $\complex$-espa\c{c}o vetorial e considere $D \colon \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dado por
     \[
       D(a_0 + a_1x + a_2x^2 + \cdots + a_nx^n) = a_1 + 2a_2x + \cdots + na_nx^{n-1}.
     \]
     Ent\~ao $D$ \'e uma transforma\c{c}\~ao linear.
 
-    \item Seja $\mathcal{C}([a,b], \real) = \{ f : [a,b] \to \real \mid f \mbox{ \'e uma fun\c{c}\~ao cont{\'\i}nua}\}$. \'E imediato verificar que $\mathcal{C}([a,b], \real)$ \'e um $\real$-espa\c{c}o vetorial. Defina $T : \mathcal{C}([a,b], \real) \to \real$ por
+    \item Seja $\mathcal{C}([a,b], \real) = \{ f : [a,b] \to \real \mid f \mbox{ \'e uma fun\c{c}\~ao cont{\'\i}nua}\}$. \'E imediato verificar que $\mathcal{C}([a,b], \real)$ \'e um $\real$-espa\c{c}o vetorial. Defina $T \colon \mathcal{C}([a,b], \real) \to \real$ por
     \[
       T(f(x)) = \int_a^bf(x)dx.
     \]
     Ent\~ao $T$ \'e uma transforma\c{c}\~ao linear.
 
-    \item Sejam $a_1$, \dots, $a_n \in \cp{K}$. Defina $T : \cp{K}^n \to \cp{K}$ por
+    \item Sejam $a_1$, \dots, $a_n \in \cp{K}$. Defina $T \colon \cp{K}^n \to \cp{K}$ por
     \[
       T(x_1, \dots, x_n) = \sum_{i=1}^na_ix_i.
     \]
@@ -121,11 +121,11 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
     \[
       T(e_i) = a_i
     \]
-    para $i = 1$, \dots, $n$. Agora, se $S : \cp{K}^n \to \cp{K}$ \'e uma transforma\c{c}\~ao linear, ent\~ao pelo Lema \ref{transformacao_linear_propriedades_basicas} item (c)
+    para $i = 1$, \dots, $n$. Agora, se $S \colon \cp{K}^n \to \cp{K}$ \'e uma transforma\c{c}\~ao linear, ent\~ao pelo Lema \ref{transformacao_linear_propriedades_basicas} item (c)
     \[
       S(x_1, \dots, x_n) = S(\sum_{i=1}^nx_ie_i) = \sum_{i=1}^nS(e_i)
     \]
-    onde $S(e_i) \in \cp{K}$ para $i = 1$, \dots, $n$. Logo qualquer transforma\c{c}\~ao linear de $T : \cp{K}^n \to \cp{K}$ \'e da forma
+    onde $S(e_i) \in \cp{K}$ para $i = 1$, \dots, $n$. Logo qualquer transforma\c{c}\~ao linear de $T \colon \cp{K}^n \to \cp{K}$ \'e da forma
     \[
       T(x_1, \dots, x_n) = \sum_{i=1}^na_ix_i,
     \]
@@ -134,14 +134,14 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \end{exemplo}
 
 \begin{teorema}\label{existencia_de_transformacao_unica_dado_valores}
-  Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais. Se $\{u_1, \dots, u_n\}$ \'e uma base de $V$ e se $\{w_1, \dots, w_n\} \subseteq W$, ent\~ao existe uma \'unica transforma\c{c}\~ao linear $T : V \to W$ tal que $T(u_i) = w_i$ para cada $i = 1$, \dots, $n$.
+  Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais. Se $\{u_1, \dots, u_n\}$ \'e uma base de $V$ e se $\{w_1, \dots, w_n\} \subseteq W$, ent\~ao existe uma \'unica transforma\c{c}\~ao linear $T \colon V \to W$ tal que $T(u_i) = w_i$ para cada $i = 1$, \dots, $n$.
 \end{teorema}
 \begin{prova}
   Dado $v \in V$, como $\{u_1, \dots, u_n\}$ \'e uma base de $V$, ent\~ao sabemos que existem \'unicos $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ tais que
   \[
     v = \alpha_1u_1 + \cdots + \alpha_nu_n.
   \]
-  Defina ent\~ao $T : V \to W$ por
+  Defina ent\~ao $T \colon V \to W$ por
   \[
     T(v) = T(\alpha_1u_1 + \cdots + \alpha_nu_n) = \alpha_1w_1 + \cdots + \alpha_nw_n.
   \]
