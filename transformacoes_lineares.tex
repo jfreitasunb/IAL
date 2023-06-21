@@ -24,17 +24,6 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \end{observacoes}
 
 \begin{lema}
-  Sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$. Ent\~ao uma fun\c{c}\~ao $T : V \to W$ \'e uma transforma\c{c}\~ao linear se, e somente se,
-  \[
-    T(\lambda u_1 + u_2) = \lambda T(u_1) + T(u_2),
-  \]
-  para todos $u_1$, $u_2 \in V$ e todo $\lambda \in \cp{K}$.
-\end{lema}
-\begin{prova}
-  Deixada a cargo do leitor.
-\end{prova}
-
-\begin{lema}
   Sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$ e $T : V \to W$ uma transforma\c{c}\~ao linear. Ent\~ao:
   \begin{enumerate}[label={\roman*})]\label{transformacao_linear_propriedades_basicas}
     \item $T(0_V) = 0_W$, onde $0_V$ e $0_W$ denotam os vetores nulos de $V$ e $W$, respectivamente.
@@ -70,6 +59,17 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
       T(\sum_{i=1}^{p+1}\alpha_iu_i) &= T([\sum_{i=1}^p\alpha_iu_i] + \alpha_{p + 1}u_{p + 1}) = T(\sum_{i=1}^p\alpha_iu_i) + T(\alpha_{p+1}u_{p+1}) \\ &= \sum_{i=1}^p\alpha_iT(u_i) + \alpha_{p+1}T(u_{p+1}) = \sum_{i=1}^{p+1}\alpha_iT(u_i).
     \end{align*}
   \end{enumerate}
+\end{prova}
+
+\begin{lema}
+    Sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$. Ent\~ao uma fun\c{c}\~ao $T : V \to W$ \'e uma transforma\c{c}\~ao linear se, e somente se,
+    \[
+    T(\lambda u_1 + u_2) = \lambda T(u_1) + T(u_2),
+    \]
+    para todos $u_1$, $u_2 \in V$ e todo $\lambda \in \cp{K}$.
+\end{lema}
+\begin{prova}
+    Deixada a cargo do leitor.
 \end{prova}
 
 \begin{exemplo}
