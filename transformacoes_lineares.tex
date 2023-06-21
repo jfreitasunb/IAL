@@ -109,6 +109,29 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
         Logo $T_k$ é uma transformação linear.
     \end{solucao}
 
+    \item Seja $T \colon M_2(\real) \to M_{2 \times 3}(\real)$ dada por
+    \[
+        T\left(\begin{bmatrix}a & b\\c & d\end{bmatrix}\right) = \begin{bmatrix}ad & 1 & 0\\0 & 0 & 0\end{bmatrix}.
+    \]
+    Então $T$ não é transformação linear.
+    \begin{solucao}
+        Nesse caso como
+        \[
+            T\left(\begin{bmatrix}0 & 0\\0 & 0\end{bmatrix}\right) = \begin{bmatrix}0 & 1 & 0\\0 & 0 & 0\end{bmatrix} \ne \begin{bmatrix}0 & 0 & 0\\0 & 0 & 0\end{bmatrix}
+        \]
+        então $T$ não é uma transformação linear.
+    \end{solucao}
+
+    \item Seja $T \colon \real^3 \to \real^2$ dada por $T(x, y, z) = (x^2, 3y, 0)$. Então $T$ não é uma transformação linear.
+    \begin{solucao}
+        Nesse caso tome $u_1 = (1, 0, 1)$ e $u_2 = (1, 1, 0) \in \real^3$. Temos
+        \begin{align*}
+            T(u_1 + u_2) = T((1, 0, 1) + (1, 1, 0)) = T(2, 1, 1) = (4, 3, 0)\\
+            T(u_1) + T(u_2) = (1, 3, 0) + (1, 3, 0) = (2, 6, 0).
+        \end{align*}
+        Logo $T(u_1 + u_2) \ne T(u_1) + T(u_2)$.
+    \end{solucao}
+
     \item Sejam $\cp{K}^3$ e $\cp{M}_2(\cp{K})$ $\cp{K}$-espa\c{c}os vetoriais. Defina $T \colon \cp{K}^3 \to \cp{M}_2(\cp{K})$ por
     \[
       T(a, b, c) = \begin{bmatrix}
