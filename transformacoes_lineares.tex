@@ -30,7 +30,7 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 
     \item $T(-u) = -T(u)$, para cada $u \in V$.
 
-    \item $T(\sum_{i=1}^m\alpha_iu_i) = \sum_{i=1}^m \alpha_i T(u_i)$, onde $\alpha_i \in \cp{K}$ e $u_i \in V$ para $i = 1$, \dots, $m$.
+    \item $T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \cdots \alpha_mu_m) = \alpha_1 T(u_1) + \alpha_2 T(u_2) + \cdots + \alpha_mT(u_m)$, onde $\alpha_i \in \cp{K}$ e $u_i \in V$ para $i = 1$, \dots, $m$.
   \end{enumerate}
 \end{lema}
 \begin{prova}
@@ -52,11 +52,11 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
     \]
     Suponha que para $m = p$ tenhamos
     \[
-      T(\sum_{i=1}^p\alpha_iu_i) = \sum_{i=1}^p\alpha_iT(u_i).
+      T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_pu_p) = \alpha_1T(u_1) + \alpha_2T(u_2) + \cdots + \alpha_pT(u_p).
     \]
     Vamos mostra que \'e v\'alido para $m = p + 1$. De fato,
     \begin{align*}
-      T(\sum_{i=1}^{p+1}\alpha_iu_i) &= T([\sum_{i=1}^p\alpha_iu_i] + \alpha_{p + 1}u_{p + 1}) = T(\sum_{i=1}^p\alpha_iu_i) + T(\alpha_{p+1}u_{p+1}) \\ &= \sum_{i=1}^p\alpha_iT(u_i) + \alpha_{p+1}T(u_{p+1}) = \sum_{i=1}^{p+1}\alpha_iT(u_i).
+      T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_{p + 1}u_{p + 1}) &= T([\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_pu_p] + \alpha_{p + 1}u_{p + 1}) \\ &= T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_{p + 1}u_{p + 1}) + T(\alpha_{p+1}u_{p+1}) \\ &= \alpha_1T(u_1) + \alpha_2T(u_2) + \cdots + \alpha_pT(u_p) + \alpha_{p+1}T(u_{p+1}).
     \end{align*}
   \end{enumerate}
 \end{prova}
