@@ -82,6 +82,33 @@ Em todo esse cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 
     \item Seja $T \colon \real \to \real$ dada por $T(x) = e^x$. Ent\~ao $T$ n\~ao \'e uma transforma\c{c}\~ao linear pois $T(0) \ne 0$.
 
+    \item Considere a função $T \colon \real^2 \to \real^2$ definida por $T(x, y) = (2x, 2y)$. Então $T$ é uma transformação linear.
+    \begin{solucao}
+        Sejam $u_1 = (a, b)$, $u_2 = (c, d) \in \real^2$ e $\lambda \in \real$. Temos:
+        \begin{itemize}
+            \item $T(u_1 + u_2) = T((a, b) + (c, d)) = T(a + c, b + d) = (2(a + c), 2(b + d)) = (2a + 2c, 2b + 2d) = (2a, 2b) + (2c, 2d) = T(a, b) + T(c, d) = T(u_1) + T(u_2)$
+
+            \vspace*{.3cm}
+            \item $T(\lambda u_1) = T(\lambda (a, b)) = T(\lambda a, \lambda b) = (2\lambda a, 2\lambda b) = \lambda(2a, 2b) = \lambda T(a, b) = \lambda T(u_1)$
+        \end{itemize}
+
+        Logo $T$ é uma transformação linear.
+    \end{solucao}
+
+    \item No caso geral, seja $k \in \real$ um número fixo. Considere a função $T_k \colon \real^2 \to \real^2$ definida por $T_k(x, y) = (kx, ky)$. Então $T$ é uma transformação linear.
+    \begin{solucao}
+        Sejam $u_1 = (a, b)$, $u_2 = (c, d) \in \real^2$ e $\lambda \in \real$. Temos:
+        \begin{itemize}
+            \item $T_k(u_1 + u_2) = T_k((a, b) + (c, d)) = T_k(a + c, b + d) = (k(a + c), k(b + d)) = (ka + kc, kb + kd) = (ka, kb) + (kc, kd) = T_k(a, b) + T_k(c, d) = T_k(u_1) + T_k(u_2)$
+
+            \vspace*{.3cm}
+
+            \item $T_k(\lambda u_1) = T_k(\lambda (a, b)) = T_k(\lambda a, \lambda b) = (k\lambda a, k\lambda b) = \lambda(ka, kb) = \lambda T_k(a, b) = \lambda T_k(u_1)$
+        \end{itemize}
+
+        Logo $T_k$ é uma transformação linear.
+    \end{solucao}
+
     \item Sejam $\cp{K}^3$ e $\cp{M}_2(\cp{K})$ $\cp{K}$-espa\c{c}os vetoriais. Defina $T \colon \cp{K}^3 \to \cp{M}_2(\cp{K})$ por
     \[
       T(a, b, c) = \begin{bmatrix}
