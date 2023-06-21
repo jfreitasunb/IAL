@@ -212,29 +212,6 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
 \begin{teorema}\label{existencia_de_transformacao_unica_dado_valores}
   Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais. Se $\{u_1, \dots, u_n\}$ \'e uma base de $V$ e se $\{w_1, \dots, w_n\} \subseteq W$, ent\~ao existe uma \'unica transforma\c{c}\~ao linear $T \colon V \to W$ tal que $T(u_i) = w_i$ para cada $i = 1$, \dots, $n$.
 \end{teorema}
-\begin{prova}
-  Dado $v \in V$, como $\{u_1, \dots, u_n\}$ \'e uma base de $V$, ent\~ao sabemos que existem \'unicos $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ tais que
-  \[
-    v = \alpha_1u_1 + \cdots + \alpha_nu_n.
-  \]
-  Defina ent\~ao $T \colon V \to W$ por
-  \[
-    T(v) = T(\alpha_1u_1 + \cdots + \alpha_nu_n) = \alpha_1w_1 + \cdots + \alpha_nw_n.
-  \]
-  A unicidade dos escalares $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ garante que $T$ est\'a bem definida, isto \'e, um mesmo elemento de $V$ n\~ao pode ter duas imagens distintas.
-
-  Agora, note que $T(u_i) = w_i$ para cada $i = 1$, \dots, $n$. Assim precisamos mostrar que $T$ \'e linear. Sejam $v_1 = \sum_{i=1}^n\alpha_iu_i$, $v_2 = \sum_{i=1}^n\beta_iu_i$ e $\lambda \in \cp{K}$. Ent\~ao
-  \begin{align*}
-    T(\lambda v_1 + v_2) &= T(\lambda\sum_{i=1}^n\alpha_iu_i + \sum_{i=1}^n\beta_iu_i) = T(\sum_{i=1}^n(\lambda\alpha_i + \beta_i)u_i) \\ &= \sum_{i=1}^n(\lambda_i\alpha_i + \beta_i)w_i = \lambda\sum_{i=1}^n\alpha_iw_i + \sum_{i=1}^n\beta_iw_i \\ &= \lambda T(v_1) + T(v_2).
-  \end{align*}
-  Logo $T$ \'e uma transforma\c{c}\~ao linear.
-
-  Resta mostrar que $T$ \'e \'unica. Suponha que exista uma transforma\c{c}\~ao linear $S : V \to W$ tal que $S(u_i) = w_i$ para todo $i = 1$, \dots, $n$. Para $v = \sum_{i=1}^n\alpha_iu_i$ temos
-  \[
-    S(v) = S(\sum_{i=1}^n\alpha_iu_i) = \sum_{i=1}^n\alpha_iS(u_i) = \sum_{i=1}^n\alpha_iw_i = \sum_{i=1}^n\alpha_iT(u_i) = T(\sum_{i=1}^n\alpha_iu_i) = T(v)
-  \]
-  para todo $v \in V$. Logo $T=S$, isto \'e, existe uma \'unica transforma\c{c}\~ao linear que satisfaz as condi\c{c}\~oes do teorema.
-\end{prova}
 
 \begin{exemplo}
   Os vetores $v_1 = (1,2)$ e $v_2 = (3,4)$ s\~ao L.I em $\real^2$ e assim formam uma base de $\real^2$. Assim pelo Teorema \ref{existencia_de_transformacao_unica_dado_valores}, sabemos que existe uma \'unica transforma\c{c}\~ao linear $T : \real^2 \to \real^3$ tal que
