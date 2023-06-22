@@ -94,6 +94,14 @@
 \end{exercicio}
 
 \begin{exercicio}
+  Sejam $v_1$, $v_2$ e $v_3$ vetores num espaço vetorial $V$ e seja $T \colon V \to \real^3$ uma transformação linear tal que
+  \[
+    T(v_1) = (1, -1, 2), \ T(v_2) = (0, 3, 2), \ T(v_3) = (-3, 1, 2).
+  \]
+  Encontre $T(2v_1 - 3v_2 + 4v_4)$.
+\end{exercicio}
+
+\begin{exercicio}
   Considere a base $\mathcal{B} = \{v_1, v_2\}$ de $\real^2$, em que $v_1 = (1, 1)$ e $v_2 = (1, 0)$. Considere o operador linear $T \colon \real^2 \to \real^2$ tal que
   \[
     T(v_1) = (1, -2)\quad \mbox{e} \quad T(v_2) = (4, -1).
@@ -112,7 +120,7 @@
 \begin{exercicio}
   Considere a base $\mathcal{B} = \{v_1, v_2, v_3\}$ de $\real^3$, em que $v_1 = (1, 1, 1)$, $v_2 = (1, 1, 0)$ e $v_3 = (1, 0, 0)$. Considere o operador linear $T \colon \real^2 \to \real^3$ tal que
   \[
-    T(v_1) = (2, -1, 4), T(v_2) = (3, 0, 1), T(v_3) = (-1, 5, 1).
+    T(v_1) = (2, -1, 4),\ T(v_2) = (3, 0, 1),\ T(v_3) = (-1, 5, 1).
   \]
   Encontre a expressão para $T(x, y, z)$ e use essa expressão para obter $T(2, 4, -1)$.
 \end{exercicio}
@@ -120,43 +128,9 @@
 \begin{exercicio}
   Considere a base $\mathcal{B} = \{v_1, v_2, v_3\}$ de $\real^3$, em que $v_1 = (1, 2, 1)$, $v_2 = (2, 9, 0)$ e $v_3 = (3, 3, 4)$. Considere a transformação linear $T \colon \real^3 \to \real^2$ tal que
   \[
-    T(v_1) = (1, 0), T(v_2) = (-1, 1), T(v_3) = (0, 1).
+    T(v_1) = (1, 0),\ T(v_2) = (-1, 1),\ T(v_3) = (0, 1).
   \]
   Encontre a expressão para $T(x, y, z)$ e use essa expressão para obter $T(7, 13, 7)$.
-\end{exercicio}
-
-\begin{exercicio}
-  Determine uma transforma\c{c}\~ao linear $T : \real^3 \to \real^3$ tal que:
-  \begin{enumerate}[label={\alph*})]
-    \item $\dim_\real \ker T = 0$;
-
-    \item $\dim_\real \ker T = 1$;
-
-    \item $\dim_\real \ker T = 2$;
-
-    \item $\dim_\real \ker T = 3$.
-  \end{enumerate}
-\end{exercicio}
-
-\begin{exercicio}
-  Considere $\real^4$ e seus subespa\c{c}os $V = [(1,0,1,1);(0,-1,-1,-1)]$ e $W = \{(x,y,z,t) \in \real^4 \mid x + y = 0,\ t + z = 0\}$. Determine uma transforma\c{c}\~ao linear $T : \real^4 \to \real^4$ tal que $\ker T = V$ e $\im T = W$.
-\end{exercicio}
-
-\begin{exercicio}
-  Determine o n\'ucleo e a imagem das seguintes transforma\c{c}\~oes lineares:
-  \begin{enumerate}[label={\alph*})]
-    \item $T : \real^2 \to \real^2$ dada por $T(x,y) = (x - y, x + y)$.
-
-    \item $T : \complex^2 \to \real^2$ dada por $T(x + yi,z + ti) = (x + 2z, -x + 2t)$.
-  \end{enumerate}
-\end{exercicio}
-
-\begin{exercicio}
-  Ache uma transforma\c{c}\~ao linear $T : \real^4 \to \real^4$ tal que
-  \begin{align*}
-    \ker T &= [(1,0,0,1);(-1,0,0,1)]\\
-    \im T &= [(1,-1,0,2);(0,1,-1,0)].
-  \end{align*}
 \end{exercicio}
 
 Nos exerc{\'\i}cios \eqref{nucleo_imagem_inicio} \`a \eqref{nucleo_imagem_fim}, encontre uma base e a dimens\~ao de:
@@ -259,6 +233,39 @@ Nos exerc{\'\i}cios \eqref{nucleo_imagem_inicio} \`a \eqref{nucleo_imagem_fim}, 
   \end{solucao}
 \end{exercicio}
 
+\begin{exercicio}
+  Determine uma transforma\c{c}\~ao linear $T : \real^3 \to \real^3$ tal que:
+  \begin{enumerate}[label={\alph*})]
+    \item $\dim_\real \ker T = 0$;
+
+    \item $\dim_\real \ker T = 1$;
+
+    \item $\dim_\real \ker T = 2$;
+
+    \item $\dim_\real \ker T = 3$.
+  \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Considere $\real^4$ e seus subespa\c{c}os $V = [(1,0,1,1);(0,-1,-1,-1)]$ e $W = \{(x,y,z,t) \in \real^4 \mid x + y = 0,\ t + z = 0\}$. Determine uma transforma\c{c}\~ao linear $T : \real^4 \to \real^4$ tal que $\ker T = V$ e $\im T = W$.
+\end{exercicio}
+
+\begin{exercicio}
+  Determine o n\'ucleo e a imagem das seguintes transforma\c{c}\~oes lineares:
+  \begin{enumerate}[label={\alph*})]
+    \item $T : \real^2 \to \real^2$ dada por $T(x,y) = (x - y, x + y)$.
+
+    \item $T : \complex^2 \to \real^2$ dada por $T(x + yi,z + ti) = (x + 2z, -x + 2t)$.
+  \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+  Ache uma transforma\c{c}\~ao linear $T : \real^4 \to \real^4$ tal que
+  \begin{align*}
+    \ker T &= [(1,0,0,1);(-1,0,0,1)]\\
+    \im T &= [(1,-1,0,2);(0,1,-1,0)].
+  \end{align*}
+\end{exercicio}
 
 \begin{exercicio}
   Encontre uma transforma\c{c}\~ao linear $F : \real^3 \to \real^4$, cuja imagem \'e gerada por $w_1 = (1,2,0,-4)$ e $w_2 = (2,0,-1,-3)$.
