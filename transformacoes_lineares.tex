@@ -279,7 +279,7 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
               T(x, y) &= \left(\dfrac{3y - 4x}{2}\right)(3, 2, 1) + \left(\dfrac{2x - y}{3}\right)(6, 5, 4)\\
               T(x, y) &= \left(\dfrac{3y}{2}, \dfrac{y + 2x}{2}, \dfrac{4x - y}{2}\right)
             \end{align*}
-            Daí 
+            Daí
             \[
               T(1,0) =(0,1,2).
             \]
@@ -424,8 +424,6 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
     \item Dizemos que $T$ \'e \textbf{injetora} se dados $u_1$, $u_2 \in V$ tais que $T(u_1) = T(u_2)$, ent\~ao $u_1 = u_2$. De modo equivalente, se $u_1$, $u_2 \in V$ s\~ao tais que $u_1 \ne u_2$, ent\~ao $T(u_1) \ne T(u_2)$.
 
     \item Dizemos que $T$ \'e \textbf{sobrejetora} se $\im T = W$. Em outras palavras, $T$ \'e \textbf{sobrejetora} se para todo $w \in W$, existe $u \in V$ tal que $T(u) = w$.
-
-    \item Se $T$ \'e injetora e sobrejetora, ent\~ao dizemos que $T$ \'e um \textbf{isomorfismo}.
   \end{enumerate}
 \end{definicao}
 
@@ -433,24 +431,48 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
   \begin{enumerate}[label={\arabic*})]
     \item A transforma\c{c}\~ao linear $T \colon \real^2 \to \real$ dada por $T(x,y) = x + y$ \'e sobrejetora, mas n\~ao \'e injetora.
 
-    \item A transforma\c{c}\~ao linear $T \colon V \to V$ dada por $T(u) = u$ \'e injetora e sobrejetora, ou seja, \'e um isomorfismo.
+    \item A transforma\c{c}\~ao linear $T \colon V \to V$ dada por $T(u) = u$ \'e injetora e sobrejetora.
   \end{enumerate}
 \end{exemplos}
 
 \begin{proposicao}\label{caracteriza_transformacao_injetora}
-  Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais e $T \colon V \to W$ uma transforma\c{c}\~ao linear. Ent\~ao $T$ \'e injetora se, e somente se, $\ker T = \{0_V\}$.
-\end{proposicao}
-\begin{prova}
-  Suponha que $T$ \'e injetora. Queremos mostrar que $\ker T = \{0_V\}$. Seja ent\~ao $u \in \ker T$. Ent\~ao $T(u) = 0_W$. Mas $T(0_V) = 0_W$ e como $T$ \'e injetora devemos ter $u = 0_V$. Logo $\ker T = \{0_V\}$.
+  Sejam $V$ e $W$ espa\c{c}os vetoriais sobre um corpo $\cp{K}$ e $T \colon V \to W$ uma transforma\c{c}\~ao linear.
+    \begin{enumerate}[label={\roman*})]
+      \item $T$ \'e injetora se, e somente se, $\ker T = \{0_V\}$.
 
-  Agora suponha que $\ker T = \{0_V\}$. Queremos mostrar que $T$ \'e injetora. Para isso, sejam $u_1$, $u_2 \in V$ tais que $T(u_1) = T(u_2)$. Ent\~ao
-  \begin{align*}
-    T(u_1) &= T(u_2)\\
-    T(u_1) - T(u_2) & = 0_W\\
-    T(u_1 - u_2) &= 0_W,
-  \end{align*}
-  isto \'e, $u_1 - u_2 \in \ker T$. Mas $\ker T = \{0_V\}$, logo $u_1 = u_2$. Portanto $T$ \'e injetora.
-\end{prova}
+      \item Se $\dim V = \dim W$ e $T$ é injetora, então $T$ transforma bases em bases, isto é, se $\mathcal{B} = \{v_1, v_2, \dots, v_n\}$ é uma base de $V$, então $\{T(v_1), T(v_2), \dots, T(v_n)\}$ é uma base de $W$.
+
+      \item Se $\dim V = \dim W$, então $T$ é injetora se, e somente se, $T$ é sobrejetora.
+    \end{enumerate}
+\end{proposicao}
+
+\begin{observacoes}
+  Seja $T \colon V \to W$ uma transformação linear, onde $\dim V < \infty$ e $\dim W < \infty$.
+  \begin{enumerate}[label={\roman*})]
+    \item Se $\dim V > \dim W$, então $T$ não pode ser injetora.
+
+    \item Se $\dim V < \dim W$, então $T$ não pode ser sobrejetora.
+  \end{enumerate}
+\end{observacoes}
+
+\begin{definicao}
+  Se $T \colon V \to W$ é uma transformação linear \textbf{injetora e sobrejetora}, então dizemos que $T$ é uma transformação linear \textbf{bijetora}, ou que $T$ é um \textbf{isomorfismo} do espaço $V$ no espaço $W$. Neste caso, dizemos que o espaço $V$ é isomorfo ao espaço $W$ e denotamos isso, escrevendo $V \cong W$.
+\end{definicao}
+
+\begin{teorema}
+  Seja $V$ um espaço vetorial sobre $\cp{K}$  com $\dim V = n$, então $V \cong \cp{K}^n$.
+\end{teorema}
+
+\begin{observacoes}
+  Seja $V$ um espaço vetorial sobre $\cp{K}$ com $\dim V = n$. Então do teorema anterior temos:
+  \begin{enumerate}[label={\roman*})]
+    \item Se $\cp{K} = \rac$, então $V \cong \rac^n$.
+
+    \item Se $\cp{K} = \real$, então $V \cong \real^n$.
+
+    \item Se $\cp{K} = \complex$, então $V \cong \complex^n$.
+  \end{enumerate}
+\end{observacoes}
 
 \begin{exemplo}
   Seja $T \colon \cp{K}^4 \to \cp{M}_2(\cp{K})$ dada por
