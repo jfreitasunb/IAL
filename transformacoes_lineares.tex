@@ -708,7 +708,7 @@ e dizemos que $\alpha_1$, \dots, $\alpha_n$ s\~ao as \textbf{coordenadas de $u$ 
   \end{enumerate}
 \end{exemplos}
 
-Agora, sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$ tais que $\dim_\cp{K}V = p \ge 1$ e $\dim_\cp{K} W = q \ge 1$. Vamos fixar bases ordenadas $\mathcal{B}_1 = \{u_1,\dots,u_p\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_q\}$ de $V$ e $W$, respectivamente. Seja $T : V \to W$ uma transforma\c{c}\~ao linear. Sabemos pelo Teorema \ref{existencia_de_transformacao_unica_dado_valores} que $T$ fica completamente determinada se conhecermos seus valores na base de $V$. Assim
+Agora, sejam $V$ e $W$ espa\c{c}os vetoriais sobre $\cp{K}$ tais que $\dim_\cp{K}V = p \ge 1$ e $\dim_\cp{K} W = q \ge 1$. Vamos fixar bases ordenadas $\mathcal{B}_1 = \{u_1,\dots,u_p\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_q\}$ de $V$ e $W$, respectivamente. Seja $T \colon V \to W$ uma transforma\c{c}\~ao linear. Sabemos pelo Teorema \ref{existencia_de_transformacao_unica_dado_valores} que $T$ fica completamente determinada se conhecermos seus valores na base de $V$. Assim
 \begin{align*}
   T(u_1) &= a_{11}w_1 + a_{21}w_2 + \cdots + a_{q1}w_q\\
   T(u_2) &= a_{12}w_1 + a_{22}w_2 + \cdots + a_{q2}w_q\\
@@ -773,7 +773,7 @@ Agora seja $B \in \cp{M}_{q\times p}(\cp{K})$ onde
   \end{bmatrix}.
 \]
 
-Seja $V_1$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao $p \ge 1$ e $W_1$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao $q \ge 1$. Tome $\mathcal{B}_1 = \{v_1,\dots,v_p\}$ e $\mathcal{B}_2 = \{l_1,\dots,l_q\}$ bases ordenadas de $V_1$ e $W_1$, respectivamente. Defina $G : V_1 \to W_1$ por
+Seja $V_1$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao $p \ge 1$ e $W_1$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao $q \ge 1$. Tome $\mathcal{B}_1 = \{v_1,\dots,v_p\}$ e $\mathcal{B}_2 = \{l_1,\dots,l_q\}$ bases ordenadas de $V_1$ e $W_1$, respectivamente. Defina $G \colon V_1 \to W_1$ por
 \begin{align*}
   G(v_1) &= b_{11}l_1 + b_{21}l_2 + \cdots + b_{q1}l_q\\
   &\vdots\\
@@ -787,11 +787,11 @@ para todo $x \in V$.
 
 Assim provamos o seguinte teorema:
 \begin{teorema}\label{teorema_toda_transformacao_matriz}
-  Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais de dimens\~oes $p \ge 1$ e $q \ge 1$, respectivamente. Sejam $\mathcal{B}_V$ e $\mathcal{B}_W$ bases ordenadas de $V$ e $W$, respectivamente. Ent\~ao para cada transforma\c{c}\~ao linear $T : V \to W$, existe uma matriz $A \in \cp{M}_{q\times p}(\cp{K})$ tal que
+  Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais de dimens\~oes $p \ge 1$ e $q \ge 1$, respectivamente. Sejam $\mathcal{B}_V$ e $\mathcal{B}_W$ bases ordenadas de $V$ e $W$, respectivamente. Ent\~ao para cada transforma\c{c}\~ao linear $T \colon V \to W$, existe uma matriz $A \in \cp{M}_{q\times p}(\cp{K})$ tal que
   \[
     [T(x)]_{\mathcal{B}_W} = A[x]_{\mathcal{B}_V}
   \]
-  para todo vetor $x \in V$. Al\'em disso, a cada matriz $A \in \cp{M}_{q\times p}(\cp{K})$ corresponde uma transforma\c{c}\~ao linear $T : V \to W$ tal que
+  para todo vetor $x \in V$. Al\'em disso, a cada matriz $A \in \cp{M}_{q\times p}(\cp{K})$ corresponde uma transforma\c{c}\~ao linear $T \colon V \to W$ tal que
   \[
     [T(x)]_{\mathcal{B}_W} = A[x]_{\mathcal{B}_V}
   \]
@@ -808,7 +808,7 @@ Assim provamos o seguinte teorema:
 
 \begin{exemplos}
   \begin{enumerate}[label={\arabic*})]
-    \item Seja $T : \real^2 \to \real^2$ a transforma\c{c}\~ao linear definida por
+    \item Seja $T \colon \real^2 \to \real^2$ a transforma\c{c}\~ao linear definida por
     \[
       T(x,y) = (x,0).
     \]
@@ -848,7 +848,7 @@ Assim provamos o seguinte teorema:
       para todo $(x,y) \in \real^2$.
     \end{solucao}
 
-    \item Seja $T : \real^3 \to \real^2$ tal que
+    \item Seja $T \colon \real^3 \to \real^2$ tal que
     \[
       T(x,y,z) = (2x+y-z,3x-2y+4z).
     \]
@@ -885,7 +885,7 @@ Assim provamos o seguinte teorema:
 \end{exemplos}
 
 \begin{teorema}\label{matriz_da_composicao_de_transformacoes}
-  Sejam $F : U \to V$ e $G : V \to W$ duas transforma\c{c}\~oes lineares onde $U$, $V$ e $W$ s\~ao $\cp{K}$-espa\c{c}os vetoriais de dimens\~oes $n$, $m$ e $r$, respectivamente. Fixe bases ordenadas $\mathcal{B}_U$, $\mathcal{B}_V$ e $\mathcal{B}_W$ para $U$, $V$ e $W$, respectivamente. Ent\~ao $(G \circ F) : U \to W$ dada por $(G\circ F)(v) = G(F(v))$ \'e uma transforma\c{c}\~ao linear e
+  Sejam $F \colon U \to V$ e $G \colon V \to W$ duas transforma\c{c}\~oes lineares onde $U$, $V$ e $W$ s\~ao $\cp{K}$-espa\c{c}os vetoriais de dimens\~oes $n$, $m$ e $r$, respectivamente. Fixe bases ordenadas $\mathcal{B}_U$, $\mathcal{B}_V$ e $\mathcal{B}_W$ para $U$, $V$ e $W$, respectivamente. Ent\~ao $(G \circ F) \colon U \to W$ dada por $(G\circ F)(v) = G(F(v))$ \'e uma transforma\c{c}\~ao linear e
   \[
     [(G \circ F)]_{{\mathcal{B}_U},{\mathcal{B}_W}} = [G]_{{\mathcal{B}_V},{\mathcal{B}_W}}[F]_{{\mathcal{B}_U},{\mathcal{B}_V}}.
   \]
@@ -920,7 +920,7 @@ Assim provamos o seguinte teorema:
   como quer{\'\i}amos.
 \end{prova}
 
-Vamos tratar, principalmente, com a representa\c{c}\~ao por matrizes de transforma\c{c}\~oes lineares de um espa\c{c}o em si mesmo. Lembre-se que esta matriz muda de acordo com a escolha da base. Assim, deve-se prestar aten\c{c}\~ao sempre \`a base escolhida. Assim como um espa\c{c}o vetorial pode ter v\'arias bases distintas, o que acontecer\'a com a matriz representante de uma transforma\c{c}\~ao linear quando mudamos a base ordenada? Vamos considerar $T : V \to V$ uma transforma\c{c}\~ao linear sobre o $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita $V$ e sejam
+Vamos tratar, principalmente, com a representa\c{c}\~ao por matrizes de transforma\c{c}\~oes lineares de um espa\c{c}o em si mesmo. Lembre-se que esta matriz muda de acordo com a escolha da base. Assim, deve-se prestar aten\c{c}\~ao sempre \`a base escolhida. Assim como um espa\c{c}o vetorial pode ter v\'arias bases distintas, o que acontecer\'a com a matriz representante de uma transforma\c{c}\~ao linear quando mudamos a base ordenada? Vamos considerar $T \colon V \to V$ uma transforma\c{c}\~ao linear sobre o $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita $V$ e sejam
 \[
   \mathcal{B}_1 = \{v_1,\dots,v_n\}, \quad \mathcal{B}_2 = \{w_1,\dots,w_n\}
 \]
@@ -999,7 +999,7 @@ Al\'em disso, tamb\'em temos o seguinte teorema:
   A matriz $P \in \cp{M}_n(\cp{K})$ do Teorema \ref{teorema_matriz_mudanca_base} \'e chamada de \textbf{matriz de mudan\c{c}a de base} e \'e denotada por $P = [I]_{{\mathcal{B}_1},{\mathcal{B}_2}}$.
 \end{definicao}
 
-Agora, sejam $T : V \to V$ uma transforma\c{c}\~ao linear, $\mathcal{B}_1 = \{v_1,\dots,v_n\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ bases ordenadas de $V$. Sabemos que existe $P \in \cp{M}_n(\cp{K})$ invert{\'\i}vel tal que
+Agora, sejam $T \colon V \to V$ uma transforma\c{c}\~ao linear, $\mathcal{B}_1 = \{v_1,\dots,v_n\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ bases ordenadas de $V$. Sabemos que existe $P \in \cp{M}_n(\cp{K})$ invert{\'\i}vel tal que
 \begin{equation}\label{equacao_mudanca_base}
   [x]_{\mathcal{B}_1} = P[x]_{\mathcal{B}_2}
 \end{equation}
@@ -1023,7 +1023,7 @@ Da{\'\i}
 \]
 o que responde nossa pergunta.
 
-Por outro lado, sabemos que existe uma \'unica transforma\c{c}\~ao linear $G : V \to V$ tal que
+Por outro lado, sabemos que existe uma \'unica transforma\c{c}\~ao linear $G \colon V \to V$ tal que
 \[
   G(v_i) = w_i
 \]
@@ -1038,7 +1038,7 @@ e como $G(v_i) = w_i$ podemos escrever
 e ent\~ao por defini\c{c}\~ao $[G]_{\mathcal{B}_1} = P$. Desse modo, temos o seguinte teorema:
 
 \begin{teorema}
-  Sejam $V$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao finita, $\mathcal{B}_1 = \{v_1,\dots,v_n\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ bases ordenadas de $V$. Suponha que $T : V \to V$ \'e uma transforma\c{c}\~ao linear. Se $P = \begin{bmatrix}P_1 & P_2 & \dots & P_n
+  Sejam $V$ um espa\c{c}o vetorial sobre $\cp{K}$ de dimens\~ao finita, $\mathcal{B}_1 = \{v_1,\dots,v_n\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ bases ordenadas de $V$. Suponha que $T \colon V \to V$ \'e uma transforma\c{c}\~ao linear. Se $P = \begin{bmatrix}P_1 & P_2 & \dots & P_n
   \end{bmatrix} \in \cp{M}_n(\cp{K})$ \'e uma matriz com colunas
   \[
     P_j = [w_j]_{\mathcal{B}_1}
@@ -1062,7 +1062,7 @@ e ent\~ao por defini\c{c}\~ao $[G]_{\mathcal{B}_1} = P$. Desse modo, temos o seg
 
 \begin{exemplos}
   \begin{enumerate}[label={\arabic*})]
-    \item Seja $T : \real^2 \to \real^2$ dada por $T(x,y) = (x,0)$. Sabemos que com rela\c{c}\~ao \`a base $\mathcal{B}_1 = \{e_1=(1,0);e_2=(0,1)\}$ a matriz de $T$ \'e
+    \item Seja $T \colon \real^2 \to \real^2$ dada por $T(x,y) = (x,0)$. Sabemos que com rela\c{c}\~ao \`a base $\mathcal{B}_1 = \{e_1=(1,0);e_2=(0,1)\}$ a matriz de $T$ \'e
     \[
       [T_{\mathcal{B}_1} = \begin{bmatrix}
         1 & 0\\
@@ -1101,7 +1101,7 @@ e ent\~ao por defini\c{c}\~ao $[G]_{\mathcal{B}_1} = P$. Desse modo, temos o seg
       \end{bmatrix}.
     \end{align*}
 
-    \item Seja $\mathcal{D} : \mathcal{P}_3(\real) \to \mathcal{P}_3(\real)$ a transforma\c{c}\~ao derivada. Considere a base $\mathcal{B}_1 = \{f_1 = 1; f_2 = x; f_3 = x^2; f_4 = x^3\}$. Tome $t \in \real$ e defina
+    \item Seja $\mathcal{D} \colon \mathcal{P}_3(\real) \to \mathcal{P}_3(\real)$ a transforma\c{c}\~ao derivada. Considere a base $\mathcal{B}_1 = \{f_1 = 1; f_2 = x; f_3 = x^2; f_4 = x^3\}$. Tome $t \in \real$ e defina
     \[
       \mathcal{B}_2 = \{g_1 = 1; g_2 = (x + t); g_3 = (x + t)^2; g_4 = (x + t)^3\}.
     \]
