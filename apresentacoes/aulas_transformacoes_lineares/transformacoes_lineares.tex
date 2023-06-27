@@ -266,4 +266,48 @@
     \end{proposicao}
 \end{frame}
 
+
+\begin{frame}
+    \begin{definicao}
+        Dado $T \colon V \to V$ um operador linear, dizemos que $T$ é \textbf{invertível} se existe outra aplicação $T^{-1} \colon V \to V$ tal que para qualquer $u \in V$, $T^{-1}(T(u)) = u$.
+    \end{definicao}
+\end{frame}
+
+\begin{frame}
+    \begin{observacoes}
+        \begin{enumerate}[label={\roman*})]
+            \item Seja $I = Id \colon V \to V$ a transformação linear tal que $I(u) = Id(u) = u$ para todo $u \in V$. Então $I = Id$ é chamado de \textbf{operador identidade}.
+
+            \item Se $T \colon V \to V$ é uma transformação linear invertível, então a aplicação $T^{-1} \colon V \to V$ também é uma transformação linear.
+
+            \item Se $T \colon V \to V$ é um operador invertível, então $T^{-1} \colon V \to V$ é chamado de \textbf{operador inverso de $T$}.
+        \end{enumerate}
+    \end{observacoes}
+\end{frame}
+
+\begin{frame}
+    \begin{proposicao}
+        Seja $T \colon V \to V$ um operador linear. Então:
+        \begin{enumerate}[label={\roman*})]
+            \item Se $T$ é invertível e $T^{-1} \colon V \to V$ é o seu inverso, então
+                \[
+                    (T^{-1} \circ T) = (T \circ T^{-1}) = Id.
+                \]
+
+            \item Se $V$ tem dimensão finita, então $T$ é invertível se, e somente se, $\ker(T) = \{0_V\}$.
+
+            \item Se $T$ é invertível, então dada uma base $\{v_1, v_2, \dots, v_n\}$ de $V$, o conjunto $\{T(v_1), T(v_2), \dots, T(v_n)\}$ é uma base de $V$.
+        \end{enumerate}
+    \end{proposicao}
+\end{frame}
+
+\begin{frame}
+    \begin{proposicao}
+        Se $S \colon V \to V$ e $T \colon V \to V$ são operadores invertíveis, então $S \circ T$ é invertível e
+        \[
+            (S \circ T)^{-1} = T^{-1} \circ S^{-1}.
+        \]
+    \end{proposicao}
+\end{frame}
+
 \end{document}
