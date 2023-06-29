@@ -569,10 +569,10 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
         S(x, y) = (y, 2x - y)\\
         T(x, y) = (x + 3y, y - x)
       \end{align*}
-      Nesse caso existe tanto a composićão $S \circ T$ quanto $T \circ S$ e
+      Nesse caso existe tanto a composição $S \circ T$ quanto $T \circ S$ e
       \begin{align*}
-        (S \circ T)(x, y) = S(T(x, y)) = S(x + 3y, y - x) = (y - x, 2(x + 3y) - (y - x)) = (y - x, 3x + 2y)
-        (T \circ S)(x, y) = T(S(x, y)) = T(y, 2x - y) = (y + 3(2x - y), 2x - y - y) = (6x - 2y, 2x - 2y)
+        (S \circ T)(x, y) &= S(T(x, y)) \\ &= S(x + 3y, y - x) \\ &= (y - x, 2(x + 3y) - (y - x)) \\ &= (y - x, 3x + 2y)\\
+        (T \circ S)(x, y) &= T(S(x, y)) \\ &= T(y, 2x - y) \\ &= (y + 3(2x - y), 2x - y - y) \\ &= (6x - 2y, 2x - 2y)
       \end{align*}
       Assim temos $S \circ T \ne T \circ S$.
   \end{enumerate}
@@ -585,7 +585,7 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
 \begin{exemplo}
   Seja $T \colon \real^2 \to \real^2$ dada por $T(x, y) = (4x - 3y, -2x + 2y)$. Tomo $T^{-1} \colon \real^2 \to \real^2$ dada por $T^{-1}(a, b) = (a + 3b/2, a + 2b)$. Então $T^{-1}$ é o operador inverso de $T$. De fato,
   \begin{align*}
-    T^{-1}(T(x, y)) = T^{-1}(4x - 3y, -2x + 2y) = (4x - 3y + 3(-2x + 2y)/2, 4x - 3y + 2(-2x + 2y)) = (x, y)
+    T^{-1}(T(x, y)) &= T^{-1}(4x - 3y, -2x + 2y) \\ &= (4x - 3y + 3(-2x + 2y)/2, 4x - 3y + 2(-2x + 2y)) \\ &= (x, y)
   \end{align*}
 \end{exemplo}
 \begin{observacoes}
