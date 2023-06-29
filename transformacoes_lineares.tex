@@ -456,9 +456,9 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
 \begin{observacoes}
   Seja $T \colon V \to W$ uma transformação linear, onde $\dim V < \infty$ e $\dim W < \infty$.
   \begin{enumerate}[label={\roman*})]
-    \item Se $\dim V > \dim W$, então $T$ não pode ser injetora.
+    \item Se $\dim V > \dim W$, então $T$ não pode ser injetora, isto é, $\ker(T) \ne \emptyset$.
 
-    \item Se $\dim V < \dim W$, então $T$ não pode ser sobrejetora.
+    \item Se $\dim V < \dim W$, então $T$ não pode ser sobrejetora, isto é, $\im(T) \ne W$.
   \end{enumerate}
 \end{observacoes}
 
@@ -806,16 +806,15 @@ onde $\alpha_1$, $\alpha_2$, \dots, $\alpha_p \in \cp{K}$. Da{\'\i}
   T(x) &= T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_pu_p) = \alpha_1T(u_1) + \alpha_2T(u_2) + \cdots + \alpha_pT(u_p)\\
   &= \alpha_1(a_{11}w_1 + a_{21}w_2 + \cdots + a_{q1}w_q) + \alpha_2(a_{12}w_1 + a_{22}w_2 + \cdots + a_{q2}w_q) + \cdots \\
   &+ \alpha_p(a_{1p}w_1 + a_{2p}w_2 + \cdots + a_{qp}w_q)\\
-  &= (\sum_{j=1}^p\alpha_j a_{1j})w_1 + (\sum_{j=1}^p\alpha_j a_{2j})w_2 + \cdots + (\sum_{j=1}^p\alpha_j a_{qj})w_q\\
-  &= \sum_{i=1}^q\left(\sum_{j=1}^p a_{ij}\alpha_j\right)w_i.
+  &= (a_{11}\alpha_1 + a_{12}\alpha_2 + \cdots + a_{1p}\alpha_p)w_1 + (a_{21}\alpha_1 + a_{22}\alpha_2 + \cdots + a_{2p}\alpha_p)w_2 + \\ &\cdots + (a_{q1}\alpha_1 + a_{q2}\alpha_2 + \cdots + a_{qp}\alpha_p)w_q\\
 \end{align*}
-Note que os escalares $\sum_{j=1}^p a_{1j}\alpha_j$, $\sum_{j=1}^p a_{2j}\alpha_j$, \dots, $\sum_{j=1}^p a_{qi}\alpha_j$ s\~ao as coordenadas do vetor $T(x)$ em rela\c{c}\~ao \`a base $\mathcal{B}_2$, isto \'e,
+Note que os escalares $a_{11}\alpha_1 + a_{12}\alpha_2 + \cdots + a_{1p}\alpha_p$, $a_{21}\alpha_1 + a_{22}\alpha_2 + \cdots + a_{2p}\alpha_p$, \dots, $a_{q1}\alpha_1 + a_{q2}\alpha_2 + \cdots + a_{qp}\alpha_p$ s\~ao as coordenadas do vetor $T(x)$ em rela\c{c}\~ao \`a base $\mathcal{B}_2$, isto \'e,
 \[
   [T(x)]_{\mathcal{B}_2} = \begin{bmatrix}
-    \sum_{j=1}^p a_{1j}\alpha_j\\
-    \sum_{j=1}^p a_{2j}\alpha_j\\
+    a_{11}\alpha_1 + a_{12}\alpha_2 + \cdots + a_{1p}\alpha_p\\
+    a_{21}\alpha_1 + a_{22}\alpha_2 + \cdots + a_{2p}\alpha_p\\
     \vdots\\
-    \sum_{j=1}^p a_{qj}\alpha_j
+    a_{q1}\alpha_1 + a_{q2}\alpha_2 + \cdots + a_{qp}\alpha_p
   \end{bmatrix}.
 \]
 Por outro lado,
