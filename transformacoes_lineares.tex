@@ -551,6 +551,33 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
   Se $S \colon V \to W$ e $T \colon W \to U$ são transformações lineares,  então a composição de $T\circ S$ também é uma transformação linear.
 \end{proposicao}
 
+\begin{exemplos}
+  \begin{enumerate}
+    \item Sejam $T \colon \real^2 \to \real^3$ e $S \colon \real^3 \to \real$ transformações lineares dadas por
+      \begin{align*}
+        T(x, y) &= (2x, y - x, x + 2y)\\
+        S(x, y, z) &= 3x - 2y + z
+      \end{align*}
+      Então a composta $S \circ T$ existe e $S \circ T \colon \real^2 \to \real$ é dada por
+      \begin{align*}
+        (S \circ T)(x, y) = S(T(x, y)) = S(2x, y - x, x + 2y) = 3(2x) - 2(y - x) + (x + 2y) = 8x
+      \end{align*}
+      Observe que nesse caso não é possível fazer a composta de $T$ com $S$.
+
+    \item Agora sejam $S \colon \real^2 \to \real^2$ e $T \colon \real^2 \to \real^2$ dadas por
+      \begin{align*}
+        S(x, y) = (y, 2x - y)\\
+        T(x, y) = (x + 3y, y - x)
+      \end{align*}
+      Nesse caso existe tanto a composićão $S \circ T$ quanto $T \circ S$ e
+      \begin{align*}
+        (S \circ T)(x, y) = S(T(x, y)) = S(x + 3y, y - x) = (y - x, 2(x + 3y) - (y - x)) = (y - x, 3x + 2y)
+        (T \circ S)(x, y) = T(S(x, y)) = T(y, 2x - y) = (y + 3(2x - y), 2x - y - y) = (6x - 2y, 2x - 2y)
+      \end{align*}
+      Assim temos $S \circ T \ne T \circ S$.
+  \end{enumerate}
+\end{exemplos}
+
 \begin{definicao}
   Dado $T \colon V \to V$ um operador linear,  dizemos que $T$ é \textbf{invertível}  se existe outra aplicação $T^{-1} \colon V \to V$  tal que para qualquer $u \in V$,  $T^{-1}(T(u)) = u$.
 \end{definicao}
