@@ -582,6 +582,12 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
   Dado $T \colon V \to V$ um operador linear,  dizemos que $T$ é \textbf{invertível}  se existe outra aplicação $T^{-1} \colon V \to V$  tal que para qualquer $u \in V$,  $T^{-1}(T(u)) = u$.
 \end{definicao}
 
+\begin{exemplo}
+  Seja $T \colon \real^2 \to \real^2$ dada por $T(x, y) = (4x - 3y, -2x + 2y)$. Tomo $T^{-1} \colon \real^2 \to \real^2$ dada por $T^{-1}(a, b) = (a + 3b/2, a + 2b)$. Então $T^{-1}$ é o operador inverso de $T$. De fato,
+  \begin{align*}
+    T^{-1}(T(x, y)) = T^{-1}(4x - 3y, -2x + 2y) = (4x - 3y + 3(-2x + 2y)/2, 4x - 3y + 2(-2x + 2y)) = (x, y)
+  \end{align*}
+\end{exemplo}
 \begin{observacoes}
   \begin{enumerate}[label={\roman*})]
     \item Seja $I = I_V = Id = Id_V \colon V \to V$  a transformação linear tal que $I(u) = Id(u) = u$  para todo $u \in V$.  Então $I = Id$ é chamado de \textbf{operador identidade}.
