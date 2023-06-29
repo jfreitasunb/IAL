@@ -292,13 +292,13 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
   \begin{enumerate}[label={\roman*})]
     \item O conjunto
     \[
-      \ker T = \{u \in V \mid T(u) = 0_W\}
+      \ker(T) = \{u \in V \mid T(u) = 0_W\}
     \]
-    \'e chamado de \textbf{kernel}\index{Transformação linear!kernel} ou \textbf{n\'ucleo}\index{Transformação linear!núcleo} de $T$. (O n\'ucleo de $T$ tamb\'em pode ser denotado por $Nuc\ T$.)
+    \'e chamado de \textbf{kernel}\index{Transformação linear!kernel} ou \textbf{n\'ucleo}\index{Transformação linear!núcleo} de $T$. (O n\'ucleo de $T$ tamb\'em pode ser denotado por $Nuc(T)$.)
 
     \item O conjunto
     \[
-      \im T = \{u \in W \mid \mbox{ existe } v \in V \mbox{ tal que } T(v) = u\}
+      \im(T) = \{u \in W \mid \mbox{ existe } v \in V \mbox{ tal que } T(v) = u\}
     \]
     \'e chamado de \textbf{imagem}\index{Transformação linear!imagem} de $T$.
   \end{enumerate}
@@ -307,35 +307,35 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
 \begin{proposicao}
   Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais e $T \colon V \to W$ uma transforma\c{c}\~ao linear. Ent\~ao:
   \begin{enumerate}[label={\roman*})]
-    \item $\ker T$ \'e um subespa\c{c}o de $V$;
-    \item $\im T$ \'e um subespa\c{c}o de $W$.
+    \item $\ker(T)$ \'e um subespa\c{c}o de $V$;
+    \item $\im(T)$ \'e um subespa\c{c}o de $W$.
   \end{enumerate}
 \end{proposicao}
 \begin{prova}
   \begin{enumerate}[label={\roman*})]
-    \item Inicialmente $\ker T \ne \emptyset$ pois $T(0_V) = 0_W$, ou seja, $0_V \in \ker T$. Agora, sejam $u_1$, $u_2 \in \ker T$ e $\lambda \in \cp{K}$. Precisamos mostrar que $\lambda u_1 + u_2 \in \cp{K}$, isto \'e, precisamos mostrar que $\lambda u_1 + u_2 \in \ker T$. Temos
+    \item Inicialmente $\ker(T) \ne \emptyset$ pois $T(0_V) = 0_W$, ou seja, $0_V \in \ker(T)$. Agora, sejam $u_1$, $u_2 \in \ker(T)$ e $\lambda \in \cp{K}$. Precisamos mostrar que $\lambda u_1 + u_2 \in \cp{K}$, isto \'e, precisamos mostrar que $\lambda u_1 + u_2 \in \ker(T)$. Temos
     \[
       T(\lambda u_1 + u_2) = \lambda T(u_1) + T(u_2) = 0_W.
     \]
-    Logo, $\ker T$ \'e um subespa\c{c}o de $V$.
+    Logo, $\ker(T)$ \'e um subespa\c{c}o de $V$.
 
-    \item Inicialmente $0_W \in \im T$ pois $0_W = T(0_V)$ e da{\'\i} $\im T \ne \emptyset$. Sejam $w_1$, $w_2 \in \im T$ e $\lambda \in \cp{K}$. Ent\~ao existem $u_1$, $u_2 \in V$ tais que $w_1 = T(u_1)$ e $w_2 = T(u_2)$. Assim
+    \item Inicialmente $0_W \in \im(T)$ pois $0_W = T(0_V)$ e da{\'\i} $\im(T) \ne \emptyset$. Sejam $w_1$, $w_2 \in \im(T)$ e $\lambda \in \cp{K}$. Ent\~ao existem $u_1$, $u_2 \in V$ tais que $w_1 = T(u_1)$ e $w_2 = T(u_2)$. Assim
     \[
       \lambda w_1 + w_2 = \lambda T(u_1) + T(u_2) = T(\lambda u_1) + T(u_2) = T(\lambda u_1 + u_2)
     \]
-    e ent\~ao $\lambda w_1 + w_2 \in \im T$. Portanto, $\im T$ \'e um subespa\c{c}o de $W$.
+    e ent\~ao $\lambda w_1 + w_2 \in \im(T)$. Portanto, $\im(T)$ \'e um subespa\c{c}o de $W$.
   \end{enumerate}
 \end{prova}
 
 \begin{lema}\label{transformacao_gera_imagem}
-  Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais e $T \colon V \to W$ uma transforma\c{c}\~ao linear. Se $\mathcal{B} = \{u_1, \dots, u_n\}$ \'e uma base de $V$, ent\~ao $\{T(u_1), \dots, T(u_n)\}$ gera $\im T$.
+  Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais e $T \colon V \to W$ uma transforma\c{c}\~ao linear. Se $\mathcal{B} = \{u_1, \dots, u_n\}$ \'e uma base de $V$, ent\~ao $\{T(u_1), \dots, T(u_n)\}$ gera $\im(T)$.
 \end{lema}
 \begin{prova}
   Seja $w \in \im T$. Por defini\c{c}\~ao, existe $u \in V$ tal que $T(u) = w$. Como $\mathcal{B}$ \'e uma base de $V$, ent\~ao existem $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ tais que $u = \alpha_1u_1 + \cdots + \alpha_nu_n$. Da{\'\i}
   \[
     w = T(u) = \alpha_1T(u_1) + \cdots + \alpha_nT(u_n),
   \]
-  ou seja, todo vetor de $\im T$ \'e uma combina\c{c}\~ao linear de $T(u_1)$, \dots, $T(u_n)$. Portanto $\im T = [T(u_1), \dots, T(u_n)]$ como quer{\'\i}amos.
+  ou seja, todo vetor de $\im T$ \'e uma combina\c{c}\~ao linear de $T(u_1)$, \dots, $T(u_n)$. Portanto $\im(T) = [T(u_1), \dots, T(u_n)]$ como quer{\'\i}amos.
 \end{prova}
 
 \begin{exemplos}
@@ -347,7 +347,7 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
         0 & c - b
       \end{bmatrix}.
     \]
-    Determine $\ker T$ e $\im T$.
+    Determine $\ker(T)$ e $\im(T)$.
     \begin{solucao}
       Temos
       \[
@@ -358,14 +358,14 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
       \]
       se, e s\'o se, $a = -b$ e $c = b$. Da{\'\i}
       \[
-        \ker T = \{(a,b,c) \in \real^3 \mid a = -b, c = b\} = \{(-b,b,b) \mid b \in \real\}.
+        \ker(T) = \{(a,b,c) \in \real^3 \mid a = -b, c = b\} = \{(-b,b,b) \mid b \in \real\}.
       \]
-      Note que $\{(1,1,1)\}$ \'e uma base de $\ker T$, ou seja, $\dim_\real \ker T = 1$.
+      Note que $\{(1,1,1)\}$ \'e uma base de $\ker(T)$, ou seja, $\dim_\real \ker(T) = 1$.
 
       Agora,
       \begin{align*}
-        \im T &= \{v \in \cp{M}_2(\real) \mid \mbox{ existe } u \in \real^3 \mbox{ de modo que } T(u) = v\}\\
-        \im T &= \left\{ \begin{bmatrix}
+        \im(T) &= \{v \in \cp{M}_2(\real) \mid \mbox{ existe } u \in \real^3 \mbox{ de modo que } T(u) = v\}\\
+        \im(T) &= \left\{ \begin{bmatrix}
           a + b & 0\\
           0 & c - b
         \end{bmatrix} \mid a, b, c \in \real\right\}.
@@ -389,30 +389,30 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
           0 & 0\\ 0 & 1
         \end{bmatrix}\right\}
       \]
-      \'e um conjunto gerador de $\im T$ e \'e L.I., ou seja, \'e uma base de $\im T$, com isso $\dim_\real\im T = 2$. Observe que
+      \'e um conjunto gerador de $\im(T)$ e \'e L.I., ou seja, \'e uma base de $\im(T)$, com isso $\dim_\real\im(T) = 2$. Observe que
       \[
-        \dim_\real\ker T + \dim_\real\im T = 3 = \dim_\real\real^3.
+        \dim_\real\ker(T) + \dim_\real\im(T) = 3 = \dim_\real\real^3.
       \]
     \end{solucao}
 
-    \item Seja $T \colon \real^2 \to \real$ dada por $T(x,y) = x + y$. Determine $\ker T$ e $\im T$.
+    \item Seja $T \colon \real^2 \to \real$ dada por $T(x,y) = x + y$. Determine $\ker(T)$ e $\im(T)$.
     \begin{solucao}
       Temos
       \begin{align*}
-        \ker T &= \{(x,y) \in \real^2 \mid T(x,y) = 0\} = \{(x,y) \in \real^2 \mid x + y = 0\}\\
-        \ker T &= \{(x,-x) \in \real^2 \mid x \in \real\}.
+        \ker(T) &= \{(x,y) \in \real^2 \mid T(x,y) = 0\} = \{(x,y) \in \real^2 \mid x + y = 0\}\\
+        \ker(T) &= \{(x,-x) \in \real^2 \mid x \in \real\}.
       \end{align*}
-      Assim $\{(1,-1)\}$ \'e uma base de $\ker T$, ou seja, $\dim_\real\ker T = 1$.
+      Assim $\{(1,-1)\}$ \'e uma base de $\ker(T)$, ou seja, $\dim_\real\ker(T) = 1$.
 
       Agora
       \[
-        \im T = \{w \in \real \mid \mbox{ existe } (x,y) \in \real^2 \mbox{ tal que } T(x,y) = w\}.
+        \im(T) = \{w \in \real \mid \mbox{ existe } (x,y) \in \real^2 \mbox{ tal que } T(x,y) = w\}.
       \]
-      Assim dado $w \in \real$ um n\'umero real qualquer, tome o elemento $(w,0) \in \real^2$. Temos $T(w,0) = w + 0 = w$. Logo $\im T = \real$ e ent\~ao $\dim_\real\im T = 1$.
+      Assim dado $w \in \real$ um n\'umero real qualquer, tome o elemento $(w,0) \in \real^2$. Temos $T(w,0) = w + 0 = w$. Logo $\im(T) = \real$ e ent\~ao $\dim_\real\im(T) = 1$.
 
       Novamente temos
       \[
-        \dim_\real\ker T + \dim_\real\im T = 2 = \dim_\real\real^2.
+        \dim_\real\ker(T) + \dim_\real\im(T) = 2 = \dim_\real\real^2.
       \]
     \end{solucao}
   \end{enumerate}
@@ -421,7 +421,7 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
 \begin{teorema}[Teorema do N\'ucleo e da Imagem]\label{teorema_do_nucleo_e_da_imagem}
   Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais com $\dim_\cp{K}V$ finita. Seja $T : V \to W$ uma transforma\c{c}\~ao linear. Ent\~ao
   \[
-    \dim_\cp{K}V = \dim_\cp{K}\ker T + \dim_\cp{K}\im T.
+    \dim_\cp{K}V = \dim_\cp{K}\ker(T) + \dim_\cp{K}\im(T).
   \]
 \end{teorema}
 
@@ -445,7 +445,7 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
 \begin{proposicao}\label{caracteriza_transformacao_injetora}
   Sejam $V$ e $W$ espa\c{c}os vetoriais sobre um corpo $\cp{K}$ e $T \colon V \to W$ uma transforma\c{c}\~ao linear.
     \begin{enumerate}[label={\roman*})]
-      \item $T$ \'e injetora se, e somente se, $\ker T = \{0_V\}$.
+      \item $T$ \'e injetora se, e somente se, $\ker(T) = \{0_V\}$.
 
       \item Se $\dim V = \dim W$ e $T$ é injetora, então $T$ transforma bases em bases, isto é, se $\mathcal{B} = \{v_1, v_2, \dots, v_n\}$ é uma base de $V$, então $\{T(v_1), T(v_2), \dots, T(v_n)\}$ é uma base de $W$.
 
