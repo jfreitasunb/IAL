@@ -560,7 +560,7 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
       \end{align*}
       Então a composta $S \circ T$ existe e $S \circ T \colon \real^2 \to \real$ é dada por
       \begin{align*}
-        (S \circ T)(x, y) = S(T(x, y)) = S(2x, y - x, x + 2y) = 3(2x) - 2(y - x) + (x + 2y) = 8x
+        (S \circ T)(x, y) = S(T(x, y)) = S(2x, y - x, x + 2y) = 3(2x) - 2(y - x) + (x + 2y) = 9x
       \end{align*}
       Observe que nesse caso não é possível fazer a composta de $T$ com $S$.
 
@@ -571,7 +571,7 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
       \end{align*}
       Nesse caso existe tanto a composição $S \circ T$ quanto $T \circ S$ e
       \begin{align*}
-        (S \circ T)(x, y) &= S(T(x, y)) \\ &= S(x + 3y, y - x) \\ &= (y - x, 2(x + 3y) - (y - x)) \\ &= (y - x, 3x + 2y)\\
+        (S \circ T)(x, y) &= S(T(x, y)) \\ &= S(x + 3y, y - x) \\ &= (y - x, 2(x + 3y) - (y - x)) \\ &= (y - x, 3x + 5y)\\
         (T \circ S)(x, y) &= T(S(x, y)) \\ &= T(y, 2x - y) \\ &= (y + 3(2x - y), 2x - y - y) \\ &= (6x - 2y, 2x - 2y)
       \end{align*}
       Assim temos $S \circ T \ne T \circ S$.
