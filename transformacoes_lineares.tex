@@ -484,40 +484,40 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
 \begin{exemplo}
   Seja $T \colon \cp{K}^4 \to \cp{M}_2(\cp{K})$ dada por
   \begin{align*}
-    T(1_\cp{K},0_\cp{K},0_\cp{K},0_\cp{K}) &= \begin{bmatrix}
-      1_\cp{K} & 0_\cp{K}\\
-      0_\cp{K} & 0_\cp{K}
-    \end{bmatrix}; T(0_\cp{K},1_\cp{K},0_\cp{K},0_\cp{K}) = \begin{bmatrix}
-      0_\cp{K} & 1_\cp{K}\\
-      0_\cp{K} & 0_\cp{K}
+    T(1,0,0,0) &= \begin{bmatrix}
+      1 & 0\\
+      0 & 0
+    \end{bmatrix}; T(0,1,0,0) = \begin{bmatrix}
+      0 & 1\\
+      0 & 0
     \end{bmatrix}\\
-    T(0_\cp{K},0_\cp{K},1_\cp{K},0_\cp{K}) &= \begin{bmatrix}
-      0_\cp{K} & 0_\cp{K}\\
-      1_\cp{K} & 0_\cp{K}
-    \end{bmatrix}; T(0_\cp{K},0_\cp{K},0_\cp{K},1_\cp{K}) = \begin{bmatrix}
-      0_\cp{K} & 0_\cp{K}\\
-      0_\cp{K} & 1_\cp{K}
+    T(0,0,1,0) &= \begin{bmatrix}
+      0 & 0\\
+      1 & 0
+    \end{bmatrix}; T(0,0,0,1) = \begin{bmatrix}
+      0 & 0\\
+      0 & 1
     \end{bmatrix}\\
   \end{align*}
-  é fácil ver que $\ker T = \{(0_\cp{K},0_\cp{K},0_\cp{K},0_\cp{K})\}$. Além disso,
+  é fácil ver que $\ker(T) = \{(0,0,0,0)\}$. Além disso,
   \[
-    \im T = \left[\begin{bmatrix}
-      1_\cp{K} & 0_\cp{K}\\
-      0_\cp{K} & 0_\cp{K}
+    \im(T) = \left[\begin{bmatrix}
+      1 & 0\\
+      0 & 0
     \end{bmatrix};\begin{bmatrix}
-      0_\cp{K} & 1_\cp{K}\\
-      0_\cp{K} & 0_\cp{K}
+      0 & 1\\
+      0 & 0
     \end{bmatrix};\begin{bmatrix}
-      0_\cp{K} & 0_\cp{K}\\
-      1_\cp{K} & 0_\cp{K}
+      0 & 0\\
+      1 & 0
     \end{bmatrix};\begin{bmatrix}
-      0_\cp{K} & 0_\cp{K}\\
-      0_\cp{K} & 1_\cp{K}
+      0 & 0\\
+      0 & 1
     \end{bmatrix}\right] = \cp{M}_2(\cp{K}).
   \]
-  Daí $\dim_\cp{K}\im T = 4$ e novamente
+  Daí $\dim_\cp{K}\im(T) = 4$ e novamente
   \[
-    \dim_\cp{K}\ker T + \dim_\cp{K}\im T = 4 = \dim_\cp{K}\cp{M}_2(\cp{K}).
+    \dim_\cp{K}\ker(T) + \dim_\cp{K}\im(T) = 4 = \dim_\cp{K}\cp{M}_2(\cp{K}).
   \]
 \end{exemplo}
 
@@ -526,7 +526,7 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
   \[
     T(a+bi, c+di) = (a - c, b + 2d, a + b - c + 2d)
   \]
-  onde $a$, $b$ e $c \in \real$. é fácil ver que $T$ é uma transformação linear. Seja $\{(1,0);(i,0);(0,1);(0,i)\}$ uma base de $\complex^2$. Temos pelo Lema \ref{transformacao_gera_imagem} que $\{T(1,0);T(i,0);T(0,1);T(0,i)\}$ gera $\im T$. Agora
+  onde $a$, $b$ e $c \in \real$. é fácil ver que $T$ é uma transformação linear. Seja $\{(1,0);(i,0);(0,1);(0,i)\}$ uma base de $\complex^2$. Temos pelo Lema \ref{transformacao_gera_imagem} que $\{T(1,0);T(i,0);T(0,1);T(0,i)\}$ gera $\im(T)$. Agora
   \begin{align*}
     T(1,0) &= (1,0,1);\quad T(i,0) = (0,1,1)\\
     T(0,1) &= (-1,0,-1);\quad T(0,i) = (0,2,2)
@@ -536,7 +536,7 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
     T(1,0) &= -T(0,1)\\
     T(i,0) &= 2T(0,i).
   \end{align*}
-  Observe que $T(1,0)$ não é múltiplo de $T(0,i)$. Logo o conjunto $\{T(1,0); T(0,i)\}$ é uma base de $\im T$.
+  Observe que $T(1,0)$ não é múltiplo de $T(0,i)$. Logo o conjunto $\{T(1,0); T(0,i)\}$ é uma base de $\im(T)$.
 \end{exemplo}
 
 \begin{definicao}
