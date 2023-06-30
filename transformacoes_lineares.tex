@@ -540,7 +540,7 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
 \end{exemplo}
 
 \begin{definicao}
-  Dadas $S \colon V \to W$  e $T \colon W \to U$ transformações lineares,  definimos a \textbf{composição de $T$ com $S$}  como a aplicação: 
+  Dadas $S \colon V \to W$  e $T \colon W \to U$ transformações lineares,  definimos a \textbf{composição de $T$ com $S$}\index{Transformação linear!composição}  como a aplicação: 
   \begin{align*}
     T \circ S \colon &V \to U\\
                      &v \mapsto (T\circ S)(u) = T(S(v))
@@ -579,7 +579,7 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
 \end{exemplos}
 
 \begin{definicao}
-  Dado $T \colon V \to V$ um operador linear,  dizemos que $T$ é \textbf{invertível}  se existe outra aplicação $T^{-1} \colon V \to V$  tal que para qualquer $u \in V$,  $T^{-1}(T(u)) = u$.
+  Dado $T \colon V \to V$ um operador linear,  dizemos que $T$ é \textbf{invertível}\index{Transformação linear!invertível} se existe outra aplicação $T^{-1} \colon V \to V$  tal que para qualquer $u \in V$,  $T^{-1}(T(u)) = u$.
 \end{definicao}
 
 \begin{exemplo}
@@ -590,11 +590,11 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
 \end{exemplo}
 \begin{observacoes}
   \begin{enumerate}[label={\roman*})]
-    \item Seja $I = I_V = Id = Id_V \colon V \to V$  a transformação linear tal que $I(u) = Id(u) = u$  para todo $u \in V$.  Então $I = Id$ é chamado de \textbf{operador identidade}.
+    \item Seja $I = I_V = Id = Id_V \colon V \to V$  a transformação linear tal que $I(u) = Id(u) = u$  para todo $u \in V$.  Então $I = Id$ é chamado de \textbf{operador identidade}\index{Transformação linear!operador identidade}.
 
     \item Se $T \colon V \to V$ é uma transformação linear invertível,  então a aplicação $T^{-1} \colon V \to V$ também é uma transformação linear.
 
-    \item Se $T \colon V \to V$ é um operador invertível,  então $T^{-1} \colon V \to V$ é chamado de \textbf{operador inverso de $T$}.
+    \item Se $T \colon V \to V$ é um operador invertível,  então $T^{-1} \colon V \to V$ é chamado de \textbf{operador inverso de $T$}\index{Transformação linear!operador inverso}.
   \end{enumerate}
 \end{observacoes}
 
@@ -742,7 +742,7 @@ Sejam $V$ um espaço vetorial sobre $\cp{K}$ de dimensão $n \ge 1$ e $\mathcal{
   u = \alpha_1v_1 + \cdots + \alpha_nv_n.
 \]
 
-Assim vamos fixar uma ordem para os elementos da base $\mathcal{B}$ e por isso vamos chamá-la de \textbf{base ordenada} de $V$. Pela unicidade dos elementos $\alpha_1$, \dots, $\alpha_n$ acima, podemos denotar o vetor $u$ por
+Assim vamos fixar uma ordem para os elementos da base $\mathcal{B}$ e por isso vamos chamá-la de \textbf{base ordenada}\index{Espaço vetorial!base ordenada} de $V$. Pela unicidade dos elementos $\alpha_1$, \dots, $\alpha_n$ acima, podemos denotar o vetor $u$ por
 \[
   [u]_\mathcal{B} = \begin{bmatrix}
     \alpha_1\\
@@ -878,7 +878,7 @@ Assim provamos o seguinte teorema:
 \end{teorema}
 
 \begin{definicao}
-  A matriz $A \in \cp{M}_{q\times p}(\cp{K})$ do Teorema \ref{teorema_toda_transformacao_matriz} é chamada de \textbf{matriz da transformação linear} $T$ com respeito \`as bases ordenadas $\mathcal{B}_V$ e $\mathcal{B}_W$ e será denotada por
+  A matriz $A \in \cp{M}_{q\times p}(\cp{K})$ do Teorema \ref{teorema_toda_transformacao_matriz} é chamada de \textbf{matriz da transformação linear}\index{Transformação linear!matriz da transformação} $T$ com respeito \`as bases ordenadas $\mathcal{B}_V$ e $\mathcal{B}_W$ e será denotada por
   \[
     A = [T]_{\mathcal{B}_{V},\mathcal{B}_{W}}.
   \]
