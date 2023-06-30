@@ -1018,16 +1018,14 @@ Agora, dado $x \in V$, existem $\beta_1$, \dots, $\beta_n \in \cp{K}$ tais que
 Daí
 \begin{align*}
   x &= \beta_1(\alpha_{11}v_1 + \cdots + \alpha_{n1}v_n) + \cdots + \beta_n(\alpha_{1n}v_1 + \cdots + \alpha_{nn}v_n)\\
-  &= (\beta_1\alpha_{11} + \beta_2\alpha_{12} + \cdots + \beta_n\alpha_{1n})v_1 + \cdots + (\beta_1\alpha_{n1} + \beta_2\alpha_{n2} + \cdots + \beta_n\alpha_{nn})v_n\\
-  &= \sum_{j=1}^n\beta_j\alpha_{1j}v_1 + \cdots + \sum_{j=1}^n\beta_j\alpha_{nj}v_n\\
-  &= \sum_{i=1}^n\left(\sum_{j=1}^n\beta_j\alpha_{ij}\right)v_i.
+  &= (\beta_1\alpha_{11} + \beta_2\alpha_{12} + \cdots + \beta_n\alpha_{1n})v_1 + \cdots + (\beta_1\alpha_{n1} + \beta_2\alpha_{n2} + \cdots + \beta_n\alpha_{nn})v_n
 \end{align*}
 Assim as coordenadas de $x$ em relação \`a base $\mathcal{B}_1$ são
 \[
   [x]_{\mathcal{B}_1} = \begin{bmatrix}
-    \sum_{j=1}^n\beta_j\alpha_{1j}\\
+    \beta_1\alpha_{11} + \beta_2\alpha_{12} + \cdots + \beta_n\alpha_{1n}\\
     \vdots\\
-    \sum_{j=1}^n\beta_j\alpha_{nj}
+    \beta_1\alpha_{n1} + \beta_2\alpha_{n2} + \cdots + \beta_n\alpha_{nn}
   \end{bmatrix}.
 \]
 Seja $P$ a matriz cuja entrada $(i,j)$ é o escalar $\alpha_{ij}$, isto é,
@@ -1108,11 +1106,11 @@ Por outro lado, sabemos que existe uma única transformação linear $G \colon V
 \]
 para $i = 1$, \dots, $n$. Mais ainda, tal transformação linear é um isomorfismo. Afirmamos que a matriz $P$ acima é exatamente a matriz de $G$ em relação \`a base $\mathcal{B}_1$. De fato, as entradas de $P$ são definidas por
 \[
-  w_i = \sum_{i=1}^n\alpha_{ij}v_i
+  w_i = \alpha_{1j}v_1 + \alpha_{2j}v_2 + \cdots + \alpha_{nj}v_n
 \]
 e como $G(v_i) = w_i$ podemos escrever
 \[
-  G(v_i) = w_i = \sum_{i=1}^n\alpha_{ij}v_i
+  G(v_i) = w_i = \alpha_{1j}v_1 + \alpha_{2j}v_2 + \cdots + \alpha_{nj}v_n
 \]
 e então por definição $[G]_{\mathcal{B}_1} = P$. Desse modo, temos o seguinte teorema:
 
