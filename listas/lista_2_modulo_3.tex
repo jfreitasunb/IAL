@@ -575,7 +575,7 @@
 \end{exercicio}
 
 \begin{exercicio}
-  Em cada um dos casos abaixo, decida se o operador linear $T : \cp{K}^n \to \cp{K}^n$ dado por sua matriz $[T]_\mathcal{B}$ \'e diagonaliz\'avel. Em caso positivo, calcule uma base de autovetores e a sua forma diagonal.
+  Em cada um dos casos abaixo, decida se o operador linear $T : \cp{K}^n \to \cp{K}^n$ dado por sua matriz $[T]_\mathcal{B}$ é diagonalizável. Em caso positivo, calcule uma base de autovetores e a sua forma diagonal.
   \begin{enumerate}[label=({\alph*})]
     \item $[T]_\mathcal{B} = \begin{bmatrix} 1 & 0\\ 0 & 0\end{bmatrix}$, $\cp{K} = \complex$, $n = 2$
     \item $[T]_\mathcal{B} = \begin{bmatrix} 1 & -2\\ 1 & -1\end{bmatrix}$, $\cp{K} = \complex$, $n = 2$
@@ -594,9 +594,9 @@
       \begin{enumerate}[label=({\alph*})]
           \item $\mathcal{A} = \{(1,0);(0,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 1 & 0\\ 0 & 0\end{bmatrix}$
           \item $\mathcal{A} = \{(1 + i,1);(1 - i,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} i & \phantom{-} 0\\ 0 & -i\end{bmatrix}$
-          \item T n\~ao \'e diagonaliz\'avel.
+          \item $T$ não é diagonalizável.
           \item $\mathcal{A} = \{(-1,1,0);(1,2,-1);(1,0,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 1 & \phantom{-} 0 & 0\\ 0 & -1 & 0\\0 & \phantom{-} 0 & 3\end{bmatrix}$
-          \item O operador $T$ n\~ao \'e diagonaliz\'avel.
+          \item O operador $T$ não é diagonalizável.
           \item $\mathcal{A} = \{(2,1,-1);(-1 + i, 1, 1 + i);(-1 - i, 1, 1 - i)\}$; $[T]_\mathcal{A} = \begin{bmatrix} -2 & 0 & \phantom{-} 0\\ \phantom{-} 0 & i & \phantom{-} 0\\ \phantom{-} 0 & 0 & -i\end{bmatrix}$
           \item $\mathcal{A} = \{(1,0);(-1,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 1 & 0\\ 0 & -1\end{bmatrix}$
           \item $\mathcal{A} = \{(1,1,0);(1,0,1);(2,1,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 3 & 0 & 0\\ 0 & 3 & 0\\ 0 & 0 & 1\end{bmatrix}$
@@ -609,7 +609,7 @@
 \end{exercicio}
 
 \begin{exercicio}
-  Determine, se existir, uma matriz $P$ com coeficientes em $\real$ e invert{\'\i}vel tal que $P^{-1}AP$ seja diagonal para cada uma das seguintes matrizes:
+  Determine, se existir, uma matriz $P$ com coeficientes em $\real$ e invertível tal que $P^{-1}AP$ seja diagonal para cada uma das seguintes matrizes:
     \begin{enumerate}[label=({\alph*})]
       \item $A = \begin{bmatrix} 0 & 1\\ 1 & 0\end{bmatrix}$
       \item $A = \begin{bmatrix} 2 & 3\\ 1 & 4\end{bmatrix}$
@@ -621,33 +621,33 @@
       \begin{enumerate}[label=({\alph*})]
         \item $P = \begin{bmatrix}
           \phantom{-} 1 & 1\\ -1 & 1
-        \end{bmatrix}$ A resposta n\~ao \'e \'unica.
+        \end{bmatrix}$ A resposta não é única.
         \item $P = \begin{bmatrix}
           -3 & 1\\ \phantom{-} 1 & 1
-        \end{bmatrix}$ A resposta n\~ao \'e \'unica.
+        \end{bmatrix}$ A resposta não é única.
         \item $P = \begin{bmatrix}
           1 & -1 & 1\\ 1 & \phantom{-} 0 & 1\\ 3 & \phantom{-} 1 & 0
-        \end{bmatrix}$ A resposta n\~ao \'e \'unica.
-        \item $A$ n\~ao \'e diagonaliz\'avel.
-        \item $P = \begin{bmatrix} 1/2 & -1/2\\ 1/2 & \phantom{-} 1/2\end{bmatrix}$. A resposta n\~ao \'e \'unica.
+        \end{bmatrix}$ A resposta não é única.
+        \item $A$ não é diagonalizável.
+        \item $P = \begin{bmatrix} 1/2 & -1/2\\ 1/2 & \phantom{-} 1/2\end{bmatrix}$. A resposta não é única.
       \end{enumerate}
     \end{solucao}
 
 \end{exercicio}
 
 \begin{exercicio}
-  Seja $T : \real^2 \to \real^2$ uma transforma\c{c}\~ao linear que tem como autovetores $(3,1)$ e $(-2,1)$ associados aos autovalores $-2$ e $3$, respectivamente. Calcule $T(x,y)$.
+  Seja $T : \real^2 \to \real^2$ uma transformação linear que tem como autovetores $(3,1)$ e $(-2,1)$ associados aos autovalores $-2$ e $3$, respectivamente. Calcule $T(x,y)$.
   \begin{solucao}
     $T(x,y) = (-6y, y -x)$
   \end{solucao}
 \end{exercicio}
 
 \begin{exercicio}
-  Seja $T : \cp{M}_2(\real) \to \cp{M}_2(\real)$ um operador linear cuja matriz em rela\c{c}\~ao \`a base
+  Seja $T : \cp{M}_2(\real) \to \cp{M}_2(\real)$ um operador linear cuja matriz em relação à base
   \[
     \mathcal{B} = \left\{\begin{bmatrix}1 & 0\\ 1 & 0\end{bmatrix}; \begin{bmatrix}1 & 0\\ 0 & 0\end{bmatrix}; \begin{bmatrix}0 & 1\\ 0 & 1\end{bmatrix}; \begin{bmatrix}0 & 0\\ 0 & 1\end{bmatrix}\right\}
   \]
-  \'e dada por
+  é dada por
   \[
     [T]_\mathcal{B} = \begin{bmatrix}
       -1 & -4 & -2 & -2\\
@@ -656,14 +656,14 @@
       \phantom{-} 2 & \phantom{-} 2 & \phantom{-} 4 & \phantom{-} 1
     \end{bmatrix}.
   \]
-  Determine uma matriz invert{\'\i}vel $M \in \cp{M}_4(\real)$ tal que $M^{-1}[T]_\mathcal{B}M$ seja uma matriz diagonal.
+  Determine uma matriz invertível $M \in \cp{M}_4(\real)$ tal que $M^{-1}[T]_\mathcal{B}M$ seja uma matriz diagonal.
 \begin{solucao}
   $M = \begin{bmatrix}
     \phantom{-} 1 & \phantom{-} 1 & \phantom{-} 1 & \phantom{-} 1\\
     \phantom{-} 1 & \phantom{-} 0 & \phantom{-} 1 & \phantom{-} 1\\
     \phantom{-} 1 & -1 & \phantom{-} 0 & -2\\
     -2 & -1 & -1 & -2
-  \end{bmatrix}$. A resposta n\~ao \'e \'unica.
+  \end{bmatrix}$. A resposta não é única.
 \end{solucao}
 \end{exercicio}
 
