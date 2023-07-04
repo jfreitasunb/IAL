@@ -3,7 +3,7 @@
 \def\semestre{1}
 \def\disciplina{Introdução à Álgebra Linear}
 \def\turma{3}
-\def\autor{Jos\'e Ant\^onio O. Freitas}
+\def\autor{José Antônio O. Freitas}
 \def\instituto{MAT-UnB}
 
 \documentclass{beamer}
@@ -292,24 +292,24 @@
 
 \begin{frame}
     \begin{teorema}\label{matriz_da_composicao_de_transformacoes}
-        Sejam $F \colon U \to V$ e $G \colon V \to W$ duas transformações lineares onde $U$, $V$ e $W$ são $\cp{K}$-espaços vetoriais de dimensões $n$, $m$ e $r$, respectivamente. Fixe bases ordenadas $\mathcal{B}_U$, $\mathcal{B}_V$ e $\mathcal{B}_W$ para $U$, $V$ e $W$, respectivamente. Então $(G \circ F) \colon U \to W$ dada por $(G\circ F)(v) = G(F(v))$ é uma transformação linear e
+        Sejam $F \colon U \to V$ \pause e $G \colon V \to W$ \pause duas transformações lineares onde $U$, $V$ e $W$ \pause são espaços vetoriais $\cp{K}$ \pause de dimensões $n$, $m$ e $r$, respectivamente. \pause Fixe bases ordenadas $\mathcal{B}_U$, \pause $\mathcal{B}_V$ \pause e $\mathcal{B}_W$ \pause para $U$, $V$ e $W$, respectivamente. \pause Então $(G \circ F) \colon U \to W$ \pause dada por $(G\circ F)(v) = G(F(v))$ \pause é uma transformação linear e\pause
         \[
-            [(G \circ F)]_{{\mathcal{B}_U},{\mathcal{B}_W}} = [G]_{{\mathcal{B}_V},{\mathcal{B}_W}}[F]_{{\mathcal{B}_U},{\mathcal{B}_V}}.
+            [(G \circ F)]_{{\mathcal{B}_U},{\mathcal{B}_W}} \pause = [G]_{{\mathcal{B}_V},{\mathcal{B}_W}}[F]_{{\mathcal{B}_U},{\mathcal{B}_V}}.
         \]
     \end{teorema}
 \end{frame}
 
 \begin{frame}
     \begin{teorema}\label{teorema_mudanca_base}
-        Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$, $\mathcal{B}_1$ e $\mathcal{B}_2$ bases ordenadas de $V$. Então existe uma única matriz $P \in \cp{M}_n(\cp{K})$, necessariamente invertível tal que
+        Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$, \pause $\mathcal{B}_1$ e $\mathcal{B}_2$ bases ordenadas de $V$. \pause Então existe uma única matriz $P \in \cp{M}_n(\cp{K})$, \pause necessariamente invertível tal que\pause
         \begin{enumerate}[label={\roman*})]
-            \item $[x]_{\mathcal{B}_1} = P[x]_{\mathcal{B}_2}$
+            \item $[x]_{\mathcal{B}_1} = \pause P[x]_{\mathcal{B}_2}$\pause
 
-            \item $[x]_{\mathcal{B}_2} = P^{-1}[x]_{\mathcal{B}_1}$
+            \item $[x]_{\mathcal{B}_2} = \pause P^{-1}[x]_{\mathcal{B}_1}$\pause
         \end{enumerate}
-        para todo $x \in V$. As colunas de $P = \begin{bmatrix}P_1 & P_2 & \cdots & P_n \end{bmatrix}$ são dadas por
+        para todo $x \in V$. \pause As colunas de $P = \begin{bmatrix}P_1 & P_2 & \cdots & P_n \end{bmatrix}$ \pause são dadas por\pause
         \[
-            P_j = [w_j]_{\mathcal{B}_1}
+            P_j = [w_j]_{\mathcal{B}_1}\pause
         \]
         para $j = 1$, \dots, $n$.
     \end{teorema}
@@ -317,11 +317,11 @@
 
 \begin{frame}
     \begin{teorema}\label{teorema_matriz_mudanca_base}
-        Seja $P \in \cp{M}_n(\cp{K})$ um matriz invertível. Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$ e $\mathcal{B}_1$ uma base ordenada de $V$. Então existe uma única base ordenada $\mathcal{B}_2$ de $V$ tal que
+        Seja $P \in \cp{M}_n(\cp{K})$ um matriz invertível. \pause Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$ \pause e $\mathcal{B}_1$ uma base ordenada de $V$. \pause Então existe uma única base ordenada $\mathcal{B}_2$ \pause de $V$ tal que\pause
         \begin{enumerate}[label={\roman*})]
-            \item $[x]_{\mathcal{B}_1} = P[x]_{\mathcal{B}_2}$
+            \item $[x]_{\mathcal{B}_1} = \pause P[x]_{\mathcal{B}_2}$\pause
             
-            \item $[x]_{\mathcal{B}_2} = P^{-1}[x]_{\mathcal{B}_1}$
+            \item $[x]_{\mathcal{B}_2} = \pause P^{-1}[x]_{\mathcal{B}_1}$\pause
         \end{enumerate}
     para todo $x \in V$.
 \end{teorema}
@@ -329,7 +329,7 @@
 
 \begin{frame}
     \begin{definicao}
-        A matriz $P \in \cp{M}_n(\cp{K})$ do Teorema \ref{teorema_matriz_mudanca_base} é chamada de \textbf{matriz de mudança de base} e é denotada por $P = [I]_{{\mathcal{B}_1},{\mathcal{B}_2}}$.
+        A matriz $P \in \cp{M}_n(\cp{K})$ \pause do Teorema \ref{teorema_matriz_mudanca_base} \pause é chamada de \textbf{matriz de mudança de base} \pause e é denotada por $P = [I]_{{\mathcal{B}_1},{\mathcal{B}_2}}$.
     \end{definicao}
 \end{frame}
 \end{document}
