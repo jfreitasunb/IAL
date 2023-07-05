@@ -854,35 +854,6 @@ Assim provamos o seguinte teorema:
     [(G \circ F)]_{{\mathcal{B}_W},{\mathcal{B}_U}} = [G]_{{\mathcal{B}_W},{\mathcal{B}_V}}[F]_{{\mathcal{B}_V},{\mathcal{B}_U}}.
   \]
 \end{teorema}
-\begin{prova}
-  é imediato verificar que $G\circ F$ é uma transformação linear.
-
-  Sejam $\mathcal{B}_U = \{u_1,\dots,u_n\}$, $\mathcal{B}_V = \{v_1,\dots,v_m\}$ e $\mathcal{B}_W = \{w_1,\dots,w_r\}$ bases ordenadas para $U$, $V$ e $W$, respectivamente. Considere as matrizes
-  \begin{enumerate}[label=({\arabic*})]
-    \item $[F]_{{\mathcal{B}_U},{\mathcal{B}_V}} = (a_{ij})_{m\times n}$ onde $F(u_j) = a_{1j}v_1 + a_{2j}v_2 + \cdots + a_{mj}v_m$ para $j=1$, \dots, $n$;
-
-    \item $[G]_{{\mathcal{B}_V},{\mathcal{B}_W}} = (b_{ki})_{r\times m}$ onde $G(v_i) = b_{i1}w_1 + b_{i2}w_2 + \cdots + b_{ir}w_r$ para $i=1$, \dots, $m$;
-
-    \item $[G \circ F]_{{\mathcal{B}_U},{\mathcal{B}_W}} = (c_{kj})_{r\times n}$ onde $(G\circ F)(u_j) = c_{1j}w_1 + c_{2j}w_2 + \cdots + c_{rj}w_r$ para $j=1$, \dots, $n$.
-  \end{enumerate}
-
-  Vamos calcular $(G\circ F)(u_j)$ usando (1) e (2):
-  \begin{align*}
-    (G\circ F)(u_j) &= G(F(u_j)) = G(a_{1j}v_1 + a_{2j}v_2 + \cdots + a_{mj}v_m)\\
-    &= a_{1j}G(v_1) + a_{2j}G(v_2) + \cdots + a_{mj}G(v_m)\\
-    &= a_{1j}(b_{11}w_1 + b_{12}w_2 + \cdots + b_{1r}w_r) \\ &+ a_{2j}(b_{21}w_1 + b_{22}w_2 + \cdots + b_{2r}w_r) + \cdots \\ &+ a_{mj}(b_{m1}w_1 + b_{m2}w_2 + \cdots + b_{mr}w_r)\\
-    &= (a_{1j}b_{11} + a_{2j}b_{21} + \cdots + a_{mj}b_{m1})w_1 \\ &+ (a_{1j}b_{12} + a_{2j}b_{22} + \cdots + a_{mj}b_{m2})w_2 + \cdots \\ &+ (a_{1j}b_{1r} + a_{2j}b_{2r} + \cdots + a_{mj}b_{mr})w_r.
-  \end{align*}
-  Comparando essa última equação com (3) e usando a unicidade dos escalares obtemos
-  \[
-    c_{kj} = a_{1j}b_{k1} + a_{2j}b_{k2} + \cdots + a_{mj}b_{km}
-  \]
-  para $j=1$, \dots, $n$ e $k = 1$, \dots, $r$. Isto é, para cada par $(j,k)$ o elemento $c_{kj}$ da matriz $[(G\circ F)]_{{\mathcal{B}_U},{\mathcal{B}_W}}$ é o elemento na posição $(k,j)$ da matriz resultante da multiplicação de $[G]_{{\mathcal{B}_V},{\mathcal{B}_W}}$ por $[F]_{{\mathcal{B}_U},{\mathcal{B}_V}}$. Portanto
-  \[
-    [(G\circ F)]_{{\mathcal{B}_U},{\mathcal{B}_W}} = [G]_{{\mathcal{B}_V},{\mathcal{B}_W}}[F]_{{\mathcal{B}_U},{\mathcal{B}_V}}
-  \]
-  como queríamos.
-\end{prova}
 
 Vamos tratar, principalmente, com a representação por matrizes de transformações lineares de um espaço em si mesmo. Lembre-se que esta matriz muda de acordo com a escolha da base. Assim, deve-se prestar atenção sempre \`a base escolhida. Assim como um espaço vetorial pode ter várias bases distintas, o que acontecerá com a matriz representante de uma transformação linear quando mudamos a base ordenada? Vamos considerar $T \colon V \to V$ uma transformação linear sobre o $\cp{K}$-espaço vetorial de dimensão finita $V$ e sejam
 \[
