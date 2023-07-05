@@ -540,7 +540,7 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
 \end{exemplo}
 
 \begin{definicao}
-  Dadas $S \colon V \to W$  e $T \colon W \to U$ transformações lineares,  definimos a \textbf{composição de $T$ com $S$}\index{Transformação linear!composição}  como a aplicação: 
+  Dadas $S \colon V \to W$  e $T \colon W \to U$ transformações lineares,  definimos a \textbf{composição de $T$ com $S$}\index{Transformação linear!composição}  como a aplicação:
   \begin{align*}
     T \circ S \colon &V \to U\\
                      &v \mapsto (T\circ S)(u) = T(S(v))
@@ -852,6 +852,18 @@ Assim provamos o seguinte teorema:
   Sejam $F \colon U \to V$ e $G \colon V \to W$ duas transformações lineares onde $U$, $V$ e $W$ são $\cp{K}$-espaços vetoriais de dimensões $n$, $m$ e $r$, respectivamente. Fixe bases ordenadas $\mathcal{B}_U$, $\mathcal{B}_V$ e $\mathcal{B}_W$ para $U$, $V$ e $W$, respectivamente. Então $(G \circ F) \colon U \to W$ dada por $(G\circ F)(v) = G(F(v))$ é uma transformação linear e
   \[
     [(G \circ F)]_{{\mathcal{B}_W},{\mathcal{B}_U}} = [G]_{{\mathcal{B}_W},{\mathcal{B}_V}}[F]_{{\mathcal{B}_V},{\mathcal{B}_U}}.
+  \]
+\end{teorema}
+
+\begin{teorema}
+  Sejam $T \colon V \to V$ é um operador linear e $\mathcal{B}$ é uma base ordenada de $V$. Então as seguintes afirmações são equivalentes:
+  \begin{enumerate}[label={\roman*})]
+    \item $T$ é injetor
+    \item $[T]_\mathcal{B}$ é invertível
+  \end{enumerate}
+  Além disso, se valem essas condições equivalentes, então
+  \[
+    [T^{-1}]_\mathcal{B} = [T]_\mathcal{B}^{-1}.
   \]
 \end{teorema}
 
