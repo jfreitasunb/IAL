@@ -28,13 +28,13 @@
 
 \begin{frame}
     \begin{definicao}
-        Sejam $(V, +, \cdot)$ \pause e $(W, \oplus, \otimes)$ \pause espaços vetoriais sobre um corpo $\cp{K}$. \pause Uma função $T \colon V \to W$ \pause é uma \textbf{transformação linear} se:\pause
+        Sejam $(V, +, \cdot)$  e $(W, \oplus, \otimes)$  espaços vetoriais sobre um corpo $\cp{K}$.  Uma função $T \colon V \to W$  é uma \textbf{transformação linear} se:
         \begin{enumerate}[label={\roman*})]
-            \item $T(u_1 + u_2) \pause = T(u_1) \pause \oplus T(u_2)$ \pause para todos $u_1$, $u_2 \in V$;\pause
+            \item $T(u_1 + u_2)  = T(u_1)  \oplus T(u_2)$  para todos $u_1$, $u_2 \in V$;
 
             \vspace*{1.5cm}
 
-            \item $T(\lambda \cdot u) \pause = \lambda \pause \otimes T(u)$ \pause para todo $\lambda \in \cp{K}$ e todo $u \in V$.
+            \item $T(\lambda \cdot u)  = \lambda  \otimes T(u)$  para todo $\lambda \in \cp{K}$ e todo $u \in V$.
         \end{enumerate}
     \end{definicao}
 \end{frame}
@@ -42,63 +42,63 @@
 \begin{frame}
     \begin{observacoes}
         \begin{enumerate}[label={\roman*})]
-            \item Se $T \colon V \to V$ é uma transformação linear \pause de $V$ em $V$, então \pause $T$ é chamada de um \textbf{operador linear}.\pause
+            \item Se $T \colon V \to V$ é uma transformação linear  de $V$ em $V$, então  $T$ é chamada de um \textbf{operador linear}.
 
             \vspace*{1.5cm}
 
-            \item Para simplificar a notação, \pause vamos adotar os mesmos símbolos para indicar a soma \pause e o produto por escalar \pause nos espaços vetoriais que aparecerão no decorrer do conteúdo. \pause No entanto, deve-se estar ciente que estes símbolos podem ter significados diferentes, \pause dependendo do espaço vetorial em questão.
+            \item Para simplificar a notação,  vamos adotar os mesmos símbolos para indicar a soma  e o produto por escalar  nos espaços vetoriais que aparecerão no decorrer do conteúdo.  No entanto, deve-se estar ciente que estes símbolos podem ter significados diferentes,  dependendo do espaço vetorial em questão.
         \end{enumerate}
     \end{observacoes}
 \end{frame}
 
 \begin{frame}
     \begin{lema}
-        Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$ \pause e $T \colon V \to W$ uma transformação linear. \pause Então:\pause
+        Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$  e $T \colon V \to W$ uma transformação linear.  Então:
         \begin{enumerate}[label={\roman*})]\label{transformacao_linear_propriedades_basicas}
-            \item $T(0_V) \pause = 0_W$, \pause onde $0_V$ e $0_W$ \pause denotam os vetores nulos de $V$ e $W$, respectivamente.\pause
+            \item $T(0_V)  = 0_W$,  onde $0_V$ e $0_W$  denotam os vetores nulos de $V$ e $W$, respectivamente.
 
             \vspace*{1cm}
 
-            \item $T(-u) \pause = -T(u)$, \pause para cada $u \in V$.\pause
+            \item $T(-u)  = -T(u)$,  para cada $u \in V$.
 
             \vspace{1cm}
 
-            \item $T(\alpha_1u_1 \pause + \alpha_2u_2 \pause + \cdots + \pause \alpha_mu_m) \pause = \alpha_1 T(u_1) \pause + \alpha_2 T(u_2) \pause + \cdots + \alpha_m T(u_m)$, \pause onde $\alpha_i \in \cp{K}$ e $u_i \in V$ para $i = 1$, \dots, $m$.
+            \item $T(\alpha_1u_1  + \alpha_2u_2  + \cdots +  \alpha_mu_m)  = \alpha_1 T(u_1)  + \alpha_2 T(u_2)  + \cdots + \alpha_m T(u_m)$,  onde $\alpha_i \in \cp{K}$ e $u_i \in V$ para $i = 1$, \dots, $m$.
         \end{enumerate}
     \end{lema}
 \end{frame}
 
 \begin{frame}
     \begin{lema}
-        Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$. \pause Então uma função $T \colon V \to W$ \pause é uma transformação linear se, e somente se,\pause
+        Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$.  Então uma função $T \colon V \to W$  é uma transformação linear se, e somente se,
         \[
-        T(\lambda u_1 \pause + u_2) \pause = \lambda \pause T(u_1) \pause + T(u_2),\pause
+        T(\lambda u_1  + u_2)  = \lambda  T(u_1)  + T(u_2),
         \]
-        para todos $u_1$, $u_2 \in V$ \pause e todo $\lambda \in \cp{K}$.
+        para todos $u_1$, $u_2 \in V$  e todo $\lambda \in \cp{K}$.
     \end{lema}
 \end{frame}
 
 \begin{frame}
     \begin{teorema}\label{existencia_de_transformacao_unica_dado_valores}
-        Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$. \pause Se $\{u_1, \pause \dots, \pause u_n\}$ \pause é uma base de $V$ \pause e se $\{w_1, \pause \dots, \pause w_n\} \subseteq W$, \pause então existe uma única transformação linear \pause $T \colon V \to W$ \pause tal que $T(u_1) = w_1$, \pause $T(u_2) = w_2$, \pause \dots, $T(u_n) = w_n$.
+        Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$.  Se $\{u_1,  \dots,  u_n\}$  é uma base de $V$  e se $\{w_1,  \dots,  w_n\} \subseteq W$,  então existe uma única transformação linear  $T \colon V \to W$  tal que $T(u_1) = w_1$,  $T(u_2) = w_2$,  \dots, $T(u_n) = w_n$.
     \end{teorema}
 \end{frame}
 
 \begin{frame}
     \begin{definicao}
-        Sejam $V$ e $W$ espaços vetoriais sobre um corpo $\cp{K}$ \pause e $T \colon V \to W$ uma transformação linear.\pause
+        Sejam $V$ e $W$ espaços vetoriais sobre um corpo $\cp{K}$  e $T \colon V \to W$ uma transformação linear.
         \begin{enumerate}[label={\roman*})]
-            \item O conjunto\pause
+            \item O conjunto
             \[
-            \ker(T) \pause = \{u \in V \pause \mid T(u) = 0_W\}\pause
+            \ker(T)  = \{u \in V  \mid T(u) = 0_W\}
             \]
-            é chamado de \textbf{kernel} \pause ou \textbf{núcleo} de $T$. \pause (O núcleo de $T$ também pode ser denotado por $Nuc(T)$.)\pause
+            é chamado de \textbf{kernel}  ou \textbf{núcleo} de $T$.  (O núcleo de $T$ também pode ser denotado por $Nuc(T)$.)
 
             \vspace*{1.5cm}
 
-            \item O conjunto\pause
+            \item O conjunto
             \[
-            \im(T) \pause = \{w \in W \pause \mid \mbox{ existe } \pause u \in V \pause \mbox{ tal que } \pause T(u) = w\}\pause
+            \im(T)  = \{w \in W  \mid \mbox{ existe }  u \in V  \mbox{ tal que }  T(u) = w\}
             \]
             é chamado de \textbf{imagem} de $T$.
         \end{enumerate}
@@ -108,99 +108,99 @@
 \begin{frame}
 
     \begin{proposicao}
-        Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$ \pause e $T \colon V \to W$ uma transformação linear. \pause Então:\pause
+        Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$  e $T \colon V \to W$ uma transformação linear.  Então:
         \begin{enumerate}[label={\roman*})]
-            \item $\ker(T)$ \pause é um subespaço de $V$;\pause
+            \item $\ker(T)$  é um subespaço de $V$;
 
             \vspace*{1cm}
 
-            \item $\im(T)$ \pause é um subespaço de $W$.
+            \item $\im(T)$  é um subespaço de $W$.
         \end{enumerate}
     \end{proposicao}
 \end{frame}
 
 \begin{frame}
     \begin{teorema}[Teorema do N\'ucleo e da Imagem]\label{teorema_do_nucleo_e_da_imagem}
-        Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais \pause com $\dim_\cp{K}V$ finita. \pause Seja $T \colon V \to W$ uma transforma\c{c}\~ao linear. \pause Ent\~ao
+        Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais  com $\dim_\cp{K}V$ finita.  Seja $T \colon V \to W$ uma transforma\c{c}\~ao linear.  Ent\~ao
         \[
-            \dim_\cp{K}V \pause = \dim_\cp{K}\ker(T) \pause + \dim_\cp{K}\im(T).
+            \dim_\cp{K}V  = \dim_\cp{K}\ker(T)  + \dim_\cp{K}\im(T).
         \]
     \end{teorema}
 \end{frame}
 
 \begin{frame}
     \begin{definicao}
-        Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais \pause e $T \colon V \to W$ uma transforma\c{c}\~ao linear.\pause
+        Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais  e $T \colon V \to W$ uma transforma\c{c}\~ao linear.
         \begin{enumerate}[label={\roman*})]
-            \item Dizemos que $T$ \'e \textbf{injetora} \pause se dados $u_1$, $u_2 \in V$ \pause tais que $T(u_1) = T(u_2)$, \pause ent\~ao $u_1 = u_2$. \pause De modo equivalente, \pause se $u_1$, $u_2 \in V$ s\~ao tais que $u_1 \ne u_2$, \pause ent\~ao $T(u_1) \ne T(u_2)$.\pause
+            \item Dizemos que $T$ \'e \textbf{injetora}  se dados $u_1$, $u_2 \in V$  tais que $T(u_1) = T(u_2)$,  ent\~ao $u_1 = u_2$.  De modo equivalente,  se $u_1$, $u_2 \in V$ s\~ao tais que $u_1 \ne u_2$,  ent\~ao $T(u_1) \ne T(u_2)$.
 
             \vspace{.5cm}
 
-            \item Dizemos que $T$ \'e \textbf{sobrejetora} \pause se $\im(T) = W$. \pause Em outras palavras, \pause $T$ \'e \textbf{sobrejetora} se para todo $w \in W$, \pause existe $u \in V$ tal que $T(u) = w$.\pause
+            \item Dizemos que $T$ \'e \textbf{sobrejetora}  se $\im(T) = W$.  Em outras palavras,  $T$ \'e \textbf{sobrejetora} se para todo $w \in W$,  existe $u \in V$ tal que $T(u) = w$.
         \end{enumerate}
     \end{definicao}
 \end{frame}
 
 \begin{frame}
     \begin{proposicao}\label{caracteriza_transformacao_injetora}
-        Sejam $V$ e $W$ espa\c{c}os vetoriais sobre um corpo $\cp{K}$ \pause e $T \colon V \to W$ uma transforma\c{c}\~ao linear.
+        Sejam $V$ e $W$ espa\c{c}os vetoriais sobre um corpo $\cp{K}$  e $T \colon V \to W$ uma transforma\c{c}\~ao linear.
         \begin{enumerate}[label={\roman*})]
-            \item $T$ \'e injetora \pause se, e somente se, $\ker(T) = \{0_V\}$.
+            \item $T$ \'e injetora  se, e somente se, $\ker(T) = \{0_V\}$.
 
             \vspace{.5cm}
 
-            \item Se $\dim V = \dim W$ \pause e $T$ é injetora, \pause então $T$ transforma bases em bases, \pause isto é, se $\mathcal{B} = \{v_1, v_2, \dots, v_n\}$ é uma base de $V$, \pause então $\{T(v_1), \pause T(v_2), \pause \dots, T(v_n)\}$ é uma base de $W$.\pause
+            \item Se $\dim V = \dim W$  e $T$ é injetora,  então $T$ transforma bases em bases,  isto é, se $\mathcal{B} = \{v_1, v_2, \dots, v_n\}$ é uma base de $V$,  então $\{T(v_1),  T(v_2),  \dots, T(v_n)\}$ é uma base de $W$.
 
             \vspace{.5cm}
 
-            \item Se $\dim V = \dim W$, \pause então $T$ é injetora \pause se, e somente se, \pause $T$ é sobrejetora.
+            \item Se $\dim V = \dim W$,  então $T$ é injetora  se, e somente se,  $T$ é sobrejetora.
         \end{enumerate}
     \end{proposicao}
 \end{frame}
 
 \begin{frame}
     \begin{observacoes}
-        Seja $T \colon V \to W$ uma transformação linear, \pause onde $\dim V < \infty$ e $\dim W < \infty$.\pause
+        Seja $T \colon V \to W$ uma transformação linear,  onde $\dim V < \infty$ e $\dim W < \infty$.
         \begin{enumerate}[label={\roman*})]
-            \item Se $\dim V > \dim W$, \pause então $T$ não pode ser injetora, \pause isto é, $\ker(T) \ne \emptyset$.\pause
+            \item Se $\dim V > \dim W$,  então $T$ não pode ser injetora,  isto é, $\ker(T) \ne \emptyset$.
 
             \vspace{.5cm}
 
-            \item Se $\dim V < \dim W$, \pause então $T$ não pode ser sobrejetora, \pause isto é, $\im(T) \ne W$.
+            \item Se $\dim V < \dim W$,  então $T$ não pode ser sobrejetora,  isto é, $\im(T) \ne W$.
         \end{enumerate}
     \end{observacoes}
 \end{frame}
 
 \begin{frame}
     \begin{definicao}
-        Se $T \colon V \to W$ é uma transformação linear \pause \textbf{injetora e sobrejetora}, \pause então dizemos que $T$ é uma transformação linear \textbf{bijetora}, \pause ou que $T$ é um \textbf{isomorfismo} \pause do espaço $V$ no espaço $W$. \pause Neste caso, dizemos que o espaço $V$ é isomorfo ao espaço $W$ \pause e denotamos isso, escrevendo $V \cong W$.\pause
+        Se $T \colon V \to W$ é uma transformação linear  \textbf{injetora e sobrejetora},  então dizemos que $T$ é uma transformação linear \textbf{bijetora},  ou que $T$ é um \textbf{isomorfismo}  do espaço $V$ no espaço $W$.  Neste caso, dizemos que o espaço $V$ é isomorfo ao espaço $W$  e denotamos isso, escrevendo $V \cong W$.
     \end{definicao}
 
     \begin{teorema}
-        Seja $V$ um espaço vetorial sobre $\cp{K}$ \pause com $\dim V = n$, \pause então $V \cong \cp{K}^n$.
+        Seja $V$ um espaço vetorial sobre $\cp{K}$  com $\dim V = n$,  então $V \cong \cp{K}^n$.
     \end{teorema}
 \end{frame}
 
 \begin{frame}
     \begin{observacoes}
-        Seja $V$ um espaço vetorial sobre $\cp{K}$ \pause com $\dim V = n$. \pause Então do teorema anterior temos:\pause
+        Seja $V$ um espaço vetorial sobre $\cp{K}$  com $\dim V = n$.  Então do teorema anterior temos:
         \begin{enumerate}[label={\roman*})]
-            \item Se $\cp{K} = \rac$, \pause então $V \cong \rac^n$.\pause
+            \item Se $\cp{K} = \rac$,  então $V \cong \rac^n$.
 
             \vspace{.5cm}
 
-            \item Se $\cp{K} = \real$, \pause então $V \cong \real^n$.\pause
+            \item Se $\cp{K} = \real$,  então $V \cong \real^n$.
 
             \vspace{.5cm}
             
-            \item Se $\cp{K} = \complex$, \pause então $V \cong \complex^n$.
+            \item Se $\cp{K} = \complex$,  então $V \cong \complex^n$.
         \end{enumerate}
     \end{observacoes}
 \end{frame}
 
 \begin{frame}
     \begin{definicao}
-        Dadas $S \colon V \to W$ \pause e $T \colon W \to U$ transformações lineares, \pause definimos a \textbf{composição de $T$ com $S$} \pause como a aplicação:\pause 
+        Dadas $S \colon V \to W$  e $T \colon W \to U$ transformações lineares,  definimos a \textbf{composição de $T$ com $S$}  como a aplicação: 
         \begin{align*}
             T \circ S \colon &V \to U\\
                              &v \mapsto (T\circ S)(u) = T(S(v))
@@ -210,71 +210,71 @@
 
 \begin{frame}
     \begin{proposicao}
-        Se $S \colon V \to W$ e $T \colon W \to U$ são transformações lineares, \pause então a composição de $T\circ S$ também é uma transformação linear.
+        Se $S \colon V \to W$ e $T \colon W \to U$ são transformações lineares,  então a composição de $T\circ S$ também é uma transformação linear.
     \end{proposicao}
 \end{frame}
 
 
 \begin{frame}
     \begin{definicao}
-        Dado $T \colon V \to V$ um operador linear, \pause dizemos que $T$ é \textbf{invertível} \pause se existe outra aplicação $T^{-1} \colon V \to V$ \pause tal que para qualquer $u \in V$, \pause $T^{-1}(T(u)) = u$.
+        Dado $T \colon V \to V$ um operador linear,  dizemos que $T$ é \textbf{invertível}  se existe outra aplicação $T^{-1} \colon V \to V$  tal que para qualquer $u \in V$,  $T^{-1}(T(u)) = u$.
     \end{definicao}
 \end{frame}
 
 \begin{frame}
     \begin{observacoes}
         \begin{enumerate}[label={\roman*})]
-            \item Seja $I = I_V = Id = Id_V \colon V \to V$ \pause a transformação linear tal que $I(u) = Id(u) = u$ \pause para todo $u \in V$. \pause Então $I = Id$ é chamado de \textbf{operador identidade}.\pause
+            \item Seja $I = I_V = Id = Id_V \colon V \to V$  a transformação linear tal que $I(u) = Id(u) = u$  para todo $u \in V$.  Então $I = Id$ é chamado de \textbf{operador identidade}.
 
             \vspace{.5cm}
 
-            \item Se $T \colon V \to V$ é uma transformação linear invertível, \pause então a aplicação $T^{-1} \colon V \to V$ também é uma transformação linear.\pause
+            \item Se $T \colon V \to V$ é uma transformação linear invertível,  então a aplicação $T^{-1} \colon V \to V$ também é uma transformação linear.
 
             \vspace{.5cm}
 
-            \item Se $T \colon V \to V$ é um operador invertível, \pause então $T^{-1} \colon V \to V$ é chamado de \textbf{operador inverso de $T$}.
+            \item Se $T \colon V \to V$ é um operador invertível,  então $T^{-1} \colon V \to V$ é chamado de \textbf{operador inverso de $T$}.
         \end{enumerate}
     \end{observacoes}
 \end{frame}
 
 \begin{frame}
     \begin{proposicao}
-        Seja $T \colon V \to V$ um operador linear. \pause Então:\pause
+        Seja $T \colon V \to V$ um operador linear.  Então:
         \begin{enumerate}[label={\roman*})]
-            \item Se $T$ é invertível \pause e $T^{-1} \colon V \to V$ é o seu inverso, \pause então
+            \item Se $T$ é invertível  e $T^{-1} \colon V \to V$ é o seu inverso,  então
                 \[
-                    (T^{-1} \circ T) = \pause (T \circ T^{-1}) = \pause Id.\pause
+                    (T^{-1} \circ T) =  (T \circ T^{-1}) =  Id.
                 \]
 
             \vspace{.5cm}
 
-            \item Se $V$ tem dimensão finita, \pause então $T$ é invertível \pause se, e somente se, \pause $\ker(T) = \{0_V\}$.\pause
+            \item Se $V$ tem dimensão finita,  então $T$ é invertível  se, e somente se,  $\ker(T) = \{0_V\}$.
 
             \vspace{.5cm}
 
-            \item Se $T$ é invertível, \pause então dada uma base $\{v_1, v_2, \dots, v_n\}$ de $V$, \pause o conjunto $\{T(v_1), \pause T(v_2), \pause \dots, T(v_n)\}$ \pause é uma base de $V$.
+            \item Se $T$ é invertível,  então dada uma base $\{v_1, v_2, \dots, v_n\}$ de $V$,  o conjunto $\{T(v_1),  T(v_2),  \dots, T(v_n)\}$  é uma base de $V$.
         \end{enumerate}
     \end{proposicao}
 \end{frame}
 
 \begin{frame}
     \begin{proposicao}
-        Se $S \colon V \to V$ e $T \colon V \to V$ \pause são operadores invertíveis, \pause então $S \circ T$ é invertível e\pause
+        Se $S \colon V \to V$ e $T \colon V \to V$  são operadores invertíveis,  então $S \circ T$ é invertível e
         \[
-            (S \circ T)^{-1} \pause = T^{-1} \pause \circ S^{-1}.
+            (S \circ T)^{-1}  = T^{-1}  \circ S^{-1}.
         \]
     \end{proposicao}
 \end{frame}
 
 \begin{frame}
     \begin{teorema}\label{teorema_toda_transformacao_matriz}
-        Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$, \pause de dimensões $p \ge 1$ e $q \ge 1$, respectivamente. \pause Sejam $\mathcal{B}_V$ e $\mathcal{B}_W$ bases ordenadas de $V$ e $W$, respectivamente. \pause Então para cada transformação linear $T \colon V \to W$, \pause existe uma matriz $A \in \cp{M}_{q\times p}(\cp{K})$ tal que\pause
+        Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$,  de dimensões $p \ge 1$ e $q \ge 1$, respectivamente.  Sejam $\mathcal{B}_V$ e $\mathcal{B}_W$ bases ordenadas de $V$ e $W$, respectivamente.  Então para cada transformação linear $T \colon V \to W$,  existe uma matriz $A \in \cp{M}_{q\times p}(\cp{K})$ tal que
         \[
-            [T(x)]_{\mathcal{B}_W} \pause = A[x]_{\mathcal{B}_V}\pause
+            [T(x)]_{\mathcal{B}_W}  = A[x]_{\mathcal{B}_V}
         \]
-        para todo vetor $x \in V$. \pause Além disso, \pause a cada matriz $C \in \cp{M}_{q\times p}(\cp{K})$ \pause corresponde uma transformação linear $T \colon V \to W$ tal que\pause
+        para todo vetor $x \in V$.  Além disso,  a cada matriz $C \in \cp{M}_{q\times p}(\cp{K})$  corresponde uma transformação linear $T \colon V \to W$ tal que
         \[
-            [T(x)]_{\mathcal{B}_W} \pause = C[x]_{\mathcal{B}_V}\pause
+            [T(x)]_{\mathcal{B}_W}  = C[x]_{\mathcal{B}_V}
         \]
         para todo $x \in V$.
     \end{teorema}
@@ -282,59 +282,59 @@
 
 \begin{frame}
     \begin{definicao}
-        A matriz $A \in \cp{M}_{q\times p}(\cp{K})$ do Teorema anterior \pause é chamada de \textbf{matriz da transformação linear} \pause $T$ com respeito às bases ordenadas $\mathcal{B}_V$ e $\mathcal{B}_W$ \pause e será denotada por\pause
+        A matriz $A \in \cp{M}_{q\times p}(\cp{K})$ do Teorema anterior  é chamada de \textbf{matriz da transformação linear}  $T$ com respeito às bases ordenadas $\mathcal{B}_V$ e $\mathcal{B}_W$  e será denotada por
         \[
-            A = [T]_{\mathcal{B}_{W},\mathcal{B}_{V}}.\pause
+            A = [T]_{\mathcal{B}_{W},\mathcal{B}_{V}}.
         \]
-        No caso em que $V = W$ \pause e $\mathcal{B}_V = \mathcal{B}_W = \mathcal{B}$, \pause denotaremos $[T]_{\mathcal{B}_{V},\mathcal{B}_{W}}$ \pause simplesmente por $[T]_\mathcal{B}$.
+        No caso em que $V = W$  e $\mathcal{B}_V = \mathcal{B}_W = \mathcal{B}$,  denotaremos $[T]_{\mathcal{B}_{V},\mathcal{B}_{W}}$  simplesmente por $[T]_\mathcal{B}$.
     \end{definicao}
 \end{frame}
 
 \begin{frame}
     \begin{teorema}\label{matriz_da_composicao_de_transformacoes}
-        Sejam $F \colon U \to V$ \pause e $G \colon V \to W$ \pause duas transformações lineares onde $U$, $V$ e $W$ \pause são espaços vetoriais $\cp{K}$ \pause de dimensões $n$, $m$ e $r$, respectivamente. \pause Fixe bases ordenadas $\mathcal{B}_U$, \pause $\mathcal{B}_V$ \pause e $\mathcal{B}_W$ \pause para $U$, $V$ e $W$, respectivamente. \pause Então $(G \circ F) \colon U \to W$ \pause dada por $(G\circ F)(v) = G(F(v))$ \pause é uma transformação linear e\pause
+        Sejam $F \colon U \to V$  e $G \colon V \to W$  duas transformações lineares onde $U$, $V$ e $W$  são espaços vetoriais $\cp{K}$  de dimensões $n$, $m$ e $r$, respectivamente.  Fixe bases ordenadas $\mathcal{B}_U$,  $\mathcal{B}_V$  e $\mathcal{B}_W$  para $U$, $V$ e $W$, respectivamente.  Então $(G \circ F) \colon U \to W$  dada por $(G\circ F)(v) = G(F(v))$  é uma transformação linear e
         \[
-            [(G \circ F)]_{{\mathcal{B}_W},{\mathcal{B}_U}} \pause = [G]_{{\mathcal{B}_W},{\mathcal{B}_V}}[F]_{{\mathcal{B}_V},{\mathcal{B}_U}}.
+            [(G \circ F)]_{{\mathcal{B}_W},{\mathcal{B}_U}}  = [G]_{{\mathcal{B}_W},{\mathcal{B}_V}}[F]_{{\mathcal{B}_V},{\mathcal{B}_U}}.
         \]
     \end{teorema}
 \end{frame}
 
 \begin{frame}
     \begin{teorema}
-        Sejam $T \colon V \to V$ é um operador linear \pause e $\mathcal{B}$ é uma base ordenada de $V$. \pause Então as seguintes afirmações são equivalentes:\pause
+        Sejam $T \colon V \to V$ é um operador linear  e $\mathcal{B}$ é uma base ordenada de $V$.  Então as seguintes afirmações são equivalentes:
         \begin{enumerate}[label={\roman*})]
-            \item $T$ é injetor\pause
+            \item $T$ é injetor
 
             \vspace{1cm}
 
-            \item $[T]_\mathcal{B}$ é invertível.\pause
+            \item $[T]_\mathcal{B}$ é invertível.
         \end{enumerate}
 
         \vspace{.2cm}
 
-        Além disso, se valem essas condições equivalentes, então\pause
+        Além disso, se valem essas condições equivalentes, então
         \[
-            [T^{-1}]_\mathcal{B} \pause = [T]_\mathcal{B}^{-1}.
+            [T^{-1}]_\mathcal{B}  = [T]_\mathcal{B}^{-1}.
         \]
     \end{teorema}
 \end{frame}
 
 \begin{frame}
     \begin{teorema}\label{teorema_mudanca_base}
-        Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$, \pause $\mathcal{B}_1$ e $\mathcal{B}_2$ bases ordenadas de $V$. \pause Então existe uma única matriz $P \in \cp{M}_n(\cp{K})$, \pause necessariamente invertível tal que\pause
+        Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$,  $\mathcal{B}_1$ e $\mathcal{B}_2$ bases ordenadas de $V$.  Então existe uma única matriz $P \in \cp{M}_n(\cp{K})$,  necessariamente invertível tal que
         \begin{enumerate}[label={\roman*})]
-            \item $[x]_{\mathcal{B}_1} = \pause P[x]_{\mathcal{B}_2}$\pause
+            \item $[x]_{\mathcal{B}_1} =  P[x]_{\mathcal{B}_2}$
 
             \vspace{1cm}
 
-            \item $[x]_{\mathcal{B}_2} = \pause P^{-1}[x]_{\mathcal{B}_1}$\pause
+            \item $[x]_{\mathcal{B}_2} =  P^{-1}[x]_{\mathcal{B}_1}$
         \end{enumerate}
         
         \vspace{.2cm}
 
-        para todo $x \in V$. \pause As colunas de $P = \begin{bmatrix}P_1 & P_2 & \cdots & P_n \end{bmatrix}$ \pause são dadas por\pause
+        para todo $x \in V$.  As colunas de $P = \begin{bmatrix}P_1 & P_2 & \cdots & P_n \end{bmatrix}$  são dadas por
         \[
-            P_j = [w_j]_{\mathcal{B}_1}\pause
+            P_j = [w_j]_{\mathcal{B}_1}
         \]
         para $j = 1$, \dots, $n$.
     \end{teorema}
@@ -342,13 +342,13 @@
 
 \begin{frame}
     \begin{teorema}\label{teorema_matriz_mudanca_base}
-        Seja $P \in \cp{M}_n(\cp{K})$ um matriz invertível. \pause Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$ \pause e $\mathcal{B}_1$ uma base ordenada de $V$. \pause Então existe uma única base ordenada $\mathcal{B}_2$ \pause de $V$ tal que\pause
+        Seja $P \in \cp{M}_n(\cp{K})$ um matriz invertível.  Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$  e $\mathcal{B}_1$ uma base ordenada de $V$.  Então existe uma única base ordenada $\mathcal{B}_2$  de $V$ tal que
         \begin{enumerate}[label={\roman*})]
-            \item $[x]_{\mathcal{B}_1} = \pause P[x]_{\mathcal{B}_2}$\pause
+            \item $[x]_{\mathcal{B}_1} =  P[x]_{\mathcal{B}_2}$
 
             \vspace{1cm}
             
-            \item $[x]_{\mathcal{B}_2} = \pause P^{-1}[x]_{\mathcal{B}_1}$\pause
+            \item $[x]_{\mathcal{B}_2} =  P^{-1}[x]_{\mathcal{B}_1}$
         \end{enumerate}
 
         \vspace{.2cm}
@@ -359,7 +359,7 @@
 
 \begin{frame}
     \begin{definicao}
-        A matriz $P \in \cp{M}_n(\cp{K})$ \pause do Teorema anterior \pause é chamada de \textbf{matriz de mudança de base} \pause e é denotada por $P = [I]_{{\mathcal{B}_1},{\mathcal{B}_2}}$.
+        A matriz $P \in \cp{M}_n(\cp{K})$  do Teorema anterior  é chamada de \textbf{matriz de mudança de base}  e é denotada por $P = [I]_{{\mathcal{B}_1},{\mathcal{B}_2}}$.
     \end{definicao}
 \end{frame}
 \end{document}
