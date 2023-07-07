@@ -863,13 +863,13 @@ $ e $\mathcal{B}_2$. Depois, use essa matriz para calcular $T(2x^2 - 4x + 1)$.
       daí
       \begin{align*}
         [T(x^2)]_{\mathcal{B}_2} &= \begin{bmatrix}2\\3\end{bmatrix}\\
-        [T(x)]_{\mathcal{B}_2} &= \begin{bmatrix}-3\\4\end{bmatrix}\\
+        [T(x)]_{\mathcal{B}_2} &= \begin{bmatrix}-3\\\phantom{-}4\end{bmatrix}\\
         [T(1)]_{\mathcal{B}_2} &= \begin{bmatrix}1\\1\end{bmatrix}
       \end{align*}
       Logo
       \begin{align*}
         [T]_{\mathcal{B}_1, \mathcal{B}_2} &= [[T(x^2)]_{\mathcal{B}_2}]\ [T(x)]_{\mathcal{B}_2}\ [T(1)]_{\mathcal{B}_2}]]]\\
-        [T]_{\mathcal{B}_1, \mathcal{B}_2} &= \begin{bmatrix}2 & -3 & 1\\3 & 4 & 1\end{bmatrix}
+        [T]_{\mathcal{B}_1, \mathcal{B}_2} &= \begin{bmatrix}2 & -3 & 1\\3 & \phantom{-}4 & 1\end{bmatrix}
       \end{align*}
 
       Agora, para calcular $T(2x^2 - 4x + 1)$ podemos usar a equação
@@ -878,7 +878,7 @@ $ e $\mathcal{B}_2$. Depois, use essa matriz para calcular $T(2x^2 - 4x + 1)$.
       \]
       Como $\mathcal{B}_1$ é a base canônica de $\mathcal{P}_2(\real)$ temos
       \begin{align*}
-        [T(2x^2 - 4x + 1)]_{\mathcal{B}_2} = \begin{bmatrix}2 & -3 & 1\\3 & 4 & 1\end{bmatrix}\begin{bmatrix}2 \\ -4\\1\end{bmatrix}\\
+        [T(2x^2 - 4x + 1)]_{\mathcal{B}_2} = \begin{bmatrix}2 & -3 & 1\\3 & \phantom{-}4 & 1\end{bmatrix}\begin{bmatrix}\phantom{-}2 \\ -4\\\phantom{-}1\end{bmatrix}\\
         [T(2x^2 - 4x + 1)]_{\mathcal{B}_2} = \begin{bmatrix}17 \\ -9\end{bmatrix}_{\mathcal{B}_2}
       \end{align*}
       assim
@@ -902,14 +902,14 @@ $ e $\mathcal{B}_2$. Depois, use essa matriz para calcular $T(2x^2 - 4x + 1)$.
       \end{align*}
       daí
       \begin{align*}
-        [T(x^2 - 2)]_{\mathcal{C}_2} &= \begin{bmatrix}-5\\2\end{bmatrix}\\
-        [T(2x - 1)]_{\mathcal{C}_2} &= \begin{bmatrix}-56\\21\end{bmatrix}\\
-        [T(x^2 + 4x - 1)]_{\mathcal{C}_2} &= \begin{bmatrix}-123\\47\end{bmatrix}
+        [T(x^2 - 2)]_{\mathcal{C}_2} &= \begin{bmatrix}-5\\\phantom{-}2\end{bmatrix}\\
+        [T(2x - 1)]_{\mathcal{C}_2} &= \begin{bmatrix}-56\\\phantom{-}21\end{bmatrix}\\
+        [T(x^2 + 4x - 1)]_{\mathcal{C}_2} &= \begin{bmatrix}-123\\\phantom{-}47\end{bmatrix}
       \end{align*}
       Logo
       \begin{align*}
         [T]_{\mathcal{C}_1, \mathcal{C}_2} &= [[T(x^2 - 2)]_{\mathcal{C}_2}]\ [T(2x - 1)]_{\mathcal{C}_2}\ [T(x^2 + 4x - 1)]_{\mathcal{C}_2}]]]\\
-        [T]_{\mathcal{C}_1, \mathcal{C}_2} &= \begin{bmatrix}-5 & -56 & -123\\2 & 21 & 47\end{bmatrix}
+        [T]_{\mathcal{C}_1, \mathcal{C}_2} &= \begin{bmatrix}-5 & -56 & -123\\\phantom{-}2 & \phantom{-}21 & \phantom{-}47\end{bmatrix}
       \end{align*}
 
       Agora, para calcular $T(2x^2 - 4x + 1)$, primeiro escrevemos
@@ -922,7 +922,7 @@ $ e $\mathcal{B}_2$. Depois, use essa matriz para calcular $T(2x^2 - 4x + 1)$.
       \]
       temos
       \begin{align*}
-        [T(2x^2 - 4x + 1)]_{\mathcal{C}_2} = \begin{bmatrix}-5 & -56 & -123\\2 & 21 & 47\end{bmatrix}\begin{bmatrix}1 \\ -4\\1\end{bmatrix}\\
+        [T(2x^2 - 4x + 1)]_{\mathcal{C}_2} = \begin{bmatrix}-5 & -56 & -123\\\phantom{-}2 & \phantom{-}21 & \phantom{-}47\end{bmatrix}\begin{bmatrix}\phantom{-}1 \\ -4\\\phantom{-}1\end{bmatrix}\\
         [T(2x^2 - 4x + 1)]_{\mathcal{C}_2} = \begin{bmatrix}17 \\ -9\end{bmatrix}_{\mathcal{C}_2}
       \end{align*}
       assim
@@ -933,7 +933,7 @@ $ e $\mathcal{B}_2$. Depois, use essa matriz para calcular $T(2x^2 - 4x + 1)$.
 
   \item Seja $T \real^3 \to \real^3$ o operador linear cuja matriz em relação à base canônica $\mathcal{B} = \{e_1 = (1, 0, 0); e_2 = (0, 1, 0); e_3 = (0, 0, 1)\}$ é
     \[
-      [T]_\mathcal{B} = \begin{bmatrix}1 & 2 & -1\\-2 & -3 & 1\\2 & 2 & -2\end{bmatrix}.
+      [T]_\mathcal{B} = \begin{bmatrix}\phantom{-}1 & \phantom{-}2 & -1\\-2 & -3 & \phantom{-}1\\\phantom{-}2 & \phantom{-}2 & -2\end{bmatrix}.
     \]
     Encontre $T(x, y, z)$ e determine $[T]_{\mathcal{B}_1}$, onde ${\mathcal{B}_1} = \{(1, 0, 2); (0, 1, 2); (1, -1, 1)\}$.
     \begin{solucao}
@@ -944,7 +944,7 @@ $ e $\mathcal{B}_2$. Depois, use essa matriz para calcular $T(2x^2 - 4x + 1)$.
       Daí
       \begin{align*}
         [T(x, y, z)]_\mathcal{B} &= [T]_\mathcal{B}[(x, y, z)]_\mathcal{B}\\
-        [T(x, y, z)]_\mathcal{B} &= \begin{bmatrix}1 & 2 & -1\\-2 & -3 & 1\\2 & 2 & -2\end{bmatrix}\begin{bmatrix}1 & 2 & -1\\-2 & -3 & 1\\2 & 2 & -2\end{bmatrix}\\
+        [T(x, y, z)]_\mathcal{B} &= \begin{bmatrix}\phantom{-}1 & \phantom{-}2 & -1\\-2 & -3 & \phantom{-}1\\\phantom{-}2 & \phantom{-}2 & -2\end{bmatrix}\begin{bmatrix}1 & 2 & -1\\-2 & -3 & 1\\2 & 2 & -2\end{bmatrix}\\
         [T(x, y, z)]_\mathcal{B} &= \begin{bmatrix}x + 2y - z\\-2x - 3y + z\\2x + 2y - 2z\end{bmatrix}
       \end{align*}
       Assim
@@ -960,7 +960,7 @@ $ e $\mathcal{B}_2$. Depois, use essa matriz para calcular $T(2x^2 - 4x + 1)$.
       \end{align*}
       e então
       \[
-        [T]_{\mathcal{B}_1} = \begin{bmatrix}-1 & 0 & 0\\0 & -1 & 0\\0 & 0 & -2\end{bmatrix}.
+        [T]_{\mathcal{B}_1} = \begin{bmatrix}-1 & \phantom{-}0 & \phantom{-}0\\\phantom{-}0 & -1 & \phantom{-}0\\\phantom{-}0 & \phantom{-}0 & -2\end{bmatrix}.
       \]
     \end{solucao}
   \end{enumerate}
@@ -1143,11 +1143,11 @@ e então por definição $[G]_{\mathcal{B}_1} = P$. Desse modo, temos o seguinte
         \end{align*}
         e com isso
         \[
-          [I]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}1 & 2 & 3\\2 & -1 & 3\\-3 & 1 & -3\end{bmatrix}.
+          [I]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}\phantom{-}1 & \phantom{-}2 & \phantom{-}3\\\phantom{-}2 & -1 & \phantom{-}3\\-3 & \phantom{-}1 & -3\end{bmatrix}.
         \]
         Agora, a matriz mudança de base de $\mathcal{B}_2$ para $\mathcal{B}_1$ será dada por $[I]_{\mathcal{B}_2, \mathcal{B}_1} = [I]_{\mathcal{B}_1, \mathcal{B}_2}^{-1}$:
         \[
-          [I]_{\mathcal{B}_2, \mathcal{B}_1} = \begin{bmatrix}0 & -1 & -1\\1/3 & -2/3 & -1/3\\1/9 & 7/9 & 5/9\end{bmatrix}.
+          [I]_{\mathcal{B}_2, \mathcal{B}_1} = \begin{bmatrix}0 & -1 & -1\\1/3 & -2/3 & -1/3\\1/9 & \phantom{-}7/9 & \phantom{-}5/9\end{bmatrix}.
         \]
         Com isso, se por exemplo, $u \in \real^3$ é tal que
         \[
@@ -1155,7 +1155,7 @@ e então por definição $[G]_{\mathcal{B}_1} = P$. Desse modo, temos o seguinte
         \]
         então
         \[
-          [u]_{\mathcal{B}_2} = [I]_{\mathcal{B}_2, \mathcal{B}_1}\begin{bmatrix}1\\0\\1\end{bmatrix} = \begin{bmatrix}-1\\0\\2/3\end{bmatrix}.
+          [u]_{\mathcal{B}_2} = [I]_{\mathcal{B}_2, \mathcal{B}_1}\begin{bmatrix}1\\0\\1\end{bmatrix} = \begin{bmatrix}-1\\\phantom{-}0\\2/3\end{bmatrix}.
         \]
       \end{solucao}
 
@@ -1203,7 +1203,7 @@ e então por definição $[G]_{\mathcal{B}_1} = P$. Desse modo, temos o seguinte
 
   \item Seja $T \colon \real^3 \to \real^3$ um operador linear cuja matriz com relação à base ordenada canônica, $\mathcal{B} = \{e_1 = (1, 0, 0); e_2 = (0, 1, 0); e_3 = (0, 0 ,1)\}$, é
     \[
-      [T]_\mathcal{B} = \begin{bmatrix}1 & 1 & 0\\-1 & 0 & 1\\0 & -1 & -1\end{bmatrix}.
+      [T]_\mathcal{B} = \begin{bmatrix}\phantom{-}1 & \phantom{-}1 & \phantom{-}0\\-1 & \phantom{-}0 & \phantom{-}1\\\phantom{-}0 & -1 & -1\end{bmatrix}.
     \]
     Qual é a matriz de $T$ em relação à base $\mathcal{B}_1 = \{(-1, 1, 0); (1, -1, 1); (0, 1, -1)\}$?
     \begin{solucao}
@@ -1215,7 +1215,7 @@ e então por definição $[G]_{\mathcal{B}_1} = P$. Desse modo, temos o seguinte
       \end{align*}
       logo
       \[
-        P = [I]_{\mathcal{B}, \mathcal{B}_1} = \begin{bmatrix}-1 & 1 & 0\\1 & -1 & 1\\0 & 1 & 1\end{bmatrix}.
+        P = [I]_{\mathcal{B}, \mathcal{B}_1} = \begin{bmatrix}-1 & \phantom{-}1 & 0\\\phantom{-}1 & -1 & 1\\\phantom{-}0 & \phantom{-}1 & 1\end{bmatrix}.
       \]
       Assim
       \[
@@ -1227,7 +1227,7 @@ e então por definição $[G]_{\mathcal{B}_1} = P$. Desse modo, temos o seguinte
       \]
       Fazendo os cálculos encontramos
       \[
-        [T]_{\mathcal{B}_1} = \begin{bmatrix}0 & 0 & -1\\0 & 0 & 0\\1 & 0 & 0\end{bmatrix}.
+        [T]_{\mathcal{B}_1} = \begin{bmatrix}0 & 0 & -1\\0 & 0 & \phantom{-}0\\1 & 0 & \phantom{-}0\end{bmatrix}.
       \]
     \end{solucao}
 
