@@ -1127,6 +1127,38 @@ e então por definição $[G]_{\mathcal{B}_1} = P$. Desse modo, temos o seguinte
 
 \begin{exemplos}
   \begin{enumerate}[label={\arabic*})]
+    \item Sejam $\mathcal{B}_1 = \{(1, 1, 1); (0, 1, 0); (0, 0, 1)\}$ e $\mathcal{B}_2 = \{(1, 3, -2); (2, 1, 3); (3, 6, 0)\}$ bases ordenadas de $\real^3$. Ache a matriz mudança de base $[I]_{\mathcal{B}_1, \mathcal{B}_2}$ e $[I]_{\mathcal{B}_2, \mathcal{B}_1}$.
+      \begin{solucao}
+        Para encontrar $[I]_{\mathcal{B}_1, \mathcal{B}_2}$ devemos escrever os vetores de $\mathcal{B}_2$ como combinação linear dos vetores de $\mathcal{B}_1$.
+
+        Primeiro, para um vetor genérico $(x, y, z) \in \real^3$ temos
+        \[
+          (x, y, z) = \alpha(1, 1, 1) + \beta(0, 1, 0) + \gamma(0, 0, 1)
+        \]
+        onde $\alpha = x$, $\beta = y - x$ e $\gamma = z - x$. Assim
+        \begin{align*}
+          (1, 3, -2) &= 1(1, 1, 1) + 2(0, 1, 0) - 3(0, 0, 1)\\
+          (2, 1, 3) &= 1(1, 1, 1) - 1(0, 1, 0) + 1(0, 0, 1)\\
+          (3, 6, 0) &= 3(1, 1, 1) + 3(0, 1, 0) - 3(0, 0, 1)
+        \end{align*}
+        e com isso
+        \[
+          [I]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}1 & 2 & 3\\2 & -1 & 3\\-3 & 1 & -3\end{bmatrix}.
+        \]
+        Agora, a matriz mudança de base de $\mathcal{B}_2$ para $\mathcal{B}_1$ será dada por $[I]_{\mathcal{B}_2, \mathcal{B}_1} = [I]_{\mathcal{B}_1, \mathcal{B}_2}^{-1}$:
+        \[
+          [I]_{\mathcal{B}_2, \mathcal{B}_1} = \begin{bmatrix}0 & -1 & -1\\1/3 & -2/3 & -1/3\\1/9 & 7/9 & 5/9\end{bmatrix}.
+        \]
+        Com isso, se por exemplo, $u \in \real^3$ é tal que
+        \[
+          [u]_{\mathcal{B}_1} = \begin{bmatrix}1\\0\\1\end{bmatrix}
+        \]
+        então
+        \[
+          [u]_{\mathcal{B}_2} = [I]_{\mathcal{B}_2, \mathcal{B}_1}\begin{bmatrix}1\\0\\1\end{bmatrix} = \begin{bmatrix}-1\\0\\2/3\end{bmatrix}.
+        \]
+      \end{solucao}
+
     \item Seja $T \colon \real^2 \to \real^2$ dada por $T(x,y) = (x,0)$. Sabemos que com relação \`a base $\mathcal{B}_1 = \{e_1=(1,0);e_2=(0,1)\}$ a matriz de $T$ é
     \[
       [T_{\mathcal{B}_1} = \begin{bmatrix}
