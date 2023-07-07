@@ -1231,60 +1231,63 @@ e então por definição $[G]_{\mathcal{B}_1} = P$. Desse modo, temos o seguinte
       \]
     \end{solucao}
 
-    \item Seja $\mathcal{D} \colon \mathcal{P}_3(\real) \to \mathcal{P}_3(\real)$ a transformação derivada. Considere a base $\mathcal{B}_1 = \{f_1 = 1; f_2 = x; f_3 = x^2; f_4 = x^3\}$. Tome $t \in \real$ e defina
+    \item Seja $D \colon \mathcal{P}_3(\real) \to \mathcal{P}_3(\real)$ a transformação derivada. Considere a base ordenada $\mathcal{B}_1 = \{1, x, x^2, x^3\}$. Tome $t \in \real$ e defina
     \[
       \mathcal{B}_2 = \{g_1 = 1; g_2 = (x + t); g_3 = (x + t)^2; g_4 = (x + t)^3\}.
     \]
-    Assim
-    \begin{align*}
-      g_1 &= 1f_1 + 0f_2 + 0f_3 + 0f_4\\
-      g_2 &= tf_1 + xf_2 + 0f_3 + 0f_4\\
-      g_3 &= t^2f_1 + 2tf_2 + 1f_3 + 0f_4\\
-      g_4 &= t^3f_1 + 3t^2f_2 + 3tf_3 + 1f_4\\
-    \end{align*}
-    e então
-    \[
-      P = \begin{bmatrix}
-        1 & t & t^2 & t^3\\
-        0 & 1 & 2t & 3t^2\\
-        0 & 0 & 1 & 3t\\
-        0 & 0 & 0 & 1
-      \end{bmatrix}
-    \]
-    é invertível com
-    \[
-      P^{-1} = \begin{bmatrix}
-        1 & -t & \phantom{-}t^2 & -t^3\\
-        0 & \phantom{-}1 & -2t & \phantom{-}3t^2\\
-        0 & \phantom{-}0 & \phantom{-}1 & -3t\\
-        0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}1
-      \end{bmatrix}.
-    \]
-    Agora
-    \begin{align*}
-      D(f_1) &= 0\\
-      D(f_2) &= 1\\
-      D(f_3) &= 2x\\
-      D(f_4) &= 3x^2
-    \end{align*}
-    e então
-    \[
-      [D]_{\mathcal{B}_1} = \begin{bmatrix}
-        0 & 1 & 0 & 0\\
-        0 & 0 & 2 & 0\\
-        0 & 0 & 0 & 3\\
-        0 & 0 & 0 & 0
-      \end{bmatrix}.
-    \]
-    Logo
-    \[
-      [D]_{\mathcal{B}_2} = P^{-1}[D]_{\mathcal{B}_1}P = \begin{bmatrix}
-        0 & 1 & 0 & 0\\
-        0 & 0 & 2 & 0\\
-        0 & 0 & 0 & 3\\
-        0 & 0 & 0 & 0
-      \end{bmatrix}.
-    \]
+    Assim $\mathcal{B}_2$ é uma base para $\mathcal{P}_2(\real)$. Determine $[D]_{\mathcal{B}_2}$.
+    \begin{solucao}
+      Primeiro vamos encontrar a matriz mudança de base de $\mathcal{B}_1$ para $\mathcal{B}_2$:
+      \begin{align*}
+        g_1 &= 1f_1 + 0f_2 + 0f_3 + 0f_4\\
+        g_2 &= tf_1 + xf_2 + 0f_3 + 0f_4\\
+        g_3 &= t^2f_1 + 2tf_2 + 1f_3 + 0f_4\\
+        g_4 &= t^3f_1 + 3t^2f_2 + 3tf_3 + 1f_4\\
+      \end{align*}
+      e então
+      \[
+        P = \begin{bmatrix}
+          1 & t & t^2 & t^3\\
+          0 & 1 & 2t & 3t^2\\
+          0 & 0 & 1 & 3t\\
+          0 & 0 & 0 & 1
+        \end{bmatrix}
+      \]
+      é invertível com
+      \[
+        P^{-1} = \begin{bmatrix}
+          1 & -t & \phantom{-}t^2 & -t^3\\
+          0 & \phantom{-}1 & -2t & \phantom{-}3t^2\\
+          0 & \phantom{-}0 & \phantom{-}1 & -3t\\
+          0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}1
+        \end{bmatrix}.
+      \]
+      Agora
+      \begin{align*}
+        D(f_1) &= 0\\
+        D(f_2) &= 1\\
+        D(f_3) &= 2x\\
+        D(f_4) &= 3x^2
+      \end{align*}
+      e então
+      \[
+        [D]_{\mathcal{B}_1} = \begin{bmatrix}
+          0 & 1 & 0 & 0\\
+          0 & 0 & 2 & 0\\
+          0 & 0 & 0 & 3\\
+          0 & 0 & 0 & 0
+        \end{bmatrix}.
+      \]
+      Logo
+      \[
+        [D]_{\mathcal{B}_2} = P^{-1}[D]_{\mathcal{B}_1}P = \begin{bmatrix}
+          0 & 1 & 0 & 0\\
+          0 & 0 & 2 & 0\\
+          0 & 0 & 0 & 3\\
+          0 & 0 & 0 & 0
+        \end{bmatrix}.
+      \]
+    \end{solucao}
   \end{enumerate}
 \end{exemplos}
 %% section transformacoes_lineares_e_matrizes (end)
