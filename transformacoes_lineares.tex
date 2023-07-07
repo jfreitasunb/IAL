@@ -1198,6 +1198,36 @@ e então por definição $[G]_{\mathcal{B}_1} = P$. Desse modo, temos o seguinte
       \end{bmatrix}.
     \end{align*}
 
+  \item Seja $T \colon \real^3 \to \real^3$ um operador linear cuja matriz com relação à base ordenada canônica, $\mathcal{B} = \{e_1 = (1, 0, 0); e_2 = (0, 1, 0); e_3 = (0, 0 ,1)\}$, é
+    \[
+      [T]_\mathcal{B} = \begin{bmatrix}1 & 1 & 0\\-1 & 0 & 1\\0 & -1 & -1\end{bmatrix}.
+    \]
+    Qual é a matriz de $T$ em relação à base $\mathcal{B}_1 = \{(-1, 1, 0); (1, -1, 1); (0, 1, -1)\}$?
+    \begin{solucao}
+      Para encontrar $[T]_{\mathcal{B}_1}$ começamos achando a matriz $[I]_{\mathcal{B}, \mathcal{B}_1}$:
+      \begin{align*}
+        (-1, 1, 0) = -1e_1 + 1e_2 + 0e_3\\
+        (1, -1, 1) = 1e_1 - 1e_2 + 1e_3\\
+        (0, 1, -1) = 0e_1 + 1e_2 - 1e_3
+      \end{align*}
+      logo
+      \[
+        P = [I]_{\mathcal{B}, \mathcal{B}_1} = \begin{bmatrix}-1 & 1 & 0\\1 & -1 & 1\\0 & 1 & 1\end{bmatrix}.
+      \]
+      Assim
+      \[
+        [T]_{\mathcal{B}_1} = P^{-1}[T]_\mathcal{B}P
+      \]
+      onde
+      \[
+        P^{-1} = \begin{bmatrix}0 & 1 & 1\\1 & 1 & 1\\1 & 1 & 0\end{bmatrix}.
+      \]
+      Fazendo os cálculos encontramos
+      \[
+        [T]_{\mathcal{B}_1} = \begin{bmatrix}0 & 0 & -1\\0 & 0 & 0\\1 & 0 & 0\end{bmatrix}.
+      \]
+    \end{solucao}
+
     \item Seja $\mathcal{D} \colon \mathcal{P}_3(\real) \to \mathcal{P}_3(\real)$ a transformação derivada. Considere a base $\mathcal{B}_1 = \{f_1 = 1; f_2 = x; f_3 = x^2; f_4 = x^3\}$. Tome $t \in \real$ e defina
     \[
       \mathcal{B}_2 = \{g_1 = 1; g_2 = (x + t); g_3 = (x + t)^2; g_4 = (x + t)^3\}.
