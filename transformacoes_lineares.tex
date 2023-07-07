@@ -1159,44 +1159,47 @@ e então por definição $[G]_{\mathcal{B}_1} = P$. Desse modo, temos o seguinte
         \]
       \end{solucao}
 
-    \item Seja $T \colon \real^2 \to \real^2$ dada por $T(x,y) = (x,0)$. Sabemos que com relação \`a base $\mathcal{B}_1 = \{e_1=(1,0);e_2=(0,1)\}$ a matriz de $T$ é
+    \item Seja $T \colon \real^2 \to \real^2$ dada por $T(x,y) = (x,0)$. Sabemos que com relação à base ordenada $\mathcal{B}_1 = \{e_1=(1,0);e_2=(0,1)\}$ a matriz de $T$ é
     \[
       [T_{\mathcal{B}_1} = \begin{bmatrix}
         1 & 0\\
         0 & 0
       \end{bmatrix}.
     \]
-    Agora, seja $\mathcal{B}_2$ a base de $\real^2$ formada por
+    Agora, seja $\mathcal{B}_2$ a base ordenada de $\real^2$ formada por
     \[
       \mathcal{B}_2 = \{w_1 = (1,1);w_2=(2,1)\}.
     \]
-    Então
-    \begin{align*}
-      w_1 &= e_1 + e_2\\
-      w_2 &= 2e_1 + e_2.
-    \end{align*}
-    Assim $P$ é a matriz
-    \[
-      P = \begin{bmatrix}
-        1 & 2\\
-        1 & 1
-      \end{bmatrix}
-    \]
-    cuja inversa é
-    \[
-      P^{-1} = \begin{bmatrix}
-        -1 & \phantom{-}2\\
-        \phantom{-}1 & -1
-      \end{bmatrix}.
-    \]
-    Logo
-    \begin{align*}
-      [T]_{\mathcal{B}_2} &= P^{-1}[T]_{\mathcal{B}_1}P\\
-      [T]_{\mathcal{B}_2} &= \begin{bmatrix}
-        -1 & -2\\
-        \phantom{-}1 & \phantom{-}2
-      \end{bmatrix}.
-    \end{align*}
+    Encontre $[T]_{\mathcal{B}_2}$.
+    \begin{solucao}
+      Então
+      \begin{align*}
+        w_1 &= e_1 + e_2\\
+        w_2 &= 2e_1 + e_2.
+      \end{align*}
+      Assim $P$ é a matriz
+      \[
+        P = \begin{bmatrix}
+          1 & 2\\
+          1 & 1
+        \end{bmatrix}
+      \]
+      cuja inversa é
+      \[
+        P^{-1} = \begin{bmatrix}
+          -1 & \phantom{-}2\\
+          \phantom{-}1 & -1
+        \end{bmatrix}.
+      \]
+      Logo
+      \begin{align*}
+        [T]_{\mathcal{B}_2} &= P^{-1}[T]_{\mathcal{B}_1}P\\
+        [T]_{\mathcal{B}_2} &= \begin{bmatrix}
+          -1 & -2\\
+          \phantom{-}1 & \phantom{-}2
+        \end{bmatrix}.
+      \end{align*}
+    \end{solucao}
 
   \item Seja $T \colon \real^3 \to \real^3$ um operador linear cuja matriz com relação à base ordenada canônica, $\mathcal{B} = \{e_1 = (1, 0, 0); e_2 = (0, 1, 0); e_3 = (0, 0 ,1)\}$, é
     \[
