@@ -850,7 +850,7 @@ Assim provamos o seguinte teorema:
     \[
       T(xax² + bx + c) = (2a + c - 3b)x + (c + 4b + 3a).
     \]
-    Considere as bases $\mathcal{B}_1 = \{x², x, 1\}$ e $\mathcal{B}_2 = \{x, 1\}$ de $\mathcal{P}_2(\real)$ e $\mathcal{P}_1(\real)$, respectivamente. Encontre a matriz de $T$ em relação à $\mathcal{B}_1
+    Considere as bases $\mathcal{B}_1 = \{x^2, x, 1\}$ e $\mathcal{B}_2 = \{x, 1\}$ de $\mathcal{P}_2(\real)$ e $\mathcal{P}_1(\real)$, respectivamente. Encontre a matriz de $T$ em relação a $\mathcal{B}_1
 $ e $\mathcal{B}_2$. Depois, use essa matriz para calcular $T(2x^2 - 4x + 1)$.
     \begin{solucao}
       Para determinar $[T]_{\mathcal{B}_1, \mathcal{B}_2}$, precisamos achar primeiro $[T(x^2)]_{\mathcal{B}_2}$, $[T(x)]_{\mathcal{B}_2}$ e $[T(1)]_{\mathcal{B}_2}$.
@@ -902,9 +902,9 @@ $ e $\mathcal{B}_2$. Depois, use essa matriz para calcular $T(2x^2 - 4x + 1)$.
       \end{align*}
       daí
       \begin{align*}
-        [T(x^2)]_{\mathcal{C}_2} &= \begin{bmatrix}-5\\2\end{bmatrix}\\
-        [T(x)]_{\mathcal{C}_2} &= \begin{bmatrix}-56\\21\end{bmatrix}\\
-        [T(1)]_{\mathcal{C}_2} &= \begin{bmatrix}-123\\47\end{bmatrix}
+        [T(x^2 - 2)]_{\mathcal{C}_2} &= \begin{bmatrix}-5\\2\end{bmatrix}\\
+        [T(2x - 1)]_{\mathcal{C}_2} &= \begin{bmatrix}-56\\21\end{bmatrix}\\
+        [T(x^2 + 4x - 1)]_{\mathcal{C}_2} &= \begin{bmatrix}-123\\47\end{bmatrix}
       \end{align*}
       Logo
       \begin{align*}
@@ -914,7 +914,7 @@ $ e $\mathcal{B}_2$. Depois, use essa matriz para calcular $T(2x^2 - 4x + 1)$.
 
       Agora, para calcular $T(2x^2 - 4x + 1)$, primeiro escrevemos
       \[
-        2x^2 - 4x + 1 = 1(x^2 - 2) - 4(2x - 1) + 1(x^2 + 4x + 1)
+        2x^2 - 4x + 1 = 1(x^2 - 2) - 4(2x - 1) + 1(x^2 + 4x - 1)
       \]
       e assim usando que
       \[
