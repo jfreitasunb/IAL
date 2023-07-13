@@ -94,65 +94,6 @@ para $i = 1$, \dots, $n$. Isto \'e,
     \end{enumerate}
 \end{definicao}
 
-Seja $T : V \to V$ um operador linear onde $V$ \'e um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita. Vamos determinar um m\'etodo para encontrar todos os autovalores de $T$, caso existam.
-
-Se $\lambda \in \cp{K}$ \'e um autovalor, ent\~ao existe $u \in V$, $u \ne 0_V$ tal que $T(u) = \lambda u$. Assim, seja $Id : V \to V$ o operador identidade. Temos
-\begin{align*}
-    &T(u) = \lambda u\\
-    &T(u) = \lambda Id(u)\\
-    &T(u) - \lambda Id(u) = 0_V\\
-    &(T - \lambda Id)(u) = 0_V
-\end{align*}
-isto \'e, $u \in \ker (T - \lambda Id)$. Reciprocamente, se $u \in \ker (T - \lambda Id)$ e $u \ne 0_V$, ent\~ao $T(u) = \lambda u$. Logo
-\begin{center}
-        $\lambda$ \'e um autovalor de $T$, se, e somente, $\ker (T - \lambda Id) \ne \{0_V\}$.
-\end{center}
-
-Agora, seja $\mathcal{A}$ uma base qualquer de $V$ e considere a matriz $[T - \lambda Id]_\mathcal{A}$ do operador $T - \lambda Id \in \mathcal{L}(V,V)$. Como $\dim_\cp{K}V < \infty$, se $T - \lambda Id$ \'e injetor, ent\~ao $T - \lambda Id$ \'e um isomorfismo e da{\'\i} invert{\'\i}vel. Isto \'e, $[T - \lambda Id]_\mathcal{A}$ \'e uma matriz invert{\'\i}vel. Mas se $\lambda \in \cp{K}$ \'e autovalor, ent\~ao $\ker (T - \lambda Id) \ne \{0_V\}$, ou seja, $T - \lambda Id$ n\~ao \'e injetora e consequentemente n\~ao pode ser um isomorfismo. Loga a matriz $[T - \lambda Id]_\mathcal{A}$ n\~ao \'e invert{\'\i}vel. Assim
-\[
-\det [T - \lambda Id]_\mathcal{A} = 0_\cp{K}.
-\]
-Portanto, $\lambda \in \cp{K}$ \'e um autovalor de $T$ se, e somente se,
-\[
-\det [T - \lambda Id]_\mathcal{A} = 0_\cp{K}.
-\]
-
-\begin{proposicao}
-    Seja $\lambda \in \cp{K}$ um autovalor do operador linear $T : V \to V$. Ent\~ao
-    \[
-        \aut_T(\lambda) = \ker(T - \lambda Id).
-    \]
-\end{proposicao}
-
-Seja $x$ uma vari\'avel. Temos
-\begin{align}
-    [T - xId]_\mathcal{A} = [T]_\mathcal{A} - x[Id]_\mathcal{A} = \begin{bmatrix}
-        a_{11} - x & a_{12} & a_{13} & \cdots & a_{1n}\\
-        a_{21} & a_{22} - x & a_{23} & \cdots & a_{1n}\\
-        \vdots\\
-        a_{n1} & a_{n2} & a_{n3} & \cdots & a_{nn} - x
-    \end{bmatrix}
-\end{align}
-onde $[T]_\mathcal{A} = (a_{ij})$, $a_{ij} \in \cp{K}$ para $1 \le i,\ j \le n$. Assim $\det[T - xId]_\mathcal{A}$ \'e um polin\^omio de grau $n$ com coeficiente em $\cp{K}$. O termo $x^n$ aparece com coeficiente $\pm 1_\cp{K}$. Portanto, $\lambda \in \cp{K}$ \'e um autovalor de $T$ se, e somente se, $\lambda$ \'e uma raiz de
-\[
-\det[T - xId]_\mathcal{A}.
-\]
-
-Agora, seja $\mathcal{B}$ uma outra base de $V$. Sabemos que existe $P \in \cp{M}_n(\cp{K})$ invert{\'\i}vel tal que
-\[
-[T - xId]_\mathcal{B} = P^{-1}[T - xId]_\mathcal{A}P.
-\]
-Ent\~ao
-\[
-    \det([T - xId]_\mathcal{B}) = \det(P^{-1}[T - xId]_\mathcal{A}P) = \det(P^{-1})\det([T - xId]_\mathcal{A})\det(P) = \det[T - xId]_\mathcal{A}
-\]
-uma vez que $\det(P^{-1})\det(P) = 1_\cp{K}$. Logo o polin\^omio $\det[T - xId]_\mathcal{A}$ n\~ao depende da base escolhida para $V$.
-
-\begin{definicao}
-    Sejam $V$ um $\cp{K}$-espa\c{c}o vetorial de dimens\~ao finita, $T \in \mathcal{L}(V,V)$ um operador linear e $\mathcal{A}$ uma base de $V$. Chamamos o polin\^omio $\det([T - xId]_\mathcal{A})$ de \textbf{polin\^omio caracter{\'\i}stico} de $T$ e o denotamos por $p_T(x)$.
-    \index{Polin\^omio!Caracter{\'\i}stico}
-\end{definicao}
-
 \begin{exemplo}
     \begin{enumerate}[label={\arabic*})]
         \item Seja $T : \real^2 \to \real^2$ o operador linear dado por $T(x,y) = (-y,x)$. Encontre os autovalores de $T$ e os autoespa\c{c}os associados, se existirem.
