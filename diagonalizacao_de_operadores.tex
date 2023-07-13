@@ -6,7 +6,10 @@
 \section{Operadores Diagonaliz\'aveis} % (fold)
 \label{sec:operadores_diagonalizaveis}
 
-Considere o operador linear $T \colon \real^3 \to \real^3$ dado por $T(x, y, z) = (x + 2y - z, -2x -3y + z, 2x + 2y - 2z)$.
+Considere o operador linear $T \colon \real^3 \to \real^3$ dado por
+\begin{align}\label{exemplodiagonalizacao}
+    T(x, y, z) = (x + 2y - z, -2x -3y + z, 2x + 2y - 2z).
+\end{align}
 
 Quando consideramos a base ordenada canônica de $\real^3$, $\mathcal{B} = \{e_1 = (1, 0, 0); e_2 = (0, 1, 0); e_3 = (0, 0, 1)\}$, a matriz desse operador com respeito à essa base é
 \[
@@ -93,6 +96,33 @@ para $i = 1$, \dots, $n$. Isto \'e,
         \item Suponha que $\dim V = n < \infty$. Dizemos que $T$ \'e \textbf{diagonaliz\'avel} se existir uma base $\mathcal{B}$ de $V$ tal que $[T]_\mathcal{B}$ \'e diagonal, isto \'e, tem a forma \eqref{formadiagonal}. Tal fato equivale a dizer que existe uma base formada por autovetores.\index{Transforma\c{c}\~ao Linear!Diagonaliz\'avel}
     \end{enumerate}
 \end{definicao}
+
+\begin{exemplo}
+    No caso da transformação linear $T$ dada em \eqref{exemplodiagonalizacao}, $-1$ é um autovalor de $T$ e os autovetores associados ao autovalor $-1$ são $w_1 = (1, 0, 1)$ e $w_2 = (0, 1, 2)$. Nesse caso
+    \[
+        Aut_T(-1) = [w_1, w_2].
+    \]
+    Observer que se $u = \alpha_1w_1 + \alpha_2w_2 \in Aut_T(-1)$, então
+    \begin{align*}
+        T(u) &= T(\alpha_1w_1 + \alpha_2w_2) \\ &= \alpha_1T(w_1) + \alpha_2T(w_2) \\ &= -\alpha_1w_1 - \alpha_2w_2 \\ &= -(\alpha_1w_1 + \alpha_2w_2) \\ &= -u
+    \end{align*}
+
+    Além disso, $-2$ é um autovalor de $T$ e o autovetor associado a esse autovalor é $w_3 = (1, -1, 1)$. Assim
+    \[
+        Aut_T(-2) = [w_3].
+    \]
+    Aqui também temos que se $u = \alpha w_3 \in Aut_T(-2)$, então
+    \begin{align*}
+        T(u) &= T(\alpha w_3) \\ &= \alpha T(w_3) \\ &= -2\alpha w_3 \\ &= -2u
+    \end{align*}
+\end{exemplo}
+
+Temos aqui duas questões importantes:
+\begin{enumerate}
+    \item Dado um operador $T \colon V \to V$, existem autovetores para $T$?
+
+    \item Se sim, existe um número suficiente de autovetores para forma uma base de $V$?
+\end{enumerate}
 
 \begin{exemplo}
     \begin{enumerate}[label={\arabic*})]
