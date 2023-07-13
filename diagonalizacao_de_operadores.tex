@@ -6,7 +6,43 @@
 \section{Operadores Diagonaliz\'aveis} % (fold)
 \label{sec:operadores_diagonalizaveis}
 
-Seja $T : V \to V$ um operador linear e suponha que exista uma base $\mathcal{B} = \{v_1,\dots,v_n\}$ de $V$ tal que
+Considere o operador linear $T \colon \real^3 \to \real^3$ dado por $T(x, y, z) = (x + 2y - z, -2x -3y + z, 2x + 2y - 2z)$.
+
+Quando consideramos a base ordenada canônica de $\real^3$, $\mathcal{B} = \{e_1 = (1, 0, 0); e_2 = (0, 1, 0); e_3 = (0, 0, 1)\}$, a matriz desse operador com respeito à essa base é
+\[
+    [T]_\matcal{B} = \begin{bmatrix}
+        \phantom{-}1 & \phantom{-}2 & -1\\
+        -2 & -3 & \phantom{-}1\\
+        \phantom{-}2 & \phantom{-}2 & \phantom{-}2
+    \end{bmatrix}.
+\]
+
+Agora, se tomamos a base ordenada $\mathcal{B}_1 = \{w_1 = (1, 0, 2); w_2 = (0, 1, 2); w_3 = (1, -1, 1)\}$ a matriz de $T$ com respeito à essa base é
+\[
+    [T]_{\matcal{B}_1} = \begin{bmatrix}
+        -1 & \phantom{-}0 & \phantom{-}0\\
+        \phantom{-}0& -1 & \phantom{-}0\\
+        \phantom{-}0& \phantom{-}0 & -2
+    \end{bmatrix}.
+\]
+
+Analisando a matriz $[T]_{\mathcal{B}_1}$ é fácil ver que $T$ é um operador invertível e também é fácil achar $T^{-1}$. Nesse caso, a matriz de $T^{-1}$ com respeito à base $\mathcal{B}_1$ é:
+\[
+[T^{-1}]_{\matcal{B}_1} = \begin{bmatrix}
+    -1 & \phantom{-}0 & \phantom{-}0\\
+    \phantom{-}0& -1 & \phantom{-}0\\
+    \phantom{-}0& \phantom{-}0 & -1/2
+\end{bmatrix}.
+\]
+
+Note que para a base $\mathcal{B}_1$ temos
+\begin{align*}
+    T(w_1) &= -1w_1\\
+    T(w_2) &= -1w_2\\
+    T(w_3) &= -2w_3\\
+\end{align*}
+
+No caso geral, seja $T : V \to V$ um operador linear e suponha que exista uma base $\mathcal{B} = \{v_1,\dots,v_n\}$ de $V$ tal que
 \begin{align}\label{formadiagonal}
     [T]_\mathcal{B} = \begin{bmatrix}
         \lambda_1 & 0_\cp{K} & 0_\cp{K} & \dots & 0_\cp{K}\\
