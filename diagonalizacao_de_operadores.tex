@@ -124,6 +124,26 @@ Temos aqui duas questões importantes:
     \item Se sim, existe um número suficiente de autovetores para forma uma base de $V$?
 \end{enumerate}
 
+Os seguintes exemplos respondem a essas perguntas:
+
+\begin{exemplos}
+    \begin{enumerate}
+        \item Se $T \colon \real^2 \to \real^2$ é o operador linear dado pela matriz
+        \[
+            [T]_\mathcal{B} = \begin{bmatrix}0 & -1\\1 & \phantom{-}0\end{bmatrix}
+        \]
+        onde $\mathcal{B}$ é a base canônica, então não existe $u \in \real$ tal que $T(u) = \lambda_u$, com $\lambda_\in \real$.
+
+        \item Se $T \colon \real^3 \to \real^3$ é o operador linear dado pela matriz
+        \[
+        [T]_\mathcal{B} = \begin{bmatrix}3 & -3 & -4\\0 & \phantom{-}3 & \phantom{-}5\\0 & \phantom{-}0 & \phantom{-}1\end{bmatrix}
+        \]
+        onde $\mathcal{B}$ é a base canônica. Então os únicos vetores de $u \in \real^3$ tais que $T(u) = \lambda_u$, para algum $\lambda_\in \real$ são $u = (1, 0, 0)$ e $v = (-7/4, -5/2, 1)$.
+
+        Nessa caso o conjunto $\{u, v\}$ é linearmente independente mas não é uma base para $\real^3$.
+    \end{enumerate}
+\end{exemplos}
+
 \begin{exemplo}
     \begin{enumerate}[label={\arabic*})]
         \item Seja $T : \real^2 \to \real^2$ o operador linear dado por $T(x,y) = (-y,x)$. Encontre os autovalores de $T$ e os autoespa\c{c}os associados, se existirem.
