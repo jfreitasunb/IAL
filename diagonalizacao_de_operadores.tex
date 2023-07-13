@@ -45,39 +45,38 @@ Note que para a base $\mathcal{B}_1$ temos
 No caso geral, seja $T : V \to V$ um operador linear e suponha que exista uma base $\mathcal{B} = \{v_1,\dots,v_n\}$ de $V$ tal que
 \begin{align}\label{formadiagonal}
     [T]_\mathcal{B} = \begin{bmatrix}
-        \lambda_1 & 0_\cp{K} & 0_\cp{K} & \dots & 0_\cp{K}\\
-        0_\cp{K} & \lambda_2 & 0_\cp{K} & \dots & 0_\cp{K}\\
+        \lambda_1 & 0 & 0 & \dots & 0\\
+        0 & \lambda_2 & 0 & \dots & 0\\
         \vdots & & \ddots & & \vdots\\
-        0_\cp{K} & 0_\cp{K} & 0_\cp{K} & \dots & \lambda_n
+        0 & 0 & 0 & \dots & \lambda_n
     \end{bmatrix}
 \end{align}
 com $\lambda_i \in \cp{K}$ para $i = 1$, \dots, $n$. Assim
 \[
     [T(v_i)]_\mathcal{B} = [T]_\mathcal{B}[v_i]_\mathcal{B} = [T]_\mathcal{B}\begin{bmatrix}
-        0_\cp{K}\\
-        0_\cp{K}\\
+        0\\
+        0\\
         \vdots\\
-        0_\cp{K}\\
-        1_\cp{K}\\
-        0_\cp{K}\\
+        0\\
+        1\\
+        0\\
         \vdots\\
-        0_\cp{K}
+        0
     \end{bmatrix}_\mathcal{B} = \begin{bmatrix}
-        0_\cp{K}\\
-        0_\cp{K}\\
+        0\\
+        0\\
         \vdots\\
-        0_\cp{K}\\
+        0\\
         \lambda_i\\
-        0_\cp{K}\\
+        0\\
         \vdots\\
-        0_\cp{K}
+        0
     \end{bmatrix}_\mathcal{B}
 \]
 para $i = 1$, \dots, $n$. Isto \'e,
 \[
-    T(v_i) = \lambda_i v_i
+    T(v_1) = \lambda_1 v_1,\ T(v_2) = \lambda_2 v_2,\dots, T(v_n) = \lambda_n v_n.
 \]
-para $i = 1$, \dots, $n$.
 
 \begin{definicao}
     Seja $T : V \to V$ um operador linear.
@@ -91,7 +90,7 @@ para $i = 1$, \dots, $n$.
         \[
             \aut_T(\lambda) = \{u \in V \mid T(u) = \lambda u\}.
         \]
-        \item Suponha que $\dim_\cp{K} V = n < \infty$. Dizemos que $T$ \'e \textbf{diagonaliz\'avel} se existir uma base $\mathcal{B}$ de $V$ tal que $[T]_\mathcal{B}$ \'e diagonal, isto \'e, tem a forma \eqref{formadiagonal}. Tal fato equivale a dizer que existe uma base formada por autovetores.\index{Transforma\c{c}\~ao Linear!Diagonaliz\'avel}
+        \item Suponha que $\dim V = n < \infty$. Dizemos que $T$ \'e \textbf{diagonaliz\'avel} se existir uma base $\mathcal{B}$ de $V$ tal que $[T]_\mathcal{B}$ \'e diagonal, isto \'e, tem a forma \eqref{formadiagonal}. Tal fato equivale a dizer que existe uma base formada por autovetores.\index{Transforma\c{c}\~ao Linear!Diagonaliz\'avel}
     \end{enumerate}
 \end{definicao}
 
