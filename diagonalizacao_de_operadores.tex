@@ -191,7 +191,7 @@ e neste caso definimos
 \]
 Suponha que $n > 1$ e que $\det(B)$ esteja definido para todas as matrizes $B \in \cp{M}_p(\cp{K})$ com $p < n$ e seja $A \in \cp{M}_n(\cp{K})$. Para cada $(i,j)$, defina a matriz $A_{ij}$ formada a partir de $A$ retirando-se a sua $i$-\'esima linha e a sua $j$-\'esima coluna. \'E claro que $A \in \cp{M}_{n - 1}(\cp{K})$ e portanto $\det(A_{ij})$ est\'a definido. Defina ent\~ao
 \begin{align*}
-	\det(A) &= \sum_{j = 1}^n(-1)^{i + j}a_{ij}\det(A_{ij}) \\ &= (-1)^{i + 1}a_{i1}\det(A_{i1}) + (-1)^{i + 2}a_{i2}\det(A_{i2}) \\ & + (-1)^{i + 3}a_{i3}\det(A_{i3}) + \cdots + (-1)^{i + n}a_{in}\det(A_{in}) \in \cp{K} 
+	\det(A) &= \sum_{j = 1}^n(-1)^{i + j}a_{ij}\det(A_{ij}) \\ &= (-1)^{i + 1}a_{i1}\det(A_{i1}) + (-1)^{i + 2}a_{i2}\det(A_{i2}) \\ & + (-1)^{i + 3}a_{i3}\det(A_{i3}) + \cdots + (-1)^{i + n}a_{in}\det(A_{in}) \in \cp{K}
 \end{align*}
 
 \begin{exemplo}
@@ -208,7 +208,7 @@ Suponha que $n > 1$ e que $\det(B)$ esteja definido para todas as matrizes $B \i
 		\begin{align*}
 			\det(A) &= \sum_{j = 1}^2(-1)^{1 + j}a_{1j}\det(A_{1j}) = (-1)^{1 + 1}a_{11}\det(A_{11}) + (-1)^{1 + 2}a_{12}\det(A_{12})\\
 			\det(A) &= ad - bc.
-	    \end{align*}	
+	    \end{align*}
 		Obter{\'\i}amos o mesmo resultado se consider\'assemos a linha 2.
 
 		\item Seja
@@ -277,6 +277,17 @@ Suponha que $n > 1$ e que $\det(B)$ esteja definido para todas as matrizes $B \i
 \begin{teorema}
 	Uma matriz $A \in \cp{M}_n(\cp{K})$ \'e invert{\'\i}vel se, e somente se, $\det(A) \ne 0$.
 \end{teorema}
+
+\section{Diagonaliza\c{c}ão}
+Dado um operador linear $T \colon V \to V$, onde $\dim_\cp{K} V = n < \infty$, queremos tentar encontrar, se existir, uma base ordenada $\mathcal{D}$ de $V$ formada por autovetores. Para isso devemos proceder da seguinte maneira:
+\begin{enumerate}
+    \item Se não foi dada, encontre a matriz de $T$ com rela\c{c}ão a alguma base ordenada $\mathcal{B}$ de $V$. Pode-se usar a base canônica $\mathcal{B}$ de $V$ para facilitar o cálculo de $[T]_\mathcal{B}$.
+
+    \item Uma vez encontrada $[T]_\mathcal{B}$ calcule
+        \[
+            [T]_\mathcal{B} - \lambda I_n = [T]_\mathcal{B} - \begin{bmatrix}\lambda & 0 & 0 & \cdots & 0\\0 & \lambda & 0 & \cdots & 0\\0 & 0 & \lambda & \cdots & 0\\\vdots & \vdots & \vdots & \cdots & \vdots\\0 & 0 & 0 & \cdots & \lambda\end{bmatrix}.
+        \]
+\end{enumerate}
 
 \begin{exemplo}
     \begin{enumerate}[label={\arabic*})]
