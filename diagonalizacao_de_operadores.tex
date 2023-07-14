@@ -175,6 +175,89 @@ As respostas para essas perguntas são dadas pelos seguintes teoremas:
     Essa equa\c{c}ã é chamada de \textbf{equa\c{c}ão característica} de $A$.
 \end{teorema}
 
+Observe que nos dois teoremas anteriores aparecem o determinante de uma matriz. Vamos então relembrar algumas propriedades dos determinantes.
+
+\section{Determinantes}
+
+Seja $A \in M_n(\cp{K})$ onde $n \ge 1$. Vamos definir o \textbf{determinante da matriz $A$}, denotado por $\det(A)$, de modo indutivo.
+
+Se $n = 1$, ent\~ao a matriz $A \in \cp{M}_1(\cp{K})$ \'e da forma
+\[
+	A = (a_{11})
+\]
+e neste caso definimos
+\[
+	\det A = a_{11} \in \cp{K}.
+\]
+Suponha que $n > 1$ e que $\det B$ esteja definido para todas as matrizes  $B \in \cp{M}_p(\cp{K})$ com $p < n$ e seja 
+$A \in \cp{M}_n(\cp{K})$. Para cada $(i,j)$, defina a matriz $A_{ij}$ formada a partir de $A$ retirando-se a sua $i$-\'esima linha e a sua $j$-\'esima coluna. \'E claro que $A \in \cp{M}_{n - 1}(\cp{K})$ e portanto $\det A_{ij}$ est\'a definido. Defina ent\~ao
+\[
+	\det A = \sum_{j = 1}^n(-1)^{i + j}a_{ij}\det A_{ij} \in \cp{K}.
+\]
+
+\begin{exemplo}
+	\begin{enumerate}[label={\arabic*})]
+		\item Seja
+		\[
+			A =
+			\begin{bmatrix}
+				a & b\\
+				c & d
+			\end{bmatrix} \in \cp{M}_2(\cp{K}).
+		\]
+		Fixada a linha 1, temos
+		\[
+			\det A = \sum_{j = 1}^2(-1)^{1 + j}a_{1j}\det A_{1j} = (-1)^{1 + 1}a_{11}\det A_{11} + (-1)^{1 + 2}a_{12}\det A_{12} = ad - bc.
+		\]
+		Obter{\'\i}amos o mesmo resultado se consider\'assemos a linha 2.
+
+		\item Seja
+		\[
+			A =
+			\begin{bmatrix}
+				a_{11} & a_{12} & a_{13}\\
+				a_{21} & a_{22} & a_{23}\\
+				a_{31} & a_{32} & a_{33}
+			\end{bmatrix} \in \cp{M}_2(\cp{K}).
+		\]
+		Fixada a linha 2, temos
+		\begin{align*}
+			\det A &= \sum_{j = 1}^3(-1)^{2 + j}a_{2j}\det A_{2j} \\ &= (-1)^{2 + 1}a_{21}\det A_{21} + (-1)^{2 + 2}a_{22}\det A_{22} + (-1)^{2 + 3}a_{32}\det A_{32}\\ &= -a_{21}\det\begin{bmatrix}a_{12} & a_{13}\\a_{32} & a_{33}\end{bmatrix} + a_{22}\det\begin{bmatrix}a_{11} & a_{12}\\a_{31} & a_{33}\end{bmatrix} - a_{23}\det\begin{bmatrix}a_{11} & a_{12}\\a_{31} & a_{32}\end{bmatrix}.
+		\end{align*}
+		Da{\'\i}
+		\[
+			\det A = a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} - a_{13}a_{22}a_{31} - a_{12}a_{21}a_{33} - a_{11}a_{23}a_{32}.
+		\]
+	\end{enumerate}
+\end{exemplo}
+
+\begin{proposicao}
+	Sejam $A$, $B \in \cp{M}_n(\cp{K})$ e $\lambda \in \cp{K}$. Temos:
+	\begin{enumerate}[label={\roman*})]
+		\item $\det(AB) = \det A \det B$,
+		\item $\det(\lambda A) = \lambda^n \det(A)$,
+		\item $\det(A^{-1}) = (\det A)^{-1}$.
+	\end{enumerate}
+\end{proposicao}
+
+
+\begin{proposicao}
+	Seja $A$ uma matriz $n \times n$ com entradas num corpo $\cp{K}$.
+	\begin{enumerate}[label={\roman*})]
+		\item Se $B$ \'e a matriz resultante da permuta\c{c}\~ao de duas linhas de $A$, ent\~ao $\det (B) = -\det (A)$.
+		\item Se $B$ \'e a matriz resultante da multiplica\c{c}\~ao de uma linha de $A$ por um escalar n\~ao nulo $\alpha \in \cp{K}$, ent\~ao $\det(B) = \alpha\det(A)$.
+		\item Se $B$ \'e a matriz resultante da soma da linha $i$ de $A$ com um m\'ultiplo n\~ao nulo $\alpha \in \cp{K}$ da linha $j$ de $A$, ent\~ao $\det(B) = \det(A)$.
+	\end{enumerate}
+\end{proposicao}
+
+\begin{observacao}
+	\'E poss{\'\i}vel mostrar que o determinante tamb\'em pode ser definido a partir das colunas de uma matriz $A \in \cp{M}_n(\cp{K})$.
+\end{observacao}
+
+\begin{teorema}
+	Uma matriz $A \in \cp{M}_n(\cp{K})$ \'e invert{\'\i}vel se, e somente se, $\det A \ne 0_\cp{K}$.
+\end{teorema}
+
 \begin{exemplo}
     \begin{enumerate}[label={\arabic*})]
         \item Seja $T : \real^2 \to \real^2$ o operador linear dado por $T(x,y) = (-y,x)$. Encontre os autovalores de $T$ e os autoespa\c{c}os associados, se existirem.
