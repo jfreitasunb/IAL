@@ -511,6 +511,78 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
             \]
             Logo $T$ \'e diagonaliz\'avel.
         \end{solucao}
+
+        \item Decida se o operador $T \colon \complex^3 \to \complex^3$ dado pela matriz
+            \[
+                [T]_\mathcal{B} = \begin{bmatrix}\phantom{-}1 & 3 & 3\\\phantom{-}0 & 4 & 0\\-3 & 3 & 1\end{bmatrix}
+            \]
+            onde $\mathcal{B}$ é uma base qualquer de $\complex^3$ é diagonalizável.
+            \begin{solucao}
+                Temos
+                \[
+                    [T]_\mathcal{B} - \lambda I_3 = \begin{bmatrix}1 - \lambda & 3 & 3\\0 & 4 - \lambda & 0\\-3 & 3 & 1 - \lambda\end{bmatrix}.
+                \]
+                Daí, usando a segunda linha dessa matriz para calcular o determinante temos:
+                \begin{align*}
+                    \det([T]_\mathcal{B} - \lambda I_3) &= \det\left(\begin{bmatrix}1 - \lambda & 3 & 3\\0 & 4 - \lambda & 0\\-3 & 3 & 1 - \lambda\end{bmatrix}\right) \\ &= (-1)^{2 + 2}a_22\det(A_{22}) = (4 - \lambda)\det\left(\begin{bmatrix}1 - \lambda & 3\\-3 & 1 - \lambda\end{bmatrix}\right) \\ &= (4 - \lambda)[(1 - \lambda)^2 + 9] \\ &= (4 - \lambda)(\lambda^2 - 2\lambda + 10).
+                \end{align*}
+                Assim $\det([T]_\mathcal{B} - \lambda I_3) = 0$ se, e sé se, $(4 - \lambda)(\lambda^2 - 2\lambda + 10) = 0$. Como $\lambda \in \complex$, então $\lambda = 4$ ou $\lambda = 1 - 3i$ ou $\lambda = 1 + 3i$.
+
+                Vamos determinar $\aut_T(4)$, $\aut_T(1 - 3i)$ e $\aut_T(1 + 3i)$:
+                \begin{itemize}
+                    \item para $\lambda = 4$ temos que $(x,y,z) \in \aut_T(4)$ se, e s\'o se,
+                    \[
+                        \begin{bmatrix}-3 & 3 & 3\\0 & 0 & 0\\0 & 3 & -3\end{bmatrix}
+                        \begin{bmatrix}x\\y\\z\end{bmatrix} = \begin{bmatrix}0\\0\\0\end{bmatrix}.
+                    \]
+                    Cuja solu\c{c}ão é $y = z$ e $x = 2z$. Assim
+                    \[
+                        \aut_T(4) = \{(2z,z,z) \mid z \in \complex\} = [(2,1,1)]
+                    \]
+                e ent\~ao $\mathcal{B}_1 = \{(2,1,1))\}$ \'e uma base de $\aut_T(4)$ e $\dim_\complex\aut_T(4) = 1$.
+
+                \item para $\lambda = 1 - 3i$ temos que $(x,y,z) \in \aut_T(1 - 3i)$ se, e s\'o se,
+                \[
+                    \begin{bmatrix}
+                        3i & 3 & 3\\
+                        0 & 3 + 3i & 0\\
+                        -3 & 3 & 3i
+                    \end{bmatrix}\begin{bmatrix}
+                        x\\y\\z
+                    \end{bmatrix} = \begin{bmatrix}
+                        0\\0\\0
+                    \end{bmatrix}.
+                \]
+                Cuja solu\c{c}ão é $x = iz$ e $y = 0$. Assim
+                \[
+                    \aut_T(1 - 3i) = \{(iz,0,z) \mid z \in \complex\} = [(i,0,1)]
+                \]
+                e ent\~ao $\mathcal{B}_2 = \{(i,0,1)\}$ \'e uma base de $\aut_T(1 - 3i)$ e $\dim_\complex\aut_T(1 - 3i) = 1$.
+
+                \item para $\lambda = 1 + 3i$ temos que $(x,y,z) \in \aut_T(1 + 3i)$ se, e s\'o se,
+                \[
+                    \begin{bmatrix}
+                        3i & 3 & 3\\
+                        0 & 3 - 3i & 0\\
+                        -3 & 3 & -3i
+                    \end{bmatrix}\begin{bmatrix}
+                        x\\y\\z
+                    \end{bmatrix} = \begin{bmatrix}
+                        0\\0\\0
+                    \end{bmatrix}.
+                \]
+                Cuja solu\c{c}ão é $x = -iz$ e $y = 0$. Assim
+                \[
+                    \aut_T(1 - 3i) = \{(-iz,0,z) \mid z \in \complex\} = [(-i,0,1)]
+                \]
+                e ent\~ao $\mathcal{B}_2 = \{(-i,0,1)\}$ \'e uma base de $\aut_T(1 + 3i)$ e $\dim_\complex\aut_T(1 + 3i) = 1$.
+            \end{itemize}
+
+            Logo o conjunto $\mathcal{D} = \{(2, 1, 1); (i, 0, 1); (-i, 0, 1)\}$ é uma base de $\complex^3$ e $T$ é diagonalizável. Com rela\c{c}ão à base $\mathcal{D}$ temos:
+            \[
+                [T]_\mathcal{D} = \begin{bmatrix}4 & 0 & 0\\0 & 1 - 3i & 0\\0 & 0 & 1 + 3i\end{bmatrix}.
+            \]
+            \end{solucao}
     \end{enumerate}
 \end{exemplo}
 
