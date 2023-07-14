@@ -332,7 +332,23 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
 
         \item Seja $T : \complex^2 \to \complex^2$ o operador linear dado por $T(x,y) = (-y,x)$. Encontre os autovalores de $T$ e os autoespa\c{c}os associados, se existirem, considerando $\complex^2$ com um $\complex$-espa\c{c}o vetorial.
         \begin{solucao}
-            Considere a base can\^onica $\mathcal{A}$ de $\complex^2$. \'E imediato verificar que o polin\^omio caracter{\'\i}stico de $T$ \'e $p_T(x) = x^2 + 1$, cujas ra{\'\i}zes s\~ao $\pm i$. Assim $T$ possui 2 autovalores distintos e para cada um deles vamos encontrar o autoespa\c{c}o associado.
+            Considere a base can\^onica $\mathcal{B} = \{e_1 = (1, 0); e_2 = (0, 1)\}$ de $\complex^2$. Temos
+            \begin{align}
+                T(1,0) &= (0,1) = 0(1,0) + 1(1,0)\\
+                T(0,1) &= (-1,0) = -1(1,0) + 0(1,0).
+            \end{align}
+            Da{\'\i}
+            \[
+                [T]_\mathcal{B} = \begin{bmatrix}0 & -1\\ 1 & \phantom{-}0\end{bmatrix}.
+            \]
+            Agora calculamos
+            \begin{align*}
+                [T]_\mathcal{B} - \lambda I_2 &= \begin{bmatrix}0 & -1\\ 1 & \phantom{-}0\end{bmatrix} - \lambda\begin{bmatrix}1 & 0\\0 & 1\end{bmatrix} = \begin{bmatrix}0 & -1\\ 1 & \phantom{-}0\end{bmatrix} - \begin{bmatrix}\lambda & 0\\0 & \lambda\end{bmatrix}\\ &= \begin{bmatrix}-\lambda & -1\\ 1 & -\lambda\end{bmatrix}.
+            \end{align*}
+            Com isso
+            \begin{align*}
+                \det([T]_\mathcal{B} - \lambda I_2]) = \det\left(\begin{bmatrix} -\lambda & -1\\\phantom{-}1 & -\lambda\end{bmatrix}\right) = \lambda^2 + 1.
+            \end{align*}
             \begin{itemize}
                 \item Para $\lambda_1 = i$ temos:
                 \[
