@@ -648,10 +648,89 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
                 \end{itemize}
 
                 Logo o conjunto $\mathcal{D} = \{(4, 0, 0, 1); (0, 1, 2, 0); (4, 0, 0, 1); (0, 0, 0, 1)\}$ é uma base de $\real^4$ e $T$ é diagonalizável. Com rela\c{c}ão à base $\mathcal{D}$ temos:
-            \[
-                [T]_\mathcal{D} = \begin{bmatrix}2 & 0 & 0 & 0\\0 & 1 & 0 & 0\\0 & 0 & 0 & 0\\0 & 0 & 0 & -2\end{bmatrix}.
-            \]
+                \[
+                    [T]_\mathcal{D} = \begin{bmatrix}2 & 0 & 0 & 0\\0 & 1 & 0 & 0\\0 & 0 & 0 & 0\\0 & 0 & 0 & -2\end{bmatrix}.
+                \]
             \end{solucao}
+
+        \item Decida se o operador $T \colon \real^3 \to \real^3$ dado pela matriz
+            \[
+                [T]_\mathcal{B} = \begin{bmatrix}1 & 0 & 2\\-1 & 0 & 1\\1 & 1 & 2\end{bmatrix}
+            \]
+            onde $\mathcal{B}$ é uma base qualquer de $\real^3$ é diagonalizável.
+            \begin{solucao}
+                Aqui como já temos a matriz da transforma\c{c}ão vamos passar para a etapa 2:
+                \begin{align*}
+                    [T]_\mathcal{B} - \lambda I_3 = \begin{bmatrix}1 & 0 & 2\\-1 & 0 & 1\\1 & 1 & 2\end{bmatrix} - \begin{bmatrix} \lambda & 0 & 0\\0 & \lambda & 0\\0 & 0 & \lambda\end{bmatrix} = \begin{bmatrix}1 - \lambda & 0 & 2\\-1 & -\lambda & 1\\1 & 1 &2 - \lambda\end{bmatrix}
+                \end{align*}
+                Usando a primeira linha dessa matriz para calcular o determinante obtemos:
+                \begin{align*}
+                    \det([T]_\mathcal{B} - \lambda I_3) &= (-1)^{1 + 1}a_{11}\det(A_{11}) + (-1)^{1 + 2}a_{12}\det(A_{12}) + (-1)^{1 + 3}a_{13}\det(A_{13}) \\ &= (1 - \lambda)\det\left(\begin{bmatrix}-\lambda & 1\\1 & 2 - \lambda\end{bmatrix}\right) + 2\det\left(\begin{bmatrix}-1 & -\lambda\\1 & 1\end{bmatrix}\right) \\ &= (1 - \lambda)[(-\lambda)(2 - \lambda) - 1] + 2[(-1)1 - (-\lambda)1] \\ &= (1 - \lambda)(-2\lambda + \lambda^2 - 1) - 2(1 - \lambda) \\ &= (1 - \lambda)(\lambda^2 - 2\lambda - 1 - 2) \\ &= ( 1 -\lambda)(\lambda^2 - 2\lambda - 3) \\ &= (1 - \lambda)(\lambda + 1)(\lambda - 3) 
+                \end{align*}
+                Assim $\det([T]_\mathcal{B} - \lambda I_3) = 0$ quando $(1 - \lambda)(\lambda + 1)(\lambda - 3) = 0$, ou seja, quando $\lambda = -1$ ou $\lambda = 1$ ou $\lambda = 3$.
+
+                Vamos determinar $\aut_T(-1)$, $\aut_T(1)$ e $\aut_T(3)$:
+                \begin{itemize}
+                    \item para $\lambda = -1$ temos que $(x,y,z) \in \aut_T(-1)$ se, e s\'o se,
+                        \[
+                            \begin{bmatrix}
+                                2 & 0 & 2\\
+                                -1 & 1 & 1\\
+                                1 & 1 & 3
+                            \end{bmatrix}\begin{bmatrix}
+                                x\\y\\z
+                            \end{bmatrix} = \begin{bmatrix}
+                                0\\0\\0
+                            \end{bmatrix}.
+                        \]
+                        Cuja solu\c{c}ão é $x = -5z$ e $y = 2z$. Assim
+                        \[
+                            \aut_T(-1) = \{(-5z,2z,z) \mid z \in \real\} = [(-5,2,1)]
+                        \]
+                        e ent\~ao $\mathcal{B}_1 = \{(-5,2,1)\}$ \'e uma base de $\aut_T(-1)$ e $\dim_\real\aut_T(-1) = 1$.
+
+                    \item para $\lambda = 1$ temos que $(x,y,z) \in \aut_T(1)$ se, e s\'o se,
+                        \[
+                            \begin{bmatrix}
+                                0 & 0 & 2\\
+                                -1 & -1 & 1\\
+                                1 & 1 & 1
+                            \end{bmatrix}\begin{bmatrix}
+                                x\\y\\z
+                            \end{bmatrix} = \begin{bmatrix}
+                                0\\0\\0
+                            \end{bmatrix}.
+                        \]
+                        Cuja solu\c{c}ão é $x = -y$ e $z = 0$. Assim
+                        \[
+                            \aut_T(1) = \{(-y,y,0) \mid y \in \real\} = [(-1,1,0)]
+                        \]
+                        e ent\~ao $\mathcal{B}_2 = \{(-1,1,0)\}$ \'e uma base de $\aut_T(1)$ e $\dim_\real\aut_T(1) = 1$.
+
+                    \item para $\lambda = 3$ temos que $(x,y,z) \in \aut_T(3)$ se, e s\'o se,
+                        \[
+                            \begin{bmatrix}
+                                -2 & 0 & 2\\
+                                -1 & -3 & 1\\
+                                1 & 1 & -1
+                            \end{bmatrix}\begin{bmatrix}
+                                x\\y\\z
+                            \end{bmatrix} = \begin{bmatrix}
+                                0\\0\\0
+                            \end{bmatrix}.
+                        \]
+                    Cuja solu\c{c}ão é $x = z$ e $y = 0$. Assim
+                    \[
+                        \aut_T(3) = \{(z,0,z) \mid z \in \real\} = [(1,0,1)]
+                    \]
+                    e ent\~ao $\mathcal{B}_3 = \{(1,0,1)\}$ \'e uma base de $\aut_T(3)$ e $\dim_\real\aut_T(3) = 1$.
+            \end{itemize}
+
+             Logo o conjunto $\mathcal{D} = \{(-5, 2, 1); (-1, 1, 0); (1, 0, 1)\}$ é uma base de $\real^3$ e $T$ é diagonalizável. Com rela\c{c}ão à base $\mathcal{D}$ temos:
+                \[
+                    [T]_\mathcal{D} = \begin{bmatrix}-1 & 0 & 0\\0 & 1 & 0\\0 & 0 & 3\end{bmatrix}.
+                \]
+        \end{solucao}
     \end{enumerate}
 \end{exemplo}
 
