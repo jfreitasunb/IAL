@@ -446,26 +446,64 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
         \end{solucao}
         \item Seja $T : \real^3 \to \real^3$ o operador tal que
         \[
-            [T]_\mathcal{A} = \begin{bmatrix}
+            [T]_\mathcal{B} = \begin{bmatrix}
                                 \phantom{-}1 & \phantom{-}2 & -1\\
                                 -2 & -3 & \phantom{-}1\\
                                 \phantom{-}2 & \phantom{-}2 & -2
                             \end{bmatrix}
         \]
-        onde $\mathcal{A}$ \'e uma base qualquer de $\real^3$. Determinar se $T$ \'e diagonaliz\'avel.
+        onde $\mathcal{B}$ \'e uma base qualquer de $\real^3$. Determinar se $T$ \'e diagonaliz\'avel.
         \begin{solucao}
-        Temos
-        \[
-                p_T(x) = \det([T - xId]_\mathcal{A}) = -(x + 1)^2(x + 2)
-            \]
-            e assim os autovalores de $T$ s\~ao $\lambda_1 = -1$ e $\lambda_2 = -2$. C\'alculos simples mostram que
+            Aqui como já temos a matriz da transforma\c{c}ão vamos passar para a etapa 2:
             \begin{align*}
-                \aut_T(-1) = [(1,0,2); (0,1,2)]\\
-                \aut_T(-2) = [(1,-1,1)].
+                [T]_\mathcal{B} - \lambda I_3 = \begin{bmatrix}1 & 2 & -1\\-2 & -3 & 1\\2 & 2 & -2\end{bmatrix} - \begin{bmatrix} \lambda & 0 & 0\\0 & \lambda & 0\\0 & 0 & \lambda\end{bmatrix} = \begin{bmatrix}1 - \lambda & 2 & -1\\-2 & -3 - \lambda & 1\\2 & 2 &-2 - \lambda\end{bmatrix}
             \end{align*}
-            \'E f\'acil verificar que o conjunto $\mathcal{B} = \{(1,0,2); (0,1,2); (1,-1,1)\}$ \'e L.I, logo uma base de $\real^3$. Nesta base temos
+            Usando a primeira linha dessa matriz para calcular o determinante obtemos:
+            \begin{align*}
+                \det([T]_\mathcal{B} - \lambda I_3) &= (-1)^{1 + 1}a_{11}\det(A_{11}) + (-1)^{1 + 2}a_{12}\det(A_{12}) + (-1)^{1 + 3}a_{13}\det(A_{13}) \\ &= (1 - \lambda)\det\left(\begin{bmatrix}-3 - \lambda & 1\\2 & -2 - \lambda\end{bmatrix}\right) - 2\det\left(\begin{bmatrix}-2 & 1\\2 & -2 - \lambda\end{bmatrix}\right) \\ &-\det\left(\begin{bmatrix}-2 & -3 - \lambda\\2 & 2\end{bmatrix}\right)\\ &= (1 - \lambda)[(-3 - \lambda)(-2 - \lambda) - 2] - 2[(-2)(-2 - \lambda) - 2]  \\ &- [(-2)2 - 2(-3 - \lambda)] \\ &= (1 - \lambda)(6 + 3\lambda + 2\lambda + \lambda^2 - 2) - 2(4 + 2\lambda - 2) - (-4 + 6 + 2\lambda) \\ &= (1 - \lambda)(4 + 5\lambda + \lambda^2) - 6 - 6\lambda \\ &= 4 + \lambda + \lambda^2 - 4\lambda - 5\lambda^2 - \lambda^3 - 6 - 6\lambda \\ &= -\lambda^3 - 4\lambda^2 - 5\lambda - 2 \\ &= -(\lambda^3 + 4\lambda^2 + 5\lambda + 2) \\ &= -(\lambda + 1)^2(\lambda + 2) 
+            \end{align*}
+            Assim $\det([T]_\mathcal{B} - \lambda I_3) = 0$ quando $-(\lambda + 1)^2(\lambda + 2) = 0$, ou seja, quando $\lambda = -1$ ou $\lambda = -2$.
+            Vamos determinar $\aut_T(-1)$ e $\aut_T(-2)$:
+            \begin{itemize}
+                \item para $\lambda = -1$ temos que $(x,y,z) \in \aut_T(-1)$ se, e s\'o se,
+                \[
+                    \begin{bmatrix}
+                        2 & 2 & -1\\
+                        -2 & -2 & 1\\
+                        2 & 2 & -1
+                    \end{bmatrix}\begin{bmatrix}
+                        x\\y\\z
+                    \end{bmatrix} = \begin{bmatrix}
+                        0\\0\\0
+                    \end{bmatrix}.
+                \]
+                Cuja solu\c{c}ão é $z = 2x + 2y$. Assim
+                \[
+                    \aut_T(-1) = \{(x,y,2x + 2y) \mid x,y \in \real\} = \{(x,0,2x) + (0, y, 2y) \mid x,y \in \real\} = [(1,0,2); (0, 1, 2)]
+                \]
+                e ent\~ao $\mathcal{B}_1 = \{(1,0,2); (0, 1, 2)\}$ \'e uma base de $\aut_T(-1)$ e $\dim_\real\aut_T(3) = 2$.
+
+                \item para $\lambda = -2$ temos que $(x,y,z) \in \aut_T(-2)$ se, e s\'o se,
+                \[
+                    \begin{bmatrix}
+                        3 & 2 & -1\\
+                        -2 & \phantom{-}1 & \phantom{-}1\\
+                        2 & \phantom{-}2 & \phantom{-}0
+                    \end{bmatrix}\begin{bmatrix}
+                        x\\y\\z
+                    \end{bmatrix} = \begin{bmatrix}
+                        0\\0\\0
+                    \end{bmatrix}.
+                \]
+                Cuja solu\c{c}ão é $y = x$ e $z = x$. Assim
+                \[
+                    \aut_T(-2) = \{(x,-x,x) \mid z \in \real\} = [(1,-1,1)]
+                \]
+                e ent\~ao $\mathcal{B}_2 = \{(1,-1,1)\}$ \'e uma base de $\aut_T(-2)$ e $\dim_\real\aut_T(-2) = 1$.
+            \end{itemize}
+            \'E f\'acil verificar que o conjunto $\mathcal{D} = \{(1,0,2); (0,1,2); (1,-1,1)\}$ \'e L.I, logo uma base de $\real^3$. Nesta base temos
             \[
-                [T]_\mathcal{B} = \begin{bmatrix}
+                [T]_\mathcal{D} = \begin{bmatrix}
                                 -1 & \phantom{-}0 & \phantom{-}0\\
                                 \phantom{-}0 & -1 & \phantom{-}0\\
                                 \phantom{-}0 & \phantom{-}0 & -2
