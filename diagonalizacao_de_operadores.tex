@@ -520,7 +520,7 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
             \begin{solucao}
                 Temos
                 \[
-                    [T]_\mathcal{B} - \lambda I_3 = \begin{bmatrix}1 - \lambda & 3 & 3\\0 & 4 - \lambda & 0\\-3 & 3 & 1 - \lambda\end{bmatrix}.
+                    [T]_\mathcal{B} - \lambda I_3 = \begin{bmatrix}1 - \lambda & 3 & 3\\\phantom{-}0 & 4 - \lambda & 0\\-3 & 3 & 1 - \lambda\end{bmatrix}.
                 \]
                 Daí, usando a segunda linha dessa matriz para calcular o determinante temos:
                 \begin{align*}
@@ -532,7 +532,7 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
                 \begin{itemize}
                     \item para $\lambda = 4$ temos que $(x,y,z) \in \aut_T(4)$ se, e s\'o se,
                     \[
-                        \begin{bmatrix}-3 & 3 & 3\\0 & 0 & 0\\0 & 3 & -3\end{bmatrix}
+                        \begin{bmatrix}-3 & 3 & \phantom{-}3\\\phantom{-}0 & 0 & \phantom{-}0\\\phantom{-}0 & 3 & -3\end{bmatrix}
                         \begin{bmatrix}x\\y\\z\end{bmatrix} = \begin{bmatrix}0\\0\\0\end{bmatrix}.
                     \]
                     Cuja solu\c{c}ão é $y = z$ e $x = 2z$. Assim
@@ -544,8 +544,8 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
                 \item para $\lambda = 1 - 3i$ temos que $(x,y,z) \in \aut_T(1 - 3i)$ se, e s\'o se,
                 \[
                     \begin{bmatrix}
-                        3i & 3 & 3\\
-                        0 & 3 + 3i & 0\\
+                        3i & 3 & \phantom{-}3\\
+                        \phantom{-}0 & 3 + 3i & \phantom{-}0\\
                         -3 & 3 & 3i
                     \end{bmatrix}\begin{bmatrix}
                         x\\y\\z
@@ -562,8 +562,8 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
                 \item para $\lambda = 1 + 3i$ temos que $(x,y,z) \in \aut_T(1 + 3i)$ se, e s\'o se,
                 \[
                     \begin{bmatrix}
-                        3i & 3 & 3\\
-                        0 & 3 - 3i & 0\\
+                        3i & 3 & \phantom{-}3\\
+                        \phantom{-}0 & 3 - 3i & \phantom{-}0\\
                         -3 & 3 & -3i
                     \end{bmatrix}\begin{bmatrix}
                         x\\y\\z
@@ -586,13 +586,13 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
 
         \item Decida se o operador $T \colon \real^4 \to \real^4$ dado pela matriz
             \[
-                [T]_\mathcal{B} = \begin{bmatrix}2 & 0 & 0  & 0\\0 & 1 & 0 & 0\\0 & 2 & 0 & 0\\1 & 0 & 0 & -2\end{bmatrix}
+                [T]_\mathcal{B} = \begin{bmatrix}2 & 0 & 0 &\phantom{-}0\\0 & 1 & 0 & \phantom{-}0\\0 & 2 & 0 & \phantom{-}0\\1 & 0 & 0 & -2\end{bmatrix}
             \]
             onde $\mathcal{B}$ é uma base qualquer de $\real^4$ é diagonalizável.
             \begin{solucao}
                 Aqui temos
                 \[
-                    [T]_\mathcal{B} - \lambda I_4 = \begin{bmatrix}2 - \lambda & 0 & 0 & 0\\0 & 1 - \lambda & 0 & 0\\0 & 2 & -\lambda & 0\\1 & 0 & 0 & -2 - \lambda\end{bmatrix}.
+                    [T]_\mathcal{B} - \lambda I_4 = \begin{bmatrix}2 - \lambda & 0 & \phantom{-}0 & 0\\0 & 1 - \lambda & \phantom{-}0 & 0\\0 & 2 & -\lambda & 0\\1 & 0 & \phantom{-}0 & -2 - \lambda\end{bmatrix}.
                 \]
                 Usando a primeira linha para calcular o determinante:
                 \begin{align*}
@@ -604,7 +604,7 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
                 \begin{itemize}
                     \item para $\lambda = 2$ temos que $(x,y,z,t) \in \aut_T(2)$ se, e s\'o se,
                         \[
-                            \begin{bmatrix}0 & 0 & 0 & 0\\0 & -1 & 0 & 0\\0 & 2 & -2 & 0\\1 & 0 & 0 & -4\end{bmatrix}
+                            \begin{bmatrix}0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0\\0 & -1 & \phantom{-}0 & \phantom{-}0\\0 & \phantom{-}2 & -2 & \phantom{-}0\\1 & \phantom{-}0 & \phantom{-}0 & -4\end{bmatrix}
                             \begin{bmatrix}x\\y\\z\\t\end{bmatrix} = \begin{bmatrix}0\\0\\0\\0\end{bmatrix}.
                         \]
                         Cuja solu\c{c}ão é $y = z = 0$ e $x = 4t$. Assim
@@ -615,7 +615,7 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
 
                     \item para $\lambda = 1$ temos que $(x,y,z,t) \in \aut_T(1)$ se, e s\'o se,
                         \[
-                            \begin{bmatrix}1 & 0 & 0 & 0\\0 & 0 & 0 & 0\\0 & 2 & -1 & 0\\1 & 0 & 0 & -3\end{bmatrix}
+                            \begin{bmatrix}1 & 0 & \phantom{-}0 & \phantom{-}0\\0 & 0 & \phantom{-}0 & \phantom{-}0\\0 & 2 & -1 & \phantom{-}0\\1 & 0 & \phantom{-}0 & -3\end{bmatrix}
                             \begin{bmatrix}x\\y\\z\\t\end{bmatrix} = \begin{bmatrix}0\\0\\0\\0\end{bmatrix}.
                         \]
                         Cuja solu\c{c}ão é $x = t = 0$ e $z = 2y$. Assim
@@ -626,7 +626,7 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
 
                     \item para $\lambda = 0$ temos que $(x,y,z,t) \in \aut_T(0)$ se, e s\'o se,
                         \[
-                            \begin{bmatrix}2 & 0 & 0 & 0\\0 & 1 & 0 & 0\\0 & 2 & 0 & 0\\1 & 0 & 0 & -2\end{bmatrix}
+                            \begin{bmatrix}2 & 0 & 0 & \phantom{-}0\\0 & 1 & 0 & \phantom{-}0\\0 & 2 & 0 & \phantom{-}0\\1 & 0 & 0 & -2\end{bmatrix}
                             \begin{bmatrix}x\\y\\z\\t\end{bmatrix} = \begin{bmatrix}0\\0\\0\\0\end{bmatrix}.
                         \]
                         Cuja solu\c{c}ão é $x = y = t = 0$. Assim
@@ -649,19 +649,19 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
 
                 Logo o conjunto $\mathcal{D} = \{(4, 0, 0, 1); (0, 1, 2, 0); (4, 0, 0, 1); (0, 0, 0, 1)\}$ é uma base de $\real^4$ e $T$ é diagonalizável. Com rela\c{c}ão à base $\mathcal{D}$ temos:
                 \[
-                    [T]_\mathcal{D} = \begin{bmatrix}2 & 0 & 0 & 0\\0 & 1 & 0 & 0\\0 & 0 & 0 & 0\\0 & 0 & 0 & -2\end{bmatrix}.
+                    [T]_\mathcal{D} = \begin{bmatrix}2 & 0 & 0 & \phantom{-}0\\0 & 1 & 0 & \phantom{-}0\\0 & 0 & 0 & \phantom{-}0\\0 & 0 & 0 & -2\end{bmatrix}.
                 \]
             \end{solucao}
 
         \item Decida se o operador $T \colon \real^3 \to \real^3$ dado pela matriz
             \[
-                [T]_\mathcal{B} = \begin{bmatrix}1 & 0 & 2\\-1 & 0 & 1\\1 & 1 & 2\end{bmatrix}
+                [T]_\mathcal{B} = \begin{bmatrix}\phantom{-}1 & 0 & 2\\-1 & 0 & 1\\\phantom{-}1 & 1 & 2\end{bmatrix}
             \]
             onde $\mathcal{B}$ é uma base qualquer de $\real^3$ é diagonalizável.
             \begin{solucao}
                 Aqui como já temos a matriz da transforma\c{c}ão vamos passar para a etapa 2:
                 \begin{align*}
-                    [T]_\mathcal{B} - \lambda I_3 = \begin{bmatrix}1 & 0 & 2\\-1 & 0 & 1\\1 & 1 & 2\end{bmatrix} - \begin{bmatrix} \lambda & 0 & 0\\0 & \lambda & 0\\0 & 0 & \lambda\end{bmatrix} = \begin{bmatrix}1 - \lambda & 0 & 2\\-1 & -\lambda & 1\\1 & 1 &2 - \lambda\end{bmatrix}
+                    [T]_\mathcal{B} - \lambda I_3 = \begin{bmatrix}\phantom{-}1 & 0 & 2\\-1 & 0 & 1\\\phantom{-}1 & 1 & 2\end{bmatrix} - \begin{bmatrix} \lambda & 0 & 0\\0 & \lambda & 0\\0 & 0 & \lambda\end{bmatrix} = \begin{bmatrix}1 - \lambda & \phantom{-}0 & 2\\-1 & -\lambda & 1\\\phantom{-}1 & \phantom{-}1 &2 - \lambda\end{bmatrix}
                 \end{align*}
                 Usando a primeira linha dessa matriz para calcular o determinante obtemos:
                 \begin{align*}
@@ -674,9 +674,9 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
                     \item para $\lambda = -1$ temos que $(x,y,z) \in \aut_T(-1)$ se, e s\'o se,
                         \[
                             \begin{bmatrix}
-                                2 & 0 & 2\\
+                                \phantom{-}2 & 0 & 2\\
                                 -1 & 1 & 1\\
-                                1 & 1 & 3
+                                \phantom{-}1 & 1 & 3
                             \end{bmatrix}\begin{bmatrix}
                                 x\\y\\z
                             \end{bmatrix} = \begin{bmatrix}
@@ -692,9 +692,9 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
                     \item para $\lambda = 1$ temos que $(x,y,z) \in \aut_T(1)$ se, e s\'o se,
                         \[
                             \begin{bmatrix}
-                                0 & 0 & 2\\
+                                \phantom{-}0 & \phantom{-}0 & 2\\
                                 -1 & -1 & 1\\
-                                1 & 1 & 1
+                                \phantom{-}1 & \phantom{-}1 & 1
                             \end{bmatrix}\begin{bmatrix}
                                 x\\y\\z
                             \end{bmatrix} = \begin{bmatrix}
@@ -710,9 +710,9 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
                     \item para $\lambda = 3$ temos que $(x,y,z) \in \aut_T(3)$ se, e s\'o se,
                         \[
                             \begin{bmatrix}
-                                -2 & 0 & 2\\
-                                -1 & -3 & 1\\
-                                1 & 1 & -1
+                                -2 & \phantom{-}0 & \phantom{-}2\\
+                                -1 & -3 & \phantom{-}1\\
+                                \phantom{-}1 & \phantom{-}1 & -1
                             \end{bmatrix}\begin{bmatrix}
                                 x\\y\\z
                             \end{bmatrix} = \begin{bmatrix}
@@ -728,7 +728,7 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
 
              Logo o conjunto $\mathcal{D} = \{(-5, 2, 1); (-1, 1, 0); (1, 0, 1)\}$ é uma base de $\real^3$ e $T$ é diagonalizável. Com rela\c{c}ão à base $\mathcal{D}$ temos:
                 \[
-                    [T]_\mathcal{D} = \begin{bmatrix}-1 & 0 & 0\\0 & 1 & 0\\0 & 0 & 3\end{bmatrix}.
+                    [T]_\mathcal{D} = \begin{bmatrix}-1 & 0 & 0\\\phantom{-}0 & 1 & 0\\\phantom{-}0 & 0 & 3\end{bmatrix}.
                 \]
         \end{solucao}
     \end{enumerate}
