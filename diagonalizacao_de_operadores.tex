@@ -308,22 +308,26 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
 
 \begin{exemplo}
     \begin{enumerate}[label={\arabic*})]
-        \item Seja $T : \real^2 \to \real^2$ o operador linear dado por $T(x,y) = (-y,x)$. Encontre os autovalores de $T$ e os autoespa\c{c}os associados, se existirem.
+        \item Seja $T : \real^2 \to \real^2$ o operador linear dado por $T(x,y) = (-y,x)$. O operador $T$ é diagonalizável?
         \begin{solucao}
-            Vamos considerar a base can\^onica de $\real^2$ dada por $\mathcal{A} = \{e_1 = (1,0); e_2 = (0,1)\}$. Temos
+            Como não foi dada a matriz de $T$ vamos primeiro encontrá-la. Para isso podemos considerar a base can\^onica de $\real^2$ dada por $\mathcal{B} = \{e_1 = (1,0); e_2 = (0,1)\}$. Temos
             \begin{align}
                 T(1,0) &= (0,1) = 0(1,0) + 1(1,0)\\
                 T(0,1) &= (-1,0) = -1(1,0) + 0(1,0).
             \end{align}
             Da{\'\i}
             \[
-                [T]_\mathcal{A} = \begin{bmatrix}0 & -1\\ 1 & \phantom{-}0\end{bmatrix}
+                [T]_\mathcal{B} = \begin{bmatrix}0 & -1\\ 1 & \phantom{-}0\end{bmatrix}.
             \]
-            e ent\~ao
+            Agora calculamos
             \begin{align*}
-                p_T(x) = \det([T - xId]_\mathcal{A}) = \det\begin{bmatrix} -x & -1\\\phantom{-}1 & -x\end{bmatrix} = x^2 + 1.
+                [T]_\mathcal{B} - \lambda I_2 &= \begin{bmatrix}0 & -1\\ 1 & \phantom{-}0\end{bmatrix} - \lambda\begin{bmatrix}1 & 0\\0 & 1\end{bmatrix} = \begin{bmatrix}0 & -1\\ 1 & \phantom{-}0\end{bmatrix} - \begin{bmatrix}\lambda & 0\\0 & \lambda\end{bmatrix}\\ &= \begin{bmatrix}-\lambda & -1\\ 1 & -\lambda\end{bmatrix}.
             \end{align*}
-            Como $p_T(x)$ n\~ao possui ra{\'\i}zes em $\real$, segue que $T$ n\~ao possui autovalores.
+            Com isso
+            \begin{align*}
+                \det([T]_\mathcal{B} - \lambda I_2]) = \det\left(\begin{bmatrix} -\lambda & -1\\\phantom{-}1 & -\lambda\end{bmatrix}\right) = \lambda^2 + 1.
+            \end{align*}
+            Nesse caso, não existe $\lambda \in \real$ tal que $\lambda^2 + 1 = 0$. Logo $T$ não é diagonalizável.
         \end{solucao}
         \item Seja $T : \complex^2 \to \complex^2$ o operador linear dado por $T(x,y) = (-y,x)$. Encontre os autovalores de $T$ e os autoespa\c{c}os associados, se existirem, considerando $\complex^2$ com um $\complex$-espa\c{c}o vetorial.
         \begin{solucao}
