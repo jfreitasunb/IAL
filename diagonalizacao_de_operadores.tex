@@ -228,6 +228,26 @@ Suponha que $n > 1$ e que $\det(B)$ esteja definido para todas as matrizes $B \i
 		\[
 			\det(A) = a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} - a_{13}a_{22}a_{31} - a_{12}a_{21}a_{33} - a_{11}a_{23}a_{32}.
 		\]
+
+	    \item Seja
+	        \[
+	            A = \begin{bmatrix}
+	                \phantom{-}6 & -3 & \phantom{-}1 & 0\\
+	                \phantom{-}0 & \phantom{-}3 & \phantom{-}1 & 0\\
+	                -6 & \phantom{-}6 & \phantom{-}0 & 0\\
+	                -3 & \phantom{-}3 & -2 & 3
+	            \end{bmatrix} \in M_4(\real).
+	        \]
+	        Para calcular $\det(A)$ podemos usar a terceira linha dessa matriz, pois nessa linha $a_{33} = a_{34} = 0$. Assim a expressão
+	        \[
+	            \det(A) = \sum_{j = 1}^4(-1)^{3 + i}a_{3j}\det(A_{3j})
+	        \]
+	        torna-se simplesmente
+	        \begin{align*}
+	            \det(A) &= (-1)^{3 + 1}a_{31}\det(A_{31}) + (-1)^{3 + 2}a_{32}\det(A_{32}) \\ &=
+	            -6\cdot\det\left(\begin{bmatrix}-3 & \phantom{-}1 & 0\\\phantom{-}0 & \phantom{-}1 & 0\\\phantom{-}3 & -2 & 0\end{bmatrix}\right) -6\cdot\det\left(\begin{bmatrix}\phantom{-}6 & \phantom{-}1 & 0\\\phantom{-}0 & \phantom{-}1 & 0\\-3 & -2 & 3\end{bmatrix}\right)\\
+	            \det(A) &= -6\cdot 18 = -108
+	        \end{align*}
 	\end{enumerate}
 \end{exemplo}
 
