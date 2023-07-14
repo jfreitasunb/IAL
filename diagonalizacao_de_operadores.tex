@@ -387,21 +387,27 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
         \end{solucao}
         \item Seja $T : \real^3 \to \real^3$ o operador linear tal que
         \[
-            [T]_\mathcal{A} = \begin{bmatrix}
+            [T]_\mathcal{B} = \begin{bmatrix}
                                 3 & -3 & -4\\
                                 0 & \phantom{-}3 & \phantom{-}5\\
                                 0 & \phantom{-}0 & \phantom{-}1
                             \end{bmatrix}
         \]
-        onde $\mathcal{A}$ \'e uma base qualquer de $\real^3$. Determine, casa exista, uma base de $\real^3$ tal que o operador $T$ seja diagonaliz\'avel.
+        onde $\mathcal{B}$ \'e a base ordenada canônica de $\real^3$. Determine, casa exista, uma base de $\real^3$ tal que o operador $T$ seja diagonaliz\'avel.
         \begin{solucao}
-            Temos
-            \[
-                p_T(x) = \det([T - xId]_\mathcal{A}) = (3 - x)^2(1 - x)
-            \]
-            e assim os autovalores de $T$ s\~ao $\lambda_1 = 3$ e $\lambda_2 = 1$.
+            Aqui como já temos a matriz da transforma\c{c}ão vamos passar para a etapa 2:
+            \begin{align*}
+                [T]_\mathcal{B} - \lambda I_3 = \begin{bmatrix}3 & -3 & -4\\0 & \phantom{-}3 & \phantom{-}5\\0 & \phantom{-}0 & \phantom{-}1\end{bmatrix} - \begin{bmatrix} \lambda & 0 & 0\\0 & \lambda & 0\\0 & 0 & \lambda\end{bmatrix} = \begin{bmatrix}3 - \lambda & -3 & -4\\0 & 3 - \lambda & 5\\0 & 0 &1 - \lambda\end{bmatrix}
+            \end{align*}
+            Usando a terceira linha dessa matriz para calcular o determinante obtemos:
+            \begin{align*}
+                \det([T]_\mathcal{B} - \lambda I_3) &= (-1)^{3 + 3}a_{33}\det(A_{33}) = (1 - \lambda)\det\left(\begin{bmatrix}3 - \lambda & -3\\0 & 3 - \lambda\end{bmatrix}\right) \\ &= (1 - \lambda)(3 - \lambda)^2
+            \end{align*}
+            Assim $\det([T]_\mathcal{B} - \lambda I_3) = 0$ quando $(1 - \lambda)(3 - \lambda)^2 = 0$, ou seja, quando $\lambda = 1$ ou $\lambda = 3$.
+
+            Vamos determinar $\aut_T(3)$ e $\aut_T(1)$:
             \begin{itemize}
-                \item Para $\lambda_1 = 3$ temos que $(x,y,z) \in \aut_T(3)$ se, e s\'o se,
+                \item para $\lambda = 3$ temos que $(x,y,z) \in \aut_T(3)$ se, e s\'o se,
                 \[
                     \begin{bmatrix}
                         0 & -3 & -4\\
@@ -413,12 +419,12 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
                         0\\0\\0
                     \end{bmatrix}.
                 \]
-                Assim
+                Cuja solu\c{c}ão é $z = y = 0$. Assim
                 \[
                     \aut_T(3) = \{(x,0,0) \mid x \in \real\} = [(1,0,0)]
                 \]
                 e ent\~ao $\mathcal{B}_1 = \{(1,0,0)\}$ \'e uma base de $\aut_T(3)$ e $\dim_\real\aut_T(3) = 1$.
-                \item Para $\lambda_2 = 1$ temos que $(x,y,z) \in \aut_T(1)$ se, e s\'o se,
+                \item para $\lambda = 1$ temos que $(x,y,z) \in \aut_T(1)$ se, e s\'o se,
                 \[
                     \begin{bmatrix}
                         2 & -3 & -4\\
@@ -430,13 +436,13 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
                         0\\0\\0
                     \end{bmatrix}.
                 \]
-                Assim
+                Cuja solu\c{c}ão é $y = -5z/2$ e $x = -7z/4$. Assim
                 \[
                     \aut_T(1) = \{(-7z/4,-5z/2,z) \mid z \in \real\} = [(-7/4,-5/2,1)]
                 \]
                 e ent\~ao $\mathcal{B}_2 = \{(-7/4,-5/2,1)\}$ \'e uma base de $\aut_T(1)$ e $\dim_\real\aut_T(1) = 1$.
             \end{itemize}
-            Note que o conjunto $\mathcal{B} = \mathcal{B}_1 \cup \mathcal{B}_2$ \'e L.I. mas n\~ao \'e uma base de $\real^3$. Neste caso o operador $T$ n\~ao \'e diagonaliz\'avel.
+            Note que o conjunto $\mathcal{D} = \mathcal{B}_1 \cup \mathcal{B}_2$ \'e L.I. mas n\~ao \'e uma base de $\real^3$. Neste caso o operador $T$ n\~ao \'e diagonaliz\'avel.
         \end{solucao}
         \item Seja $T : \real^3 \to \real^3$ o operador tal que
         \[
