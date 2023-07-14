@@ -144,6 +144,37 @@ Os seguintes exemplos respondem a essas perguntas:
     \end{enumerate}
 \end{exemplos}
 
+Aqui surgem duas questões:
+\begin{enumerate}
+    \item Como determinar se uma transforma\c{c}ão linear $T \colon V \to V$ possui autovetores?
+
+    \item A existência de autovetores de $T$ depende da base escolhida para $V$?
+\end{enumerate}
+
+As respostas para essas perguntas são dadas pelos seguintes teoremas:
+
+\begin{teorema}
+    As seguintes afirma\c{c}ões são equivalentes:
+    \begin{enumerate}
+        \item o escalar $\lambda \in \cp{K}$ é um autovalor do operador linear $T \colon V \to V$;
+
+        \item o operador $T - \lambda Id$ não é invertível;
+
+        \item dada uma base ordenada $\mathcal{B}$ qualquer de $V$ temos
+            \[
+                \det([T]_\mathcal{B} - \lambda[Id]_\mathcal{B}) = 0.
+            \]
+    \end{enumerate}
+\end{teorema}
+
+\begin{teorema}
+    Se $A \in M_n(\cp{K})$ for uma matriz $n \times n$, então $\lambda \in \cp{K}$ é um autovalor de $A$ se, e somente se, $\lambda$ satisfaz a equa\c{c}ão
+    \[
+        \det(A - \lambda I_n) = 0.
+    \]
+    Essa equa\c{c}ã é chamada de \textbf{equa\c{c}ão característica} de $A$.
+\end{teorema}
+
 \begin{exemplo}
     \begin{enumerate}[label={\arabic*})]
         \item Seja $T : \real^2 \to \real^2$ o operador linear dado por $T(x,y) = (-y,x)$. Encontre os autovalores de $T$ e os autoespa\c{c}os associados, se existirem.
