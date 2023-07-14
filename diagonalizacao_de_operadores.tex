@@ -287,6 +287,23 @@ Dado um operador linear $T \colon V \to V$, onde $\dim_\cp{K} V = n < \infty$, q
         \[
             [T]_\mathcal{B} - \lambda I_n = [T]_\mathcal{B} - \begin{bmatrix}\lambda & 0 & 0 & \cdots & 0\\0 & \lambda & 0 & \cdots & 0\\0 & 0 & \lambda & \cdots & 0\\\vdots & \vdots & \vdots & \cdots & \vdots\\0 & 0 & 0 & \cdots & \lambda\end{bmatrix}.
         \]
+
+    \item\label{passo4diag} Determine todos os valores, se existem, de $\lambda \in \cp{K}$ tais que
+        \[
+            \det([T]_\mathcal{B} - \lambda I_n) = 0.
+        \]
+
+    \item Se não existir $\lambda \in \cp{K}$ no passo anterior, então $T$ não é diagonalizável.
+
+    \item Para cada $\lambda_1$, $\lambda_2$, \dots, $\lambda_r$ encontrando em \eqref{passo4diag} resolva o sistema linear homogêneo
+        \[
+            ([T]_\mathcal{B} - \lambda_jI_n)X = 0.
+        \]
+        O subespa\c{c}o $Aut_T(\lambda_j)$ será dada pelas solu\c{c}ões desse sistema.
+
+    \item Encontre uma base para cada $Aut_T(\lambda_j)$, com $j = 1$, 2, \dots, $r$.
+
+    \item Se o conjunto $\mathcal{D}$ resultante a união de todas as bases encontradas no passo anterior possuir $\dim_\cp{K}V$ elementos, então $\mathcal{D}$ será uma base de $V$ tal que a matriz de $T$ com rela\c{c}ão à essa base será diagonal. Se $\mathcal{D}$ possuir menos elementos que $\dim_\cp{K}V$ então $T$ não é diagonalizável.
 \end{enumerate}
 
 \begin{exemplo}
