@@ -226,7 +226,7 @@ Suponha que $n > 1$ e que $\det(B)$ esteja definido para todas as matrizes $B \i
 		\end{align*}
 		Da{\'\i}
 		\[
-			\det A = a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} - a_{13}a_{22}a_{31} - a_{12}a_{21}a_{33} - a_{11}a_{23}a_{32}.
+			\det(A) = a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} - a_{13}a_{22}a_{31} - a_{12}a_{21}a_{33} - a_{11}a_{23}a_{32}.
 		\]
 	\end{enumerate}
 \end{exemplo}
@@ -234,9 +234,9 @@ Suponha que $n > 1$ e que $\det(B)$ esteja definido para todas as matrizes $B \i
 \begin{proposicao}
 	Sejam $A$, $B \in \cp{M}_n(\cp{K})$ e $\lambda \in \cp{K}$. Temos:
 	\begin{enumerate}[label={\roman*})]
-		\item $\det(AB) = \det A \det B$,
+		\item $\det(AB) = \det(A) \det(B)$,
 		\item $\det(\lambda A) = \lambda^n \det(A)$,
-		\item $\det(A^{-1}) = (\det A)^{-1}$.
+		\item Se $A$ é invertível, então $\det(A^{-1}) = [(\det(A)]^{-1}$.
 	\end{enumerate}
 \end{proposicao}
 
@@ -255,7 +255,7 @@ Suponha que $n > 1$ e que $\det(B)$ esteja definido para todas as matrizes $B \i
 \end{observacao}
 
 \begin{teorema}
-	Uma matriz $A \in \cp{M}_n(\cp{K})$ \'e invert{\'\i}vel se, e somente se, $\det A \ne 0_\cp{K}$.
+	Uma matriz $A \in \cp{M}_n(\cp{K})$ \'e invert{\'\i}vel se, e somente se, $\det(A) \ne 0$.
 \end{teorema}
 
 \begin{exemplo}
