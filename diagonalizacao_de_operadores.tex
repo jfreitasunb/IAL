@@ -187,13 +187,12 @@ Se $n = 1$, ent\~ao a matriz $A \in \cp{M}_1(\cp{K})$ \'e da forma
 \]
 e neste caso definimos
 \[
-	\det A = a_{11} \in \cp{K}.
+	\det(A) = a_{11} \in \cp{K}.
 \]
-Suponha que $n > 1$ e que $\det B$ esteja definido para todas as matrizes  $B \in \cp{M}_p(\cp{K})$ com $p < n$ e seja 
-$A \in \cp{M}_n(\cp{K})$. Para cada $(i,j)$, defina a matriz $A_{ij}$ formada a partir de $A$ retirando-se a sua $i$-\'esima linha e a sua $j$-\'esima coluna. \'E claro que $A \in \cp{M}_{n - 1}(\cp{K})$ e portanto $\det A_{ij}$ est\'a definido. Defina ent\~ao
-\[
-	\det A = \sum_{j = 1}^n(-1)^{i + j}a_{ij}\det A_{ij} \in \cp{K}.
-\]
+Suponha que $n > 1$ e que $\det(B)$ esteja definido para todas as matrizes $B \in \cp{M}_p(\cp{K})$ com $p < n$ e seja $A \in \cp{M}_n(\cp{K})$. Para cada $(i,j)$, defina a matriz $A_{ij}$ formada a partir de $A$ retirando-se a sua $i$-\'esima linha e a sua $j$-\'esima coluna. \'E claro que $A \in \cp{M}_{n - 1}(\cp{K})$ e portanto $\det(A_{ij})$ est\'a definido. Defina ent\~ao
+\begin{align*}
+	\det(A) &= \sum_{j = 1}^n(-1)^{i + j}a_{ij}\det(A_{ij}) \\ &= (-1)^{i + 1}a_{i1}\det(A_{i1}) + (-1)^{i + 2}a_{i2}\det(A_{i2}) \\ & + (-1)^{i + 3}a_{i3}\det(A_{i3}) + \cdots + (-1)^{i + n}a_{in}\det(A_{in}) \in \cp{K} 
+\end{align*}
 
 \begin{exemplo}
 	\begin{enumerate}[label={\arabic*})]
@@ -206,9 +205,10 @@ $A \in \cp{M}_n(\cp{K})$. Para cada $(i,j)$, defina a matriz $A_{ij}$ formada a 
 			\end{bmatrix} \in \cp{M}_2(\cp{K}).
 		\]
 		Fixada a linha 1, temos
-		\[
-			\det A = \sum_{j = 1}^2(-1)^{1 + j}a_{1j}\det A_{1j} = (-1)^{1 + 1}a_{11}\det A_{11} + (-1)^{1 + 2}a_{12}\det A_{12} = ad - bc.
-		\]
+		\begin{align*}
+			\det(A) &= \sum_{j = 1}^2(-1)^{1 + j}a_{1j}\det(A_{1j}) = (-1)^{1 + 1}a_{11}\det(A_{11}) + (-1)^{1 + 2}a_{12}\det(A_{12})\\
+			\det(A) &= ad - bc.
+	    \end{align*}	
 		Obter{\'\i}amos o mesmo resultado se consider\'assemos a linha 2.
 
 		\item Seja
@@ -222,7 +222,7 @@ $A \in \cp{M}_n(\cp{K})$. Para cada $(i,j)$, defina a matriz $A_{ij}$ formada a 
 		\]
 		Fixada a linha 2, temos
 		\begin{align*}
-			\det A &= \sum_{j = 1}^3(-1)^{2 + j}a_{2j}\det A_{2j} \\ &= (-1)^{2 + 1}a_{21}\det A_{21} + (-1)^{2 + 2}a_{22}\det A_{22} + (-1)^{2 + 3}a_{32}\det A_{32}\\ &= -a_{21}\det\begin{bmatrix}a_{12} & a_{13}\\a_{32} & a_{33}\end{bmatrix} + a_{22}\det\begin{bmatrix}a_{11} & a_{12}\\a_{31} & a_{33}\end{bmatrix} - a_{23}\det\begin{bmatrix}a_{11} & a_{12}\\a_{31} & a_{32}\end{bmatrix}.
+			\det(A) &= \sum_{j = 1}^3(-1)^{2 + j}a_{2j}\det(A_{2j}) \\ &= (-1)^{2 + 1}a_{21}\det(A_{21}) + (-1)^{2 + 2}a_{22}\det(A_{22}) + (-1)^{2 + 3}a_{32}\det(A_{32})\\ &= -a_{21}\det\left(\begin{bmatrix}a_{12} & a_{13}\\a_{32} & a_{33}\end{bmatrix}\right) + a_{22}\det\left(\begin{bmatrix}a_{11} & a_{12}\\a_{31} & a_{33}\end{bmatrix}\right) - a_{23}\det\left(\begin{bmatrix}a_{11} & a_{12}\\a_{31} & a_{32}\end{bmatrix}\right).
 		\end{align*}
 		Da{\'\i}
 		\[
