@@ -456,7 +456,7 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
         \begin{solucao}
             Aqui como já temos a matriz da transforma\c{c}ão vamos passar para a etapa 2:
             \begin{align*}
-                [T]_\mathcal{B} - \lambda I_3 = \begin{bmatrix}1 & 2 & -1\\-2 & -3 & 1\\2 & 2 & -2\end{bmatrix} - \begin{bmatrix} \lambda & 0 & 0\\0 & \lambda & 0\\0 & 0 & \lambda\end{bmatrix} = \begin{bmatrix}1 - \lambda & 2 & -1\\-2 & -3 - \lambda & 1\\2 & 2 &-2 - \lambda\end{bmatrix}
+                [T]_\mathcal{B} - \lambda I_3 = \begin{bmatrix}\phantom{-}1 & \phantom{-}2 & -1\\-2 & -3 & \phantom{-}1\\\phantom{-}2 & \phantom{-}2 & -2\end{bmatrix} - \begin{bmatrix} \lambda & 0 & 0\\0 & \lambda & 0\\0 & 0 & \lambda\end{bmatrix} = \begin{bmatrix}1 - \lambda & 2 & -1\\-2 & -3 - \lambda & \phantom{-}1\\\phantom{-}2 & 2 &-2 - \lambda\end{bmatrix}
             \end{align*}
             Usando a primeira linha dessa matriz para calcular o determinante obtemos:
             \begin{align*}
@@ -468,9 +468,9 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
                 \item para $\lambda = -1$ temos que $(x,y,z) \in \aut_T(-1)$ se, e s\'o se,
                 \[
                     \begin{bmatrix}
-                        2 & 2 & -1\\
-                        -2 & -2 & 1\\
-                        2 & 2 & -1
+                        \phantom{-}2 & \phantom{-}2 & -1\\
+                        -2 & -2 & \phantom{-}1\\
+                        \phantom{-}2 & \phantom{-}2 & -1
                     \end{bmatrix}\begin{bmatrix}
                         x\\y\\z
                     \end{bmatrix} = \begin{bmatrix}
@@ -486,9 +486,9 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
                 \item para $\lambda = -2$ temos que $(x,y,z) \in \aut_T(-2)$ se, e s\'o se,
                 \[
                     \begin{bmatrix}
-                        3 & 2 & -1\\
-                        -2 & \phantom{-}1 & \phantom{-}1\\
-                        2 & \phantom{-}2 & \phantom{-}0
+                        \phantom{-}3 & 2 & -1\\
+                        -2 & 1 & \phantom{-}1\\
+                        \phantom{-}2 & 2 & \phantom{-}0
                     \end{bmatrix}\begin{bmatrix}
                         x\\y\\z
                     \end{bmatrix} = \begin{bmatrix}
@@ -575,7 +575,7 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
                 \[
                     \aut_T(1 - 3i) = \{(-iz,0,z) \mid z \in \complex\} = [(-i,0,1)]
                 \]
-                e ent\~ao $\mathcal{B}_2 = \{(-i,0,1)\}$ \'e uma base de $\aut_T(1 + 3i)$ e $\dim_\complex\aut_T(1 + 3i) = 1$.
+                e ent\~ao $\mathcal{B}_3 = \{(-i,0,1)\}$ \'e uma base de $\aut_T(1 + 3i)$ e $\dim_\complex\aut_T(1 + 3i) = 1$.
             \end{itemize}
 
             Logo o conjunto $\mathcal{D} = \{(2, 1, 1); (i, 0, 1); (-i, 0, 1)\}$ é uma base de $\complex^3$ e $T$ é diagonalizável. Com rela\c{c}ão à base $\mathcal{D}$ temos:
