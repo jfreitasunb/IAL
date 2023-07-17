@@ -22,16 +22,34 @@
             \textit{Considere $\real^4$ e seus subespa\c{c}os $V = [(1,0,1,1);(0,-1,-1,-1)]$ e $W = \{(x,y,z,t) \in \real^4 \mid x + y = 0,\ t + z = 0\}$. Determine uma transforma\c{c}ão linear $T : \real^4 \to \real^4$ tal que $\ker(T) = V$ e $\im(T) = W$.}
          \end{flushleft}
     \end{center}
-    é baseada nos seguintes teoremas:
+    devemos lembrar primeiro que no caso de uma transforma\c{c}ão linear $T \colon V \to W$, se $\dim V$ é finita então vale o seguinte teorema:
 
     \begin{tcolorbox}[colback=green!30, colframe=green!80!blue, title=Teorema]
         Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais. Se $\{u_1, \dots, u_n\}$ é uma base de $V$ e se $\{w_1, \dots, w_n\} \subseteq W$, então existe uma única transforma\c{c}ão linear $T \colon V \to W$ tal que $T(u_i) = w_i$ para cada $i = 1$, \dots, $n$.
     \end{tcolorbox}
 
+    Assim, nesse caso devemos ter
+    \[
+        \dim\ker(T) + \dim\im(T) = 4.
+    \]
+    Primeiro, observe que os dois vetores que geram $V$ são L.I., logo o conjunto ${(1, 0, 1, 1); (0,-1,-1,-1)}$ é uma base para $V$. Assim $\dim(V) = 2$.
+
+    Para $W$, come\c{c}amos notando que
+    \[
+        W = \{(x, y, z, t) \in \real \mid x + y = 0,\ t + z = 0\}
+    \]
+    com isso
+    \begin{align*}
+        W &= \{(x, y, z, t) \in \real^4 \mid y = -x,\ z = -t\} \\ &= \{(x, -x, -t, t) \in \real^4 \mid x,\ t \in \real\} \\ &= \{(x, -x, 0, 0) + (0, 0, -t, t) \mid x,\ t \in \real\} &= \{x(1, -1, 0, 0) + t(0, 0, -1, 1) \mid x,\ t \in \real\} \\ &= [(1, -1, 0, 0); (0, 0, -1, 1)]
+    \end{align*}
+    Note que o conjunto ${(1, -1, 0, 0); (0, 0, -1, 1)}$ é L.I., logo uma base para $W$. Assim $\dim(W) = 2$.
+
+    Portanto é possível existir uma transforma\c{c}ão com as condi\c{c}ões solicitadas. Para criar essa transforma\c{c}ão vamos usar o seguinte teorema:
+
     \begin{tcolorbox}[colback=green!30, colframe=green!80!blue, title=Teorema do Núcleo e da Imagem]
         Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais com $\dim_\cp{K}V$ finita. Seja $T : V \to W$ uma transforma\c{c}ão linear. Então
         \[
-        \dim_\cp{K}V = \dim_\cp{K}\ker(T) + \dim_\cp{K}\im(T).
+            \dim_\cp{K}V = \dim_\cp{K}\ker(T) + \dim_\cp{K}\im(T).
         \]
     \end{tcolorbox}
 
