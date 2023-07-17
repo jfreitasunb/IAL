@@ -43,7 +43,7 @@
     \]
     com isso
     \begin{align*}
-        W &= \{(x, y, z, t) \in \real^4 \mid y = -x,\ z = -t\} \\ &= \{(x, -x, -t, t) \in \real^4 \mid x,\ t \in \real\} \\ &= \{(x, -x, 0, 0) + (0, 0, -t, t) \mid x,\ t \in \real\} &= \{x(1, -1, 0, 0) + t(0, 0, -1, 1) \mid x,\ t \in \real\} \\ &= [(1, -1, 0, 0); (0, 0, -1, 1)]
+        W &= \{(x, y, z, t) \in \real^4 \mid y = x,\ z = -t\} \\ &= \{(x, -x, -t, t) \in \real^4 \mid x,\ t \in \real\} \\ &= \{(x, -x, 0, 0) + (0, 0, -t, t) \mid x,\ t \in \real\} &= \{x(1, -1, 0, 0) + t(0, 0, -1, 1) \mid x,\ t \in \real\} \\ &= [(1, -1, 0, 0); (0, 0, -1, 1)]
     \end{align*}
     Note que o conjunto ${(1, -1, 0, 0); (0, 0, -1, 1)}$ é L.I., logo uma base para $W$. Assim $\dim(W) = 2$.
 
@@ -51,4 +51,69 @@
     \begin{tcolorbox}[colback=green!30, colframe=green!80!blue, title=Teorema]
         Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais. Se $\{u_1, \dots, u_n\}$ é uma base de $V$ e se $\{w_1, \dots, w_n\} \subseteq W$, então existe uma única transforma\c{c}ão linear $T \colon V \to W$ tal que $T(u_i) = w_i$ para cada $i = 1$, \dots, $n$.
     \end{tcolorbox}
+
+    Assim para criar a transforma\c{c}ão pedida somente precisamos definí-la numa base de $\real^4$.
+
+    Como queremos que $\ker(T) = V$, vamos usar a base de $V$ para produzir uma base de $\real^4$. A forma mais simples é considerar o conjunto: $\mathcal{B} = \{(1, 0, 1, 1); (0, -1, -1, -1); (0, 0, 1, 0); (0, 0, 0, 1)\}$. Montando a combina\c{c}ão linear
+    \[
+        \alpha_1(1, 0, 1, 1) + \alpha_2(0, -1, -1, -1) + \alpha_3(0, 0, 1, 0) + \alpha_4(0, 0, 0, 1) = (0, 0, 0, 0)
+    \]
+    obtemos a matriz
+    \[
+        \begin{bmatrix}
+            1 & \phantom{-}0 & 0 & 0\\
+            0 & -1 & 0 & 0\\
+            1 & -1 & 1 & 0\\
+            1 & -1 & 0 & 1
+        \end{bmatrix}
+    \]
+    cuja solu\c{c}ão é $\alpha_1 = \alpha_2 = \alpha_3 = \alpha_4 = 0$.
+    Com isso, o conjunto $\mathcal{B}$ é L.I., logo uma base de $\real^4$. Vamos usar essa base para definir $T$.
+
+    Como queremos que $\ker(T) = V$, isso significa que todos os vetores de $V$ são levados para o vetor nulo de $\real^4$ pela transforma\c{c}ão $T$. Assim vamos definir
+    \begin{align*}
+        T(1, 0, 1, 1) &= (0, 0, 0, 0)\\
+        T(0, -1, -1, -1) &= (0, 0, 0, 0).
+    \end{align*}
+    Agora, para que $\im(T) = W$, podemos escolher
+    \begin{align*}
+        T(0, 0, 1, 0) &= (1, -1, 0, 0)\\
+        T(0, 0, 0, 1) &= (0, 0, -1, 1)
+    \end{align*}
+    ou
+    \begin{align*}
+        T(0, 0, 1, 0) &= (0, 0, -1, 1)\\
+        T(0, 0, 0, 1) &= (1, -1, 0, 0).
+    \end{align*}
+    Qualquer uma dessas escolhas é válida e irá produzir uma transforma\c{c}ão diferente. Vamos usar a primeira. Assim a transforma\c{c}ão $T \colon \real^4 \to \real^4$ é dada por
+    \begin{align*}
+        T(1, 0, 1, 1) &= (0, 0, 0, 0)\\
+        T(0, -1, -1, -1) &= (0, 0, 0, 0)\\
+        T(0, 0, 1, 0) &= (1, -1, 0, 0)\\
+        T(0, 0, 0, 1) &= (0, 0, -1, 1).
+    \end{align*}
+
+    Para encontrar $T(x, y, z, t)$ primeiro escrever $(x, y, z, t)$ como combina\c{c}ão linear da base $\mathcal{B}$:
+    \[
+        (x, y, z, t) = \alpha_1(1, 0, 1, 1) + \alpha_2(0, -1, -1, -1) + \alpha_3(0, 0, 1, 0) + \alpha_4(0, 0, 0, 1)
+    \]
+    obtemos
+    \[
+        \alpha_1 = x,\ \alpha_2 = -y,\ \alpha_3 = z + y - x,\ \alpha_4 = t + y - x.
+    \]
+    Daí
+    \begin{align*}
+        (x, y, z, t) &= x(1, 0, 1, 1) - y(0, -1, -1, -1) + (z + y - x)(0, 0, 1, 0) + (t + y - x)(0, 0, 0, 1)\\
+        T(x, y, z, t) &= T(x(1, 0, 1, 1) - y(0, -1, -1, -1) + (z + y - x)(0, 0, 1, 0) + (t + y - x)(0, 0, 0, 1))\\
+        T(x, y, z, t) &= xT(1, 0, 1, 1) - yT(0, -1, -1, -1) + (z + y - x)T(0, 0, 1, 0) + (t + y - x)T(0, 0, 0, 1)\\
+        T(x, y, z, t) &= x(0, 0, 0, 0) - y(0, 0, 0, 0) + (z + y - x)(1, -1, 0, 0) + (t + y - x)(0, 0, -1, 1)\\
+        T(x, y, z, t) &= (z + y - x, x - y - z, 0, 0) + (0, 0, t + y - x, x - y - t)\\
+        T(x, y, z, t) &= (z + y - x, x - y - z, t + y - x, x - y - t)
+    \end{align*}
+
+    Assim a transforma\c{c}ão $T \colon \real^4 \to \real^4$ dada por
+    \[
+        T(x, y, z, t) = (z + y - x, x - y - z, t + y - x, x - y - t)
+    \]
+    é tal que $\ker(T) = V$ e $\im(T) = W$.
 \end{document}
