@@ -24,8 +24,11 @@
     \end{center}
     devemos lembrar primeiro que no caso de uma transforma\c{c}ão linear $T \colon V \to W$, se $\dim V$ é finita então vale o seguinte teorema:
 
-    \begin{tcolorbox}[colback=green!30, colframe=green!80!blue, title=Teorema]
-        Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais. Se $\{u_1, \dots, u_n\}$ é uma base de $V$ e se $\{w_1, \dots, w_n\} \subseteq W$, então existe uma única transforma\c{c}ão linear $T \colon V \to W$ tal que $T(u_i) = w_i$ para cada $i = 1$, \dots, $n$.
+    \begin{tcolorbox}[colback=green!30, colframe=green!80!blue, title=Teorema do Núcleo e da Imagem]
+        Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais com $\dim_\cp{K}V$ finita. Seja $T : V \to W$ uma transforma\c{c}ão linear. Então
+        \[
+            \dim_\cp{K}V = \dim_\cp{K}\ker(T) + \dim_\cp{K}\im(T).
+        \]
     \end{tcolorbox}
 
     Assim, nesse caso devemos ter
@@ -45,12 +48,7 @@
     Note que o conjunto ${(1, -1, 0, 0); (0, 0, -1, 1)}$ é L.I., logo uma base para $W$. Assim $\dim(W) = 2$.
 
     Portanto é possível existir uma transforma\c{c}ão com as condi\c{c}ões solicitadas. Para criar essa transforma\c{c}ão vamos usar o seguinte teorema:
-
-    \begin{tcolorbox}[colback=green!30, colframe=green!80!blue, title=Teorema do Núcleo e da Imagem]
-        Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais com $\dim_\cp{K}V$ finita. Seja $T : V \to W$ uma transforma\c{c}ão linear. Então
-        \[
-            \dim_\cp{K}V = \dim_\cp{K}\ker(T) + \dim_\cp{K}\im(T).
-        \]
+    \begin{tcolorbox}[colback=green!30, colframe=green!80!blue, title=Teorema]
+        Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais. Se $\{u_1, \dots, u_n\}$ é uma base de $V$ e se $\{w_1, \dots, w_n\} \subseteq W$, então existe uma única transforma\c{c}ão linear $T \colon V \to W$ tal que $T(u_i) = w_i$ para cada $i = 1$, \dots, $n$.
     \end{tcolorbox}
-
 \end{document}
