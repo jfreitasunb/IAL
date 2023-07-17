@@ -11,7 +11,7 @@
 \begin{document}
     \begin{center}
         {\Large\bf \disciplina\ - Turma \turma\ -- \semestre$^{o}$/\ano} \\ \vspace{9pt} {\large\bf
-            Solu\c{c}o de Exercício -- $\numerolista^a$ Lista - Módulo \numeromodulo}\\ \vspace{9pt} Prof. José Antônio O. Freitas
+            Soluço de Exercício -- $\numerolista^a$ Lista - Módulo \numeromodulo}\\ \vspace{9pt} Prof. José Antônio O. Freitas
     \end{center}
     \hrule
 
@@ -19,13 +19,13 @@
     Para resolver o exercício:
     \begin{center}
         \begin{flushleft}
-            \textit{Considere $\real^4$ e seus subespa\c{c}os $V = [(1,0,1,1);(0,-1,-1,-1)]$ e $W = \{(x,y,z,t) \in \real^4 \mid x + y = 0,\ t + z = 0\}$. Determine uma transforma\c{c}ão linear $T \colon \real^4 \to \real^4$ tal que $\ker(T) = V$ e $\im(T) = W$.}
+            \textit{Considere $\real^4$ e seus subespaços $V = [(1,0,1,1);(0,-1,-1,-1)]$ e $W = \{(x,y,z,t) \in \real^4 \mid x + y = 0,\ t + z = 0\}$. Determine uma transformação linear $T \colon \real^4 \to \real^4$ tal que $\ker(T) = V$ e $\im(T) = W$.}
          \end{flushleft}
     \end{center}
-    devemos lembrar primeiro que no caso de uma transforma\c{c}ão linear $T \colon V \to W$, se $\dim V$ é finita então vale o seguinte teorema:
+    devemos lembrar primeiro que no caso de uma transformação linear $T \colon V \to W$, se $\dim V$ é finita então vale o seguinte teorema:
 
     \begin{tcolorbox}[colback=green!30, colframe=green!80!blue, title=Teorema do Núcleo e da Imagem]
-        Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais com $\dim_\cp{K}V$ finita. Seja $T \colon V \to W$ uma transforma\c{c}ão linear. Então
+        Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais com $\dim_\cp{K}V$ finita. Seja $T \colon V \to W$ uma transformação linear. Então
         \[
             \dim_\cp{K}V = \dim_\cp{K}\ker(T) + \dim_\cp{K}\im(T).
         \]
@@ -37,7 +37,7 @@
     \]
     Primeiro, observe que os dois vetores que geram $V$ são L.I., logo o conjunto ${(1, 0, 1, 1); (0,-1,-1,-1)}$ é uma base para $V$. Assim $\dim(V) = 2$.
 
-    Para $W$, come\c{c}amos notando que
+    Para $W$, começamos notando que
     \[
         W = \{(x, y, z, t) \in \real \mid x + y = 0,\ t + z = 0\}
     \]
@@ -47,14 +47,14 @@
     \end{align*}
     Note que o conjunto ${(1, -1, 0, 0); (0, 0, -1, 1)}$ é L.I., logo uma base para $W$. Assim $\dim(W) = 2$.
 
-    Portanto é possível existir uma transforma\c{c}ão com as condi\c{c}ões solicitadas. Para criar essa transforma\c{c}ão vamos usar o seguinte teorema:
+    Portanto é possível existir uma transformação com as condições solicitadas. Para criar essa transformação vamos usar o seguinte teorema:
     \begin{tcolorbox}[colback=green!30, colframe=green!80!blue, title=Teorema]
-        Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais. Se $\{u_1, \dots, u_n\}$ é uma base de $V$ e se $\{w_1, \dots, w_n\} \subseteq W$, então existe uma única transforma\c{c}ão linear $T \colon V \to W$ tal que $T(u_i) = w_i$ para cada $i = 1$, \dots, $n$.
+        Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais. Se $\{u_1, \dots, u_n\}$ é uma base de $V$ e se $\{w_1, \dots, w_n\} \subseteq W$, então existe uma única transformação linear $T \colon V \to W$ tal que $T(u_i) = w_i$ para cada $i = 1$, \dots, $n$.
     \end{tcolorbox}
 
-    Assim para criar a transforma\c{c}ão pedida somente precisamos definí-la numa base de $\real^4$.
+    Assim para criar a transformação pedida somente precisamos definí-la numa base de $\real^4$.
 
-    Como queremos que $\ker(T) = V$, vamos usar a base de $V$ para produzir uma base de $\real^4$. A forma mais simples é considerar o conjunto: $\mathcal{B} = \{(1, 0, 1, 1); (0, -1, -1, -1); (0, 0, 1, 0); (0, 0, 0, 1)\}$. Montando a combina\c{c}ão linear
+    Como queremos que $\ker(T) = V$, vamos usar a base de $V$ para produzir uma base de $\real^4$. A forma mais simples é considerar o conjunto: $\mathcal{B} = \{(1, 0, 1, 1); (0, -1, -1, -1); (0, 0, 1, 0); (0, 0, 0, 1)\}$. Montando a combinação linear
     \[
         \alpha_1(1, 0, 1, 1) + \alpha_2(0, -1, -1, -1) + \alpha_3(0, 0, 1, 0) + \alpha_4(0, 0, 0, 1) = (0, 0, 0, 0)
     \]
@@ -67,10 +67,10 @@
             1 & -1 & 0 & 1
         \end{bmatrix}
     \]
-    cuja solu\c{c}ão é $\alpha_1 = \alpha_2 = \alpha_3 = \alpha_4 = 0$.
+    cuja solução é $\alpha_1 = \alpha_2 = \alpha_3 = \alpha_4 = 0$.
     Com isso, o conjunto $\mathcal{B}$ é L.I., logo uma base de $\real^4$. Vamos usar essa base para definir $T$.
 
-    Como queremos que $\ker(T) = V$, isso significa que todos os vetores de $V$ são levados para o vetor nulo de $\real^4$ pela transforma\c{c}ão $T$. Assim vamos definir
+    Como queremos que $\ker(T) = V$, isso significa que todos os vetores de $V$ são levados para o vetor nulo de $\real^4$ pela transformação $T$. Assim vamos definir
     \begin{align*}
         T(1, 0, 1, 1) &= (0, 0, 0, 0)\\
         T(0, -1, -1, -1) &= (0, 0, 0, 0).
@@ -85,7 +85,7 @@
         T(0, 0, 1, 0) &= (0, 0, -1, 1)\\
         T(0, 0, 0, 1) &= (1, -1, 0, 0).
     \end{align*}
-    Qualquer uma dessas escolhas é válida e irá produzir uma transforma\c{c}ão diferente. Vamos usar a primeira. Assim a transforma\c{c}ão $T \colon \real^4 \to \real^4$ é dada por
+    Qualquer uma dessas escolhas é válida e irá produzir uma transformação diferente. Vamos usar a primeira. Assim a transformação $T \colon \real^4 \to \real^4$ é dada por
     \begin{align*}
         T(1, 0, 1, 1) &= (0, 0, 0, 0)\\
         T(0, -1, -1, -1) &= (0, 0, 0, 0)\\
@@ -93,7 +93,7 @@
         T(0, 0, 0, 1) &= (0, 0, -1, 1).
     \end{align*}
 
-    Para encontrar $T(x, y, z, t)$ primeiro escrever $(x, y, z, t)$ como combina\c{c}ão linear da base $\mathcal{B}$:
+    Para encontrar $T(x, y, z, t)$ primeiro escrever $(x, y, z, t)$ como combinação linear da base $\mathcal{B}$:
     \[
         (x, y, z, t) = \alpha_1(1, 0, 1, 1) + \alpha_2(0, -1, -1, -1) + \alpha_3(0, 0, 1, 0) + \alpha_4(0, 0, 0, 1)
     \]
@@ -111,7 +111,7 @@
         T(x, y, z, t) &= (z + y - x, x - y - z, t + y - x, x - y - t)
     \end{align*}
 
-    Assim a transforma\c{c}ão $T \colon \real^4 \to \real^4$ dada por
+    Assim a transformação $T \colon \real^4 \to \real^4$ dada por
     \[
         T(x, y, z, t) = (z + y - x, x - y - z, t + y - x, x - y - t)
     \]
