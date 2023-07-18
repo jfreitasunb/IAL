@@ -11,46 +11,46 @@ Durante esse curso iremos trabalhar com o conceito de corpos e alguns casos espe
 Para mais detalhes sobre corpos veja \cite{Hygino:2019}.
 
 \begin{definicao}\label{corpo}\index{Corpo}
-	Um conjunto n\~ao vazio $\cp{K}$ \'e chamado de \textbf{corpo} se em $\cp{K}$ podemos definir duas opera\c{c}\~oes, denotadas por $\oplus$ (e chamada de \textbf{adi\c{c}\~ao}) e $\otimes$ (e chamada de \textbf{multiplica\c{c}\~ao}) de modo que
+	Um conjunto não vazio $\cp{K}$ é chamado de \textbf{corpo} se em $\cp{K}$ podemos definir duas operações, denotadas por $\oplus$ (e chamada de \textbf{adição}) e $\otimes$ (e chamada de \textbf{multiplicação}) de modo que
 	\begin{align*}
 		(1)\ a \oplus b \in \cp{K}\\
 		(2)\ a \otimes b \in \cp{K}
 	\end{align*}
-	para todos $a$, $b \in \cp{K}$ e que satisfa\c{c}am as seguintes propriedades:
+	para todos $a$, $b \in \cp{K}$ e que satisfaçam as seguintes propriedades:
 	\begin{enumerate}[label={\roman*})]
-		\item \textbf{Comutatividade da adi\c{c}\~ao}: $a \oplus b = b \oplus a$ para todos $a$, $b \in \cp{K}$;
-		\item \textbf{Associatividade da adi\c{c}\~ao}: $a \oplus (b \oplus c) = (a \oplus b) \oplus c$, para todos $a$, $b$ e $c \in \cp{K}$;
-		\item \textbf{Elemento neutro da adi\c{c}\~ao}: Existe um elemento em $\cp{K}$, denotado por $0_\cp{K}$ ou simplesmente $0$ e chamado de \textbf{elemento neutro da adi\c{c}\~ao}, que satisfaz
+		\item \textbf{Comutatividade da adição}: $a \oplus b = b \oplus a$ para todos $a$, $b \in \cp{K}$;
+		\item \textbf{Associatividade da adição}: $a \oplus (b \oplus c) = (a \oplus b) \oplus c$, para todos $a$, $b$ e $c \in \cp{K}$;
+		\item \textbf{Elemento neutro da adição}: Existe um elemento em $\cp{K}$, denotado por $0_\cp{K}$ ou simplesmente $0$ e chamado de \textbf{elemento neutro da adição}, que satisfaz
 		\[
 			a \oplus 0_\cp{K} = a = 0_\cp{K} \oplus a
 		\]
 		para todo $a \in \cp{K}$.
-		\item \textbf{Elemento oposto da adi\c{c}\~ao}: Para cada $a \in \cp{K}$, existe um elemento em $\cp{K}$, denotado por $-a$ e chamado de \textbf{oposto} de $a$ ou \textbf{inverso aditivo} de $a$ tal que
+		\item \textbf{Elemento oposto da adição}: Para cada $a \in \cp{K}$, existe um elemento em $\cp{K}$, denotado por $-a$ e chamado de \textbf{oposto} de $a$ ou \textbf{inverso aditivo} de $a$ tal que
 		\[
 			a \oplus (-a) = 0_\cp{K} = (-a) \oplus a.
 		\]
-		\item \textbf{Comutatividade da multiplica\c{c}\~ao}: $a \otimes b = b \otimes a$ para todos $a$, $b \in \cp{K}$;
-		\item \textbf{Associatividade da multiplica\c{c}\~ao}: $a \otimes (b \otimes c) = (a \otimes b) \otimes c$, para todos $a$, $b$ e $c \in \cp{K}$;
-		\item \textbf{Elemento neutro da multiplica\c{c}\~ao}: Existe um elemento em $\cp{K}$, denotado por $1_\cp{K}$ ou simplesmente $1$ e chamado de \textbf{elemento neutro da multiplica\c{c}\~ao} ou \textbf{unidade}, que satisfaz
+		\item \textbf{Comutatividade da multiplicação}: $a \otimes b = b \otimes a$ para todos $a$, $b \in \cp{K}$;
+		\item \textbf{Associatividade da multiplicação}: $a \otimes (b \otimes c) = (a \otimes b) \otimes c$, para todos $a$, $b$ e $c \in \cp{K}$;
+		\item \textbf{Elemento neutro da multiplicação}: Existe um elemento em $\cp{K}$, denotado por $1_\cp{K}$ ou simplesmente $1$ e chamado de \textbf{elemento neutro da multiplicação} ou \textbf{unidade}, que satisfaz
 		\[
 			a \otimes 1_\cp{K} = a = 1_\cp{K} \otimes a
 		\]
 		para todo $a \in \cp{K}$.
-		\item \textbf{Elemento inverso da multiplica\c{c}\~ao}: Para cada $a \in \cp{K}$, $a \ne 0_{\cp{K}}$, existe um elemento em $\cp{K}$, denotado por $a^{-1}$ e chamado de \textbf{inverso multiplicativo} de $a$
+		\item \textbf{Elemento inverso da multiplicação}: Para cada $a \in \cp{K}$, $a \ne 0_{\cp{K}}$, existe um elemento em $\cp{K}$, denotado por $a^{-1}$ e chamado de \textbf{inverso multiplicativo} de $a$
 		tal que
 		\[
 			a \otimes a^{-1} = 1_\cp{K} = a^{-1} \otimes a.
 		\]
-		\item \textbf{Distributividade da soma em rela\c{c}\~ao \`a multiplica\c{c}\~ao}: $(a \oplus b)\otimes c = a\otimes c \oplus b\otimes c$, para todos $a$, $b$ e $c \in \cp{K}$.
+		\item \textbf{Distributividade da soma em relação \`a multiplicação}: $(a \oplus b)\otimes c = a\otimes c \oplus b\otimes c$, para todos $a$, $b$ e $c \in \cp{K}$.
 	\end{enumerate}
 \end{definicao}
 
-Para simplificar a nota\c{c}\~ao vamos escrever
+Para simplificar a notação vamos escrever
 \[
 	a \otimes b = ab.
 \]
 
-Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, \otimes, \oplus)$. Quando n\~ao houver chance de confus\~ao em rela\c{c}\~ao \`as opera\c{c}\~oes de soma e multiplica\c{c}\~ao envolvidas no corpo $(\cp{K}, \otimes, \oplus)$, vamos simplesmente dizer que $\cp{K}$ \'e um corpo. Os elementos de um corpo $\cp{K}$ s\~ao chamados de \textbf{escalares}.
+Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, \otimes, \oplus)$. Quando não houver chance de confusão em relação \`as operações de soma e multiplicação envolvidas no corpo $(\cp{K}, \otimes, \oplus)$, vamos simplesmente dizer que $\cp{K}$ é um corpo. Os elementos de um corpo $\cp{K}$ são chamados de \textbf{escalares}.
 
 Considere $\cp{K} = \rac$ ou $\real$. Então vale sempre que:
 \begin{enumerate}[label={\roman*})]
@@ -74,18 +74,18 @@ Considere $\cp{K} = \rac$ ou $\real$. Então vale sempre que:
 \end{enumerate}
 
 \subsection{Números Complexos}\index{Números Complexos}
-Um outro conjunto importante com o qual iremos trabalhar é \textbf{conjunto dos números complexos}. Tal conjunto \'e definido como
+Um outro conjunto importante com o qual iremos trabalhar é \textbf{conjunto dos números complexos}. Tal conjunto é definido como
 \[
 	\complex = \{a + bi \mid a, b \in \real, i^2 = -1\}.
 \]
-Dados $z = a + bi$, $w = c + di \in \complex$ definimos a soma e a multiplica\c{c}\~ao em $\complex$ por
+Dados $z = a + bi$, $w = c + di \in \complex$ definimos a soma e a multiplicação em $\complex$ por
 \begin{align}
 	z + w &= (a + c) + (b + d)i\label{soma_complexos}\\
 	z\cdot w &= (ac - bd) + (ad + bc)i.\label{multiplicacao_complexos}
 \end{align}
-Al\'em disso, $a + bi = c + di$ se, e somente se, $a = c$ e $b = d$.
+Além disso, $a + bi = c + di$ se, e somente se, $a = c$ e $b = d$.
 
-Dado um n\'umero complexo $z = a + bi \ne 0$, seja
+Dado um número complexo $z = a + bi \ne 0$, seja
 \[
 	w = \dfrac{a - bi}{a^2 + b^2} \ne 0.
 \]
@@ -93,13 +93,13 @@ Note que
 \begin{align*}
 	z\cdot w = (a + bi)\cdot \dfrac{a - bi}{a^2 + b^2} = \dfrac{(a^2 + b^2) + (-ab + ba)i}{a^2 + b^2} = 1
 \end{align*}
-assim $w$ \'e o inverso multiplicativo de $z$ em $\complex$.
+assim $w$ é o inverso multiplicativo de $z$ em $\complex$.
 
-O \textbf{m\'odulo}\index{Números Complexos!módulo} do n\'umero complexo $z = a + bi$ \'e definido como
+O \textbf{m\'odulo}\index{Números Complexos!módulo} do número complexo $z = a + bi$ é definido como
 \[
 	|z| = \sqrt{a^2 + b^2}
 \]
-e o \textbf{conjugado complexo} \index{Números Complexos!conjugado complexo}de $z = a + bi$ \'e definido como
+e o \textbf{conjugado complexo} \index{Números Complexos!conjugado complexo}de $z = a + bi$ é definido como
 \[
 	\overline{z} = a - bi.
 \]
@@ -121,13 +121,13 @@ e o \textbf{conjugado complexo} \index{Números Complexos!conjugado complexo}de 
 	O conjunto $\complex$ com as operações definidas em \eqref{soma_complexos} e \eqref{multiplicacao_complexos} é um corpo.
 \end{proposicao}
 
-Uma propriedade importante dos n\'umeros complexos que iremos utilizar \'e a seguinte:
+Uma propriedade importante dos números complexos que iremos utilizar é a seguinte:
 \begin{teorema}
 	Todo polin\^omio com coeficientes em $\complex$ possui ra{\'\i}zes complexas.
 \end{teorema}
 
 \begin{observacao}
-	Um corpo satisfazendo a propriedade do teorema anterior \'e chamado de \textbf{algebricamente fechado}\index{Corpo!algebricamente fechado}. \'E f\'acil ver que $\rac$ e $\real$ n\~ao s\~ao corpos algebricamente fechados, isto \'e, existem polin\^omios com coeficientes em $\rac$ e em $\real$ que n\~ao possuem ra{\'\i}zes nesses corpos.
+	Um corpo satisfazendo a propriedade do teorema anterior é chamado de \textbf{algebricamente fechado}\index{Corpo!algebricamente fechado}. é fácil ver que $\rac$ e $\real$ não são corpos algebricamente fechados, isto é, existem polin\^omios com coeficientes em $\rac$ e em $\real$ que não possuem ra{\'\i}zes nesses corpos.
 \end{observacao}
 \section{Matrizes}
 
@@ -135,9 +135,9 @@ Durante o restante dessas notas o conjunto $\cp{K}$ representará um dos conjunt
 
 Para mais informações sobre matrizes veja \cite{Boldrini:1980, Callioli:2009, Anton:2012}.
 
-Aqui vamos recordar algumas propriedades b\'asicas de matrizes. Para isso seja $\cp{K}$ um corpo.\index{Matriz}
+Aqui vamos recordar algumas propriedades básicas de matrizes. Para isso seja $\cp{K}$ um corpo.\index{Matriz}
 
-Sejam $p$, $q$ dois inteiros positivos. Uma \textbf{matriz $p$ por $q$ $A$ sobre $\cp{K}$} \'e dada por $p \times q$ valores $a_{ij} \in K$, com $1 \le i \le p$, $1 \le j \le q$ agrupadas em $p$ linhas e $q$ colunas, que ser\'a representada por
+Sejam $p$, $q$ dois inteiros positivos. Uma \textbf{matriz $p$ por $q$ $A$ sobre $\cp{K}$} é dada por $p \times q$ valores $a_{ij} \in K$, com $1 \le i \le p$, $1 \le j \le q$ agrupadas em $p$ linhas e $q$ colunas, que será representada por
 \[
 	A = (a_{ij})_{p\times q} = \begin{pmatrix}
 		a_{11} & a_{12} & \cdots & a_{1q}\\
@@ -464,13 +464,13 @@ No caso em que $p = q = n$ iremos escrever simplesmente
 	M_{n\times n}(\cp{K}) = M_n(\cp{K}).
 \]
 
-Nesse conjunto podemos definir as seguintes opera\c{c}\~oes:
+Nesse conjunto podemos definir as seguintes operações:
 \begin{enumerate}[label={\roman*})]
     \item \textit{Igualdade de matrizes:}\index{Matriz!igualdade} Sejam $A = (a_{ij})$ e $B = (b_{ij})$ matrizes em $M_{p\times q}(\cp{K})$. Então dizemos que $A$
         e $B$ são \textbf{iguais} quando $a_{ij} = b_{ij}$ para todo $1 \le i \le p$ e todo $1 \le j \le q$.
 
-    \item \textit{Soma de matrizes:}\index{Matrizes!soma} Se $A = (a_{ij})$, $B = (b_{ij}) \in M_{p\times q}(\cp{K})$, ent\~ao a
-        \textbf{soma} $A + B$ \'e a matriz $C = (c_{ij}) \in M_{p\times q}(\cp{K})$, tal que, para cada par $(i,j)$ temos $c_{ij} = a_{ij} + b_{ij}$, ou seja,
+    \item \textit{Soma de matrizes:}\index{Matrizes!soma} Se $A = (a_{ij})$, $B = (b_{ij}) \in M_{p\times q}(\cp{K})$, então a
+        \textbf{soma} $A + B$ é a matriz $C = (c_{ij}) \in M_{p\times q}(\cp{K})$, tal que, para cada par $(i,j)$ temos $c_{ij} = a_{ij} + b_{ij}$, ou seja,
 	\begin{align*}
 		C = A + B &= \begin{pmatrix}
 		a_{11} & a_{12} & \cdots & a_{1q}\\
@@ -490,8 +490,8 @@ Nesse conjunto podemos definir as seguintes opera\c{c}\~oes:
 	\end{pmatrix}
 	\end{align*}
 
-    \item \textit{Diferença de matrizes:}\index{Matrizes!diferença} Se $A = (a_{ij})$, $B = (b_{ij}) \in M_{p\times q}(\cp{K})$, ent\~ao a
-        \textbf{diferença} $A - B$ \'e a matriz $C = (c_{ij}) \in M_{p\times q}(\cp{K})$, tal que, para cada par $(i,j)$ temos $c_{ij} =
+    \item \textit{Diferença de matrizes:}\index{Matrizes!diferença} Se $A = (a_{ij})$, $B = (b_{ij}) \in M_{p\times q}(\cp{K})$, então a
+        \textbf{diferença} $A - B$ é a matriz $C = (c_{ij}) \in M_{p\times q}(\cp{K})$, tal que, para cada par $(i,j)$ temos $c_{ij} =
         a_{ij} - b_{ij}$, ou seja,
 	\begin{align*}
 		C = A - B &= \begin{pmatrix}
@@ -575,7 +575,7 @@ Nesse conjunto podemos definir as seguintes opera\c{c}\~oes:
 \end{exemplo}
 
 \begin{proposicao}
-    Sejam $A \in M_{p\times q}(\cp{K})$ e  $B \in M_{p\times q}(\cp{K})$ e $\alpha$, $\lambda \in \cp{K}$, ent\~ao:
+    Sejam $A \in M_{p\times q}(\cp{K})$ e  $B \in M_{p\times q}(\cp{K})$ e $\alpha$, $\lambda \in \cp{K}$, então:
 	\begin{enumerate}[label={\roman*})]
 		\item $(\alpha\lambda) A = \alpha(\lambda A) = \lambda(\alpha A)$
 		\item $(\alpha + \lambda)A = \alpha A + \lambda A$
@@ -800,7 +800,7 @@ Nesse conjunto podemos definir as seguintes opera\c{c}\~oes:
 	\[
         c_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{iq}b_{qj},
 	\]
-	para $i = 1$, \dots, $p$ e $j = 1$, \dots, $r$. Isto \'e,
+	para $i = 1$, \dots, $p$ e $j = 1$, \dots, $r$. Isto é,
 	\begin{align*}
 		A\cdot B &= \begin{pmatrix}
 		a_{11} & a_{12} & \cdots & a_{1q}\\
@@ -978,7 +978,7 @@ Nesse conjunto podemos definir as seguintes opera\c{c}\~oes:
 \end{observacoes}
 
 \begin{proposicao}
-	Sejam $A$, $B$ e $C$ matrizes de ordens tais que as operações a seguir estejam definidas. Ent\~ao:
+	Sejam $A$, $B$ e $C$ matrizes de ordens tais que as operações a seguir estejam definidas. Entao:
 	\begin{enumerate}[label={\roman*})]
 		\item $(A\cdot B)\cdot C = A\cdot(B \cdot C)$
 		\item $(A + B)\cdot C = (A\cdot C) + (B\cdot C)$
