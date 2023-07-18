@@ -3,11 +3,11 @@
 
 \chapter{Espaços Vetoriais}
 
-Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
+Em todo este capítulo $\cp{K}$ denotará um corpo.
 
 \begin{definicao}
-  Um conjunto n\~ao vazio $V$ \'e um \textbf{espa\c{c}o vetorial}\index{Espaço vetorial} sobre um corpo $\cp{K}$ se em seus elementos,
-  chamados \textbf{vetores}\index{Espaço vetorial!vetores}, estiverem definidas duas opera\c{c}\~oes satisfazendo:
+  Um conjunto não vazio $V$ é um \textbf{espaço vetorial}\index{Espaço vetorial} sobre um corpo $\cp{K}$ se em seus elementos,
+  chamados \textbf{vetores}\index{Espaço vetorial!vetores}, estiverem definidas duas operaç\~oes satisfazendo:
   \begin{itemize}
     \item[A)] A cada par $u$, $w \in V$ corresponde um vetor $u + w \in V$, chamado \textbf{soma} de $u$ e $w$, de modo que:
     \item[A1)] $u + w = w + u$, para todos $u$, $w \in V$;
@@ -23,14 +23,14 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
       \]
     \item[M)] A cada par $\alpha \in \cp{K}$ e $u \in V$, corresponde um vetor $\alpha \cdot u \in V$, denominado \textbf{produto por escalar}\index{Espaço vetorial!produto por escalar} de $\alpha$ por $u$ de modo que:
     \item[M1)] $(\alpha\beta)\cdot u = \alpha(\beta\cdot u)$ para todos $\alpha$, $\beta \in \cp{K}$ e todo $u \in V$;
-    \item[M2)] $1_\cp{K}\cdot u = u$ para todo $u \in V$, onde $1_\cp{K}$ \'e o elemento neutro da multiplica\c{c}\~ao em $\cp{K}$.
+    \item[M2)] $1_\cp{K}\cdot u = u$ para todo $u \in V$, onde $1_\cp{K}$ é o elemento neutro da multiplicação em $\cp{K}$.
     \item[D1)] $\alpha\cdot(u + w) = \alpha\cdot u + \alpha\cdot w$, para todo $\alpha \in \cp{K}$ e todos $u$, $w \in V$;
     \item[D2)] $(\alpha + \beta)\cdot u = \alpha\cdot u + \beta\cdot u$, para todos $\alpha$, $\beta \in \cp{K}$ e todo $u \in V$.
   \end{itemize}
 \end{definicao}
 
 \begin{observacao}
-  Vamos usar a express\~ao $\cp{K}$-\textbf{espa\c{c}o vetorial} para nos referir a um espa\c{c}o vetorial $V$ sobre um corpo $\cp{K}$.
+  Vamos usar a expressão $\cp{K}$-\textbf{espaço vetorial} para nos referir a um espaço vetorial $V$ sobre um corpo $\cp{K}$.
 \end{observacao}
 
 \begin{exemplo}
@@ -43,7 +43,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
           \begin{itemize}
             \item $(a_1, a_2, a_3) + (b_1, b_2, b_3) = (a_1 + b_1, a_2 + b_2, a_3 + b_3)$ para todos $(a_1, a_2, a_3)$, $(b_1, b_2, b_3) \in \real^3$;
             \item $\alpha (a_1, a_2, a_3) = (\alpha a_1, \alpha a_2, \alpha a_3)$ para todo $\alpha \in \real$ e todo $(a_1, a_2, a_3) \in \real^3$.
-                  Com estas opera\c{c}\~oes $\real^3$ \'e um espa\c{c}o vetorial sobre $\real$.
+                  Com estas operaç\~oes $\real^3$ é um espaço vetorial sobre $\real$.
           \end{itemize}
           \begin{solucao}
             De fato,
@@ -52,11 +52,11 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 
               \item[A2)] $[(a_1, a_2, a_3) + (b_1, b_2, b_3)] + (c_1, c_2, c_3) = (a_1 + b_1, a_2 + b_2, a_3 + b_3) + (c_1, c_2, c_3) = ((a_1 + b_1) + c_1, (a_2 + b_2) + c_2, (a_3 + b_3) + c_3) = (a_1 + (b_1 + c_1), a_2 + (b_2 + c_2), a_3 + (b_3 + c_3)) = (a_1, a_2, a_3) + (b_1 + c_1, b_2 + c_2, b_3 + c_3) = (a_1, a_2, a_3) + [(b_1, b_2, b_3) + (c_1, c_2, c_3)]$, para todos $(a_1, a_2, a_3)$, $(b_1, b_2, b_3)$, $(c_1, c_2, c_3) \in \real^3$.
 
-              \item[A3)] Tome $0_V = (0, 0, 0)$. Ent\~ao para todo $(a_1, a_2, a_3) \in \real^3$ temos
+              \item[A3)] Tome $0_V = (0, 0, 0)$. Então para todo $(a_1, a_2, a_3) \in \real^3$ temos
                 \[
                   (a_1, a_2, a_3) + 0_V = (a_1, a_2, a_3) + (0, 0, 0) = (a_1 + 0, a_2 + 0, a_3 + 0) = (a_1, a_2, a_3).
                 \]
-                Logo $0_V = (0, 0, 0)$ \'e o vetor nulo de $\real^3$.
+                Logo $0_V = (0, 0, 0)$ é o vetor nulo de $\real^3$.
 
               \item[A4)] Dado $u = (a_1, a_2, a_3) \in \real^3$, tome $-u = (-a_1, -a_2, -a_3) \in \real^3$. Assim
                 \[
@@ -81,7 +81,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
                   (\alpha + \beta)\cdot u & = (\alpha + \beta)\cdot(u_1, u_2, u_ 3) = ((\alpha + \beta)a_1, (\alpha + \beta)a_2, (\alpha + \beta)a_3) \\ &= (\alpha a_1 + \beta a_1, \alpha a_2 + \beta a_2, \alpha a_3 + \beta a_3) \\ &= (\alpha a_1, \alpha a_2, \alpha a_3) + (\beta a_1, \beta a_2, \beta a_3) \\ &= \alpha\cdot(a_1, a_2, a_3) + \beta\cdot(a_1, a_2, a_3) \\ &= \alpha\cdot u + \beta\cdot u
                 \end{align*}
             \end{enumerate}
-            Portanto $V = \real^3$ \'e um $\real$-espa\c{c}o vetorial.
+            Portanto $V = \real^3$ é um $\real$-espaço vetorial.
           \end{solucao}
 
     \item De modo geral, seja $\cp{K}$ um corpo. Considere o conjunto
@@ -92,27 +92,27 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
           \begin{itemize}
             \item $(a_1, a_2, \dots, a_n) + (b_1, b_2, \dots,b_n) = (a_1 + b_1, a_2 + b_2,\dots, a_n + b_n)$ para todos $(a_1, a_2, \dots,a_n)$ ,$(b_1, b_2, \dots,b_n) \in \cp{K}^n$;
             \item $\alpha (a_1, a_2, \dots,a_n) = (\alpha a_1, \alpha a_2, \dots, \alpha a_n)$ para todo $\alpha \in \cp{K}$ e todo $(a_1, a_2, \dots, a_n) \in \cp{K}^n$.
-                  Com estas opera\c{c}\~oes $\cp{K}^n$ \'e um espa\c{c}o vetorial sobre $\cp{K}$. Assim temos:
+                  Com estas operaç\~oes $\cp{K}^n$ é um espaço vetorial sobre $\cp{K}$. Assim temos:
                   \begin{itemize}
-                    \item $\rac^n$ \'e um espa\c{c}o vetorial sobre $\rac$;
-                    \item $\real^n$ \'e um espa\c{c}o vetorial sobre $\real$;
-                    \item $\complex^n$ \'e um espa\c{c}o vetorial sobre $\complex$.
+                    \item $\rac^n$ é um espaço vetorial sobre $\rac$;
+                    \item $\real^n$ é um espaço vetorial sobre $\real$;
+                    \item $\complex^n$ é um espaço vetorial sobre $\complex$.
                   \end{itemize}
           \end{itemize}
 
-    \item $\complex^n$ \'e um espa\c{c}o vetorial sobre $\real$ se definirmos:
+    \item $\complex^n$ é um espaço vetorial sobre $\real$ se definirmos:
           \begin{itemize}
             \item $(a_1, a_2, \dots, a_n) + (b_1, b_2, \dots,b_n) = (a_1 + b_1, a_2 + b_2,\dots, a_n + b_n)$ para todos $(a_1, a_2, \dots,a_n)$ ,$(b_1, b_2, \dots,b_n) \in \complex^n$;
             \item $\alpha (a_1, a_2, \dots,a_n) = (\alpha a_1, \alpha a_2, \dots, \alpha a_n)$ para todo $\alpha \in \real$ e todo $(a_1, a_2, \dots, a_n) \in \complex^n$.
           \end{itemize}
 
-    \item O conjunto $\rac$ \'e um espa\c{c}o vetorial sobre $\rac$, mas n\~ao \'e um espa\c{c}o vetorial sobre $\real$. (Por qu\^e?)
+    \item O conjunto $\rac$ é um espaço vetorial sobre $\rac$, mas não é um espaço vetorial sobre $\real$. (Por qu\^e?)
 
     \item Considere conjunto das matrizes
           \[
             \cp{M}_{2 \times 3}(\rac) = \left\{\begin{pmatrix}a_{11} & a_{12} & a_{13}\\a_{21} & a_{22} & a_{23}\end{pmatrix} \mid a_{ij} \in \rac, i = 1, 2; j = 1, 2, 3\right\}.
           \]
-          Então $\cp{M}_{2\times 2}(\rac)$ é um espa\c{c}o vetorial sobre $\rac$, com a soma usual de matrizes e a multiplica\c{c}\~ao por escalar usual.
+          Então $\cp{M}_{2\times 2}(\rac)$ é um espaço vetorial sobre $\rac$, com a soma usual de matrizes e a multiplicação por escalar usual.
           \begin{solucao}
             De fato,
             \begin{itemize}
@@ -257,7 +257,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
             Assim $V = \cp{M}_{2 \times 3}(\rac)$ é um espaço vetorial sobre $\rac$.
           \end{solucao}
 
-    \item De modo geral, o conjunto das matrizes $\cp{M}_{p \times q}(\cp{K})$ com coeficientes em $\cp{K}$ \'e um $\cp{K}$-espa\c{c}o vetorial com a soma usual de matrizes e a multiplica\c{c}\~ao por escalar usual.
+    \item De modo geral, o conjunto das matrizes $\cp{M}_{p \times q}(\cp{K})$ com coeficientes em $\cp{K}$ é um $\cp{K}$-espaço vetorial com a soma usual de matrizes e a multiplicação por escalar usual.
 
     \item Considere o conjunto dos polin\^omios
           \[
@@ -268,24 +268,24 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
             \item $(p + q)(x) = b_mx^m + b_{m - 1}x^{m - 1} + \cdots + b_{n + 1}x^{n + 1} + (a_n + b_n)x^n + \cdots + (a_1 + b_1)x + (a_0 + b_0)$
             \item $(\alpha p)(x) = \alpha a_nx^n + \alpha a_{n - 1}x^{n - 1} + \cdots + \alpha a_1x + \alpha a_0$, onde $\alpha \in \cp{K}$.
           \end{itemize}
-          Assim $\mathcal{P}(\cp{K})$ \'e um $\cp{K}$-espa\c{c}o vetorial.
+          Assim $\mathcal{P}(\cp{K})$ é um $\cp{K}$-espaço vetorial.
 
-    \item Seja $V = \{x \in \real \mid x > 0\} = \real_+^*$. Defina em $V$ as seguintes opera\c{c}\~oes:
+    \item Seja $V = \{x \in \real \mid x > 0\} = \real_+^*$. Defina em $V$ as seguintes operaç\~oes:
           \begin{align*}
             x \oplus y        & = xy        \\
             \lambda \otimes x & = x^\lambda
           \end{align*}
-          para todos $x$, $y \in V$ e para todo $\lambda \in \real$. Ent\~ao com essas opera\c{c}\~oes $V$ \'e um $\real$-espa\c{c}o vetorial.
+          para todos $x$, $y \in V$ e para todo $\lambda \in \real$. Então com essas operaç\~oes $V$ é um $\real$-espaço vetorial.
           \begin{solucao}
             Temos:
             \begin{enumerate}
               \item[A1)] $x \oplus y = xy = yx = y \oplus x$, para todos $x$, $y \in V$.
               \item[A2)] $(x \oplus y) \oplus z = (xy) \oplus z = (xy)z = x(yz) = x \oplus (yz) = x \oplus (y \oplus z)$, para todos $x$, $y$, $z \in V$.
-              \item[A3)] Tome $0_V = 1$. Ent\~ao para todo $x \in V$ temos
+              \item[A3)] Tome $0_V = 1$. Então para todo $x \in V$ temos
                 \[
                   x\oplus 0_V = x\oplus 1 = x\cdot 1 = x.
                 \]
-                Logo $0_V = 1$ \'e o vetor nulo de $V$.
+                Logo $0_V = 1$ é o vetor nulo de $V$.
               \item[A4)] Dado $x \in V$, tome $-x = \dfrac{1}{x} \in V$. Assim
                 \[
                   x \oplus (-x) = x \oplus \dfrac{1}{x} = x \cdot \dfrac{1}{x} = 1 = 0_V.
@@ -295,13 +295,13 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
               \item[D1)] $\alpha \otimes (x \oplus y) = \alpha \otimes (xy) = (xy)^\alpha = (x^\alpha) (y^\alpha) = (\alpha \otimes x) (\alpha \otimes y) = (\alpha \otimes x) \oplus (\alpha \otimes y)$ para todos $x$, $y \in V$ e para todo $\alpha \in \real$.
               \item[D2)] $(\alpha + \beta) \otimes x = x^{\alpha + \beta} = x^\alpha x^\beta = (\alpha \otimes x)(\beta \otimes x) = (\alpha \otimes x) \oplus (\beta \otimes x)$, para todos $\alpha$, $\beta \in \real$ e para todo $x \in V$.
             \end{enumerate}
-            Portanto $V$ \'e um $\real$-espa\c{c}o vetorial.
+            Portanto $V$ é um $\real$-espaço vetorial.
           \end{solucao}
   \end{enumerate}
 \end{exemplo}
 
 \begin{definicao}
-  Seja $V$ um espa\c{c}o vetorial sobre $\cp{K}$. Um vetor $w \in V$ \'e uma \textbf{combina\c{c}\~ao linear}\index{Espaço vetorial!combina\c{c}\~ao linear} dos vetores $u_1$, $u_2$, \dots, $u_n \in V$ se existirem escalares
+  Seja $V$ um espaço vetorial sobre $\cp{K}$. Um vetor $w \in V$ é uma \textbf{combinação linear}\index{Espaço vetorial!combinação linear} dos vetores $u_1$, $u_2$, \dots, $u_n \in V$ se existirem escalares
   $\alpha_1$, $\alpha_2$, \dots, $\alpha_n \in \cp{K}$ tais que
   \[
     w = \alpha_1 u_1 + \alpha_2u_2 + \cdots + \alpha_nu_n = \sum_{i = 1}^n \alpha_iu_i.
@@ -310,7 +310,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 
 \begin{exemplo}
   \begin{enumerate}[label={\arabic*})]
-    \item O vetor $(1, 1, 1) \in \real^3$ \'e uma combina\c{c}\~ao linear dos vetores $u_1 = (1, 2, 3)$, $u_2 = (0, 1, 2)$ e $u_3 = (-1, 0, 1)$. De fato, precisamos encontrar $\alpha$, $\beta$ e $\gamma \in \real$ tais que:
+    \item O vetor $(1, 1, 1) \in \real^3$ é uma combinação linear dos vetores $u_1 = (1, 2, 3)$, $u_2 = (0, 1, 2)$ e $u_3 = (-1, 0, 1)$. De fato, precisamos encontrar $\alpha$, $\beta$ e $\gamma \in \real$ tais que:
           \[
             (1, 1, 1) = \alpha u_1 + \beta u_2 + \gamma u_3 = (\alpha - \gamma, 2\alpha + \beta, 3\alpha + 2\beta + \gamma).
           \]
@@ -322,17 +322,17 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
               3\alpha + 2\beta + \gamma = 1
             \end{cases}
           \]
-          encontramos que suas solu\c{c}\~oes s\~ao dadas por
+          encontramos que suas soluç\~oes são dadas por
           \begin{align*}
             \alpha & = 1 + \gamma   \\
             \beta  & = -1 - 2\gamma
           \end{align*}
-          onde $\gamma \in \real$. Logo o vetor $(1, 1, 1)$ \'e de fato uma combina\c{c}\~ao linear dos vetores $u_1$, $u_2$ e $u_3$. Podemos tomar, por exemplo, $\gamma = 2$ e escrever
+          onde $\gamma \in \real$. Logo o vetor $(1, 1, 1)$ é de fato uma combinação linear dos vetores $u_1$, $u_2$ e $u_3$. Podemos tomar, por exemplo, $\gamma = 2$ e escrever
           \[
             (1, 1, 1) = 3(1, 2, 3) - 5(0, 1, 2) + 2(-1, 0 , 1).
           \]
 
-    \item O vetor $(1, -2, 2) \in \real^3$ n\~ao \'e uma combina\c{c}\~ao linear dos vetores $u_1 = (1, 2, 3)$, $u_2 = (0, 1, 2)$ e $u_3 = (-1, 0, 1)$. De fato, suponha que $\alpha$, $\beta$ e $\gamma \in \real$ s\~ao tais que:
+    \item O vetor $(1, -2, 2) \in \real^3$ não é uma combinação linear dos vetores $u_1 = (1, 2, 3)$, $u_2 = (0, 1, 2)$ e $u_3 = (-1, 0, 1)$. De fato, suponha que $\alpha$, $\beta$ e $\gamma \in \real$ são tais que:
           \[
             (1, -2, 2) = \alpha u_1 + \beta u_2 + \gamma u_3 = (\alpha - \gamma, 2\alpha + \beta, 3\alpha + 2\beta + \gamma).
           \]
@@ -344,7 +344,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
               3\alpha + 2\beta + \gamma = 2
             \end{cases}.
           \]
-          A matriz escalonada reduzida por linha desse sistema \'e
+          A matriz escalonada reduzida por linha desse sistema é
           \[
             \begin{bmatrix}
               1 & 0 & -1           & 0 \\
@@ -352,13 +352,13 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
               0 & 0 & \phantom{-}0 & 1
             \end{bmatrix}
           \]
-          e portanto o sistema \'e imposs{\'\i}vel. Logo o vetor $(1, -2, 2)$ n\~ao \'e uma combina\c{c}\~ao linear dos vetores $u_1$, $u_2$ e $u_3$.
+          e portanto o sistema é impossível. Logo o vetor $(1, -2, 2)$ não é uma combinação linear dos vetores $u_1$, $u_2$ e $u_3$.
 
-    \item Considere o $\real$-espa\c{c}o vetorial $\real^3$. Dado um vetor $(a, b, c) \in \real^3$ podemos escrever
+    \item Considere o $\real$-espaço vetorial $\real^3$. Dado um vetor $(a, b, c) \in \real^3$ podemos escrever
           \[
             (a, b, c) = a(1, 0, 0) + b(0, 1, 0) + c(0, 0, 1).
           \]
-          Assim qualquer vetor de $\real^3$ \'e uma combina\c{c}\~ao linear dos vetores $(1, 0 , 0)$, $(0, 1 , 0)$ e $(0, 0 , 1)$.
+          Assim qualquer vetor de $\real^3$ é uma combinação linear dos vetores $(1, 0 , 0)$, $(0, 1 , 0)$ e $(0, 0 , 1)$.
 
     \item Qualquer vetor de $\real^3$ pode ser escrito como uma combinação linear dos vetores no conjunto: $\mathcal{B} = \{(1, 0 , 1), (1, 1 , 0), (1, 1 , 1), (-1, 0, 0), (-1, -1, 0), (-1, -1, -1)\}$.
           \begin{solucao}
@@ -374,7 +374,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
                 x_1 + x_3 - x_6 = c
               \end{cases}
             \]
-            cuja matriz escalonada reduzida por linhas \'e
+            cuja matriz escalonada reduzida por linhas é
             \[
               \begin{amatrix}{6}
                 1 & 0 & 0 & -1 & \phantom{-}0 & \phantom{-}0 & a - b\\
@@ -382,7 +382,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
                 0 & 0 & 1 & \phantom{-}1 & \phantom{-}0 & -1 & b + c - a
               \end{amatrix},
             \]
-            assim o sistema \'e poss{\'\i}vel e indeterminado, com posto 3 e nulidade 3. Sua solu\c{c}\~ao \'e descrita pela equa\c{c}\~oes
+            assim o sistema é possível e indeterminado, com posto 3 e nulidade 3. Sua solução é descrita pela equaç\~oes
             \begin{align*}
               x_1 & = a - b + x_4           \\
               x_2 & = a - c + x_4 + x_5     \\
@@ -433,19 +433,19 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 \end{exemplo}
 
 \begin{definicao}
-  Seja $V$ um $\cp{K}$-espa\c{c}o vetorial. Um subconjunto n\~ao vazio $W$ de $V$ \'e um \textbf{subespa\c{c}o vetorial}\index{Espaço vetorial!subespaço} de $V$ se $W$ é um espaço vetorial
+  Seja $V$ um $\cp{K}$-espaço vetorial. Um subconjunto não vazio $W$ de $V$ é um \textbf{subespaço vetorial}\index{Espaço vetorial!subespaço} de $V$ se $W$ é um espaço vetorial
   sobre $\cp{K}$ com respeito às mesmas operações definidas em $V$.
 \end{definicao}
 
 \begin{exemplo}
   \begin{enumerate}[label={\arabic*})]
-    \item O subconjunto $W = \{0_V\}$ \'e um subespa\c{c}o vetorial de qualquer espa\c{c}o vetorial $V$. O pr\'oprio $V$ como subconjunto de $V$ \'e tamb\'em um subespa\c{c}o vetorial. Estes dois subespa\c{c}os s\~ao chamados de \textbf{subespa\c{c}os triviais}.
-    \item Seja $V$ um $\cp{K}$-espa\c{c}o vetorial e $w \in V$. Ent\~ao o conjunto $\cp{K}w = \{\alpha w \mid \alpha \in \cp{K}\}$ \'e um subespa\c{c}o vetorial de $V$.
+    \item O subconjunto $W = \{0_V\}$ é um subespaço vetorial de qualquer espaço vetorial $V$. O pr\'oprio $V$ como subconjunto de $V$ é também um subespaço vetorial. Estes dois subespaços são chamados de \textbf{subespaços triviais}.
+    \item Seja $V$ um $\cp{K}$-espaço vetorial e $w \in V$. Então o conjunto $\cp{K}w = \{\alpha w \mid \alpha \in \cp{K}\}$ é um subespaço vetorial de $V$.
   \end{enumerate}
 \end{exemplo}
 
 \begin{teorema}\label{teoremasubespaco}
-  Um subconjunto n\~ao vazio $W$ de um $\cp{K}$-espa\c{c}o vetorial $V$ \'e um subespa\c{c}o de $V$ se, e somente se:
+  Um subconjunto não vazio $W$ de um $\cp{K}$-espaço vetorial $V$ é um subespaço de $V$ se, e somente se:
   \begin{enumerate}[label={\roman*})]
     \item para todos vetores $u_1$, $u_2 \in W$ temos $u_1 + u_2 \in W$.
     \item para todo escalar $\lambda \in \cp{K}$ e todo vetor $u \in W$, temos $\lambda u\in W$.
@@ -488,7 +488,7 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
 
                 Portanto, pelo Teorema \ref{teoremasubespaco} $S$ é um subespaço vetorial de $\real^3$.
       \end{solucao}
-  \item Considere $V = \real^5$ um espaço vetorial sobre $\real$. Tome o subconnjunto $W = \{(0,x_2,x_3,x_4,x_5) \in \real^5 \mid x_i \in \real, 1 \le i \le 5\}$. Então $W$ \'e um subespa\c{c}o de $V$.
+  \item Considere $V = \real^5$ um espaço vetorial sobre $\real$. Tome o subconnjunto $W = \{(0,x_2,x_3,x_4,x_5) \in \real^5 \mid x_i \in \real, 1 \le i \le 5\}$. Então $W$ é um subespaço de $V$.
     \begin{solucao}
       Como $x_2$, $x_3$, $x_4$ e $x_5$ são números reais quaisquer podemos tomar $x_2 = x_3 = x_4 = x_ 5 = 0$. Assim $(0, 0, 0, 0, 0) \in W$ e com isso $W \ne \emptyset$. Agora sejam $w_1$, $w_2 \in W$. Com isso
       \begin{align*}
@@ -522,12 +522,12 @@ Em todo este cap{\'\i}tulo $\cp{K}$ denotar\'a um corpo.
           \mid a_{ij} \in \cp{K}
         \right\}.
       \]
-      Então $W = UT_n(\cp{K})$ \'e um subespa\c{c}o de $V$.
+      Então $W = UT_n(\cp{K})$ é um subespaço de $V$.
       \begin{solucao}
         Exercício!
       \end{solucao}
 
-    \item Considere $V = \complex^2$ um espaço vetorial sobre $\complex$. Tome $W = \{(x, x^2) \mid x \in \complex\}$. Então $W$ n\~ao \'e subespa\c{c}o de $V$
+    \item Considere $V = \complex^2$ um espaço vetorial sobre $\complex$. Tome $W = \{(x, x^2) \mid x \in \complex\}$. Então $W$ não é subespaço de $V$
       \begin{solucao}
         De fato, primeiro observe que $(0,0) \in W$ e então $W \ne \emptyset$. Com isso podemos aplicar o Teorema \ref{teoremasubespaco}. Tome, por exemplo, $u = (1,1)$, $v = (2,4)$. Observe que $u_1$, $u_2 \in W$ e no entanto $u + v  = (3, 5) \notin W$.
         Portanto $W$ não é um subespaço vetorial de $V$.
