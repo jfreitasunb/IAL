@@ -122,183 +122,216 @@
     \end{enumerate}
 \end{exercicio}
 
+    Nos exercícios \eqref{iniciomatriztransformacao} à \eqref{fimmatriztransformacao}, encontre a matriz da transformação linear dada.
 
-\begin{exercicio}
-    Encontre a matriz da transformação linear dada:
-    \begin{enumerate}[label={\alph*})]
-        \item $F : \mathcal{P}_2(\real) \to \mathcal{P}_2(\real)$ dada por $F(p(t)) = t^2p''(t)$. Considere $\mathcal{P}_2(\real)$ um $\real$-espaço vetorial e $\mathcal{B} = \{u_1 = 1, u_2 = t, u_3 = t^2\}$ uma base ordenada.
+\begin{exercicio}\label{iniciomatriztransformacao}
+    $F : \mathcal{P}_2(\real) \to \mathcal{P}_2(\real)$ dada por $F(p(t)) = t^2p''(t)$. Considere $\mathcal{P}_2(\real)$ um $\real$-espaço vetorial e $\mathcal{B} = \{u_1 = 1, u_2 = t, u_3 = t^2\}$ uma base ordenada.
 
-        \item $D : \mathcal{P}_2(\complex) \to \mathcal{P}_1(\complex)$ dada por
-        \[
-        D(a_0 + a_1x + a_2x^2) = a_1 + 2a_2x.
-        \]
-        Considere $\mathcal{P}_2(\complex)$ e $\mathcal{P}_1(\complex)$ espaços vetoriais sobre $\complex$, $\mathcal{B}_1 = \{1, x, x^2\}$ e $\mathcal{B}_2 = \{1, 2 - x\}$ bases ordenadas de $\mathcal{P}_2(\complex)$ e $\mathcal{P}_1(\complex)$, respectivamente.
-
-        \item $D : \mathcal{P}_3(\real) \to \mathcal{P}_5(\real)$ dada por
-        \[
-        D(a_0 + a_1x + a_2x^2 + a_3x^3) = a_1 + 2a_2x + 3a_3x^2
-        \]
-        Considere $\mathcal{P}_3(\real)$ e $\mathcal{P}_5(\real)$ espaços vetoriais sobre $\real$, os conjuntos $\mathcal{B}_1 = \{1, x, x^2, x^3\}$ e $\mathcal{B}_2 = \{1, x, x^2, x^3, x^4, x^5\}$ de $\mathcal{P}_3(\real)$ e $\mathcal{P}_5(\real)$, respectivamente.
-
-        \item $G : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $G(X) = MX + X$ onde
-        \[
-        M = \begin{pmatrix}
-            1 & 0\\
-            0 & 0
-        \end{pmatrix}.
-        \]
-        Considere $\cp{M}_2(\real)$ como um $\real$-espaço vetorial e
-        \[
-        \mathcal{B} = \left\{E_{11} = \begin{bmatrix}
-            1 & 0\\0 & 0
-        \end{bmatrix}, E_{12} = \begin{bmatrix}
-            0 & 1\\0 & 0
-        \end{bmatrix}, E_{21} = \begin{bmatrix}
-            0 & 0\\1 & 0
-        \end{bmatrix}, E_{22} = \begin{bmatrix}
-            0 & 0\\0 & 1
-        \end{bmatrix}\right\}
-        \]
-        uma base ordenada.
-
-        \item $H : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $H(X) = MX - XM$ onde
-        \[
-        M = \begin{bmatrix}
-            1 & 2\\
-            0 & 1
-        \end{bmatrix}.
-        \]
-        Considere $\cp{M}_2(\real)$ um $\real$-espaço vetorial e
-        \[
-        \mathcal{B} = \left\{E_{11} = \begin{bmatrix}
-            1 & 0\\0 & 0
-        \end{bmatrix}, E_{12} = \begin{bmatrix}
-            0 & 1\\0 & 0
-        \end{bmatrix}, E_{21} = \begin{bmatrix}
-            0 & 0\\1 & 0
-        \end{bmatrix}, E_{22} = \begin{bmatrix}
-            0 & 0\\0 & 1
-        \end{bmatrix}\right\}
-        \]
-        uma base ordenada.
-
-        \item $T : \complex^3 \to \complex$ dada por $T(x,y,z) = x + 2y + iz$. Considere $\complex^3$ e $\complex$ como $\complex$-espaços vetoriais, $\mathcal{B}_1 = \{(1,0,0); (0,1,0); (0,0,1)\}$ e $\mathcal{B}_2 = \{i\}$ bases ordenadas de $\complex^2$ e $\complex$, respectivamente.
-
-        \item $F : \mathcal{P}_3(\real) \to \mathcal{P}_4(\real)$ dada por $F(p(x)) = xp(x + 1)$. Considere $\mathcal{P}_3(\real)$ e $\mathcal{P}_4(\real)$ como $\real$-espaços vetoriais, $\mathcal{B}_1 = \{1, x, x^2, x^3\}$ e $\mathcal{B}_2 = \{1, x, x^2, x^3, x^4\}$ bases ordenadas de $\mathcal{P}_3(\real)$ e $\mathcal{P}_4(\real)$, respectivamente.
-
-        \item $G : \real^2 \to \mathcal{P}_2(\real)$ dada por $G(a,b) = ax^2 + bx + (a + b)$. Considere $\real^2$ e $\mathcal{P}_2(\real)$ como $\real$-espaços vetoriais, $\mathcal{B}_1 = \{(1,3); (2,5)\}$ e $\mathcal{B}_2 = \{2, 1 + x, x^2\}$ bases ordenadas de $\real^2$ e $\mathcal{P}_2(\real)$, respectivamente.
-
-        \item $T : \complex \to \cp{M}_2(\real)$ dada por
-        \[
-        T(x + yi) = \begin{bmatrix}
-            x + 7y & 5y\\
-            -10y & x - 7y
-        \end{bmatrix}.
-        \]
-        Considere $\cp{M}_2(\real)$ e $\complex$ como espaços vetoriais sobre $\real$,  $\mathcal{B}_1 = \{1, i\}$ e
-        \[
-        \mathcal{B}_2 = \left\{E_{11} = \begin{bmatrix}
-            1 & 0\\0 & 0
-        \end{bmatrix}, E_{12} = \begin{bmatrix}
-            0 & 1\\0 & 0
-        \end{bmatrix}, E_{21} = \begin{bmatrix}
-            0 & 0\\1 & 0
-        \end{bmatrix}, E_{22} = \begin{bmatrix}
-            0 & 0\\0 & 1
-        \end{bmatrix}\right\}.
-        \]
-        bases ordenadas de $\complex$ e $\cp{M}_2(\real)$, respectivamente.
-
-        \item $S : \mathcal{P}_3(\real) \to M_2(\real)$ dada por
-        \[
-        S(a + bx + cx^2 + dx^3) = \begin{bmatrix}
-            3a + 7b - 2c - 5d & 8a + 14b - 2c - 11d\\
-            -4a - 8b + 2c + 6d & 12a + 22b - 4c - 17d
-        \end{bmatrix}.
-        \]
-        Considere $\mathcal{P}_3(\real)$ e $M_2(\real)$ como $\real$-espaços vetoriais,
-        \begin{align*}
-            \mathcal{B}_1 &= \{1 + 2x + x^2 - x^3, 1 + 3x + x^2 + x^3, -1 - 2x + 2x^3, 2 + 3x + 2x^2 - 5x^3\}\\
-            \mathcal{B}_2 &= \left\{\begin{bmatrix}
-                1 & 1\\1 & 2
-            \end{bmatrix}, \begin{bmatrix}
-                2 & 3\\2 & 5
-            \end{bmatrix}, \begin{bmatrix}
-                -1 & -1\\\phantom{-}0 & -2
-            \end{bmatrix}, \begin{bmatrix}
-                -1 & -4\\-2 & -4
-            \end{bmatrix}\right\}
-        \end{align*}
-        bases ordenadas de $\mathcal{P}_3(\real)$ e $M_2(\real)$, respectivamente.
-    \end{enumerate}
     \begin{solucao}
-        \begin{enumerate}[label={\alph*})]
-            \item $[F]_\mathcal{B} = \begin{bmatrix}
+        $[F]_\mathcal{B} = \begin{bmatrix}
                 0 & 0 & 0\\
                 0 & 0 & 0\\
                 0 & 0 & 2
             \end{bmatrix}$
+      \end{solucao}
+\end{exercicio}
 
-            \item $[D]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
-                0 & 1 & \phantom{-}4\\
-                0 & 0 & -2
-            \end{bmatrix}$
+\begin{exercicio}
+    $D : \mathcal{P}_2(\complex) \to \mathcal{P}_1(\complex)$ dada por
+    \[
+        D(a_0 + a_1x + a_2x^2) = a_1 + 2a_2x.
+    \]
+    Considere $\mathcal{P}_2(\complex)$ e $\mathcal{P}_1(\complex)$ espaços vetoriais sobre $\complex$, $\mathcal{B}_1 = \{1, x, x^2\}$ e $\mathcal{B}_2 = \{1, 2 - x\}$ bases ordenadas de $\mathcal{P}_2(\complex)$ e $\mathcal{P}_1(\complex)$, respectivamente.
 
-            \item $[D]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
-                0 & 1 & 0 & 0\\
-                0 & 0 & 2 & 0\\
-                0 & 0 & 0 & 3\\
-                0 & 0 & 0 & 0\\
-                0 & 0 & 0 & 0\\
-                0 & 0 & 0 & 0
-            \end{bmatrix}$
+    \begin{solucao}
+        $[D]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
+            0 & 1 & \phantom{-}4\\
+            0 & 0 & -2
+        \end{bmatrix}$
+    \end{solucao}
+\end{exercicio}
 
-            \item $[G]_\mathcal{B} = \begin{bmatrix}
-                2 & 0 & 1 & 1\\
-                0 & 2 & 0 & 0\\
-                0 & 0 & 0 & 0\\
-                0 & 0 & 0 & 0
-            \end{bmatrix}$
+\begin{exercicio}
+    $D : \mathcal{P}_3(\real) \to \mathcal{P}_5(\real)$ dada por
+    \[
+    D(a_0 + a_1x + a_2x^2 + a_3x^3) = a_1 + 2a_2x + 3a_3x^2
+    \]
+    Considere $\mathcal{P}_3(\real)$ e $\mathcal{P}_5(\real)$ espaços vetoriais sobre $\real$, os conjuntos $\mathcal{B}_1 = \{1, x, x^2, x^3\}$ e $\mathcal{B}_2 = \{1, x, x^2, x^3, x^4, x^5\}$ de $\mathcal{P}_3(\real)$ e $\mathcal{P}_5(\real)$, respectivamente.
 
-            \item $[H]_\mathcal{B} = \begin{bmatrix}
-                \phantom{-}0 & 0 & \phantom{-}2 & 0\\
-                -2 & 0 & \phantom{-}0 & 2\\
-                \phantom{-}0 & 0 & \phantom{-}0 & 0\\
-                \phantom{-}0 & 0 & -2 & 0
-            \end{bmatrix}$
+    \begin{solucao}
+        $[D]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
+            0 & 1 & 0 & 0\\
+            0 & 0 & 2 & 0\\
+            0 & 0 & 0 & 3\\
+            0 & 0 & 0 & 0\\
+            0 & 0 & 0 & 0\\
+            0 & 0 & 0 & 0
+        \end{bmatrix}$
+    \end{solucao}
+\end{exercicio}
 
-            \item $[T]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
-                -i & -2i & 1
-            \end{bmatrix}$
+\begin{exercicio}
+    $G : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $G(X) = MX + X$ onde
+    \[
+    M = \begin{pmatrix}
+        1 & 0\\
+        0 & 0
+    \end{pmatrix}.
+    \]
+    Considere $\cp{M}_2(\real)$ como um $\real$-espaço vetorial e
+    \[
+    \mathcal{B} = \left\{E_{11} = \begin{bmatrix}
+        1 & 0\\0 & 0
+    \end{bmatrix}, E_{12} = \begin{bmatrix}
+        0 & 1\\0 & 0
+    \end{bmatrix}, E_{21} = \begin{bmatrix}
+        0 & 0\\1 & 0
+    \end{bmatrix}, E_{22} = \begin{bmatrix}
+        0 & 0\\0 & 1
+    \end{bmatrix}\right\}
+    \]
+    uma base ordenada.
 
-            \item $[F]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
-                0 & 0 & 0 & 0\\
-                1 & 1 & 1 & 1\\
-                0 & 1 & 2 & 3\\
-                0 & 0 & 1 & 3\\
-                0 & 0 & 0 & 1
-            \end{bmatrix}$
+    \begin{solucao}
+        $[G]_\mathcal{B} = \begin{bmatrix}
+            2 & 0 & 1 & 1\\
+            0 & 2 & 0 & 0\\
+            0 & 0 & 0 & 0\\
+            0 & 0 & 0 & 0
+        \end{bmatrix}$
+    \end{solucao}
+\end{exercicio}
 
-            \item $[G]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
-                1/2 & 1\\
-                3 & 5\\
-                1 & 2
-            \end{bmatrix}$
+\begin{exercicio}
+    $H : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $H(X) = MX - XM$ onde
+    \[
+    M = \begin{bmatrix}
+        1 & 2\\
+        0 & 1
+    \end{bmatrix}.
+    \]
+    Considere $\cp{M}_2(\real)$ um $\real$-espaço vetorial e
+    \[
+    \mathcal{B} = \left\{E_{11} = \begin{bmatrix}
+        1 & 0\\0 & 0
+    \end{bmatrix}, E_{12} = \begin{bmatrix}
+        0 & 1\\0 & 0
+    \end{bmatrix}, E_{21} = \begin{bmatrix}
+        0 & 0\\1 & 0
+    \end{bmatrix}, E_{22} = \begin{bmatrix}
+        0 & 0\\0 & 1
+    \end{bmatrix}\right\}
+    \]
+    uma base ordenada.
 
-            \item $[T]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
-                1 & \phantom{-}7\\
-                1 & \phantom{-}5\\
-                0 & -10\\
-                0 & -7
-            \end{bmatrix}$
+    \begin{solucao}
+        $[H]_\mathcal{B} = \begin{bmatrix}
+            \phantom{-}0 & 0 & \phantom{-}2 & 0\\
+            -2 & 0 & \phantom{-}0 & 2\\
+            \phantom{-}0 & 0 & \phantom{-}0 & 0\\
+            \phantom{-}0 & 0 & -2 & 0
+        \end{bmatrix}$
+    \end{solucao}
+\end{exercicio}
 
-            \item $[S]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
-                -172& -72 & \phantom{-}106 & -220\\
-                \phantom{-}119 & \phantom{-}29 & -46 & \phantom{-}91\\
-                \phantom{-1}1 & -34 & \phantom{-}46 & -96\\
-                \phantom{-1}45 & \phantom{-1}3 & -5 & \phantom{-}10
-            \end{bmatrix}$
-        \end{enumerate}
+\begin{exercicio}
+    $T : \complex^3 \to \complex$ dada por $T(x,y,z) = x + 2y + iz$. Considere $\complex^3$ e $\complex$ como $\complex$-espaços vetoriais, $\mathcal{B}_1 = \{(1,0,0); (0,1,0); (0,0,1)\}$ e $\mathcal{B}_2 = \{i\}$ bases ordenadas de $\complex^2$ e $\complex$, respectivamente.
+
+    \begin{solucao}
+        $[T]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
+            -i & -2i & 1
+        \end{bmatrix}$
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+    $F : \mathcal{P}_3(\real) \to \mathcal{P}_4(\real)$ dada por $F(p(x)) = xp(x + 1)$. Considere $\mathcal{P}_3(\real)$ e $\mathcal{P}_4(\real)$ como $\real$-espaços vetoriais, $\mathcal{B}_1 = \{1, x, x^2, x^3\}$ e $\mathcal{B}_2 = \{1, x, x^2, x^3, x^4\}$ bases ordenadas de $\mathcal{P}_3(\real)$ e $\mathcal{P}_4(\real)$, respectivamente.
+
+    \begin{solucao}
+        $[F]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
+            0 & 0 & 0 & 0\\
+            1 & 1 & 1 & 1\\
+            0 & 1 & 2 & 3\\
+            0 & 0 & 1 & 3\\
+            0 & 0 & 0 & 1
+        \end{bmatrix}$
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+    $G : \real^2 \to \mathcal{P}_2(\real)$ dada por $G(a,b) = ax^2 + bx + (a + b)$. Considere $\real^2$ e $\mathcal{P}_2(\real)$ como $\real$-espaços vetoriais, $\mathcal{B}_1 = \{(1,3); (2,5)\}$ e $\mathcal{B}_2 = \{2, 1 + x, x^2\}$ bases ordenadas de $\real^2$ e $\mathcal{P}_2(\real)$, respectivamente.
+
+    \begin{solucao}
+        $[G]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
+            1/2 & 1\\
+            3 & 5\\
+            1 & 2
+        \end{bmatrix}$
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+    $T : \complex \to \cp{M}_2(\real)$ dada por
+    \[
+    T(x + yi) = \begin{bmatrix}
+        x + 7y & 5y\\
+        -10y & x - 7y
+    \end{bmatrix}.
+    \]
+    Considere $\cp{M}_2(\real)$ e $\complex$ como espaços vetoriais sobre $\real$,  $\mathcal{B}_1 = \{1, i\}$ e
+    \[
+    \mathcal{B}_2 = \left\{E_{11} = \begin{bmatrix}
+        1 & 0\\0 & 0
+    \end{bmatrix}, E_{12} = \begin{bmatrix}
+        0 & 1\\0 & 0
+    \end{bmatrix}, E_{21} = \begin{bmatrix}
+        0 & 0\\1 & 0
+    \end{bmatrix}, E_{22} = \begin{bmatrix}
+        0 & 0\\0 & 1
+    \end{bmatrix}\right\}.
+    \]
+    bases ordenadas de $\complex$ e $\cp{M}_2(\real)$, respectivamente.
+
+    \begin{solucao}
+        $[T]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
+            1 & \phantom{-}7\\
+            1 & \phantom{-}5\\
+            0 & -10\\
+            0 & -7
+        \end{bmatrix}$
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}\label{fimmatriztransformacao}
+    $S : \mathcal{P}_3(\real) \to M_2(\real)$ dada por
+    \[
+    S(a + bx + cx^2 + dx^3) = \begin{bmatrix}
+        3a + 7b - 2c - 5d & 8a + 14b - 2c - 11d\\
+        -4a - 8b + 2c + 6d & 12a + 22b - 4c - 17d
+    \end{bmatrix}.
+    \]
+    Considere $\mathcal{P}_3(\real)$ e $M_2(\real)$ como $\real$-espaços vetoriais,
+    \begin{align*}
+        \mathcal{B}_1 &= \{1 + 2x + x^2 - x^3, 1 + 3x + x^2 + x^3, -1 - 2x + 2x^3, 2 + 3x + 2x^2 - 5x^3\}\\
+        \mathcal{B}_2 &= \left\{\begin{bmatrix}
+            1 & 1\\1 & 2
+        \end{bmatrix}, \begin{bmatrix}
+            2 & 3\\2 & 5
+        \end{bmatrix}, \begin{bmatrix}
+            -1 & -1\\\phantom{-}0 & -2
+        \end{bmatrix}, \begin{bmatrix}
+            -1 & -4\\-2 & -4
+        \end{bmatrix}\right\}
+    \end{align*}
+    bases ordenadas de $\mathcal{P}_3(\real)$ e $M_2(\real)$, respectivamente.
+
+    \begin{solucao}
+        $[S]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}
+            -172& -72 & \phantom{-}106 & -220\\
+            \phantom{-}119 & \phantom{-}29 & -46 & \phantom{-}91\\
+            \phantom{-1}1 & -34 & \phantom{-}46 & -96\\
+            \phantom{-1}45 & \phantom{-1}3 & -5 & \phantom{-}10
+        \end{bmatrix}$
     \end{solucao}
 \end{exercicio}
 
@@ -721,64 +754,141 @@ Nos exercícios \eqref{inicioautovalor} a \eqref{fimautovalor}, verifique que $\
     \end{solucao}
 \end{exercicio}
 
-\begin{exercicio}
-  Em cada um dos casos abaixo, decida se o operador linear $T : \cp{K}^n \to \cp{K}^n$ dado por sua matriz $[T]_\mathcal{B}$ é diagonalizável. Em caso positivo, calcule uma base de autovetores e a sua forma diagonal.
-  \begin{enumerate}[label=({\alph*})]
-    \item $[T]_\mathcal{B} = \begin{bmatrix} 1 & 0\\ 0 & 0\end{bmatrix}$, $\cp{K} = \complex$, $n = 2$
-    \item $[T]_\mathcal{B} = \begin{bmatrix} 1 & -2\\ 1 & -1\end{bmatrix}$, $\cp{K} = \complex$, $n = 2$
-    \item $[T]_\mathcal{B} = \begin{bmatrix} 5 & -1\\ 1 & \phantom{-} 3\end{bmatrix}$, $\cp{K} = \real$, $n = 2$
-    \item $[T]_\mathcal{B} = \begin{bmatrix} \phantom{-} 1 & 0 & 2\\ -1 & 0 & 1\\ \phantom{-} 1 & 1 & 2\end{bmatrix}$, $\cp{K} = \real$, $n = 3$
-    \item $[T]_\mathcal{B} = \begin{bmatrix} -1 & -2 & 0\\ \phantom{-} 0 & -1 & 1\\ \phantom{-} 1 & \phantom{-} 0 & 0\end{bmatrix}$, $\cp{K} = \real$, $n = 3$
-    \item $[T]_\mathcal{B} = \begin{bmatrix} -1 & -2 & 0\\ \phantom{-} 0 & -1 & 1\\ \phantom{-} 1 & \phantom{-} 0 & 0\end{bmatrix}$, $\cp{K} = \complex$, $n = 3$
-    \item $[T]_\mathcal{B} = \begin{bmatrix} 1 & \phantom{-} 2\\ 0 & -1\end{bmatrix}$, $\cp{K} = \real$, $n = 2$
-    \item $[T]_\mathcal{B} = \begin{bmatrix} \phantom{-} 1 & 2 & \phantom{-} 2\\ \phantom{-} 1 & 2 & -1\\ -1 & 1 & \phantom{-} 4\end{bmatrix}$, $\cp{K} = \real$, $n = 3$
-    \item $[T]_\mathcal{B} = \begin{bmatrix} \phantom{-} 1 & 3 & 3\\ \phantom{-} 0 & 4 & 0\\ -3 & 3 & 1\end{bmatrix}$, $\cp{K} = \complex$, $n = 3$
-    \item $[T]_\mathcal{B} = \begin{bmatrix} 0 & 1 & 0 & 0\\ 0 & 0 & 1 & 0\\ 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0\end{bmatrix}$, $\cp{K} = \complex$, $n = 4$
-    \item $[T]_\mathcal{B} = \begin{bmatrix} 2 & 0 & 0 & \phantom{-}0\\ 0 & 1 & 0 & \phantom{-}0\\ 0 & 2 & 0 & \phantom{-}0 \\ 1 & 0 & 0 & -2\end{bmatrix}$, $\cp{K} = \real$, $n = 4$
-  \end{enumerate}
-  \begin{solucao}
-      \begin{enumerate}[label=({\alph*})]
-          \item $\mathcal{A} = \{(1,0);(0,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 1 & 0\\ 0 & 0\end{bmatrix}$
-          \item $\mathcal{A} = \{(1 + i,1);(1 - i,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} i & \phantom{-} 0\\ 0 & -i\end{bmatrix}$
-          \item $T$ não é diagonalizável.
-          \item $\mathcal{A} = \{(-1,1,0);(1,2,-1);(1,0,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 1 & \phantom{-} 0 & 0\\ 0 & -1 & 0\\0 & \phantom{-} 0 & 3\end{bmatrix}$
-          \item O operador $T$ não é diagonalizável.
-          \item $\mathcal{A} = \{(2,1,-1);(-1 + i, 1, 1 + i);(-1 - i, 1, 1 - i)\}$; $[T]_\mathcal{A} = \begin{bmatrix} -2 & 0 & \phantom{-} 0\\ \phantom{-} 0 & i & \phantom{-} 0\\ \phantom{-} 0 & 0 & -i\end{bmatrix}$
-          \item $\mathcal{A} = \{(1,0);(-1,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 1 & 0\\ 0 & -1\end{bmatrix}$
-          \item $\mathcal{A} = \{(1,1,0);(1,0,1);(2,1,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 3 & 0 & 0\\ 0 & 3 & 0\\ 0 & 0 & 1\end{bmatrix}$
-          \item $\mathcal{A} = \{(2,1,1);(-i,0,1);(i,0,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 4 & 0 & \phantom{-} 0\\ 0 & 1 + 3i & \phantom{-} 0\\ 0 & 0 & 1 - 3i\end{bmatrix}$
-%          \item $\mathcal{A} = \{(-8,-1,3);(-2,1,0);(-1,-1,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} -1 & 0 & 0\\ \phantom{-} 0 & 0 & 0\\ \phantom{-} 0 & 0 & 2\end{bmatrix}$
-          \item $\mathcal{A} = \{(-1,1,-1,1); (i,-1,-i,1); (-i,-1,i,1), (1,1,1,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} -1 & \phantom{-}0 & 0 & 0\\ \phantom{-} 0 & -i & 0 & 0\\ \phantom{-} 0 & \phantom{-}0 & i & 0\\ \phantom{-}0 & \phantom{-}0 & 0 & 1\end{bmatrix}$
-          \item $\mathcal{A} = \{(0,0,1,0); (0,1,2,0); (4,0,0,1), (0,0,0,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 0 & 0 & 0 & \phantom{-}0\\ 0 & 1 & 0 & \phantom{-}0\\0 & 0 & 2 & \phantom{-}0\\0 & 0 & 0 & -2\end{bmatrix}$
-        \end{enumerate}
-  \end{solucao}
+Nos exercícios \eqref{iniciodiagonalizacao} à \eqref{fimdiagonalizacao}, decida se o operador linear $T : \cp{K}^n \to \cp{K}^n$ dado por sua matriz $[T]_\mathcal{B}$ é diagonalizável. Em caso positivo, calcule uma base de autovetores e a sua forma diagonal.
+
+\begin{exercicio}\label{iniciodiagonalizacao}
+    $[T]_\mathcal{B} = \begin{bmatrix} 1 & 0\\ 0 & 0\end{bmatrix}$, $\cp{K} = \complex$, $n = 2$
+    \begin{solucao}
+         $\mathcal{A} = \{(1,0);(0,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 1 & 0\\ 0 & 0\end{bmatrix}$
+    \end{solucao}
 \end{exercicio}
 
 \begin{exercicio}
-  Determine, se existir, uma matriz $P$ com coeficientes em $\real$ e invertível tal que $P^{-1}AP$ seja diagonal para cada uma das seguintes matrizes:
-    \begin{enumerate}[label=({\alph*})]
-      \item $A = \begin{bmatrix} 0 & 1\\ 1 & 0\end{bmatrix}$
-      \item $A = \begin{bmatrix} 2 & 3\\ 1 & 4\end{bmatrix}$
-      \item $A = \begin{bmatrix} \phantom{-} 1 & 2 & -2\\ -2 & 5 & -2\\ -6 & 6 & -3\end{bmatrix}$
-      \item $A = \begin{bmatrix} 1 & 0 & 0\\ 1 & 2 & 1\\ 1 & 0 & 2\end{bmatrix}$
-      \item $A = \begin{bmatrix} 1 & a \\ a & 1\end{bmatrix}$, $a \in \real$.
-    \end{enumerate}
-    \begin{solucao}
-      \begin{enumerate}[label=({\alph*})]
-        \item $P = \begin{bmatrix}
-          \phantom{-} 1 & 1\\ -1 & 1
-        \end{bmatrix}$ A resposta não é única.
-        \item $P = \begin{bmatrix}
-          -3 & 1\\ \phantom{-} 1 & 1
-        \end{bmatrix}$ A resposta não é única.
-        \item $P = \begin{bmatrix}
-          1 & -1 & 1\\ 1 & \phantom{-} 0 & 1\\ 3 & \phantom{-} 1 & 0
-        \end{bmatrix}$ A resposta não é única.
-        \item $A$ não é diagonalizável.
-        \item $P = \begin{bmatrix} 1/2 & -1/2\\ 1/2 & \phantom{-} 1/2\end{bmatrix}$. A resposta não é única.
-      \end{enumerate}
-    \end{solucao}
+    $[T]_\mathcal{B} = \begin{bmatrix} 1 & -2\\ 1 & -1\end{bmatrix}$, $\cp{K} = \complex$, $n = 2$
 
+    \begin{solucao}
+        $\mathcal{A} = \{(1 + i,1);(1 - i,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} i & \phantom{-} 0\\ 0 & -i\end{bmatrix}$
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+    $[T]_\mathcal{B} = \begin{bmatrix} 5 & -1\\ 1 & \phantom{-} 3\end{bmatrix}$, $\cp{K} = \real$, $n = 2$
+
+    \begin{solucao}
+        $T$ não é diagonalizável.
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+    $[T]_\mathcal{B} = \begin{bmatrix} \phantom{-} 1 & 0 & 2\\ -1 & 0 & 1\\ \phantom{-} 1 & 1 & 2\end{bmatrix}$, $\cp{K} = \real$, $n = 3$
+
+    \begin{solucao}
+        $\mathcal{A} = \{(-1,1,0);(1,2,-1);(1,0,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 1 & \phantom{-} 0 & 0\\ 0 & -1 & 0\\0 & \phantom{-} 0 & 3\end{bmatrix}$
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+    $[T]_\mathcal{B} = \begin{bmatrix} -1 & -2 & 0\\ \phantom{-} 0 & -1 & 1\\ \phantom{-} 1 & \phantom{-} 0 & 0\end{bmatrix}$, $\cp{K} = \real$, $n = 3$
+
+    \begin{solucao}
+        O operador $T$ não é diagonalizável.
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+    $[T]_\mathcal{B} = \begin{bmatrix} -1 & -2 & 0\\ \phantom{-} 0 & -1 & 1\\ \phantom{-} 1 & \phantom{-} 0 & 0\end{bmatrix}$, $\cp{K} = \complex$, $n = 3$
+
+    \begin{solucao}
+        $\mathcal{A} = \{(2,1,-1);(-1 + i, 1, 1 + i);(-1 - i, 1, 1 - i)\}$; $[T]_\mathcal{A} = \begin{bmatrix} -2 & 0 & \phantom{-} 0\\ \phantom{-} 0 & i & \phantom{-} 0\\ \phantom{-} 0 & 0 & -i\end{bmatrix}$
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+    $[T]_\mathcal{B} = \begin{bmatrix} 1 & \phantom{-} 2\\ 0 & -1\end{bmatrix}$, $\cp{K} = \real$, $n = 2$
+
+    \begin{solucao}
+        $\mathcal{A} = \{(1,0);(-1,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 1 & 0\\ 0 & -1\end{bmatrix}$
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+    $[T]_\mathcal{B} = \begin{bmatrix} \phantom{-} 1 & 2 & \phantom{-} 2\\ \phantom{-} 1 & 2 & -1\\ -1 & 1 & \phantom{-} 4\end{bmatrix}$, $\cp{K} = \real$, $n = 3$
+
+    \begin{solucao}
+        $\mathcal{A} = \{(1,1,0);(1,0,1);(2,1,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 3 & 0 & 0\\ 0 & 3 & 0\\ 0 & 0 & 1\end{bmatrix}$
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+    $[T]_\mathcal{B} = \begin{bmatrix} \phantom{-} 1 & 3 & 3\\ \phantom{-} 0 & 4 & 0\\ -3 & 3 & 1\end{bmatrix}$, $\cp{K} = \complex$, $n = 3$
+
+    \begin{solucao}
+        $\mathcal{A} = \{(2,1,1);(-i,0,1);(i,0,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 4 & 0 & \phantom{-} 0\\ 0 & 1 + 3i & \phantom{-} 0\\ 0 & 0 & 1 - 3i\end{bmatrix}$
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+    $[T]_\mathcal{B} = \begin{bmatrix} 0 & 1 & 0 & 0\\ 0 & 0 & 1 & 0\\ 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0\end{bmatrix}$, $\cp{K} = \complex$, $n = 4$
+
+    \begin{solucao}
+        $\mathcal{A} = \{(-1,1,-1,1); (i,-1,-i,1); (-i,-1,i,1), (1,1,1,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} -1 & \phantom{-}0 & 0 & 0\\ \phantom{-} 0 & -i & 0 & 0\\ \phantom{-} 0 & \phantom{-}0 & i & 0\\ \phantom{-}0 & \phantom{-}0 & 0 & 1\end{bmatrix}$
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}\label{fimdiagonalizacao}
+    $[T]_\mathcal{B} = \begin{bmatrix} 2 & 0 & 0 & \phantom{-}0\\ 0 & 1 & 0 & \phantom{-}0\\ 0 & 2 & 0 & \phantom{-}0 \\ 1 & 0 & 0 & -2\end{bmatrix}$, $\cp{K} = \real$, $n = 4$
+
+    \begin{solucao}
+        $\mathcal{A} = \{(0,0,1,0); (0,1,2,0); (4,0,0,1), (0,0,0,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 0 & 0 & 0 & \phantom{-}0\\ 0 & 1 & 0 & \phantom{-}0\\0 & 0 & 2 & \phantom{-}0\\0 & 0 & 0 & -2\end{bmatrix}$
+    \end{solucao}
+\end{exercicio}
+
+Nos exercícios \eqref{inicioacharmatrizquediagonalizacao} à \eqref{fimacharmatrizquediagonalizacao} determine, se existir, uma matriz $P$ com coeficientes em $\real$ e invertível tal que $P^{-1}AP$ seja diagonal para cada uma das seguintes matrizes.
+
+\begin{exercicio}\label{inicioacharmatrizquediagonalizacao}
+    $A = \begin{bmatrix} 0 & 1\\ 1 & 0\end{bmatrix}$
+
+    \begin{solucao}
+        $P = \begin{bmatrix}
+            \phantom{-} 1 & 1\\ -1 & 1
+        \end{bmatrix}$ A resposta não é única.
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+    $A = \begin{bmatrix} 2 & 3\\ 1 & 4\end{bmatrix}$
+
+    \begin{solucao}
+        $P = \begin{bmatrix}
+            -3 & 1\\ \phantom{-} 1 & 1
+        \end{bmatrix}$ A resposta não é única.
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+    $A = \begin{bmatrix} \phantom{-} 1 & 2 & -2\\ -2 & 5 & -2\\ -6 & 6 & -3\end{bmatrix}$
+
+    \begin{solucao}
+        $P = \begin{bmatrix}
+            1 & -1 & 1\\ 1 & \phantom{-} 0 & 1\\ 3 & \phantom{-} 1 & 0
+        \end{bmatrix}$ A resposta não é única.
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+    $A = \begin{bmatrix} 1 & 0 & 0\\ 1 & 2 & 1\\ 1 & 0 & 2\end{bmatrix}$
+
+    \begin{solucao}
+        $A$ não é diagonalizável.
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}\label{fimacharmatrizquediagonalizacao}
+    $A = \begin{bmatrix} 1 & a \\ a & 1\end{bmatrix}$, $a \in \real$.
+
+    \begin{solucao}
+        $P = \begin{bmatrix} 1/2 & -1/2\\ 1/2 & \phantom{-} 1/2\end{bmatrix}$. A resposta não é única.
+    \end{solucao}
 \end{exercicio}
 
 \begin{exercicio}
