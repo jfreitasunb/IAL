@@ -754,93 +754,37 @@ Nos exercícios \eqref{inicioautovalor} a \eqref{fimautovalor}, verifique que $\
     \end{solucao}
 \end{exercicio}
 
-Nos exercícios à , decida se o operador linear $T : \cp{K}^n \to \cp{K}^n$ dado por sua matriz $[T]_\mathcal{B}$ é diagonalizável. Em caso positivo, calcule uma base de autovetores e a sua forma diagonal.
-
 \begin{exercicio}
-    $[T]_\mathcal{B} = \begin{bmatrix} 1 & 0\\ 0 & 0\end{bmatrix}$, $\cp{K} = \complex$, $n = 2$
-    \begin{solucao}
-         $\mathcal{A} = \{(1,0);(0,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 1 & 0\\ 0 & 0\end{bmatrix}$
-    \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-    $[T]_\mathcal{B} = \begin{bmatrix} 1 & -2\\ 1 & -1\end{bmatrix}$, $\cp{K} = \complex$, $n = 2$
-
-    \begin{solucao}
-        $\mathcal{A} = \{(1 + i,1);(1 - i,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} i & \phantom{-} 0\\ 0 & -i\end{bmatrix}$
-    \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-    $[T]_\mathcal{B} = \begin{bmatrix} 5 & -1\\ 1 & \phantom{-} 3\end{bmatrix}$, $\cp{K} = \real$, $n = 2$
-
-    \begin{solucao}
-        $T$ não é diagonalizável.
-    \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-    $[T]_\mathcal{B} = \begin{bmatrix} \phantom{-} 1 & 0 & 2\\ -1 & 0 & 1\\ \phantom{-} 1 & 1 & 2\end{bmatrix}$, $\cp{K} = \real$, $n = 3$
-
-    \begin{solucao}
-        $\mathcal{A} = \{(-1,1,0);(1,2,-1);(1,0,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 1 & \phantom{-} 0 & 0\\ 0 & -1 & 0\\0 & \phantom{-} 0 & 3\end{bmatrix}$
-    \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-    $[T]_\mathcal{B} = \begin{bmatrix} -1 & -2 & 0\\ \phantom{-} 0 & -1 & 1\\ \phantom{-} 1 & \phantom{-} 0 & 0\end{bmatrix}$, $\cp{K} = \real$, $n = 3$
-
-    \begin{solucao}
-        O operador $T$ não é diagonalizável.
-    \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-    $[T]_\mathcal{B} = \begin{bmatrix} -1 & -2 & 0\\ \phantom{-} 0 & -1 & 1\\ \phantom{-} 1 & \phantom{-} 0 & 0\end{bmatrix}$, $\cp{K} = \complex$, $n = 3$
-
-    \begin{solucao}
-        $\mathcal{A} = \{(2,1,-1);(-1 + i, 1, 1 + i);(-1 - i, 1, 1 - i)\}$; $[T]_\mathcal{A} = \begin{bmatrix} -2 & 0 & \phantom{-} 0\\ \phantom{-} 0 & i & \phantom{-} 0\\ \phantom{-} 0 & 0 & -i\end{bmatrix}$
-    \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-    $[T]_\mathcal{B} = \begin{bmatrix} 1 & \phantom{-} 2\\ 0 & -1\end{bmatrix}$, $\cp{K} = \real$, $n = 2$
-
-    \begin{solucao}
-        $\mathcal{A} = \{(1,0);(-1,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 1 & 0\\ 0 & -1\end{bmatrix}$
-    \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-    $[T]_\mathcal{B} = \begin{bmatrix} \phantom{-} 1 & 2 & \phantom{-} 2\\ \phantom{-} 1 & 2 & -1\\ -1 & 1 & \phantom{-} 4\end{bmatrix}$, $\cp{K} = \real$, $n = 3$
-
-    \begin{solucao}
-        $\mathcal{A} = \{(1,1,0);(1,0,1);(2,1,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 3 & 0 & 0\\ 0 & 3 & 0\\ 0 & 0 & 1\end{bmatrix}$
-    \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-    $[T]_\mathcal{B} = \begin{bmatrix} \phantom{-} 1 & 3 & 3\\ \phantom{-} 0 & 4 & 0\\ -3 & 3 & 1\end{bmatrix}$, $\cp{K} = \complex$, $n = 3$
-
-    \begin{solucao}
-        $\mathcal{A} = \{(2,1,1);(-i,0,1);(i,0,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 4 & 0 & \phantom{-} 0\\ 0 & 1 + 3i & \phantom{-} 0\\ 0 & 0 & 1 - 3i\end{bmatrix}$
-    \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-    $[T]_\mathcal{B} = \begin{bmatrix} 0 & 1 & 0 & 0\\ 0 & 0 & 1 & 0\\ 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0\end{bmatrix}$, $\cp{K} = \complex$, $n = 4$
-
-    \begin{solucao}
-        $\mathcal{A} = \{(-1,1,-1,1); (i,-1,-i,1); (-i,-1,i,1), (1,1,1,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} -1 & \phantom{-}0 & 0 & 0\\ \phantom{-} 0 & -i & 0 & 0\\ \phantom{-} 0 & \phantom{-}0 & i & 0\\ \phantom{-}0 & \phantom{-}0 & 0 & 1\end{bmatrix}$
-    \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-    $[T]_\mathcal{B} = \begin{bmatrix} 2 & 0 & 0 & \phantom{-}0\\ 0 & 1 & 0 & \phantom{-}0\\ 0 & 2 & 0 & \phantom{-}0 \\ 1 & 0 & 0 & -2\end{bmatrix}$, $\cp{K} = \real$, $n = 4$
-
-    \begin{solucao}
-        $\mathcal{A} = \{(0,0,1,0); (0,1,2,0); (4,0,0,1), (0,0,0,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 0 & 0 & 0 & \phantom{-}0\\ 0 & 1 & 0 & \phantom{-}0\\0 & 0 & 2 & \phantom{-}0\\0 & 0 & 0 & -2\end{bmatrix}$
-    \end{solucao}
+  Em cada um dos casos abaixo, decida se o operador linear $T : \cp{K}^n \to \cp{K}^n$ dado por sua matriz $[T]_\mathcal{B}$ é diagonalizável. Em caso positivo, calcule uma base de autovetores e a sua forma diagonal.
+  \begin{enumerate}[label=({\alph*})]
+    \item $[T]_\mathcal{B} = \begin{bmatrix} 1 & 0\\ 0 & 0\end{bmatrix}$, $\cp{K} = \complex$, $n = 2$
+    \item $[T]_\mathcal{B} = \begin{bmatrix} 1 & -2\\ 1 & -1\end{bmatrix}$, $\cp{K} = \complex$, $n = 2$
+    \item $[T]_\mathcal{B} = \begin{bmatrix} 5 & -1\\ 1 & \phantom{-} 3\end{bmatrix}$, $\cp{K} = \real$, $n = 2$
+    \item $[T]_\mathcal{B} = \begin{bmatrix} \phantom{-} 1 & 0 & 2\\ -1 & 0 & 1\\ \phantom{-} 1 & 1 & 2\end{bmatrix}$, $\cp{K} = \real$, $n = 3$
+    \item $[T]_\mathcal{B} = \begin{bmatrix} -1 & -2 & 0\\ \phantom{-} 0 & -1 & 1\\ \phantom{-} 1 & \phantom{-} 0 & 0\end{bmatrix}$, $\cp{K} = \real$, $n = 3$
+    \item $[T]_\mathcal{B} = \begin{bmatrix} -1 & -2 & 0\\ \phantom{-} 0 & -1 & 1\\ \phantom{-} 1 & \phantom{-} 0 & 0\end{bmatrix}$, $\cp{K} = \complex$, $n = 3$
+    \item $[T]_\mathcal{B} = \begin{bmatrix} 1 & \phantom{-} 2\\ 0 & -1\end{bmatrix}$, $\cp{K} = \real$, $n = 2$
+    \item $[T]_\mathcal{B} = \begin{bmatrix} \phantom{-} 1 & 2 & \phantom{-} 2\\ \phantom{-} 1 & 2 & -1\\ -1 & 1 & \phantom{-} 4\end{bmatrix}$, $\cp{K} = \real$, $n = 3$
+    \item $[T]_\mathcal{B} = \begin{bmatrix} \phantom{-} 1 & 3 & 3\\ \phantom{-} 0 & 4 & 0\\ -3 & 3 & 1\end{bmatrix}$, $\cp{K} = \complex$, $n = 3$
+    \item $[T]_\mathcal{B} = \begin{bmatrix} 0 & 1 & 0 & 0\\ 0 & 0 & 1 & 0\\ 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0\end{bmatrix}$, $\cp{K} = \complex$, $n = 4$
+    \item $[T]_\mathcal{B} = \begin{bmatrix} 2 & 0 & 0 & \phantom{-}0\\ 0 & 1 & 0 & \phantom{-}0\\ 0 & 2 & 0 & \phantom{-}0 \\ 1 & 0 & 0 & -2\end{bmatrix}$, $\cp{K} = \real$, $n = 4$
+  \end{enumerate}
+  \begin{solucao}
+      \begin{enumerate}[label=({\alph*})]
+          \item $\mathcal{A} = \{(1,0);(0,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 1 & 0\\ 0 & 0\end{bmatrix}$
+          \item $\mathcal{A} = \{(1 + i,1);(1 - i,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} i & \phantom{-} 0\\ 0 & -i\end{bmatrix}$
+          \item $T$ não é diagonalizável.
+          \item $\mathcal{A} = \{(-1,1,0);(1,2,-1);(1,0,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 1 & \phantom{-} 0 & 0\\ 0 & -1 & 0\\0 & \phantom{-} 0 & 3\end{bmatrix}$
+          \item O operador $T$ não é diagonalizável.
+          \item $\mathcal{A} = \{(2,1,-1);(-1 + i, 1, 1 + i);(-1 - i, 1, 1 - i)\}$; $[T]_\mathcal{A} = \begin{bmatrix} -2 & 0 & \phantom{-} 0\\ \phantom{-} 0 & i & \phantom{-} 0\\ \phantom{-} 0 & 0 & -i\end{bmatrix}$
+          \item $\mathcal{A} = \{(1,0);(-1,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 1 & 0\\ 0 & -1\end{bmatrix}$
+          \item $\mathcal{A} = \{(1,1,0);(1,0,1);(2,1,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 3 & 0 & 0\\ 0 & 3 & 0\\ 0 & 0 & 1\end{bmatrix}$
+          \item $\mathcal{A} = \{(2,1,1);(-i,0,1);(i,0,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 4 & 0 & \phantom{-} 0\\ 0 & 1 + 3i & \phantom{-} 0\\ 0 & 0 & 1 - 3i\end{bmatrix}$
+%          \item $\mathcal{A} = \{(-8,-1,3);(-2,1,0);(-1,-1,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} -1 & 0 & 0\\ \phantom{-} 0 & 0 & 0\\ \phantom{-} 0 & 0 & 2\end{bmatrix}$
+          \item $\mathcal{A} = \{(-1,1,-1,1); (i,-1,-i,1); (-i,-1,i,1), (1,1,1,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} -1 & \phantom{-}0 & 0 & 0\\ \phantom{-} 0 & -i & 0 & 0\\ \phantom{-} 0 & \phantom{-}0 & i & 0\\ \phantom{-}0 & \phantom{-}0 & 0 & 1\end{bmatrix}$
+          \item $\mathcal{A} = \{(0,0,1,0); (0,1,2,0); (4,0,0,1), (0,0,0,1)\}$; $[T]_\mathcal{A} = \begin{bmatrix} 0 & 0 & 0 & \phantom{-}0\\ 0 & 1 & 0 & \phantom{-}0\\0 & 0 & 2 & \phantom{-}0\\0 & 0 & 0 & -2\end{bmatrix}$
+        \end{enumerate}
+  \end{solucao}
 \end{exercicio}
 
 \begin{exercicio}
