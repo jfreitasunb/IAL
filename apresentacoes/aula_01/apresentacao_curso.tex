@@ -1,6 +1,6 @@
 %!TEX program = xelatex
 \def\ano{2023}
-\def\semestre{1}
+\def\semestre{2}
 \def\disciplina{Introdução à Álgebra Linear}
 \def\turma{3}
 \def\autor{Jos\'e Ant\^onio O. Freitas}
@@ -59,11 +59,13 @@
     \end{frame}
 
     \begin{frame}
-        {\bf{Sistema de avaliação:}} Três módulos, 1 avalição por módulo.\pause
+        {\bf{Sistema de avaliação:}} Três módulos: em cada módulo serão realizados testes e 1 avalição.\pause
+        A nota de cada módulo será dada por:
+        \[
+            M_i = 15\%T_i + 85\%P_i, \quad 0 \le M_i \le 10,
+        \]
 
-            Nota $M_i$, $i=1$, 2, 3 para cada prova.\pause
-
-            A nota final ($NF$) de cada estudante ser\'a dada por:\pause
+        A nota final ($NF$) de cada estudante ser\'a dada por:\pause
         \[
             NF = \dfrac{2M_1 + 3M_2 + 4M_3}{9}, \quad 0 \le NF \le 10.\pause
         \]
@@ -77,11 +79,11 @@
                 \hline\hline
                 \hspace{0.5cm}{\bf Prova}\hspace{0.5cm} & \hspace{1cm}{\bf Data}\hspace{1cm} & \hspace{1cm}{\bf Hor\'{a}rio}\hspace{1cm} \\
                 \hline\hline
-                $P_1$ & 25/04/23 (terça-feira) & 19:00 - 20:40 \\
+                $P_1$ & 04/10/23 (quarta-feira) \phantom{x} & 16:00 - 17:50 \\
                 \hline
-                $P_2$ & 08/06/23 (quinta-feira) & 19:00 - 20:40 \\
+                $P_2$ & 13/11/23 (segunda-feira) \phantom{x} & 16:00 - 17:50 \\
                 \hline
-                $P_3$ & 20/07/23 (quinta-feira) & 19:00 - 20:40 \\
+                $P_3$ & 14/12/23 (quarta-feira) \phantom{x} & 16:00 - 17:50 \\
                 \hline\hline
             \end{tabular}
         \end{center}
@@ -121,7 +123,7 @@
             \end{enumerate}
         \end{definicao}
     \end{frame}
-    
+
     \begin{frame}
         \begin{definicao}
             \begin{enumerate}[label={\roman*})]
@@ -129,12 +131,12 @@
 
 		\item \textbf{Comutatividade da multiplica\c{c}\~ao}: para todos $a$, $b \in \cp{K}$ \pause vale: $a \cdot b = b \cdot a$;\pause
 		\item \textbf{Associatividade da multiplica\c{c}\~ao}: para todos $a$, $b$ e $c \in \cp{K}$\pause vale: $a \cdot (b \cdot c) = (a \cdot b) \cdot c$;\pause
-	
+
                 \seti
             \end{enumerate}
         \end{definicao}
     \end{frame}
-    
+
     \begin{frame}
         \begin{definicao}
             \begin{enumerate}[label={\roman*})]
@@ -153,7 +155,7 @@
             \end{enumerate}
         \end{definicao}
     \end{frame}
-    
+
     \begin{frame}
         \begin{definicao}
             \begin{enumerate}[label={\roman*})]
@@ -169,7 +171,7 @@
 
     \begin{frame}
         Denotamos um corpo $\cp{K}$ pela terna $(\cp{K}, +, \cdot)$. \pause
-        
+
         \vspace{.3cm}
 
         Quando n\~ao houver chance de confus\~ao em rela\c{c}\~ao \`as opera\c{c}\~oes de soma e multiplica\c{c}\~ao envolvidas no corpo $(\cp{K}, +, \cdot)$, \pause vamos simplesmente dizer que $\cp{K}$ \'e um corpo. \pause
@@ -178,9 +180,9 @@
 
         Os elementos de um corpo $\cp{K}$ s\~ao chamados de \textbf{escalares}.
     \end{frame}
-    
+
     \begin{frame}
-    
+
         Considere $\cp{K} = \rac$, \pause $\real$ \pause ou
         \[
     	    \complex = \pause \{a + bi \pause \mid a, b \in \real, \pause i^2 = -1\}.\pause
@@ -199,7 +201,7 @@
             \item $(x + y)z = xz + yz$ para todos $x$, $y$ e $z \in \cp{K}$.\pause
         \end{enumerate}
     \end{frame}
-    
+
     \begin{frame}
         \begin{enumerate}[label={\roman*})]
             \item Assim $(\cp{K}, +, \cdot)$ é um corpo.\pause
@@ -213,7 +215,7 @@
     \begin{frame}
         Vamos trabalhar também com o conjunto de matrizes com entradas em $\cp{K}$:\pause
         \[
-            M_{p \times q}(\cp{K}) = 
+            M_{p \times q}(\cp{K}) =
             \left\{
                 \begin{bmatrix}
                     a_{11} & a_{12} & \cdots & a_{1n}\\
