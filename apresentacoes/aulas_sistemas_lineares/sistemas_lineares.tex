@@ -1,4 +1,5 @@
 %!TEX program = xelatex
+%!TEX encoding = UTF-8
 \def\ano{2023}
 \def\semestre{1}
 \def\disciplina{Introdução à Álgebra Linear}
@@ -37,7 +38,7 @@
         \end{equation}
 
         onde $a_1$, $a_2$, \dots, $a_q$, \pause $b$ são escalares no corpo $\cp{K}$, \pause sendo que nem todos os coeficientes $a_i$ são nulos.
-        
+
         \vspace{.3cm}
 
         No caso em que $b = 0$, \pause a equação \eqref{equacao_linear} tem a forma\pause
@@ -45,14 +46,14 @@
             a_1x_1 + a_2x_2 + \cdots + a_qx_q = 0\pause
         \end{equation}
         e é chamada de uma \textbf{equação linear homogênea}.
-        
+
     \end{frame}
 
     \begin{frame}
         Seja $\cp{K} = \real$.\pause
 
         \vspace{.3cm}
-        
+
         Dado um conjunto de equações da forma
         \begin{align}
             \begin{cases}\label{sistema_linear_2x2}
@@ -61,7 +62,7 @@
             \end{cases}
         \end{align}
         onde $a$, $b$, $c$, $d$, $b_1$, $b_2 \in \cp{K}$.\pause
-    
+
         \vspace{.3cm}
 
         Existem valores de $x$, $y \in \cp{K}$ que satisfazem as duas equações simultaneamente?
@@ -151,7 +152,7 @@
                 \end{axis}
             \end{tikzpicture}
         \end{center}
-        
+
         Nesse caso existe um único conjunto de valores $x = \alpha \in \cp{K}$ e $y = \lambda \in \cp{K}$ \pause que satisfaz as duas equações simultaneamente. \pause Neste caso dizemos que o sistema \eqref{sistema_linear_2x2} \pause é \textbf{possível e determinado}.\pause
     \end{frame}
 
@@ -170,7 +171,7 @@
 
         Existem valores de $x$, $y$ e $z \in \cp{K}$ que satisfaçam as três equações simultaneamente?
     \end{frame}
-    
+
     \begin{frame}
         Como no caso anterior, temos as seguintes possibilidades:\pause
         \begin{enumerate}[label={\roman*})]
@@ -197,7 +198,7 @@
                 a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m\pause
             \end{cases}
         \end{equation}
-        
+
         O conjunto de equações em \eqref{sistema_linear_geral} é chamado de um \pause \textbf{sistema de $m$ equa\c{c}\~oes lineares \pause a $n$ inc\'ognitas} $x_1$, $x_2$, \dots, $x_n$\pause , ou simplesmente de um \textbf{sistema linear}, nas incógnitas \pause $x_1$, $x_2$, \dots, $x_n$.
     \end{frame}
 
@@ -274,7 +275,7 @@
             \vspace{.3cm}
 
             \item[$e_2$)] Multiplica\c{c}\~ao da $i$-\'esima linha de $A$ \pause por um escalar $\alpha \in \cp{K}$ n\~ao nulo: \pause $L_i \rightarrow \alpha L_i$;\pause
- 
+
             \vspace{.3cm}
 
            \item[$e_3$)] Substitui\c{c}\~ao da $i$-\'esima linha de $A$ \pause pela $i$-\'esima linha mais $\alpha$ vezes a $j$-\'esima linha: \pause $L_i \rightarrow L_i + \alpha L_j$.
@@ -289,12 +290,12 @@
 
                 \vspace{.3cm}
 
-                \item Toda linha de $A$ cujos elementos s\~ao todos nulos \pause ocorre abaixo de todas as linhas que possuem um elemento n\~ao-nulo.\pause 
- 
+                \item Toda linha de $A$ cujos elementos s\~ao todos nulos \pause ocorre abaixo de todas as linhas que possuem um elemento n\~ao-nulo.\pause
+
                 \vspace{.3cm}
 
                 \item Se as linhas 1, 2, \dots, $r$ s\~ao as linhas n\~ao-nulas de $A$ \pause e se o \textbf{pivô} da linha $i$ ocorre na coluna $k_i$, \pause $i = 1$, \dots, $r$, \pause ent\~ao $k_1 < k_2 < \cdots < k_r$.\pause
- 
+
                 \vspace{.3cm}
 
                 \item Cada coluna de $A$ que cont\'em um \textbf{pivô} \pause tem todos os seus outros elementos nulos.
@@ -312,7 +313,7 @@
         \begin{definicao}
 	    Se $A$ e $B$ s\~ao matrizes $m \times n$, \pause dizemos que $B$ \'e \textbf{equivalente por linha} \pause a $A$, \pause se $B$ for obtida de $A$ \pause atrav\'es de uma quantidade finita de opera\c{c}\~oes elementares sobre as linhas de $A$.\pause
         \end{definicao}
-        
+
         \vspace{.6cm}
 
         \begin{notacao}
@@ -341,26 +342,26 @@
                 \item Escreva a matriz ampliada do sistema de equações lineares.\pause
 
                 \item Use operações elementares nas linhas de $A$ para reduzir a matriz ampliada à \textbf{forma escalonada por linhas}.\pause
-                
+
                 \item Quando a matriz ampliada estiver na forma escalonada, usando substituição de trás para a frente, \pause resolva o sistema equivalente que corresponde a matriz escalonada reduzida por linhas.
             \end{enumerate}
         \end{definicao}
     \end{frame}
-    
+
     \begin{frame}
         \begin{observacao}
             Ao se aplicar o método de eliminação gaussiana, as seguintes dicas podem ser úteis:\pause
             \begin{enumerate}[label=({\alph*})]
                 \item Localize a coluna mais à esquerda que não é toda formada por zeros.\pause
-                
+
                 \vspace{.3cm}
 
                 \item Crie um \textbf{pivô} no topo desta coluna.\pause
-                 
+
                 \vspace{.3cm}
 
                 \item Use o \textbf{pivô} para criar zeros abaixo dele.\pause
- 
+
                 \vspace{.3cm}
 
                 \item Faça a linha contendo este \textbf{pivô} ir para a parte de cima \pause e volte ao passo (a) para repetir o procedimento com o restante da submatriz. \pause Pare quando toda a matriz estiver na forma escalonada por linhas.
@@ -415,7 +416,7 @@
 
     \begin{frame}
         Durante a aplicação do \textbf{método de eliminação de Gauss}, \pause paramos quando a matriz ampliada do sistema está na forma escalonada.
-        Todavia podemos continuar aplicando operações elementares até que a matriz atinja a forma escalonada reduzida por linhas. Esse é o caso do 
+        Todavia podemos continuar aplicando operações elementares até que a matriz atinja a forma escalonada reduzida por linhas. Esse é o caso do
         \textbf{método de Gaus-Jordan}.
 
         \begin{definicao}[Método de eliminaçao de Gauss-Jordan]
@@ -424,7 +425,7 @@
                 \item Escreva a matriz ampliada do sistema de equações lineares.\pause
 
                 \item Use operações elementares nas linhas de $A$ para reduzir a matriz ampliada à \textbf{forma escalonada reduzida por linhas}.\pause
-                
+
                 \item Se o sistema resultante for possível, resolva-o para as variáveis dependentes em termos de quaisquer variáveis livres que tenha sobrado.
             \end{enumerate}
         \end{definicao}
@@ -439,13 +440,13 @@
 
     \begin{frame}
         \begin{definicao}
-            Seja $A$ uma matriz quadrada de ordem $n$ \pause e $A \ne 0$. \pause Se for possível encontrar uma matriz quadrada $B$ \pause também de 
+            Seja $A$ uma matriz quadrada de ordem $n$ \pause e $A \ne 0$. \pause Se for possível encontrar uma matriz quadrada $B$ \pause também de
             ordem $n$ tal que\pause
             \[
-                AB = I_n \pause = BA\pause   
+                AB = I_n \pause = BA\pause
             \]
-            onde $I_n$ é a matriz identidade de ordem $n$, \pause então diremos que $A$ é \textbf{invertível}, \pause ou \textbf{não singular}, \pause 
-            e que $B$ é a \textbf{inversa} de $A$. \pause Se não pudermos encontrar tal matriz $B$, \pause então diremos que $A$ é \textbf{não invertível} \pause 
+            onde $I_n$ é a matriz identidade de ordem $n$, \pause então diremos que $A$ é \textbf{invertível}, \pause ou \textbf{não singular}, \pause
+            e que $B$ é a \textbf{inversa} de $A$. \pause Se não pudermos encontrar tal matriz $B$, \pause então diremos que $A$ é \textbf{não invertível} \pause
             ou \textbf{singular}.
         \end{definicao}
     \end{frame}
@@ -526,7 +527,7 @@
             \end{pmatrix}
         \]
     \end{frame}
-    
+
     \begin{frame}
         A partir dessas matrizes o sistema linear anterior pode ser escrito como a equação matricial:\pause
         \[
@@ -559,14 +560,14 @@
 
     \begin{frame}
         \begin{definicao}
-            Uma matriz $n\times n$ \pause que pode ser obtida da matriz identidade $I_n$, \pause de tamanho $n\times n$, \pause efetuando uma 
+            Uma matriz $n\times n$ \pause que pode ser obtida da matriz identidade $I_n$, \pause de tamanho $n\times n$, \pause efetuando uma
             única operação elementar \pause sobre linhas \pause é chamada de \textbf{matriz elementar}.
         \end{definicao}
     \end{frame}
 
     \begin{frame}
         \begin{teorema}
-            Se a matriz elementar $E$ \pause é o resultado de efetuar uma certa operação com as linhas de $I_m$ \pause e se $A$ é uma matriz 
+            Se a matriz elementar $E$ \pause é o resultado de efetuar uma certa operação com as linhas de $I_m$ \pause e se $A$ é uma matriz
             $m \times n$, \pause então o produto $EA$ \pause é a matriz que resulta quando essa mesma operação com linhas é efetuada em $A$.\pause
         \end{teorema}
 
@@ -582,15 +583,15 @@
             Se $A$ é uma matriz $n \times n$, \pause então as seguintes afirmações são equivalentes, \pause ou seja, são todas verdadeiras \pause ou todas falsas:\pause
             \begin{enumerate}[label={\roman*})]
                 \item $A$ é invertível.\pause
-                
+
                 \vspace{1cm}
 
                 \item $Ax = 0$ \pause tem somente a solução trivial.\pause
-                 
+
                 \vspace{1cm}
 
                 \item A forma escalonada reduzida por linhas \pause de $A$ é $I_n$.
-                 
+
                 \seti
             \end{enumerate}
         \end{teorema}
@@ -602,11 +603,11 @@
                 \conti
 
                 \item $A$ pode ser expressa como um produto de matrizes elementares.\pause
-                 
+
                 \vspace{1cm}
 
                 \item $Ax = b$ é possível \pause para cada matriz $b$ de tamanho $n \times 1$.\pause
-                 
+
                 \vspace{1cm}
 
                 \item $Ax = b$ tem exatamente uma solução \pause para cada matriz $b$ de tamanho $n \times 1$.
