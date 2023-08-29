@@ -188,7 +188,7 @@ Temos então as seguintes possibilidades:
                  \caption{Nenhuma solução}
               \end{subfigure}
             \begin{subfigure}{.32\textwidth}
-                \centering  
+                \centering
            \includegraphics[width=\linewidth]{3-planos-sem-nenhuma-intersecao-dois-a-dois-retas-nenhuma-solucao.pdf}
             \caption{Nenhuma solução}
            \end{subfigure}
@@ -197,7 +197,7 @@ Temos então as seguintes possibilidades:
 
 Agora, de modo geral queremos trabalhar com uma quantidade qualquer de equaç\~oes. Para isso começamos escolhendo escalares $b_1$, \dots, $b_m$  e $a_{ij}$,  $1 \le i \le m$, $1 \le j \le n$ todos em $\cp{K}$.
 
-Queremos saber se é possível encontrar valores para  $x_1$, $x_2$, \dots, $x_n$  de modo que o seguinte conjunto de equaç\~oes sejam válidas: 
+Queremos saber se é possível encontrar valores para  $x_1$, $x_2$, \dots, $x_n$  de modo que o seguinte conjunto de equaç\~oes sejam válidas:
 \begin{equation}\label{sistema_linear_geral}
 \begin{cases}
         a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1\\
@@ -229,7 +229,7 @@ Se $b_1 = b_2 = \cdots = b_m = 0_\cp{K} \in K$,  dizemos que o sistema
         a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = 0_\cp{K}
     \end{cases}
 \end{equation}
-é um \textbf{sistema linear homog\^eneo}.\index{Sistema linear!homog\^eneo} 
+é um \textbf{sistema linear homog\^eneo}.\index{Sistema linear!homog\^eneo}
 
 Observe que tal sistema sempre possui solução,  a saber, $x_1 = x_2 = \cdots = x_n = 0_\cp{K}$.
 
@@ -406,7 +406,7 @@ Para destacar que a última coluna dessa matriz contém os termos independentes 
                         2 & -5 & 4 & -7 & 8\\
                         3 & -7 & 0 & 2 & -9\\
                         0 & 0 & 5 & 8 & 0\\
-                        0 & 0 & 1 & -1 & 0 
+                        0 & 0 & 1 & -1 & 0
                     \end{bmatrix}
                 \]
 
@@ -432,7 +432,7 @@ O que iremos fazer para resolver um sistema linear do tipo \eqref{sistema_linear
     \begin{enumerate}[label={\roman*})]
         \item O primeiro elemento não nulo em cada linha não nula de $A$ é $1$. Dizemos que esse número 1 é um \textbf{piv\^o}.
 
-        \item Toda linha de $A$ cujos elementos são todos nulos ocorre abaixo de todas as linhas que possuem um elemento não-nulo. 
+        \item Toda linha de $A$ cujos elementos são todos nulos ocorre abaixo de todas as linhas que possuem um elemento não-nulo.
 
         \item Se as linhas 1, 2, \dots, $r$ são as linhas não-nulas de $A$ e se o \textbf{piv\^o} da linha $i$ ocorre na coluna $k_i$, $i = 1$, \dots, $r$, então $k_1 < k_2 < \cdots < k_r$.
 
@@ -512,7 +512,7 @@ O que iremos fazer para resolver um sistema linear do tipo \eqref{sistema_linear
                 3 & -5 & -3 & 1
                     \end{bmatrix}
                     \begin{array}{l}
-                        L_1 \leftrightarrow L_2\\\phantom{x} \\\phantom{x} 
+                        L_1 \leftrightarrow L_2\\\phantom{x} \\\phantom{x}
                     \end{array} \sim
                     \begin{bmatrix}
                 1 & -3 & 1 & 1\\
@@ -584,7 +584,7 @@ O que iremos fazer para resolver um sistema linear do tipo \eqref{sistema_linear
             \end{solucao}
     \end{enumerate}
 \end{exemplos}
-    
+
 \begin{definicao}
     Se $A$ e $B$ são matrizes $m \times n$, dizemos que $B$ é \textbf{linha-equivalente}\index{Matrizes!linha-equivalente} a $A$, se $B$ for obtida de $A$ através de uma quantidade finita de operaç\~oes elementares sobre as linhas de $A$.
 \end{definicao}
@@ -610,7 +610,7 @@ O que iremos fazer para resolver um sistema linear do tipo \eqref{sistema_linear
                     \end{pmatrix}
             \]
             são matrizes linha-equivalentes pois podemos obter a matriz $B$ de $A$ trocando a primeira linha de $A$ com a segunda linha. Assim $B \sim A$.
-            
+
             Observe que também podemos obter a matriz $A$ a partir de $B$ simplesmente trocando a primeira linha de $B$ com a segunda linha. Logo $A \sim B$.
         \item As matrizes
             \[
@@ -696,7 +696,7 @@ O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gau
         \item Escreva a matriz ampliada do sistema de equaç\~oes lineares.
 
         \item Use operaç\~oes elementares nas linhas de $A$ para reduzir a matriz ampliada \`a \textbf{forma escalonada por linhas}.
-        
+
         \item Quando a matriz ampliada estiver na forma escalonada, usando substituição de trás para a frente, resolva o sistema equivalente que corresponde a matriz escalonada reduzida por linhas.
     \end{enumerate}
 \end{definicao}
@@ -705,9 +705,9 @@ O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gau
     No momento de aplicar o passo 2 do método de eliminação de Guass, temos várias escolhas que podemos fazer. Algumas dicas para a escolha da operação são as seguintes:
     \begin{enumerate}[label=({\alph*})]
         \item Localize a coluna mais \`a esquerda que não é toda formada por zeros.
-        
+
         \item Crie um \textbf{piv\^o} no topo desta coluna.
-         
+
         \item Use o \textbf{piv\^o} para criar zeros abaixo dele.
 
         \item Faça a linha contendo este \textbf{piv\^o} ir para a parte de cima e volte ao passo (a) para repetir o procedimento com o restante da submatriz. Pare quando toda a matriz estiver na forma escalonada por linhas.
@@ -808,7 +808,7 @@ O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gau
                     0 & 0 & 0 & 0 & -4 & 4 & -12
                 \end{amatrix}
                 \begin{array}{l}
-                    \phantom{x}\\ \phantom{x}\\ L_3 \to L_3 - 6L_2\\ \phantom{x} 
+                    \phantom{x}\\ \phantom{x}\\ L_3 \to L_3 - 6L_2\\ \phantom{x}
                 \end{array}\sim\\
                 &\begin{amatrix}{6}
                     1 & 4 & 3 & -2 & 10 & 9 & -17\\
@@ -826,7 +826,7 @@ O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gau
                     0 & 0 & 0 & 0 & -4 & 4 & -12
                 \end{amatrix}
                 \begin{array}{l}
-                    \phantom{x}\\ \phantom{x}\\ \phantom{x}\\ L_4 \to L_4 - 4L_3 
+                    \phantom{x}\\ \phantom{x}\\ \phantom{x}\\ L_4 \to L_4 - 4L_3
                 \end{array}\sim\\
                 &\begin{amatrix}{6}
                     1 & 4 & 3 & -2 & 10 & 9 & -17\\
@@ -963,7 +963,7 @@ O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gau
                         1 & -1 & k & 1\\
                         2 & 1 & 1 & 0\\
                         1 & 2 & 1 - k & k\\
-                    \end{amatrix}    
+                    \end{amatrix}
                 \]
                 Apliquemos a eliminação gaussiana
                 \begin{align*}
@@ -1047,12 +1047,12 @@ A matriz
 é chamada de \textbf{matriz dos coeficientes} do sistema linear.
 
 \begin{definicao}
-    Seja $A$ a matriz ampliada de um sistema linear. Se $A$ está na forma escalonada reduzida por linhas, então as variáveis desse 
+    Seja $A$ a matriz ampliada de um sistema linear. Se $A$ está na forma escalonada reduzida por linhas, então as variáveis desse
     sistema que não correspondem aos piv\^os são chamadas de \textbf{variáveis livres}.\index{Sistema linear!variáveis livres}
 \end{definicao}
 
 \begin{definicao}
-    O \textbf{posto}\index{Matriz!posto}, denotado $\p{A}$ ou $p(A)$, de uma matriz $A$ é número de linhas não nulas de qualquer 
+    O \textbf{posto}\index{Matriz!posto}, denotado $\p{A}$ ou $p(A)$, de uma matriz $A$ é número de linhas não nulas de qualquer
     uma de suas formas escalonadas por linhas.
 \end{definicao}
 
@@ -1064,7 +1064,7 @@ A matriz
 \end{teorema}
 
 Durante a aplicação do \textbf{método de eliminação de Gauss}, paramos quando a matriz ampliada do sistema está na forma escalonada.
-Todavia podemos continuar aplicando operaç\~oes elementares até que a matriz atinja a forma escalonada reduzida por linhas. Esse é o caso do 
+Todavia podemos continuar aplicando operaç\~oes elementares até que a matriz atinja a forma escalonada reduzida por linhas. Esse é o caso do
 \textbf{método de Gaus-Jordan}.
 
 \begin{definicao}[Método de eliminaçao de Gauss-Jordan]
@@ -1073,8 +1073,8 @@ Todavia podemos continuar aplicando operaç\~oes elementares até que a matriz a
         \item Escreva a matriz ampliada do sistema de equaç\~oes lineares.
 
         \item Use operaç\~oes elementares nas linhas de $A$ para reduzir a matriz ampliada \`a \textbf{forma escalonada reduzida por linhas}.
-        
-        \item Se o sistema resultante for possível, resolva-o para as variáveis dependentes em termos de quaisquer variáveis livres que 
+
+        \item Se o sistema resultante for possível, resolva-o para as variáveis dependentes em termos de quaisquer variáveis livres que
             tenham sobrado.
     \end{enumerate}
 \end{definicao}
@@ -1253,10 +1253,10 @@ Todavia podemos continuar aplicando operaç\~oes elementares até que a matriz a
 \section{Matriz Inversa}
 
 \begin{definicao}
-    Seja $A$ uma matriz quadrada de ordem $n$ e $A \ne 0$. Se for possível encontrar uma matriz quadrada $B$ também de 
+    Seja $A$ uma matriz quadrada de ordem $n$ e $A \ne 0$. Se for possível encontrar uma matriz quadrada $B$ também de
     ordem $n$ tal que
     \[
-        AB = I_n = BA   
+        AB = I_n = BA
     \]
     onde $I_n$ é a matriz identidade de ordem $n$, então diremos que $A$ é \textbf{invertível}\index{Matriz!invertível}, ou \textbf{não singular}\index{Matriz!não singular}, e que $B$ é a \textbf{inversa}\index{Matriz!inversa} de $A$. Se não pudermos encontrar tal matriz $B$, então diremos que $A$ é \textbf{não invertível} ou \textbf{singular}.\index{Matriz!singular}
 \end{definicao}
@@ -1290,7 +1290,7 @@ Todavia podemos continuar aplicando operaç\~oes elementares até que a matriz a
             \item De fato,
             \begin{align*}
                 AB &= \begin{pmatrix} -1 & -1 & 0\\ 0 & -1 & -1\\ 1 & -1 & -3\end{pmatrix}
-                \begin{pmatrix}-2 & 3 & 1\\ 1 & -3 & 1\\ -1 & 2 & -1\end{pmatrix} = 
+                \begin{pmatrix}-2 & 3 & 1\\ 1 & -3 & 1\\ -1 & 2 & -1\end{pmatrix} =
                 \begin{pmatrix} 1 & 0 & 0\\ 0 & 1 & 0\\ 0 & 0 & 1\end{pmatrix} = I_3\\
                 BA &= \begin{pmatrix}-2 & 3 & 1\\ 1 & -3 & 1\\ -1 & 2 & -1\end{pmatrix}
                 \begin{pmatrix} -1 & -1 & 0\\ 0 & -1 & -1\\ 1 & -1 & -3\end{pmatrix} = \begin{pmatrix} 1 & 0 & 0\\ 0 & 1 & 0\\ 0 & 0 & 1\end{pmatrix} = I_3.
@@ -1515,7 +1515,7 @@ e aplicamos operações elementares nessa matriz até o que o lado esquerdo dela
             1 & -3 & 1 & 0 & 1 & 0\\
             -1 & 2 & -1 & 0 & 0 & 1
         \end{array}\right].
-        \]  
+        \]
         Agora vamos usar o método de Gauss-Jordan para tentar transformar o  lado esquerdo dessa matriz ampliada na identidade:
         \begin{align*}
             &\left[
@@ -1596,7 +1596,7 @@ e aplicamos operações elementares nessa matriz até o que o lado esquerdo dela
         \]
     \end{solucao}
 \end{exemplo}
-Considere o sistema linear: 
+Considere o sistema linear:
 \begin{equation}
 \begin{cases}
         a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1\\
@@ -1618,7 +1618,7 @@ A esse sistema podemos associar algumas matrizes. A saber:
         x_2\\
         \vdots\\
         x_n
-    \end{pmatrix},\quad 
+    \end{pmatrix},\quad
     b = \begin{pmatrix}
         b_1\\
         b_2\\
@@ -1680,7 +1680,7 @@ Vamos escrever simplesmente
     \]
     Logo a solução desse sistema é dada por
     \[
-        \begin{bmatrix}x\\y\\z\end{bmatrix} = 
+        \begin{bmatrix}x\\y\\z\end{bmatrix} =
         \begin{bmatrix}
             -1 & -1 & 0\\
             0 & -1 & -1\\
@@ -1821,7 +1821,7 @@ Vamos escrever simplesmente
             1 & 0 & 0\\
             -2 & 1 & 0\\
             0 & 0 & 1
-        \end{pmatrix} = 
+        \end{pmatrix} =
         \begin{pmatrix}
             1 & 0 & 2 & 3\\
             0 & -1 & -1 & 0\\
