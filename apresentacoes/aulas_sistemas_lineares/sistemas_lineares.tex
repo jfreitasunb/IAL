@@ -192,7 +192,7 @@
             \end{cases}
         \end{equation}
 
-        O conjunto de equações em \eqref{sistema_linear_geral} é chamado de um \pause \textbf{sistema de $m$ equa\c{c}\~oes lineares \pause a $n$ inc\'ognitas} $x_1$, $x_2$, \dots, $x_n$\pause , ou simplesmente de um \textbf{sistema linear}, nas incógnitas \pause $x_1$, $x_2$, \dots, $x_n$.
+        O conjunto de equações em \eqref{sistema_linear_geral} é chamado de um \pause \textbf{sistema de $m$ equações lineares \pause a $n$ inc\'ognitas} $x_1$, $x_2$, \dots, $x_n$\pause , ou simplesmente de um \textbf{sistema linear}, nas incógnitas \pause $x_1$, $x_2$, \dots, $x_n$.
     \end{frame}
 
     \begin{frame}
@@ -219,11 +219,11 @@
                 a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = 0\pause
             \end{cases}
         \end{equation}
-        \'e um \textbf{sistema linear homog\^eneo}. \pause
+        é um \textbf{sistema linear homogêneo}. \pause
 
         \vspace{.3cm}
 
-        Observe que tal sistema sempre possui solu\c{c}\~ao, \pause a saber, $x_1 = x_2 = \cdots = x_n = 0$.
+        Observe que tal sistema sempre possui solução, \pause a saber, $x_1 = x_2 = \cdots = x_n = 0$.
     \end{frame}
 
     \begin{frame}
@@ -233,18 +233,18 @@
     \end{frame}
 
     \begin{frame}
-        No caso de um sistema linear da forma \eqref{sistema_linear_geral}, \pause o processo para encontrar suas soluções ser\'a feito mediante o uso de 3 tipos de opera\c{c}\~oes. \pause S\~ao elas:\pause
+        No caso de um sistema linear da forma \eqref{sistema_linear_geral}, \pause o processo para encontrar suas soluções será feito mediante o uso de 3 tipos de operações. \pause São elas:\pause
         \begin{itemize}
-	    \item[$e_1$)] Troca da posi\c{c}\~ao de duas equa\c{c}\~oes.\pause
-	    \item[$e_2$)] Multiplica\c{c}\~ao de uma equa\c{c}\~ao por um escalar n\~ao nulo.\pause
-	    \item[$e_3$)] Substitui\c{c}\~ao de uma equa\c{c}\~ao pela soma desta equa\c{c}\~ao com alguma outra.\pause
+	    \item[$e_1$)] Troca da posição de duas equações.\pause
+	    \item[$e_2$)] Multiplicação de uma equação por um escalar não nulo.\pause
+	    \item[$e_3$)] Substituição de uma equação pela soma desta equação com alguma outra.\pause
         \end{itemize}
 
-        Estas tr\^es opera\c{c}\~oes s\~ao chamadas de \pause \textbf{opera\c{c}\~oes elementares}.
+        Estas três operações são chamadas de \pause \textbf{operações elementares}.
     \end{frame}
 
     \begin{frame}
-        Uma outra matriz que podemos associar ao sistema \eqref{sistema_linear_geral} \'e\pause
+        Uma outra matriz que podemos associar ao sistema \eqref{sistema_linear_geral} é\pause
         \[
 	    \begin{bmatrix}
                 a_{11} & a_{12} & \cdots & a_{1n} & b_1\\
@@ -254,44 +254,44 @@
             \end{bmatrix}
         \]
 
-        que \'e chamada de \textbf{matriz ampliada do sistema} \pause ou \textbf{matriz aumentada do sistema}.
+        que é chamada de \textbf{matriz ampliada do sistema} \pause ou \textbf{matriz aumentada do sistema}.
     \end{frame}
 
     \begin{frame}
-        Na forma matricial \pause as opera\c{c}\~oes elementares s\~ao descritas como:\pause
+        Na forma matricial \pause as operações elementares são descritas como:\pause
 
         \vspace{.3cm}
 
         \begin{itemize}
-            \item[$e_1$)] Trocar a $i$-\'esima linha de $A$ \pause pela $j$-\'esima linha de $A$: \pause $L_i \leftrightarrow L_j$;\pause
+            \item[$e_1$)] Trocar a $i$-ésima linha de $A$ \pause pela $j$-ésima linha de $A$: \pause $L_i \leftrightarrow L_j$;\pause
 
             \vspace{.3cm}
 
-            \item[$e_2$)] Multiplica\c{c}\~ao da $i$-\'esima linha de $A$ \pause por um escalar $\alpha \in \cp{K}$ n\~ao nulo: \pause $L_i \rightarrow \alpha L_i$;\pause
+            \item[$e_2$)] Multiplicação da $i$-ésima linha de $A$ \pause por um escalar $\alpha \in \cp{K}$ não nulo: \pause $L_i \rightarrow \alpha L_i$;\pause
 
             \vspace{.3cm}
 
-           \item[$e_3$)] Substitui\c{c}\~ao da $i$-\'esima linha de $A$ \pause pela $i$-\'esima linha mais $\alpha$ vezes a $j$-\'esima linha: \pause $L_i \rightarrow L_i + \alpha L_j$.
+           \item[$e_3$)] Substituição da $i$-ésima linha de $A$ \pause pela $i$-ésima linha mais $\alpha$ vezes a $j$-ésima linha: \pause $L_i \rightarrow L_i + \alpha L_j$.
         \end{itemize}
     \end{frame}
 
     \begin{frame}
         \begin{definicao}\label{linhareduzida}
-            Uma matriz $A$ $m \times n$ \'e \pause dita estar na \textbf{forma escalonada reduzida por linhas} se:\pause
+            Uma matriz $A$ $m \times n$ é \pause dita estar na \textbf{forma escalonada reduzida por linhas} se:\pause
             \begin{enumerate}[label={\roman*})]
-                \item O primeiro elemento n\~ao nulo \pause em cada linha n\~ao nula de $A$ \pause \'e $1$. \pause Dizemos que esse número 1 é um \textbf{pivô}.\pause
+                \item O primeiro elemento não nulo \pause em cada linha não nula de $A$ \pause é $1$. \pause Dizemos que esse número 1 é um \textbf{pivô}.\pause
 
                 \vspace{.3cm}
 
-                \item Toda linha de $A$ cujos elementos s\~ao todos nulos \pause ocorre abaixo de todas as linhas que possuem um elemento n\~ao-nulo.\pause
+                \item Toda linha de $A$ cujos elementos são todos nulos \pause ocorre abaixo de todas as linhas que possuem um elemento não-nulo.\pause
 
                 \vspace{.3cm}
 
-                \item Se as linhas 1, 2, \dots, $r$ s\~ao as linhas n\~ao-nulas de $A$ \pause e se o \textbf{pivô} da linha $i$ ocorre na coluna $k_i$, \pause $i = 1$, \dots, $r$, \pause ent\~ao $k_1 < k_2 < \cdots < k_r$.\pause
+                \item Se as linhas 1, 2, \dots, $r$ são as linhas não-nulas de $A$ \pause e se o \textbf{pivô} da linha $i$ ocorre na coluna $k_i$, \pause $i = 1$, \dots, $r$, \pause então $k_1 < k_2 < \cdots < k_r$.\pause
 
                 \vspace{.3cm}
 
-                \item Cada coluna de $A$ que cont\'em um \textbf{pivô} \pause tem todos os seus outros elementos nulos.
+                \item Cada coluna de $A$ que contém um \textbf{pivô} \pause tem todos os seus outros elementos nulos.
             \end{enumerate}
         \end{definicao}
     \end{frame}
@@ -304,7 +304,7 @@
 
     \begin{frame}
         \begin{definicao}
-	    Se $A$ e $B$ s\~ao matrizes $m \times n$, \pause dizemos que $B$ \'e \textbf{equivalente por linha} \pause a $A$, \pause se $B$ for obtida de $A$ \pause atrav\'es de uma quantidade finita de opera\c{c}\~oes elementares sobre as linhas de $A$.\pause
+	    Se $A$ e $B$ são matrizes $m \times n$, \pause dizemos que $B$ é \textbf{equivalente por linha} \pause a $A$, \pause se $B$ for obtida de $A$ \pause através de uma quantidade finita de operações elementares sobre as linhas de $A$.\pause
         \end{definicao}
 
         \vspace{.6cm}
