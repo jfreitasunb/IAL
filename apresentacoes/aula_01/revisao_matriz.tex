@@ -27,26 +27,26 @@
             M_{p \times q}(\cp{K}) =
             \left\{
                 \begin{bmatrix}
-                    a_{11} & a_{12} & \cdots & a_{1n}\\
-                    a_{21} & a_{22} & \cdots & a_{2n}\\
+                    a_{11} & a_{12} & \cdots & a_{1q}\\
+                    a_{21} & a_{22} & \cdots & a_{2q}\\
                     \vdots & & & \vdots\\
-                    a_{m1} & a_{m2} & \cdots & a_{mn}
+                    a_{p1} & a_{p2} & \cdots & a_{pq}
                 \end{bmatrix}
                 \mid a_{ij} \in \cp{K},\ 1 \le i \le p,\ 1 \le j \le q
-            \right\}\pause
+            \right\}
         \]
     \end{frame}
 
     \begin{frame}
-        Em $M_{p\times q}(\cp{K})$ vamos admitir definidas as operações de soma de matrizes \pause e multiplicação de matriz por escalar.\pause
+        Em $M_{p\times q}(\cp{K})$ vamos admitir definidas as operações de soma de matrizes  e multiplicação de matriz por escalar.
 
-        Vamos também admitir as seguintes propriedades como verdadeiras:\pause
+        Vamos também admitir as seguintes propriedades como verdadeiras:
         \begin{proposicao}
-            Dadas matrizes $A$, $B$ e $C \in M_{p\times q}(\cp{K})$ \pause e escalares $\alpha$, $\lambda \in \cp{K}$ vale:\pause
+            Dadas matrizes $A$, $B$ e $C \in M_{p\times q}(\cp{K})$  e escalares $\alpha$, $\lambda \in \cp{K}$ vale:
             \begin{enumerate}[label={\roman*})]
-                \item $(A + B) + C = A + (B + C)$\pause
-                \item $A + B = B + A$\pause
-                \item $0_{p \times q} + A = A \pause = A + 0_{p \times q}$, \pause onde $0_{p \times q}$ é matriz cujas entradas são todas zero.\pause
+                \item $(A + B) + C = A + (B + C)$
+                \item $A + B = B + A$
+                \item $0_{p \times q} + A = A  = A + 0_{p \times q}$,  onde $0_{p \times q}$ é matriz cujas entradas são todas zero.
                 \seti
             \end{enumerate}
         \end{proposicao}
@@ -56,9 +56,9 @@
         \begin{proposicao}
             \begin{enumerate}[label={\roman*})]
                 \conti
-                \item $A - A = 0_{p \times q}$\pause
-                \item $(\alpha\lambda) A = \alpha(\lambda A) \pause = \lambda(\alpha A)$\pause
-                \item $(\alpha + \lambda)A = \pause \alpha A + \lambda A$
+                \item $A - A = 0_{p \times q}$
+                \item $(\alpha\lambda) A = \alpha(\lambda A)  = \lambda(\alpha A)$
+                \item $(\alpha + \lambda)A =  \alpha A + \lambda A$
                 \seti
             \end{enumerate}
         \end{proposicao}
@@ -68,20 +68,20 @@
         \begin{proposicao}
             \begin{enumerate}[label={\roman*})]
                 \conti
-                \item $\alpha(A + B) = \pause \alpha A + \alpha B$\pause
-                \item $1A = A$ e $(-1)A = -A$\pause
+                \item $\alpha(A + B) =  \alpha A + \alpha B$
+                \item $1A = A$ e $(-1)A = -A$
                 \item  $0A = 0_{p \times q}$
             \end{enumerate}
         \end{proposicao}
     \end{frame}
 
     \begin{frame}
-        Para o produto de matrizes vamos admitir as seguintes propriedades como verdadeiras:\pause
+        Para o produto de matrizes vamos admitir as seguintes propriedades como verdadeiras:
         \begin{proposicao}
-            Sejam $A$, $B$ e $C$ \pause matrizes de ordens tais que as operações a seguir estejam definidas. Então:\pause
+            Sejam $A$, $B$ e $C$  matrizes de ordens tais que as operações a seguir estejam definidas. Então:
                 \begin{enumerate}[label={\roman*})]
-                    \item $(A\cdot B)\cdot C = A\cdot(B \cdot C)$\pause
-                    \item $(A + B)\cdot C = (A\cdot C) + (B\cdot C)$\pause
+                    \item $(A\cdot B)\cdot C = A\cdot(B \cdot C)$
+                    \item $(A + B)\cdot C = (A\cdot C) + (B\cdot C)$
                     \item $C\cdot(A + B) = (C\cdot A) + (C\cdot B)$
                     \seti
                 \end{enumerate}
@@ -92,9 +92,9 @@
         \begin{proposicao}
             \begin{enumerate}[label={\roman*})]
                 \conti
-                \item $\alpha(A\cdot B) = \pause (\alpha A)\cdot B \pause = A \cdot(\alpha B)$\pause
-                \item Se $A$ é uma matriz quadrada de ordem $n$, \pause então \[A\cdot I_n = A = I_n\cdot A,\] \pause onde $I_n$ é a matriz quadrada de ordem $n$ \pause onde todas as entradas da diagonal principal são 1 \pause e as demais são zero.\pause
-                \item Se $A$ é uma matriz quadrada de ordem $n$, \pause então \[A\cdot0_n = 0_n \pause = 0_n\cdot A.\]
+                \item $\alpha(A\cdot B) =  (\alpha A)\cdot B  = A \cdot(\alpha B)$
+                \item Se $A$ é uma matriz quadrada de ordem $n$,  então \[A\cdot I_n = A = I_n\cdot A,\]  onde $I_n$ é a matriz quadrada de ordem $n$  onde todas as entradas da diagonal principal são 1  e as demais são zero.
+                \item Se $A$ é uma matriz quadrada de ordem $n$,  então \[A\cdot0_n = 0_n  = 0_n\cdot A.\]
             \end{enumerate}
         \end{proposicao}
     \end{frame}
