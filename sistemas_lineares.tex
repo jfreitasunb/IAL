@@ -37,7 +37,7 @@ e é chamada de uma \textbf{equação linear homogênea}\index{Sistema linear!eq
     \end{enumerate}
 \end{exemplos}
 
-Considerenado $\cp{K} = \real$, queremos analisar um conjunto de equações lineares do tipo:
+Considerando $\cp{K} = \real$, queremos analisar um conjunto de equações lineares do tipo:
 
 \begin{align}
     \begin{cases}\label{sistema_linear_2x2}
@@ -273,7 +273,7 @@ Estas três operações são chamadas de  \textbf{operações elementares}.
                 \end{cases}
             \]
             e a segunda equação desse sistema é uma contradição. Logo não existem valores para $x$ e $y$ em $\real$ que satisfazem as duas equações desse sistema simultaneamente. Portanto tal sistema é um \textbf{sistema impossível}.
-                    \item Denote as linhas desse sistema por $L_1$, $L_2$ e $L_3$. Começamos trocando a linha 2, $L_2$, por ela mesma somanda com -2 vezes a linha 1, $L_1$. Denotemos essa operação por $L_2 \to L_2 - 2L_1$. Com essa operação obtemos o sistema
+                    \item Denote as linhas desse sistema por $L_1$, $L_2$ e $L_3$. Começamos trocando a linha 2, $L_2$, por ela mesma somada com -2 vezes a linha 1, $L_1$. Denotemos essa operação por $L_2 \to L_2 - 2L_1$. Com essa operação obtemos o sistema
                         \[
                             \begin{cases}
                                 x + y + 2z = 9\\
@@ -342,7 +342,7 @@ Estas três operações são chamadas de  \textbf{operações elementares}.
     \end{solucao}
 \end{exemplos}
 
-Observe nos exemplos anteriores que a aplicação das operações elementares afeta somente os coeficientes das variáveis e os termos independentes. As variáveis do sistema permanecem inalteradas durante todo o processo. Assim não precisamos ficar repetindo as variáveis o tempo todo. Podemos tratar somente com seus coeficientes e os termos independetes do sistema.
+Observe nos exemplos anteriores que a aplicação das operações elementares afeta somente os coeficientes das variáveis e os termos independentes. As variáveis do sistema permanecem inalteradas durante todo o processo. Assim não precisamos ficar repetindo as variáveis o tempo todo. Podemos tratar somente com seus coeficientes e os termos independentes do sistema.
 
 A partir dessa observação, podemos associar ao sistema \eqref{sistema_linear_geral} uma matriz contendo os coeficientes de cada equação junto com seus respectivos termos independentes. Obtemos assim a matriz
 \[
@@ -688,9 +688,9 @@ O que iremos fazer para resolver um sistema linear do tipo \eqref{sistema_linear
     Se as matrizes ampliadas de dois sistemas lineares são equivalentes por linhas, então os dois sistemas possuem as mesmas soluções.
 \end{teorema}
 
-O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gauss} ou \textbf{método de eleminação gaussiana}\index{Método!de eliminação gaussiana} consiste em substituir um dado sistema de equações lineares  por outro \textbf{equivalente}, que seja mais simples de ser solucionado e que tenha a mesma solução do sistema original.
+O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gauss} ou \textbf{método de eliminação gaussiana}\index{Método!de eliminação gaussiana} consiste em substituir um dado sistema de equações lineares  por outro \textbf{equivalente}, que seja mais simples de ser solucionado e que tenha a mesma solução do sistema original.
 
-\begin{definicao}[Método de eliminaçao de Gauss]
+\begin{definicao}[Método de eliminação de Gauss]
     Seja $A$ a matriz ampliada de um sistema linear. O método de \textbf{eliminação de Gauss} consiste em:
     \begin{enumerate}[label={\roman*})]
         \item Escreva a matriz ampliada do sistema de equações lineares.
@@ -702,7 +702,7 @@ O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gau
 \end{definicao}
 
 \begin{observacao}
-    No momento de aplicar o passo 2 do método de eliminação de Guass, temos várias escolhas que podemos fazer. Algumas dicas para a escolha da operação são as seguintes:
+    No momento de aplicar o passo 2 do método de eliminação de Gauss, temos várias escolhas que podemos fazer. Algumas dicas para a escolha da operação são as seguintes:
     \begin{enumerate}[label=({\alph*})]
         \item Localize a coluna mais à esquerda que não é toda formada por zeros.
 
@@ -1067,7 +1067,7 @@ Durante a aplicação do \textbf{método de eliminação de Gauss}, paramos quan
 Todavia podemos continuar aplicando operações elementares até que a matriz atinja a forma escalonada reduzida por linhas. Esse é o caso do
 \textbf{método de Gaus-Jordan}.
 
-\begin{definicao}[Método de eliminaçao de Gauss-Jordan]
+\begin{definicao}[Método de eliminação de Gauss-Jordan]
     O método de \textbf{eliminação de Gauss-Jordan}\index{Método!de eliminação de Gauss-Jordan}, para solução de um sistema linear, consiste em:
     \begin{enumerate}[label={\roman*})]
         \item Escreva a matriz ampliada do sistema de equações lineares.
@@ -1079,7 +1079,7 @@ Todavia podemos continuar aplicando operações elementares até que a matriz at
     \end{enumerate}
 \end{definicao}
 \begin{exemplo}
-    Resolva os seguintes sistemas usando o método de Guass-Jordan. Encontre o posto e o número de variáveis livres:
+    Resolva os seguintes sistemas usando o método de Gauss-Jordan. Encontre o posto e o número de variáveis livres:
     \begin{enumerate}
         \item $\begin{cases}
                 x_1 + 2x_2 - x_3 = 9\\
@@ -1104,7 +1104,7 @@ Todavia podemos continuar aplicando operações elementares até que a matriz at
                         4 & -1 & 1 & 4
                     \end{amatrix}
                 \]
-                Aplicando ométodo de Guass-Jordan à essa matriz:
+                Aplicando o método de Gauss-Jordan à essa matriz:
                 \begin{align*}
                 &\begin{amatrix}{3}
                     1 & 2 & -1 & 9\\
@@ -1180,7 +1180,7 @@ Todavia podemos continuar aplicando operações elementares até que a matriz at
                         1 & 1 & 0 & 1 & 0
                     \end{amatrix}.
                 \]
-            Como a última coluna dessa matriz é nula podemos omití-la na hora de aplicar o método de Gauss-Jordan.
+            Como a última coluna dessa matriz é nula podemos omiti-la na hora de aplicar o método de Gauss-Jordan.
             \begin{align*}
                 &\begin{pmatrix}
                     1 &\phantom{-} 1 &\phantom{-} 2 & 1\\
@@ -1368,7 +1368,7 @@ Todavia podemos continuar aplicando operações elementares até que a matriz at
 
 \begin{teorema}
     Seja $A$ uma matriz quadrada de ordem $n$.
-    \begin{enumerate}[label={\roman*})]
+    \begin{enumerate}[isabel={\roman*})]
         \item Se $B$ for uma matriz quadrada satisfazendo $BA = I_n$, então $B = A^{-1}$.
         \item Se $B$ for uma matriz quadrada satisfazendo $AB = I_n$, então $B = A^{-1}$.
     \end{enumerate}
@@ -1376,7 +1376,7 @@ Todavia podemos continuar aplicando operações elementares até que a matriz at
 
 \begin{proposicao}
     Seja $A$ uma matriz invertível e $n$ um número inteiro não negativo. Então:
-    \begin{enumerate}[label={\roman*})]
+    \begin{enumerate}[isabel={\roman*})]
         \item $A^{-1}$ é invertível e $(A^{-1})^{-1} = A$.
 
         \item $A^n$ é invertível e $(A^n)^{-1} = A^{-n} = (A^{-1})^n$.
@@ -1386,7 +1386,7 @@ Todavia podemos continuar aplicando operações elementares até que a matriz at
 \end{proposicao}
 
 Agora temos duas questões para responder:
-\begin{enumerate}[label={\arabic*})]
+\begin{enumerate}[isabel={\arabic*})]
     \item Seja $A$ uma matriz quadrada de ordem $n$. Como podemos encontrar a inversa de $A$, se existir.
 
     \item Dada uma matriz $A$, como podemos decidir se $A$ é invertível?
@@ -1408,7 +1408,7 @@ Suponha então que
         x & y\\z & t
     \end{pmatrix}.
 \]
-Vamos tentar encontrar $B$ de modo que $AB = I_2$. Para isso vamos desenvolder esse produto e igualar as matrizes:
+Vamos tentar encontrar $B$ de modo que $AB = I_2$. Para isso vamos desenvolver esse produto e igualar as matrizes:
 \begin{align*}
     AB &= I_2\\
     \begin{pmatrix}1 & 2\\1 & 3\end{pmatrix}\begin{pmatrix}x & y\\z & t\end{pmatrix} &= \begin{pmatrix}1 & 0\\0 & 1\end{pmatrix}\\
@@ -1428,7 +1428,7 @@ Que produz os seguintes sistemas lineares:
 \end{align}
 Assim precisamos resolver esses dois sistemas para encontrar a matriz $B$.
 
-Aplicando o método de eliminação de Gauss-Jordan no sistema \eqref{primeirosistema}:
+Aplicando o método de eliminação de Gauss-Jordan no sistema \eqref{primeiro sistema}:
 \begin{align*}
     \begin{amatrix}{2}
         1 & 2 & 1\\
@@ -1449,9 +1449,9 @@ Aplicando o método de eliminação de Gauss-Jordan no sistema \eqref{primeirosi
         0 & 1 & -1
     \end{amatrix}.
 \end{align*}
-Nesse caso o sistema \eqref{primeirosistema} é um sistema possível e determinado com solução dada por $x = 3$ e $z = -1$.
+Nesse caso o sistema \eqref{primeiro sistema} é um sistema possível e determinado com solução dada por $x = 3$ e $z = -1$.
 
-Agora, usando o método de Gauss-Jordan no sistema \eqref{segundosistema}:
+Agora, usando o método de Gauss-Jordan no sistema \eqref{segundo sistema}:
 \begin{align*}
     \begin{amatrix}{2}
         1 & 2 & 0\\
@@ -1473,7 +1473,7 @@ Agora, usando o método de Gauss-Jordan no sistema \eqref{segundosistema}:
     \end{amatrix}.
 \end{align*}
 
-Nesse caso o sistema \eqref{segundosistema} é um sistema possível e determinado com solução dada por $y = -2$ e $t = 1$.
+Nesse caso o sistema \eqref{segundo sistema} é um sistema possível e determinado com solução dada por $y = -2$ e $t = 1$.
 
 Logo
 \[
@@ -1484,7 +1484,7 @@ Logo
 \]
 e $AB = I_2 = BA$. Portanto, $A$ é invertível e $A^{-1} = B$.
 
-Observe que na hora de resolver o sistema \eqref{segundosistema}, a matriz de coeficientes é a mesma e também  aplicamos as mesmas operações elementares. Poderíamos ter resolvido os dois sistemas simultaneamente considere a matriz ampliada dos dois sistemas. Nesse caso montamos a matriz
+Observe que na hora de resolver o sistema \eqref{segundo sistema}, a matriz de coeficientes é a mesma e também  aplicamos as mesmas operações elementares. Poderíamos ter resolvido os dois sistemas simultaneamente considere a matriz ampliada dos dois sistemas. Nesse caso montamos a matriz
 \[
     \left[\begin{array}{cc|cc}
         1 & 2 & 1 & 0\\
@@ -1508,7 +1508,7 @@ e aplicamos operações elementares nessa matriz até o que o lado esquerdo dela
     \]
     Encontre a matriz inversa de $A$.
     \begin{solucao}
-        Começamos construindo a matriz amplicada $[A|I_3]$:
+        Começamos construindo a matriz ampliada $[A|I_3]$:
         \[
             \left[\begin{array}{ccc|ccc}
             -2 & 3 & -1 & 1 & 0 & 0\\
@@ -1836,7 +1836,7 @@ Vamos escrever simplesmente
 
 \begin{teorema}
     Se $A$ é uma matriz $n \times n$, então as seguintes afirmações são equivalentes, ou seja, são todas verdadeiras ou todas falsas:
-    \begin{enumerate}[label={\roman*})]
+    \begin{enumerate}[isabel={\roman*})]
         \item $A$ é invertível.
         \item $Ax = 0$ tem somente a solução trivial.
         \item A forma escalonada reduzida por linhas de $A$ é $I_n$.
@@ -1851,7 +1851,7 @@ Vamos escrever simplesmente
 Para mais aplicações e exemplos veja \cite{Poole:2016,Anton:2012}.
 \subsection{Análise de Redes}
 
-Redes aparecem em várias situações práticas: redes de transporte, redes de comunicação e redes econômicas, entre outros. Para nós, uma \textbf{rede} consiste em um número finito de \textbf{nós}, também chamdados \textbf{junções} ou \textbf{vértices}, conectados por uma série de segmentos dirigidos, conhecidos como \textbf{ramos} ou \textbf{arcos}. Cada ramo é rotulado com um \textbf{fluxo} que representa a quantidade de alguma mercadoria  que pode fluir ao longo ou através daquele ramo na direção indicada.
+Redes aparecem em várias situações práticas: redes de transporte, redes de comunicação e redes econômicas, entre outros. Para nós, uma \textbf{rede} consiste em um número finito de \textbf{nós}, também chamados \textbf{junções} ou \textbf{vértices}, conectados por uma série de segmentos dirigidos, conhecidos como \textbf{ramos} ou \textbf{arcos}. Cada ramo é rotulado com um \textbf{fluxo} que representa a quantidade de alguma mercadoria  que pode fluir ao longo ou através daquele ramo na direção indicada.
 
 A regra fundamental que governa o fluxo através de uma rede é a \textbf{conservação de fluxo}:
 
@@ -1910,7 +1910,7 @@ Neste caso aplicando a conservação de fluxo, devemos ter:
     Portanto esse sistema é um sistema possível e indeterminado. Como estamos considerando um fluxo de água, seu valor não pode ser negativo. Assim da segunda equação, $f_2 = 5 - t$ vemos que $0 \le t \le 5$. Mesmo com essa restrição no valor de $t$ o sistema ainda continua possuindo infinitas soluções.
 \end{exemplo}
 
-\subsection{Circuitos Élétricos}
+\subsection{Circuitos Elétricos}
 
 Circuitos elétricos formam um tipo especializado de rede com informações sobre fontes de energia, tais como baterias, e dispositivos alimentados por essas fontes, tais como lâmpadas ou motores.
 
@@ -1937,7 +1937,7 @@ Resistores são representados por
     \end{tikzpicture}
 \end{center}
 
-As duas leis a seguir, descobertas por Kirchhoff, regem os circuitos elétricos. A primeira é uma lei de ``converservação de fluxo'' em cada nó:
+As duas leis a seguir, descobertas por Kirchhoff, regem os circuitos elétricos. A primeira é uma lei de ``conservação de fluxo'' em cada nó:
 
 \begin{tcolorbox}[colback=green!30, colframe=green!80!blue, title=Lei da Corrente (nós)]
     \textit{A soma das correntes que entram em qualquer nó é igual à soma das correntes que saem dele.}
@@ -1957,7 +1957,7 @@ Para o caso de um diagrama como mostrado na figura \ref{correntedividindo} a apl
     \label{correntedividindo}
 \end{figure}
 
-Já para um circutio como mostrado na figura \ref{circuitocomumrsistor}, basta usar a lei de Ohm para determinar a queda na corrente que passa pelo resistor. Assim $4I = 10$.
+Já para um circuito como mostrado na figura \ref{circuitocomumrsistor}, basta usar a lei de Ohm para determinar a queda na corrente que passa pelo resistor. Assim $4I = 10$.
 \begin{figure}[!h]
     \centering
     \input{diagramas_aplicacoes/diagrama_circuito_um_resistor.tex}
@@ -1987,7 +1987,7 @@ Já para um circutio como mostrado na figura \ref{circuitocomumrsistor}, basta u
     \end{enumerate}
     \begin{solucao}
         \begin{enumerate}
-            \item Esse circuito tem duas baterias e quatro resistores. Começamos pelo ramo superior desse circuito, $BCA$. Para esse ramo temos somente a corrente $I_1$ fluindo.  Já para o ramo central, $AB$, temos a corrente $I_2$ fluindo por esse ramo. Finalmente, para o ramo inferiro, $BDA$, há a presença da corrente $I_3$.
+            \item Esse circuito tem duas baterias e quatro resistores. Começamos pelo ramo superior desse circuito, $BCA$. Para esse ramo temos somente a corrente $I_1$ fluindo.  Já para o ramo central, $AB$, temos a corrente $I_2$ fluindo por esse ramo. Finalmente, para o ramo inferior, $BDA$, há a presença da corrente $I_3$.
 
             Aplicando a lei da corrente para o nó $A$ obtemos a equação $I_1 + I_3 = I_2$. (Que será a mesma equação no nó $B$.) Tal equação pode ser escrita como
             \[
@@ -2004,7 +2004,7 @@ Já para um circutio como mostrado na figura \ref{circuitocomumrsistor}, basta u
                 4I_3 + I_2 = 16.
             \end{equation}
 
-            Poderíamos ainda percorrer o circuito $CADBC$. Mas nesse caso, estaríamos ``andando contra o fluxo''. Com isso tratarímos as voltagens e correntes com sinal negativo. Com isso, obteríamos as equações $2I_1 + 2I_1 - 4I_3 = 8 - 16 = -8$. Assim $4I_1 - 4I_3 = -8$, que é justamente a diferença das equações \eqref{equacaocircuitoCABC} e \eqref{equacaocircuitoDABD}. Se incluímos essa equação no sistema linear ela será anulada durante a aplicação do método de Gauss-Jordan, assim podemos ignorá-la.
+            Poderíamos ainda percorrer o circuito $CADBC$. Mas nesse caso, estaríamos ``andando contra o fluxo''. Com isso trataríamos as voltagens e correntes com sinal negativo. Com isso, obteríamos as equações $2I_1 + 2I_1 - 4I_3 = 8 - 16 = -8$. Assim $4I_1 - 4I_3 = -8$, que é justamente a diferença das equações \eqref{equacaocircuitoCABC} e \eqref{equacaocircuitoDABD}. Se incluímos essa equação no sistema linear ela será anulada durante a aplicação do método de Gauss-Jordan, assim podemos ignorá-la.
 
             Com isso temos o seguinte sistema linear:
             \[
