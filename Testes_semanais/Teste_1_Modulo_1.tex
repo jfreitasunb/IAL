@@ -1,33 +1,42 @@
 %!TEX program = xelatex
-% !TEX encoding = ISO-8859-1
-\usepackage{caption}
-\usepackage{amssymb}
-\usepackage{amsmath,amsfonts,amsthm,amstext}
-\usepackage[utf8]{inputenc} % Required for inputting international characters
-\usepackage[T1]{fontenc}
-\usepackage[brazil]{babel}
-\usepackage{graphicx}
-\usepackage{enumitem}
-\usepackage{multicol}
-\usepackage{answers}
-\usepackage[svgnames]{xcolor}
-\usepackage{tikz}
-\usepackage{ifthen}
-\usetikzlibrary{lindenmayersystems}
-\usetikzlibrary[shadings]
-\usepackage{tikz-3dplot}
-\usepackage{tcolorbox}
+%!TEX encoding = UTF-8
+%Defini\c{c}\~oes de Ano, Semestre, n\'umero e data da avalia\c{c}\~ao
+\def\numeroteste{1}
+\def\modulo{1}
+\def\dataavaliacao{27/04/2023}
 
 \documentclass[12pt]{exam}
 
+\include{configuracoes_testes/pacotes}
+\include{configuracoes_testes/comandos_personalizados}
+\include{configuracoes_testes/ambientes}
 
 \begin{document}
-    Considere o seguinte sistema linear:
-    \[
-        \begin{cases}
-            -2x_1 + 5x_2 - 10x_3 = 4\\
-            x_1 - 2x_2 + 3x_3 = -1\\
-            7x_1 - 17x_2 + 34x_3 = -16
-        \end{cases}
-    \]
+
+    \begin{figure}[h]
+        \begin{minipage}[c]{1.7cm}
+            \includegraphics[width=1.7cm]{unb.pdf}
+        \end{minipage}
+        \hspace{0pt}
+        \begin{minipage}[c]{4in}
+            {Universidade de Bras{\'\i}lia} \\
+            {Departamento de Matem{\'a}tica}
+        \end{minipage}
+    \end{figure}
+    \vesp{-1}
+    \hrule
+    \begin{center}
+        {\Large\bf \disciplina\ - Turma \turma}  \\
+        \vesp{0.2} {\large\bf Teste \numeroteste\ - Módulo\ \modulo\ -\ \dataavaliacao}
+    \end{center}
+
+    \noindent{\bf \underline{Nome: \hspace{9.8cm} Mat.:\qquad \
+            \hspace{2.1cm}}}\\
+    \vspace*{.01cm}
+
+    \noindent{\bf \underline{Nome: \hspace{9.8cm} Mat.:\qquad \
+            \hspace{2.1cm}}}
+    \vspace{.4cm}
+
+    \questao{}
 \end{document}
