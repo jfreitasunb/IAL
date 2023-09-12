@@ -5,7 +5,7 @@
 Ao longo de todo esse capítulo o conjunto $\cp{K}$ será considerado como sendo um dos conjuntos: $\rac$, $\real$ ou $\complex$.
 
 \section{Sistemas Lineares}\label{ssub:sistemas_lineares}
-Vamos trabalhar com \textbf{equaç\~oes lineares}\index{Sistema linear!equação linear} em $n$ variáveis $x_1$, $x_2$, \dots, $x_n$ que são equaç\~oes que podem ser escritas na forma
+Vamos trabalhar com \textbf{equações lineares}\index{Sistema linear!equação linear} em $n$ variáveis $x_1$, $x_2$, \dots, $x_n$ que são equações que podem ser escritas na forma
 \begin{equation}\label{equacao_linear}
     a_1x_1  + a_2x_2 +  \cdots + a_qx_q  = b,
 \end{equation}
@@ -15,29 +15,29 @@ No caso em que $b = 0$,  a equação \eqref{equacao_linear} tem a forma
 \begin{equation}
     a_1x_1 + a_2x_2 + \cdots + a_qx_q = 0
 \end{equation}
-e é chamada de uma \textbf{equação linear homog\^enea}\index{Sistema linear!equação linear homog\^enea}.
+e é chamada de uma \textbf{equação linear homogênea}\index{Sistema linear!equação linear homogênea}.
 
 \begin{exemplos}
     \begin{enumerate}[label={\arabic*})]
-        \item Equaç\~oes da forma
+        \item Equações da forma
             \begin{enumerate}
                 \item $x_1 + 2x_2 - 3x_3 = 10$, em $\cp{K} = \rac$
                 \item $2x_1 + 0x_2 + \sqrt{2}x_3 - 4x_4 = 0$, em $\cp{K} = \real$, que será escrita como $2x_1 + 0x_2 + \sqrt{2}x_3 - 4x_4 = 0$
                 \item $ix_1 + (2 +i)x_2 = 3 + 2i$, em $\cp{K} = \complex$
             \end{enumerate}
-        são exemplos de \textbf{equaç\~oes lineares}.
+        são exemplos de \textbf{equações lineares}.
 
-        \item Já equaç\~oes na forma
+        \item Já equações na forma
             \begin{enumerate}
                 \item $x_1^2 + 2x_2 - 3x_3 = 0$ em $\cp{K} = \real$
                 \item $x_1 + 2\sin(x_2) + 3x_3 + x_ 4 = 1$ em $\cp{K} = \real$
                 \item $2x_1 + 3x_2 - 4x_3^{-1} = 2$ em $\cp{K} = \rac$
             \end{enumerate}
-        não são equaç\~oes lineares e portanto não serão abordadas nesse curso.
+        não são equações lineares e portanto não serão abordadas nesse curso.
     \end{enumerate}
 \end{exemplos}
 
-Considerenado $\cp{K} = \real$, queremos analisar um conjuto de equaç\~oes lineares do tipo:
+Considerenado $\cp{K} = \real$, queremos analisar um conjuto de equações lineares do tipo:
 
 \begin{align}
     \begin{cases}\label{sistema_linear_2x2}
@@ -47,13 +47,13 @@ Considerenado $\cp{K} = \real$, queremos analisar um conjuto de equaç\~oes line
 \end{align}
 onde $a$, $b$, $c$, $d$, $b_1$, $b_2 \in \cp{K}$.
 
-Queremos saber se é possível encontrar valores para $x$, $y$ no conjunto $\real$ de modo que essas duas equaç\~oes sejam simultaneamente verdadeiras? Caso existam, gostaríamos de determinar todos os possíveis valores que $x$ e $y$ podem assumir.
+Queremos saber se é possível encontrar valores para $x$, $y$ no conjunto $\real$ de modo que essas duas equações sejam simultaneamente verdadeiras? Caso existam, gostaríamos de determinar todos os possíveis valores que $x$ e $y$ podem assumir.
 
 Observe que cada equação linear em \eqref{sistema_linear_2x2} representa uma reta no plano cartesiano. Assim queremos determinar se essas restas possuem alguma interseção.
 
 Mas sabemos que duas retas no plano podem ser coincidentes, paralelas ou se interceptam em um único ponto.
 
-Assim se as retas do sistema \eqref{sistema_linear_2x2} são \textbf{coincidentes}, existem infinitos valores de $x$, $y \in \cp{K}$ que satisfazem as duas equaç\~oes simultanemente. Neste caso dizemos que o sistema \eqref{sistema_linear_2x2} é \textbf{possível e indeterminado}.
+Assim se as retas do sistema \eqref{sistema_linear_2x2} são \textbf{coincidentes}, existem infinitos valores de $x$, $y \in \cp{K}$ que satisfazem as duas equações simultanemente. Neste caso dizemos que o sistema \eqref{sistema_linear_2x2} é \textbf{possível e indeterminado}.
 
 \definecolor{qqqqff}{rgb}{0,0,1}
 \definecolor{ffqqqq}{rgb}{1,0,0}
@@ -80,7 +80,7 @@ Assim se as retas do sistema \eqref{sistema_linear_2x2} são \textbf{coincidente
     \end{tikzpicture}
 \end{center}
 
-Agora se as retas em \eqref{sistema_linear_2x2} são \textbf{paralelas}, não existem valores de $x$, $y \in \cp{K}$ satisfazendo as duas equaç\~oes simultaneamente. Nesse caso dizemos que o sistema \eqref{sistema_linear_2x2} é \textbf{impossível}.
+Agora se as retas em \eqref{sistema_linear_2x2} são \textbf{paralelas}, não existem valores de $x$, $y \in \cp{K}$ satisfazendo as duas equações simultaneamente. Nesse caso dizemos que o sistema \eqref{sistema_linear_2x2} é \textbf{impossível}.
 
 \definecolor{ffqqqq}{rgb}{1,0,0}
 \definecolor{qqqqff}{rgb}{0,0,1}
@@ -107,7 +107,7 @@ Agora se as retas em \eqref{sistema_linear_2x2} são \textbf{paralelas}, não ex
     \end{tikzpicture}
 \end{center}
 
-Por fim, as retas em \eqref{sistema_linear_2x2} podem se \textbf{interceptar}. Nesse caso existe um único conjunto de valores $x = \alpha \in \cp{K}$ e $y = \lambda \in \cp{K}$ que satisfaz as duas equaç\~oes simultaneamente. Neste caso dizemos que o sistema \eqref{sistema_linear_2x2} é \textbf{possível e determinado}.
+Por fim, as retas em \eqref{sistema_linear_2x2} podem se \textbf{interceptar}. Nesse caso existe um único conjunto de valores $x = \alpha \in \cp{K}$ e $y = \lambda \in \cp{K}$ que satisfaz as duas equações simultaneamente. Neste caso dizemos que o sistema \eqref{sistema_linear_2x2} é \textbf{possível e determinado}.
 
 \definecolor{qqqqff}{rgb}{0,0,1}
 \definecolor{ffqqqq}{rgb}{1,0,0}
@@ -144,37 +144,37 @@ Esse mesmo tipo de análise pode ser aplicada num sistema da forma
 \end{align}
 onde $a_i \in \cp{K}$ para $1 \le i \le 9$ e $b_j \in \cp{K}$ para $1 \le j \le 3$.
 
-Neste caso as equaç\~oes desse sistema representam planos no espaço tridimensional. Nesse sistema então queremos saber quais são as possíveis interseç\~oes entre estes tr\^es planos.
+Neste caso as equações desse sistema representam planos no espaço tridimensional. Nesse sistema então queremos saber quais são as possíveis interseções entre estes três planos.
 
 Temos então as seguintes possibilidades:
 
 \begin{enumerate}
-    \item Os tr\^es planos se interceptam em um único ponto. Assim existe um único conjunto de valores $x = \alpha \in \cp{K}$, $y = \lambda \in \cp{K}$ e $z = \gamma \in \cp{K}$  que satisfaz as tr\^es equaç\~oes simultaneamente.  Neste caso dizemos que o sistema \eqref{sistema_linear_3x3}  é \textbf{possível e determinado}.
+    \item Os três planos se interceptam em um único ponto. Assim existe um único conjunto de valores $x = \alpha \in \cp{K}$, $y = \lambda \in \cp{K}$ e $z = \gamma \in \cp{K}$  que satisfaz as três equações simultaneamente.  Neste caso dizemos que o sistema \eqref{sistema_linear_3x3}  é \textbf{possível e determinado}.
         \begin{figure}[h]
             \centering
             \includegraphics[scale=0.6]{3-planos-solucao-unica.pdf}
                 \caption{Solução única}
         \end{figure}
-    \item Os tr\^es planos se interceptam em infinitos pontos. Existem infinitos valores de $x$, $y$, $z \in \cp{K}$ que satisfazem as tr\^es equaç\~oes simultanemente. Neste caso dizemos que o sistema \eqref{sistema_linear_3x3} é \textbf{possível e indeterminado}.
+    \item Os três planos se interceptam em infinitos pontos. Existem infinitos valores de $x$, $y$, $z \in \cp{K}$ que satisfazem as três equações simultanemente. Neste caso dizemos que o sistema \eqref{sistema_linear_3x3} é \textbf{possível e indeterminado}.
         \begin{figure}[h]
             \centering
             \begin{subfigure}{.32\textwidth}
                 \centering
                 \includegraphics[width=\linewidth]{2-planos-coincidentes-infinitas-solucoes-intersecao-reta.pdf}
-                \caption{Infinitas soluç\~oes}
+                \caption{Infinitas soluções}
             \end{subfigure}
             \begin{subfigure}{.32\textwidth}
                 \centering
                 \includegraphics[width=\linewidth]{3-planos-coincidentes-infinitas-solucoes.pdf}
-                \caption{Infinitas soluç\~oes}
+                \caption{Infinitas soluções}
             \end{subfigure}
             \begin{subfigure}{.32\textwidth}
                 \centering
                 \includegraphics[width=\linewidth]{2-planos-coincidentes-terceiro-fora-infinitas-solucoes-intersecao-reta.pdf}
-                \caption{Infinitas soluç\~oes}
+                \caption{Infinitas soluções}
             \end{subfigure}
         \end{figure}
-    \item Os tr\^es planos não possuem uma interseção em comum. Neste caso não existem valores de $x$, $y$, $z \in \cp{K}$  satisfazendo as tr\^es equaç\~oes simultaneamente. Assim dizemos que o sistema \eqref{sistema_linear_3x3}  é \textbf{impossível}.
+    \item Os três planos não possuem uma interseção em comum. Neste caso não existem valores de $x$, $y$, $z \in \cp{K}$  satisfazendo as três equações simultaneamente. Assim dizemos que o sistema \eqref{sistema_linear_3x3}  é \textbf{impossível}.
         \begin{figure}[h]
             \centering
             \begin{subfigure}{.32\textwidth}
@@ -195,9 +195,9 @@ Temos então as seguintes possibilidades:
         \end{figure}
 \end{enumerate}
 
-Agora, de modo geral queremos trabalhar com uma quantidade qualquer de equaç\~oes. Para isso começamos escolhendo escalares $b_1$, \dots, $b_m$  e $a_{ij}$,  $1 \le i \le m$, $1 \le j \le n$ todos em $\cp{K}$.
+Agora, de modo geral queremos trabalhar com uma quantidade qualquer de equações. Para isso começamos escolhendo escalares $b_1$, \dots, $b_m$  e $a_{ij}$,  $1 \le i \le m$, $1 \le j \le n$ todos em $\cp{K}$.
 
-Queremos saber se é possível encontrar valores para  $x_1$, $x_2$, \dots, $x_n$  de modo que o seguinte conjunto de equaç\~oes sejam válidas:
+Queremos saber se é possível encontrar valores para  $x_1$, $x_2$, \dots, $x_n$  de modo que o seguinte conjunto de equações sejam válidas:
 \begin{equation}\label{sistema_linear_geral}
 \begin{cases}
         a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1\\
@@ -207,7 +207,7 @@ Queremos saber se é possível encontrar valores para  $x_1$, $x_2$, \dots, $x_n
     \end{cases}
 \end{equation}
 
-O conjunto de equaç\~oes em \eqref{sistema_linear_geral} é chamado de um  \textbf{sistema de $m$ equaç\~oes lineares  a $n$ inc\'ognitas}\index{Sistema linear} $x_1$, $x_2$, \dots, $x_n$ , ou simplesmente de um \textbf{sistema linear}, nas inc\'ognitas  $x_1$, $x_2$, \dots, $x_n$.
+O conjunto de equações em \eqref{sistema_linear_geral} é chamado de um  \textbf{sistema de $m$ equações lineares  a $n$ inc\'ognitas}\index{Sistema linear} $x_1$, $x_2$, \dots, $x_n$ , ou simplesmente de um \textbf{sistema linear}, nas inc\'ognitas  $x_1$, $x_2$, \dots, $x_n$.
 
 Uma solução de um sistema linear do tipo \eqref{sistema_linear_geral}
 \[
@@ -217,7 +217,7 @@ onde $\alpha_1$, $\alpha_2$, \dots, $\alpha_n \in \cp{K}$,  pode ser escrita com
 \[
     (\alpha_1, \alpha_2, \dots, \alpha_n)
 \]
-e é chamada de uma \textbf{\^enupla ordenada}\index{Sistema linear!\^enupla ordenada} ou uma \textbf{n-upla ordenada}.
+e é chamada de uma \textbf{ênupla ordenada}\index{Sistema linear!ênupla ordenada} ou uma \textbf{n-upla ordenada}.
 
 
 Se $b_1 = b_2 = \cdots = b_m = 0_\cp{K} \in K$,  dizemos que o sistema
@@ -229,27 +229,27 @@ Se $b_1 = b_2 = \cdots = b_m = 0_\cp{K} \in K$,  dizemos que o sistema
         a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = 0_\cp{K}
     \end{cases}
 \end{equation}
-é um \textbf{sistema linear homog\^eneo}.\index{Sistema linear!homog\^eneo}
+é um \textbf{sistema linear homogêneo}.\index{Sistema linear!homogêneo}
 
 Observe que tal sistema sempre possui solução,  a saber, $x_1 = x_2 = \cdots = x_n = 0_\cp{K}$.
 
 Para o caso de sistemas lineares temos o seguinte resultado:
 
 \begin{teorema}
-    Todo sistema linear do tipo \eqref{sistema_linear_geral} tem zero,  uma  ou uma infinidade de soluç\~oes.  Não existem outras possibilidades.
+    Todo sistema linear do tipo \eqref{sistema_linear_geral} tem zero,  uma  ou uma infinidade de soluções.  Não existem outras possibilidades.
 \end{teorema}
 
-No caso de um sistema linear da forma \eqref{sistema_linear_geral}, o processo para encontrar suas soluç\~oes será feito mediante o uso de 3 tipos de operaç\~oes.  São elas:
+No caso de um sistema linear da forma \eqref{sistema_linear_geral}, o processo para encontrar suas soluções será feito mediante o uso de 3 tipos de operações.  São elas:
 \begin{itemize}
-\item[$e_1$)] Troca da posição de duas equaç\~oes.
+\item[$e_1$)] Troca da posição de duas equações.
 \item[$e_2$)] Multiplicação de uma equação por um escalar não nulo.
 \item[$e_3$)] Substituição de uma equação pela soma desta equação com alguma outra.
 \end{itemize}
 
-Estas tr\^es operaç\~oes são chamadas de  \textbf{operaç\~oes elementares}.
+Estas três operações são chamadas de  \textbf{operações elementares}.
 
 \begin{exemplos}
-    Utilizando somente operaç\~oes elementares encontre as soluç\~oes dos seguintes sistemas lineares:
+    Utilizando somente operações elementares encontre as soluções dos seguintes sistemas lineares:
     \begin{enumerate}[label={\arabic*})]
         \item $\begin{cases}x + y = 4\\3x + 3y = 6\end{cases}$
 
@@ -272,7 +272,7 @@ Estas tr\^es operaç\~oes são chamadas de  \textbf{operaç\~oes elementares}.
                     0 = -6
                 \end{cases}
             \]
-            e a segunda equação desse sistema é uma contradição. Logo não existem valores para $x$ e $y$ em $\real$ que satisfazem as duas equaç\~oes desse sistema simultaneamente. Portanto tal sistema é um \textbf{sistema impossível}.
+            e a segunda equação desse sistema é uma contradição. Logo não existem valores para $x$ e $y$ em $\real$ que satisfazem as duas equações desse sistema simultaneamente. Portanto tal sistema é um \textbf{sistema impossível}.
                     \item Denote as linhas desse sistema por $L_1$, $L_2$ e $L_3$. Começamos trocando a linha 2, $L_2$, por ela mesma somanda com -2 vezes a linha 1, $L_1$. Denotemos essa operação por $L_2 \to L_2 - 2L_1$. Com essa operação obtemos o sistema
                         \[
                             \begin{cases}
@@ -342,7 +342,7 @@ Estas tr\^es operaç\~oes são chamadas de  \textbf{operaç\~oes elementares}.
     \end{solucao}
 \end{exemplos}
 
-Observe nos exemplos anteriores que a aplicação das operaç\~oes elementares afeta somente os coeficientes das variáveis e os termos independentes. As variáveis do sistema permanecem inalteradas durante todo o processo. Assim não precisamos ficar repetindo as variáveis o tempo todo. Podemos tratar somente com seus coeficientes e os termos independetes do sistema.
+Observe nos exemplos anteriores que a aplicação das operações elementares afeta somente os coeficientes das variáveis e os termos independentes. As variáveis do sistema permanecem inalteradas durante todo o processo. Assim não precisamos ficar repetindo as variáveis o tempo todo. Podemos tratar somente com seus coeficientes e os termos independetes do sistema.
 
 A partir dessa observação, podemos associar ao sistema \eqref{sistema_linear_geral} uma matriz contendo os coeficientes de cada equação junto com seus respectivos termos independentes. Obtemos assim a matriz
 \[
@@ -413,7 +413,7 @@ Para destacar que a última coluna dessa matriz contém os termos independentes 
         \end{enumerate}
     \end{solucao}
 \end{exemplos}
-Na forma matricial as operaç\~oes elementares são descritas como:
+Na forma matricial as operações elementares são descritas como:
 
 \vspace{.3cm}
 
@@ -425,23 +425,23 @@ Na forma matricial as operaç\~oes elementares são descritas como:
    \item[$e_3$)] Substituição da $i$-ésima linha de $A$ pela $i$-ésima linha mais $\alpha$ vezes a $j$-ésima linha: $L_i \rightarrow L_i + \alpha L_j$.
 \end{itemize}
 
-O que iremos fazer para resolver um sistema linear do tipo \eqref{sistema_linear_geral} é aplicar operaç\~oes operaç\~oes elementares na linhas da matriz ampliada até que ela esteja num formato especial. Esse formato que buscamos é o seguinte:
+O que iremos fazer para resolver um sistema linear do tipo \eqref{sistema_linear_geral} é aplicar operações operações elementares na linhas da matriz ampliada até que ela esteja num formato especial. Esse formato que buscamos é o seguinte:
 
 \begin{definicao}\label{linhareduzida}
     Uma matriz $A$ $m \times n$ é  dita estar na \textbf{forma escalonada reduzida por linhas} se:
     \begin{enumerate}[label={\roman*})]
-        \item O primeiro elemento não nulo em cada linha não nula de $A$ é $1$. Dizemos que esse número 1 é um \textbf{piv\^o}.
+        \item O primeiro elemento não nulo em cada linha não nula de $A$ é $1$. Dizemos que esse número 1 é um \textbf{pivô}.
 
         \item Toda linha de $A$ cujos elementos são todos nulos ocorre abaixo de todas as linhas que possuem um elemento não-nulo.
 
-        \item Se as linhas 1, 2, \dots, $r$ são as linhas não-nulas de $A$ e se o \textbf{piv\^o} da linha $i$ ocorre na coluna $k_i$, $i = 1$, \dots, $r$, então $k_1 < k_2 < \cdots < k_r$.
+        \item Se as linhas 1, 2, \dots, $r$ são as linhas não-nulas de $A$ e se o \textbf{pivô} da linha $i$ ocorre na coluna $k_i$, $i = 1$, \dots, $r$, então $k_1 < k_2 < \cdots < k_r$.
 
-        \item Cada coluna de $A$ que contém um \textbf{piv\^o} tem todos os seus outros elementos nulos.
+        \item Cada coluna de $A$ que contém um \textbf{pivô} tem todos os seus outros elementos nulos.
     \end{enumerate}
 \end{definicao}
 
 \begin{observacao}
-    Uma matriz que satisfaz as tr\^es primeiras propriedades da definição anterior é dita estar na \textbf{forma escalonada por linhas}, ou simplesmente, em \textbf{forma escalonada}.
+    Uma matriz que satisfaz as três primeiras propriedades da definição anterior é dita estar na \textbf{forma escalonada por linhas}, ou simplesmente, em \textbf{forma escalonada}.
 \end{observacao}
 
 \begin{exemplos}
@@ -487,7 +487,7 @@ O que iremos fazer para resolver um sistema linear do tipo \eqref{sistema_linear
                     0 & 0 & 0 & 0 & 1
                 \end{bmatrix}.
             \end{align*}
-        \item Usando a matriz ampliada e as operaç\~oes elementares sobre as linhas da matriz resolva o seguinte sistema:
+        \item Usando a matriz ampliada e as operações elementares sobre as linhas da matriz resolva o seguinte sistema:
             \[
                 \begin{cases}
                     2x_1 - 4x_2 - x_3 = 1\\
@@ -504,7 +504,7 @@ O que iremos fazer para resolver um sistema linear do tipo \eqref{sistema_linear
                 3 & -5 & -3 & 1
                     \end{amatrix}.
                 \]
-                Vamos aplicar as operaç\~oes elementares nessa matriz:
+                Vamos aplicar as operações elementares nessa matriz:
                 \begin{align*}
                     &\begin{bmatrix}
                         2 & -4 & -1 & 1\\
@@ -586,7 +586,7 @@ O que iremos fazer para resolver um sistema linear do tipo \eqref{sistema_linear
 \end{exemplos}
 
 \begin{definicao}
-    Se $A$ e $B$ são matrizes $m \times n$, dizemos que $B$ é \textbf{linha-equivalente}\index{Matrizes!linha-equivalente} a $A$, se $B$ for obtida de $A$ através de uma quantidade finita de operaç\~oes elementares sobre as linhas de $A$.
+    Se $A$ e $B$ são matrizes $m \times n$, dizemos que $B$ é \textbf{linha-equivalente}\index{Matrizes!linha-equivalente} a $A$, se $B$ for obtida de $A$ através de uma quantidade finita de operações elementares sobre as linhas de $A$.
 \end{definicao}
 
 \begin{notacao}
@@ -626,7 +626,7 @@ O que iremos fazer para resolver um sistema linear do tipo \eqref{sistema_linear
                         0 & 3 & 5 & 1
                     \end{pmatrix}
             \]
-            também são linha-equivalentes. De fato, partindo de $C$ podemos efetuar as seguintes operaç\~oes elementares:
+            também são linha-equivalentes. De fato, partindo de $C$ podemos efetuar as seguintes operações elementares:
             \begin{align*}
                 C &= \begin{pmatrix}
                     1 & 0 & 3 & 0\\
@@ -681,21 +681,21 @@ O que iremos fazer para resolver um sistema linear do tipo \eqref{sistema_linear
     \end{enumerate}
 \end{exemplos}
 \begin{teorema}
-    Duas matrizes $A$ e $B$ são equivalentes por linha se, e somente, se elas puderem ser reduzidas \`a mesma forma escalonada por linhas.
+    Duas matrizes $A$ e $B$ são equivalentes por linha se, e somente, se elas puderem ser reduzidas à mesma forma escalonada por linhas.
 \end{teorema}
 
 \begin{teorema}
-    Se as matrizes ampliadas de dois sistemas lineares são equivalentes por linhas, então os dois sistemas possuem as mesmas soluç\~oes.
+    Se as matrizes ampliadas de dois sistemas lineares são equivalentes por linhas, então os dois sistemas possuem as mesmas soluções.
 \end{teorema}
 
-O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gauss} ou \textbf{método de eleminação gaussiana}\index{Método!de eliminação gaussiana} consiste em substituir um dado sistema de equaç\~oes lineares  por outro \textbf{equivalente}, que seja mais simples de ser solucionado e que tenha a mesma solução do sistema original.
+O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gauss} ou \textbf{método de eleminação gaussiana}\index{Método!de eliminação gaussiana} consiste em substituir um dado sistema de equações lineares  por outro \textbf{equivalente}, que seja mais simples de ser solucionado e que tenha a mesma solução do sistema original.
 
 \begin{definicao}[Método de eliminaçao de Gauss]
     Seja $A$ a matriz ampliada de um sistema linear. O método de \textbf{eliminação de Gauss} consiste em:
     \begin{enumerate}[label={\roman*})]
-        \item Escreva a matriz ampliada do sistema de equaç\~oes lineares.
+        \item Escreva a matriz ampliada do sistema de equações lineares.
 
-        \item Use operaç\~oes elementares nas linhas de $A$ para reduzir a matriz ampliada \`a \textbf{forma escalonada por linhas}.
+        \item Use operações elementares nas linhas de $A$ para reduzir a matriz ampliada à \textbf{forma escalonada por linhas}.
 
         \item Quando a matriz ampliada estiver na forma escalonada, usando substituição de trás para a frente, resolva o sistema equivalente que corresponde a matriz escalonada reduzida por linhas.
     \end{enumerate}
@@ -704,13 +704,13 @@ O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gau
 \begin{observacao}
     No momento de aplicar o passo 2 do método de eliminação de Guass, temos várias escolhas que podemos fazer. Algumas dicas para a escolha da operação são as seguintes:
     \begin{enumerate}[label=({\alph*})]
-        \item Localize a coluna mais \`a esquerda que não é toda formada por zeros.
+        \item Localize a coluna mais à esquerda que não é toda formada por zeros.
 
-        \item Crie um \textbf{piv\^o} no topo desta coluna.
+        \item Crie um \textbf{pivô} no topo desta coluna.
 
-        \item Use o \textbf{piv\^o} para criar zeros abaixo dele.
+        \item Use o \textbf{pivô} para criar zeros abaixo dele.
 
-        \item Faça a linha contendo este \textbf{piv\^o} ir para a parte de cima e volte ao passo (a) para repetir o procedimento com o restante da submatriz. Pare quando toda a matriz estiver na forma escalonada por linhas.
+        \item Faça a linha contendo este \textbf{pivô} ir para a parte de cima e volte ao passo (a) para repetir o procedimento com o restante da submatriz. Pare quando toda a matriz estiver na forma escalonada por linhas.
     \end{enumerate}
 \end{observacao}
 
@@ -741,7 +741,7 @@ O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gau
                 x_1 + 2x_2 + (1 - k)x_3 = k
             \end{cases}
         \]
-        onde $k \in \real$. Isto é, decida para quais valores de $k \in \real$ esse sistema admite solução única, infinitas soluç\~oes e nenhuma solução.
+        onde $k \in \real$. Isto é, decida para quais valores de $k \in \real$ esse sistema admite solução única, infinitas soluções e nenhuma solução.
     \end{enumerate}
     \begin{solucao}
         \begin{enumerate}
@@ -754,7 +754,7 @@ O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gau
                     -1 & -4 & -4 & 2 & -13 & -11 & 22
                 \end{amatrix}
             \]
-            O primeiro passo e colocar um piv\^o na primeira linha. Para isso podemos trocar as linhas 1 e 3 de posição: $L_1 \leftrightarrow L_3$:
+            O primeiro passo e colocar um pivô na primeira linha. Para isso podemos trocar as linhas 1 e 3 de posição: $L_1 \leftrightarrow L_3$:
             \[
                \begin{amatrix}{6}
                     1 & 4 & 3 & -2 & 10 & 9 & -17\\
@@ -790,7 +790,7 @@ O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gau
                     0 & 0 & 0 & 0 & -4 & 4 & -12
                 \end{amatrix}
             \]
-            Multiplicamos a segunda linha por -1 para obter um piv\^o na terceira coluna:
+            Multiplicamos a segunda linha por -1 para obter um pivô na terceira coluna:
             \[
                 \begin{amatrix}{6}
                     1 & 4 & 3 & -2 & 10 & 9 & -17\\
@@ -799,7 +799,7 @@ O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gau
                     0 & 0 & 0 & 0 & -4 & 4 & -12
                 \end{amatrix}
             \]
-            Agora vamos zerar todos os coeficientes que estão na terceira coluna e abaixo do piv\^o:
+            Agora vamos zerar todos os coeficientes que estão na terceira coluna e abaixo do pivô:
             \begin{align*}
                 &\begin{amatrix}{6}
                     1 & 4 & 3 & -2 & 10 & 9 & -17\\
@@ -817,7 +817,7 @@ O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gau
                     0 & 0 & 0 & 0 & -4 & 4 & -12
                 \end{amatrix}
             \end{align*}
-            Como na terceira linha já temos um piv\^o na quinta coluna, vamos somente zerar os coeficientes abaixo desse piv\^o.
+            Como na terceira linha já temos um pivô na quinta coluna, vamos somente zerar os coeficientes abaixo desse pivô.
             \begin{align*}
                 &\begin{amatrix}{6}
                     1 & 4 & 3 & -2 & 10 & 9 & -17\\
@@ -843,7 +843,7 @@ O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gau
                     x_5 - x_6 = 3
                 \end{cases}
             \]
-            As variáveis $x_2$, $x_4$ e $x_6$ são chamadas de \textbf{variáveis livres} do sistema linear pois não estão associadas a nenhum \textbf{piv\^o} na matriz escalonada desse sistema.
+            As variáveis $x_2$, $x_4$ e $x_6$ são chamadas de \textbf{variáveis livres} do sistema linear pois não estão associadas a nenhum \textbf{pivô} na matriz escalonada desse sistema.
             Da terceira equação temos
             \[
                 x_5 = 3 + x_6.
@@ -870,7 +870,7 @@ O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gau
                 x_5 &= 3 + z\\
                 x_6 &= z
             \end{align*}
-            Nesse caso temos um sistema \textbf{possível e indeterminado}. O sistema admite infinitas soluç\~oes. Podemos escrever as soluç\~oes desse sistema como o conjunto
+            Nesse caso temos um sistema \textbf{possível e indeterminado}. O sistema admite infinitas soluções. Podemos escrever as soluções desse sistema como o conjunto
             \[
                 S = \{(-5 - 4s + 2t - 4z, s, -14 - 5z, t, 3 + z, z) \mid s, t, z \in \rac\}
             \]
@@ -884,7 +884,7 @@ O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gau
                         10 & 4 & 3
                     \end{amatrix}
                 \]
-                Primeiro multiplicamos a linha 1 por 1/2 para termos um piv\^o na primeira coluna:
+                Primeiro multiplicamos a linha 1 por 1/2 para termos um pivô na primeira coluna:
                 \begin{align*}
                     \begin{amatrix}{2}
                         2 & 4 & 16\\
@@ -916,7 +916,7 @@ O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gau
                         0 & -16 & -77
                     \end{amatrix}
                 \end{align*}
-                Agora vamos criar um piv\^o na segunda linha, segunda coluna. Para isso fazemos:
+                Agora vamos criar um pivô na segunda linha, segunda coluna. Para isso fazemos:
                 \begin{align*}
                     \begin{amatrix}{2}
                         1 & 2 & 8\\
@@ -932,7 +932,7 @@ O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gau
                         0 & -16 & -77
                     \end{amatrix}
                 \end{align*}
-                Por último podemos zerar o coeficiente abaixo do piv\^o da segunda linha:
+                Por último podemos zerar o coeficiente abaixo do pivô da segunda linha:
                 \begin{align*}
                     \begin{amatrix}{2}
                         1 & 2 & 8\\
@@ -1007,7 +1007,7 @@ O \textbf{método de eliminação de Gauss}\index{Método!de eliminação de Gau
                         0 & 0 & 0 & 0\\
                     \end{amatrix}
                 \]
-                Com isso obtemos as equaç\~oes
+                Com isso obtemos as equações
                 \[
                     \begin{cases}
                         x_1 = 1/3\\
@@ -1048,7 +1048,7 @@ A matriz
 
 \begin{definicao}
     Seja $A$ a matriz ampliada de um sistema linear. Se $A$ está na forma escalonada reduzida por linhas, então as variáveis desse
-    sistema que não correspondem aos piv\^os são chamadas de \textbf{variáveis livres}.\index{Sistema linear!variáveis livres}
+    sistema que não correspondem aos pivôs são chamadas de \textbf{variáveis livres}.\index{Sistema linear!variáveis livres}
 \end{definicao}
 
 \begin{definicao}
@@ -1064,15 +1064,15 @@ A matriz
 \end{teorema}
 
 Durante a aplicação do \textbf{método de eliminação de Gauss}, paramos quando a matriz ampliada do sistema está na forma escalonada.
-Todavia podemos continuar aplicando operaç\~oes elementares até que a matriz atinja a forma escalonada reduzida por linhas. Esse é o caso do
+Todavia podemos continuar aplicando operações elementares até que a matriz atinja a forma escalonada reduzida por linhas. Esse é o caso do
 \textbf{método de Gaus-Jordan}.
 
 \begin{definicao}[Método de eliminaçao de Gauss-Jordan]
     O método de \textbf{eliminação de Gauss-Jordan}\index{Método!de eliminação de Gauss-Jordan}, para solução de um sistema linear, consiste em:
     \begin{enumerate}[label={\roman*})]
-        \item Escreva a matriz ampliada do sistema de equaç\~oes lineares.
+        \item Escreva a matriz ampliada do sistema de equações lineares.
 
-        \item Use operaç\~oes elementares nas linhas de $A$ para reduzir a matriz ampliada \`a \textbf{forma escalonada reduzida por linhas}.
+        \item Use operações elementares nas linhas de $A$ para reduzir a matriz ampliada à \textbf{forma escalonada reduzida por linhas}.
 
         \item Se o sistema resultante for possível, resolva-o para as variáveis dependentes em termos de quaisquer variáveis livres que
             tenham sobrado.
@@ -1104,7 +1104,7 @@ Todavia podemos continuar aplicando operaç\~oes elementares até que a matriz a
                         4 & -1 & 1 & 4
                     \end{amatrix}
                 \]
-                Aplicando ométodo de Guass-Jordan \`a essa matriz:
+                Aplicando ométodo de Guass-Jordan à essa matriz:
                 \begin{align*}
                 &\begin{amatrix}{3}
                     1 & 2 & -1 & 9\\
@@ -1247,7 +1247,7 @@ Todavia podemos continuar aplicando operaç\~oes elementares até que a matriz a
 \end{solucao}
 \end{exemplo}
 \begin{teorema}
-    Um sistema linear homog\^eneo com mais inc\'ognitas que equaç\~oes tem uma infinidade de soluç\~oes.
+    Um sistema linear homogêneo com mais inc\'ognitas que equações tem uma infinidade de soluções.
 \end{teorema}
 
 \section{Matriz Inversa}
