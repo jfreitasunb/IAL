@@ -387,6 +387,38 @@
 \end{frame}
 
     \begin{frame}
+    Considere o sistema linear:
+    \begin{equation*}
+        \begin{cases}
+            a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1\\\pause
+            a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2\\\pause
+            \qquad \vdots\\
+            a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m\pause
+        \end{cases}
+    \end{equation*}
+    A matriz
+    \[
+    A = \begin{bmatrix}
+        a_{11} & a_{12} & \cdots & a_{1n}\\
+        a_{21} & a_{22} & \cdots & a_{2n}\\
+        \vdots & \vdots & \cdots & \vdots\\
+        a_{m1} & a_{m2} & \cdots & a_{mn}
+    \end{bmatrix}
+    \]
+
+    é chamada de \textbf{matriz dos coeficientes} do sistema linear.
+\end{frame}
+
+\begin{frame}
+    \begin{teorema}[Teorema do Posto]
+        Seja $A$ a matriz dos coeficientes de um sistema linear \pause com $n$ variáveis. Então\pause
+        \[
+        \mbox{número de variáveis livres } = \pause n - \p{A}.
+        \]
+    \end{teorema}
+\end{frame}
+
+    \begin{frame}
         \begin{definicao}
             Se $A$ e $B$ são matrizes $m \times n$, \pause dizemos que $B$ é \textbf{equivalente por linha} \pause a $A$, \pause se $B$ for obtida de $A$ \pause através de uma quantidade finita de operações elementares sobre as linhas de $A$.\pause
         \end{definicao}
@@ -407,38 +439,6 @@
     \begin{frame}
         \begin{teorema}
             Se as matrizes ampliadas \pause de dois sistemas lineares são equivalentes por linhas, \pause então os dois sistemas possuem as mesmas soluções.
-        \end{teorema}
-    \end{frame}
-
-    \begin{frame}
-        Considere o sistema linear:
-        \begin{equation*}
-            \begin{cases}
-                a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1\\\pause
-                a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2\\\pause
-                \qquad \vdots\\
-                a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m\pause
-            \end{cases}
-        \end{equation*}
-        A matriz
-        \[
-            A = \begin{bmatrix}
-                a_{11} & a_{12} & \cdots & a_{1n}\\
-                a_{21} & a_{22} & \cdots & a_{2n}\\
-                \vdots & \vdots & \cdots & \vdots\\
-                a_{m1} & a_{m2} & \cdots & a_{mn}
-            \end{bmatrix}
-        \]
-
-        é chamada de \textbf{matriz dos coeficientes} do sistema linear.
-    \end{frame}
-
-    \begin{frame}
-        \begin{teorema}[Teorema do Posto]
-            Seja $A$ a matriz dos coeficientes de um sistema linear \pause com $n$ variáveis. Então\pause
-            \[
-                \mbox{número de variáveis livres } = \pause n - \p{A}.
-            \]
         \end{teorema}
     \end{frame}
 
