@@ -102,7 +102,7 @@ para $i = 1$, \dots, $n$. Isto é,
     \[
         Aut_T(-1) = [w_1, w_2].
     \]
-    Observer que se $u = \alpha_1w_1 + \alpha_2w_2 \in Aut_T(-1)$, então
+    Observe que se $u = \alpha_1w_1 + \alpha_2w_2 \in Aut_T(-1)$, então
     \begin{align*}
         T(u) &= T(\alpha_1w_1 + \alpha_2w_2) \\ &= \alpha_1T(w_1) + \alpha_2T(w_2) \\ &= -\alpha_1w_1 - \alpha_2w_2 \\ &= -(\alpha_1w_1 + \alpha_2w_2) \\ &= -u
     \end{align*}
@@ -189,7 +189,7 @@ e neste caso definimos
 \[
 	\det(A) = a_{11} \in \cp{K}.
 \]
-Suponha que $n > 1$ e que $\det(B)$ esteja definido para todas as matrizes $B \in \cp{M}_p(\cp{K})$ com $p < n$ e seja $A \in \cp{M}_n(\cp{K})$. Para cada $(i,j)$, defina a matriz $A_{ij}$ formada a partir de $A$ retirando-se a sua $i$-ésima linha e a sua $j$-ésima coluna. \'E claro que $A \in \cp{M}_{n - 1}(\cp{K})$ e portanto $\det(A_{ij})$ está definido. Defina então
+Suponha que $n > 1$ e que $\det(B)$ esteja definido para todas as matrizes $B \in \cp{M}_p(\cp{K})$ com $p < n$ e seja $A \in \cp{M}_n(\cp{K})$. Para cada $(i,j)$, defina a matriz $A_{ij}$ formada a partir de $A$ retirando-se a sua $i$-ésima linha e a sua $j$-ésima coluna. É claro que $A \in \cp{M}_{n - 1}(\cp{K})$ e portanto $\det(A_{ij})$ está definido. Defina então
 \begin{align*}
 	\det(A) &= \sum_{j = 1}^n(-1)^{i + j}a_{ij}\det(A_{ij}) \\ &= (-1)^{i + 1}a_{i1}\det(A_{i1}) + (-1)^{i + 2}a_{i2}\det(A_{i2}) \\ & + (-1)^{i + 3}a_{i3}\det(A_{i3}) + \cdots + (-1)^{i + n}a_{in}\det(A_{in}) \in \cp{K}
 \end{align*}
@@ -209,7 +209,7 @@ Suponha que $n > 1$ e que $\det(B)$ esteja definido para todas as matrizes $B \i
 			\det(A) &= \sum_{j = 1}^2(-1)^{1 + j}a_{1j}\det(A_{1j}) = (-1)^{1 + 1}a_{11}\det(A_{11}) + (-1)^{1 + 2}a_{12}\det(A_{12})\\
 			\det(A) &= ad - bc.
 	    \end{align*}
-		Obter{\'\i}amos o mesmo resultado se considerássemos a linha 2.
+		Obteríamos o mesmo resultado se considerássemos a linha 2.
 
 		\item Seja
 		\[
@@ -224,7 +224,7 @@ Suponha que $n > 1$ e que $\det(B)$ esteja definido para todas as matrizes $B \i
 		\begin{align*}
 			\det(A) &= \sum_{j = 1}^3(-1)^{2 + j}a_{2j}\det(A_{2j}) \\ &= (-1)^{2 + 1}a_{21}\det(A_{21}) + (-1)^{2 + 2}a_{22}\det(A_{22}) + (-1)^{2 + 3}a_{32}\det(A_{32})\\ &= -a_{21}\det\left(\begin{bmatrix}a_{12} & a_{13}\\a_{32} & a_{33}\end{bmatrix}\right) + a_{22}\det\left(\begin{bmatrix}a_{11} & a_{12}\\a_{31} & a_{33}\end{bmatrix}\right) - a_{23}\det\left(\begin{bmatrix}a_{11} & a_{12}\\a_{31} & a_{32}\end{bmatrix}\right).
 		\end{align*}
-		Da{\'\i}
+		Daí
 		\[
 			\det(A) = a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} - a_{13}a_{22}a_{31} - a_{12}a_{21}a_{33} - a_{11}a_{23}a_{32}.
 		\]
@@ -271,15 +271,15 @@ Suponha que $n > 1$ e que $\det(B)$ esteja definido para todas as matrizes $B \i
 \end{proposicao}
 
 \begin{observacao}
-	\'E poss{\'\i}vel mostrar que o determinante também pode ser definido a partir das colunas de uma matriz $A \in \cp{M}_n(\cp{K})$.
+	É possível mostrar que o determinante também pode ser definido a partir das colunas de uma matriz $A \in \cp{M}_n(\cp{K})$.
 \end{observacao}
 
 \begin{teorema}
-	Uma matriz $A \in \cp{M}_n(\cp{K})$ é invert{\'\i}vel se, e somente se, $\det(A) \ne 0$.
+	Uma matriz $A \in \cp{M}_n(\cp{K})$ é invertível se, e somente se, $\det(A) \ne 0$.
 \end{teorema}
 
 \section{Diagonalização}
-Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e um operador linear $T \colon V \to V$, queremos tentar encontrar, se existir, uma base ordenada $\mathcal{D}$ de $V$ formada por autovetores. Para isso devemos proceder da seguinte maneira:
+Dado $V$ um espaço vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e um operador linear $T \colon V \to V$, queremos tentar encontrar, se existir, uma base ordenada $\mathcal{D}$ de $V$ formada por autovetores. Para isso devemos proceder da seguinte maneira:
 \begin{enumerate}
     \item Se não foi dada, encontre a matriz de $T$ com relação a alguma base ordenada $\mathcal{B}$ de $V$. Pode-se usar a base canônica $\mathcal{B}$ de $V$ para facilitar o cálculo de $[T]_\mathcal{B}$.
 
@@ -310,12 +310,12 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
     \begin{enumerate}[label={\arabic*})]
         \item Seja $T : \real^2 \to \real^2$ o operador linear dado por $T(x,y) = (-y,x)$. O operador $T$ é diagonalizável?
         \begin{solucao}
-            Como não foi dada a matriz de $T$ vamos primeiro encontrá-la. Para isso podemos considerar a base can\^onica de $\real^2$ dada por $\mathcal{B} = \{e_1 = (1,0); e_2 = (0,1)\}$. Temos
+            Como não foi dada a matriz de $T$ vamos primeiro encontrá-la. Para isso podemos considerar a base canônica de $\real^2$ dada por $\mathcal{B} = \{e_1 = (1,0); e_2 = (0,1)\}$. Temos
             \begin{align}
                 T(1,0) &= (0,1) = 0(1,0) + 1(1,0)\\
                 T(0,1) &= (-1,0) = -1(1,0) + 0(1,0).
             \end{align}
-            Da{\'\i}
+            Daí
             \[
                 [T]_\mathcal{B} = \begin{bmatrix}0 & -1\\ 1 & \phantom{-}0\end{bmatrix}.
             \]
@@ -332,12 +332,12 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
 
         \item Seja $T : \complex^2 \to \complex^2$ o operador linear dado por $T(x,y) = (-y,x)$. Encontre os autovalores de $T$ e os autoespaços associados, se existirem, considerando $\complex^2$ com um $\complex$-espaço vetorial.
         \begin{solucao}
-            Considere a base can\^onica $\mathcal{B} = \{e_1 = (1, 0); e_2 = (0, 1)\}$ de $\complex^2$. Temos
+            Considere a base canônica $\mathcal{B} = \{e_1 = (1, 0); e_2 = (0, 1)\}$ de $\complex^2$. Temos
             \begin{align}
                 T(1,0) &= (0,1) = 0(1,0) + 1(1,0)\\
                 T(0,1) &= (-1,0) = -1(1,0) + 0(1,0).
             \end{align}
-            Da{\'\i}
+            Daí
             \[
                 [T]_\mathcal{B} = \begin{bmatrix}0 & -1\\ 1 & \phantom{-}0\end{bmatrix}.
             \]
@@ -501,7 +501,7 @@ Dado $V$ um espaćo vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e 
                 \]
                 e então $\mathcal{B}_2 = \{(1,-1,1)\}$ é uma base de $\aut_T(-2)$ e $\dim_\real\aut_T(-2) = 1$.
             \end{itemize}
-            \'E fácil verificar que o conjunto $\mathcal{D} = \{(1,0,2); (0,1,2); (1,-1,1)\}$ é L.I, logo uma base de $\real^3$ e $T$ é diagonalizável. Nesta base temos
+            É fácil verificar que o conjunto $\mathcal{D} = \{(1,0,2); (0,1,2); (1,-1,1)\}$ é L.I, logo uma base de $\real^3$ e $T$ é diagonalizável. Nesta base temos
             \[
                 [T]_\mathcal{D} = \begin{bmatrix}
                                 -1 & \phantom{-}0 & \phantom{-}0\\
