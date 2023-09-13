@@ -370,53 +370,52 @@
 \end{frame}
 
     \begin{frame}
-    Durante a aplicação do \textbf{método de eliminação de Gauss}, \pause paramos quando a matriz ampliada do sistema está na forma escalonada. \pause
-    Todavia podemos continuar aplicando operações elementares \pause até que a matriz atinja a forma escalonada reduzida por linhas. \pause Esse é o caso do
-    \textbf{método de Gaus-Jordan}.\pause
+        Durante a aplicação do \textbf{método de eliminação de Gauss}, \pause paramos quando a matriz ampliada do sistema está na forma escalonada. \pause
+        Todavia podemos continuar aplicando operações elementares \pause até que a matriz atinja a forma escalonada reduzida por linhas. \pause Esse é o caso do
+        \textbf{método de Gaus-Jordan}.\pause
 
-    \begin{definicao}[Método de eliminaçao de Gauss-Jordan]
-        O método de \textbf{eliminação de Gauss-Jordan}, \pause para solução de um sistema linear, consiste em:\pause
-        \begin{enumerate}[label={\roman*})]
-            \item Escreva a matriz ampliada do sistema de equações lineares.\pause
+        \begin{definicao}[Método de eliminaçao de Gauss-Jordan]
+            O método de \textbf{eliminação de Gauss-Jordan}, \pause para solução de um sistema linear, consiste em:\pause
+            \begin{enumerate}[label={\roman*})]
+                \item Escreva a matriz ampliada do sistema de equações lineares.\pause
 
-            \item Use operações elementares nas linhas de $A$ \pause para reduzir a matriz ampliada à \textbf{forma escalonada reduzida por linhas}.\pause
+                \item Use operações elementares nas linhas de $A$ \pause para reduzir a matriz ampliada à \textbf{forma escalonada reduzida por linhas}.\pause
 
-            \item Se o sistema resultante for possível, resolva-o para as variáveis dependentes em termos de quaisquer variáveis livres que tenham sobrado.
-        \end{enumerate}
-    \end{definicao}
-\end{frame}
+                \item Se o sistema resultante for possível, resolva-o para as variáveis dependentes em termos de quaisquer variáveis livres que tenham sobrado.
+            \end{enumerate}
+        \end{definicao}
+    \end{frame}
 
     \begin{frame}
-    Considere o sistema linear:
-    \begin{equation*}
-        \begin{cases}
-            a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1\\\pause
-            a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2\\\pause
-            \qquad \vdots\\
-            a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m\pause
-        \end{cases}
-    \end{equation*}
-    A matriz
-    \[
-    A = \begin{bmatrix}
-        a_{11} & a_{12} & \cdots & a_{1n}\\
-        a_{21} & a_{22} & \cdots & a_{2n}\\
-        \vdots & \vdots & \cdots & \vdots\\
-        a_{m1} & a_{m2} & \cdots & a_{mn}
-    \end{bmatrix}
-    \]
-
-    é chamada de \textbf{matriz dos coeficientes} do sistema linear.
-\end{frame}
-
-\begin{frame}
-    \begin{teorema}[Teorema do Posto]
-        Seja $A$ a matriz dos coeficientes de um sistema linear \pause com $n$ variáveis. Então\pause
+        Considere o sistema linear:
+        \begin{equation*}
+            \begin{cases}
+                a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1\\\pause
+                a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2\\\pause
+                \qquad \vdots\\
+                a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m\pause
+            \end{cases}
+        \end{equation*}
+        A matriz
         \[
-        \mbox{número de variáveis livres } = \pause n - \p{A}.
+            A = \begin{bmatrix}
+                a_{11} & a_{12} & \cdots & a_{1n}\\
+                a_{21} & a_{22} & \cdots & a_{2n}\\
+                \vdots & \vdots & \cdots & \vdots\\
+                a_{m1} & a_{m2} & \cdots & a_{mn}
+            \end{bmatrix}
         \]
-    \end{teorema}
-\end{frame}
+        é chamada de \textbf{matriz dos coeficientes} do sistema linear.
+    \end{frame}
+
+    \begin{frame}
+        \begin{teorema}[Teorema do Posto]
+            Seja $A$ a matriz dos coeficientes de um sistema linear \pause com $n$ variáveis. Então\pause
+            \[
+            \mbox{número de variáveis livres } = \pause n - \p{A}.
+            \]
+        \end{teorema}
+    \end{frame}
 
     \begin{frame}
         \begin{definicao}
