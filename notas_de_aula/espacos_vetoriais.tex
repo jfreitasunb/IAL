@@ -466,7 +466,7 @@ Em todo este capítulo $\cp{K}$ denotará um corpo.
       \[
         S = \{(t/4,13t/8,t) \mid t \in \real\}.
       \]
-      Observer que $S \subseteq \real^3$. Agora $\real^3$ é um espaço vetorial sobre $\real$, como isso temos a seguinte pergunta: $S$ é um subespaço vetorial de $\real^3$?
+      Observe que $S \subseteq \real^3$. Agora $\real^3$ é um espaço vetorial sobre $\real$, como isso temos a seguinte pergunta: $S$ é um subespaço vetorial de $\real^3$?
       \begin{solucao}
         Primeiro observe que $S \ne \emptyset$ pois $(0,0,0) \in S$ e é uma solução para o sistema linear homogêneo. Assim podemos aplicar o Teorema \ref{teoremasubespaco}. Para isso sejam $u_1$, $u_2 \in S$ e $\lambda \in \real$.
         Precisamos mostrar que $u_1 + u_2 \in S$ e que $\lambda u_1 \in S$. Mas como $u_1$, $u_2 \in S$ então
@@ -488,7 +488,7 @@ Em todo este capítulo $\cp{K}$ denotará um corpo.
 
                 Portanto, pelo Teorema \ref{teoremasubespaco} $S$ é um subespaço vetorial de $\real^3$.
       \end{solucao}
-  \item Considere $V = \real^5$ um espaço vetorial sobre $\real$. Tome o subconnjunto $W = \{(0,x_2,x_3,x_4,x_5) \in \real^5 \mid x_i \in \real, 1 \le i \le 5\}$. Então $W$ é um subespaço de $V$.
+  \item Considere $V = \real^5$ um espaço vetorial sobre $\real$. Tome o subconjunto $W = \{(0,x_2,x_3,x_4,x_5) \in \real^5 \mid x_i \in \real, 1 \le i \le 5\}$. Então $W$ é um subespaço de $V$.
     \begin{solucao}
       Como $x_2$, $x_3$, $x_4$ e $x_5$ são números reais quaisquer podemos tomar $x_2 = x_3 = x_4 = x_ 5 = 0$. Assim $(0, 0, 0, 0, 0) \in W$ e com isso $W \ne \emptyset$. Agora sejam $w_1$, $w_2 \in W$. Com isso
       \begin{align*}
@@ -652,7 +652,7 @@ Em todo este capítulo $\cp{K}$ denotará um corpo.
                     3\alpha + \beta = t
                 \end{cases}
             \]
-            Montando a matriz ampliada e aplicando a eliminação guassiana:
+            Montando a matriz ampliada e aplicando a eliminação gaussiana:
             \begin{align*}
                 \begin{amatrix}{2}
                     -1 & 3 & x\\
@@ -712,7 +712,7 @@ Em todo este capítulo $\cp{K}$ denotará um corpo.
             \[
                 \begin{bmatrix}-1 & 1\\-1 & 1 \end{bmatrix} \in W = Span(u, w).
             \]
-            Agora observe que a matrix
+            Agora observe que a matriz
             \[
                 \begin{bmatrix}
                     4 & -3\\
@@ -751,7 +751,7 @@ Em todo este capítulo $\cp{K}$ denotará um corpo.
 
 \begin{exemplos}
     \begin{enumerate}
-        \item Conforme visto nos Exemplos \ref{exemplosespacosgerados}, itens \ref{exemplor2}, \ref{exemplor3} e \ref{exemplokn}, os espaços vetorias $\real^2$, $\real^3$ e $\cp{K}^n$ são todos espaços finitamente gerados.
+        \item Conforme visto nos Exemplos \ref{exemplosespacosgerados}, itens \ref{exemplor2}, \ref{exemplor3} e \ref{exemplokn}, os espaços vetoriais $\real^2$, $\real^3$ e $\cp{K}^n$ são todos espaços finitamente gerados.
 
         \item Considere $M_2(\complex)$ um $\complex$-espaço vetorial. Dadas as matrizes
         \begin{align*}
@@ -827,7 +827,7 @@ Em todo este capítulo $\cp{K}$ denotará um corpo.
   \[
     W_1 \cup W_2 = \{(x, y) \in \real^2 \mid (x, y) \in W_1 \mbox{ ou } (x, y) \in W_2\} = \{(\alpha, 0); (0, \beta) \mid \alpha, \beta \in \real\}.
   \]
-  Observer que $u_1 = (1, 0) \in W_1$, $u_2 = (0, 1) \in W_2$ e no entanto $u_1 + u_2 = (1, 1) \notin W_1 \cup W_2$. Assim $W_1 \cup W_2$ não é um subespaço vetorial de $\real^2$.
+  Observe que $u_1 = (1, 0) \in W_1$, $u_2 = (0, 1) \in W_2$ e no entanto $u_1 + u_2 = (1, 1) \notin W_1 \cup W_2$. Assim $W_1 \cup W_2$ não é um subespaço vetorial de $\real^2$.
 \end{exemplo}
 
 \begin{definicao}
@@ -866,7 +866,7 @@ com isso obtemos o sistema linear
     2a + 3b = y
   \end{cases}.
 \]
-Aplicando o método de eliminação guassiana:
+Aplicando o método de eliminação gaussiana:
 \begin{align*}
   \begin{amatrix}{2}
     1 & 1 & x\\
@@ -1078,7 +1078,7 @@ Esse caso motiva a seguinte definição:
         \end{bmatrix}
       \end{align*}
       cuja solução é dada por $y = -z/2$, $x =-z/2$, $z \in \real$. Portanto esse
-      sistema homogêneo admite solucão não trivial e então o conjunto
+      sistema homogêneo admite solução não trivial e então o conjunto
       $\{v_1 = (1, -2, 3), v_2 = (5, 6, -1), v_3 = (3, 2, 1)\}$ é linearmente dependente.
 
     \item No $\rac$-espaço vetorial $M_2(\rac)$ considere os vetores
@@ -1172,7 +1172,7 @@ Esse caso motiva a seguinte definição:
         \[
           \alpha_0 + \alpha_1x + \alpha_2x^2 + \alpha_3x^3 + \alpha_4x^4 + \alpha_5x^5 = 0.
         \]
-        Essa expressão significa que o polinômio $p(x) = \alpha_0 + \alpha_1x + \alpha_2x^2 + \alpha_3x^3 + \alpha_4x^4 + \alpha_5x^5$ possui infinitas raizes em $\real$, o que é impossível. Logo
+        Essa expressão significa que o polinômio $p(x) = \alpha_0 + \alpha_1x + \alpha_2x^2 + \alpha_3x^3 + \alpha_4x^4 + \alpha_5x^5$ possui infinitas raízes em $\real$, o que é impossível. Logo
         $\alpha_0 = \alpha_1 = \alpha_2 = \alpha_3 = \alpha_4 = \alpha_5 = 0$ e com isso o conjunto $\{1, x, x^2, x^3, x^4, x^5\}$ é linearmente independente.
       \end{solucao}
 
@@ -1361,7 +1361,7 @@ As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases can�
       \[
         x^{m + 1} - b_mx^m - \cdots - b_2x^2 - b_1x - b_0 = 0.
       \]
-      Dessa última expressão segue que o polinômio $p(x) = x^{m + 1} - b_mx^m - \cdots - b_2x^2 - b_1x - b_0$ possui infinitas raizes reais. O que é impossível e então o
+      Dessa última expressão segue que o polinômio $p(x) = x^{m + 1} - b_mx^m - \cdots - b_2x^2 - b_1x - b_0$ possui infinitas raízes reais. O que é impossível e então o
       conjunto $\mathcal{B} = \{1, x, x^2, \dots, x^m\}$ não gera $V = \mathcal{P}(\real)$ para nenhum $m \in \n$. Portanto $\dim_\real\mathcal{P}(\real) = \infty$.
   \end{enumerate}
 \end{exemplos}
@@ -1754,7 +1754,7 @@ As bases que aparecem nos seguintes exemplos são chamadas de \textbf{bases can�
         \[
           1 = \dfrac{1}{2}(1 + x) + \dfrac{1}{2}(1 - x)
         \]
-        e então o conjunto $\{1 + x; 1 - x; 1\}$ é linearmente dependente. Daí vamos descartar o 1 desse conjunto ficando assim com o conjunto $\{1 + x; 1 - x; x; x^2\}$. Mas, note tambpem que
+        e então o conjunto $\{1 + x; 1 - x; 1\}$ é linearmente dependente. Daí vamos descartar o 1 desse conjunto ficando assim com o conjunto $\{1 + x; 1 - x; x; x^2\}$. Mas, note também que
         \[
           x = \dfrac{1}{2}(1 + x) - \dfrac{1}{2}(1 - x)
         \]
