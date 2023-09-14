@@ -357,10 +357,10 @@
         \end{observacao}
     \end{frame}
 
-\begin{frame}
-    \begin{definicao}
-        O \textbf{posto}, \pause denotado $\p{A}$ \pause ou $p(A)$, \pause de uma matriz $A$ \pause é número de linhas não nulas \pause de qualquer uma de suas formas escalonadas por linhas.
-    \end{definicao}
+    \begin{frame}
+        \begin{definicao}
+            O \textbf{posto}, \pause denotado $\p{A}$ \pause ou $p(A)$, \pause de uma matriz $A$ \pause é número de linhas não nulas \pause de qualquer uma de suas formas escalonadas por linhas.
+        \end{definicao}
     \end{frame}
 
     \begin{frame}
@@ -392,6 +392,15 @@
     \end{frame}
 
     \begin{frame}
+        \begin{teorema}[Teorema do Posto]
+            Seja $A$ a matriz dos coeficientes de um sistema linear \pause com $n$ variáveis. Então\pause
+            \[
+            \mbox{número de variáveis livres } = \pause n - \p{A}.
+            \]
+        \end{teorema}
+    \end{frame}
+
+    \begin{frame}
         Durante a aplicação do \textbf{método de eliminação de Gauss}, \pause paramos quando a matriz ampliada do sistema está na forma escalonada. \pause
         Todavia podemos continuar aplicando operações elementares \pause até que a matriz atinja a forma escalonada reduzida por linhas. \pause Esse é o caso do
         \textbf{método de Gaus-Jordan}.\pause
@@ -406,15 +415,6 @@
                 \item Se o sistema resultante for possível, resolva-o para as variáveis dependentes em termos de quaisquer variáveis livres que tenham sobrado.
             \end{enumerate}
         \end{definicao}
-    \end{frame}
-
-    \begin{frame}
-        \begin{teorema}[Teorema do Posto]
-            Seja $A$ a matriz dos coeficientes de um sistema linear \pause com $n$ variáveis. Então\pause
-            \[
-            \mbox{número de variáveis livres } = \pause n - \p{A}.
-            \]
-        \end{teorema}
     \end{frame}
 
     \begin{frame}
