@@ -315,81 +315,81 @@
     \end{frame}
 
 
-\begin{frame}
-    \begin{definicao}
-        Se um sistema linear tem uma infinidade de soluções, \pause então um conjunto de equações paramétricas \pause é denominado uma \textbf{solução geral} \pause do sistema se, a partir dessas equações, \pause puderem ser obtidas todas as outras soluções \pause pela substituição dos parâmetros por valores numéricos.
-    \end{definicao}
-\end{frame}
+    \begin{frame}
+        \begin{definicao}
+            Se um sistema linear tem uma infinidade de soluções, \pause então um conjunto de equações paramétricas \pause é denominado uma \textbf{solução geral} \pause do sistema se, a partir dessas equações, \pause puderem ser obtidas todas as outras soluções \pause pela substituição dos parâmetros por valores numéricos.
+        \end{definicao}
+    \end{frame}
 
     \begin{frame}
-    O \textbf{método de eliminação de Gauss} \pause ou \textbf{método de eliminação gaussiana} \pause consiste em substituir um dado sistema de equações lineares \pause por outro \textbf{equivalente}, que seja mais simples de ser solucionado \pause e que tenha a mesma solução do sistema original.\pause
+        O \textbf{método de eliminação de Gauss} \pause ou \textbf{método de eliminação gaussiana} \pause consiste em substituir um dado sistema de equações lineares \pause por outro \textbf{equivalente}, que seja mais simples de ser solucionado \pause e que tenha a mesma solução do sistema original.\pause
 
-    \begin{definicao}[Método de eliminaçao de Gauss]
-        O método de \textbf{eliminação de Gauss}, \pause para solução de um sistema linear, \pause consiste em:\pause
-        \begin{enumerate}[label={\roman*})]
-            \item Escreva a matriz ampliada do sistema de equações lineares.\pause
+        \begin{definicao}[Método de eliminaçao de Gauss]
+            O método de \textbf{eliminação de Gauss}, \pause para solução de um sistema linear, \pause consiste em:\pause
+            \begin{enumerate}[label={\roman*})]
+                \item Escreva a matriz ampliada do sistema de equações lineares.\pause
 
-            \item Use operações elementares nas linhas de $A$ para reduzir a matriz ampliada à \textbf{forma escalonada por linhas}.\pause
+                \item Use operações elementares nas linhas de $A$ para reduzir a matriz ampliada à \textbf{forma escalonada por linhas}.\pause
 
-            \item Quando a matriz ampliada estiver na forma escalonada, usando substituição de trás para a frente, \pause resolva o sistema equivalente que corresponde a matriz escalonada reduzida por linhas.
-        \end{enumerate}
-    \end{definicao}
-\end{frame}
+                \item Quando a matriz ampliada estiver na forma escalonada, usando substituição de trás para a frente, \pause resolva o sistema equivalente que corresponde a matriz escalonada reduzida por linhas.
+            \end{enumerate}
+        \end{definicao}
+    \end{frame}
 
-\begin{frame}
-    \begin{observacao}
-        Ao se aplicar o método de eliminação gaussiana, as seguintes dicas podem ser úteis:\pause
-        \begin{enumerate}[label=({\alph*})]
-            \item Localize a coluna mais à esquerda que não é toda formada por zeros.\pause
+    \begin{frame}
+        \begin{observacao}
+            Ao se aplicar o método de eliminação gaussiana, as seguintes dicas podem ser úteis:\pause
+            \begin{enumerate}[label=({\alph*})]
+                \item Localize a coluna mais à esquerda que não é toda formada por zeros.\pause
 
-            \vspace{.3cm}
+                \vspace{.3cm}
 
-            \item Crie um \textbf{pivô} no topo desta coluna.\pause
+                \item Crie um \textbf{pivô} no topo desta coluna.\pause
 
-            \vspace{.3cm}
+                \vspace{.3cm}
 
-            \item Use o \textbf{pivô} para criar zeros abaixo dele.\pause
+                \item Use o \textbf{pivô} para criar zeros abaixo dele.\pause
 
-            \vspace{.3cm}
+                \vspace{.3cm}
 
-            \item Faça a linha contendo este \textbf{pivô} ir para a parte de cima \pause e volte ao passo (a) para repetir o procedimento com o restante da submatriz. \pause Pare quando toda a matriz estiver na forma escalonada por linhas.
-        \end{enumerate}
-    \end{observacao}
-\end{frame}
+                \item Faça a linha contendo este \textbf{pivô} ir para a parte de cima \pause e volte ao passo (a) para repetir o procedimento com o restante da submatriz. \pause Pare quando toda a matriz estiver na forma escalonada por linhas.
+            \end{enumerate}
+        \end{observacao}
+    \end{frame}
 
 \begin{frame}
     \begin{definicao}
         O \textbf{posto}, \pause denotado $\p{A}$ \pause ou $p(A)$, \pause de uma matriz $A$ \pause é número de linhas não nulas \pause de qualquer uma de suas formas escalonadas por linhas.
     \end{definicao}
-\end{frame}
-
-\begin{frame}
-    \begin{definicao}
-        Seja $A$ a matriz ampliada de um sistema linear. \pause Se $A$ está na forma escalonada reduzida por linhas, \pause então as variáveis desse sistema \pause que não correspondem aos pivôs \pause são chamadas de \textbf{variáveis livres}.
-    \end{definicao}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-    Considere o sistema linear:
-    \begin{equation*}
-        \begin{cases}
-            a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1\\\pause
-            a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2\\\pause
-            \qquad \vdots\\
-            a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m\pause
-        \end{cases}
-    \end{equation*}
-    A matriz
-    \[
-    A = \begin{bmatrix}
-        a_{11} & a_{12} & \cdots & a_{1n}\\
-        a_{21} & a_{22} & \cdots & a_{2n}\\
-        \vdots & \vdots & \cdots & \vdots\\
-        a_{m1} & a_{m2} & \cdots & a_{mn}
-    \end{bmatrix}
-    \]
-    é chamada de \textbf{matriz dos coeficientes} do sistema linear.
-\end{frame}
+        \begin{definicao}
+            Seja $A$ a matriz ampliada de um sistema linear. \pause Se $A$ está na forma escalonada reduzida por linhas, \pause então as variáveis desse sistema \pause que não correspondem aos pivôs \pause são chamadas de \textbf{variáveis livres}.
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
+        Considere o sistema linear:
+        \begin{equation*}
+            \begin{cases}
+                a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1\\\pause
+                a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2\\\pause
+                \qquad \vdots\\
+                a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m\pause
+            \end{cases}
+        \end{equation*}
+        A matriz
+        \[
+        A = \begin{bmatrix}
+            a_{11} & a_{12} & \cdots & a_{1n}\\
+            a_{21} & a_{22} & \cdots & a_{2n}\\
+            \vdots & \vdots & \cdots & \vdots\\
+            a_{m1} & a_{m2} & \cdots & a_{mn}
+        \end{bmatrix}
+        \]
+        é chamada de \textbf{matriz dos coeficientes} do sistema linear.
+    \end{frame}
 
     \begin{frame}
         Durante a aplicação do \textbf{método de eliminação de Gauss}, \pause paramos quando a matriz ampliada do sistema está na forma escalonada. \pause
