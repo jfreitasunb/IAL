@@ -506,6 +506,61 @@
     \end{frame}
 
     \begin{frame}
+        Por exemplo, considere a seguinte matriz:
+        \[
+            A = \begin{bmatrix}
+                -1 & -1 & 0\\
+                0 & -1 & -1\\
+                1 & -1 & -3
+            \end{bmatrix}.
+        \]
+        Essa matriz é invertivel. Sua inversa é uma matriz $B$ de ordem 3 tal que $AB = I_3 = BA$. Suponha que
+        \[
+            B = \begin{bmatrix}
+                b_{11} & b_{12} & b_{13}\\
+                b_{21} & b_{22} & b_{23}\\
+                b_{31} & b_{32} & b_{33}
+            \end{bmatrix}.
+        \]
+        Então
+        \begin{align*}
+            AB &= I_3\\
+            \begin{bmatrix}-1 & -1 & 0\\0 & -1 & -1\\1 & -1 & -3\end{bmatrix}\begin{bmatrix}b_{11} & b_{12} & b_{13}\\b_{21} & b_{22} & b_{23}\\b_{31} & b_{32} & b_{33}\end{bmatrix} &= \begin{bmatrix}
+                1 & 0 & 0\\0 & 1 & 0\\0 & 0 & 1
+            \end{bmatrix}
+        \end{align*}
+    \end{frame}
+
+    \begin{frame}
+        \[
+            \begin{bmatrix}
+                -b_{11} - b_{21} & -b_{12} - b_{22} & -b_{13} - b_{23}\\
+                -b_{21} - b_{31} & -b_{22} - b_{32} & -b_{23} - b_{33}\\
+                b_{11} - b_{21} - 3b_{31} & b_{12} - b_{22} - 3b_{32} & b_{13} - b_{23} - b_{33}
+            \end{bmatrix} = \begin{bmatrix}
+            1 & 0 & 0\\0 & 1 & 0\\0 & 0 & 1
+            \end{bmatrix}
+        \]
+        Para encontrar $B$ precisamos então resolver os seguintes sistemas lineares:
+        \begin{align*}
+            &\begin{cases}
+                -b_{11} - b_{21} = 1\\
+                -b_{21} - b_{31} = 0\\
+                b_{11} - b_{21} - 3b_{31} = 0
+            \end{cases},
+            \begin{cases}
+                -b_{12} - b_{22} = 0\\
+                -b_{22} - b_{32} = 1\\
+                b_{12} - b_{22} - 3b_{32} = 0
+            \end{cases},\\
+            &\begin{cases}
+                -b_{13} - b_{23} = 0\\
+                -b_{23} - b_{33} = 0\\
+                b_{13} - b_{23} - 3b_{33} = 1
+            \end{cases}
+        \end{align*}
+    \end{frame}
+    \begin{frame}
         Considere o sistema linear: \pause
         \begin{equation}
             \begin{cases}
