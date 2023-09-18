@@ -11,6 +11,34 @@
 \usepackage{multicol}
 \usepackage{answers}
 \usepackage{qrcode}
+
+% requires version 0.3 of the package
+\usepackage[customcolors,beamer]{hf-tikz}
+
+\tikzset{style green/.style={
+        set fill color=green!50!lime!60,
+        set border color=white,
+    },
+    style cyan/.style={
+        set fill color=cyan!90!blue!60,
+        set border color=white,
+    },
+    style orange/.style={
+        set fill color=orange!80!red!60,
+        set border color=white,
+    },
+    hor/.style={
+        above left offset={-0.15,0.31},
+        below right offset={0.15,-0.125},
+        #1
+    },
+    ver/.style={
+        above left offset={-0.1,0.3},
+        below right offset={0.15,-0.15},
+        #1
+    }
+}
+
 \usepackage{tikz,ifthen,tikz-3dplot}
 \usetikzlibrary{circuits.ee.IEC}
 \usetikzlibrary{lindenmayersystems}
