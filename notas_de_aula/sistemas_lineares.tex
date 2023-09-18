@@ -1613,13 +1613,13 @@ A esse sistema podemos associar algumas matrizes. A saber:
         \vdots & \vdots & \cdots & \vdots\\
         a_{m1} & a_{m2} & \cdots & a_{mn}
     \end{pmatrix}, \quad
-    x = \begin{pmatrix}
+    X = \begin{pmatrix}
         x_1\\
         x_2\\
         \vdots\\
         x_n
     \end{pmatrix},\quad
-    b = \begin{pmatrix}
+    B = \begin{pmatrix}
         b_1\\
         b_2\\
         \vdots\\
@@ -1629,27 +1629,27 @@ A esse sistema podemos associar algumas matrizes. A saber:
 
 A partir dessas matrizes o sistema linear anterior pode ser escrito como:
 \[
-    Ax = b.
+    AX = B.
 \]
 Tal forma de escrever o sistema linear é chamada de \textbf{equação matricial}\index{Sistema linear!equação matricial} do sistema.
 
 No caso em que
 \[
-    b = \begin{pmatrix}
+    B = \begin{pmatrix}
         0\\0\\\vdots\\0
     \end{pmatrix}
 \]
 Vamos escrever simplesmente
 \[
-    Ax = 0.
+    AX = 0.
 \]
 
 \begin{teorema}
-    Seja $A$ uma matriz invertível de ordem $n$. Para cada matriz $b$ de ordem $n\times 1$ o sistema linear de forma matricial $Ax = b$ admite solução única que é dada por
+    Seja $A$ uma matriz invertível de ordem $n$. Para cada matriz $B$ de ordem $n\times 1$ o sistema linear de forma matricial $AX = B$ admite solução única que é dada por
     \[
-        x = \begin{pmatrix}
+        X = \begin{pmatrix}
             x_1 \\ x_2 \\ \vdots \\ x_n
-        \end{pmatrix} = A^{-1}b.
+        \end{pmatrix} = A^{-1}B.
     \]
 \end{teorema}
 
@@ -1838,11 +1838,11 @@ Vamos escrever simplesmente
     Se $A$ é uma matriz $n \times n$, então as seguintes afirmações são equivalentes, ou seja, são todas verdadeiras ou todas falsas:
     \begin{enumerate}[label={\roman*})]
         \item $A$ é invertível.
-        \item $Ax = 0$ tem somente a solução trivial.
+        \item $AX = 0$ tem somente a solução trivial.
         \item A forma escalonada reduzida por linhas de $A$ é $I_n$.
         \item $A$ pode ser expressa como um produto de matrizes elementares.
-        \item $Ax = b$ é possível para cada matriz $b$ de tamanho $n \times 1$.
-        \item $Ax = b$ tem exatamente uma solução para cada matriz $b$ de tamanho $n \times 1$.
+        \item $AX = B$ é possível para cada matriz $B$ de tamanho $n \times 1$.
+        \item $AX = B$ tem exatamente uma solução para cada matriz $B$ de tamanho $n \times 1$.
     \end{enumerate}
 \end{teorema}
 
