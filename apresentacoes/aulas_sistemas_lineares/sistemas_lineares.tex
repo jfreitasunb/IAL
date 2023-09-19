@@ -406,6 +406,123 @@
         \end{teorema}
     \end{frame}
 
+    \begin{frame}
+        \begin{definicao}
+            Seja $A$ uma matriz quadrada de ordem $n$ \pause e $A \ne 0$. \pause Se for possível encontrar uma matriz quadrada $B$ \pause também de
+            ordem $n$ tal que\pause
+            \[
+            AB = I_n \pause = BA\pause
+            \]
+            onde $I_n$ é a matriz identidade de ordem $n$, \pause então diremos que $A$ é \textbf{invertível}, \pause ou \textbf{não singular}, \pause
+            e que $B$ é a \textbf{inversa} de $A$. \pause Se não pudermos encontrar tal matriz $B$, \pause então diremos que $A$ é \textbf{não invertível} \pause
+            ou \textbf{singular}.
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{teorema}
+            Se $B$ e $C$ são ambas inversas da matriz $A$, \pause então $B = C$.\pause
+        \end{teorema}
+
+        \vspace{1cm}
+
+        \begin{notacao}
+            Se $A$ é uma matriz invertível \pause e $B$ é a sua inversa, \pause vamos escrever $B = A^{-1}$.
+        \end{notacao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{proposicao}
+            Se $A$ e $B$ são matrizes invertíveis de mesmo tamanho, \pause então $AB$ é invertível \pause e
+            \[
+            (AB)^{-1} = B^{-1}\pause A^{-1}.
+            \]
+        \end{proposicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{proposicao}
+            Seja $A$ uma matriz invertível \pause e $n$ um número inteiro não negativo. \pause Então:\pause
+            \begin{enumerate}[label={\roman*})]
+                \item $A^{-1}$ é invertível \pause e $(A^{-1})^{-1} = A$.\pause
+
+                \item $A^n$ é invertível \pause e $(A^n)^{-1} = A^{-n} = (A^{-1})^n$.\pause
+
+                \item $kA$ é invertível \pause para todo escalar $k$ não nulo \pause e $(kA)^{-1} = k^{-1}A^{-1}$.
+            \end{enumerate}
+        \end{proposicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{enumerate}[label={\arabic*})]
+            \item Seja $A$ uma matriz quadrada de ordem $n$. \pause Como podemos encontrar a inversa de $A$, \pause se existir.\pause
+
+            \vspace{1cm}
+
+            \item Dada uma matriz $A$, \pause como podemos decidir se $A$ é invertível?
+        \end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+        Por exemplo, considere a seguinte matriz:
+        \[
+        A = \begin{bmatrix}
+            -1 & -1 & \phantom{-} 0\\
+            \phantom{-} 0 & -1 & -1\\
+            \phantom{-} 1 & -1 & -3
+        \end{bmatrix}.\pause
+        \]
+        Essa matriz é invertível. \pause Sua inversa é uma matriz $B$ de ordem 3 \pause tal que $AB = I_3 \pause = BA$. \pause Suponha que
+        \[
+        B = \begin{bmatrix}
+            b_{11} & b_{12} & b_{13}\\
+            b_{21} & b_{22} & b_{23}\\
+            b_{31} & b_{32} & b_{33}
+        \end{bmatrix}.\pause
+        \]
+        Então\pause
+        \[
+        AB = I_3\pause,
+        \]
+        \[
+        \begin{bmatrix}-1 & -1 & \phantom{-} 0\\\phantom{-} 0 & -1 & -1\\\phantom{-} 1 & -1 & -3\end{bmatrix}\begin{bmatrix}b_{11} & b_{12} & b_{13}\\b_{21} & b_{22} & b_{23}\\b_{31} & b_{32} & b_{33}\end{bmatrix} = \begin{bmatrix}
+            1 & 0 & 0\\0 & 1 & 0\\0 & 0 & 1
+        \end{bmatrix}
+        \]
+    \end{frame}
+
+    \begin{frame}
+        \[
+        \begin{bmatrix}
+            -b_{11} - b_{21} & -b_{12} - b_{22} & -b_{13} - b_{23}\\
+            -b_{21} - b_{31} & -b_{22} - b_{32} & -b_{23} - b_{33}\\
+            b_{11} - b_{21} - 3b_{31} & b_{12} - b_{22} - 3b_{32} & b_{13} - b_{23} - b_{33}
+        \end{bmatrix} = \begin{bmatrix}
+            1 & 0 & 0\\0 & 1 & 0\\0 & 0 & 1
+        \end{bmatrix}\pause
+        \]
+
+        Para encontrar $B$ precisamos então resolver os seguintes sistemas lineares:\pause
+        \[
+        \begin{cases}
+            -b_{11} - b_{21} = 1\\
+            -b_{21} - b_{31} = 0\\
+            b_{11} - b_{21} - 3b_{31} = 0
+        \end{cases},\pause
+        \begin{cases}
+            -b_{12} - b_{22} = 0\\
+            -b_{22} - b_{32} = 1\\
+            b_{12} - b_{22} - 3b_{32} = 0
+        \end{cases},\pause
+        \]
+        \[
+        \begin{cases}
+            -b_{13} - b_{23} = 0\\
+            -b_{23} - b_{33} = 0\\
+            b_{13} - b_{23} - 3b_{33} = 1
+        \end{cases}
+        \]
+    \end{frame}
 
     \begin{frame}
         Durante a aplicação do \textbf{método de eliminação de Gauss}, \pause paramos quando a matriz ampliada do sistema está na forma escalonada. \pause
@@ -446,124 +563,6 @@
         \begin{teorema}
             Se as matrizes ampliadas \pause de dois sistemas lineares são equivalentes por linhas, \pause então os dois sistemas possuem as mesmas soluções.
         \end{teorema}
-    \end{frame}
-
-    \begin{frame}
-        \begin{definicao}
-            Seja $A$ uma matriz quadrada de ordem $n$ \pause e $A \ne 0$. \pause Se for possível encontrar uma matriz quadrada $B$ \pause também de
-            ordem $n$ tal que\pause
-            \[
-                AB = I_n \pause = BA\pause
-            \]
-            onde $I_n$ é a matriz identidade de ordem $n$, \pause então diremos que $A$ é \textbf{invertível}, \pause ou \textbf{não singular}, \pause
-            e que $B$ é a \textbf{inversa} de $A$. \pause Se não pudermos encontrar tal matriz $B$, \pause então diremos que $A$ é \textbf{não invertível} \pause
-            ou \textbf{singular}.
-        \end{definicao}
-    \end{frame}
-
-    \begin{frame}
-        \begin{teorema}
-            Se $B$ e $C$ são ambas inversas da matriz $A$, \pause então $B = C$.\pause
-        \end{teorema}
-
-        \vspace{1cm}
-
-        \begin{notacao}
-            Se $A$ é uma matriz invertível \pause e $B$ é a sua inversa, \pause vamos escrever $B = A^{-1}$.
-        \end{notacao}
-    \end{frame}
-
-    \begin{frame}
-        \begin{proposicao}
-            Se $A$ e $B$ são matrizes invertíveis de mesmo tamanho, \pause então $AB$ é invertível \pause e
-            \[
-                (AB)^{-1} = B^{-1}\pause A^{-1}.
-            \]
-        \end{proposicao}
-    \end{frame}
-
-    \begin{frame}
-        \begin{proposicao}
-            Seja $A$ uma matriz invertível \pause e $n$ um número inteiro não negativo. \pause Então:\pause
-            \begin{enumerate}[label={\roman*})]
-                \item $A^{-1}$ é invertível \pause e $(A^{-1})^{-1} = A$.\pause
-
-                \item $A^n$ é invertível \pause e $(A^n)^{-1} = A^{-n} = (A^{-1})^n$.\pause
-
-                \item $kA$ é invertível \pause para todo escalar $k$ não nulo \pause e $(kA)^{-1} = k^{-1}A^{-1}$.
-            \end{enumerate}
-        \end{proposicao}
-    \end{frame}
-
-    \begin{frame}
-        \begin{enumerate}[label={\arabic*})]
-            \item Seja $A$ uma matriz quadrada de ordem $n$. \pause Como podemos encontrar a inversa de $A$, \pause se existir.\pause
-
-            \vspace{1cm}
-
-            \item Dada uma matriz $A$, \pause como podemos decidir se $A$ é invertível?
-        \end{enumerate}
-    \end{frame}
-
-    \begin{frame}
-        Por exemplo, considere a seguinte matriz:
-        \[
-            A = \begin{bmatrix}
-                -1 & -1 & \phantom{-} 0\\
-                \phantom{-} 0 & -1 & -1\\
-                \phantom{-} 1 & -1 & -3
-            \end{bmatrix}.\pause
-        \]
-        Essa matriz é invertível. \pause Sua inversa é uma matriz $B$ de ordem 3 \pause tal que $AB = I_3 \pause = BA$. \pause Suponha que
-        \[
-            B = \begin{bmatrix}
-                b_{11} & b_{12} & b_{13}\\
-                b_{21} & b_{22} & b_{23}\\
-                b_{31} & b_{32} & b_{33}
-            \end{bmatrix}.\pause
-        \]
-        Então\pause
-        \[
-            AB = I_3\pause,
-         \]
-         \[
-            \begin{bmatrix}-1 & -1 & \phantom{-} 0\\\phantom{-} 0 & -1 & -1\\\phantom{-} 1 & -1 & -3\end{bmatrix}\begin{bmatrix}b_{11} & b_{12} & b_{13}\\b_{21} & b_{22} & b_{23}\\b_{31} & b_{32} & b_{33}\end{bmatrix} = \begin{bmatrix}
-                1 & 0 & 0\\0 & 1 & 0\\0 & 0 & 1
-            \end{bmatrix}
-        \]
-    \end{frame}
-
-    \begin{frame}
-        \[
-            \begin{bmatrix}
-                -b_{11} - b_{21} & -b_{12} - b_{22} & -b_{13} - b_{23}\\
-                -b_{21} - b_{31} & -b_{22} - b_{32} & -b_{23} - b_{33}\\
-                b_{11} - b_{21} - 3b_{31} & b_{12} - b_{22} - 3b_{32} & b_{13} - b_{23} - b_{33}
-            \end{bmatrix} = \begin{bmatrix}
-            1 & 0 & 0\\0 & 1 & 0\\0 & 0 & 1
-            \end{bmatrix}\pause
-        \]
-
-        Para encontrar $B$ precisamos então resolver os seguintes sistemas lineares:\pause
-        \[
-            \begin{cases}
-                -b_{11} - b_{21} = 1\\
-                -b_{21} - b_{31} = 0\\
-                b_{11} - b_{21} - 3b_{31} = 0
-            \end{cases},\pause
-            \begin{cases}
-                -b_{12} - b_{22} = 0\\
-                -b_{22} - b_{32} = 1\\
-                b_{12} - b_{22} - 3b_{32} = 0
-            \end{cases},\pause
-         \]
-         \[
-            \begin{cases}
-                -b_{13} - b_{23} = 0\\
-                -b_{23} - b_{33} = 0\\
-                b_{13} - b_{23} - 3b_{33} = 1
-            \end{cases}
-        \]
     \end{frame}
 
     \begin{frame}
