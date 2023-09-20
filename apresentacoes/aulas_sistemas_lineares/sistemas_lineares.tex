@@ -364,6 +364,23 @@
     \end{frame}
 
     \begin{frame}
+        Durante a aplicação do \textbf{método de eliminação de Gauss}, \pause paramos quando a matriz ampliada do sistema está na forma escalonada. \pause
+        Todavia podemos continuar aplicando operações elementares \pause até que a matriz atinja a forma escalonada reduzida por linhas. \pause Esse é o caso do
+        \textbf{método de Gaus-Jordan}.\pause
+
+        \begin{definicao}[Método de eliminação de Gauss-Jordan]
+            O método de \textbf{eliminação de Gauss-Jordan}, \pause para solução de um sistema linear, consiste em:\pause
+            \begin{enumerate}[label={\roman*})]
+                \item Escreva a matriz ampliada do sistema de equações lineares.\pause
+
+                \item Use operações elementares nas linhas de $A$ \pause para reduzir a matriz ampliada à \textbf{forma escalonada reduzida por linhas}.\pause
+
+                \item Se o sistema resultante for possível, resolva-o para as variáveis dependentes em termos de quaisquer variáveis livres que tenham sobrado.
+            \end{enumerate}
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
         \begin{definicao}
             Seja $A$ a matriz ampliada de um sistema linear. \pause Se $A$ está na forma escalonada reduzida por linhas, \pause então as variáveis desse sistema \pause que não correspondem aos pivôs \pause são chamadas de \textbf{variáveis livres}.
         \end{definicao}
@@ -525,47 +542,6 @@
     \end{frame}
 
     \begin{frame}
-        Durante a aplicação do \textbf{método de eliminação de Gauss}, \pause paramos quando a matriz ampliada do sistema está na forma escalonada. \pause
-        Todavia podemos continuar aplicando operações elementares \pause até que a matriz atinja a forma escalonada reduzida por linhas. \pause Esse é o caso do
-        \textbf{método de Gaus-Jordan}.\pause
-
-        \begin{definicao}[Método de eliminação de Gauss-Jordan]
-            O método de \textbf{eliminação de Gauss-Jordan}, \pause para solução de um sistema linear, consiste em:\pause
-            \begin{enumerate}[label={\roman*})]
-                \item Escreva a matriz ampliada do sistema de equações lineares.\pause
-
-                \item Use operações elementares nas linhas de $A$ \pause para reduzir a matriz ampliada à \textbf{forma escalonada reduzida por linhas}.\pause
-
-                \item Se o sistema resultante for possível, resolva-o para as variáveis dependentes em termos de quaisquer variáveis livres que tenham sobrado.
-            \end{enumerate}
-        \end{definicao}
-    \end{frame}
-
-    \begin{frame}
-        \begin{definicao}
-            Se $A$ e $B$ são matrizes $m \times n$, \pause dizemos que $B$ é \textbf{equivalente por linha} \pause a $A$, \pause se $B$ for obtida de $A$ \pause através de uma quantidade finita de operações elementares sobre as linhas de $A$.\pause
-        \end{definicao}
-
-        \vspace{.6cm}
-
-        \begin{notacao}
-            $A \rightarrow B$ \pause ou $A \sim B$.
-        \end{notacao}
-    \end{frame}
-
-    \begin{frame}
-        \begin{teorema}
-            Duas matrizes $A$ e $B$ são equivalentes por linha \pause se, e somente, se elas puderem ser reduzidas à mesma forma escalonada por linhas.
-        \end{teorema}
-    \end{frame}
-
-    \begin{frame}
-        \begin{teorema}
-            Se as matrizes ampliadas \pause de dois sistemas lineares são equivalentes por linhas, \pause então os dois sistemas possuem as mesmas soluções.
-        \end{teorema}
-    \end{frame}
-
-    \begin{frame}
         Considere o sistema linear: \pause
         \begin{equation}
             \begin{cases}
@@ -682,6 +658,30 @@
 
                 \item $Ax = b$ tem exatamente uma solução \pause para cada matriz $b$ de tamanho $n \times 1$.
             \end{enumerate}
+        \end{teorema}
+    \end{frame}
+
+    \begin{frame}
+        \begin{definicao}
+            Se $A$ e $B$ são matrizes $m \times n$, \pause dizemos que $B$ é \textbf{equivalente por linha} \pause a $A$, \pause se $B$ for obtida de $A$ \pause através de uma quantidade finita de operações elementares sobre as linhas de $A$.\pause
+        \end{definicao}
+
+        \vspace{.6cm}
+
+        \begin{notacao}
+            $A \rightarrow B$ \pause ou $A \sim B$.
+        \end{notacao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{teorema}
+            Duas matrizes $A$ e $B$ são equivalentes por linha \pause se, e somente, se elas puderem ser reduzidas à mesma forma escalonada por linhas.
+        \end{teorema}
+    \end{frame}
+
+    \begin{frame}
+        \begin{teorema}
+            Se as matrizes ampliadas \pause de dois sistemas lineares são equivalentes por linhas, \pause então os dois sistemas possuem as mesmas soluções.
         \end{teorema}
     \end{frame}
 \end{document}
