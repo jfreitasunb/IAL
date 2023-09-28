@@ -89,7 +89,7 @@ Aplicando eliminção gaussiana:
     \begin{amatrix}{3}
         1 & \lambda & 1 + 4\lambda & 1 + 4\lambda\\
         0 & 1 - \lambda & -\lambda & -1 - \lambda\\
-        0 & 0 & \lambda & -\lambda
+        0 & 0 & -\lambda & -\lambda
     \end{amatrix}
 \end{align*}
 
@@ -110,7 +110,7 @@ Se $1 - \lambda = 0$, isto é, $\lambda = 1$ obtemos a matriz:
     \begin{amatrix}{3}
         1 & 1 & 5 & 5\\
         0 & 0 & -1 & -2\\
-        0 & 0 & 1 & -1
+        0 & 0 & -1 & -1
     \end{amatrix}
 \]
 Continuando a eliminação gaussiana:
@@ -118,27 +118,37 @@ Continuando a eliminação gaussiana:
     \begin{amatrix}{3}
         1 & 1 & 5 & 5\\
         0 & 0 & -1 & -2\\
-        0 & 0 & 1 & -1
+        0 & 0 & -1 & -1
     \end{amatrix}
     \begin{array}{l}
         \phantom{x}\\
         L_2 \leftrightarrow L_3\\
         \phantom{x}
-    \end{array}\sim
+    \end{array}&\sim
     \begin{amatrix}{3}
         1 & 1 & 5 & 5\\
-        0 & 0 & 1 & -1\\
+        0 & 0 & -1 & -1\\
+        0 & 0 & -1 & -2
+    \end{amatrix}
+    \begin{array}{l}
+        \phantom{x}\\
+        L_2 \to -L_2\\
+        \phantom{x}
+    \end{array}\\&\sim
+    \begin{amatrix}{3}
+        1 & 1 & 5 & 5\\
+        0 & 0 & 1 & 1\\
         0 & 0 & -1 & -2
     \end{amatrix}
     \begin{array}{l}
         \phantom{x}\\
         \phantom{x}\\
         L_3 \to L_3 + L_2
-    \end{array}\sim
+    \end{array}\\&\sim
     \begin{amatrix}{3}
         1 & 1 & 5 & 5\\
-        0 & 0 & 1 & -1\\
-        0 & 0 & 0 & -3
+        0 & 0 & 1 & 1\\
+        0 & 0 & 0 & -1
     \end{amatrix}
 \end{align*}
 
@@ -149,7 +159,7 @@ Finalmente, se $\lambda = \ne $ e $\lambda \ne 0$, a matriz
     \begin{amatrix}{3}
         1 & \lambda & 1 + 4\lambda & 1 + 4\lambda\\
         0 & 1 - \lambda & -\lambda & -1 - \lambda\\
-        0 & 0 & \lambda & -\lambda
+        0 & 0 & -\lambda & -\lambda
     \end{amatrix}
 \]
 possuirá posto 3 e com isso o sistema tem uma única solução, o que satisfaz o item a.
