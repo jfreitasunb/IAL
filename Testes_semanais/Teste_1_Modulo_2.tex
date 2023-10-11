@@ -38,17 +38,15 @@
             \hspace{2.1cm}}}
     \vspace{.4cm}
 
-    \questao{} Considere o seguinte sistema linear:
+    \questao{} Seja
     \[
-    \begin{cases}
-        -2x_1 + 5x_2 - 10x_3 = 4\\
-        x_1 - 2x_2 + 3x_3 = -1\\
-        7x_1 - 17x_2 + 34x_3 = -16
-    \end{cases}
+        V = M_2(\real) = \left\{\begin{bmatrix}a_{11} & a_{12}\\a_{21} & a_{22} \end{bmatrix} \mid a_{11}, a_{12}, a_{21}, a_{22} \in \real\right\}.
     \]
-    \begin{enumerate}[label={\alph*})]
-        \item Escreva a matriz aumentada desse sistema.
-
-        \item Encontre a solução desse sistema aplicando os métodos vistos em sala.
-    \end{enumerate}
+    Considere em $V$ as seguintes operações
+    \begin{align*}
+        A + B &= \begin{bmatrix}a_{11} & a_{12}\\a_{21} & a_{22} \end{bmatrix} + \begin{bmatrix}b_{11} & b_{12}\\b_{21} & b_{22} \end{bmatrix} = \begin{bmatrix}a_{11} + b_{11 }& a_{12} + b_{12}\\a_{21} + b_{21} & a_{22} + b_{22}\end{bmatrix}\\
+        \alpha \cdot A &= \alpha \cdot \begin{bmatrix}a_{11} & a_{12}\\a_{21} & a_{22} \end{bmatrix} = \begin{bmatrix}\alpha a_{11} & \alpha a_{12}\\\alpha a_{21} & \alpha a_{22} \end{bmatrix}
+    \end{align*}
+    para todos $A = \begin{bmatrix}a_{11} & a_{12}\\a_{21} & a_{22} \end{bmatrix}$, $B = \begin{bmatrix}b_{11} & b_{12}\\b_{21} & b_{22} \end{bmatrix} \in V$ e todo $\alpha \in \cp{K} = \real$.
+    Mostre que com essas operações $V = M_2(\real)$ é um espaço vetorial sobre $\cp{K} = \real$.
 \end{document}
