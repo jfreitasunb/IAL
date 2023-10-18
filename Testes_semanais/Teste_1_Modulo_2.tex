@@ -56,85 +56,85 @@
     \begin{itemize}
         \item[A1)] Sejam
         \[
-        A = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix},
-        B = \begin{pmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{pmatrix}.
+        A = \begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix},
+        B = \begin{bmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{bmatrix}.
         \]
         Temos:
         \begin{align*}
-            A + B & = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} + \begin{pmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{pmatrix}
-            \\ &= \begin{pmatrix} a_{11} + b_{11} & a_{12} + b_{12}\\a_{21} + b_{21} & a_{22} + b_{22}\end{pmatrix}
-            \\ &= \begin{pmatrix} b_{11} + a_{11} & b_{12} + a_{12}\\b_{21} + a_{21} & b_{22} + a_{22}\end{pmatrix}
-            \\ &= \begin{pmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{pmatrix} + \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix}
+            A + B & = \begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} + \begin{bmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{bmatrix}
+            \\ &= \begin{bmatrix} a_{11} + b_{11} & a_{12} + b_{12}\\a_{21} + b_{21} & a_{22} + b_{22}\end{bmatrix}
+            \\ &= \begin{bmatrix} b_{11} + a_{11} & b_{12} + a_{12}\\b_{21} + a_{21} & b_{22} + a_{22}\end{bmatrix}
+            \\ &= \begin{bmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{bmatrix} + \begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix}
             \\ &= B + A
         \end{align*}
 
         \item[A2)] Sejam
         \[
-        A = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix},
-        B = \begin{pmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{pmatrix},
-        C = \begin{pmatrix} c_{11} & c_{12}\\c_{21} & c_{22}\end{pmatrix}.
+        A = \begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix},
+        B = \begin{bmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{bmatrix},
+        C = \begin{bmatrix} c_{11} & c_{12}\\c_{21} & c_{22}\end{bmatrix}.
         \]
         Temos:
         \begin{align*}
-            (A + B) + C & = \left(\begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} +
-            \begin{pmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{pmatrix}\right) +
-            \begin{pmatrix} c_{11} & c_{12}\\c_{21} & c_{22}\end{pmatrix}
-            \\ &= \begin{pmatrix} a_{11} + b_{11} & a_{12} + b_{12}\\a_{21} + b_{21} & a_{22} + b_{22}\end{pmatrix} +
-            \begin{pmatrix} c_{11} & c_{12}\\c_{21} & c_{22}\end{pmatrix}
-            \\ &= \begin{pmatrix} (a_{11} + b_{11}) + c_{11} & (a_{12} + b_{12}) + c_{12}\\(a_{21} + b_{21}) + c_{21} & (a_{22} + b_{22}) + c_{22}\end{pmatrix}
-            \\ &= \begin{pmatrix} a_{11} + (b_{11} + c_{11}) & a_{12} + (b_{12} + c_{12})\\a_{21} + (b_{21} + c_{21}) & a_{22} + (b_{22} + c_{22})\end{pmatrix}
-            \\ &= \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} + \begin{pmatrix} b_{11} + c_{11} & b_{12} + c_{12}\\b_{21} + c_{21} & b_{22} + c_{22}\end{pmatrix}
-            \\ &= \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} +
-            \left(\begin{pmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{pmatrix} +
-            \begin{pmatrix} c_{11} & c_{12}\\c_{21} & c_{22}\end{pmatrix}\right)
+            (A + B) + C & = \left(\begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} +
+            \begin{bmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{bmatrix}\right) +
+            \begin{bmatrix} c_{11} & c_{12}\\c_{21} & c_{22}\end{bmatrix}
+            \\ &= \begin{bmatrix} a_{11} + b_{11} & a_{12} + b_{12}\\a_{21} + b_{21} & a_{22} + b_{22}\end{bmatrix} +
+            \begin{bmatrix} c_{11} & c_{12}\\c_{21} & c_{22}\end{bmatrix}
+            \\ &= \begin{bmatrix} (a_{11} + b_{11}) + c_{11} & (a_{12} + b_{12}) + c_{12}\\(a_{21} + b_{21}) + c_{21} & (a_{22} + b_{22}) + c_{22}\end{bmatrix}
+            \\ &= \begin{bmatrix} a_{11} + (b_{11} + c_{11}) & a_{12} + (b_{12} + c_{12})\\a_{21} + (b_{21} + c_{21}) & a_{22} + (b_{22} + c_{22})\end{bmatrix}
+            \\ &= \begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} + \begin{bmatrix} b_{11} + c_{11} & b_{12} + c_{12}\\b_{21} + c_{21} & b_{22} + c_{22}\end{bmatrix}
+            \\ &= \begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} +
+            \left(\begin{bmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{bmatrix} +
+            \begin{bmatrix} c_{11} & c_{12}\\c_{21} & c_{22}\end{bmatrix}\right)
             \\ &= A + (B + C).
         \end{align*}
 
         \item[A3)] Tome
         \[
-        0_V = \begin{pmatrix}0 & 0\\0 & 0\end{pmatrix}.
+        0_V = \begin{bmatrix}0 & 0\\0 & 0\end{bmatrix}.
         \]
         Para toda matriz
         \[
-        A = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix},
+        A = \begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix},
         \]
         temos
         \begin{align*}
-            A + 0_V & = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} +
-            \begin{pmatrix}0 & 0\\0 & 0\end{pmatrix}
-            = \begin{pmatrix}a_{11} + 0 & a_{12} + 0\\a_{21} + 0  & a_{22} + 0\end{pmatrix}
-            \\ &= \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} = A.
+            A + 0_V & = \begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} +
+            \begin{bmatrix}0 & 0\\0 & 0\end{bmatrix}
+            = \begin{bmatrix}a_{11} + 0 & a_{12} + 0\\a_{21} + 0  & a_{22} + 0\end{bmatrix}
+            \\ &= \begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} = A.
         \end{align*}
         Portanto a matriz
         \[
-        0_V = \begin{pmatrix}0 & 0\\0 & 0\end{pmatrix}
+        0_V = \begin{bmatrix}0 & 0\\0 & 0\end{bmatrix}
         \]
         é o vetor nulo.
 
         \item[A4)] Dada
         \[
-        A = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} \in \cp{M}_{2 \times 2}(\real),
+        A = \begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} \in \cp{M}_{2 \times 2}(\real),
         \]
         tome
         \[
-        -A = \begin{pmatrix} -a_{11} & -a_{12}\\-a_{21} & -a_{22}\end{pmatrix} \in \cp{M}_{2 \times 2}(\real).
+        -A = \begin{bmatrix} -a_{11} & -a_{12}\\-a_{21} & -a_{22}\end{bmatrix} \in \cp{M}_{2 \times 2}(\real).
         \]
         Assim
         \begin{align*}
-            A + (-A) & = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} +
-            \begin{pmatrix} -a_{11} & -a_{12}\\-a_{21} & -a_{22}\end{pmatrix}
-            \\ &= \begin{pmatrix} a_{11} - a_{11} & a_{12} - a_{12}\\a_{21} - a_{21} & a_{22} - a_{22}\end{pmatrix}
-            \\ &= \begin{pmatrix}0 & 0\\0 & 0\end{pmatrix} = 0_V.
+            A + (-A) & = \begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} +
+            \begin{bmatrix} -a_{11} & -a_{12}\\-a_{21} & -a_{22}\end{bmatrix}
+            \\ &= \begin{bmatrix} a_{11} - a_{11} & a_{12} - a_{12}\\a_{21} - a_{21} & a_{22} - a_{22}\end{bmatrix}
+            \\ &= \begin{bmatrix}0 & 0\\0 & 0\end{bmatrix} = 0_V.
         \end{align*}
         Logo a matriz
         \[
-        -A = \begin{pmatrix} -a_{11} & -a_{12}\\-a_{21} & -a_{22}\end{pmatrix}
+        -A = \begin{bmatrix} -a_{11} & -a_{12}\\-a_{21} & -a_{22}\end{bmatrix}
         \]
         é o vetor oposto.
 
         \item[M1)] Sejam $\alpha$, $\beta \in \real$ e
         \[
-        A = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} \in \cp{M}_{2 \times 2}(\real).
+        A = \begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} \in \cp{M}_{2 \times 2}(\real).
         \]
         Então:
         \begin{align*}
@@ -148,13 +148,13 @@
 
         \item[M2)] Seja $1 \in \real$ e
         \[
-        A = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} \in \cp{M}_{2 \times 2}(\real).
+        A = \begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} \in \cp{M}_{2 \times 2}(\real).
         \]
         Temos
         \begin{align*}
-            1\cdot A & = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix}
-            \\ &= \begin{pmatrix} 1\cdot a_{11} & 1\cdot a_{12}\\1\cdot a_{21} & 1\cdot a_{22}\end{pmatrix}
-            \\ &= \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} = A.
+            1\cdot A & = \begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix}
+            \\ &= \begin{bmatrix} 1\cdot a_{11} & 1\cdot a_{12}\\1\cdot a_{21} & 1\cdot a_{22}\end{bmatrix}
+            \\ &= \begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} = A.
         \end{align*}
 
         \item Sejam $\alpha \in \real$ e
