@@ -49,4 +49,148 @@
     \end{align*}
     para todos $A = \begin{bmatrix}a_{11} & a_{12}\\a_{21} & a_{22} \end{bmatrix}$, $B = \begin{bmatrix}b_{11} & b_{12}\\b_{21} & b_{22} \end{bmatrix} \in V$ e todo $\alpha \in \cp{K} = \real$.
     Mostre que com essas operações $V = M_2(\real)$ é um espaço vetorial sobre $\cp{K} = \real$.
+
+    \solucao
+
+    De fato,
+    \begin{itemize}
+        \item[A1)] Sejam
+        \[
+        A = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix},
+        B = \begin{pmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{pmatrix}.
+        \]
+        Temos:
+        \begin{align*}
+            A + B & = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} + \begin{pmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{pmatrix}
+            \\ &= \begin{pmatrix} a_{11} + b_{11} & a_{12} + b_{12}\\a_{21} + b_{21} & a_{22} + b_{22}\end{pmatrix}
+            \\ &= \begin{pmatrix} b_{11} + a_{11} & b_{12} + a_{12}\\b_{21} + a_{21} & b_{22} + a_{22}\end{pmatrix}
+            \\ &= \begin{pmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{pmatrix} + \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix}
+            \\ &= B + A
+        \end{align*}
+
+        \item[A2)] Sejam
+        \[
+        A = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix},
+        B = \begin{pmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{pmatrix},
+        C = \begin{pmatrix} c_{11} & c_{12}\\c_{21} & c_{22}\end{pmatrix}.
+        \]
+        Temos:
+        \begin{align*}
+            (A + B) + C & = \left(\begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} +
+            \begin{pmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{pmatrix}\right) +
+            \begin{pmatrix} c_{11} & c_{12}\\c_{21} & c_{22}\end{pmatrix}
+            \\ &= \begin{pmatrix} a_{11} + b_{11} & a_{12} + b_{12}\\a_{21} + b_{21} & a_{22} + b_{22}\end{pmatrix} +
+            \begin{pmatrix} c_{11} & c_{12}\\c_{21} & c_{22}\end{pmatrix}
+            \\ &= \begin{pmatrix} (a_{11} + b_{11}) + c_{11} & (a_{12} + b_{12}) + c_{12}\\(a_{21} + b_{21}) + c_{21} & (a_{22} + b_{22}) + c_{22}\end{pmatrix}
+            \\ &= \begin{pmatrix} a_{11} + (b_{11} + c_{11}) & a_{12} + (b_{12} + c_{12})\\a_{21} + (b_{21} + c_{21}) & a_{22} + (b_{22} + c_{22})\end{pmatrix}
+            \\ &= \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} + \begin{pmatrix} b_{11} + c_{11} & b_{12} + c_{12}\\b_{21} + c_{21} & b_{22} + c_{22}\end{pmatrix}
+            \\ &= \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} +
+            \left(\begin{pmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{pmatrix} +
+            \begin{pmatrix} c_{11} & c_{12}\\c_{21} & c_{22}\end{pmatrix}\right)
+            \\ &= A + (B + C).
+        \end{align*}
+
+        \item[A3)] Tome
+        \[
+        0_V = \begin{pmatrix}0 & 0\\0 & 0\end{pmatrix}.
+        \]
+        Para toda matriz
+        \[
+        A = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix},
+        \]
+        temos
+        \begin{align*}
+            A + 0_V & = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} +
+            \begin{pmatrix}0 & 0\\0 & 0\end{pmatrix}
+            = \begin{pmatrix}a_{11} + 0 & a_{12} + 0\\a_{21} + 0  & a_{22} + 0\end{pmatrix}
+            \\ &= \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} = A.
+        \end{align*}
+        Portanto a matriz
+        \[
+        0_V = \begin{pmatrix}0 & 0\\0 & 0\end{pmatrix}
+        \]
+        é o vetor nulo.
+
+        \item[A4)] Dada
+        \[
+        A = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} \in \cp{M}_{2 \times 3}(\rac),
+        \]
+        tome
+        \[
+        -A = \begin{pmatrix} -a_{11} & -a_{12}\\-a_{21} & -a_{22}\end{pmatrix} \in \cp{M}_{2 \times 3}(\rac).
+        \]
+        Assim
+        \begin{align*}
+            A + (-A) & = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} +
+            \begin{pmatrix} -a_{11} & -a_{12}\\-a_{21} & -a_{22}\end{pmatrix}
+            \\ &= \begin{pmatrix} a_{11} - a_{11} & a_{12} - a_{12}\\a_{21} - a_{21} & a_{22} - a_{22}\end{pmatrix}
+            \\ &= \begin{pmatrix}0 & 0\\0 & 0\end{pmatrix} = 0_V.
+        \end{align*}
+        Logo a matriz
+        \[
+        -A = \begin{pmatrix} -a_{11} & -a_{12}\\-a_{21} & -a_{22}\end{pmatrix}
+        \]
+        é o vetor oposto.
+
+        \item[M1)] Sejam $\alpha$, $\beta \in \rac$ e
+        \[
+        A = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} \in \cp{M}_{2 \times 3}(\rac).
+        \]
+        Então:
+        \begin{align*}
+            (\alpha\beta)\cdot A & = (\alpha\beta)\begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix}
+            \\ &= \begin{bmatrix} (\alpha\beta)a_{11} & (\alpha\beta)a_{12}\\(\alpha\beta)a_{21} & (\alpha\beta)a_{22}\end{bmatrix}
+            \\ &= \begin{bmatrix} \alpha(\beta a_{11}) & \alpha(\beta a_{12})\\\alpha(\beta a_{21}) & \alpha(\beta a_{22})\end{bmatrix}
+            \\ &= \alpha\cdot\begin{bmatrix} \beta a_{11} & \beta a_{12}\\\beta a_{21} & \beta a_{22}\end{bmatrix}
+            \\ &= \alpha\cdot\left(\beta\cdot\begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix}\right)
+            \\ &= \alpha\cdot(\beta\cdot A)
+        \end{align*}
+
+        \item[M2)] Seja $1 \in \rac$ e
+        \[
+        A = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} \in \cp{M}_{2 \times 3}(\rac).
+        \]
+        Temos
+        \begin{align*}
+            1\cdot A & = \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix}
+            \\ &= \begin{pmatrix} 1\cdot a_{11} & 1\cdot a_{12}\\1\cdot a_{21} & 1\cdot a_{22}\end{pmatrix}
+            \\ &= \begin{pmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix} = A.
+        \end{align*}
+
+        \item Sejam $\alpha \in \rac$ e
+        \[
+        A = \begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} \in \cp{M}_{2 \times 3}(\rac),
+        B = \begin{bmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{bmatrix} \in \cp{M}_{2 \times 3}(\rac).
+        \]
+        Temos
+        \begin{align*}
+            \alpha\cdot(A + B) & = \alpha\cdot\left(
+            \begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} +
+            \begin{bmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{bmatrix}\right)
+            \\ &= \alpha\cdot\left(\begin{bmatrix} a_{11} + b_{11} & a_{12} + b_{12}\\a_{21} + b_{21} & a_{22} + b_{22}\end{bmatrix}\right)
+            \\ &= \begin{bmatrix} \alpha(a_{11} + b_{11}) & \alpha(a_{12} + b_{12})\\\alpha(a_{21} + b_{21}) & \alpha(a_{22} + b_{22})\end{bmatrix}
+            \\ &= \begin{bmatrix} \alpha a_{11} + \alpha b_{11} & \alpha a_{12} + \alpha b_{12}\\\alpha a_{21} + \alpha b_{21} & \alpha a_{22} + \alpha b_{22}\end{bmatrix}
+            \\ &= \begin{bmatrix} \alpha a_{11} & \alpha a_{12}\\ \alpha a_{21} & \alpha a_{22}\end{bmatrix}
+            + \begin{bmatrix} \alpha b_{11} & \alpha b_{12}\\ \alpha b_{21} & \alpha b_{22}\end{bmatrix}
+            \\ &= \alpha\begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} +
+            \alpha\begin{bmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{bmatrix}
+            \\ &= \alpha\cdot A + \alpha\cdot B
+        \end{align*}
+
+        \item[D2)] Sejam $\alpha$, $\beta \in \rac$ e
+        \[
+        A = \begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} \in \cp{M}_{2 \times 3}(\rac).
+        \]
+        Temos
+        \begin{align*}
+            (\alpha + \beta)\cdot A & = (\alpha + \beta)\cdot\begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix}
+            \\ &= \begin{bmatrix} (\alpha + \beta)a_{11} & (\alpha + \beta)a_{12}\\(\alpha + \beta)a_{21} & (\alpha + \beta)a_{22}\end{bmatrix}
+            \\ &= \begin{bmatrix} \alpha a_{11} + \beta a_{11} & \alpha a_{12} + \beta a_{12}\\\alpha a_{21} + \beta a_{21} & \alpha a_{22} + \beta a_{22}\end{bmatrix}
+            \\ &= \begin{bmatrix} \alpha a_{11} & \alpha a_{12}\\ \alpha a_{21} & \alpha a_{22}\end{bmatrix}
+            + \begin{bmatrix} \beta a_{11} & \beta a_{12}\\ \beta a_{21} & \beta a_{22}\end{bmatrix}
+            \\ &= \alpha\cdot\begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix}  + \beta\cdot\begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix}
+            \\ &= \alpha\cdot A + \beta\cdot A.
+        \end{align*}
+    \end{itemize}
+    Assim $V = \cp{M}_{2 \times 3}(\rac)$ é um espaço vetorial sobre $\rac$.
 \end{document}
