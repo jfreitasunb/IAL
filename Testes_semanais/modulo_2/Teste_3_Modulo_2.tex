@@ -38,9 +38,27 @@
             \hspace{2.1cm}}}
     \vspace{.4cm}
 
-    \questao{} Seja $V = M_2(\complex)$ um espaço vetorial sobre $\real$. Dado o conjunto
+    \questao{} Considere o $\rac$-espaço vetorial $V = M_2(\rac)$. Sejam
     \[
-        W = \left\{\begin{pmatrix} a_{11} & a_{12}\\ a_{21} & a_{22}\end{pmatrix} \in \cp{M}_2(\complex) \mid a_{11} + a_{12} = 0\right\}.
+    A = \begin{bmatrix}
+        \phantom{-} 1 & 1\\
+        -1 & 1
+    \end{bmatrix},
+    B = \begin{bmatrix}
+        1 & -1\\
+        1 & \phantom{-} 0
+    \end{bmatrix}
     \]
-    Mostre que $W$ é um subespaço vetorial de $V$.
+    e $W = Span(A, B)$. Determine se a matriz $C$ está em $W$ nos seguintes casos:
+    \begin{multicols}{2}
+        \begin{enumerate}[label={\alph*})]
+            \item $C = \begin{bmatrix}1 & 2\\3 & 4\end{bmatrix}$
+
+            \item $C = \begin{bmatrix}3 & -5\\5 & \phantom{-} 1\end{bmatrix}$
+
+            \item $C = \begin{bmatrix}-1 & -5\\ \phantom{-} 5 & -1\end{bmatrix}$
+
+            \item $C = \begin{bmatrix}0 & -1\\1 & \phantom{-} 0\end{bmatrix}$
+        \end{enumerate}
+    \end{multicols}
 \end{document}
