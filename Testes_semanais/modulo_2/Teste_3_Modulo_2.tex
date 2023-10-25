@@ -1,7 +1,7 @@
 %!TEX program = xelatex
 %!TEX encoding = UTF-8
 %Definições de Ano, Semestre, número e data da avaliação
-\def\numeroteste{2}
+\def\numeroteste{3}
 \def\modulo{2}
 \def\dataavaliacao{18/10/2023}
 
@@ -43,50 +43,4 @@
         W = \left\{\begin{pmatrix} a_{11} & a_{12}\\ a_{21} & a_{22}\end{pmatrix} \in \cp{M}_2(\complex) \mid a_{11} + a_{12} = 0\right\}.
     \]
     Mostre que $W$ é um subespaço vetorial de $V$.
-
-    \solucao
-    Primeiro observe que o vetor nulo de $V = M_2(\complex)$ é a matriz
-    \[
-        0_V = \begin{bmatrix}
-            0 & 0\\0 & 0
-        \end{bmatrix}
-    \]
-    e é fácil ver que $0_V \in W$. Logo $W$ não é vazio.
-
-    Assim sejam $u_1$, $u_2 \in W$ e $\lambda \in \real$. Temos que
-    \begin{align*}
-        u_1 = \begin{bmatrix}
-            a_{11} & a_{12}\\a_{21} & a_{22}
-        \end{bmatrix}\\
-        u_2 = \begin{bmatrix}
-            b_{11} & b_{12}\\b_{21} & b_{22}
-        \end{bmatrix}.
-    \end{align*}
-    Como $u_1 \in W$ e $u_2 \in W$ devemos ter
-    \begin{align*}
-        a_{11} + a_{12} = 0\\
-        b_{11} + b_{12} = 0.
-    \end{align*}
-
-    Agora
-    \begin{align*}
-        u_1 + u_2 = \begin{bmatrix}a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} + \begin{bmatrix}b_{11} & b_{12}\\b_{21} & b_{22}\end{bmatrix} = \begin{bmatrix}a_{11} + b_{11} & a_{12} + b_{12}\\a_{21} + a_{21} & a_{22} + b_{22}\end{bmatrix}.
-    \end{align*}
-    Como $a_{11} + a_{12} = 0$ e $b_{11} + b_{12} = 0$, então
-    \[
-        (a_{11} + b_{11}) + (a_{12} + b_{12}) = 0
-    \]
-    e com isso $u_1 + u_2 \in W$.
-
-    Finalmente,
-    \begin{align*}
-        \lambda\cdot u_1 = \lambda \cdot \begin{bmatrix}a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} = \begin{bmatrix}\lambda a_{11} & \lambda a_{12}\\\lambda a_{21} & \lambda a_{22}\end{bmatrix}
-    \end{align*}
-    e como $a_{11} + a_{12} = 0$, então
-    \[
-        \lambda a_{11} + \lambda a_{12} = \lambda(a_{11} + a_{12}) = \lambda\cdot 0 = 0.
-    \]
-    Logo $\lambda\cdot u_1 \in W$.
-
-    Portanto $W$ é um subespaço de $V = M_2(\complex)$.
 \end{document}
