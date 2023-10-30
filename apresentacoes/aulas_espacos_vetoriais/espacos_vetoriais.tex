@@ -333,6 +333,145 @@
 \end{frame}
 
 \begin{frame}
+    \begin{exemplos}[Bases Canônicas]
+        \begin{enumerate}[label={\roman*})]
+            \item Considere $V = \real^2$ como um $\real$-espaço vetorial. \pause Uma base para esse espaço é dada pelo conjunto \pause
+            \[
+                \mathcal{B} = \{e_1 = (1, 0), \pause e_2 = (0, 1)\}\pause
+            \]
+            pois tal conjunto é L.I. \pause e gera $V$.\pause Portanto $\dim_\real\real^2 = 2$.\pause
+
+            \vspace*{1cm}
+
+            \item Considere $V = \real^3$ como um $\real$-espaço vetorial. \pause Uma base para esse espaço é dada pelo conjunto
+            \[
+                \mathcal{B} = \{e_1 = (1, 0, 0), \pause e_2 = (0, 1, 0), \pause e_3 = (0, 0, 1)\}
+            \] \pause pois tal conjunto é L.I. \pause e gera $V$. \pause Portanto $\dim_\real\real^3 = 3$.
+            \seti
+        \end{enumerate}
+    \end{exemplos}
+\end{frame}
+
+\begin{frame}
+    \begin{exemplos}
+        \begin{enumerate}[label={\roman*})]
+            \conti
+            \item Considere $V = \cp{K}^n$ um $\cp{K}$-espaço vetorial. \pause Uma base para esse espaço é dada pelo conjunto \pause $\mathcal{B} = \{e_1, \pause e_2, \pause e_3, \pause \dots, e_n\}$ onde\pause
+            \begin{align*}
+                e_1 &= (1, 0, 0, \dots, 0)\\
+                e_2 &= (0, 1, 0, \dots, 0)\\
+                e_3 &= (0, 0, 1, \dots, 0)\\
+                &\vdots\\
+                e_n &= (0, 0, 0, \dots, 1)
+            \end{align*}\pause
+            pois tal conjunto é L.I. \pause e gera $V$. \pause Portanto $\dim_\cp{K}\cp{K}^n = n$.
+            \seti
+        \end{enumerate}
+    \end{exemplos}
+\end{frame}
+
+\begin{frame}
+    \begin{exemplos}
+        \begin{enumerate}[label={\roman*})]
+            \conti
+            \item Seja $V = M_2(\real)$ um $\real$-espaço vetorial. \pause Sejam
+            \[
+                E_{11} = \begin{bmatrix}1 & 0\\0 & 0\end{bmatrix},\pause
+                E_{12} = \begin{bmatrix}0 & 1\\0 & 0\end{bmatrix},\pause
+                E_{21} = \begin{bmatrix}0 & 0\\1 & 0\end{bmatrix},\pause
+                E_{22} = \begin{bmatrix}0 & 0\\0 & 1\end{bmatrix}.\pause
+            \]
+            Então o conjunto $\mathcal{B} = \{E_{11}, E_{12}, E_{21}, E_{22}\}$ é L.I. \pause e gera $M_2(\real)$. \pause Logo é uma base para $M_2(\real)$ \pause como um $\real$-espaço vetorial. \pause Portanto $\dim_\real M_2(\real) = 4$.
+            \seti
+        \end{enumerate}
+    \end{exemplos}
+\end{frame}
+
+\begin{frame}
+    \begin{exemplos}
+        \begin{enumerate}[label={\roman*})]
+            \conti
+            \item Seja $V = M_2(\complex)$ \pause um $\complex$-espaço vetorial. \pause Sejam
+            \[
+            E_{11} = \begin{bmatrix}1 & 0\\0 & 0\end{bmatrix},
+            E_{12} = \begin{bmatrix}0 & 1\\0 & 0\end{bmatrix},
+            E_{21} = \begin{bmatrix}0 & 0\\1 & 0\end{bmatrix},
+            E_{22} = \begin{bmatrix}0 & 0\\0 & 1\end{bmatrix}.
+            \]\pause
+            Então o conjunto $\mathcal{B} = \{E_{11}, E_{12}, E_{21}, E_{22}\}$ \pause é L.I. e gera $M_2(\complex)$. \pause Logo é uma base para $M_2(\complex)$ \pause como um $\complex$-espaço vetorial. \pause Portanto $\dim_\complex M_2(\complex) = 4$.
+
+            \seti
+        \end{enumerate}
+    \end{exemplos}
+\end{frame}
+
+\begin{frame}
+    \begin{exemplos}
+        \begin{enumerate}[label={\roman*})]
+            \conti
+            \item Agora seja $V = M_2(\complex)$ \pause um $\real$-espaço vetorial. \pause Tomando as matrizes\pause
+            \begin{align*}
+                E_{11} &= \begin{bmatrix}1 & 0\\0 & 0\end{bmatrix},
+                E_{12} = \begin{bmatrix}0 & 1\\0 & 0\end{bmatrix},
+                E_{21} = \begin{bmatrix}0 & 0\\1 & 0\end{bmatrix},
+                E_{22} = \begin{bmatrix}0 & 0\\0 & 1\end{bmatrix},\\
+                F_{11} &= \begin{bmatrix}i & 0\\0 & 0\end{bmatrix},
+                F_{12} = \begin{bmatrix}0 & i\\0 & 0\end{bmatrix},
+                F_{21} = \begin{bmatrix}0 & 0\\i & 0\end{bmatrix},
+                F_{22} = \begin{bmatrix}0 & 0\\0 & i\end{bmatrix}.
+            \end{align*}\pause
+            O conjunto $\mathcal{B} = \{E_{12}, E_{12}, E_{21}, E_{22}, F_{12}, F_{12}, F_{21}, F_{22}\}$ \pause continua sendo L.I. \pause e gera $V = M_2(\complex)$ \pause como um $\real$-espaço vetorial. \pause Logo é uma base para $M_2(\complex)$ \pause como um $\real$-espaço vetorial. \pause Portanto $\dim_\real M_2(\complex) = 8$.
+            \seti
+        \end{enumerate}
+    \end{exemplos}
+\end{frame}
+
+\begin{frame}
+    \begin{exemplos}
+        \begin{enumerate}[label={\roman*})]
+            \conti
+            \item Seja $V = M_{p \times q}(\cp{K})$ \pause um $\cp{K}$-espaço vetorial. \pause Tome as matrizes $E_{ij}$ \pause definidas como\pause
+            \[
+                E_{ij} = \pause \begin{cases}a_{ij} = 1\pause \\0, \mbox{caso contrário}\end{cases}\pause
+            \]
+            Então o conjunto
+            \[
+                \mathcal{B} = \{E_{11}, \pause E_{12}, \pause \dots, E_{1q}, E_{21}, E_{22}, \pause \dots, E_{2q}, \dots, E_{p1}, E_{p2}, \dots, E_{pq}\}\pause
+            \]
+            é L>I>\pause e gera $V = M_{p \times q}(\cp{K})$ \pause como um $\cp{K}$-espaço vetorial. \pause Logo é uma base para $V = M_{p \times q}(\cp{K})$ \pause como um $\cp{K}$-espaço vetorial, \pause com isso $\dim_{\cp{K}}M_{p \times q}(\cp{K}) = pq$.
+            \seti
+        \end{enumerate}
+    \end{exemplos}
+\end{frame}
+
+\begin{frame}
+    \begin{exemplos}
+        \begin{enumerate}[label={\roman*})]
+            \conti
+            \item Se $V = \{0_v\}$ então $V$ não possui base. \pause Apesar do conjunto $\{0_v\}$ \pause gerar $V$ ele não é linearmente independente. \pause Portanto $\dim_\cp{K}V = 0$.\pause
+            \vspace*{1cm}
+
+            \item Considere $V = \mathcal{P}_n(\real) = \pause \{a_0 + a_1x + a_2x^2 + \cdots, a_{n - 1}x^{n - 1} + a_nx^n \pause \mid a_i \in \real, i = 0, 1, 2, \dots, n - 1, n\}$ \pause um $\real$-espaço vetorial. \pause Então o conjunto $\mathcal{B} = \{1, x, x^2, \dots, x^{n - 1}, x^n\}$ \pause é L.I. e gera $V$. \pause Logo é uma base para $V$ \pause como um $\real$-espaço vetorial. \pause Portanto $\dim_\real\mathcal{P}_n(\real) = n + 1$.
+
+            \seti
+        \end{enumerate}
+    \end{exemplos}
+\end{frame}
+
+\begin{frame}
+    \begin{exemplos}
+        \begin{enumerate}[label={\roman*})]
+            \conti
+            \item Agora considere
+            \[
+                V = \mathcal{P}(\real) \pause = \{a_0 + a_1x + a_2x^2 + \cdots + a_mx^m \pause \mid a_i \in \real,\ 0 \le i \le m,\ m \in \n\}\pause
+            \]
+            como um $\real$-espaço vetorial. \pause Então $V$ não possui uma base \pause contendo uma quantidade finita de vetores. \pause Nesse caso $\dim_\real\mathcal{P}(\real) = \infty$.
+        \end{enumerate}
+    \end{exemplos}
+\end{frame}
+
+\begin{frame}
   \begin{teorema}
     Seja $V$ um espaço vetorial sobre um corpo $\cp{K}$ \pause com $\dim_\cp{K}V = n$. \pause Se o conjunto $\{v_1, v_2, \dots, v_n\}$ \pause é linearmente independente, \pause então o conjunto $\{v_1, v_2, \dots, v_n\}$ é uma base de $V$.
   \end{teorema}
