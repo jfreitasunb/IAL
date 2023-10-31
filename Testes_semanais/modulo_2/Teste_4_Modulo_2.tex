@@ -1,0 +1,72 @@
+%!TEX program = xelatex
+%!TEX encoding = UTF-8
+%Definições de Ano, Semestre, número e data da avaliação
+\def\numeroteste{4}
+\def\modulo{2}
+\def\dataavaliacao{18/10/2023}
+
+\documentclass[12pt]{exam}
+
+\include{../configuracoes_testes/pacotes}
+\include{../configuracoes_testes/comandos_personalizados}
+\include{../configuracoes_testes/ambientes}
+
+\begin{document}
+
+    \begin{figure}[h]
+        \begin{minipage}[c]{1.7cm}
+            \includegraphics[width=1.7cm]{unb.pdf}
+        \end{minipage}
+        \hspace{0pt}
+        \begin{minipage}[c]{4in}
+            {Universidade de Brasília} \\
+            {Departamento de Matemática}
+        \end{minipage}
+    \end{figure}
+    \vesp{-1}
+    \hrule
+    \begin{center}
+        {\Large\bf \disciplina\ - Turma \turma}  \\
+        \vesp{0.2} {\large\bf Teste \numeroteste\ - Módulo\ \modulo\ -\ \dataavaliacao}
+    \end{center}
+
+    \noindent{\bf \underline{Nome: \hspace{9.8cm} Mat.:\qquad \
+            \hspace{2.1cm}}}\\
+    \vspace*{.01cm}
+
+    \noindent{\bf \underline{Nome: \hspace{9.8cm} Mat.:\qquad \
+            \hspace{2.1cm}}}
+    \vspace{.4cm}
+
+    \questao{} Seja $S \subseteq M_2(\real)$ dado por:
+    \[
+    S = \left\{
+    \begin{bmatrix}
+        a & b\\
+        c & d
+    \end{bmatrix}
+    \mid c = a+b \mbox{ e } d = a
+    \right\}.
+    \]
+
+    \begin{enumerate}[label={\alph*})]
+        \item Mostre que $S$ é um subespaço vetorial de $M_2(\real)$.
+
+        \item Qual a dimensão de $S$?
+
+        \item O conjunto
+        \[
+        \left\{
+        \begin{bmatrix}
+            1 & -1\\
+            0 & \phantom{x} 1
+        \end{bmatrix},
+        \begin{bmatrix}
+            2 & 1\\
+            3 & 4
+        \end{bmatrix}
+        \right\}
+        \]
+        é uma base de $S$? Justifique.
+    \end{enumerate}
+\end{document}
