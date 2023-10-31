@@ -61,4 +61,99 @@
             \item $C = \begin{bmatrix}0 & -1\\1 & \phantom{-} 0\end{bmatrix}$
         \end{enumerate}
     \end{multicols}
+
+    \solucao
+    Primeiro vamos verificar quando um vetor genérico pertence ao espaço gerado pelas matrizes $A$ e $B$. Para isso, seja
+    \[
+        Y = \begin{bmatrix}
+            \alpha & \beta\\
+            \gamma & \delta
+        \end{bmatrix}
+    \]
+    uma matriz qualquer em $M_2(\rac)$. Queremos saber quando $Y \in W = Span(A, B)$. Para isso, é necessário que existam escalares $x$, $y \in \rac$ tais que
+    \begin{align*}
+        Y &= xA + yB\\
+        \begin{bmatrix}\alpha & \beta\\\gamma & \delta\end{bmatrix} &= x\begin{bmatrix}\phantom{-} 1 & 1\\-1 & 1\end{bmatrix} + y\begin{bmatrix}1 & -1\\1 & \phantom{-} 0\end{bmatrix}.
+    \end{align*}
+    Isto é, precisamos resolver o sistema linear
+    \[
+        \begin{cases}
+            x + y = \alpha\\
+            x - y = \beta\\
+            -x + y = \gamma\\
+            x = \delta
+        \end{cases}
+    \]
+    Montando a matriz dos coeficientes e escalonando:
+    \begin{align*}
+        \begin{amatrix}{2}
+            1 & 1 & \alpha\\
+            1 & -1 & \beta\\
+            -1 & 1 & \gamma\\
+            1 & 0 & \delta
+        \end{amatrix}
+        \begin{array}{l}
+            \phantom{x}\\
+            L_2 \to L_2 - L_1\\
+            L_3 \to L_3 + L_1\\
+            L_4 \to L_4 - L_1
+        \end{array}&\sim
+        \begin{amatrix}{2}
+            1 & 1 & \alpha\\
+            0 & -2 & \beta - \alpha\\
+            0 & 0 & \gamma + \alpha\\
+            0 & -1 & \delta - \alpha
+        \end{amatrix}
+        \begin{array}{l}
+            \phantom{x}\\
+            \phantom{x}\\
+            \phantom{x}\\
+            L_4 \to -L_4\\
+        \end{array}\sim
+        \begin{amatrix}{2}
+            1 & 1 & \alpha\\
+            0 & -2 & \beta - \alpha\\
+            0 & 0 & \gamma + \alpha\\
+            0 & 1 & \alpha - \delta
+        \end{amatrix}
+        \begin{array}{l}
+            \phantom{x}\\
+            L_2 \leftrightarrow L_4\\
+            \phantom{x}\\
+            \phantom{x}
+        \end{array}\\&\sim
+        \begin{amatrix}{2}
+            1 & 1 & \alpha\\
+            0 & 1 & \alpha - \delta\\
+            0 & 0 & \gamma + \alpha\\
+            0 & -2 & \beta - \alpha
+        \end{amatrix}
+        \begin{array}{l}
+            \phantom{x}\\
+            \phantom{x}\\
+            \phantom{x}\\
+            L_4 \to L_4 + 2L_2
+        \end{array}\sim
+        \begin{amatrix}{2}
+            1 & 1 & \alpha\\
+            0 & 1 & \alpha - \delta\\
+            0 & 0 & \gamma + \alpha\\
+            0 & 0 & \beta + \alpha - 2\delta
+        \end{amatrix}
+    \end{align*}
+    Assim para que esse sistema admita solução precisamos ter
+    \[
+        \begin{cases}
+            \gamma + \alpha = 0\\
+            \beta + \alpha - 2\delta = 0
+        \end{cases}
+    \]
+    isto é, $\gamma = -\alpha$ e $\beta = 2\delta + \alpha$. Portanto uma matriz $Y \in W$ se, e somente se, $Y$ é da forma
+    \[
+        Y = \begin{bmatrix}
+            \phantom{-}\alpha & 2\delta - \alpha\\
+            -\alpha & \delta
+        \end{bmatrix}.
+    \]
+    Com isso, vemos que nenhuma das matrizes dadas pertencem ao espaço gerado pelas matrizes $A$ e $B$.
 \end{document}
