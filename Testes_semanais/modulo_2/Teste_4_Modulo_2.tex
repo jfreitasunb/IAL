@@ -69,4 +69,62 @@
         \]
         é uma base de $S$? Justifique.
     \end{enumerate}
+
+    \solucao Primeiro observe que o conjunto $S$ pode ser escrito como
+    \[
+        S = \left\{\begin{bmatrix}
+            a & b\\a + b & a
+        \end{bmatrix} \mid a, b \in \real\right\}.
+    \]
+    \begin{enumerate}[label={\alph*})]
+        \item Primeiro observe que
+        \[
+            \begin{bmatrix}
+                0 & 0\\ 0 & 0
+            \end{bmatrix} \in S,
+        \]
+        logo $S$ é um conjunto não vazio.
+
+        Agora sejam $u_1$, $u_2 \in S$ e $\lambda \in \real$. Temos
+        \begin{align*}
+            u_1 = \begin{bmatrix}a & b\\a + b & a\end{bmatrix}\\
+            u_2 = \begin{bmatrix}c & d\\c + d & c\end{bmatrix}\\
+        \end{align*}
+        daí:
+        \begin{enumerate}[label={\roman*})]
+            \item $u_1 + u_2 = \begin{bmatrix}a & b\\a + b & a\end{bmatrix} + \begin{bmatrix}c & d\\c + d & c\end{bmatrix} = \begin{bmatrix}a + c & b + d\\a + b + c + d & a + c\end{bmatrix}\in S$;
+            \item $\lambda\cdot u_1 = \lambda\cdot \begin{bmatrix}a & b\\a + b & a\end{bmatrix} = \begin{bmatrix}\lambda a & \lambda b\\\lambda(a + b) & \lambda a\end{bmatrix} = \begin{bmatrix}\lambda a & \lambda b\\\lambda a + \lambda b & \lambda a\end{bmatrix} \in S$.
+        \end{enumerate}
+        Logo $S$ é de fato um subespaço de $M_2(\real)$.
+
+        \item Para encontrar a dimensão de $S$ precisamos encontrar um base para esse espaço. Para isso, seja $\begin{bmatrix}a & b\\ a + b & a\end{bmatrix} \in S$ um elemento qualquer. Podemos escrever
+        \begin{align*}
+            \begin{bmatrix}a & b\\a + b & a\end{bmatrix} &= \begin{bmatrix}a & 0\\a & a\end{bmatrix} + \begin{bmatrix}0 & b\\b & 0\end{bmatrix} = a\begin{bmatrix}1 & 0\\1 & 1\end{bmatrix} + b\begin{bmatrix}0 & 1\\1 & 0\end{bmatrix}.
+        \end{align*}
+        Com isso todo elemento de $S$ é uma combinação linear de $\begin{bmatrix}1 & 0\\1 & 1\end{bmatrix}$ e de $\begin{bmatrix}0 & 1\\1 & 0\end{bmatrix}$. Portanto o conjunto
+        \[
+            \mathcal{A} = \left\{\begin{bmatrix}1 & 0\\1 & 1\end{bmatrix}, \begin{bmatrix}0 & 1\\1 & 0\end{bmatrix}\right\}
+        \]
+        gera $S$. Para ser uma base basta que seja L.I. e isso é verdade uma vez que esse conjunto possui somente 2 vetores e é fácil ver que um não é múltiplo escalar do outro. Logo o conjunto $\mathcal{A}$ é uma base para $S$ e como esse conjunto possui 2 vetores então
+        \[
+            \dim_\real S = 2.
+        \]
+
+        \item Como $S$ tem dimensão 2, então qualquer conjunto L.I. contendo 2 vetores será uma base para $S$. Nesse caso é fácil ver que os vetores no
+        \[
+        \left\{
+        \begin{bmatrix}
+            1 & -1\\
+            0 & \phantom{x} 1
+        \end{bmatrix},
+        \begin{bmatrix}
+            2 & 1\\
+            3 & 4
+        \end{bmatrix}
+        \right\}
+        \]
+        são L.I. pois um não é múltiplo escalar no outro, no entanto esse conjunto \textbf{NÃO É UMA BASE} para $S$ pois $ \begin{bmatrix}2 & 1\\3 & 4\end{bmatrix} \notin S$.
+
+        Um conjunto para ser base de um espaço ou subespaço além de ser L.I. e gerar também deve conter vetores desse conjunto.
+    \end{enumerate}
 \end{document}
