@@ -101,7 +101,7 @@
         \begin{amatrix}{2}
             1 & 1 & \alpha\\
             0 & -2 & \beta - \alpha\\
-            0 & 0 & \gamma + \alpha\\
+            0 & 2 & \gamma + \alpha\\
             0 & -1 & \delta - \alpha
         \end{amatrix}
         \begin{array}{l}
@@ -113,7 +113,7 @@
         \begin{amatrix}{2}
             1 & 1 & \alpha\\
             0 & -2 & \beta - \alpha\\
-            0 & 0 & \gamma + \alpha\\
+            0 & 2 & \gamma + \alpha\\
             0 & 1 & \alpha - \delta
         \end{amatrix}
         \begin{array}{l}
@@ -125,34 +125,34 @@
         \begin{amatrix}{2}
             1 & 1 & \alpha\\
             0 & 1 & \alpha - \delta\\
-            0 & 0 & \gamma + \alpha\\
+            0 & 2 & \gamma + \alpha\\
             0 & -2 & \beta - \alpha
         \end{amatrix}
         \begin{array}{l}
             \phantom{x}\\
             \phantom{x}\\
-            \phantom{x}\\
+            L_3 \to L_3 - 2L_2\\
             L_4 \to L_4 + 2L_2
         \end{array}\sim
         \begin{amatrix}{2}
             1 & 1 & \alpha\\
             0 & 1 & \alpha - \delta\\
-            0 & 0 & \gamma + \alpha\\
-            0 & 0 & \beta + \alpha - 2\delta
+            0 & 0 & \gamma - \alpha + 2\delta\\
+            0 & 0 & \beta - \alpha - 2\delta
         \end{amatrix}
     \end{align*}
     Assim para que esse sistema admita solução precisamos ter
     \[
         \begin{cases}
-            \gamma + \alpha = 0\\
-            \beta + \alpha - 2\delta = 0
+            \gamma - \alpha + 2\delta = 0\\
+            \beta - \alpha - 2\delta = 0
         \end{cases}
     \]
-    isto é, $\gamma = -\alpha$ e $\beta = 2\delta + \alpha$. Portanto uma matriz $Y \in W$ se, e somente se, $Y$ é da forma
+    isto é, $\gamma = \alpha - 2\delta$ e $\beta = \alpha + 2\delta$. Portanto uma matriz $Y \in W$ se, e somente se, $Y$ é da forma
     \[
         Y = \begin{bmatrix}
-            \phantom{-}\alpha & 2\delta - \alpha\\
-            -\alpha & \delta
+            \phantom{-}\alpha & \alpha + 2\delta\\
+            \alpha -2\delta& \delta
         \end{bmatrix}.
     \]
     Com isso, vemos que nenhuma das matrizes dadas pertencem ao espaço gerado pelas matrizes $A$ e $B$.
