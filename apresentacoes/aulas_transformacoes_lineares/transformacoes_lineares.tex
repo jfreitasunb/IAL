@@ -60,7 +60,7 @@
 \begin{frame}
     \begin{lema}
         Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$ \pause e $T \colon V \to W$ uma transformação linear. \pause Então:\pause
-        \begin{enumerate}[label={\roman*})]\label{transformacao_linear_propriedades_basicas}
+        \begin{enumerate}[label={\roman*})]
             \item $T(0_V) \pause = 0_W$, \pause onde $0_V$ e $0_W$ \pause denotam os vetores nulos de $V$ e $W$, respectivamente.\pause
 
             \vspace*{1cm}
@@ -85,7 +85,7 @@
 \end{frame}
 
 \begin{frame}
-    \begin{teorema}\label{existencia_de_transformacao_unica_dado_valores}
+    \begin{teorema}
         Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$. \pause Se $\{u_1, \pause \dots, \pause u_n\}$ \pause é uma base de $V$ \pause e se $\{w_1, \pause \dots, \pause w_n\} \subseteq W$, \pause então existe uma única transformação linear \pause $T \colon V \to W$ \pause tal que $T(u_1) = w_1$, \pause $T(u_2) = w_2$, \pause \dots, $T(u_n) = w_n$.
     \end{teorema}
 \end{frame}
@@ -127,7 +127,7 @@
 \end{frame}
 
 \begin{frame}
-    \begin{teorema}[Teorema do N\'ucleo e da Imagem]\label{teorema_do_nucleo_e_da_imagem}
+    \begin{teorema}[Teorema do N\'ucleo e da Imagem]
         Sejam $V$ e $W$ $\cp{K}$-espa\c{c}os vetoriais \pause com $\dim_\cp{K}V$ finita. \pause Seja $T \colon V \to W$ uma transforma\c{c}\~ao linear. \pause Ent\~ao\pause
         \[
             \dim_\cp{K}V \pause = \dim_\cp{K}\ker(T) \pause + \dim_\cp{K}\im(T).
@@ -149,7 +149,7 @@
 \end{frame}
 
 \begin{frame}
-    \begin{proposicao}\label{caracteriza_transformacao_injetora}
+    \begin{proposicao}
         Sejam $V$ e $W$ espa\c{c}os vetoriais sobre um corpo $\cp{K}$ \pause e $T \colon V \to W$ uma transforma\c{c}\~ao linear.\pause
         \begin{enumerate}[label={\roman*})]
             \item $T$ \'e injetora \pause se, e somente se, $\ker(T) = \{0_V\}$.\pause
@@ -274,7 +274,7 @@
 \end{frame}
 
 \begin{frame}
-    \begin{teorema}\label{teorema_toda_transformacao_matriz}
+    \begin{teorema}
         Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$, \pause de dimensões $p \ge 1$ e $q \ge 1$, respectivamente. \pause Sejam $\mathcal{B}_V$ e $\mathcal{B}_W$ bases ordenadas de $V$ e $W$, respectivamente. \pause Então para cada transformação linear $T \colon V \to W$, \pause existe uma matriz $A \in \cp{M}_{q\times p}(\cp{K})$ tal que\pause
         \[
             [T(x)]_{\mathcal{B}_W} \pause = A[x]_{\mathcal{B}_V}\pause
@@ -298,7 +298,7 @@
 \end{frame}
 
 \begin{frame}
-    \begin{teorema}\label{matriz_da_composicao_de_transformacoes}
+    \begin{teorema}
         Sejam $F \colon U \to V$ \pause e $G \colon V \to W$ \pause duas transformações lineares onde $U$, $V$ e $W$ \pause são espaços vetoriais $\cp{K}$ \pause de dimensões $n$, $m$ e $r$, respectivamente. \pause Fixe bases ordenadas $\mathcal{B}_U$, \pause $\mathcal{B}_V$ \pause e $\mathcal{B}_W$ \pause para $U$, $V$ e $W$, respectivamente. \pause Então $(G \circ F) \colon U \to W$ \pause dada por $(G\circ F)(v) = G(F(v))$ \pause é uma transformação linear e\pause
         \[
             [(G \circ F)]_{{\mathcal{B}_W},{\mathcal{B}_U}} \pause = [G]_{{\mathcal{B}_W},{\mathcal{B}_V}}[F]_{{\mathcal{B}_V},{\mathcal{B}_U}}.
@@ -327,7 +327,7 @@
 \end{frame}
 
 \begin{frame}
-    \begin{teorema}\label{teorema_mudanca_base}
+    \begin{teorema}
         Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$, \pause $\mathcal{B}_1$ e $\mathcal{B}_2$ bases ordenadas de $V$. \pause Então existe uma única matriz $P \in \cp{M}_n(\cp{K})$, \pause necessariamente invertível tal que\pause
         \begin{enumerate}[label={\roman*})]
             \item $[x]_{\mathcal{B}_1} = \pause P[x]_{\mathcal{B}_2}$\pause
@@ -348,7 +348,7 @@
 \end{frame}
 
 \begin{frame}
-    \begin{teorema}\label{teorema_matriz_mudanca_base}
+    \begin{teorema}
         Seja $P \in \cp{M}_n(\cp{K})$ um matriz invertível. \pause Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$ \pause e $\mathcal{B}_1$ uma base ordenada de $V$. \pause Então existe uma única base ordenada $\mathcal{B}_2$ \pause de $V$ tal que\pause
         \begin{enumerate}[label={\roman*})]
             \item $[x]_{\mathcal{B}_1} = \pause P[x]_{\mathcal{B}_2}$\pause
