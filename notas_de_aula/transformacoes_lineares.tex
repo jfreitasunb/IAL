@@ -8,11 +8,11 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 \section{Conceitos Básicos}
 
 \begin{definicao}
-  Sejam $(V, +, \cdot)$ e $(W, \oplus, \otimes)$ espaços vetoriais sobre um corpo $\cp{K}$. Uma função $T \colon V \to W$ é uma \textbf{transformação linear}\index{Transformação linear} se
-  \begin{enumerate}[label={\roman*})]
-    \item $T(u_1 + u_2) = T(u_1) \oplus T(u_2)$ para todos $u_1$, $u_2 \in V$;
-    \item $T(\lambda \cdot u) = \lambda \otimes T(u)$ para todo $\lambda \in \cp{K}$ e todo $u \in V$.
-  \end{enumerate}
+    Sejam $(V, +, \cdot)$ e $(W, \oplus, \otimes)$ espaços vetoriais sobre um corpo $\cp{K}$. Uma função $T \colon V \to W$ é uma \textbf{transformação linear}\index{Transformação linear} se
+    \begin{enumerate}[label={\roman*})]
+        \item $T(u_1 + u_2) = T(u_1) \oplus T(u_2)$ para todos $u_1$, $u_2 \in V$;
+        \item $T(\lambda \cdot u) = \lambda \otimes T(u)$ para todo $\lambda \in \cp{K}$ e todo $u \in V$.
+    \end{enumerate}
 \end{definicao}
 
 \begin{observacoes}
@@ -24,47 +24,47 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 \end{observacoes}
 
 \begin{lema}
-  Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$ e $T \colon V \to W$ uma transformação linear. Então:
-  \begin{enumerate}[label={\roman*})]\label{transformacao_linear_propriedades_basicas}
-    \item $T(0_V) = 0_W$, onde $0_V$ e $0_W$ denotam os vetores nulos de $V$ e $W$, respectivamente.
+    Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$ e $T \colon V \to W$ uma transformação linear. Então:
+    \begin{enumerate}[label={\roman*})]\label{transformacao_linear_propriedades_basicas}
+        \item $T(0_V) = 0_W$, onde $0_V$ e $0_W$ denotam os vetores nulos de $V$ e $W$, respectivamente.
 
-    \item $T(-u) = -T(u)$, para cada $u \in V$.
+        \item $T(-u) = -T(u)$, para cada $u \in V$.
 
-    \item $T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \cdots \alpha_mu_m) = \alpha_1 T(u_1) + \alpha_2 T(u_2) + \cdots + \alpha_mT(u_m)$, onde $\alpha_i \in \cp{K}$ e $u_i \in V$ para $i = 1$, \dots, $m$.
-  \end{enumerate}
+        \item $T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \cdots \alpha_mu_m) = \alpha_1 T(u_1) + \alpha_2 T(u_2) + \cdots + \alpha_mT(u_m)$, onde $\alpha_i \in \cp{K}$ e $u_i \in V$ para $i = 1$, \dots, $m$.
+    \end{enumerate}
 \end{lema}
 \begin{prova}
-  \begin{enumerate}[label={\roman*})]
-    \item Note que
-    \[
-      0_W + T(0_V) = T(0_V + 0_V) = T(0_V) + T(0_V),
-    \]
-    ou seja, $T(0_V) = 0_W$.
+    \begin{enumerate}[label={\roman*})]
+        \item Note que
+        \[
+            0_W + T(0_V) = T(0_V + 0_V) = T(0_V) + T(0_V),
+        \]
+        ou seja, $T(0_V) = 0_W$.
 
-    \item Basta observar que $-u = (-1_\cp{K})u$ e daí
-    \[
-      T(-u) = T((-1_\cp{K})u) = -1_\cp{K}T(u) = -T(u).
-    \]
+        \item Basta observar que $-u = (-1_\cp{K})u$ e daí
+        \[
+            T(-u) = T((-1_\cp{K})u) = -1_\cp{K}T(u) = -T(u).
+        \]
 
-    \item Por indução em $m$. Se $m = 2$, então
-    \[
-      T(\alpha_1u_1 + \alpha_2u_2) = T(\alpha_1u_1) + T(\alpha_2u_2) = \alpha_1T(u_1) + \alpha_2T(u_2).
-    \]
-    Suponha que para $m = p$ tenhamos
-    \[
-      T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_pu_p) = \alpha_1T(u_1) + \alpha_2T(u_2) + \cdots + \alpha_pT(u_p).
-    \]
-    Vamos mostra que é válido para $m = p + 1$. De fato,
-    \begin{align*}
-      T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_{p + 1}u_{p + 1}) &= T([\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_pu_p] + \alpha_{p + 1}u_{p + 1}) \\ &= T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_{p + 1}u_{p + 1}) + T(\alpha_{p+1}u_{p+1}) \\ &= \alpha_1T(u_1) + \alpha_2T(u_2) + \cdots + \alpha_pT(u_p) + \alpha_{p+1}T(u_{p+1}).
-    \end{align*}
-  \end{enumerate}
+        \item Por indução em $m$. Se $m = 2$, então
+        \[
+            T(\alpha_1u_1 + \alpha_2u_2) = T(\alpha_1u_1) + T(\alpha_2u_2) = \alpha_1T(u_1) + \alpha_2T(u_2).
+        \]
+        Suponha que para $m = p$ tenhamos
+        \[
+            T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_pu_p) = \alpha_1T(u_1) + \alpha_2T(u_2) + \cdots + \alpha_pT(u_p).
+        \]
+        Vamos mostra que é válido para $m = p + 1$. De fato,
+        \begin{align*}
+            T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_{p + 1}u_{p + 1}) &= T([\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_pu_p] + \alpha_{p + 1}u_{p + 1}) \\ &= T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_{p + 1}u_{p + 1}) + T(\alpha_{p+1}u_{p+1}) \\ &= \alpha_1T(u_1) + \alpha_2T(u_2) + \cdots + \alpha_pT(u_p) + \alpha_{p+1}T(u_{p+1}).
+        \end{align*}
+    \end{enumerate}
 \end{prova}
 
 \begin{lema}\label{condicaoalternativaTL}
     Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$. Então uma função $T \colon V \to W$ é uma transformação linear se, e somente se,
     \[
-    T(\lambda u_1 + u_2) = \lambda T(u_1) + T(u_2),
+        T(\lambda u_1 + u_2) = \lambda T(u_1) + T(u_2),
     \]
     para todos $u_1$, $u_2 \in V$ e todo $\lambda \in \cp{K}$.
 \end{lema}
@@ -73,128 +73,124 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
 \end{prova}
 
 \begin{exemplo}
-  \begin{enumerate}[label={\arabic*})]
-    \item Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais. A função $T \colon V \to W$ dada por $T(u) = 0_W$ para todo $u \in V$ é uma transformação linear.
+    \begin{enumerate}[label={\arabic*})]
+        \item Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais. A função $T \colon V \to W$ dada por $T(u) = 0_W$ para todo $u \in V$ é uma transformação linear.
 
-    \item Seja $V$ um $\cp{K}$-espaço vetorial. A função $T \colon V \to V$ dada por $T(u) = u$ para todo $u \in V$ é uma transformação linear.
+        \item Seja $V$ um $\cp{K}$-espaço vetorial. A função $T \colon V \to V$ dada por $T(u) = u$ para todo $u \in V$ é uma transformação linear.
 
-    \item Considere $\real$ como um $\real$-espaço vetorial. Dado $a \in \real$, defina $T_a \colon \real \to \real$ por $T_a(x) = ax$ para todo $x \in \real$. Então $T_a$ é uma transformação linear.
+        \item Considere $\real$ como um $\real$-espaço vetorial. Dado $a \in \real$, defina $T_a \colon \real \to \real$ por $T_a(x) = ax$ para todo $x \in \real$. Então $T_a$ é uma transformação linear.
 
-    \item Seja $T \colon \real \to \real$ dada por $T(x) = e^x$. Então $T$ não é uma transformação linear pois $T(0) \ne 0$.
+        \item Seja $T \colon \real \to \real$ dada por $T(x) = e^x$. Então $T$ não é uma transformação linear pois $T(0) \ne 0$.
 
-    \item Considere a função $T \colon \real^2 \to \real^2$ definida por $T(x, y) = (2x, 2y)$. Então $T$ é uma transformação linear.
-    \begin{solucao}
-        Sejam $u_1 = (a, b)$, $u_2 = (c, d) \in \real^2$ e $\lambda \in \real$. Temos:
-        \begin{itemize}
-            \item $T(u_1 + u_2) = T((a, b) + (c, d)) = T(a + c, b + d) = (2(a + c), 2(b + d)) = (2a + 2c, 2b + 2d) = (2a, 2b) + (2c, 2d) = T(a, b) + T(c, d) = T(u_1) + T(u_2)$
+        \item Considere a função $T \colon \real^2 \to \real^2$ definida por $T(x, y) = (2x, 2y)$. Então $T$ é uma transformação linear.
+        \begin{solucao}
+            Sejam $u_1 = (a, b)$, $u_2 = (c, d) \in \real^2$ e $\lambda \in \real$. Temos:
+            \begin{itemize}
+                \item $T(u_1 + u_2) = T((a, b) + (c, d)) = T(a + c, b + d) = (2(a + c), 2(b + d)) = (2a + 2c, 2b + 2d) = (2a, 2b) + (2c, 2d) = T(a, b) + T(c, d) = T(u_1) + T(u_2)$
 
-            \vspace*{.3cm}
-            \item $T(\lambda u_1) = T(\lambda (a, b)) = T(\lambda a, \lambda b) = (2\lambda a, 2\lambda b) = \lambda(2a, 2b) = \lambda T(a, b) = \lambda T(u_1)$
-        \end{itemize}
+                \item $T(\lambda u_1) = T(\lambda (a, b)) = T(\lambda a, \lambda b) = (2\lambda a, 2\lambda b) = \lambda(2a, 2b) = \lambda T(a, b) = \lambda T(u_1)$
+            \end{itemize}
+            Logo $T$ é uma transformação linear.
+        \end{solucao}
 
-        Logo $T$ é uma transformação linear.
-    \end{solucao}
+        \item No caso geral, seja $k \in \real$ um número fixo. Considere a função $T_k \colon \real^2 \to \real^2$ definida por $T_k(x, y) = (kx, ky)$. Então $T$ é uma transformação linear.
+        \begin{solucao}
+            Sejam $u_1 = (a, b)$, $u_2 = (c, d) \in \real^2$ e $\lambda \in \real$. Temos:
+            \begin{itemize}
+                \item $T_k(u_1 + u_2) = T_k((a, b) + (c, d)) = T_k(a + c, b + d) = (k(a + c), k(b + d)) = (ka + kc, kb + kd) = (ka, kb) + (kc, kd) = T_k(a, b) + T_k(c, d) = T_k(u_1) + T_k(u_2)$
 
-    \item No caso geral, seja $k \in \real$ um número fixo. Considere a função $T_k \colon \real^2 \to \real^2$ definida por $T_k(x, y) = (kx, ky)$. Então $T$ é uma transformação linear.
-    \begin{solucao}
-        Sejam $u_1 = (a, b)$, $u_2 = (c, d) \in \real^2$ e $\lambda \in \real$. Temos:
-        \begin{itemize}
-            \item $T_k(u_1 + u_2) = T_k((a, b) + (c, d)) = T_k(a + c, b + d) = (k(a + c), k(b + d)) = (ka + kc, kb + kd) = (ka, kb) + (kc, kd) = T_k(a, b) + T_k(c, d) = T_k(u_1) + T_k(u_2)$
+                \item $T_k(\lambda u_1) = T_k(\lambda (a, b)) = T_k(\lambda a, \lambda b) = (k\lambda a, k\lambda b) = \lambda(ka, kb) = \lambda T_k(a, b) = \lambda T_k(u_1)$
+            \end{itemize}
 
-            \vspace*{.3cm}
+            Logo $T_k$ é uma transformação linear.
+        \end{solucao}
 
-            \item $T_k(\lambda u_1) = T_k(\lambda (a, b)) = T_k(\lambda a, \lambda b) = (k\lambda a, k\lambda b) = \lambda(ka, kb) = \lambda T_k(a, b) = \lambda T_k(u_1)$
-        \end{itemize}
-
-        Logo $T_k$ é uma transformação linear.
-    \end{solucao}
-
-    \item Seja $T \colon M_2(\real) \to M_{2 \times 3}(\real)$ dada por
-    \[
-        T\left(\begin{bmatrix}a & b\\c & d\end{bmatrix}\right) = \begin{bmatrix}ad & 1 & 0\\0 & 0 & 0\end{bmatrix}.
-    \]
-    Então $T$ não é transformação linear.
-    \begin{solucao}
-        Nesse caso como
+        \item Seja $T \colon M_2(\real) \to M_{2 \times 3}(\real)$ dada por
         \[
-            T\left(\begin{bmatrix}0 & 0\\0 & 0\end{bmatrix}\right) = \begin{bmatrix}0 & 1 & 0\\0 & 0 & 0\end{bmatrix} \ne \begin{bmatrix}0 & 0 & 0\\0 & 0 & 0\end{bmatrix}
+            T\left(\begin{bmatrix}a & b\\c & d\end{bmatrix}\right) = \begin{bmatrix}ad & 1 & 0\\0 & 0 & 0\end{bmatrix}.
         \]
-        então $T$ não é uma transformação linear.
-    \end{solucao}
+        Então $T$ não é transformação linear.
+        \begin{solucao}
+            Nesse caso como
+            \[
+                T\left(\begin{bmatrix}0 & 0\\0 & 0\end{bmatrix}\right) = \begin{bmatrix}0 & 1 & 0\\0 & 0 & 0\end{bmatrix} \ne \begin{bmatrix}0 & 0 & 0\\0 & 0 & 0\end{bmatrix}
+            \]
+            então $T$ não é uma transformação linear.
+        \end{solucao}
 
-    \item Seja $T \colon \real^3 \to \real^2$ dada por $T(x, y, z) = (x^2, 3y, 0)$. Então $T$ não é uma transformação linear.
-    \begin{solucao}
-        Nesse caso tome $u_1 = (1, 0, 1)$ e $u_2 = (1, 1, 0) \in \real^3$. Temos
-        \begin{align*}
-            T(u_1 + u_2) = T((1, 0, 1) + (1, 1, 0)) = T(2, 1, 1) = (4, 3, 0)\\
-            T(u_1) + T(u_2) = (1, 3, 0) + (1, 3, 0) = (2, 6, 0).
-        \end{align*}
-        Logo $T(u_1 + u_2) \ne T(u_1) + T(u_2)$. Observe que nesse caso não podemos usar o vetor nulo uma vez que $T(0, 0, 0) = (0, 0, 0)$.
-    \end{solucao}
+        \item Seja $T \colon \real^3 \to \real^2$ dada por $T(x, y, z) = (x^2, 3y, 0)$. Então $T$ não é uma transformação linear.
+        \begin{solucao}
+            Nesse caso tome $u_1 = (1, 0, 1)$ e $u_2 = (1, 1, 0) \in \real^3$. Temos
+            \begin{align*}
+                T(u_1 + u_2) = T((1, 0, 1) + (1, 1, 0)) = T(2, 1, 1) = (4, 3, 0)\\
+                T(u_1) + T(u_2) = (1, 3, 0) + (1, 3, 0) = (2, 6, 0).
+            \end{align*}
+            Logo $T(u_1 + u_2) \ne T(u_1) + T(u_2)$. Observe que nesse caso não podemos usar o vetor nulo uma vez que $T(0, 0, 0) = (0, 0, 0)$.
+        \end{solucao}
 
-    \item Considere a função $T \colon \real^2 \to \real^3$ dada por $T(x, y) = (x, 2x - y, 3x + 4y)$. Então $T$ é uma transformação linear.
-    \begin{solucao}
-        Sejam $u_1 = (a, b)$, $u_2 = (c, d) \in \real^2$ e $\lambda \in \real$. Temos
-        \begin{align*}
-            T(u_1 + u_ 2) &= T((a, b) + (c, d)) = T(a + c, b + d) \\ &= (a + c, 2(a + c) - (b + d), 3(a + c) + 4(b + d)) \\ &= (a + c, 2a - b + 2c - d, 3a + 4b + 3c + 4d)\\
-            T(u_1) + T(u_2) &= T(a, b) + T(c, d) = (a, 2a - b, 3a + 4b) + (c, 2c - d, 3c + 4d) \\ &= (a + c, 2a - b + 2c - d, 3a + 4b + 3c + 4d)
-        \end{align*}
-        Logo, $T(u_1 + u_2) = T(u_1) + T(u_2)$.
+        \item Considere a função $T \colon \real^2 \to \real^3$ dada por $T(x, y) = (x, 2x - y, 3x + 4y)$. Então $T$ é uma transformação linear.
+        \begin{solucao}
+            Sejam $u_1 = (a, b)$, $u_2 = (c, d) \in \real^2$ e $\lambda \in \real$. Temos
+            \begin{align*}
+                T(u_1 + u_ 2) &= T((a, b) + (c, d)) = T(a + c, b + d) \\ &= (a + c, 2(a + c) - (b + d), 3(a + c) + 4(b + d)) \\ &= (a + c, 2a - b + 2c - d, 3a + 4b + 3c + 4d)\\
+                T(u_1) + T(u_2) &= T(a, b) + T(c, d) = (a, 2a - b, 3a + 4b) + (c, 2c - d, 3c + 4d) \\ &= (a + c, 2a - b + 2c - d, 3a + 4b + 3c + 4d)
+            \end{align*}
+            Logo, $T(u_1 + u_2) = T(u_1) + T(u_2)$.
 
-        Agora
-        \begin{align*}
-            T(\lambda u_1) &= T(\lambda (a, b)) = T(\lambda a, \lambda b) = (\lambda a, 2\lambda a - \lambda b, 3\lambda a + 4\lambda 4) \\ &= \lambda (a, 2a - b, 3a + 4b) = \lambda T(a, b) \\ &= \lambda T(u_1).
-        \end{align*}
+            Agora
+            \begin{align*}
+                T(\lambda u_1) &= T(\lambda (a, b)) = T(\lambda a, \lambda b) = (\lambda a, 2\lambda a - \lambda b, 3\lambda a + 4\lambda 4) \\ &= \lambda (a, 2a - b, 3a + 4b) = \lambda T(a, b) \\ &= \lambda T(u_1).
+            \end{align*}
 
-        Logo, $T$ é uma transformação linear.
-    \end{solucao}
+            Logo, $T$ é uma transformação linear.
+        \end{solucao}
 
-    \item Sejam $\cp{K}^3$ e $\cp{M}_2(\cp{K})$ $\cp{K}$-espaços vetoriais. Defina $T \colon \cp{K}^3 \to \cp{M}_2(\cp{K})$ por
-    \[
-      T(a, b, c) = \begin{bmatrix}
-        a+b & 0_\cp{K}\\
-        0_\cp{K} & c - b
-      \end{bmatrix}.
-    \]
-    Então $T$ é uma transformação linear.
-    \begin{solucao}
-        Vamos usar o Lema \ref{condicaoalternativaTL}. Para isso, sejam $(a, b, c)$, $(d, e, f) \in \cp{K}^3$ e $\lambda \in \cp{K}$. Temos:
-        \begin{align*}
-            T(\lambda(a,b,c) + (d,e,f)) &= T(\lambda a + d, \lambda b + e, \lambda c + f) \\ &= \begin{bmatrix}
-            (\lambda a + d) + (\lambda b + e) & 0_\cp{K}\\
-            0_\cp{K} & (\lambda c + f) - (\lambda b + e)
-            \end{bmatrix} \\ &= \begin{bmatrix}
-            \lambda a + \lambda b & 0_\cp{K}\\
-            0_\cp{K} & \lambda c - \lambda b
-            \end{bmatrix} + \begin{bmatrix}
-            d + e & 0_\cp{K}\\
-            0_\cp{K} & f - e
-        \end{bmatrix} \\ &= \lambda T(a,b,c) + T(d,e,f).
-        \end{align*}
-        Logo, $T$ é uma transformação linear.
-    \end{solucao}
+        \item Sejam $\cp{K}^3$ e $\cp{M}_2(\cp{K})$ $\cp{K}$-espaços vetoriais. Defina $T \colon \cp{K}^3 \to \cp{M}_2(\cp{K})$ por
+        \[
+            T(a, b, c) = \begin{bmatrix}
+            a+b & 0_\cp{K}\\
+            0_\cp{K} & c - b
+            \end{bmatrix}.
+        \]
+        Então $T$ é uma transformação linear.
+        \begin{solucao}
+            Vamos usar o Lema \ref{condicaoalternativaTL}. Para isso, sejam $(a, b, c)$, $(d, e, f) \in \cp{K}^3$ e $\lambda \in \cp{K}$. Temos:
+            \begin{align*}
+                T(\lambda(a,b,c) + (d,e,f)) &= T(\lambda a + d, \lambda b + e, \lambda c + f) \\ &= \begin{bmatrix}
+                (\lambda a + d) + (\lambda b + e) & 0_\cp{K}\\
+                0_\cp{K} & (\lambda c + f) - (\lambda b + e)
+                \end{bmatrix} \\ &= \begin{bmatrix}
+                \lambda a + \lambda b & 0_\cp{K}\\
+                0_\cp{K} & \lambda c - \lambda b
+                \end{bmatrix} + \begin{bmatrix}
+                d + e & 0_\cp{K}\\
+                0_\cp{K} & f - e
+                \end{bmatrix} \\ &= \lambda T(a,b,c) + T(d,e,f).
+            \end{align*}
+            Logo, $T$ é uma transformação linear.
+        \end{solucao}
 
-    \item Seja $T \colon \mathcal{P}_n(\real) \to \mathcal{P}_{n + 1}(\real)$ dada por $T(p(x)) = xp(x)$. Então $T$ é uma transformação linear.
-    \begin{solucao}
-        Aqui também vamos usar o Lema \ref{condicaoalternativaTL}. Para isso, sejam $p(x)$, $q(x) \in \mathcal{P}_n(\real)$ e $\lambda \in \real$. Temos:
-        \begin{align*}
-            T(\lambda p(x) + q(x)) &= x(\lambda p(x) + q(x)) = x\lambda p(x) + xq(x) \\ &= \lambda xp(x) + xq(x) \\ &= \lambda T(p(x)) + T(q(x)).
-        \end{align*}
-        Logo, $T$ é uma transformação linear.
-    \end{solucao}
+        \item Seja $T \colon \mathcal{P}_n(\real) \to \mathcal{P}_{n + 1}(\real)$ dada por $T(p(x)) = xp(x)$. Então $T$ é uma transformação linear.
+        \begin{solucao}
+            Aqui também vamos usar o Lema \ref{condicaoalternativaTL}. Para isso, sejam $p(x)$, $q(x) \in \mathcal{P}_n(\real)$ e $\lambda \in \real$. Temos:
+            \begin{align*}
+                T(\lambda p(x) + q(x)) &= x(\lambda p(x) + q(x)) = x\lambda p(x) + xq(x) \\ &= \lambda xp(x) + xq(x) \\ &= \lambda T(p(x)) + T(q(x)).
+            \end{align*}
+            Logo, $T$ é uma transformação linear.
+        \end{solucao}
 
-    \item Seja $\mathcal{P}(\complex)$ um $\complex$-espaço vetorial e considere $D \colon \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dado por
-    \[
-      D(a_0 + a_1x + a_2x^2 + \cdots + a_nx^n) = a_1 + 2a_2x + \cdots + na_nx^{n-1}.
-    \]
-    Então $D$ é uma transformação linear.
+        \item Seja $\mathcal{P}(\complex)$ um $\complex$-espaço vetorial e considere $D \colon \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dado por
+        \[
+            D(a_0 + a_1x + a_2x^2 + \cdots + a_nx^n) = a_1 + 2a_2x + \cdots + na_nx^{n-1}.
+        \]
+        Então $D$ é uma transformação linear.
 
-    \item Seja $\mathcal{C}([a,b], \real) = \{ f : [a,b] \to \real \mid f \mbox{ é uma função contínua}\}$. é imediato verificar que $\mathcal{C}([a,b], \real)$ é um $\real$-espaço vetorial. Defina $T \colon \mathcal{C}([a,b], \real) \to \real$ por
-    \[
-      T(f(x)) = \int_a^bf(x)dx.
-    \]
-    Então $T$ é uma transformação linear.
-  \end{enumerate}
+        \item Seja $\mathcal{C}([a,b], \real) = \{ f : [a,b] \to \real \mid f \mbox{ é uma função contínua}\}$. é imediato verificar que $\mathcal{C}([a,b], \real)$ é um $\real$-espaço vetorial. Defina $T \colon \mathcal{C}([a,b], \real) \to \real$ por
+        \[
+            T(f(x)) = \int_a^bf(x)dx.
+        \]
+        Então $T$ é uma transformação linear.
+    \end{enumerate}
 \end{exemplo}
 
 Sejam $V$ e $W$ espaços vetoriais sobre um corpo $\cp{K}$. Considere $\mathcal{B} = \{v_1, v_2, \dots, v_n\}$ uma base de $V$ e $T \colon V \to W$ uma transformação linear.
@@ -210,7 +206,7 @@ Assim
 isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer a transformação $T$ basta conhecer seus valores em uma base de $V$. Mais ainda, temos o seguinte resultado:
 
 \begin{teorema}\label{existencia_de_transformacao_unica_dado_valores}
-  Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais. Se $\{u_1, \dots, u_n\}$ é uma base de $V$ e se $\{w_1, \dots, w_n\} \subseteq W$, então existe uma única transformação linear $T \colon V \to W$ tal que $T(u_i) = w_i$ para cada $i = 1$, \dots, $n$.
+    Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais. Se $\{u_1, \dots, u_n\}$ é uma base de $V$ e se $\{w_1, \dots, w_n\} \subseteq W$, então existe uma única transformação linear $T \colon V \to W$ tal que $T(u_i) = w_i$ para cada $i = 1$, \dots, $n$.
 \end{teorema}
 
 \begin{exemplos}
@@ -225,14 +221,14 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
         \begin{solucao}
             Como $\mathcal{B}$ é base de $\real^3$, então para todo $(x, y, z) \in \real^3$ existem $a$, $b$, $c \in \real$ tais que:
             \begin{align*}
-                (x, y, z) = a(0, 1, 0) + b(1, 0, 1) + c(1, 1, 0)
+            (x, y, z) = a(0, 1, 0) + b(1, 0, 1) + c(1, 1, 0)
             \end{align*}
             daí obtemos
             \[
                 \begin{cases}
-                    b + c = x\\
-                    a + c = y\\
-                    b = z
+                b + c = x\\
+                a + c = y\\
+                b = z
                 \end{cases}
             \]
             Assim $a = y - x + z$, $b = z$ e $c = x - z$. Logo
@@ -249,374 +245,379 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
                 T(1, 2, 3) = (2 + 3\cdot3, 3\cdot 1 - 2 \cdot 2 - 3 \cdot 3) = (11, -10).
             \end{align*}
         \end{solucao}
+
         \item Os vetores $v_1 = (1,2)$ e $v_2 = (3,4)$ são L.I em $\real^2$ e assim formam uma base de $\real^2$. Assim pelo Teorema \ref{existencia_de_transformacao_unica_dado_valores}, sabemos que existe uma única transformação linear $T \colon \real^2 \to \real^3$ tal que
         \begin{align*}
             T(v_1) &= T(1,2) = (3,2,1)\\
             T(v_2) &= T(3,4) = (6,5,4).
         \end{align*}
-        Determine  $T(x, y)$ e depois calcule $T(1,0)$.
+        Determine$T(x, y)$ e depois calcule $T(1,0)$.
         \begin{solucao}
             Inicialmente vamos encontrar $\alpha$, $\beta \in \real$ tais que:
             \[
-              (x, y) = \alpha(1,2) + \beta(3,4).
+            (x, y) = \alpha(1,2) + \beta(3,4).
             \]
             Isso resulta no sistema
             \[
-              \begin{cases}
-                \alpha + 3\beta = x\\
-                2\alpha + 4\beta = y
-              \end{cases}
+                \begin{cases}
+                    \alpha + 3\beta = x\\
+                    2\alpha + 4\beta = y
+                \end{cases}
             \]
             cuja solução é:
             \[
-              \alpha = \dfrac{3y - 4x}{2}\quad \mbox{e}\quad \beta = \dfrac{2x - y}{2}.
+                \alpha = \dfrac{3y - 4x}{2}\quad \mbox{e}\quad \beta = \dfrac{2x - y}{2}.
             \]
             Assim
             \begin{align*}
-              (x, y) &= \dfrac{3y - 4x}{2}(1, 2) + \dfrac{2x - y}{3}(3, 4)\\
-              T(x, y) &= T\left(\dfrac{3y - 4x}{2}(1, 2) + \dfrac{2x - y}{3}(3, 4)\right)\\
-              T(x, y) &= \left(\dfrac{3y - 4x}{2}\right)T(1, 2) + \left(\dfrac{2x - y}{3}\right)T(3, 4)\\
-              T(x, y) &= \left(\dfrac{3y - 4x}{2}\right)(3, 2, 1) + \left(\dfrac{2x - y}{3}\right)(6, 5, 4)\\
-              T(x, y) &= \left(\dfrac{3y}{2}, \dfrac{y + 2x}{2}, \dfrac{4x - y}{2}\right)
+                (x, y) &= \dfrac{3y - 4x}{2}(1, 2) + \dfrac{2x - y}{3}(3, 4)\\
+                T(x, y) &= T\left(\dfrac{3y - 4x}{2}(1, 2) + \dfrac{2x - y}{3}(3, 4)\right)\\
+                T(x, y) &= \left(\dfrac{3y - 4x}{2}\right)T(1, 2) + \left(\dfrac{2x - y}{3}\right)T(3, 4)\\
+                T(x, y) &= \left(\dfrac{3y - 4x}{2}\right)(3, 2, 1) + \left(\dfrac{2x - y}{3}\right)(6, 5, 4)\\
+                T(x, y) &= \left(\dfrac{3y}{2}, \dfrac{y + 2x}{2}, \dfrac{4x - y}{2}\right)
             \end{align*}
             Daí
             \[
-              T(1,0) =(0,1,2).
+                T(1,0) =(0,1,2).
             \]
         \end{solucao}
     \end{enumerate}
 \end{exemplos}
 
 \begin{definicao}
-  Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais e $T \colon V \to W$ uma transformação linear.
-  \begin{enumerate}[label={\roman*})]
-    \item O conjunto
-    \[
-      \ker(T) = \{u \in V \mid T(u) = 0_W\}
-    \]
-    é chamado de \textbf{kernel}\index{Transformação linear!kernel} ou \textbf{núcleo}\index{Transformação linear!núcleo} de $T$. \textit{O núcleo de $T$ também pode ser denotado por $Nuc(T)$}.
+    Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais e $T \colon V \to W$ uma transformação linear.
+    \begin{enumerate}[label={\roman*})]
+        \item O conjunto
+        \[
+            \ker(T) = \{u \in V \mid T(u) = 0_W\}
+        \]
+        é chamado de \textbf{kernel}\index{Transformação linear!kernel} ou \textbf{núcleo}\index{Transformação linear!núcleo} de $T$. \textit{O núcleo de $T$ também pode ser denotado por $Nuc(T)$}.
 
-    \item O conjunto
-    \[
-      \im(T) = \{u \in W \mid \mbox{ existe } v \in V \mbox{ tal que } T(v) = u\}
-    \]
-    é chamado de \textbf{imagem}\index{Transformação linear!imagem} de $T$.
-  \end{enumerate}
+        \item O conjunto
+        \[
+            \im(T) = \{u \in W \mid \mbox{ existe } v \in V \mbox{ tal que } T(v) = u\}
+        \]
+        é chamado de \textbf{imagem}\index{Transformação linear!imagem} de $T$.
+    \end{enumerate}
 \end{definicao}
 
 \begin{proposicao}
-  Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais e $T \colon V \to W$ uma transformação linear. Então:
-  \begin{enumerate}[label={\roman*})]
-    \item $\ker(T)$ é um subespaço de $V$;
-    \item $\im(T)$ é um subespaço de $W$.
-  \end{enumerate}
+    Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais e $T \colon V \to W$ uma transformação linear. Então:
+        \begin{enumerate}[label={\roman*})]
+            \item $\ker(T)$ é um subespaço de $V$;
+            \item $\im(T)$ é um subespaço de $W$.
+        \end{enumerate}
 \end{proposicao}
 \begin{prova}
-  \begin{enumerate}[label={\roman*})]
-    \item Inicialmente $\ker(T) \ne \emptyset$ pois $T(0_V) = 0_W$, ou seja, $0_V \in \ker(T)$. Agora, sejam $u_1$, $u_2 \in \ker(T)$ e $\lambda \in \cp{K}$. Precisamos mostrar que $\lambda u_1 + u_2 \in \cp{K}$, isto é, precisamos mostrar que $\lambda u_1 + u_2 \in \ker(T)$. Temos
-    \[
-      T(\lambda u_1 + u_2) = \lambda T(u_1) + T(u_2) = 0_W.
-    \]
-    Logo, $\ker(T)$ é um subespaço de $V$.
+    \begin{enumerate}[label={\roman*})]
+        \item Inicialmente $\ker(T) \ne \emptyset$ pois $T(0_V) = 0_W$, ou seja, $0_V \in \ker(T)$. Agora, sejam $u_1$, $u_2 \in \ker(T)$ e $\lambda \in \cp{K}$. Precisamos mostrar que $\lambda u_1 + u_2 \in \cp{K}$, isto é, precisamos mostrar que $\lambda u_1 + u_2 \in \ker(T)$. Temos
+        \[
+            T(\lambda u_1 + u_2) = \lambda T(u_1) + T(u_2) = 0_W.
+        \]
+        Logo, $\ker(T)$ é um subespaço de $V$.
 
-    \item Inicialmente $0_W \in \im(T)$ pois $0_W = T(0_V)$ e daí $\im(T) \ne \emptyset$. Sejam $w_1$, $w_2 \in \im(T)$ e $\lambda \in \cp{K}$. Então existem $u_1$, $u_2 \in V$ tais que $w_1 = T(u_1)$ e $w_2 = T(u_2)$. Assim
-    \[
-      \lambda w_1 + w_2 = \lambda T(u_1) + T(u_2) = T(\lambda u_1) + T(u_2) = T(\lambda u_1 + u_2)
-    \]
-    e então $\lambda w_1 + w_2 \in \im(T)$. Portanto, $\im(T)$ é um subespaço de $W$.
-  \end{enumerate}
+        \item Inicialmente $0_W \in \im(T)$ pois $0_W = T(0_V)$ e daí $\im(T) \ne \emptyset$. Sejam $w_1$, $w_2 \in \im(T)$ e $\lambda \in \cp{K}$. Então existem $u_1$, $u_2 \in V$ tais que $w_1 = T(u_1)$ e $w_2 = T(u_2)$. Assim
+        \[
+            \lambda w_1 + w_2 = \lambda T(u_1) + T(u_2) = T(\lambda u_1) + T(u_2) = T(\lambda u_1 + u_2)
+        \]
+        e então $\lambda w_1 + w_2 \in \im(T)$. Portanto, $\im(T)$ é um subespaço de $W$.
+    \end{enumerate}
 \end{prova}
 
 \begin{lema}\label{transformacao_gera_imagem}
-  Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais e $T \colon V \to W$ uma transformação linear. Se $\mathcal{B} = \{u_1, \dots, u_n\}$ é uma base de $V$, então $\{T(u_1), \dots, T(u_n)\}$ gera $\im(T)$.
+    Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais e $T \colon V \to W$ uma transformação linear. Se $\mathcal{B} = \{u_1, \dots, u_n\}$ é uma base de $V$, então $\{T(u_1), \dots, T(u_n)\}$ gera $\im(T)$.
 \end{lema}
 \begin{prova}
-  Seja $w \in \im T$. Por definição, existe $u \in V$ tal que $T(u) = w$. Como $\mathcal{B}$ é uma base de $V$, então existem $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ tais que $u = \alpha_1u_1 + \cdots + \alpha_nu_n$. Daí
-  \[
-    w = T(u) = \alpha_1T(u_1) + \cdots + \alpha_nT(u_n),
-  \]
-  ou seja, todo vetor de $\im T$ é uma combinação linear de $T(u_1)$, \dots, $T(u_n)$. Portanto $\im(T) = [T(u_1), \dots, T(u_n)]$ como queríamos.
+    Seja $w \in \im T$. Por definição, existe $u \in V$ tal que $T(u) = w$. Como $\mathcal{B}$ é uma base de $V$, então existem $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ tais que $u = \alpha_1u_1 + \cdots + \alpha_nu_n$. Daí
+    \[
+        w = T(u) = \alpha_1T(u_1) + \cdots + \alpha_nT(u_n),
+    \]
+    ou seja, todo vetor de $\im T$ é uma combinação linear de $T(u_1)$, \dots, $T(u_n)$. Portanto $\im(T) = [T(u_1), \dots, T(u_n)]$ como queríamos.
 \end{prova}
 
 \begin{exemplos}
-  \begin{enumerate}[label={\arabic*})]
-    \item Seja $T \colon \real^3 \to \cp{M}_2(\real)$ dada por
-    \[
-      T(a,b,c) = \begin{bmatrix}
-        a + b & 0\\
-        0 & c - b
-      \end{bmatrix}.
-    \]
-    Determine $\ker(T)$ e $\im(T)$.
-    \begin{solucao}
-      Temos
-      \[
-        T(a,b,c) = \begin{bmatrix}
-          0 & 0\\
-          0 & 0
-        \end{bmatrix}
-      \]
-      se, e s\'o se, $a = -b$ e $c = b$. Daí
-      \[
-        \ker(T) = \{(a,b,c) \in \real^3 \mid a = -b, c = b\} = \{(-b,b,b) \mid b \in \real\}.
-      \]
-      Note que $\{(1,1,1)\}$ é uma base de $\ker(T)$, ou seja, $\dim_\real \ker(T) = 1$.
+    \begin{enumerate}[label={\arabic*})]
+        \item Seja $T \colon \real^3 \to \cp{M}_2(\real)$ dada por
+        \[
+            T(a,b,c) = \begin{bmatrix}
+                a + b & 0\\
+                0 & c - b
+            \end{bmatrix}.
+        \]
+        Determine $\ker(T)$ e $\im(T)$.
+        \begin{solucao}
+            Temos
+            \[
+                T(a,b,c) = \begin{bmatrix}
+                0 & 0\\
+                0 & 0
+                \end{bmatrix}
+            \]
+            se, e s\'o se, $a = -b$ e $c = b$. Daí
+            \[
+                \ker(T) = \{(a,b,c) \in \real^3 \mid a = -b, c = b\} = \{(-b,b,b) \mid b \in \real\}.
+            \]
+            Note que $\{(1,1,1)\}$ é uma base de $\ker(T)$, ou seja, $\dim_\real \ker(T) = 1$.
 
-      Agora,
-      \begin{align*}
-        \im(T) &= \{v \in \cp{M}_2(\real) \mid \mbox{ existe } u \in \real^3 \mbox{ de modo que } T(u) = v\}\\
-        \im(T) &= \left\{ \begin{bmatrix}
-          a + b & 0\\
-          0 & c - b
-        \end{bmatrix} \mid a, b, c \in \real\right\}.
-      \end{align*}
-      Assim temos
-      \begin{align*}
-        \begin{bmatrix}
-          a + b & 0\\
-          0 & c - b
-        \end{bmatrix} &= (a + b) \begin{bmatrix}
-          1 & 0\\ 0 & 0
-        \end{bmatrix} + (c - b) \begin{bmatrix}
-          0 & 0\\ 0 & 1
-        \end{bmatrix}
-      \end{align*}
-      e é fácil ver que
-      \[
-        \mathcal{B}' = \left\{ \begin{bmatrix}
-          1 & 0\\ 0 & 0
-        \end{bmatrix}; \begin{bmatrix}
-          0 & 0\\ 0 & 1
-        \end{bmatrix}\right\}
-      \]
-      é um conjunto gerador de $\im(T)$ e é L.I., ou seja, é uma base de $\im(T)$, com isso $\dim_\real\im(T) = 2$. Observe que
-      \[
-        \dim_\real\ker(T) + \dim_\real\im(T) = 3 = \dim_\real\real^3.
-      \]
-    \end{solucao}
+            Agora,
+            \begin{align*}
+                \im(T) &= \{v \in \cp{M}_2(\real) \mid \mbox{ existe } u \in \real^3 \mbox{ de modo que } T(u) = v\}\\
+                \im(T) &= \left\{ \begin{bmatrix}
+                a + b & 0\\
+                0 & c - b
+            \end{bmatrix} \mid a, b, c \in \real\right\}.
+            \end{align*}
+            Assim temos
+            \begin{align*}
+                \begin{bmatrix}
+                    a + b & 0\\
+                    0 & c - b
+                \end{bmatrix} &= (a + b)
+                \begin{bmatrix}
+                    1 & 0\\ 0 & 0
+                 \end{bmatrix}
+                  + (c - b)
+                  \begin{bmatrix}
+                    0 & 0\\ 0 & 1
+                  \end{bmatrix}
+            \end{align*}
+            e é fácil ver que
+            \[
+                \mathcal{B}' = \left\{ \begin{bmatrix}
+                1 & 0\\ 0 & 0
+                \end{bmatrix}; \begin{bmatrix}
+                0 & 0\\ 0 & 1
+                \end{bmatrix}\right\}
+            \]
+            é um conjunto gerador de $\im(T)$ e é L.I., ou seja, é uma base de $\im(T)$, com isso $\dim_\real\im(T) = 2$. Observe que
+            \[
+                \dim_\real\ker(T) + \dim_\real\im(T) = 3 = \dim_\real\real^3.
+            \]
+        \end{solucao}
 
-    \item Seja $T \colon \real^2 \to \real$ dada por $T(x,y) = x + y$. Determine $\ker(T)$ e $\im(T)$.
-    \begin{solucao}
-      Temos
-      \begin{align*}
-        \ker(T) &= \{(x,y) \in \real^2 \mid T(x,y) = 0\} = \{(x,y) \in \real^2 \mid x + y = 0\}\\
-        \ker(T) &= \{(x,-x) \in \real^2 \mid x \in \real\}.
-      \end{align*}
-      Assim $\{(1,-1)\}$ é uma base de $\ker(T)$, ou seja, $\dim_\real\ker(T) = 1$.
+        \item Seja $T \colon \real^2 \to \real$ dada por $T(x,y) = x + y$. Determine $\ker(T)$ e $\im(T)$.
+        \begin{solucao}
+            Temos
+            \begin{align*}
+                \ker(T) &= \{(x,y) \in \real^2 \mid T(x,y) = 0\} = \{(x,y) \in \real^2 \mid x + y = 0\}\\
+                \ker(T) &= \{(x,-x) \in \real^2 \mid x \in \real\}.
+            \end{align*}
+            Assim $\{(1,-1)\}$ é uma base de $\ker(T)$, ou seja, $\dim_\real\ker(T) = 1$.
 
-      Agora
-      \[
-        \im(T) = \{w \in \real \mid \mbox{ existe } (x,y) \in \real^2 \mbox{ tal que } T(x,y) = w\}.
-      \]
-      Assim dado $w \in \real$ um número real qualquer, tome o elemento $(w,0) \in \real^2$. Temos $T(w,0) = w + 0 = w$. Logo $\im(T) = \real$ e então $\dim_\real\im(T) = 1$.
+            Agora
+            \[
+                \im(T) = \{w \in \real \mid \mbox{ existe } (x,y) \in \real^2 \mbox{ tal que } T(x,y) = w\}.
+            \]
+            Assim dado $w \in \real$ um número real qualquer, tome o elemento $(w,0) \in \real^2$. Temos $T(w,0) = w + 0 = w$. Logo $\im(T) = \real$ e então $\dim_\real\im(T) = 1$.
 
-      Novamente temos
-      \[
-        \dim_\real\ker(T) + \dim_\real\im(T) = 2 = \dim_\real\real^2.
-      \]
-    \end{solucao}
-  \end{enumerate}
+            Novamente temos
+            \[
+                \dim_\real\ker(T) + \dim_\real\im(T) = 2 = \dim_\real\real^2.
+            \]
+        \end{solucao}
+    \end{enumerate}
 \end{exemplos}
 
 \begin{teorema}[Teorema do Núcleo e da Imagem]\label{teorema_do_nucleo_e_da_imagem}
-  Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais com $\dim_\cp{K}V$ finita. Seja $T : V \to W$ uma transformação linear. Então
-  \[
-    \dim_\cp{K}V = \dim_\cp{K}\ker(T) + \dim_\cp{K}\im(T).
-  \]
+    Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais com $\dim_\cp{K}V$ finita. Seja $T : V \to W$ uma transformação linear. Então
+    \[
+        \dim_\cp{K}V = \dim_\cp{K}\ker(T) + \dim_\cp{K}\im(T).
+    \]
 \end{teorema}
 
 \begin{definicao}
-  Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais e $T \colon V \to W$ uma transformação linear.
-  \begin{enumerate}[label={\roman*})]
-    \item Dizemos que $T$ é \textbf{injetora}\index{Transformação linear!injetora} se dados $u_1$, $u_2 \in V$ tais que $T(u_1) = T(u_2)$, então $u_1 = u_2$. De modo equivalente, se $u_1$, $u_2 \in V$ são tais que $u_1 \ne u_2$, então $T(u_1) \ne T(u_2)$.
+    Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais e $T \colon V \to W$ uma transformação linear.
+    \begin{enumerate}[label={\roman*})]
+        \item Dizemos que $T$ é \textbf{injetora}\index{Transformação linear!injetora} se dados $u_1$, $u_2 \in V$ tais que $T(u_1) = T(u_2)$, então $u_1 = u_2$. De modo equivalente, se $u_1$, $u_2 \in V$ são tais que $u_1 \ne u_2$, então $T(u_1) \ne T(u_2)$.
 
-    \item Dizemos que $T$ é \textbf{sobrejetora}\index{Transformação linear!sobrejetora} se $\im T = W$. Em outras palavras, $T$ é \textbf{sobrejetora} se para todo $w \in W$, existe $u \in V$ tal que $T(u) = w$.
-  \end{enumerate}
+        \item Dizemos que $T$ é \textbf{sobrejetora}\index{Transformação linear!sobrejetora} se $\im T = W$. Em outras palavras, $T$ é \textbf{sobrejetora} se para todo $w \in W$, existe $u \in V$ tal que $T(u) = w$.
+    \end{enumerate}
 \end{definicao}
 
 \begin{exemplos}
-  \begin{enumerate}[label={\arabic*})]
+    \begin{enumerate}[label={\arabic*})]
     \item A transformação linear $T \colon \real^2 \to \real$ dada por $T(x,y) = x + y$ é sobrejetora, mas não é injetora.
 
     \item A transformação linear $T \colon V \to V$ dada por $T(u) = u$ é injetora e sobrejetora.
-  \end{enumerate}
+    \end{enumerate}
 \end{exemplos}
 
 \begin{proposicao}\label{caracteriza_transformacao_injetora}
-  Sejam $V$ e $W$ espaços vetoriais sobre um corpo $\cp{K}$ e $T \colon V \to W$ uma transformação linear.
+    Sejam $V$ e $W$ espaços vetoriais sobre um corpo $\cp{K}$ e $T \colon V \to W$ uma transformação linear.
     \begin{enumerate}[label={\roman*})]
-      \item $T$ é injetora se, e somente se, $\ker(T) = \{0_V\}$.
+        \item $T$ é injetora se, e somente se, $\ker(T) = \{0_V\}$.
 
-      \item Se $\dim V = \dim W$ e $T$ é injetora, então $T$ transforma bases em bases, isto é, se $\mathcal{B} = \{v_1, v_2, \dots, v_n\}$ é uma base de $V$, então $\{T(v_1), T(v_2), \dots, T(v_n)\}$ é uma base de $W$.
+        \item Se $\dim V = \dim W$ e $T$ é injetora, então $T$ transforma bases em bases, isto é, se $\mathcal{B} = \{v_1, v_2, \dots, v_n\}$ é uma base de $V$, então $\{T(v_1), T(v_2), \dots, T(v_n)\}$ é uma base de $W$.
 
-      \item Se $\dim V = \dim W$, então $T$ é injetora se, e somente se, $T$ é sobrejetora.
+        \item Se $\dim V = \dim W$, então $T$ é injetora se, e somente se, $T$ é sobrejetora.
     \end{enumerate}
 \end{proposicao}
 
 \begin{observacoes}
-  Seja $T \colon V \to W$ uma transformação linear, onde $\dim V < \infty$ e $\dim W < \infty$.
-  \begin{enumerate}[label={\roman*})]
-    \item Se $\dim V > \dim W$, então $T$ não pode ser injetora, isto é, $\ker(T) \ne \emptyset$.
+    Seja $T \colon V \to W$ uma transformação linear, onde $\dim V < \infty$ e $\dim W < \infty$.
+    \begin{enumerate}[label={\roman*})]
+        \item Se $\dim V > \dim W$, então $T$ não pode ser injetora, isto é, $\ker(T) \ne \emptyset$.
 
-    \item Se $\dim V < \dim W$, então $T$ não pode ser sobrejetora, isto é, $\im(T) \ne W$.
-  \end{enumerate}
+        \item Se $\dim V < \dim W$, então $T$ não pode ser sobrejetora, isto é, $\im(T) \ne W$.
+    \end{enumerate}
 \end{observacoes}
 
 \begin{definicao}
-  Se $T \colon V \to W$ é uma transformação linear \textbf{injetora e sobrejetora}, então dizemos que $T$ é uma transformação linear \textbf{bijetora}\index{Transformação linear!bijetora}, ou que $T$ é um \textbf{isomorfismo}\index{Transformação linear!isomorfismo} do espaço $V$ no espaço $W$. Neste caso, dizemos que o espaço $V$ é isomorfo ao espaço $W$ e denotamos isso, escrevendo $V \cong W$.
+    Se $T \colon V \to W$ é uma transformação linear \textbf{injetora e sobrejetora}, então dizemos que $T$ é uma transformação linear \textbf{bijetora}\index{Transformação linear!bijetora}, ou que $T$ é um \textbf{isomorfismo}\index{Transformação linear!isomorfismo} do espaço $V$ no espaço $W$. Neste caso, dizemos que o espaço $V$ é isomorfo ao espaço $W$ e denotamos isso, escrevendo $V \cong W$.
 \end{definicao}
 
 \begin{teorema}
-  Seja $V$ um espaço vetorial sobre $\cp{K}$  com $\dim V = n$, então $V \cong \cp{K}^n$.
+    Seja $V$ um espaço vetorial sobre $\cp{K}$com $\dim V = n$, então $V \cong \cp{K}^n$.
 \end{teorema}
 
 \begin{observacoes}
-  Seja $V$ um espaço vetorial sobre $\cp{K}$ com $\dim V = n$. Então do teorema anterior temos:
-  \begin{enumerate}[label={\roman*})]
-    \item Se $\cp{K} = \rac$, então $V \cong \rac^n$.
+    Seja $V$ um espaço vetorial sobre $\cp{K}$ com $\dim V = n$. Então do teorema anterior temos:
+    \begin{enumerate}[label={\roman*})]
+        \item Se $\cp{K} = \rac$, então $V \cong \rac^n$.
 
-    \item Se $\cp{K} = \real$, então $V \cong \real^n$.
+        \item Se $\cp{K} = \real$, então $V \cong \real^n$.
 
-    \item Se $\cp{K} = \complex$, então $V \cong \complex^n$.
-  \end{enumerate}
+        \item Se $\cp{K} = \complex$, então $V \cong \complex^n$.
+    \end{enumerate}
 \end{observacoes}
 
 \begin{exemplo}
-  Seja $T \colon \cp{K}^4 \to \cp{M}_2(\cp{K})$ dada por
-  \begin{align*}
-    T(1,0,0,0) &= \begin{bmatrix}
-      1 & 0\\
-      0 & 0
-    \end{bmatrix}; T(0,1,0,0) = \begin{bmatrix}
-      0 & 1\\
-      0 & 0
-    \end{bmatrix}\\
-    T(0,0,1,0) &= \begin{bmatrix}
-      0 & 0\\
-      1 & 0
-    \end{bmatrix}; T(0,0,0,1) = \begin{bmatrix}
-      0 & 0\\
-      0 & 1
-    \end{bmatrix}\\
-  \end{align*}
-  é fácil ver que $\ker(T) = \{(0,0,0,0)\}$. Além disso,
-  \[
-    \im(T) = \left[\begin{bmatrix}
-      1 & 0\\
-      0 & 0
-    \end{bmatrix};\begin{bmatrix}
-      0 & 1\\
-      0 & 0
-    \end{bmatrix};\begin{bmatrix}
-      0 & 0\\
-      1 & 0
-    \end{bmatrix};\begin{bmatrix}
-      0 & 0\\
-      0 & 1
-    \end{bmatrix}\right] = \cp{M}_2(\cp{K}).
-  \]
-  Daí $\dim_\cp{K}\im(T) = 4$ e novamente
-  \[
-    \dim_\cp{K}\ker(T) + \dim_\cp{K}\im(T) = 4 = \dim_\cp{K}\cp{M}_2(\cp{K}).
-  \]
+    Seja $T \colon \cp{K}^4 \to \cp{M}_2(\cp{K})$ dada por
+    \begin{align*}
+        T(1,0,0,0) &= \begin{bmatrix}
+        1 & 0\\
+        0 & 0
+        \end{bmatrix}; T(0,1,0,0) = \begin{bmatrix}
+        0 & 1\\
+        0 & 0
+        \end{bmatrix}\\
+        T(0,0,1,0) &= \begin{bmatrix}
+        0 & 0\\
+        1 & 0
+        \end{bmatrix}; T(0,0,0,1) = \begin{bmatrix}
+        0 & 0\\
+        0 & 1
+        \end{bmatrix}\\
+    \end{align*}
+    é fácil ver que $\ker(T) = \{(0,0,0,0)\}$. Além disso,
+    \[
+        \im(T) = \left[\begin{bmatrix}
+        1 & 0\\
+        0 & 0
+        \end{bmatrix};\begin{bmatrix}
+        0 & 1\\
+        0 & 0
+        \end{bmatrix};\begin{bmatrix}
+        0 & 0\\
+        1 & 0
+        \end{bmatrix};\begin{bmatrix}
+        0 & 0\\
+        0 & 1
+        \end{bmatrix}\right] = \cp{M}_2(\cp{K}).
+    \]
+    Daí $\dim_\cp{K}\im(T) = 4$ e novamente
+    \[
+        \dim_\cp{K}\ker(T) + \dim_\cp{K}\im(T) = 4 = \dim_\cp{K}\cp{M}_2(\cp{K}).
+    \]
 \end{exemplo}
 
 \begin{exemplo}
-  Considere $\complex^2$ e $\real^3$ como $\real$-espaços vetoriais e seja $T : \complex^2 \to \real^3$ dada por
-  \[
-    T(a+bi, c+di) = (a - c, b + 2d, a + b - c + 2d)
-  \]
-  onde $a$, $b$ e $c \in \real$. é fácil ver que $T$ é uma transformação linear. Seja $\{(1,0);(i,0);(0,1);(0,i)\}$ uma base de $\complex^2$. Temos pelo Lema \ref{transformacao_gera_imagem} que $\{T(1,0);T(i,0);T(0,1);T(0,i)\}$ gera $\im(T)$. Agora
-  \begin{align*}
-    T(1,0) &= (1,0,1);\quad T(i,0) = (0,1,1)\\
-    T(0,1) &= (-1,0,-1);\quad T(0,i) = (0,2,2)
-  \end{align*}
-  e temos
-  \begin{align*}
-    T(1,0) &= -T(0,1)\\
-    T(i,0) &= 2T(0,i).
-  \end{align*}
-  Observe que $T(1,0)$ não é múltiplo de $T(0,i)$. Logo o conjunto $\{T(1,0); T(0,i)\}$ é uma base de $\im(T)$.
+    Considere $\complex^2$ e $\real^3$ como $\real$-espaços vetoriais e seja $T : \complex^2 \to \real^3$ dada por
+    \[
+        T(a+bi, c+di) = (a - c, b + 2d, a + b - c + 2d)
+    \]
+    onde $a$, $b$ e $c \in \real$. é fácil ver que $T$ é uma transformação linear. Seja $\{(1,0);(i,0);(0,1);(0,i)\}$ uma base de $\complex^2$. Temos pelo Lema \ref{transformacao_gera_imagem} que $\{T(1,0);T(i,0);T(0,1);T(0,i)\}$ gera $\im(T)$. Agora
+    \begin{align*}
+        T(1,0) &= (1,0,1);\quad T(i,0) = (0,1,1)\\
+        T(0,1) &= (-1,0,-1);\quad T(0,i) = (0,2,2)
+    \end{align*}
+    e temos
+    \begin{align*}
+        T(1,0) &= -T(0,1)\\
+        T(i,0) &= 2T(0,i).
+    \end{align*}
+    Observe que $T(1,0)$ não é múltiplo de $T(0,i)$. Logo o conjunto $\{T(1,0); T(0,i)\}$ é uma base de $\im(T)$.
 \end{exemplo}
 
 \begin{definicao}
-  Dadas $S \colon V \to W$  e $T \colon W \to U$ transformações lineares,  definimos a \textbf{composição de $T$ com $S$}\index{Transformação linear!composição}  como a aplicação:
-  \begin{align*}
-    T \circ S \colon &V \to U\\
-                     &v \mapsto (T\circ S)(u) = T(S(v))
-  \end{align*}
+    Dadas $S \colon V \to W$e $T \colon W \to U$ transformações lineares,definimos a \textbf{composição de $T$ com $S$}\index{Transformação linear!composição}como a aplicação:
+    \begin{align*}
+        T \circ S \colon &V \to U\\
+        &v \mapsto (T\circ S)(u) = T(S(v))
+    \end{align*}
 \end{definicao}
 
 \begin{proposicao}
-  Se $S \colon V \to W$ e $T \colon W \to U$ são transformações lineares,  então a composição de $T\circ S$ também é uma transformação linear.
+    Se $S \colon V \to W$ e $T \colon W \to U$ são transformações lineares,então a composição de $T\circ S$ também é uma transformação linear.
 \end{proposicao}
 
 \begin{exemplos}
-  \begin{enumerate}
-    \item Sejam $T \colon \real^2 \to \real^3$ e $S \colon \real^3 \to \real$ transformações lineares dadas por
-      \begin{align*}
-        T(x, y) &= (2x, y - x, x + 2y)\\
-        S(x, y, z) &= 3x - 2y + z
-      \end{align*}
-      Então a composta $S \circ T$ existe e $S \circ T \colon \real^2 \to \real$ é dada por
-      \begin{align*}
-        (S \circ T)(x, y) = S(T(x, y)) = S(2x, y - x, x + 2y) = 3(2x) - 2(y - x) + (x + 2y) = 9x
-      \end{align*}
-      Observe que nesse caso não é possível fazer a composta de $T$ com $S$.
+    \begin{enumerate}
+        \item Sejam $T \colon \real^2 \to \real^3$ e $S \colon \real^3 \to \real$ transformações lineares dadas por
+        \begin{align*}
+            T(x, y) &= (2x, y - x, x + 2y)\\
+            S(x, y, z) &= 3x - 2y + z
+        \end{align*}
+        Então a composta $S \circ T$ existe e $S \circ T \colon \real^2 \to \real$ é dada por
+        \begin{align*}
+            (S \circ T)(x, y) = S(T(x, y)) = S(2x, y - x, x + 2y) = 3(2x) - 2(y - x) + (x + 2y) = 9x
+        \end{align*}
+        Observe que nesse caso não é possível fazer a composta de $T$ com $S$.
 
-    \item Agora sejam $S \colon \real^2 \to \real^2$ e $T \colon \real^2 \to \real^2$ dadas por
-      \begin{align*}
-        S(x, y) = (y, 2x - y)\\
-        T(x, y) = (x + 3y, y - x)
-      \end{align*}
-      Nesse caso existe tanto a composição $S \circ T$ quanto $T \circ S$ e
-      \begin{align*}
-        (S \circ T)(x, y) &= S(T(x, y)) \\ &= S(x + 3y, y - x) \\ &= (y - x, 2(x + 3y) - (y - x)) \\ &= (y - x, 3x + 5y)\\
-        (T \circ S)(x, y) &= T(S(x, y)) \\ &= T(y, 2x - y) \\ &= (y + 3(2x - y), 2x - y - y) \\ &= (6x - 2y, 2x - 2y)
-      \end{align*}
-      Assim temos $S \circ T \ne T \circ S$.
-  \end{enumerate}
+        \item Agora sejam $S \colon \real^2 \to \real^2$ e $T \colon \real^2 \to \real^2$ dadas por
+        \begin{align*}
+            S(x, y) = (y, 2x - y)\\
+            T(x, y) = (x + 3y, y - x)
+        \end{align*}
+        Nesse caso existe tanto a composição $S \circ T$ quanto $T \circ S$ e
+        \begin{align*}
+            (S \circ T)(x, y) &= S(T(x, y)) \\ &= S(x + 3y, y - x) \\ &= (y - x, 2(x + 3y) - (y - x)) \\ &= (y - x, 3x + 5y)\\
+            (T \circ S)(x, y) &= T(S(x, y)) \\ &= T(y, 2x - y) \\ &= (y + 3(2x - y), 2x - y - y) \\ &= (6x - 2y, 2x - 2y)
+        \end{align*}
+        Assim temos $S \circ T \ne T \circ S$.
+    \end{enumerate}
 \end{exemplos}
 
 \begin{definicao}
-  Dado $T \colon V \to V$ um operador linear,  dizemos que $T$ é \textbf{invertível}\index{Transformação linear!invertível} se existe outra aplicação $T^{-1} \colon V \to V$  tal que para qualquer $u \in V$,  $T^{-1}(T(u)) = u$.
+    Dado $T \colon V \to V$ um operador linear,dizemos que $T$ é \textbf{invertível}\index{Transformação linear!invertível} se existe outra aplicação $T^{-1} \colon V \to V$tal que para qualquer $u \in V$,$T^{-1}(T(u)) = u$.
 \end{definicao}
 
 \begin{exemplo}
-  Seja $T \colon \real^2 \to \real^2$ dada por $T(x, y) = (4x - 3y, -2x + 2y)$. Tomo $T^{-1} \colon \real^2 \to \real^2$ dada por $T^{-1}(a, b) = (a + 3b/2, a + 2b)$. Então $T^{-1}$ é o operador inverso de $T$. De fato,
-  \begin{align*}
-    T^{-1}(T(x, y)) &= T^{-1}(4x - 3y, -2x + 2y) \\ &= (4x - 3y + 3(-2x + 2y)/2, 4x - 3y + 2(-2x + 2y)) \\ &= (x, y)
-  \end{align*}
+    Seja $T \colon \real^2 \to \real^2$ dada por $T(x, y) = (4x - 3y, -2x + 2y)$. Tomo $T^{-1} \colon \real^2 \to \real^2$ dada por $T^{-1}(a, b) = (a + 3b/2, a + 2b)$. Então $T^{-1}$ é o operador inverso de $T$. De fato,
+    \begin{align*}
+        T^{-1}(T(x, y)) &= T^{-1}(4x - 3y, -2x + 2y) \\ &= (4x - 3y + 3(-2x + 2y)/2, 4x - 3y + 2(-2x + 2y)) \\ &= (x, y)
+    \end{align*}
 \end{exemplo}
+
 \begin{observacoes}
-  \begin{enumerate}[label={\roman*})]
-    \item Seja $I = I_V = Id = Id_V \colon V \to V$  a transformação linear tal que $I(u) = Id(u) = u$  para todo $u \in V$.  Então $I = Id$ é chamado de \textbf{operador identidade}\index{Transformação linear!operador identidade}.
+    \begin{enumerate}[label={\roman*})]
+        \item Seja $I = I_V = Id = Id_V \colon V \to V$a transformação linear tal que $I(u) = Id(u) = u$para todo $u \in V$.Então $I = Id$ é chamado de \textbf{operador identidade}\index{Transformação linear!operador identidade}.
 
-    \item Se $T \colon V \to V$ é uma transformação linear invertível,  então a aplicação $T^{-1} \colon V \to V$ também é uma transformação linear.
+        \item Se $T \colon V \to V$ é uma transformação linear invertível,então a aplicação $T^{-1} \colon V \to V$ também é uma transformação linear.
 
-    \item Se $T \colon V \to V$ é um operador invertível,  então $T^{-1} \colon V \to V$ é chamado de \textbf{operador inverso de $T$}\index{Transformação linear!operador inverso}.
-  \end{enumerate}
+        \item Se $T \colon V \to V$ é um operador invertível,então $T^{-1} \colon V \to V$ é chamado de \textbf{operador inverso de $T$}\index{Transformação linear!operador inverso}.
+    \end{enumerate}
 \end{observacoes}
 
 \begin{proposicao}
-  Seja $T \colon V \to V$ um operador linear.  Então:
-  \begin{enumerate}[label={\roman*})]
-    \item Se $T$ é invertível  e $T^{-1} \colon V \to V$ é o seu inverso,  então
+    Seja $T \colon V \to V$ um operador linear.Então:
+    \begin{enumerate}[label={\roman*})]
+        \item Se $T$ é invertívele $T^{-1} \colon V \to V$ é o seu inverso,então
         \[
-            (T^{-1} \circ T) =  (T \circ T^{-1}) =  Id.
+            (T^{-1} \circ T) =(T \circ T^{-1}) =Id.
         \]
 
-    \item Se $V$ tem dimensão finita,  então $T$ é invertível  se, e somente se,  $\ker(T) = \{0_V\}$.
+        \item Se $V$ tem dimensão finita,então $T$ é invertívelse, e somente se,$\ker(T) = \{0_V\}$.
 
-    \item Se $T$ é um operador invertível,  então dada uma base $\{v_1, v_2, \dots, v_n\}$ de $V$,  o conjunto $\{T(v_1),  T(v_2),  \dots, T(v_n)\}$  é uma base de $V$.
-  \end{enumerate}
+        \item Se $T$ é um operador invertível,então dada uma base $\{v_1, v_2, \dots, v_n\}$ de $V$,o conjunto $\{T(v_1),T(v_2),\dots, T(v_n)\}$é uma base de $V$.
+    \end{enumerate}
 \end{proposicao}
 
 \begin{proposicao}
-  Se $S \colon V \to V$ e $T \colon V \to V$  são operadores invertíveis,  então $S \circ T$ é invertível e
-  \[
-    (S \circ T)^{-1}  = T^{-1}  \circ S^{-1}.
-  \]
+    Se $S \colon V \to V$ e $T \colon V \to V$são operadores invertíveis,então $S \circ T$ é invertível e
+    \[
+      (S \circ T)^{-1}= T^{-1}\circ S^{-1}.
+    \]
 \end{proposicao}
 
 \section{Transformações Lineares e Matrizes} % (fold)
@@ -624,670 +625,675 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
 
 Sejam $V$ um espaço vetorial sobre $\cp{K}$ de dimensão $n \ge 1$ e $\mathcal{B} = \{v_1,\dots,v_n\}$ uma base de $V$. Sabemos que cada elemento de $V$ se escreve de modo único como combinação linear dos elementos de $\mathcal{B}$, isto é, dado $u \in V$ existem únicos escalares $\alpha_1$, \dots, $\alpha_n \in \cp{K}$ tais que
 \[
-  u = \alpha_1v_1 + \cdots + \alpha_nv_n.
+    u = \alpha_1v_1 + \cdots + \alpha_nv_n.
 \]
 
 Assim vamos fixar uma ordem para os elementos da base $\mathcal{B}$ e por isso vamos chamá-la de \textbf{base ordenada}\index{Espaço vetorial!base ordenada} de $V$. Pela unicidade dos elementos $\alpha_1$, \dots, $\alpha_n$ acima, podemos denotar o vetor $u$ por
 \[
-  [u]_\mathcal{B} = \begin{bmatrix}
+    [u]_\mathcal{B} = \begin{bmatrix}
     \alpha_1\\
     \vdots\\
     \alpha_n
-  \end{bmatrix}_\mathcal{B}
+    \end{bmatrix}_\mathcal{B}
 \]
 e dizemos que $\alpha_1$, \dots, $\alpha_n$ são as \textbf{coordenadas de $u$ em relação \`a base ordenada $\mathcal{B}$}.
 
 \begin{exemplos}
-  \begin{enumerate}[label={\arabic*})]
-    \item Considere $V = \complex^2$ como um $\complex$-espaço vetorial e seja $\mathcal{B} = \{(1,i);(i,0)\}$ uma base de $\complex^2$ \textit{(Verifique!)}. Dado o vetor $v = (i, 2+i) \in \complex^2$, quais suas coordenadas em relação a tal base?
-    \begin{solucao}
-      As coordenadas de $v$ em relação \`a base $\mathcal{B}$ serão $[v]_\mathcal{B} = (\alpha_1,\alpha_2)_\mathcal{B}$ onde $\alpha_1$, $\alpha_2 \in \complex^2$ são tais que
-      \[
-        v = \alpha_1(1,i) + \alpha_2(i,0).
-      \]
-      Resolvendo o sistema resultante obtemos $\alpha_1 = 1 - 2i$ e $\alpha_2 = 3 + i$. Assim
-      \[
-        [v]_\mathcal{B} = \begin{bmatrix}
-          1 - 2i\\
-          3 + i
-        \end{bmatrix}_\mathcal{B}.
-      \]
-    \end{solucao}
+    \begin{enumerate}[label={\arabic*})]
+        \item Considere $V = \complex^2$ como um $\complex$-espaço vetorial e seja $\mathcal{B} = \{(1,i);(i,0)\}$ uma base de $\complex^2$ \textit{(Verifique!)}. Dado o vetor $v = (i, 2+i) \in \complex^2$, quais suas coordenadas em relação a tal base?
+        \begin{solucao}
+        As coordenadas de $v$ em relação \`a base $\mathcal{B}$ serão $[v]_\mathcal{B} = (\alpha_1,\alpha_2)_\mathcal{B}$ onde $\alpha_1$, $\alpha_2 \in \complex^2$ são tais que
+        \[
+            v = \alpha_1(1,i) + \alpha_2(i,0).
+        \]
+        Resolvendo o sistema resultante obtemos $\alpha_1 = 1 - 2i$ e $\alpha_2 = 3 + i$. Assim
+        \[
+            [v]_\mathcal{B} = \begin{bmatrix}
+            1 - 2i\\
+            3 + i
+            \end{bmatrix}_\mathcal{B}.
+        \]
+        \end{solucao}
 
-    \item Agora considere $V = \complex^2$ como um $\real$-espaço vetorial e seja $\mathcal{A} = \{(1,1);(i,0);(1,i);(0,1)\}$ uma base de $\complex^2$ \textit{(Verifique!)}. Dado o vetor $v = (i,2+i) \in \complex^2$, quais suas coordenadas em relação a tal base?
-    \begin{solucao}
-      As coordenadas de $v$ em relação \`a base $\mathcal{A}$ serão $[v]_\mathcal{A} = (\alpha_1,\alpha_2,\alpha_3,\alpha_4)_\mathcal{A}$ onde $\alpha_1$, $\alpha_2$, $\alpha_3$, $\alpha_4 \in \complex$ são tais que
-      \[
-        v = \alpha_1(1,1) + \alpha_2(i,0) + \alpha_3(1,i) + \alpha_4(0,1).
-      \]
-      Resolvendo o sistema resultante obtemos $\alpha_1 = -1$, $\alpha_2 = 1$, $\alpha_3 = 1$ e $\alpha_4 = 3$. Assim
-      \[
-        [v]_\mathcal{A} = \begin{bmatrix}
-          -1\\
-          \phantom{-}1\\
-          \phantom{-}1\\
-          \phantom{-}3
-        \end{bmatrix}_\mathcal{A}.
-      \]
-    \end{solucao}
-  \end{enumerate}
+        \item Agora considere $V = \complex^2$ como um $\real$-espaço vetorial e seja $\mathcal{A} = \{(1,1);(i,0);(1,i);(0,1)\}$ uma base de $\complex^2$ \textit{(Verifique!)}. Dado o vetor $v = (i,2+i) \in \complex^2$, quais suas coordenadas em relação a tal base?
+        \begin{solucao}
+        As coordenadas de $v$ em relação \`a base $\mathcal{A}$ serão $[v]_\mathcal{A} = (\alpha_1,\alpha_2,\alpha_3,\alpha_4)_\mathcal{A}$ onde $\alpha_1$, $\alpha_2$, $\alpha_3$, $\alpha_4 \in \complex$ são tais que
+        \[
+            v = \alpha_1(1,1) + \alpha_2(i,0) + \alpha_3(1,i) + \alpha_4(0,1).
+        \]
+        Resolvendo o sistema resultante obtemos $\alpha_1 = -1$, $\alpha_2 = 1$, $\alpha_3 = 1$ e $\alpha_4 = 3$. Assim
+        \[
+            [v]_\mathcal{A} = \begin{bmatrix}
+            -1\\
+            \phantom{-}1\\
+            \phantom{-}1\\
+            \phantom{-}3
+            \end{bmatrix}_\mathcal{A}.
+        \]
+        \end{solucao}
+    \end{enumerate}
 \end{exemplos}
 
 Agora, sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$ tais que $\dim_\cp{K}V = p \ge 1$ e $\dim_\cp{K} W = q \ge 1$. Vamos fixar bases ordenadas $\mathcal{B}_1 = \{u_1,\dots,u_p\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_q\}$ de $V$ e $W$, respectivamente. Seja $T \colon V \to W$ uma transformação linear. Sabemos pelo Teorema \ref{existencia_de_transformacao_unica_dado_valores} que $T$ fica completamente determinada se conhecermos seus valores na base de $V$. Assim
 \begin{align*}
-  T(u_1) &= a_{11}w_1 + a_{21}w_2 + \cdots + a_{q1}w_q\\
-  T(u_2) &= a_{12}w_1 + a_{22}w_2 + \cdots + a_{q2}w_q\\
-  &\vdots\\
-  T(u_p) &= a_{1p}w_1 + a_{2p}w_2 + \cdots + a_{qp}w_q
+    T(u_1) &= a_{11}w_1 + a_{21}w_2 + \cdots + a_{q1}w_q\\
+    T(u_2) &= a_{12}w_1 + a_{22}w_2 + \cdots + a_{q2}w_q\\
+    &\vdots\\
+    T(u_p) &= a_{1p}w_1 + a_{2p}w_2 + \cdots + a_{qp}w_q
 \end{align*}
 para certos $a_{ij} \in \cp{K}$ onde $1 \le i \le q$ e $1 \le j \le p$.
 
 Agora, seja $x \in V$. Então
 \[
-  x = \alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_pu_p
+    x = \alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_pu_p
 \]
 onde $\alpha_1$, $\alpha_2$, \dots, $\alpha_p \in \cp{K}$. Daí
+
 \begin{align*}
-  T(x) &= T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_pu_p) = \alpha_1T(u_1) + \alpha_2T(u_2) + \cdots + \alpha_pT(u_p)\\
-  &= \alpha_1(a_{11}w_1 + a_{21}w_2 + \cdots + a_{q1}w_q) + \alpha_2(a_{12}w_1 + a_{22}w_2 + \cdots + a_{q2}w_q) + \cdots \\
-  &+ \alpha_p(a_{1p}w_1 + a_{2p}w_2 + \cdots + a_{qp}w_q)\\
-  &= (a_{11}\alpha_1 + a_{12}\alpha_2 + \cdots + a_{1p}\alpha_p)w_1 + (a_{21}\alpha_1 + a_{22}\alpha_2 + \cdots + a_{2p}\alpha_p)w_2 + \\ &\cdots + (a_{q1}\alpha_1 + a_{q2}\alpha_2 + \cdots + a_{qp}\alpha_p)w_q\\
+    T(x) &= T(\alpha_1u_1 + \alpha_2u_2 + \cdots + \alpha_pu_p) = \alpha_1T(u_1) + \alpha_2T(u_2) + \cdots + \alpha_pT(u_p)\\
+    &= \alpha_1(a_{11}w_1 + a_{21}w_2 + \cdots + a_{q1}w_q) + \alpha_2(a_{12}w_1 + a_{22}w_2 + \cdots + a_{q2}w_q) + \cdots \\
+    &+ \alpha_p(a_{1p}w_1 + a_{2p}w_2 + \cdots + a_{qp}w_q)\\
+    &= (a_{11}\alpha_1 + a_{12}\alpha_2 + \cdots + a_{1p}\alpha_p)w_1 + (a_{21}\alpha_1 + a_{22}\alpha_2 + \cdots + a_{2p}\alpha_p)w_2 + \\ &\cdots + (a_{q1}\alpha_1 + a_{q2}\alpha_2 + \cdots + a_{qp}\alpha_p)w_q\\
 \end{align*}
+
 Note que os escalares $a_{11}\alpha_1 + a_{12}\alpha_2 + \cdots + a_{1p}\alpha_p$, $a_{21}\alpha_1 + a_{22}\alpha_2 + \cdots + a_{2p}\alpha_p$, \dots, $a_{q1}\alpha_1 + a_{q2}\alpha_2 + \cdots + a_{qp}\alpha_p$ são as coordenadas do vetor $T(x)$ em relação \`a base $\mathcal{B}_2$, isto é,
 \[
-  [T(x)]_{\mathcal{B}_2} = \begin{bmatrix}
+    [T(x)]_{\mathcal{B}_2} = \begin{bmatrix}
     a_{11}\alpha_1 + a_{12}\alpha_2 + \cdots + a_{1p}\alpha_p\\
     a_{21}\alpha_1 + a_{22}\alpha_2 + \cdots + a_{2p}\alpha_p\\
     \vdots\\
     a_{q1}\alpha_1 + a_{q2}\alpha_2 + \cdots + a_{qp}\alpha_p
-  \end{bmatrix}.
+    \end{bmatrix}.
 \]
 Por outro lado,
 \[
-  \underbrace{\begin{bmatrix}
+    \underbrace{\begin{bmatrix}
     a_{11} & a_{12} & \dots & a_{1p}\\
     a_{21} & a_{22} & \dots & a_{2p}\\
     \vdots & & \ddots & \vdots\\
     a_{q1} & a_{q2} & \dots & a_{qp}
-  \end{bmatrix}}_{A}\begin{bmatrix}
+    \end{bmatrix}}_{A}\begin{bmatrix}
     \alpha_1\\
     \alpha_2\\
     \vdots\\
     \alpha_p
-  \end{bmatrix} = \begin{bmatrix}
+    \end{bmatrix} = \begin{bmatrix}
     a_{11}\alpha_1 + a_{12}\alpha_2 + \cdots + a_{1p}\alpha_p\\
     a_{21}\alpha_1 + a_{22}\alpha_2 + \cdots + a_{2p}\alpha_p\\
     \vdots \\
     a_{q1}\alpha_1 + a_{q2}\alpha_2 + \cdots + a_{qp}\alpha_p
-  \end{bmatrix}
+    \end{bmatrix}
 \]
+
 e daí podemos escrever
 \[
-  [T(x)]_{\mathcal{B}_2} = A[x]_{\mathcal{B}_1}
+    [T(x)]_{\mathcal{B}_2} = A[x]_{\mathcal{B}_1}
 \]
 onde $A \in \cp{M}_{q\times p}(\cp{K})$.
 
 Agora seja $B \in \cp{M}_{q\times p}(\cp{K})$ onde
 \[
-  B = \begin{bmatrix}
+    B = \begin{bmatrix}
     b_{11} & b_{12} & \dots & b_{1p}\\
     b_{21} & b_{22} & \dots & b_{2p}\\
     \vdots & & \ddots & \vdots\\
     b_{q1} & b_{q2} & \dots & b_{qp}
-  \end{bmatrix}.
+    \end{bmatrix}.
 \]
 
 Seja $V_1$ um espaço vetorial sobre $\cp{K}$ de dimensão $p \ge 1$ e $W_1$ um espaço vetorial sobre $\cp{K}$ de dimensão $q \ge 1$. Tome $\mathcal{B}_1 = \{v_1,\dots,v_p\}$ e $\mathcal{B}_2 = \{l_1,\dots,l_q\}$ bases ordenadas de $V_1$ e $W_1$, respectivamente. Defina $G \colon V_1 \to W_1$ por
 \begin{align*}
-  G(v_1) &= b_{11}l_1 + b_{21}l_2 + \cdots + b_{q1}l_q\\
-  &\vdots\\
-  G(v_p) &= b_{1p}l_1 + b_{2p}l_2 + \cdots + b_{qp}l_q.
+    G(v_1) &= b_{11}l_1 + b_{21}l_2 + \cdots + b_{q1}l_q\\
+    &\vdots\\
+    G(v_p) &= b_{1p}l_1 + b_{2p}l_2 + \cdots + b_{qp}l_q.
 \end{align*}
-Então $G$ é uma transformação linear  tal que
+Então $G$ é uma transformação lineartal que
 \[
-  [G(x)]_{\mathcal{B}_2} = B[x]_{\mathcal{B}_1}
+    [G(x)]_{\mathcal{B}_2} = B[x]_{\mathcal{B}_1}
 \]
 para todo $x \in V$.
 
 Assim provamos o seguinte teorema:
 \begin{teorema}\label{teorema_toda_transformacao_matriz}
-  Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais de dimensões $p \ge 1$ e $q \ge 1$, respectivamente. Sejam $\mathcal{B}_V$ e $\mathcal{B}_W$ bases ordenadas de $V$ e $W$, respectivamente. Então para cada transformação linear $T \colon V \to W$, existe uma matriz $A \in \cp{M}_{q\times p}(\cp{K})$ tal que
-  \[
-    [T(x)]_{\mathcal{B}_W} = A[x]_{\mathcal{B}_V}
-  \]
-  para todo vetor $x \in V$. Além disso, a cada matriz $A \in \cp{M}_{q\times p}(\cp{K})$ corresponde uma transformação linear $T \colon V \to W$ tal que
-  \[
-    [T(x)]_{\mathcal{B}_W} = A[x]_{\mathcal{B}_V}
-  \]
-  para todo $x \in V$.
+    Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais de dimensões $p \ge 1$ e $q \ge 1$, respectivamente. Sejam $\mathcal{B}_V$ e $\mathcal{B}_W$ bases ordenadas de $V$ e $W$, respectivamente. Então para cada transformação linear $T \colon V \to W$, existe uma matriz $A \in \cp{M}_{q\times p}(\cp{K})$ tal que
+    \[
+        [T(x)]_{\mathcal{B}_W} = A[x]_{\mathcal{B}_V}
+    \]
+    para todo vetor $x \in V$. Além disso, a cada matriz $A \in \cp{M}_{q\times p}(\cp{K})$ corresponde uma transformação linear $T \colon V \to W$ tal que
+    \[
+        [T(x)]_{\mathcal{B}_W} = A[x]_{\mathcal{B}_V}
+    \]
+    para todo $x \in V$.
 \end{teorema}
 
 \begin{definicao}
-  A matriz $A \in \cp{M}_{q\times p}(\cp{K})$ do Teorema \ref{teorema_toda_transformacao_matriz} é chamada de \textbf{matriz da transformação linear}\index{Transformação linear!matriz da transformação} $T$ com respeito \`as bases ordenadas $\mathcal{B}_V$ e $\mathcal{B}_W$ e será denotada por
-  \[
-    A = [T]_{\mathcal{B}_{W},\mathcal{B}_{V}}.
-  \]
-  No caso em que $V = W$ e $\mathcal{B}_V = \mathcal{B}_W = \mathcal{B}$, denotaremos $[T]_{\mathcal{B}_{V},\mathcal{B}_{W}}$ simplesmente por $[T]_\mathcal{B}$.
+    A matriz $A \in \cp{M}_{q\times p}(\cp{K})$ do Teorema \ref{teorema_toda_transformacao_matriz} é chamada de \textbf{matriz da transformação linear}\index{Transformação linear!matriz da transformação} $T$ com respeito \`as bases ordenadas $\mathcal{B}_V$ e $\mathcal{B}_W$ e será denotada por
+    \[
+        A = [T]_{\mathcal{B}_{W},\mathcal{B}_{V}}.
+    \]
+    No caso em que $V = W$ e $\mathcal{B}_V = \mathcal{B}_W = \mathcal{B}$, denotaremos $[T]_{\mathcal{B}_{V},\mathcal{B}_{W}}$ simplesmente por $[T]_\mathcal{B}$.
 \end{definicao}
 
 \begin{exemplos}
-  \begin{enumerate}[label={\arabic*})]
-    \item Seja $T \colon \real^2 \to \real^2$ a transformação linear definida por
-    \[
-      T(x,y) = (x,0).
-    \]
-    Considere $\real^2$ com a base can\^onica $\mathcal{B} = \{e_1=(1,0);e_2=(0,1)\}$. Encontre $[T]_\mathcal{B}$.
-    \begin{solucao}
-      Temos
-      \begin{align*}
-        T(e_1) &= (1,0) = 1(1,0) + 0(0,1)\\
-        T(e_2) &= (0,0) = 0(1,0) + 0(0,1).
-      \end{align*}
-      Logo a matriz de $T$ é
-      \[
-        [T]_\mathcal{B} = \begin{bmatrix}
-          1 & 0\\
-          0 & 0
-        \end{bmatrix}.
-      \]
-      Além disso, dado $(x,y) \in \real^2$ temos
-      \[
-        (x,y) = xe_1 + ye_2
-      \]
-      e então
-      \[
-        [(x,y)]_\mathcal{B} = \begin{bmatrix}
-          x\\y
-        \end{bmatrix}.
-      \]
-      Assim podemos escrever
-      \[
-        [T(x,y)]_\mathcal{B} = [T]_\mathcal{B}[(x,y)]_\mathcal{B} = \begin{bmatrix}
-          1 & 0\\
-          0 & 0
-        \end{bmatrix}\begin{bmatrix}
-          x\\y
-        \end{bmatrix}
-      \]
-      para todo $(x,y) \in \real^2$.
-    \end{solucao}
+    \begin{enumerate}[label={\arabic*})]
+        \item Seja $T \colon \real^2 \to \real^2$ a transformação linear definida por
+        \[
+          T(x,y) = (x,0).
+        \]
+        Considere $\real^2$ com a base can\^onica $\mathcal{B} = \{e_1=(1,0);e_2=(0,1)\}$. Encontre $[T]_\mathcal{B}$.
+        \begin{solucao}
+            Temos
+            \begin{align*}
+                T(e_1) &= (1,0) = 1(1,0) + 0(0,1)\\
+                T(e_2) &= (0,0) = 0(1,0) + 0(0,1).
+            \end{align*}
+            Logo a matriz de $T$ é
+            \[
+                [T]_\mathcal{B} = \begin{bmatrix}
+                1 & 0\\
+                0 & 0
+                \end{bmatrix}.
+            \]
 
-    \item Seja $T \colon \real^3 \to \real^2$ tal que
-    \[
-      T(x,y,z) = (2x+y-z,3x-2y+4z).
-    \]
-    Considere as bases $\mathcal{B}_1 = \{(1,1,1);(1,1,0);(1,0,0)\}$ e $\mathcal{B}_2 = \{(1,3);(1,4)\}$. Encontre $[T]_{\mathcal{B}_{1},\mathcal{B}_{2}}$.
-    \begin{solucao}
-      Temos
-      \begin{align*}
-        T(1,1,1) &= (2,5) = 3(1,3) - 1(1,4)\\
-        T(1,1,0) &= (3,1) = 11(1,3) - 8(1,4)\\
-        T(1,0,0) &= (2,3) = 5(1,5) - 3(1,4)
-      \end{align*}
-      e daí
-      \[
-        [T]_{\mathcal{B}_{1},\mathcal{B}_{2}} = \begin{bmatrix}
-          \phantom{-}3 & \phantom{-}11 & \phantom{-}5\\
-          -1 & -8 & -3
-        \end{bmatrix}.
-      \]
-      Agora considerando as bases $\mathcal{B}_3 = \{(1,0,0);(0,1,0);(0,0,1)\}$ e $\mathcal{B}_4 = \{(1,0);(0,1)\}$ obtemos
-      \begin{align*}
-        T(1,0,0) &= (2,3) = 2(1,0) + 3(0,1)\\
-        T(0,1,0) &= (1,-2) = 1(1,0) - 2(0,1)\\
-        T(0,0,1) &= (-1,4) = -1(1,0) + 4(0,1)
-      \end{align*}
-      e assim a matriz de $T$ será
-      \[
-        [T]_{\mathcal{B}_{3},\mathcal{B}_{4}} = \begin{bmatrix}
-          \phantom{-}2 & \phantom{-}1 & -1\\
-          \phantom{-}3 & -2 & \phantom{-}4
-        \end{bmatrix}.
-      \]
-    \end{solucao}
+            Além disso, dado $(x,y) \in \real^2$ temos
 
-    \item Seja $T \colon \mathcal{P}_2(\real) \to \mathcal{P}_2(\real)$ dada por
-    \[
-      T(xax² + bx + c) = (2a + c - 3b)x + (c + 4b + 3a).
-    \]
-    Considere as bases $\mathcal{B}_1 = \{x^2, x, 1\}$ e $\mathcal{B}_2 = \{x, 1\}$ de $\mathcal{P}_2(\real)$ e $\mathcal{P}_1(\real)$, respectivamente. Encontre a matriz de $T$ em relação a $\mathcal{B}_1
-$ e $\mathcal{B}_2$. Depois, use essa matriz para calcular $T(2x^2 - 4x + 1)$.
-    \begin{solucao}
-      Para determinar $[T]_{\mathcal{B}_1, \mathcal{B}_2}$, precisamos achar primeiro $[T(x^2)]_{\mathcal{B}_2}$, $[T(x)]_{\mathcal{B}_2}$ e $[T(1)]_{\mathcal{B}_2}$.
-      Temos
-      \begin{align*}
-        T(x^2) &= 2x + 3\\
-        T(x) &= -3x + 4\\
-        T(x^2) &= x + 1
-      \end{align*}
-      daí
-      \begin{align*}
-        [T(x^2)]_{\mathcal{B}_2} &= \begin{bmatrix}2\\3\end{bmatrix}\\
-        [T(x)]_{\mathcal{B}_2} &= \begin{bmatrix}-3\\\phantom{-}4\end{bmatrix}\\
-        [T(1)]_{\mathcal{B}_2} &= \begin{bmatrix}1\\1\end{bmatrix}
-      \end{align*}
-      Logo
-      \begin{align*}
-        [T]_{\mathcal{B}_1, \mathcal{B}_2} &= [[T(x^2)]_{\mathcal{B}_2}]\ [T(x)]_{\mathcal{B}_2}\ [T(1)]_{\mathcal{B}_2}]]]\\
-        [T]_{\mathcal{B}_1, \mathcal{B}_2} &= \begin{bmatrix}2 & -3 & 1\\3 & \phantom{-}4 & 1\end{bmatrix}
-      \end{align*}
+            \[
+                (x,y) = xe_1 + ye_2
+            \]
+            e então
+            \[
+                [(x,y)]_\mathcal{B} = \begin{bmatrix}
+                x\\y
+                \end{bmatrix}.
+            \]
+            Assim podemos escrever
+            \[
+                [T(x,y)]_\mathcal{B} = [T]_\mathcal{B}[(x,y)]_\mathcal{B} = \begin{bmatrix}
+                1 & 0\\
+                0 & 0
+                \end{bmatrix}\begin{bmatrix}
+                x\\y
+                \end{bmatrix}
+            \]
+            para todo $(x,y) \in \real^2$.
+        \end{solucao}
 
-      Agora, para calcular $T(2x^2 - 4x + 1)$ podemos usar a equação
-      \[
-        [T(2x^2 - 4x + 1)]_{\mathcal{B}_2} = [T]_{\mathcal{B}_1, \mathcal{B}_2}[(2x^2 - 4x + 1)]_{\mathcal{B}_1}.
-      \]
-      Como $\mathcal{B}_1$ é a base canônica de $\mathcal{P}_2(\real)$ temos
-      \begin{align*}
-        [T(2x^2 - 4x + 1)]_{\mathcal{B}_2} = \begin{bmatrix}2 & -3 & 1\\3 & \phantom{-}4 & 1\end{bmatrix}\begin{bmatrix}\phantom{-}2 \\ -4\\\phantom{-}1\end{bmatrix}\\
-        [T(2x^2 - 4x + 1)]_{\mathcal{B}_2} = \begin{bmatrix}17 \\ -9\end{bmatrix}_{\mathcal{B}_2}
-      \end{align*}
-      assim
-      \[
-        T(2x^2 - 4x + 1) = 17x - 9.
-      \]
-    \end{solucao}
+        \item Seja $T \colon \real^3 \to \real^2$ tal que
+        \[
+            T(x,y,z) = (2x+y-z,3x-2y+4z).
+        \]
+        Considere as bases $\mathcal{B}_1 = \{(1,1,1);(1,1,0);(1,0,0)\}$ e $\mathcal{B}_2 = \{(1,3);(1,4)\}$. Encontre $[T]_{\mathcal{B}_{1},\mathcal{B}_{2}}$.
+        \begin{solucao}
+            Temos
+            \begin{align*}
+                T(1,1,1) &= (2,5) = 3(1,3) - 1(1,4)\\
+                T(1,1,0) &= (3,1) = 11(1,3) - 8(1,4)\\
+                T(1,0,0) &= (2,3) = 5(1,5) - 3(1,4)
+            \end{align*}
+            e daí
+            \[
+                [T]_{\mathcal{B}_{1},\mathcal{B}_{2}} = \begin{bmatrix}
+                \phantom{-}3 & \phantom{-}11 & \phantom{-}5\\
+                -1 & -8 & -3
+                \end{bmatrix}.
+            \]
+            Agora considerando as bases $\mathcal{B}_3 = \{(1,0,0);(0,1,0);(0,0,1)\}$ e $\mathcal{B}_4 = \{(1,0);(0,1)\}$ obtemos
+            \begin{align*}
+                T(1,0,0) &= (2,3) = 2(1,0) + 3(0,1)\\
+                T(0,1,0) &= (1,-2) = 1(1,0) - 2(0,1)\\
+                T(0,0,1) &= (-1,4) = -1(1,0) + 4(0,1)
+            \end{align*}
+            e assim a matriz de $T$ será
+            \[
+                [T]_{\mathcal{B}_{3},\mathcal{B}_{4}} = \begin{bmatrix}
+                \phantom{-}2 & \phantom{-}1 & -1\\
+                \phantom{-}3 & -2 & \phantom{-}4
+                \end{bmatrix}.
+            \]
+        \end{solucao}
 
-    \item Repita o exemplo anterior usando as bases
-    \[
-      \mathcal{C}_1 = \{x^2 - 2, 2x - 1, x^2 + 4x - 1\};\ \mathcal{C}_{2} = \{2x + 1, 5x + 3\}
-    \]
-    de $\mathcal{P}_2(\real)$ e $\mathcal{P}_1(\real)$, respectivamente.
-    \begin{solucao}
-      Para determinar $[T]_{\mathcal{C}_1, \mathcal{C}_2}$, precisamos achar primeiro $[T(x^2)]_{\mathcal{C}_2}$, $[T(x)]_{\mathcal{C}_2}$ e $[T(1)]_{\mathcal{C}_2}$.
-      Temos
-      \begin{align*}
-        T(x^2 - 2) &= 1 = -5(2x + 1) + 2(5x + 3)\\
-        T(2x - 1) &= -7x + 7 = -56(2x + 1) + 21(5x + 3)\\
-        T(x^2 + 4x - 1) &= -11x + 8 = -123(2x + 1) + 47(5x + 3)
-      \end{align*}
-      daí
-      \begin{align*}
-        [T(x^2 - 2)]_{\mathcal{C}_2} &= \begin{bmatrix}-5\\\phantom{-}2\end{bmatrix}\\
-        [T(2x - 1)]_{\mathcal{C}_2} &= \begin{bmatrix}-56\\\phantom{-}21\end{bmatrix}\\
-        [T(x^2 + 4x - 1)]_{\mathcal{C}_2} &= \begin{bmatrix}-123\\\phantom{-}47\end{bmatrix}
-      \end{align*}
-      Logo
-      \begin{align*}
-        [T]_{\mathcal{C}_1, \mathcal{C}_2} &= [[T(x^2 - 2)]_{\mathcal{C}_2}]\ [T(2x - 1)]_{\mathcal{C}_2}\ [T(x^2 + 4x - 1)]_{\mathcal{C}_2}]]]\\
-        [T]_{\mathcal{C}_1, \mathcal{C}_2} &= \begin{bmatrix}-5 & -56 & -123\\\phantom{-}2 & \phantom{-}21 & \phantom{-}47\end{bmatrix}
-      \end{align*}
+        \item Seja $T \colon \mathcal{P}_2(\real) \to \mathcal{P}_2(\real)$ dada por
+        \[
+            T(xax² + bx + c) = (2a + c - 3b)x + (c + 4b + 3a).
+        \]
+        Considere as bases $\mathcal{B}_1 = \{x^2, x, 1\}$ e $\mathcal{B}_2 = \{x, 1\}$ de $\mathcal{P}_2(\real)$ e $\mathcal{P}_1(\real)$, respectivamente. Encontre a matriz de $T$ em relação a $\mathcal{B}_1
+        $ e $\mathcal{B}_2$. Depois, use essa matriz para calcular $T(2x^2 - 4x + 1)$.
+        \begin{solucao}
+            Para determinar $[T]_{\mathcal{B}_1, \mathcal{B}_2}$, precisamos achar primeiro $[T(x^2)]_{\mathcal{B}_2}$, $[T(x)]_{\mathcal{B}_2}$ e $[T(1)]_{\mathcal{B}_2}$.
+            Temos
+            \begin{align*}
+              T(x^2) &= 2x + 3\\
+                T(x) &= -3x + 4\\
+                T(x^2) &= x + 1
+            \end{align*}
+            daí
+            \begin{align*}
+                [T(x^2)]_{\mathcal{B}_2} &= \begin{bmatrix}2\\3\end{bmatrix}\\
+                [T(x)]_{\mathcal{B}_2} &= \begin{bmatrix}-3\\\phantom{-}4\end{bmatrix}\\
+                [T(1)]_{\mathcal{B}_2} &= \begin{bmatrix}1\\1\end{bmatrix}
+            \end{align*}
+            Logo
+            \begin{align*}
+                [T]_{\mathcal{B}_1, \mathcal{B}_2} &= [[T(x^2)]_{\mathcal{B}_2}]\ [T(x)]_{\mathcal{B}_2}\ [T(1)]_{\mathcal{B}_2}]]]\\
+                [T]_{\mathcal{B}_1, \mathcal{B}_2} &= \begin{bmatrix}2 & -3 & 1\\3 & \phantom{-}4 & 1\end{bmatrix}
+            \end{align*}
 
-      Agora, para calcular $T(2x^2 - 4x + 1)$, primeiro escrevemos
-      \[
-        2x^2 - 4x + 1 = 1(x^2 - 2) - 4(2x - 1) + 1(x^2 + 4x - 1)
-      \]
-      e assim usando que
-      \[
-        [T(2x^2 - 4x + 1)]_{\mathcal{C}_2} = [T]_{\mathcal{C}_1, \mathcal{C}_2}[(2x^2 - 4x + 1)]_{\mathcal{C}_1}
-      \]
-      temos
-      \begin{align*}
-        [T(2x^2 - 4x + 1)]_{\mathcal{C}_2} = \begin{bmatrix}-5 & -56 & -123\\\phantom{-}2 & \phantom{-}21 & \phantom{-}47\end{bmatrix}\begin{bmatrix}\phantom{-}1 \\ -4\\\phantom{-}1\end{bmatrix}\\
-        [T(2x^2 - 4x + 1)]_{\mathcal{C}_2} = \begin{bmatrix}17 \\ -9\end{bmatrix}_{\mathcal{C}_2}
-      \end{align*}
-      assim
-      \[
-        T(2x^2 - 4x + 1) = 17x - 9.
-      \]
-    \end{solucao}
+            Agora, para calcular $T(2x^2 - 4x + 1)$ podemos usar a equação
+            \[
+                [T(2x^2 - 4x + 1)]_{\mathcal{B}_2} = [T]_{\mathcal{B}_1, \mathcal{B}_2}[(2x^2 - 4x + 1)]_{\mathcal{B}_1}.
+            \]
+            Como $\mathcal{B}_1$ é a base canônica de $\mathcal{P}_2(\real)$ temos
+            \begin{align*}
+                [T(2x^2 - 4x + 1)]_{\mathcal{B}_2} = \begin{bmatrix}2 & -3 & 1\\3 & \phantom{-}4 & 1\end{bmatrix}\begin{bmatrix}\phantom{-}2 \\ -4\\\phantom{-}1\end{bmatrix}\\
+                [T(2x^2 - 4x + 1)]_{\mathcal{B}_2} = \begin{bmatrix}17 \\ -9\end{bmatrix}_{\mathcal{B}_2}
+            \end{align*}
+            assim
+            \[
+                T(2x^2 - 4x + 1) = 17x - 9.
+            \]
+        \end{solucao}
 
-  \item Seja $T \real^3 \to \real^3$ o operador linear cuja matriz em relação à base canônica $\mathcal{B} = \{e_1 = (1, 0, 0); e_2 = (0, 1, 0); e_3 = (0, 0, 1)\}$ é
-    \[
-      [T]_\mathcal{B} = \begin{bmatrix}\phantom{-}1 & \phantom{-}2 & -1\\-2 & -3 & \phantom{-}1\\\phantom{-}2 & \phantom{-}2 & -2\end{bmatrix}.
-    \]
-    Encontre $T(x, y, z)$ e determine $[T]_{\mathcal{B}_1}$, onde ${\mathcal{B}_1} = \{(1, 0, 2); (0, 1, 2); (1, -1, 1)\}$.
-    \begin{solucao}
-      Como $\mathcal{B}$ é a base canônica então
-      \[
-        [(x, y, z)_\mathcal{B}] = \begin{bmatrix}x\\y\\z\end{bmatrix}.
-      \]
-      Daí
-      \begin{align*}
-        [T(x, y, z)]_\mathcal{B} &= [T]_\mathcal{B}[(x, y, z)]_\mathcal{B}\\
-        [T(x, y, z)]_\mathcal{B} &= \begin{bmatrix}\phantom{-}1 & \phantom{-}2 & -1\\-2 & -3 & \phantom{-}1\\\phantom{-}2 & \phantom{-}2 & -2\end{bmatrix}\begin{bmatrix}x \\ y \\ z\end{bmatrix}\\
-        [T(x, y, z)]_\mathcal{B} &= \begin{bmatrix}x + 2y - z\\-2x - 3y + z\\2x + 2y - 2z\end{bmatrix}
-      \end{align*}
-      Assim
-      \begin{align*}
-        T(x, y, z) &= (x + 2y - z)e_1 + (-2x - 3y + z)e_2 + (2x + 2y - 2z)e_3 \\ &= (x + 2y - z, -2x - 3y + z, 2x + 2y - 2z).
-      \end{align*}
-      Agora, para determinar $[T]_{\mathcal{B}_1}$, precisamos achar primeiro $[T(1, 0, 2)]_{\mathcal{B}_1}$, $[T(0, 1, 2)]_{\mathcal{B}_1}$ e $[T(1, -1, 1)]_{\mathcal{B}_1}$.
-      Temos
-      \begin{align*}
-        T(1, 0, 2) &= (-1, 0, 2) = -1(1, 0, 2) + 0(0, 1, 2) + 0(1, -1, 1)\\
-        T(0, 1, 2) &= (0, -1, -2) = 0(1, 0, 2) - 1(0, 1, 2) + 0(1, -1, 1)\\
-        T(1, -1, 1) &= (-2, 2, -2) = 0(1, 0, 2) + 0(0, 1, 2) - 2(1, -1, 1)
-      \end{align*}
-      e então
-      \[
-        [T]_{\mathcal{B}_1} = \begin{bmatrix}-1 & \phantom{-}0 & \phantom{-}0\\\phantom{-}0 & -1 & \phantom{-}0\\\phantom{-}0 & \phantom{-}0 & -2\end{bmatrix}.
-      \]
-    \end{solucao}
-  \end{enumerate}
+        \item Repita o exemplo anterior usando as bases
+        \[
+            \mathcal{C}_1 = \{x^2 - 2, 2x - 1, x^2 + 4x - 1\};\ \mathcal{C}_{2} = \{2x + 1, 5x + 3\}
+        \]
+        de $\mathcal{P}_2(\real)$ e $\mathcal{P}_1(\real)$, respectivamente.
+        \begin{solucao}
+            Para determinar $[T]_{\mathcal{C}_1, \mathcal{C}_2}$, precisamos achar primeiro $[T(x^2)]_{\mathcal{C}_2}$, $[T(x)]_{\mathcal{C}_2}$ e $[T(1)]_{\mathcal{C}_2}$.
+            Temos
+            \begin{align*}
+                T(x^2 - 2) &= 1 = -5(2x + 1) + 2(5x + 3)\\
+                T(2x - 1) &= -7x + 7 = -56(2x + 1) + 21(5x + 3)\\
+                T(x^2 + 4x - 1) &= -11x + 8 = -123(2x + 1) + 47(5x + 3)
+            \end{align*}
+            daí
+            \begin{align*}
+                [T(x^2 - 2)]_{\mathcal{C}_2} &= \begin{bmatrix}-5\\\phantom{-}2\end{bmatrix}\\
+                [T(2x - 1)]_{\mathcal{C}_2} &= \begin{bmatrix}-56\\\phantom{-}21\end{bmatrix}\\
+                [T(x^2 + 4x - 1)]_{\mathcal{C}_2} &= \begin{bmatrix}-123\\\phantom{-}47\end{bmatrix}
+            \end{align*}
+            Logo
+            \begin{align*}
+                [T]_{\mathcal{C}_1, \mathcal{C}_2} &= [[T(x^2 - 2)]_{\mathcal{C}_2}]\ [T(2x - 1)]_{\mathcal{C}_2}\ [T(x^2 + 4x - 1)]_{\mathcal{C}_2}]]]\\
+                [T]_{\mathcal{C}_1, \mathcal{C}_2} &= \begin{bmatrix}-5 & -56 & -123\\\phantom{-}2 & \phantom{-}21 & \phantom{-}47\end{bmatrix}
+            \end{align*}
+
+            Agora, para calcular $T(2x^2 - 4x + 1)$, primeiro escrevemos
+            \[
+                2x^2 - 4x + 1 = 1(x^2 - 2) - 4(2x - 1) + 1(x^2 + 4x - 1)
+            \]
+            e assim usando que
+            \[
+                [T(2x^2 - 4x + 1)]_{\mathcal{C}_2} = [T]_{\mathcal{C}_1, \mathcal{C}_2}[(2x^2 - 4x + 1)]_{\mathcal{C}_1}
+            \]
+            temos
+            \begin{align*}
+                [T(2x^2 - 4x + 1)]_{\mathcal{C}_2} = \begin{bmatrix}-5 & -56 & -123\\\phantom{-}2 & \phantom{-}21 & \phantom{-}47\end{bmatrix}\begin{bmatrix}\phantom{-}1 \\ -4\\\phantom{-}1\end{bmatrix}\\
+                [T(2x^2 - 4x + 1)]_{\mathcal{C}_2} = \begin{bmatrix}17 \\ -9\end{bmatrix}_{\mathcal{C}_2}
+            \end{align*}
+            assim
+            \[
+                T(2x^2 - 4x + 1) = 17x - 9.
+            \]
+        \end{solucao}
+
+        \item Seja $T \real^3 \to \real^3$ o operador linear cuja matriz em relação à base canônica $\mathcal{B} = \{e_1 = (1, 0, 0); e_2 = (0, 1, 0); e_3 = (0, 0, 1)\}$ é
+        \[
+            [T]_\mathcal{B} = \begin{bmatrix}\phantom{-}1 & \phantom{-}2 & -1\\-2 & -3 & \phantom{-}1\\\phantom{-}2 & \phantom{-}2 & -2\end{bmatrix}.
+        \]
+        Encontre $T(x, y, z)$ e determine $[T]_{\mathcal{B}_1}$, onde ${\mathcal{B}_1} = \{(1, 0, 2); (0, 1, 2); (1, -1, 1)\}$.
+        \begin{solucao}
+            Como $\mathcal{B}$ é a base canônica então
+            \[
+              [(x, y, z)_\mathcal{B}] = \begin{bmatrix}x\\y\\z\end{bmatrix}.
+            \]
+            Daí
+            \begin{align*}
+                [T(x, y, z)]_\mathcal{B} &= [T]_\mathcal{B}[(x, y, z)]_\mathcal{B}\\
+                [T(x, y, z)]_\mathcal{B} &= \begin{bmatrix}\phantom{-}1 & \phantom{-}2 & -1\\-2 & -3 & \phantom{-}1\\\phantom{-}2 & \phantom{-}2 & -2\end{bmatrix}\begin{bmatrix}x \\ y \\ z\end{bmatrix}\\
+                [T(x, y, z)]_\mathcal{B} &= \begin{bmatrix}x + 2y - z\\-2x - 3y + z\\2x + 2y - 2z\end{bmatrix}
+            \end{align*}
+            Assim
+            \begin{align*}
+                T(x, y, z) &= (x + 2y - z)e_1 + (-2x - 3y + z)e_2 + (2x + 2y - 2z)e_3 \\ &= (x + 2y - z, -2x - 3y + z, 2x + 2y - 2z).
+            \end{align*}
+            Agora, para determinar $[T]_{\mathcal{B}_1}$, precisamos achar primeiro $[T(1, 0, 2)]_{\mathcal{B}_1}$, $[T(0, 1, 2)]_{\mathcal{B}_1}$ e $[T(1, -1, 1)]_{\mathcal{B}_1}$.
+            Temos
+            \begin{align*}
+                T(1, 0, 2) &= (-1, 0, 2) = -1(1, 0, 2) + 0(0, 1, 2) + 0(1, -1, 1)\\
+                T(0, 1, 2) &= (0, -1, -2) = 0(1, 0, 2) - 1(0, 1, 2) + 0(1, -1, 1)\\
+                T(1, -1, 1) &= (-2, 2, -2) = 0(1, 0, 2) + 0(0, 1, 2) - 2(1, -1, 1)
+            \end{align*}
+            e então
+            \[
+                [T]_{\mathcal{B}_1} = \begin{bmatrix}-1 & \phantom{-}0 & \phantom{-}0\\\phantom{-}0 & -1 & \phantom{-}0\\\phantom{-}0 & \phantom{-}0 & -2\end{bmatrix}.
+            \]
+        \end{solucao}
+    \end{enumerate}
 \end{exemplos}
 
 \begin{teorema}\label{matriz_da_composicao_de_transformacoes}
-  Sejam $F \colon U \to V$ e $G \colon V \to W$ duas transformações lineares onde $U$, $V$ e $W$ são $\cp{K}$-espaços vetoriais de dimensões $n$, $m$ e $r$, respectivamente. Fixe bases ordenadas $\mathcal{B}_U$, $\mathcal{B}_V$ e $\mathcal{B}_W$ para $U$, $V$ e $W$, respectivamente. Então $(G \circ F) \colon U \to W$ dada por $(G\circ F)(v) = G(F(v))$ é uma transformação linear e
-  \[
-    [(G \circ F)]_{{\mathcal{B}_W},{\mathcal{B}_U}} = [G]_{{\mathcal{B}_W},{\mathcal{B}_V}}[F]_{{\mathcal{B}_V},{\mathcal{B}_U}}.
-  \]
+    Sejam $F \colon U \to V$ e $G \colon V \to W$ duas transformações lineares onde $U$, $V$ e $W$ são $\cp{K}$-espaços vetoriais de dimensões $n$, $m$ e $r$, respectivamente. Fixe bases ordenadas $\mathcal{B}_U$, $\mathcal{B}_V$ e $\mathcal{B}_W$ para $U$, $V$ e $W$, respectivamente. Então $(G \circ F) \colon U \to W$ dada por $(G\circ F)(v) = G(F(v))$ é uma transformação linear e
+    \[
+        [(G \circ F)]_{{\mathcal{B}_W},{\mathcal{B}_U}} = [G]_{{\mathcal{B}_W},{\mathcal{B}_V}}[F]_{{\mathcal{B}_V},{\mathcal{B}_U}}.
+    \]
 \end{teorema}
 
 \begin{teorema}
-  Sejam $T \colon V \to V$ é um operador linear e $\mathcal{B}$ é uma base ordenada de $V$. Então as seguintes afirmações são equivalentes:
-  \begin{enumerate}[label={\roman*})]
-    \item $T$ é injetor
-    \item $[T]_\mathcal{B}$ é invertível
-  \end{enumerate}
-  Além disso, se valem essas condições equivalentes, então
-  \[
-    [T^{-1}]_\mathcal{B} = [T]_\mathcal{B}^{-1}.
-  \]
+    Sejam $T \colon V \to V$ é um operador linear e $\mathcal{B}$ é uma base ordenada de $V$. Então as seguintes afirmações são equivalentes:
+    \begin{enumerate}[label={\roman*})]
+        \item $T$ é injetor
+        \item $[T]_\mathcal{B}$ é invertível
+    \end{enumerate}
+    Além disso, se valem essas condições equivalentes, então
+    \[
+        [T^{-1}]_\mathcal{B} = [T]_\mathcal{B}^{-1}.
+    \]
 \end{teorema}
 
 Vamos tratar, principalmente, com a representação por matrizes de transformações lineares de um espaço em si mesmo. Lembre-se que esta matriz muda de acordo com a escolha da base. Assim, deve-se prestar atenção sempre \`a base escolhida. Assim como um espaço vetorial pode ter várias bases distintas, o que acontecerá com a matriz representante de uma transformação linear quando mudamos a base ordenada?
 
 Vamos considerar $T \colon V \to V$ uma transformação linear sobre o $\cp{K}$-espaço vetorial de dimensão finita $V$ e sejam
 \[
-  \mathcal{B}_1 = \{v_1,\dots,v_n\}, \quad \mathcal{B}_2 = \{w_1,\dots,w_n\}
+    \mathcal{B}_1 = \{v_1,\dots,v_n\}, \quad \mathcal{B}_2 = \{w_1,\dots,w_n\}
 \]
 bases ordenadas de $V$. Qual a relação entre as matrizes $[T]_{\mathcal{B}_1}$ e $[T]_{\mathcal{B}_2}$?
 
 Para responder a esta questão, primeiro vamos determinar uma relação entre $[x]_{\mathcal{B}_1}$ e $[x]_{\mathcal{B}_2}$, para todo $x \in V$. Como $\mathcal{B}_1$ é uma base de $V$, então existem $\alpha_{ij} \in \cp{K}$, $1 \le i,\ j \le n$ tais que
 \begin{align*}
-  w_1 &= \alpha_{11}v_1 + \cdots + \alpha_{n1}v_n\\
-  &\vdots\\
-  w_n &= \alpha_{1n}v_1 + \cdots + \alpha_{nn}v_n.
+    w_1 &= \alpha_{11}v_1 + \cdots + \alpha_{n1}v_n\\
+    &\vdots\\
+    w_n &= \alpha_{1n}v_1 + \cdots + \alpha_{nn}v_n.
 \end{align*}
 Agora, dado $x \in V$, existem $\beta_1$, \dots, $\beta_n \in \cp{K}$ tais que
 \[
-  x = \beta_1w_1 + \cdots + \beta_nw_n.
+    x = \beta_1w_1 + \cdots + \beta_nw_n.
 \]
 Daí
 \begin{align*}
-  x &= \beta_1(\alpha_{11}v_1 + \cdots + \alpha_{n1}v_n) + \cdots + \beta_n(\alpha_{1n}v_1 + \cdots + \alpha_{nn}v_n)\\
-  &= (\beta_1\alpha_{11} + \beta_2\alpha_{12} + \cdots + \beta_n\alpha_{1n})v_1 + \cdots + (\beta_1\alpha_{n1} + \beta_2\alpha_{n2} + \cdots + \beta_n\alpha_{nn})v_n
+    x &= \beta_1(\alpha_{11}v_1 + \cdots + \alpha_{n1}v_n) + \cdots + \beta_n(\alpha_{1n}v_1 + \cdots + \alpha_{nn}v_n)\\
+    &= (\beta_1\alpha_{11} + \beta_2\alpha_{12} + \cdots + \beta_n\alpha_{1n})v_1 + \cdots + (\beta_1\alpha_{n1} + \beta_2\alpha_{n2} + \cdots + \beta_n\alpha_{nn})v_n
 \end{align*}
 Assim as coordenadas de $x$ em relação \`a base $\mathcal{B}_1$ são
 \[
-  [x]_{\mathcal{B}_1} = \begin{bmatrix}
+    [x]_{\mathcal{B}_1} = \begin{bmatrix}
     \beta_1\alpha_{11} + \beta_2\alpha_{12} + \cdots + \beta_n\alpha_{1n}\\
     \vdots\\
     \beta_1\alpha_{n1} + \beta_2\alpha_{n2} + \cdots + \beta_n\alpha_{nn}
-  \end{bmatrix}.
+    \end{bmatrix}.
 \]
 Seja $P$ a matriz cuja entrada $(i,j)$ é o escalar $\alpha_{ij}$, isto é,
 \[
-  P = \begin{bmatrix}
+    P = \begin{bmatrix}
     \alpha_{11} & \cdots & \alpha_{1n}\\
     \vdots & & \vdots\\
     \alpha_{n1} & \cdots & \alpha_{nn}
-  \end{bmatrix}.
+    \end{bmatrix}.
 \]
 Então podemos escrever
 \[
-  [x]_{\mathcal{B}_1} = P \begin{bmatrix}
+    [x]_{\mathcal{B}_1} = P \begin{bmatrix}
     \beta_1\\
     \vdots\\
     \beta_n
-  \end{bmatrix} = P[x]_{\mathcal{B}_2}.
+    \end{bmatrix} = P[x]_{\mathcal{B}_2}.
 \]
 Mais ainda, como $\mathcal{B}_1$ e $\mathcal{B}_2$ são bases de $V$, então $[x]_{\mathcal{B}_1} = [0_V]_{\mathcal{B}_1}$ se, e somente se, $[x]_{\mathcal{B}_2} = [0_V]_{\mathcal{B}_2}$. Logo $P$ possui inversa. Assim mostramos o seguinte teorema:
 
 \begin{teorema}\label{teorema_mudanca_base}
-  Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$, $\mathcal{B}_1$ e $\mathcal{B}_2$ bases ordenadas de $V$. Então existe uma única matriz $P \in \cp{M}_n(\cp{K})$, necessariamente invertível tal que
-  \begin{enumerate}[label={\roman*})]
-    \item $[x]_{\mathcal{B}_1} = P[x]_{\mathcal{B}_2}$
-    \item $[x]_{\mathcal{B}_2} = P^{-1}[x]_{\mathcal{B}_1}$
-  \end{enumerate}
-  para todo $x \in V$. As colunas de $P = \begin{bmatrix}
+    Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$, $\mathcal{B}_1$ e $\mathcal{B}_2$ bases ordenadas de $V$. Então existe uma única matriz $P \in \cp{M}_n(\cp{K})$, necessariamente invertível tal que
+    \begin{enumerate}[label={\roman*})]
+        \item $[x]_{\mathcal{B}_1} = P[x]_{\mathcal{B}_2}$
+        \item $[x]_{\mathcal{B}_2} = P^{-1}[x]_{\mathcal{B}_1}$
+    \end{enumerate}
+    para todo $x \in V$. As colunas de $P = \begin{bmatrix}
     P_1 & P_2 & \cdots & P_n
-  \end{bmatrix}$ são dadas por
-  \[
-    P_j = [w_j]_{\mathcal{B}_1}
-  \]
-  para $j = 1$, \dots, $n$.
+    \end{bmatrix}$ são dadas por
+    \[
+        P_j = [w_j]_{\mathcal{B}_1}
+    \]
+    para $j = 1$, \dots, $n$.
 \end{teorema}
 
 Além disso, também temos o seguinte teorema:
 
 \begin{teorema}\label{teorema_matriz_mudanca_base}
-  Seja $P \in \cp{M}_n(\cp{K})$ um matriz invertível. Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$ e $\mathcal{B}_1$ uma base ordenada de $V$. Então existe uma única base ordenada $\mathcal{B}_2$ de $V$ tal que
-  \begin{enumerate}[label={\roman*})]
-    \item $[x]_{\mathcal{B}_1} = P[x]_{\mathcal{B}_2}$
-    \item $[x]_{\mathcal{B}_2} = P^{-1}[x]_{\mathcal{B}_1}$
-  \end{enumerate}
-  para todo $x \in V$.
+    Seja $P \in \cp{M}_n(\cp{K})$ um matriz invertível. Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$ e $\mathcal{B}_1$ uma base ordenada de $V$. Então existe uma única base ordenada $\mathcal{B}_2$ de $V$ tal que
+    \begin{enumerate}[label={\roman*})]
+        \item $[x]_{\mathcal{B}_1} = P[x]_{\mathcal{B}_2}$
+        \item $[x]_{\mathcal{B}_2} = P^{-1}[x]_{\mathcal{B}_1}$
+    \end{enumerate}
+    para todo $x \in V$.
 \end{teorema}
 
 \begin{definicao}
-  A matriz $P \in \cp{M}_n(\cp{K})$ do Teorema \ref{teorema_matriz_mudanca_base} é chamada de \textbf{matriz de mudança de base} e é denotada por $P = [I]_{{\mathcal{B}_1},{\mathcal{B}_2}}$.
+    A matriz $P \in \cp{M}_n(\cp{K})$ do Teorema \ref{teorema_matriz_mudanca_base} é chamada de \textbf{matriz de mudança de base} e é denotada por $P = [I]_{{\mathcal{B}_1},{\mathcal{B}_2}}$.
 \end{definicao}
 
 Agora, sejam $T \colon V \to V$ uma transformação linear, $\mathcal{B}_1 = \{v_1,\dots,v_n\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ bases ordenadas de $V$. Sabemos que existe $P \in \cp{M}_n(\cp{K})$ invertível tal que
 \begin{equation}\label{equacao_mudanca_base}
-  [x]_{\mathcal{B}_1} = P[x]_{\mathcal{B}_2}
+    [x]_{\mathcal{B}_1} = P[x]_{\mathcal{B}_2}
 \end{equation}
 para todo $x \in V$. Mas, para todo $x \in V$ temos
 \begin{equation}\label{equacao_coordenadas_imagem}
-  [T(x)]_{\mathcal{B}_1} = [T]_{\mathcal{B}_1}[x]_{\mathcal{B}_1}.
+    [T(x)]_{\mathcal{B}_1} = [T]_{\mathcal{B}_1}[x]_{\mathcal{B}_1}.
 \end{equation}
 Aplicando \eqref{equacao_mudanca_base} ao vetor $T(x)$ obtemos
 \begin{equation}\label{equacao_mudanca_base_imagem}
-  [T(x)]_{\mathcal{B}_1} = P[T(x)]_{\mathcal{B}_2}.
+    [T(x)]_{\mathcal{B}_1} = P[T(x)]_{\mathcal{B}_2}.
 \end{equation}
 Combinando \eqref{equacao_mudanca_base}, \eqref{equacao_coordenadas_imagem} e \eqref{equacao_mudanca_base_imagem}:
 \begin{align*}
-  [T]_{\mathcal{B}_1}[x]_{\mathcal{B}_1} &= [T(x)]_{\mathcal{B}_1} = P[T(x)]_{\mathcal{B}_2}\\
-  [T]_{\mathcal{B}_1}P[x]_{\mathcal{B}_2} &= P[T(x)]_{\mathcal{B}_2}\\
-  P^{-1}[T]_{\mathcal{B}_1}P[x]_{\mathcal{B}_2} &= [T(x)]_{\mathcal{B}_2} = [T]_{\mathcal{B}_2}[x]_{\mathcal{B}_2}.
+    [T]_{\mathcal{B}_1}[x]_{\mathcal{B}_1} &= [T(x)]_{\mathcal{B}_1} = P[T(x)]_{\mathcal{B}_2}\\
+    [T]_{\mathcal{B}_1}P[x]_{\mathcal{B}_2} &= P[T(x)]_{\mathcal{B}_2}\\
+    P^{-1}[T]_{\mathcal{B}_1}P[x]_{\mathcal{B}_2} &= [T(x)]_{\mathcal{B}_2} = [T]_{\mathcal{B}_2}[x]_{\mathcal{B}_2}.
 \end{align*}
 Daí
 \[
-  P^{-1}[T]_{\mathcal{B}_1}P = [T]_{\mathcal{B}_2}
+    P^{-1}[T]_{\mathcal{B}_1}P = [T]_{\mathcal{B}_2}
 \]
 o que responde nossa pergunta.
 
 Por outro lado, sabemos que existe uma única transformação linear $G \colon V \to V$ tal que
 \[
-  G(v_i) = w_i
+    G(v_i) = w_i
 \]
 para $i = 1$, \dots, $n$. Mais ainda, tal transformação linear é um isomorfismo. Afirmamos que a matriz $P$ acima é exatamente a matriz de $G$ em relação \`a base $\mathcal{B}_1$. De fato, as entradas de $P$ são definidas por
 \[
-  w_i = \alpha_{1j}v_1 + \alpha_{2j}v_2 + \cdots + \alpha_{nj}v_n
+    w_i = \alpha_{1j}v_1 + \alpha_{2j}v_2 + \cdots + \alpha_{nj}v_n
 \]
 e como $G(v_i) = w_i$ podemos escrever
 \[
-  G(v_i) = w_i = \alpha_{1j}v_1 + \alpha_{2j}v_2 + \cdots + \alpha_{nj}v_n
+    G(v_i) = w_i = \alpha_{1j}v_1 + \alpha_{2j}v_2 + \cdots + \alpha_{nj}v_n
 \]
 e então por definição $[G]_{\mathcal{B}_1} = P$. Desse modo, temos o seguinte teorema:
 
 \begin{teorema}
-  Sejam $V$ um espaço vetorial sobre $\cp{K}$ de dimensão finita, $\mathcal{B}_1 = \{v_1,\dots,v_n\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ bases ordenadas de $V$. Suponha que $T \colon V \to V$ é uma transformação linear. Se $P = \begin{bmatrix}P_1 & P_2 & \dots & P_n
-  \end{bmatrix} \in \cp{M}_n(\cp{K})$ é uma matriz com colunas
-  \[
-    P_j = [w_j]_{\mathcal{B}_1}
-  \]
-  então
-  \[
-    [T]_{\mathcal{B}_2} = P^{-1}[T]_{\mathcal{B}_1}P.
-  \]
-  Alternativamente, se $G$ é o isomorfismo de $V$ definido por $G(v_i) = w_i$, $i = 1$, \dots, $n$ então
-  \[
-    [T]_{\mathcal{B}_2} = ([G]_{\mathcal{B}_1})^{-1}[T]_{\mathcal{B}_1}[G]_{\mathcal{B}_1}.
-  \]
+    Sejam $V$ um espaço vetorial sobre $\cp{K}$ de dimensão finita, $\mathcal{B}_1 = \{v_1,\dots,v_n\}$ e $\mathcal{B}_2 = \{w_1,\dots,w_n\}$ bases ordenadas de $V$. Suponha que $T \colon V \to V$ é uma transformação linear. Se $P = \begin{bmatrix}P_1 & P_2 & \dots & P_n
+    \end{bmatrix} \in \cp{M}_n(\cp{K})$ é uma matriz com colunas
+    \[
+        P_j = [w_j]_{\mathcal{B}_1}
+    \]
+    então
+    \[
+        [T]_{\mathcal{B}_2} = P^{-1}[T]_{\mathcal{B}_1}P.
+    \]
+    Alternativamente, se $G$ é o isomorfismo de $V$ definido por $G(v_i) = w_i$, $i = 1$, \dots, $n$ então
+    \[
+        [T]_{\mathcal{B}_2} = ([G]_{\mathcal{B}_1})^{-1}[T]_{\mathcal{B}_1}[G]_{\mathcal{B}_1}.
+    \]
 \end{teorema}
 
 \begin{definicao}
-  Sejam $A$, $B \in \cp{M}_n(\cp{K})$. Dizemos que $B$ é \textbf{semelhante} a $A$ sobre $\cp{K}$ se existe $P \in \cp{M}_n(\cp{K})$ invertível tal que
-  \[
-    B = P^{-1}AP.
-  \]
+    Sejam $A$, $B \in \cp{M}_n(\cp{K})$. Dizemos que $B$ é \textbf{semelhante} a $A$ sobre $\cp{K}$ se existe $P \in \cp{M}_n(\cp{K})$ invertível tal que
+    \[
+        B = P^{-1}AP.
+    \]
 \end{definicao}
 
 \begin{exemplos}
-  \begin{enumerate}[label={\arabic*})]
-    \item Sejam $\mathcal{B}_1 = \{(1, 1, 1); (0, 1, 0); (0, 0, 1)\}$ e $\mathcal{B}_2 = \{(1, 3, -2); (2, 1, 3); (3, 6, 0)\}$ bases ordenadas de $\real^3$. Ache a matriz mudança de base $[I]_{\mathcal{B}_1, \mathcal{B}_2}$ e $[I]_{\mathcal{B}_2, \mathcal{B}_1}$.
-      \begin{solucao}
-        Para encontrar $[I]_{\mathcal{B}_1, \mathcal{B}_2}$ devemos escrever os vetores de $\mathcal{B}_2$ como combinação linear dos vetores de $\mathcal{B}_1$.
+    \begin{enumerate}[label={\arabic*})]
+        \item Sejam $\mathcal{B}_1 = \{(1, 1, 1); (0, 1, 0); (0, 0, 1)\}$ e $\mathcal{B}_2 = \{(1, 3, -2); (2, 1, 3); (3, 6, 0)\}$ bases ordenadas de $\real^3$. Ache a matriz mudança de base $[I]_{\mathcal{B}_1, \mathcal{B}_2}$ e $[I]_{\mathcal{B}_2, \mathcal{B}_1}$.
+        \begin{solucao}
+            Para encontrar $[I]_{\mathcal{B}_1, \mathcal{B}_2}$ devemos escrever os vetores de $\mathcal{B}_2$ como combinação linear dos vetores de $\mathcal{B}_1$.
 
-        Primeiro, para um vetor genérico $(x, y, z) \in \real^3$ temos
-        \[
-          (x, y, z) = \alpha(1, 1, 1) + \beta(0, 1, 0) + \gamma(0, 0, 1)
-        \]
-        onde $\alpha = x$, $\beta = y - x$ e $\gamma = z - x$. Assim
-        \begin{align*}
-          (1, 3, -2) &= 1(1, 1, 1) + 2(0, 1, 0) - 3(0, 0, 1)\\
-          (2, 1, 3) &= 1(1, 1, 1) - 1(0, 1, 0) + 1(0, 0, 1)\\
-          (3, 6, 0) &= 3(1, 1, 1) + 3(0, 1, 0) - 3(0, 0, 1)
-        \end{align*}
-        e com isso
-        \[
-          [I]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}\phantom{-}1 & \phantom{-}2 & \phantom{-}3\\\phantom{-}2 & -1 & \phantom{-}3\\-3 & \phantom{-}1 & -3\end{bmatrix}.
-        \]
-        Agora, a matriz mudança de base de $\mathcal{B}_2$ para $\mathcal{B}_1$ será dada por $[I]_{\mathcal{B}_2, \mathcal{B}_1} = [I]_{\mathcal{B}_1, \mathcal{B}_2}^{-1}$:
-        \[
-          [I]_{\mathcal{B}_2, \mathcal{B}_1} = \begin{bmatrix}0 & -1 & -1\\1/3 & -2/3 & -1/3\\1/9 & \phantom{-}7/9 & \phantom{-}5/9\end{bmatrix}.
-        \]
-        Com isso, se por exemplo, $u \in \real^3$ é tal que
-        \[
-          [u]_{\mathcal{B}_1} = \begin{bmatrix}1\\0\\1\end{bmatrix}
-        \]
-        então
-        \[
-          [u]_{\mathcal{B}_2} = [I]_{\mathcal{B}_2, \mathcal{B}_1}\begin{bmatrix}1\\0\\1\end{bmatrix} = \begin{bmatrix}-1\\\phantom{-}0\\2/3\end{bmatrix}.
-        \]
-      \end{solucao}
+            Primeiro, para um vetor genérico $(x, y, z) \in \real^3$ temos
+            \[
+                (x, y, z) = \alpha(1, 1, 1) + \beta(0, 1, 0) + \gamma(0, 0, 1)
+            \]
+            onde $\alpha = x$, $\beta = y - x$ e $\gamma = z - x$. Assim
+            \begin{align*}
+                (1, 3, -2) &= 1(1, 1, 1) + 2(0, 1, 0) - 3(0, 0, 1)\\
+                (2, 1, 3) &= 1(1, 1, 1) - 1(0, 1, 0) + 1(0, 0, 1)\\
+                (3, 6, 0) &= 3(1, 1, 1) + 3(0, 1, 0) - 3(0, 0, 1)
+            \end{align*}
+            e com isso
+            \[
+                [I]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}\phantom{-}1 & \phantom{-}2 & \phantom{-}3\\\phantom{-}2 & -1 & \phantom{-}3\\-3 & \phantom{-}1 & -3\end{bmatrix}.
+            \]
+            Agora, a matriz mudança de base de $\mathcal{B}_2$ para $\mathcal{B}_1$ será dada por $[I]_{\mathcal{B}_2, \mathcal{B}_1} = [I]_{\mathcal{B}_1, \mathcal{B}_2}^{-1}$:
+            \[
+                [I]_{\mathcal{B}_2, \mathcal{B}_1} = \begin{bmatrix}0 & -1 & -1\\1/3 & -2/3 & -1/3\\1/9 & \phantom{-}7/9 & \phantom{-}5/9\end{bmatrix}.
+            \]
+            Com isso, se por exemplo, $u \in \real^3$ é tal que
+            \[
+                [u]_{\mathcal{B}_1} = \begin{bmatrix}1\\0\\1\end{bmatrix}
+            \]
+            então
+            \[
+                [u]_{\mathcal{B}_2} = [I]_{\mathcal{B}_2, \mathcal{B}_1}\begin{bmatrix}1\\0\\1\end{bmatrix} = \begin{bmatrix}-1\\\phantom{-}0\\2/3\end{bmatrix}.
+            \]
+        \end{solucao}
 
-    \item Seja $T \colon \real^2 \to \real^2$ dada por $T(x,y) = (x,0)$. Sabemos que com relação à base ordenada $\mathcal{B}_1 = \{e_1=(1,0);e_2=(0,1)\}$ a matriz de $T$ é
-    \[
-      [T]_{\mathcal{B}_1} = \begin{bmatrix}
-        1 & 0\\
-        0 & 0
-      \end{bmatrix}.
-    \]
-    Agora, seja $\mathcal{B}_2$ a base ordenada de $\real^2$ formada por
-    \[
-      \mathcal{B}_2 = \{w_1 = (1,1);w_2=(2,1)\}.
-    \]
-    Encontre $[T]_{\mathcal{B}_2}$.
-    \begin{solucao}
-      Então
-      \begin{align*}
-        w_1 &= e_1 + e_2\\
-        w_2 &= 2e_1 + e_2.
-      \end{align*}
-      Assim $P$ é a matriz
-      \[
-        P = \begin{bmatrix}
-          1 & 2\\
-          1 & 1
-        \end{bmatrix}
-      \]
-      cuja inversa é
-      \[
-        P^{-1} = \begin{bmatrix}
-          -1 & \phantom{-}2\\
-          \phantom{-}1 & -1
-        \end{bmatrix}.
-      \]
-      Logo
-      \begin{align*}
-        [T]_{\mathcal{B}_2} &= P^{-1}[T]_{\mathcal{B}_1}P\\
-        [T]_{\mathcal{B}_2} &= \begin{bmatrix}
-          -1 & -2\\
-          \phantom{-}1 & \phantom{-}2
-        \end{bmatrix}.
-      \end{align*}
-    \end{solucao}
+        \item Seja $T \colon \real^2 \to \real^2$ dada por $T(x,y) = (x,0)$. Sabemos que com relação à base ordenada $\mathcal{B}_1 = \{e_1=(1,0);e_2=(0,1)\}$ a matriz de $T$ é
+        \[
+            [T]_{\mathcal{B}_1} = \begin{bmatrix}
+            1 & 0\\
+            0 & 0
+            \end{bmatrix}.
+        \]
+        Agora, seja $\mathcal{B}_2$ a base ordenada de $\real^2$ formada por
+        \[
+            \mathcal{B}_2 = \{w_1 = (1,1);w_2=(2,1)\}.
+        \]
+        Encontre $[T]_{\mathcal{B}_2}$.
+        \begin{solucao}
+            Então
+            \begin{align*}
+            w_1 &= e_1 + e_2\\
+            w_2 &= 2e_1 + e_2.
+            \end{align*}
+            Assim $P$ é a matriz
+            \[
+                P = \begin{bmatrix}
+                1 & 2\\
+                1 & 1
+                \end{bmatrix}
+            \]
+            cuja inversa é
+            \[
+                P^{-1} = \begin{bmatrix}
+                -1 & \phantom{-}2\\
+                \phantom{-}1 & -1
+                \end{bmatrix}.
+            \]
+            Logo
+            \begin{align*}
+                [T]_{\mathcal{B}_2} &= P^{-1}[T]_{\mathcal{B}_1}P\\
+                [T]_{\mathcal{B}_2} &= \begin{bmatrix}
+                -1 & -2\\
+                \phantom{-}1 & \phantom{-}2
+                \end{bmatrix}.
+            \end{align*}
+        \end{solucao}
 
-  \item Seja $T \colon \real^3 \to \real^3$ um operador linear cuja matriz com relação à base ordenada canônica, $\mathcal{B} = \{e_1 = (1, 0, 0); e_2 = (0, 1, 0); e_3 = (0, 0 ,1)\}$, é
-    \[
-      [T]_\mathcal{B} = \begin{bmatrix}\phantom{-}1 & \phantom{-}1 & \phantom{-}0\\-1 & \phantom{-}0 & \phantom{-}1\\\phantom{-}0 & -1 & -1\end{bmatrix}.
-    \]
-    Qual é a matriz de $T$ em relação à base $\mathcal{B}_1 = \{(-1, 1, 0); (1, -1, 1); (0, 1, -1)\}$?
-    \begin{solucao}
-      Para encontrar $[T]_{\mathcal{B}_1}$ começamos achando a matriz $[I]_{\mathcal{B}, \mathcal{B}_1}$:
-      \begin{align*}
-        (-1, 1, 0) = -1e_1 + 1e_2 + 0e_3\\
-        (1, -1, 1) = 1e_1 - 1e_2 + 1e_3\\
-        (0, 1, -1) = 0e_1 + 1e_2 - 1e_3
-      \end{align*}
-      logo
-      \[
-        P = [I]_{\mathcal{B}, \mathcal{B}_1} = \begin{bmatrix}-1 & \phantom{-}1 & 0\\\phantom{-}1 & -1 & 1\\\phantom{-}0 & \phantom{-}1 & 1\end{bmatrix}.
-      \]
-      Assim
-      \[
-        [T]_{\mathcal{B}_1} = P^{-1}[T]_\mathcal{B}P
-      \]
-      onde
-      \[
-        P^{-1} = \begin{bmatrix}0 & 1 & 1\\1 & 1 & 1\\1 & 1 & 0\end{bmatrix}.
-      \]
-      Fazendo os cálculos encontramos
-      \[
-        [T]_{\mathcal{B}_1} = \begin{bmatrix}0 & 0 & -1\\0 & 0 & \phantom{-}0\\1 & 0 & \phantom{-}0\end{bmatrix}.
-      \]
-    \end{solucao}
+        \item Seja $T \colon \real^3 \to \real^3$ um operador linear cuja matriz com relação à base ordenada canônica, $\mathcal{B} = \{e_1 = (1, 0, 0); e_2 = (0, 1, 0); e_3 = (0, 0 ,1)\}$, é
+        \[
+            [T]_\mathcal{B} = \begin{bmatrix}\phantom{-}1 & \phantom{-}1 & \phantom{-}0\\-1 & \phantom{-}0 & \phantom{-}1\\\phantom{-}0 & -1 & -1\end{bmatrix}.
+        \]
+        Qual é a matriz de $T$ em relação à base $\mathcal{B}_1 = \{(-1, 1, 0); (1, -1, 1); (0, 1, -1)\}$?
+        \begin{solucao}
+            Para encontrar $[T]_{\mathcal{B}_1}$ começamos achando a matriz $[I]_{\mathcal{B}, \mathcal{B}_1}$:
+            \begin{align*}
+                (-1, 1, 0) = -1e_1 + 1e_2 + 0e_3\\
+                (1, -1, 1) = 1e_1 - 1e_2 + 1e_3\\
+                (0, 1, -1) = 0e_1 + 1e_2 - 1e_3
+            \end{align*}
+            logo
+            \[
+                P = [I]_{\mathcal{B}, \mathcal{B}_1} = \begin{bmatrix}-1 & \phantom{-}1 & 0\\\phantom{-}1 & -1 & 1\\\phantom{-}0 & \phantom{-}1 & 1\end{bmatrix}.
+            \]
+            Assim
+            \[
+                [T]_{\mathcal{B}_1} = P^{-1}[T]_\mathcal{B}P
+            \]
+            onde
+            \[
+                P^{-1} = \begin{bmatrix}0 & 1 & 1\\1 & 1 & 1\\1 & 1 & 0\end{bmatrix}.
+            \]
+            Fazendo os cálculos encontramos
+            \[
+                [T]_{\mathcal{B}_1} = \begin{bmatrix}0 & 0 & -1\\0 & 0 & \phantom{-}0\\1 & 0 & \phantom{-}0\end{bmatrix}.
+            \]
+        \end{solucao}
 
-    \item Seja $D \colon \mathcal{P}_3(\real) \to \mathcal{P}_3(\real)$ a transformação derivada. Considere a base ordenada $\mathcal{B}_1 = \{1, x, x^2, x^3\}$. Tome $t \in \real$ e defina
-    \[
-      \mathcal{B}_2 = \{g_1 = 1; g_2 = (x + t); g_3 = (x + t)^2; g_4 = (x + t)^3\}.
-    \]
-    Assim $\mathcal{B}_2$ é uma base para $\mathcal{P}_2(\real)$. Determine $[D]_{\mathcal{B}_2}$.
-    \begin{solucao}
-      Primeiro vamos encontrar a matriz mudança de base de $\mathcal{B}_1$ para $\mathcal{B}_2$:
-      \begin{align*}
-        g_1 &= 1f_1 + 0f_2 + 0f_3 + 0f_4\\
-        g_2 &= tf_1 + xf_2 + 0f_3 + 0f_4\\
-        g_3 &= t^2f_1 + 2tf_2 + 1f_3 + 0f_4\\
-        g_4 &= t^3f_1 + 3t^2f_2 + 3tf_3 + 1f_4\\
-      \end{align*}
-      e então
-      \[
-        P = \begin{bmatrix}
-          1 & t & t^2 & t^3\\
-          0 & 1 & 2t & 3t^2\\
-          0 & 0 & 1 & 3t\\
-          0 & 0 & 0 & 1
-        \end{bmatrix}
-      \]
-      é invertível com
-      \[
-        P^{-1} = \begin{bmatrix}
-          1 & -t & \phantom{-}t^2 & -t^3\\
-          0 & \phantom{-}1 & -2t & \phantom{-}3t^2\\
-          0 & \phantom{-}0 & \phantom{-}1 & -3t\\
-          0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}1
-        \end{bmatrix}.
-      \]
-      Agora
-      \begin{align*}
-        D(f_1) &= 0\\
-        D(f_2) &= 1\\
-        D(f_3) &= 2x\\
-        D(f_4) &= 3x^2
-      \end{align*}
-      e então
-      \[
-        [D]_{\mathcal{B}_1} = \begin{bmatrix}
-          0 & 1 & 0 & 0\\
-          0 & 0 & 2 & 0\\
-          0 & 0 & 0 & 3\\
-          0 & 0 & 0 & 0
-        \end{bmatrix}.
-      \]
-      Logo
-      \[
-        [D]_{\mathcal{B}_2} = P^{-1}[D]_{\mathcal{B}_1}P = \begin{bmatrix}
-          0 & 1 & 0 & 0\\
-          0 & 0 & 2 & 0\\
-          0 & 0 & 0 & 3\\
-          0 & 0 & 0 & 0
-        \end{bmatrix}.
-      \]
-    \end{solucao}
-  \end{enumerate}
+        \item Seja $D \colon \mathcal{P}_3(\real) \to \mathcal{P}_3(\real)$ a transformação derivada. Considere a base ordenada $\mathcal{B}_1 = \{1, x, x^2, x^3\}$. Tome $t \in \real$ e defina
+        \[
+            \mathcal{B}_2 = \{g_1 = 1; g_2 = (x + t); g_3 = (x + t)^2; g_4 = (x + t)^3\}.
+        \]
+        Assim $\mathcal{B}_2$ é uma base para $\mathcal{P}_2(\real)$. Determine $[D]_{\mathcal{B}_2}$.
+        \begin{solucao}
+            Primeiro vamos encontrar a matriz mudança de base de $\mathcal{B}_1$ para $\mathcal{B}_2$:
+            \begin{align*}
+                g_1 &= 1f_1 + 0f_2 + 0f_3 + 0f_4\\
+                g_2 &= tf_1 + xf_2 + 0f_3 + 0f_4\\
+                g_3 &= t^2f_1 + 2tf_2 + 1f_3 + 0f_4\\
+                g_4 &= t^3f_1 + 3t^2f_2 + 3tf_3 + 1f_4\\
+            \end{align*}
+            e então
+            \[
+                P = \begin{bmatrix}
+                1 & t & t^2 & t^3\\
+                0 & 1 & 2t & 3t^2\\
+                0 & 0 & 1 & 3t\\
+                0 & 0 & 0 & 1
+                \end{bmatrix}
+            \]
+            é invertível com
+            \[
+                P^{-1} = \begin{bmatrix}
+                1 & -t & \phantom{-}t^2 & -t^3\\
+                0 & \phantom{-}1 & -2t & \phantom{-}3t^2\\
+                0 & \phantom{-}0 & \phantom{-}1 & -3t\\
+                0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}1
+                \end{bmatrix}.
+            \]
+            Agora
+            \begin{align*}
+                D(f_1) &= 0\\
+                D(f_2) &= 1\\
+                D(f_3) &= 2x\\
+                D(f_4) &= 3x^2
+            \end{align*}
+            e então
+            \[
+                [D]_{\mathcal{B}_1} = \begin{bmatrix}
+                0 & 1 & 0 & 0\\
+                0 & 0 & 2 & 0\\
+                0 & 0 & 0 & 3\\
+                0 & 0 & 0 & 0
+            \end{bmatrix}.
+            \]
+            Logo
+            \[
+                [D]_{\mathcal{B}_2} = P^{-1}[D]_{\mathcal{B}_1}P = \begin{bmatrix}
+                0 & 1 & 0 & 0\\
+                0 & 0 & 2 & 0\\
+                0 & 0 & 0 & 3\\
+                0 & 0 & 0 & 0
+                \end{bmatrix}.
+            \]
+        \end{solucao}
+    \end{enumerate}
 \end{exemplos}
 %% section transformacoes_lineares_e_matrizes (end)
