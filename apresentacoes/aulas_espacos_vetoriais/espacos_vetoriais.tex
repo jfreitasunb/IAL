@@ -614,7 +614,7 @@
 
 \begin{frame}
     \begin{definicao}
-        A matriz $P$ que apareceu anteriormente \pause é chamada \textbf{matriz mudança de base}, \pause ou \textbf{matriz de transição}, \pause de $\mathcal{B}$ para $\mathcal{C}$.\pause Denotamos tal matriz por \pause $P_{\mathcal{B} \to \mathcal{C}}$.
+        A matriz $P$ que apareceu anteriormente \pause é chamada \textbf{matriz mudança de base}, \pause ou \textbf{matriz de transição}, \pause de $\mathcal{B}$ para $\mathcal{C}$. \pause Denotamos tal matriz por \pause $P_{\mathcal{B} \to \mathcal{C}}$.
     \end{definicao}
 \end{frame}
 
@@ -625,14 +625,22 @@
 \end{frame}
 
 \begin{frame}
-    \begin{tcolorbox}[colback=green!30, colframe=green!80!blue, title=Procedimento para calcular $P_{\mathcal{B} \to \mathcal{C}}$]
+    Do teorema anterior temos que se $\mathcal{B} = \{u_1, u_2, \dots, u_n\}$, \pause e $[v]_\mathcal{C} = \{w_1, w_2, \dots, w_n\}$ são bases do espaço vetorial $V$, então
+    \begin{align}
+        [v]_\mathcal{B} = P_{\mathcal{B} \to \mathcal{C}}[v]_\mathcal{C}\\
+        [v]_\mathcal{C} = P_{\mathcal{C} \to \mathcal{B}}[v]_\mathcal{B}.
+    \end{align}
+\end{frame}
+
+\begin{frame}
+    \begin{tcolorbox}[colback=green!30, colframe=green!80!blue, title=Procedimento para calcular $P_{\mathcal{B} \to \mathcal{C}}$\, no caso de bases de $\real^n$]
         \begin{tabular}{ll}
-            Passo 1. & Montamos a matriz $[\mathcal{C} | \mathcal{B}]$.\pause\\
+            Passo 1. & Montamos a matriz $[\mathcal{C}\ |\ \mathcal{B}]$.\pause\\
             \\
             Passo 2. & Reduzimos a matriz do Passo 1 à forma escalonada\\
             & reduzida usando operações elementares com as linhas.\pause\\
             \\
-            Passo 3. & A matriz resultante é$[I | P_{\mathcal{B} \to \mathcal{C}}]$.\pause\\
+            Passo 3. & A matriz resultante é $[I\ |\ P_{\mathcal{B} \to \mathcal{C}}]$.\pause\\
             \\
             Passo 4. & Extraímos a matriz $P_{\mathcal{B} \to \mathcal{C}}$ do lado direito da matriz do\\
             & Passo 3.
