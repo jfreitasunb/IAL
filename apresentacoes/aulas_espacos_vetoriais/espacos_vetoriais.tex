@@ -598,14 +598,28 @@
 %\end{frame}
 
 \begin{frame}
-    Se mudarmos a base de um espaço vetorial $V$ de alguma base velha $\mathcal{B} = \{u_1, u_2, \dots, u_n\}$ para uma base nova $\mathcal{C} = \{w_1, w_2, \dots, w_n\}$, então, dado qualquer vetor $v \in V$, o velho vetor de coordenadas $[v]_\mathcal{B}$ está relacionado com o novo vetor de coordenadas $[v]_\mathcal{C}$ pela equação
+    Considere um espaço vetorial $V$ sobre um corpo $\cp{K}$ de dimensão $n$. Tomando duas bases para esse espaço, digamos, $\mathcal{B} = \{u_1, u_2, \dots, u_n\}$ e $\mathcal{C} = \{w_1, w_2, \dots, w_n\}$ é possível relacionar as matrizes
+    \begin{align*}
+        [v]_\mathcal{B} \quad \mbox{e}\quad [v]_\mathcal{C}
+    \end{align*}
+    para $v \in V$?
+\end{frame}
+
+\begin{frame}
+    Sim, nesse caso $[v]_\mathcal{B}$, onde $\mathcal{B} = \{u_1, u_2, \dots, u_n\}$, e $[v]_\mathcal{C}$, onde $\mathcal{C} = \{w_1, w_2, \dots, w_n\}$, estão relacionadas pela equação:
     \begin{equation}
         [v]_\mathcal{B} = P[v]_\mathcal{C}
     \end{equation}
-    onde as colunas de $P$ são os vetores de coordenadas dos vetores da base nova em relação à base velha; ou seja, os vetores coluna de $P$ são
+    onde as colunas de $P$ são os vetores de coordenadas obtidos quando escrevemos os vetores de $\mathcal{C}$ como uma combinação linear dos vetores de $\mathcal{B}$. Assim as colunas de $P$ são dadas por:
     \begin{equation}
         [w_1]_\mathcal{B}, [w_2]_\mathcal{B}, \dots, [w_n]_\mathcal{B}
     \end{equation}
+\end{frame}
+
+\begin{frame}
+    \begin{definicao}
+        A matriz $P$ que apareceu anteriormente é chamada \textbf{matriz mudança de base}, ou matriz de transição, de $\mathcal{B}$ para $\mathcal{C}$.
+    \end{definicao}
 \end{frame}
 
 \begin{frame}
