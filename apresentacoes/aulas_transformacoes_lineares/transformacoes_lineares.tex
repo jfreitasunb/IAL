@@ -32,10 +32,11 @@
             Sejam $(V, +, \cdot)$  e $(W, \oplus, \otimes)$ \pause espaços vetoriais sobre um corpo $\cp{K}$. \pause Uma função $T \colon V \to
             W$ \pause é uma \textbf{transformação linear} se:\pause
             \begin{enumerate}[label={\roman*})]
+                \vspace*{.25cm}
 
                 \item $T(u_1 + u_2) \pause = T(u_1) \pause \oplus T(u_2)$ \pause para todos $u_1$, $u_2 \in V$;\pause
 
-                \vspace*{1.5cm}
+                \vspace*{1cm}
 
                 \item $T(\lambda \cdot u) \pause = \lambda \pause \otimes T(u)$ \pause para todo $\lambda \in \cp{K}$ e todo $u \in V$.
             \end{enumerate}
@@ -45,10 +46,11 @@
     \begin{frame}
         \begin{observacoes}
             \begin{enumerate}[label={\roman*})]
+                \vspace*{.25cm}
                 \item Se $T \colon V \to V$ é uma transformação linear \pause de $V$ em $V$, então \pause $T$ é chamada de um \textbf{operador
                     linear}.\pause
 
-                \vspace*{1.5cm}
+                \vspace*{1cm}
 
                 \item Para simplificar a notação, \pause vamos adotar os mesmos símbolos para indicar a soma \pause e o produto por escalar
                     \pause nos espaços vetoriais que aparecerão no decorrer do conteúdo. \pause No entanto, deve-se estar ciente que estes
@@ -61,13 +63,14 @@
         \begin{lema}
             Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$ \pause e $T \colon V \to W$ uma transformação linear. \pause Então:\pause
             \begin{enumerate}[label={\roman*})]
+                \vspace*{.25cm}
                 \item $T(0_V) \pause = 0_W$, \pause onde $0_V$ e $0_W$ \pause denotam os vetores nulos de $V$ e $W$, respectivamente.\pause
 
-                \vspace*{1cm}
+                \vspace*{.75cm}
 
                 \item $T(-u) \pause = -T(u)$, \pause para cada $u \in V$.\pause
 
-                \vspace{1cm}
+                \vspace{.75cm}
 
                 \item $T(\alpha_1u_1 \pause + \alpha_2u_2 \pause + \cdots + \pause \alpha_mu_m) \pause = \alpha_1 T(u_1) \pause +
                     \alpha_2 T(u_2) \pause + \cdots + \alpha_m T(u_m)$, \pause onde $\alpha_i \in \cp{K}$ e $u_i \in V$
@@ -99,6 +102,7 @@
         \begin{definicao}
             Sejam $V$ e $W$ espaços vetoriais sobre um corpo $\cp{K}$ \pause e $T \colon V \to W$ uma transformação linear.\pause
             \begin{enumerate}[label={\roman*})]
+                \vspace*{.25cm}
                 \item O conjunto\pause
                 \[
                     \ker(T) \pause = \{u \in V  \mid T(u) = 0_W\}\pause
@@ -106,7 +110,7 @@
                 é chamado de \textbf{kernel} \pause ou \textbf{núcleo} de $T$. \pause O núcleo de $T$ também pode ser denotado por
                 $Nuc(T)$.\pause
 
-                \vspace*{1.5cm}
+                \vspace*{1cm}
 
                 \item O conjunto\pause
                 \[
@@ -122,6 +126,7 @@
         \begin{proposicao}
             Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$ \pause e $T \colon V \to W$ uma transformação linear. \pause Então:
             \begin{enumerate}[label={\roman*})]
+                \vspace*{.25cm}
                 \item $\ker(T)$ \pause é um subespaço de $V$;\pause
 
                 \vspace*{1cm}
@@ -145,11 +150,12 @@
         \begin{definicao}
             Sejam $V$ e $W$ $\cp{K}$-espaços vetoriais \pause e $T \colon V \to W$ uma transformação linear.\pause
             \begin{enumerate}[label={\roman*})]
+                \vspace*{.25cm}
                 \item Dizemos que $T$ é \textbf{injetora} \pause se dados $u_1$, $u_2 \in V$ \pause tais que $T(u_1) = T(u_2)$, \pause então
                     $u_1 = u_2$. \pause De modo equivalente, \pause se $u_1$, $u_2 \in V$ são tais que $u_1 \ne u_2$, \pause
                     então $T(u_1) \ne T(u_2)$.
 
-                \vspace{.5cm}
+                \vspace{1cm}
 
                 \item Dizemos que $T$ é \textbf{sobrejetora} \pause se $\im(T) = W$. \pause Em outras palavras, \pause $T$ é
                     \textbf{sobrejetora} se para todo $w \in W$, \pause existe $u \in V$ tal que $T(u) = w$.
@@ -161,15 +167,16 @@
         \begin{proposicao}
             Sejam $V$ e $W$ espaços vetoriais sobre um corpo $\cp{K}$ \pause e $T \colon V \to W$ uma transformação linear.\pause
             \begin{enumerate}[label={\roman*})]
+                \vspace*{.25cm}
                 \item $T$ é injetora \pause se, e somente se, $\ker(T) = \{0_V\}$.\pause
 
-                \vspace{.5cm}
+                \vspace{.75cm}
 
                 \item Se $\dim V = \dim W$  e $T$ é injetora, \pause então $T$ transforma bases em bases, \pause isto é, se
                     $\mathcal{B} = \{v_1, v_2, \dots, v_n\}$ é uma base de $V$, \pause então $\{T(v_1), \pause T(v_2), \pause \dots,
                     T(v_n)\}$ é uma base de $W$.\pause
 
-                \vspace{.5cm}
+                \vspace{.75cm}
 
                 \item Se $\dim V = \dim W$, \pause então $T$ é injetora \pause se, e somente se, \pause $T$ é sobrejetora.
             \end{enumerate}
@@ -180,9 +187,10 @@
         \begin{observacoes}
             Seja $T \colon V \to W$ uma transformação linear, \pause onde $\dim V < \infty$ e $\dim W < \infty$.\pause
             \begin{enumerate}[label={\roman*})]
+                \vspace*{.25cm}
                 \item Se $\dim V > \dim W$, \pause então $T$ não pode ser injetora, \pause isto é, $\ker(T) \ne \emptyset$.\pause
 
-                \vspace{.5cm}
+                \vspace{1cm}
 
                 \item Se $\dim V < \dim W$, \pause então $T$ não pode ser sobrejetora, \pause isto é, $\im(T) \ne W$.
             \end{enumerate}
@@ -205,13 +213,14 @@
         \begin{observacoes}
             Seja $V$ um espaço vetorial sobre $\cp{K}$ \pause com $\dim V = n$. \pause Então do teorema anterior temos:\pause
             \begin{enumerate}[label={\roman*})]
+                \vspace*{.25cm}
                 \item Se $\cp{K} = \rac$, \pause então $V \cong \rac^n$.\pause
 
-                \vspace{.5cm}
+                \vspace{.75cm}
 
                 \item Se $\cp{K} = \real$, \pause então $V \cong \real^n$.\pause
 
-                \vspace{.5cm}
+                \vspace{.75cm}
 
                 \item Se $\cp{K} = \complex$, \pause então $V \cong \complex^n$.
             \end{enumerate}
@@ -246,15 +255,16 @@
     \begin{frame}
         \begin{observacoes}
             \begin{enumerate}[label={\roman*})]
+                \vspace*{.25cm}
                 \item Seja $I = I_V = Id = Id_V \colon V \to V$ \pause a transformação linear tal que $I(u) = Id(u) = u$ \pause para todo
                     $u \in V$. \pause Então $I = Id$ é chamado de \textbf{operador identidade}.\pause
 
-                \vspace{.5cm}
+                \vspace{.75cm}
 
                 \item Se $T \colon V \to V$ é uma transformação linear invertível, \pause então a aplicação $T^{-1} \colon V \to V$ também é
                     uma transformação linear.\pause
 
-                \vspace{.5cm}
+                \vspace{.75cm}
 
                 \item Se $T \colon V \to V$ é um operador invertível, \pause então $T^{-1} \colon V \to V$ é chamado de \textbf{operador
                     inverso de $T$}.
@@ -266,16 +276,17 @@
         \begin{proposicao}
             Seja $T \colon V \to V$ um operador linear.\pause
             \begin{enumerate}[label={\roman*})]
+                \vspace*{.25cm}
                 \item Se $T$ é invertível \pause e $T^{-1} \colon V \to V$ é o seu inverso, \pause então
                     \[
                         (T^{-1} \circ T) = \pause (T \circ T^{-1}) = \pause Id.\pause
                     \]
 
-                \vspace{.5cm}
+                \vspace{.75cm}
 
                 \item Se $V$ tem dimensão finita, \pause então $T$ é invertível \pause se, e somente se, \pause $\ker(T) = \{0_V\}$.\pause
 
-                \vspace{.5cm}
+                \vspace{.75cm}
 
                 \item Se $T$ é invertível, \pause então dada uma base $\{v_1, v_2, \dots, v_n\}$ de $V$, \pause o conjunto $\{T(v_1), \pause
                     T(v_2), \pause \dots, T(v_n)\}$ \pause é uma base de $V$.
@@ -339,9 +350,10 @@
             Sejam $T \colon V \to V$ é um operador linear \pause e $\mathcal{B}$ é uma base ordenada de $V$. \pause Então as seguintes
             afirmações são equivalentes:\pause
             \begin{enumerate}[label={\roman*})]
+                \vspace*{.25cm}
                 \item $T$ é injetor\pause
 
-                \vspace{1cm}
+                \vspace{.75cm}
 
                 \item $[T]_\mathcal{B}$ é invertível.\pause
             \end{enumerate}
@@ -360,9 +372,10 @@
             Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$, \pause $\mathcal{B}_1$ e $\mathcal{B}_2$ bases ordenadas de $V$.
             \pause Então existe uma única matriz $P \in \cp{M}_n(\cp{K})$, \pause necessariamente invertível tal que\pause
             \begin{enumerate}[label={\roman*})]
+                \vspace*{.25cm}
                 \item $[x]_{\mathcal{B}_1} = \pause P[x]_{\mathcal{B}_2}$\pause
 
-                \vspace{1cm}
+                \vspace{.75cm}
 
                 \item $[x]_{\mathcal{B}_2} = \pause P^{-1}[x]_{\mathcal{B}_1}$\pause
             \end{enumerate}
@@ -382,9 +395,10 @@
             Seja $P \in \cp{M}_n(\cp{K})$ um matriz invertível. \pause Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$ \pause e
             $\mathcal{B}_1$ uma base ordenada de $V$. \pause Então existe uma única base ordenada $\mathcal{B}_2$ \pause de $V$ tal que\pause
             \begin{enumerate}[label={\roman*})]
+                \vspace*{.25cm}
                 \item $[x]_{\mathcal{B}_1} = \pause P[x]_{\mathcal{B}_2}$\pause
 
-                \vspace{1cm}
+                \vspace{.75cm}
 
                 \item $[x]_{\mathcal{B}_2} = \pause P^{-1}[x]_{\mathcal{B}_1}$\pause
             \end{enumerate}
