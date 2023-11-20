@@ -148,8 +148,8 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
         \item Sejam $\cp{K}^3$ e $\cp{M}_2(\cp{K})$ $\cp{K}$-espaços vetoriais. Defina $T \colon \cp{K}^3 \to \cp{M}_2(\cp{K})$ por
         \[
             T(a, b, c) = \begin{bmatrix}
-            a+b & 0_\cp{K}\\
-            0_\cp{K} & c - b
+            a+b & 0\\
+            0 & c - b
             \end{bmatrix}.
         \]
         Então $T$ é uma transformação linear.
@@ -157,14 +157,14 @@ Em todo esse capítulo $\cp{K}$ denotará um corpo.
             Vamos usar o Lema \ref{condicaoalternativaTL}. Para isso, sejam $(a, b, c)$, $(d, e, f) \in \cp{K}^3$ e $\lambda \in \cp{K}$. Temos:
             \begin{align*}
                 T(\lambda(a,b,c) + (d,e,f)) &= T(\lambda a + d, \lambda b + e, \lambda c + f) \\ &= \begin{bmatrix}
-                (\lambda a + d) + (\lambda b + e) & 0_\cp{K}\\
-                0_\cp{K} & (\lambda c + f) - (\lambda b + e)
+                (\lambda a + d) + (\lambda b + e) & 0\\
+                0 & (\lambda c + f) - (\lambda b + e)
                 \end{bmatrix} \\ &= \begin{bmatrix}
-                \lambda a + \lambda b & 0_\cp{K}\\
-                0_\cp{K} & \lambda c - \lambda b
+                \lambda a + \lambda b & 0\\
+                0 & \lambda c - \lambda b
                 \end{bmatrix} + \begin{bmatrix}
-                d + e & 0_\cp{K}\\
-                0_\cp{K} & f - e
+                d + e & 0\\
+                0 & f - e
                 \end{bmatrix} \\ &= \lambda T(a,b,c) + T(d,e,f).
             \end{align*}
             Logo, $T$ é uma transformação linear.
