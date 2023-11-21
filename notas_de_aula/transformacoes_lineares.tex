@@ -467,7 +467,7 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
 \end{definicao}
 
 \begin{teorema}
-    Seja $V$ um espaço vetorial sobre $\cp{K}$com $\dim V = n$, então $V \cong \cp{K}^n$.
+    Seja $V$ um espaço vetorial sobre $\cp{K}$ com $\dim V = n$, então $V \cong \cp{K}^n$.
 \end{teorema}
 
 \begin{observacoes}
@@ -540,7 +540,7 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
 \end{exemplo}
 
 \begin{definicao}
-    Dadas $S \colon V \to W$e $T \colon W \to U$ transformações lineares,definimos a \textbf{composição de $T$ com $S$}\index{Transformação linear!composição}como a aplicação:
+    Dadas $S \colon V \to W$e $T \colon W \to U$ transformações lineares, definimos a \textbf{composição de $T$ com $S$}\index{Transformação linear!composição}como a aplicação:
     \begin{align*}
         T \circ S \colon &V \to U\\
         &v \mapsto (T\circ S)(u) = T(S(v))
@@ -548,7 +548,7 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
 \end{definicao}
 
 \begin{proposicao}
-    Se $S \colon V \to W$ e $T \colon W \to U$ são transformações lineares,então a composição de $T\circ S$ também é uma transformação linear.
+    Se $S \colon V \to W$ e $T \colon W \to U$ são transformações lineares, então a composição de $T\circ S$ também é uma transformação linear.
 \end{proposicao}
 
 \begin{exemplos}
@@ -579,11 +579,11 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
 \end{exemplos}
 
 \begin{definicao}
-    Dado $T \colon V \to V$ um operador linear,dizemos que $T$ é \textbf{invertível}\index{Transformação linear!invertível} se existe outra aplicação $T^{-1} \colon V \to V$tal que para qualquer $u \in V$,$T^{-1}(T(u)) = u$.
+    Dado $T \colon V \to V$ um operador linear,dizemos que $T$ é \textbf{invertível}\index{Transformação linear!invertível} se existe outra aplicação $T^{-1} \colon V \to V$ tal que para qualquer $u \in V$, $T^{-1}(T(u)) = u$.
 \end{definicao}
 
 \begin{exemplo}
-    Seja $T \colon \real^2 \to \real^2$ dada por $T(x, y) = (4x - 3y, -2x + 2y)$. Tomo $T^{-1} \colon \real^2 \to \real^2$ dada por $T^{-1}(a, b) = (a + 3b/2, a + 2b)$. Então $T^{-1}$ é o operador inverso de $T$. De fato,
+    Seja $T \colon \real^2 \to \real^2$ dada por $T(x, y) = (4x - 3y, -2x + 2y)$. Tome $T^{-1} \colon \real^2 \to \real^2$ dada por $T^{-1}(a, b) = (a + 3b/2, a + 2b)$. Então $T^{-1}$ é o operador inverso de $T$. De fato,
     \begin{align*}
         T^{-1}(T(x, y)) &= T^{-1}(4x - 3y, -2x + 2y) \\ &= (4x - 3y + 3(-2x + 2y)/2, 4x - 3y + 2(-2x + 2y)) \\ &= (x, y)
     \end{align*}
@@ -591,30 +591,30 @@ isto é, $T(u) \in Span(T(v_1), T(v_2), \dots, T(v_n))$. Portanto para conhecer 
 
 \begin{observacoes}
     \begin{enumerate}[label={\roman*})]
-        \item Seja $I = I_V = Id = Id_V \colon V \to V$a transformação linear tal que $I(u) = Id(u) = u$para todo $u \in V$.Então $I = Id$ é chamado de \textbf{operador identidade}\index{Transformação linear!operador identidade}.
+        \item Seja $I = I_V = Id = Id_V \colon V \to V$a transformação linear tal que $I(u) = Id(u) = u$ para todo $u \in V$. Então $I = Id$ é chamado de \textbf{operador identidade}\index{Transformação linear!operador identidade}.
 
-        \item Se $T \colon V \to V$ é uma transformação linear invertível,então a aplicação $T^{-1} \colon V \to V$ também é uma transformação linear.
+        \item Se $T \colon V \to V$ é uma transformação linear invertível, então a aplicação $T^{-1} \colon V \to V$ também é uma transformação linear.
 
-        \item Se $T \colon V \to V$ é um operador invertível,então $T^{-1} \colon V \to V$ é chamado de \textbf{operador inverso de $T$}\index{Transformação linear!operador inverso}.
+        \item Se $T \colon V \to V$ é um operador invertível, então $T^{-1} \colon V \to V$ é chamado de \textbf{operador inverso de $T$}\index{Transformação linear!operador inverso}.
     \end{enumerate}
 \end{observacoes}
 
 \begin{proposicao}
     Seja $T \colon V \to V$ um operador linear.Então:
     \begin{enumerate}[label={\roman*})]
-        \item Se $T$ é invertívele $T^{-1} \colon V \to V$ é o seu inverso,então
+        \item Se $T$ é invertívele $T^{-1} \colon V \to V$ é o seu inverso, então
         \[
             (T^{-1} \circ T) =(T \circ T^{-1}) =Id.
         \]
 
-        \item Se $V$ tem dimensão finita,então $T$ é invertívelse, e somente se,$\ker(T) = \{0_V\}$.
+        \item Se $V$ tem dimensão finita,então $T$ é invertível se, e somente se, $\ker(T) = \{0_V\}$.
 
-        \item Se $T$ é um operador invertível,então dada uma base $\{v_1, v_2, \dots, v_n\}$ de $V$,o conjunto $\{T(v_1),T(v_2),\dots, T(v_n)\}$é uma base de $V$.
+        \item Se $T$ é um operador invertível, então dada uma base $\{v_1, v_2, \dots, v_n\}$ de $V$, o conjunto $\{T(v_1),T(v_2),\dots, T(v_n)\}$é uma base de $V$.
     \end{enumerate}
 \end{proposicao}
 
 \begin{proposicao}
-    Se $S \colon V \to V$ e $T \colon V \to V$são operadores invertíveis,então $S \circ T$ é invertível e
+    Se $S \colon V \to V$ e $T \colon V \to V$ são operadores invertíveis, então $S \circ T$ é invertível e
     \[
       (S \circ T)^{-1}= T^{-1}\circ S^{-1}.
     \]
