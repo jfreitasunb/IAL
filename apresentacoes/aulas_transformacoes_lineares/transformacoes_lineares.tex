@@ -226,6 +226,84 @@
         \end{observacoes}
     \end{frame}
 
+
+    \begin{frame}
+        \begin{teorema}
+            Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$, \pause de dimensões $p \ge 1$ e $q \ge 1$, respectivamente. \pause Sejam
+            $\mathcal{B}_V$ e $\mathcal{B}_W$ bases ordenadas de $V$ e $W$, respectivamente. \pause Então para cada transformação linear
+            $T \colon V \to W$, \pause existe uma matriz $A \in \cp{M}_{q\times p}(\cp{K})$ tal que\pause
+            \[
+                [T(x)]_{\mathcal{B}_W} \pause = A[x]_{\mathcal{B}_V}\pause
+            \]
+            para todo vetor $x \in V$. \pause Além disso, \pause a cada matriz $C \in \cp{M}_{q\times p}(\cp{K})$ \pause corresponde uma
+            transformação linear $T \colon V \to W$ tal que\pause
+            \[
+                [T(x)]_{\mathcal{B}_W} \pause = C[x]_{\mathcal{B}_V}\pause
+            \]
+            para todo $x \in V$.
+        \end{teorema}
+    \end{frame}
+
+    \begin{frame}
+        \begin{definicao}
+            A matriz $A \in \cp{M}_{q\times p}(\cp{K})$ do Teorema anterior \pause é chamada de \textbf{matriz da transformação linear}
+            \pause $T$ com respeito às bases ordenadas $\mathcal{B}_V$ e $\mathcal{B}_W$ \pause e será denotada por\pause
+            \[
+                A = [T]_{\mathcal{B}_{W},\mathcal{B}_{V}}.\pause
+            \]
+            No caso em que $V = W$ \pause e $\mathcal{B}_V = \mathcal{B}_W = \mathcal{B}$, \pause denotaremos $[T]_{\mathcal{B}_{V},\mathcal{B}_{W}}$
+            \pause simplesmente por $[T]_\mathcal{B}$.
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{teorema}
+            Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$, \pause $\mathcal{B}_1$ e $\mathcal{B}_2$ bases ordenadas de $V$.
+            \pause Então existe uma única matriz $P \in \cp{M}_n(\cp{K})$, \pause necessariamente invertível tal que\pause
+            \begin{enumerate}[label={\roman*})]
+                \vspace*{.25cm}
+                \item $[x]_{\mathcal{B}_1} = \pause P[x]_{\mathcal{B}_2}$\pause
+
+                \vspace{.75cm}
+
+                \item $[x]_{\mathcal{B}_2} = \pause P^{-1}[x]_{\mathcal{B}_1}$\pause
+            \end{enumerate}
+
+            \vspace{.2cm}
+
+            para todo $x \in V$. \pause As colunas de $P = \begin{bmatrix}P_1 & P_2 & \cdots & P_n \end{bmatrix}$ \pause são dadas por\pause
+            \[
+                P_j = [w_j]_{\mathcal{B}_1}\pause
+            \]
+            para $j = 1$, \dots, $n$.
+        \end{teorema}
+    \end{frame}
+
+    \begin{frame}
+        \begin{teorema}
+            Seja $P \in \cp{M}_n(\cp{K})$ um matriz invertível. \pause Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$ \pause e
+            $\mathcal{B}_1$ uma base ordenada de $V$. \pause Então existe uma única base ordenada $\mathcal{B}_2$ \pause de $V$ tal que\pause
+            \begin{enumerate}[label={\roman*})]
+                \vspace*{.25cm}
+                \item $[x]_{\mathcal{B}_1} = \pause P[x]_{\mathcal{B}_2}$\pause
+
+                \vspace{.75cm}
+
+                \item $[x]_{\mathcal{B}_2} = \pause P^{-1}[x]_{\mathcal{B}_1}$\pause
+            \end{enumerate}
+
+            \vspace{.2cm}
+
+            para todo $x \in V$.
+        \end{teorema}
+    \end{frame}
+
+    \begin{frame}
+        \begin{definicao}
+            A matriz $P \in \cp{M}_n(\cp{K})$ \pause do Teorema anterior \pause é chamada de \textbf{matriz de mudança de base} \pause e é
+            denotada por $P = [I]_{{\mathcal{B}_1},{\mathcal{B}_2}}$.
+        \end{definicao}
+    \end{frame}
     \begin{frame}
         \begin{definicao}
             Dadas $S \colon V \to W$ \pause e $T \colon W \to U$ transformações lineares, \pause definimos a \textbf{composição de $T$ com
@@ -304,35 +382,6 @@
 
     \begin{frame}
         \begin{teorema}
-            Sejam $V$ e $W$ espaços vetoriais sobre $\cp{K}$, \pause de dimensões $p \ge 1$ e $q \ge 1$, respectivamente. \pause Sejam
-            $\mathcal{B}_V$ e $\mathcal{B}_W$ bases ordenadas de $V$ e $W$, respectivamente. \pause Então para cada transformação linear
-            $T \colon V \to W$, \pause existe uma matriz $A \in \cp{M}_{q\times p}(\cp{K})$ tal que\pause
-            \[
-                [T(x)]_{\mathcal{B}_W} \pause = A[x]_{\mathcal{B}_V}\pause
-            \]
-            para todo vetor $x \in V$. \pause Além disso, \pause a cada matriz $C \in \cp{M}_{q\times p}(\cp{K})$ \pause corresponde uma
-            transformação linear $T \colon V \to W$ tal que\pause
-            \[
-                [T(x)]_{\mathcal{B}_W} \pause = C[x]_{\mathcal{B}_V}\pause
-            \]
-            para todo $x \in V$.
-        \end{teorema}
-    \end{frame}
-
-    \begin{frame}
-        \begin{definicao}
-            A matriz $A \in \cp{M}_{q\times p}(\cp{K})$ do Teorema anterior \pause é chamada de \textbf{matriz da transformação linear}
-            \pause $T$ com respeito às bases ordenadas $\mathcal{B}_V$ e $\mathcal{B}_W$ \pause e será denotada por\pause
-            \[
-                A = [T]_{\mathcal{B}_{W},\mathcal{B}_{V}}.\pause
-            \]
-            No caso em que $V = W$ \pause e $\mathcal{B}_V = \mathcal{B}_W = \mathcal{B}$, \pause denotaremos $[T]_{\mathcal{B}_{V},\mathcal{B}_{W}}$
-            \pause simplesmente por $[T]_\mathcal{B}$.
-        \end{definicao}
-    \end{frame}
-
-    \begin{frame}
-        \begin{teorema}
             Sejam $F \colon U \to V$ \pause e $G \colon V \to W$ \pause duas transformações lineares onde $U$, $V$ e $W$ \pause são espaços
             vetoriais $\cp{K}$ \pause de dimensões $n$, $m$ e $r$, respectivamente. \pause Fixe bases ordenadas $\mathcal{B}_U$, \pause
             $\mathcal{B}_V$ \pause e $\mathcal{B}_W$ \pause para $U$, $V$ e $W$, respectivamente. \pause Então $(G \circ F) \colon U \to W$
@@ -366,52 +415,5 @@
         \end{teorema}
     \end{frame}
 
-    \begin{frame}
-        \begin{teorema}
-            Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$, \pause $\mathcal{B}_1$ e $\mathcal{B}_2$ bases ordenadas de $V$.
-            \pause Então existe uma única matriz $P \in \cp{M}_n(\cp{K})$, \pause necessariamente invertível tal que\pause
-            \begin{enumerate}[label={\roman*})]
-                \vspace*{.25cm}
-                \item $[x]_{\mathcal{B}_1} = \pause P[x]_{\mathcal{B}_2}$\pause
 
-                \vspace{.75cm}
-
-                \item $[x]_{\mathcal{B}_2} = \pause P^{-1}[x]_{\mathcal{B}_1}$\pause
-            \end{enumerate}
-
-            \vspace{.2cm}
-
-            para todo $x \in V$. \pause As colunas de $P = \begin{bmatrix}P_1 & P_2 & \cdots & P_n \end{bmatrix}$ \pause são dadas por\pause
-            \[
-                P_j = [w_j]_{\mathcal{B}_1}\pause
-            \]
-            para $j = 1$, \dots, $n$.
-        \end{teorema}
-    \end{frame}
-
-    \begin{frame}
-        \begin{teorema}
-            Seja $P \in \cp{M}_n(\cp{K})$ um matriz invertível. \pause Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$ \pause e
-            $\mathcal{B}_1$ uma base ordenada de $V$. \pause Então existe uma única base ordenada $\mathcal{B}_2$ \pause de $V$ tal que\pause
-            \begin{enumerate}[label={\roman*})]
-                \vspace*{.25cm}
-                \item $[x]_{\mathcal{B}_1} = \pause P[x]_{\mathcal{B}_2}$\pause
-
-                \vspace{.75cm}
-
-                \item $[x]_{\mathcal{B}_2} = \pause P^{-1}[x]_{\mathcal{B}_1}$\pause
-            \end{enumerate}
-
-            \vspace{.2cm}
-
-            para todo $x \in V$.
-        \end{teorema}
-    \end{frame}
-
-    \begin{frame}
-        \begin{definicao}
-            A matriz $P \in \cp{M}_n(\cp{K})$ \pause do Teorema anterior \pause é chamada de \textbf{matriz de mudança de base} \pause e é
-            denotada por $P = [I]_{{\mathcal{B}_1},{\mathcal{B}_2}}$.
-        \end{definicao}
-    \end{frame}
 \end{document}
