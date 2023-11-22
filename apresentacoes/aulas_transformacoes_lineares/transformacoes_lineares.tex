@@ -304,116 +304,115 @@
             denotada por $P = [I]_{{\mathcal{B}_1},{\mathcal{B}_2}}$.
         \end{definicao}
     \end{frame}
-    \begin{frame}
-        \begin{definicao}
-            Dadas $S \colon V \to W$ \pause e $T \colon W \to U$ transformações lineares, \pause definimos a \textbf{composição de $T$ com
-            $S$} \pause como a aplicação:\pause
-            \begin{align*}
-                T \circ S \colon &V \to U\\
-                                 &v \mapsto (T\circ S)(u) = T(S(v))
-            \end{align*}
-        \end{definicao}
-    \end{frame}
 
-    \begin{frame}
-        \begin{proposicao}
-            Se $S \colon V \to W$ e $T \colon W \to U$ são transformações lineares, \pause então a composição de $T\circ S$ também é uma
-            transformação linear.
-        \end{proposicao}
-    \end{frame}
-
-    \begin{frame}
-        \begin{definicao}
-            Dado $T \colon V \to V$ um operador linear, \pause dizemos que $T$ é \textbf{invertível} \pause se existe outra aplicação
-            $T^{-1} \colon V \to V$ \pause tal que para qualquer $u \in V$, \pause $T^{-1}(T(u)) = u$.
-        \end{definicao}
-    \end{frame}
-
-    \begin{frame}
-        \begin{observacoes}
-            \begin{enumerate}[label={\roman*})]
-                \vspace*{.25cm}
-                \item Seja $I = I_V = Id = Id_V \colon V \to V$ \pause a transformação linear tal que $I(u) = Id(u) = u$ \pause para todo
-                    $u \in V$. \pause Então $I = Id$ é chamado de \textbf{operador identidade}.\pause
-
-                \vspace{.75cm}
-
-                \item Se $T \colon V \to V$ é uma transformação linear invertível, \pause então a aplicação $T^{-1} \colon V \to V$ também é
-                    uma transformação linear.\pause
-
-                \vspace{.75cm}
-
-                \item Se $T \colon V \to V$ é um operador invertível, \pause então $T^{-1} \colon V \to V$ é chamado de \textbf{operador
-                    inverso de $T$}.
-            \end{enumerate}
-        \end{observacoes}
-    \end{frame}
-
-    \begin{frame}
-        \begin{proposicao}
-            Seja $T \colon V \to V$ um operador linear.\pause
-            \begin{enumerate}[label={\roman*})]
-                \vspace*{.25cm}
-                \item Se $T$ é invertível \pause e $T^{-1} \colon V \to V$ é o seu inverso, \pause então
-                    \[
-                        (T^{-1} \circ T) = \pause (T \circ T^{-1}) = \pause Id.\pause
-                    \]
-
-                \vspace{.75cm}
-
-                \item Se $V$ tem dimensão finita, \pause então $T$ é invertível \pause se, e somente se, \pause $\ker(T) = \{0_V\}$.\pause
-
-                \vspace{.75cm}
-
-                \item Se $T$ é invertível, \pause então dada uma base $\{v_1, v_2, \dots, v_n\}$ de $V$, \pause o conjunto $\{T(v_1), \pause
-                    T(v_2), \pause \dots, T(v_n)\}$ \pause é uma base de $V$.
-            \end{enumerate}
-        \end{proposicao}
-    \end{frame}
-
-    \begin{frame}
-        \begin{proposicao}
-            Se $S \colon V \to V$ e $T \colon V \to V$ \pause são operadores invertíveis, \pause então $S \circ T$ é invertível e\pause
-            \[
-                (S \circ T)^{-1} \pause = T^{-1} \pause \circ S^{-1}.
-            \]
-        \end{proposicao}
-    \end{frame}
-
-    \begin{frame}
-        \begin{teorema}
-            Sejam $F \colon U \to V$ \pause e $G \colon V \to W$ \pause duas transformações lineares onde $U$, $V$ e $W$ \pause são espaços
-            vetoriais $\cp{K}$ \pause de dimensões $n$, $m$ e $r$, respectivamente. \pause Fixe bases ordenadas $\mathcal{B}_U$, \pause
-            $\mathcal{B}_V$ \pause e $\mathcal{B}_W$ \pause para $U$, $V$ e $W$, respectivamente. \pause Então $(G \circ F) \colon U \to W$
-            \pause dada por $(G\circ F)(v) = G(F(v))$ \pause é uma transformação linear e\pause
-            \[
-                [(G \circ F)]_{{\mathcal{B}_W}, {\mathcal{B}_U}} \pause = [G]_{{\mathcal{B}_W}, {\mathcal{B}_V}}[F]_{{\mathcal{B}_V},
-                {\mathcal{B}_U}}.
-            \]
-        \end{teorema}
-    \end{frame}
-
-    \begin{frame}
-        \begin{teorema}
-            Sejam $T \colon V \to V$ é um operador linear \pause e $\mathcal{B}$ é uma base ordenada de $V$. \pause Então as seguintes
-            afirmações são equivalentes:\pause
-            \begin{enumerate}[label={\roman*})]
-                \vspace*{.25cm}
-                \item $T$ é injetor\pause
-
-                \vspace{.75cm}
-
-                \item $[T]_\mathcal{B}$ é invertível.\pause
-            \end{enumerate}
-
-            \vspace{.2cm}
-
-            Além disso, se valem essas condições equivalentes, então\pause
-            \[
-                [T^{-1}]_\mathcal{B} \pause = [T]_\mathcal{B}^{-1}.
-            \]
-        \end{teorema}
-    \end{frame}
-
-
+    % \begin{frame}
+    %     \begin{definicao}
+    %         Dadas $S \colon V \to W$ \pause e $T \colon W \to U$ transformações lineares, \pause definimos a \textbf{composição de $T$ com
+    %         $S$} \pause como a aplicação:\pause
+    %         \begin{align*}
+    %             T \circ S \colon &V \to U\\
+    %                              &v \mapsto (T\circ S)(u) = T(S(v))
+    %         \end{align*}
+    %     \end{definicao}
+    % \end{frame}
+    %
+    % \begin{frame}
+    %     \begin{proposicao}
+    %         Se $S \colon V \to W$ e $T \colon W \to U$ são transformações lineares, \pause então a composição de $T\circ S$ também é uma
+    %         transformação linear.
+    %     \end{proposicao}
+    % \end{frame}
+    %
+    % \begin{frame}
+    %     \begin{definicao}
+    %         Dado $T \colon V \to V$ um operador linear, \pause dizemos que $T$ é \textbf{invertível} \pause se existe outra aplicação
+    %         $T^{-1} \colon V \to V$ \pause tal que para qualquer $u \in V$, \pause $T^{-1}(T(u)) = u$.
+    %     \end{definicao}
+    % \end{frame}
+    %
+    % \begin{frame}
+    %     \begin{observacoes}
+    %         \begin{enumerate}[label={\roman*})]
+    %             \vspace*{.25cm}
+    %             \item Seja $I = I_V = Id = Id_V \colon V \to V$ \pause a transformação linear tal que $I(u) = Id(u) = u$ \pause para todo
+    %                 $u \in V$. \pause Então $I = Id$ é chamado de \textbf{operador identidade}.\pause
+    %
+    %             \vspace{.75cm}
+    %
+    %             \item Se $T \colon V \to V$ é uma transformação linear invertível, \pause então a aplicação $T^{-1} \colon V \to V$ também é
+    %                 uma transformação linear.\pause
+    %
+    %             \vspace{.75cm}
+    %
+    %             \item Se $T \colon V \to V$ é um operador invertível, \pause então $T^{-1} \colon V \to V$ é chamado de \textbf{operador
+    %                 inverso de $T$}.
+    %         \end{enumerate}
+    %     \end{observacoes}
+    % \end{frame}
+    %
+    % \begin{frame}
+    %     \begin{proposicao}
+    %         Seja $T \colon V \to V$ um operador linear.\pause
+    %         \begin{enumerate}[label={\roman*})]
+    %             \vspace*{.25cm}
+    %             \item Se $T$ é invertível \pause e $T^{-1} \colon V \to V$ é o seu inverso, \pause então
+    %                 \[
+    %                     (T^{-1} \circ T) = \pause (T \circ T^{-1}) = \pause Id.\pause
+    %                 \]
+    %
+    %             \vspace{.75cm}
+    %
+    %             \item Se $V$ tem dimensão finita, \pause então $T$ é invertível \pause se, e somente se, \pause $\ker(T) = \{0_V\}$.\pause
+    %
+    %             \vspace{.75cm}
+    %
+    %             \item Se $T$ é invertível, \pause então dada uma base $\{v_1, v_2, \dots, v_n\}$ de $V$, \pause o conjunto $\{T(v_1), \pause
+    %                 T(v_2), \pause \dots, T(v_n)\}$ \pause é uma base de $V$.
+    %         \end{enumerate}
+    %     \end{proposicao}
+    % \end{frame}
+    %
+    % \begin{frame}
+    %     \begin{proposicao}
+    %         Se $S \colon V \to V$ e $T \colon V \to V$ \pause são operadores invertíveis, \pause então $S \circ T$ é invertível e\pause
+    %         \[
+    %             (S \circ T)^{-1} \pause = T^{-1} \pause \circ S^{-1}.
+    %         \]
+    %     \end{proposicao}
+    % \end{frame}
+    %
+    % \begin{frame}
+    %     \begin{teorema}
+    %         Sejam $F \colon U \to V$ \pause e $G \colon V \to W$ \pause duas transformações lineares onde $U$, $V$ e $W$ \pause são espaços
+    %         vetoriais $\cp{K}$ \pause de dimensões $n$, $m$ e $r$, respectivamente. \pause Fixe bases ordenadas $\mathcal{B}_U$, \pause
+    %         $\mathcal{B}_V$ \pause e $\mathcal{B}_W$ \pause para $U$, $V$ e $W$, respectivamente. \pause Então $(G \circ F) \colon U \to W$
+    %         \pause dada por $(G\circ F)(v) = G(F(v))$ \pause é uma transformação linear e\pause
+    %         \[
+    %             [(G \circ F)]_{{\mathcal{B}_W}, {\mathcal{B}_U}} \pause = [G]_{{\mathcal{B}_W}, {\mathcal{B}_V}}[F]_{{\mathcal{B}_V},
+    %             {\mathcal{B}_U}}.
+    %         \]
+    %     \end{teorema}
+    % \end{frame}
+    %
+    % \begin{frame}
+    %     \begin{teorema}
+    %         Sejam $T \colon V \to V$ é um operador linear \pause e $\mathcal{B}$ é uma base ordenada de $V$. \pause Então as seguintes
+    %         afirmações são equivalentes:\pause
+    %         \begin{enumerate}[label={\roman*})]
+    %             \vspace*{.25cm}
+    %             \item $T$ é injetor\pause
+    %
+    %             \vspace{.75cm}
+    %
+    %             \item $[T]_\mathcal{B}$ é invertível.\pause
+    %         \end{enumerate}
+    %
+    %         \vspace{.2cm}
+    %
+    %         Além disso, se valem essas condições equivalentes, então\pause
+    %         \[
+    %             [T^{-1}]_\mathcal{B} \pause = [T]_\mathcal{B}^{-1}.
+    %         \]
+    %     \end{teorema}
+    % \end{frame}
 \end{document}
