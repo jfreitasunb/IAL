@@ -45,6 +45,45 @@
                        -10y & x - 7y
                    \end{pmatrix},
   \]
-  onde $\complex$ é um espaço vetorial sobre $\real$. Prove que $T$ é uma transformação linear.
+    onde $\complex$ é um espaço vetorial sobre $\real$. Prove que $T$ é uma transformação linear.
 
+    \solucao Precisamos mostrar que valem as seguintes propriedades:
+    \begin{align}
+        T(u_1 + u_2) &= T(u_1) + T(u_2)\\
+        T(\lambda u_1) &= \lambda T(u_1)
+    \end{align}
+    ou então que
+    \begin{align}\label{condicaoTL}
+        T(\lambda u_1 + u_2) = \lambda T(u_1) + T(u_2)
+    \end{align}
+    para quaisquer $u_1$, $u_2 \in \complex$ e todo $\lambda \in \real$.
+    Vamos fazer a verificação de que a condição \eqref{condicaoTL} é verdadeira. Para isso sejam
+    \begin{align*}
+        u_1 = x + yi\\
+        u_2 = a + bi
+    \end{align*}
+    e $\lambda \in \real$. Vamos primeiro calcular o lado esquerdo da equação \eqref{condicaoTL}:
+    \begin{align}\label{parte1}
+        T(\lambda u_1 + u_2) &= T(\lambda(x + yi) + a + bi) = T(\lambda x + \lambda yi + a + bi)\nonumber \\ &= T((\lambda x + a) + (\lambda y + b)i)\nonumber \\ &=
+        \begin{bmatrix}
+            (\lambda x + a) + 7(\lambda y + b) & 5(\lambda y + b)\\
+            -10(\lambda y + b) & (\lambda x + a) - 7(\lambda y + b)
+        \end{bmatrix}\nonumber\\
+        &= \begin{bmatrix}
+            \lambda x + a + 7\lambda y + 7b & 5\lambda y + 5b\\
+            -10\lambda y - 10b & \lambda x + a - 7\lambda y + 7b
+        \end{bmatrix}
+    \end{align}
+
+    Agora calculando o lado direito de \eqref{condicaoTL}:
+    \begin{align}\label{parte2}
+        \lambda T(u_1) + T(u_2) & = \lambda T(x + yi) + T(a + bi)\nonumber \\ &= \lambda\begin{bmatrix}x + 7y & 5y\\-10y & x - 7y\end{bmatrix} + \begin{bmatrix}a + 7b & 5b\\-10b & a - 7b\end{bmatrix}\nonumber \\ &= \begin{bmatrix}\lambda x + 7\lambda y & 5\lambda y\\-10\lambda y & \lambda x - 7\lambda y\end{bmatrix} + \begin{bmatrix}a + 7b & 5b\\-10b & a - 7b\end{bmatrix}\nonumber \\ &= \begin{bmatrix}\lambda x + a + 7\lambda y + 7b & 5\lambda y + 5b\\-10\lambda y -10b & \lambda x + a - 7\lambda y - 7b\end{bmatrix}
+    \end{align}
+
+    Comparando os resultados obtidos em \eqref{parte1} e \eqref{parte2}, vemos que
+    \[
+        T(\lambda u_1 + u_2) = \lambda T(u_1) + T(u_2).
+    \]
+
+    Portanto $T$ é uma transformação linear.
 \end{document}
