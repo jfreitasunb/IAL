@@ -266,7 +266,7 @@
 
     \begin{frame}
         \begin{teorema}
-            Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$, \pause $\mathcal{B}_1$ e $\mathcal{B}_2$ bases ordenadas de $V$.
+            Sejam $V$ um $\cp{K}$-espaço vetorial de dimensão $n \ge 1$, \pause $\mathcal{B}_1 = \{u_1, u_2, \dots, u_n\}$ e $\mathcal{B}_2 = \{w_1, w_2, \dots, w_n\}$ bases ordenadas de $V$.
             \pause Então existe uma única matriz $P \in \cp{M}_n(\cp{K})$, \pause necessariamente invertível tal que\pause
             \begin{enumerate}[label={\roman*})]
                 \vspace*{.25cm}
@@ -311,7 +311,7 @@
     \begin{frame}
         \begin{definicao}
             A matriz $P \in \cp{M}_n(\cp{K})$ \pause do Teorema anterior \pause é chamada de \textbf{matriz de mudança de base} \pause e é
-            denotada por $P = [I]_{{\mathcal{B}_1},{\mathcal{B}_2}}$.
+            denotada por $P = [I]_{{\mathcal{B}_1},{\mathcal{B}_2}}$ ou por $P_{\mathcal{B}_1 \to \mathcal{B}_2}$.
         \end{definicao}
     \end{frame}
 
@@ -328,6 +328,23 @@
             \]
         \end{teorema}
     \end{frame}
+
+    \begin{frame}
+        \begin{tcolorbox}[colback=green!30, colframe=green!80!blue, title=Procedimento para calcular $P_{\mathcal{B} \to \mathcal{C}}$\, no caso de bases de $\real^n$]
+            \begin{tabular}{ll}
+                Passo 1. & Montamos a matriz $[\mathcal{C}\ |\ \mathcal{B}]$.\pause\\
+                \\
+                Passo 2. & Reduzimos a matriz do Passo 1 à forma escalonada\\
+                & reduzida usando operações elementares com as linhas.\pause\\
+                \\
+                Passo 3. & A matriz resultante é $[I\ |\ P_{\mathcal{B} \to \mathcal{C}}]$.\pause\\
+                \\
+                Passo 4. & Extraímos a matriz $P_{\mathcal{B} \to \mathcal{C}}$ do lado direito da matriz do\\
+                & Passo 3.
+            \end{tabular}
+        \end{tcolorbox}
+    \end{frame}
+
     % \begin{frame}
     %     \begin{definicao}
     %         Dadas $S \colon V \to W$ \pause e $T \colon W \to U$ transformações lineares, \pause definimos a \textbf{composição de $T$ com
