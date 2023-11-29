@@ -822,7 +822,7 @@ Assim provamos o seguinte teorema:
         \[
             T(x,y,z) = (2x+y-z,3x-2y+4z).
         \]
-        Considere as bases $\mathcal{B}_1 = \{(1,1,1);(1,1,0);(1,0,0)\}$ e $\mathcal{B}_2 = \{(1,3);(1,4)\}$. Encontre $[T]_{\mathcal{B}_{1},\mathcal{B}_{2}}$.
+        Considere as bases $\mathcal{B}_1 = \{(1,1,1);(1,1,0);(1,0,0)\}$ e $\mathcal{B}_2 = \{(1,3);(1,4)\}$. Encontre $[T]_{\mathcal{B}_{2},\mathcal{B}_{1}}$.
         \begin{solucao}
             Temos
             \begin{align*}
@@ -832,7 +832,7 @@ Assim provamos o seguinte teorema:
             \end{align*}
             e daí
             \[
-                [T]_{\mathcal{B}_{1},\mathcal{B}_{2}} = \begin{bmatrix}
+                [T]_{\mathcal{B}_{2},\mathcal{B}_{1}} = \begin{bmatrix}
                 \phantom{-}3 & \phantom{-}11 & \phantom{-}5\\
                 -1 & -8 & -3
                 \end{bmatrix}.
@@ -845,16 +845,16 @@ Assim provamos o seguinte teorema:
             \end{align*}
             e assim a matriz de $T$ será
             \[
-                [T]_{\mathcal{B}_{3},\mathcal{B}_{4}} = \begin{bmatrix}
+                [T]_{\mathcal{B}_{4},\mathcal{B}_{3}} = \begin{bmatrix}
                 \phantom{-}2 & \phantom{-}1 & -1\\
                 \phantom{-}3 & -2 & \phantom{-}4
                 \end{bmatrix}.
             \]
         \end{solucao}
 
-        \item Seja $T \colon \mathcal{P}_2(\real) \to \mathcal{P}_2(\real)$ dada por
+        \item Seja $T \colon \mathcal{P}_2(\real) \to \mathcal{P}_1(\real)$ dada por
         \[
-            T(xax² + bx + c) = (2a + c - 3b)x + (c + 4b + 3a).
+            T(ax^2 + bx + c) = (2a + c - 3b)x + (c + 4b + 3a).
         \]
         Considere as bases $\mathcal{B}_1 = \{x^2, x, 1\}$ e $\mathcal{B}_2 = \{x, 1\}$ de $\mathcal{P}_2(\real)$ e $\mathcal{P}_1(\real)$, respectivamente. Encontre a matriz de $T$ em relação a $\mathcal{B}_1$ e $\mathcal{B}_2$. Depois, use essa matriz para calcular $T(2x^2 - 4x + 1)$.
         \begin{solucao}
@@ -936,7 +936,7 @@ Assim provamos o seguinte teorema:
             \]
         \end{solucao}
 
-        \item Seja $T \real^3 \to \real^3$ o operador linear cuja matriz em relação à base canônica $\mathcal{B} = \{e_1 = (1, 0, 0); e_2 = (0, 1, 0); e_3 = (0, 0, 1)\}$ é
+        \item Seja $T : \real^3 \to \real^3$ o operador linear cuja matriz em relação à base canônica $\mathcal{B} = \{e_1 = (1, 0, 0); e_2 = (0, 1, 0); e_3 = (0, 0, 1)\}$ é
         \[
             [T]_\mathcal{B} = \begin{bmatrix}\phantom{-}1 & \phantom{-}2 & -1\\-2 & -3 & \phantom{-}1\\\phantom{-}2 & \phantom{-}2 & -2\end{bmatrix}.
         \]
@@ -959,7 +959,7 @@ Assim provamos o seguinte teorema:
             Agora, para determinar $[T]_{\mathcal{B}_1}$, precisamos achar primeiro $[T(1, 0, 2)]_{\mathcal{B}_1}$, $[T(0, 1, 2)]_{\mathcal{B}_1}$ e $[T(1, -1, 1)]_{\mathcal{B}_1}$.
             Temos
             \begin{align*}
-                T(1, 0, 2) &= (-1, 0, 2) = -1(1, 0, 2) + 0(0, 1, 2) + 0(1, -1, 1)\\
+                T(1, 0, 2) &= (-1, 0, -2) = -1(1, 0, 2) + 0(0, 1, 2) + 0(1, -1, 1)\\
                 T(0, 1, 2) &= (0, -1, -2) = 0(1, 0, 2) - 1(0, 1, 2) + 0(1, -1, 1)\\
                 T(1, -1, 1) &= (-2, 2, -2) = 0(1, 0, 2) + 0(0, 1, 2) - 2(1, -1, 1)
             \end{align*}
@@ -1143,7 +1143,7 @@ e então por definição $[G]_{\mathcal{B}_1} = P$. Desse modo, temos o seguinte
             onde $\alpha = x$, $\beta = y - x$ e $\gamma = z - x$. Assim
             \begin{align*}
                 (1, 3, -2) &= 1(1, 1, 1) + 2(0, 1, 0) - 3(0, 0, 1)\\
-                (2, 1, 3) &= 1(1, 1, 1) - 1(0, 1, 0) + 1(0, 0, 1)\\
+                (2, 1, 3) &= 2(1, 1, 1) - 1(0, 1, 0) + 1(0, 0, 1)\\
                 (3, 6, 0) &= 3(1, 1, 1) + 3(0, 1, 0) - 3(0, 0, 1)
             \end{align*}
             e com isso
