@@ -30,21 +30,29 @@
     \begin{frame}
         Considere o operador linear $T \colon \real^3 \to \real^3$ dado por
         \begin{align*}
-            T(x, y, z) = (x + 2y - z, -2x -3y + z, 2x + 2y - 2z).\pause
+            T(x, y, z) = (x + 2y - z, -2x -3y + z, 2x + 2y - 2z).
         \end{align*}
 
-        Quando consideramos a base ordenada canônica \pause de $\real^3$, \pause $\mathcal{B} = \{e_1 = (1, 0, 0); e_2 = (0, 1, 0); e_3 = (0, 0, 1)\}$, \pause a matriz desse operador com respeito à essa base é\pause
+        Quando consideramos a base ordenada canônica \pause de $\real^3$, \pause
+        \[
+            \mathcal{B} = \{e_1 = (1, 0, 0); e_2 = (0, 1, 0); e_3 = (0, 0, 1)\},
+        \]
+        a matriz desse operador com respeito à essa base é\pause
         \[
             [T]_\mathcal{B} = \begin{bmatrix}
                 \phantom{-}1 & \phantom{-}2 & -1\\
                 -2 & -3 & \phantom{-}1\\
                 \phantom{-}2 & \phantom{-}2 & \phantom{-}2
             \end{bmatrix}.
-        \]
+        \]\pause
     \end{frame}
 
     \begin{frame}
-        Agora, se tomamos a base ordenada \pause $\mathcal{B}_1 = \{w_1 = (1, 0, 2); w_2 = (0, 1, 2); w_3 = (1, -1, 1)\}$ \pause a matriz de $T$ com respeito à essa base é\pause
+        Agora, se tomamos a base ordenada \pause
+        \[
+            \mathcal{B}_1 = \{w_1 = (1, 0, 2); w_2 = (0, 1, 2); w_3 = (1, -1, 1)\}
+        \]\pause
+        a matriz de $T$ com respeito à essa base é\pause
         \[
             [T]_{\mathcal{B}_1} = \begin{bmatrix}
             -1 & \phantom{-}0 & \phantom{-}0\\
@@ -77,7 +85,7 @@
     \begin{frame}
         Agora\pause
         \[
-            [T(v_i)]_\mathcal{B}
+            [T(v_i)]_\mathcal{B} =
             \begin{bmatrix}
             0\\
             0\\
@@ -96,36 +104,53 @@
     \end{frame}
 
     \begin{frame}
-    \begin{definicao}
-        Seja $T : V \to V$ um operador linear.\pause
-        \begin{enumerate}[label={\roman*})]
-            \item Um \textbf{autovalor} \pause de $T$ é um elemento $\lambda \in \cp{K}$ \pause tal que existe um vetor não nulo \pause $u \in V$ \pause com $T(u) = \lambda u$.\pause \index{Autovalor}
-            \item Se $\lambda$ é um autovalor de $T$, \pause então todo vetor não nulo \pause $u \in V$ tal que\pause
-            \[
-                T(u) = \lambda u\pause
-            \]
-            é chamado de \textbf{autovetor} \pause de $T$ \textbf{associado} ao autovalor $\lambda$. \pause Denotaremos por $\aut_T(\lambda)$ \pause o subespaço gerado por todos os autovetores associados a $\lambda$. \pause Assim\pause
-            \[
-                \aut_T(\lambda) = \pause \{u \in V \pause \mid T(u) = \lambda u\}.\pause
-            \]
-            \item Suponha que $\dim V = n < \infty$. \pause Dizemos que $T$ é \textbf{diagonalizável} \pause se existir uma base $\mathcal{B}$ de $V$ \pause tal que $[T]_\mathcal{B}$ é diagonal, \pause isto é, tem a forma \eqref{formadiagonal}. \pause Tal fato equivale a dizer que existe uma base formada por autovetores.
+        \begin{definicao}
+            Seja $T : V \to V$ um operador linear.\pause
+            \begin{enumerate}[label={\roman*})]
+                \item Um \textbf{autovalor} \pause de $T$ é um elemento $\lambda \in \cp{K}$ \pause tal que existe um vetor não nulo \pause $u \in V$ \pause com $T(u) = \lambda u$.\pause
+                \vspace*{1cm}
+
+                \item Se $\lambda$ é um autovalor de $T$, \pause então todo vetor não nulo \pause $u \in V$ tal que\pause
+                \[
+                    T(u) = \lambda u\pause
+                \]
+                é chamado de \textbf{autovetor} \pause de $T$ \textbf{associado} ao autovalor $\lambda$. \pause Denotaremos por $\aut_T(\lambda)$ \pause o subespaço gerado por todos os autovetores associados a $\lambda$. \pause Assim\pause
+                \[
+                    \aut_T(\lambda) = \pause \{u \in V \pause \mid T(u) = \lambda u\}.\pause
+                \]
+
+                \seti
+            \end{enumerate}
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{definicao}
+            \begin{enumerate}[label={\roman*})]
+                \conti
+                \item Suponha que $\dim V = n < \infty$. \pause Dizemos que $T$ é \textbf{diagonalizável} \pause se existir uma base $\mathcal{B}$ de $V$ \pause tal que $[T]_\mathcal{B}$ é diagonal, \pause isto é, tem a forma \eqref{formadiagonal}. \pause Tal fato equivale a dizer que existe uma base formada por autovetores.
         \end{enumerate}
     \end{definicao}
     \end{frame}
 
     \begin{frame}
         Temos aqui duas questões importantes:\pause
+        \vspace*{.5cm}
         \begin{enumerate}[label={\arabic*})]
             \item Dado um operador $T \colon V \to V$, \pause existem autovetores para $T$?\pause
+            \vspace*{2cm}
 
             \item Se sim, \pause existe um número suficiente de autovetores \pause para forma uma base de $V$?
         \end{enumerate}
     \end{frame}
 
     \begin{frame}
-        Aqui surgem duas questões:\pause
+        Além das questões anteriores temos as seguintes\pause
+        \vspace*{.5cm}
         \begin{enumerate}[label={\arabic*})]
             \item Como determinar se uma transformação linear $T \colon V \to V$ \pause possui autovetores?\pause
+
+            \vspace*{2cm}
 
             \item A existência de autovetores de $T$ \pause depende da base escolhida para $V$?\pause
         \end{enumerate}
@@ -137,7 +162,11 @@
             \begin{enumerate}[label={\roman*})]
                 \item o escalar $\lambda \in \cp{K}$ \pause é um autovalor do operador linear $T \colon V \to V$;\pause
 
+                \vspace*{1cm}
+
                 \item o operador $T - \lambda Id$ \pause não é injetor;\pause
+
+                \vspace*{1cm}
 
                 \item dada uma base ordenada $\mathcal{B}$ \pause qualquer de $V$ temos\pause
                 \[
@@ -182,7 +211,13 @@
             Sejam $A$, $B \in \cp{M}_n(\cp{K})$ \pause e $\lambda \in \cp{K}$. \pause Temos:\pause
             \begin{enumerate}[label={\roman*})]
                 \item $\det(AB) = \det(A) \det(B)$,\pause
+
+                \vspace*{1cm}
+
                 \item $\det(\lambda A) = \lambda^n \det(A)$,\pause
+
+                \vspace*{1cm}
+
                 \item Se $A$ é invertível, \pause então $\det(A^{-1}) = [(\det(A)]^{-1}$.
             \end{enumerate}
         \end{proposicao}
@@ -193,7 +228,14 @@
             Seja $A$ uma matriz $n \times n$ \pause com entradas num corpo $\cp{K}$.\pause
             \begin{enumerate}[label={\roman*})]
                 \item Se $B$ é a matriz resultante da permutação de duas linhas de $A$, \pause então $\det (B) = -\det (A)$.\pause
+
+
+                \vspace*{1cm}
+
                 \item Se $B$ é a matriz resultante da multiplicação de uma linha de $A$ \pause por um escalar não nulo $\alpha \in \cp{K}$, \pause então $\det(B) = \alpha\det(A)$.\pause
+
+                \vspace*{1cm}
+
                 \item Se $B$ é a matriz resultante da soma da linha $i$ de $A$ \pause com um múltiplo não nulo \pause $\alpha \in \cp{K}$ da linha $j$ de $A$, \pause então $\det(B) = \det(A)$.
             \end{enumerate}
         \end{proposicao}
@@ -234,6 +276,8 @@
             \conti
             \item Se não existir $\lambda \in \cp{K}$ \pause no passo anterior, \pause então $T$ não é diagonalizável.\pause
 
+            \vspace*{1cm}
+
             \item Para cada $\lambda_1$, \pause $\lambda_2$, \pause \dots, $\lambda_r$ \pause encontrando em \ref{passo4diag} \pause resolva o sistema linear homogêneo\pause
             \[
                 ([T]_\mathcal{B} - \lambda_jI_n)X = 0.\pause
@@ -248,6 +292,8 @@
         \conti
             \item Encontre uma base para cada $Aut_T(\lambda_j)$, \pause com $j = 1$, 2, \dots, $r$.\pause
 
+            \vspace*{1cm}
+
             \item Se o conjunto $\mathcal{D}$ \pause resultante a união de todas as bases encontradas no passo anterior \pause possuir $\dim_\cp{K}V$ elementos, \pause então $\mathcal{D}$ será uma base de $V$ \pause tal que a matriz de $T$ com relação à essa base será diagonal. \pause Se $\mathcal{D}$ possuir menos elementos que $\dim_\cp{K}V$ \pause então $T$ não é diagonalizável.
         \end{enumerate}
     \end{frame}
@@ -257,6 +303,9 @@
             Seja $T : V \to V$ um operador linear \pause onde $V$ é um $\cp{K}$-espaço vetorial de dimensão finita \pause e sejam $\lambda_1$, \pause \dots, \pause $\lambda_r$, \pause $r \ge 1$, autovalores de $T$, \pause dois a dois distintos.\pause
             \begin{enumerate}[label={\roman*})]
                 \item\label{autovetorLI} Se $u_1 + \cdots + u_r = 0_V$ \pause com $u_i \in \aut_T(\lambda_i)$; \pause $i = 1$, \dots, $r$; \pause então $u_i = 0_V$ \pause para todo $i$.\pause
+
+                \vspace*{1cm}
+
                 \item Para cada $i = 1$, \dots, $r$ \pause seja $\mathcal{B}_i$ \pause um conjunto linearmente independente \pause contido em $\aut_T(\lambda_i)$. \pause Então $\mathcal{B}_1 \cup \cdots \cup \mathcal{B}_r$ \pause é L.I. em $V$.
             \end{enumerate}
         \end{teorema}
