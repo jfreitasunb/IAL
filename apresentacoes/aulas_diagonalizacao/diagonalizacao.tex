@@ -30,30 +30,30 @@
     \begin{frame}
         Considere o operador linear $T \colon \real^3 \to \real^3$ dado por
         \begin{align*}
-            T(x, y, z) = (x + 2y - z, -2x -3y + z, 2x + 2y - 2z).
+            T(x, y, z) = (x + 2y - z, -2x -3y + z, 2x + 2y - 2z).\pause
         \end{align*}
 
-        Quando consideramos a base ordenada canônica de $\real^3$, $\mathcal{B} = \{e_1 = (1, 0, 0); e_2 = (0, 1, 0); e_3 = (0, 0, 1)\}$, a matriz desse operador com respeito à essa base é
+        Quando consideramos a base ordenada canônica \pause de $\real^3$, \pause $\mathcal{B} = \{e_1 = (1, 0, 0); e_2 = (0, 1, 0); e_3 = (0, 0, 1)\}$, \pause a matriz desse operador com respeito à essa base é\pause
         \[
-        [T]_\mathcal{B} = \begin{bmatrix}
-            \phantom{-}1 & \phantom{-}2 & -1\\
-            -2 & -3 & \phantom{-}1\\
-            \phantom{-}2 & \phantom{-}2 & \phantom{-}2
-        \end{bmatrix}.
+            [T]_\mathcal{B} = \begin{bmatrix}
+                \phantom{-}1 & \phantom{-}2 & -1\\
+                -2 & -3 & \phantom{-}1\\
+                \phantom{-}2 & \phantom{-}2 & \phantom{-}2
+            \end{bmatrix}.
         \]
     \end{frame}
 
     \begin{frame}
-        Agora, se tomamos a base ordenada $\mathcal{B}_1 = \{w_1 = (1, 0, 2); w_2 = (0, 1, 2); w_3 = (1, -1, 1)\}$ a matriz de $T$ com respeito à essa base é
+        Agora, se tomamos a base ordenada \pause $\mathcal{B}_1 = \{w_1 = (1, 0, 2); w_2 = (0, 1, 2); w_3 = (1, -1, 1)\}$ \pause a matriz de $T$ com respeito à essa base é\pause
         \[
-        [T]_{\mathcal{B}_1} = \begin{bmatrix}
+            [T]_{\mathcal{B}_1} = \begin{bmatrix}
             -1 & \phantom{-}0 & \phantom{-}0\\
             \phantom{-}0& -1 & \phantom{-}0\\
             \phantom{-}0& \phantom{-}0 & -2
-        \end{bmatrix}.
+        \end{bmatrix}.\pause
         \]
 
-        Note que para a base $\mathcal{B}_1$ temos
+        Note que para a base $\mathcal{B}_1$ temos \pause
         \begin{align*}
             T(w_1) &= -1w_1\\
             T(w_2) &= -1w_2\\
@@ -62,31 +62,23 @@
     \end{frame}
 
     \begin{frame}
-        No caso geral, seja $T : V \to V$ um operador linear e suponha que exista uma base $\mathcal{B} = \{v_1,\dots,v_n\}$ de $V$ tal que
+        No caso geral, \pause seja $T : V \to V$ um operador linear \pause e suponha que exista uma base $\mathcal{B} \pause = \{v_1,\dots,v_n\}$ \pause de $V$ tal que\pause
         \begin{align}\label{formadiagonal}
             [T]_\mathcal{B} = \begin{bmatrix}
                 \lambda_1 & 0 & 0 & \dots & 0\\
                 0 & \lambda_2 & 0 & \dots & 0\\
                 \vdots & & \ddots & & \vdots\\
                 0 & 0 & 0 & \dots & \lambda_n
-            \end{bmatrix}
+            \end{bmatrix}\pause
         \end{align}
         com $\lambda_i \in \cp{K}$ para $i = 1$, \dots, $n$.
     \end{frame}
 
     \begin{frame}
-        Assim
+        Agora\pause
         \[
-        [T(v_i)]_\mathcal{B} = [T]_\mathcal{B}[v_i]_\mathcal{B} = [T]_\mathcal{B}\begin{bmatrix}
-            0\\
-            0\\
-            \vdots\\
-            0\\
-            1\\
-            0\\
-            \vdots\\
-            0
-        \end{bmatrix}_\mathcal{B} = \begin{bmatrix}
+            [T(v_i)]_\mathcal{B}
+            \begin{bmatrix}
             0\\
             0\\
             \vdots\\
@@ -95,61 +87,61 @@
             0\\
             \vdots\\
             0
-        \end{bmatrix}_\mathcal{B}
+        \end{bmatrix}_\mathcal{B}\pause
         \]
-        para $i = 1$, \dots, $n$. Isto é,
+        para $i = 1$, \dots, $n$. \pause Isto é,\pause
         \[
-        T(v_1) = \lambda_1 v_1,\ T(v_2) = \lambda_2 v_2,\dots, T(v_n) = \lambda_n v_n.
+            T(v_1) = \lambda_1 v_1,\ \pause T(v_2) = \lambda_2 v_2,\pause \dots,\pause  T(v_n) = \lambda_n v_n.
         \]
     \end{frame}
 
     \begin{frame}
     \begin{definicao}
-        Seja $T : V \to V$ um operador linear.
+        Seja $T : V \to V$ um operador linear.\pause
         \begin{enumerate}[label={\roman*})]
-            \item Um \textbf{autovalor} de $T$ é um elemento $\lambda \in \cp{K}$ tal que existe um vetor não nulo $u \in V$ com $T(u) = \lambda u$.\index{Autovalor}
-            \item Se $\lambda$ é um autovalor de $T$, então todo vetor não nulo $u \in V$ tal que
+            \item Um \textbf{autovalor} \pause de $T$ é um elemento $\lambda \in \cp{K}$ \pause tal que existe um vetor não nulo \pause $u \in V$ \pause com $T(u) = \lambda u$.\pause \index{Autovalor}
+            \item Se $\lambda$ é um autovalor de $T$, \pause então todo vetor não nulo \pause $u \in V$ tal que\pause
             \[
-            T(u) = \lambda u
+                T(u) = \lambda u\pause
             \]
-            é chamado de \textbf{autovetor} de $T$ \textbf{associado} ao autovalor $\lambda$. Denotaremos por $Aut_T(\lambda)$ o subespaço gerado por todos os autovetores associados a $\lambda$. Assim
+            é chamado de \textbf{autovetor} \pause de $T$ \textbf{associado} ao autovalor $\lambda$. \pause Denotaremos por $\aut_T(\lambda)$ \pause o subespaço gerado por todos os autovetores associados a $\lambda$. \pause Assim\pause
             \[
-            \aut_T(\lambda) = \{u \in V \mid T(u) = \lambda u\}.
+                \aut_T(\lambda) = \pause \{u \in V \pause \mid T(u) = \lambda u\}.\pause
             \]
-            \item Suponha que $\dim V = n < \infty$. Dizemos que $T$ é \textbf{diagonalizável} se existir uma base $\mathcal{B}$ de $V$ tal que $[T]_\mathcal{B}$ é diagonal, isto é, tem a forma \eqref{formadiagonal}. Tal fato equivale a dizer que existe uma base formada por autovetores.
+            \item Suponha que $\dim V = n < \infty$. \pause Dizemos que $T$ é \textbf{diagonalizável} \pause se existir uma base $\mathcal{B}$ de $V$ \pause tal que $[T]_\mathcal{B}$ é diagonal, \pause isto é, tem a forma \eqref{formadiagonal}. \pause Tal fato equivale a dizer que existe uma base formada por autovetores.
         \end{enumerate}
     \end{definicao}
     \end{frame}
 
     \begin{frame}
-        Temos aqui duas questões importantes:
+        Temos aqui duas questões importantes:\pause
         \begin{enumerate}[label={\arabic*})]
-            \item Dado um operador $T \colon V \to V$, existem autovetores para $T$?
+            \item Dado um operador $T \colon V \to V$, \pause existem autovetores para $T$?\pause
 
-            \item Se sim, existe um número suficiente de autovetores para forma uma base de $V$?
+            \item Se sim, \pause existe um número suficiente de autovetores \pause para forma uma base de $V$?
         \end{enumerate}
     \end{frame}
 
     \begin{frame}
-        Aqui surgem duas questões:
+        Aqui surgem duas questões:\pause
         \begin{enumerate}[label={\arabic*})]
-            \item Como determinar se uma transformação linear $T \colon V \to V$ possui autovetores?
+            \item Como determinar se uma transformação linear $T \colon V \to V$ \pause possui autovetores?\pause
 
-            \item A existência de autovetores de $T$ depende da base escolhida para $V$?
+            \item A existência de autovetores de $T$ \pause depende da base escolhida para $V$?\pause
         \end{enumerate}
     \end{frame}
 
     \begin{frame}
         \begin{teorema}
-            As seguintes afirmações são equivalentes:
+            As seguintes afirmações são equivalentes:\pause
             \begin{enumerate}[label={\roman*})]
-                \item o escalar $\lambda \in \cp{K}$ é um autovalor do operador linear $T \colon V \to V$;
+                \item o escalar $\lambda \in \cp{K}$ \pause é um autovalor do operador linear $T \colon V \to V$;\pause
 
-                \item o operador $T - \lambda Id$ não é injetor;
+                \item o operador $T - \lambda Id$ \pause não é injetor;\pause
 
-                \item dada uma base ordenada $\mathcal{B}$ qualquer de $V$ temos
+                \item dada uma base ordenada $\mathcal{B}$ \pause qualquer de $V$ temos\pause
                 \[
-                \det([T]_\mathcal{B} - \lambda[Id]_\mathcal{B}) = 0.
+                    \det([T]_\mathcal{B} - \lambda[Id]_\mathcal{B}) = 0.
                 \]
             \end{enumerate}
         \end{teorema}
@@ -157,29 +149,29 @@
 
     \begin{frame}
         \begin{teorema}
-            Se $A \in M_n(\cp{K})$ for uma matriz $n \times n$, então $\lambda \in \cp{K}$ é um autovalor de $A$ se, e somente se, $\lambda$ satisfaz a equação
+            Se $A \in M_n(\cp{K})$ \pause for uma matriz $n \times n$, \pause então $\lambda \in \cp{K}$ é um autovalor de $A$ \pause se, e somente se, $\lambda$ satisfaz a equação\pause
             \[
-            \det(A - \lambda I_n) = 0.
+                \det(A - \lambda I_n) = 0.\pause
             \]
             Essa equação é chamada de \textbf{equação característica} de $A$.
         \end{teorema}
     \end{frame}
 
     \begin{frame}
-        Seja $A \in M_n(\cp{K})$ onde $n \ge 1$. Vamos definir o \textbf{determinante da matriz $A$}, denotado por $\det(A)$, de modo indutivo.
+        Seja $A \in M_n(\cp{K})$ onde $n \ge 1$. \pause Vamos definir o \textbf{determinante da matriz $A$}, \pause denotado por $\det(A)$, \pause de modo indutivo.\pause
 
-        Se $n = 1$, então a matriz $A \in \cp{M}_1(\cp{K})$ é da forma
+        Se $n = 1$, \pause então a matriz $A \in \cp{M}_1(\cp{K})$ \pause é da forma
         \[
-        A = (a_{11})
+            A = (a_{11})\pause
         \]
-        e neste caso definimos
+        e neste caso definimos\pause
         \[
-        \det(A) = a_{11} \in \cp{K}.
+            \det(A) = a_{11} \in \cp{K}.
         \]
     \end{frame}
 
 \begin{frame}
-        Suponha que $n > 1$ e que $\det(B)$ esteja definido para todas as matrizes $B \in \cp{M}_p(\cp{K})$ com $p < n$ e seja $A \in \cp{M}_n(\cp{K})$. Para cada $(i,j)$, defina a matriz $A_{ij}$ formada a partir de $A$ retirando-se a sua $i$-ésima linha e a sua $j$-ésima coluna. É claro que $A \in \cp{M}_{n - 1}(\cp{K})$ e portanto $\det(A_{ij})$ está definido. Defina então
+        Suponha que $n > 1$ \pause e que $\det(B)$ \pause esteja definido para todas as matrizes $B \in \cp{M}_p(\cp{K})$ \pause com $p < n$ \pause e seja $A \in \cp{M}_n(\cp{K})$. \pause Para cada $(i,j)$, \pause defina a matriz $A_{ij}$ \pause formada a partir de $A$ \pause retirando-se a sua $i$-ésima linha \pause e a sua $j$-ésima coluna. \pause É claro que $A \in \cp{M}_{n - 1}(\cp{K})$ \pause e portanto $\det(A_{ij})$ \pause está definido. \pause Defina então\pause
         \begin{align*}
             \det(A) &= \sum_{j = 1}^n(-1)^{i + j}a_{ij}\det(A_{ij}) \\ &= (-1)^{i + 1}a_{i1}\det(A_{i1}) + (-1)^{i + 2}a_{i2}\det(A_{i2}) \\ & + (-1)^{i + 3}a_{i3}\det(A_{i3}) + \cdots + (-1)^{i + n}a_{in}\det(A_{in}) \in \cp{K}
         \end{align*}
@@ -187,36 +179,36 @@
 
     \begin{frame}
         \begin{proposicao}
-            Sejam $A$, $B \in \cp{M}_n(\cp{K})$ e $\lambda \in \cp{K}$. Temos:
+            Sejam $A$, $B \in \cp{M}_n(\cp{K})$ \pause e $\lambda \in \cp{K}$. \pause Temos:\pause
             \begin{enumerate}[label={\roman*})]
-                \item $\det(AB) = \det(A) \det(B)$,
-                \item $\det(\lambda A) = \lambda^n \det(A)$,
-                \item Se $A$ é invertível, então $\det(A^{-1}) = [(\det(A)]^{-1}$.
+                \item $\det(AB) = \det(A) \det(B)$,\pause
+                \item $\det(\lambda A) = \lambda^n \det(A)$,\pause
+                \item Se $A$ é invertível, \pause então $\det(A^{-1}) = [(\det(A)]^{-1}$.
             \end{enumerate}
         \end{proposicao}
     \end{frame}
 
     \begin{frame}
         \begin{proposicao}
-            Seja $A$ uma matriz $n \times n$ com entradas num corpo $\cp{K}$.
+            Seja $A$ uma matriz $n \times n$ \pause com entradas num corpo $\cp{K}$.\pause
             \begin{enumerate}[label={\roman*})]
-                \item Se $B$ é a matriz resultante da permutação de duas linhas de $A$, então $\det (B) = -\det (A)$.
-                \item Se $B$ é a matriz resultante da multiplicação de uma linha de $A$ por um escalar não nulo $\alpha \in \cp{K}$, então $\det(B) = \alpha\det(A)$.
-                \item Se $B$ é a matriz resultante da soma da linha $i$ de $A$ com um múltiplo não nulo $\alpha \in \cp{K}$ da linha $j$ de $A$, então $\det(B) = \det(A)$.
+                \item Se $B$ é a matriz resultante da permutação de duas linhas de $A$, \pause então $\det (B) = -\det (A)$.\pause
+                \item Se $B$ é a matriz resultante da multiplicação de uma linha de $A$ \pause por um escalar não nulo $\alpha \in \cp{K}$, \pause então $\det(B) = \alpha\det(A)$.\pause
+                \item Se $B$ é a matriz resultante da soma da linha $i$ de $A$ \pause com um múltiplo não nulo \pause $\alpha \in \cp{K}$ da linha $j$ de $A$, \pause então $\det(B) = \det(A)$.
             \end{enumerate}
         \end{proposicao}
     \end{frame}
 
     \begin{frame}
         \begin{teorema}
-            Uma matriz $A \in \cp{M}_n(\cp{K})$ é invertível se, e somente se, $\det(A) \ne 0$.
+            Uma matriz $A \in \cp{M}_n(\cp{K})$ \pause é invertível se, \pause e somente se, $\det(A) \ne 0$.
         \end{teorema}
     \end{frame}
 
     \begin{frame}
-        Dado $V$ um espaço vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e um operador linear $T \colon V \to V$, queremos tentar encontrar, se existir, uma base ordenada $\mathcal{D}$ de $V$ formada por autovetores. Para isso devemos proceder da seguinte maneira:
+        Dado $V$ um espaço vetorial sobre $\cp{K}$, \pause com $\dim_\cp{K} V = n < \infty$ \pause e um operador linear $T \colon V \to V$, \pause queremos tentar encontrar, se existir, \pause uma base ordenada $\mathcal{D}$ de $V$ \pause formada por autovetores. \pause Para isso devemos proceder da seguinte maneira:\pause
         \begin{enumerate}[label={\arabic*})]
-            \item Se não foi dada, encontre a matriz de $T$ com relação a alguma base ordenada $\mathcal{B}$ de $V$. Pode-se usar a base canônica $\mathcal{B}$ de $V$ para facilitar o cálculo de $[T]_\mathcal{B}$.
+            \item Se não foi dada, \pause encontre a matriz de $T$ com relação a alguma base ordenada $\mathcal{B}$ de $V$. \pause Pode-se usar a base canônica $\mathcal{B}$ \pause de $V$ para facilitar o cálculo de $[T]_\mathcal{B}$.
             \seti
         \end{enumerate}
     \end{frame}
@@ -224,14 +216,14 @@
     \begin{frame}
         \begin{enumerate}[label={\arabic*})]
             \conti
-            \item Uma vez encontrada $[T]_\mathcal{B}$ calcule
+            \item Uma vez encontrada $[T]_\mathcal{B}$ calcule\pause
             \[
-            [T]_\mathcal{B} - \lambda I_n = [T]_\mathcal{B} - \begin{bmatrix}\lambda & 0 & 0 & \cdots & 0\\0 & \lambda & 0 & \cdots & 0\\0 & 0 & \lambda & \cdots & 0\\\vdots & \vdots & \vdots & \cdots & \vdots\\0 & 0 & 0 & \cdots & \lambda\end{bmatrix}.
+                [T]_\mathcal{B} - \lambda I_n = [T]_\mathcal{B} - \begin{bmatrix}\lambda & 0 & 0 & \cdots & 0\\0 & \lambda & 0 & \cdots & 0\\0 & 0 & \lambda & \cdots & 0\\\vdots & \vdots & \vdots & \cdots & \vdots\\0 & 0 & 0 & \cdots & \lambda\end{bmatrix}.\pause
             \]
 
-            \item\label{passo4diag} Determine todos os valores, se existem, de $\lambda \in \cp{K}$ tais que
+            \item\label{passo4diag} Determine todos os valores, \pause se existem, de $\lambda \in \cp{K}$ \pause tais que\pause
             \[
-            \det([T]_\mathcal{B} - \lambda I_n) = 0.
+                \det([T]_\mathcal{B} - \lambda I_n) = 0.
             \]
             \seti
         \end{enumerate}
@@ -240,23 +232,42 @@
     \begin{frame}
         \begin{enumerate}[label={\arabic*})]
             \conti
-            \item Se não existir $\lambda \in \cp{K}$ no passo anterior, então $T$ não é diagonalizável.
+            \item Se não existir $\lambda \in \cp{K}$ \pause no passo anterior, \pause então $T$ não é diagonalizável.\pause
 
-            \item Para cada $\lambda_1$, $\lambda_2$, \dots, $\lambda_r$ encontrando em \ref{passo4diag} resolva o sistema linear homogêneo
+            \item Para cada $\lambda_1$, \pause $\lambda_2$, \pause \dots, $\lambda_r$ \pause encontrando em \ref{passo4diag} \pause resolva o sistema linear homogêneo\pause
             \[
-            ([T]_\mathcal{B} - \lambda_jI_n)X = 0.
+                ([T]_\mathcal{B} - \lambda_jI_n)X = 0.\pause
             \]
-            O subespaço $Aut_T(\lambda_j)$ será dada pelas soluções desse sistema.
+            O subespaço $Aut_T(\lambda_j)$ \pause será dada pelas soluções desse sistema.
             \seti
         \end{enumerate}
     \end{frame}
 
-\begin{frame}
+    \begin{frame}
         \begin{enumerate}[label={\arabic*})]
         \conti
-            \item Encontre uma base para cada $Aut_T(\lambda_j)$, com $j = 1$, 2, \dots, $r$.
+            \item Encontre uma base para cada $Aut_T(\lambda_j)$, \pause com $j = 1$, 2, \dots, $r$.\pause
 
-            \item Se o conjunto $\mathcal{D}$ resultante a união de todas as bases encontradas no passo anterior possuir $\dim_\cp{K}V$ elementos, então $\mathcal{D}$ será uma base de $V$ tal que a matriz de $T$ com relação à essa base será diagonal. Se $\mathcal{D}$ possuir menos elementos que $\dim_\cp{K}V$ então $T$ não é diagonalizável.
+            \item Se o conjunto $\mathcal{D}$ \pause resultante a união de todas as bases encontradas no passo anterior \pause possuir $\dim_\cp{K}V$ elementos, \pause então $\mathcal{D}$ será uma base de $V$ \pause tal que a matriz de $T$ com relação à essa base será diagonal. \pause Se $\mathcal{D}$ possuir menos elementos que $\dim_\cp{K}V$ \pause então $T$ não é diagonalizável.
         \end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+        \begin{teorema}
+            Seja $T : V \to V$ um operador linear onde $V$ é um $\cp{K}$-espaço vetorial de dimensão finita e sejam $\lambda_1$, \dots, $\lambda_r$, $r \ge 1$, autovalores de $T$, dois a dois distintos.
+            \begin{enumerate}[label={\roman*})]
+                \item\label{autovetorLI} Se $u_1 + \cdots + u_r = 0_V$ com $u_i \in \aut_T(\lambda_i)$; $i = 1$, \dots, $r$; então $u_i = 0_V$ para todo $i$.
+                \item Para cada $i = 1$, \dots, $r$ seja $\mathcal{B}_i$ um conjunto linearmente independente contido em $\aut_T(\lambda_i)$. Então $\mathcal{B}_1 \cup \cdots \cup \mathcal{B}_r$ é L.I. em $V$.
+            \end{enumerate}
+        \end{teorema}
+    \end{frame}
+
+    \begin{frame}
+        \begin{corolario}
+            Seja $T : V \to V$ um operador linear, onde $V$ é um $\cp{K}$-espaço vetorial de dimensão finita. Se $\lambda_1$, \dots, $\lambda_r$ são todos os autovalores de $T$, então $T$ é diagonalizável se, e somente se,
+            \[
+                \dim_\cp{K} V = \sum_{i = i}^r\dim_\cp{K}\aut_T(\lambda_i).
+            \]
+        \end{corolario}
     \end{frame}
 \end{document}
