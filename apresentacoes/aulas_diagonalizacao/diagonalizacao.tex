@@ -27,4 +27,97 @@
 
     \logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
 
+    \begin{frame}
+        Considere o operador linear $T \colon \real^3 \to \real^3$ dado por
+        \begin{align*}
+            T(x, y, z) = (x + 2y - z, -2x -3y + z, 2x + 2y - 2z).
+        \end{align*}
+
+        Quando consideramos a base ordenada canônica de $\real^3$, $\mathcal{B} = \{e_1 = (1, 0, 0); e_2 = (0, 1, 0); e_3 = (0, 0, 1)\}$, a matriz desse operador com respeito à essa base é
+        \[
+        [T]_\mathcal{B} = \begin{bmatrix}
+            \phantom{-}1 & \phantom{-}2 & -1\\
+            -2 & -3 & \phantom{-}1\\
+            \phantom{-}2 & \phantom{-}2 & \phantom{-}2
+        \end{bmatrix}.
+        \]
+    \end{frame}
+
+    \begin{frame}
+        Agora, se tomamos a base ordenada $\mathcal{B}_1 = \{w_1 = (1, 0, 2); w_2 = (0, 1, 2); w_3 = (1, -1, 1)\}$ a matriz de $T$ com respeito à essa base é
+        \[
+        [T]_{\mathcal{B}_1} = \begin{bmatrix}
+            -1 & \phantom{-}0 & \phantom{-}0\\
+            \phantom{-}0& -1 & \phantom{-}0\\
+            \phantom{-}0& \phantom{-}0 & -2
+        \end{bmatrix}.
+        \]
+
+        Note que para a base $\mathcal{B}_1$ temos
+        \begin{align*}
+            T(w_1) &= -1w_1\\
+            T(w_2) &= -1w_2\\
+            T(w_3) &= -2w_3\\
+        \end{align*}
+    \end{frame}
+
+    \begin{frame}
+        No caso geral, seja $T : V \to V$ um operador linear e suponha que exista uma base $\mathcal{B} = \{v_1,\dots,v_n\}$ de $V$ tal que
+        \begin{align}\label{formadiagonal}
+            [T]_\mathcal{B} = \begin{bmatrix}
+                \lambda_1 & 0 & 0 & \dots & 0\\
+                0 & \lambda_2 & 0 & \dots & 0\\
+                \vdots & & \ddots & & \vdots\\
+                0 & 0 & 0 & \dots & \lambda_n
+            \end{bmatrix}
+        \end{align}
+        com $\lambda_i \in \cp{K}$ para $i = 1$, \dots, $n$.
+    \end{frame}
+
+    \begin{frame}
+        Assim
+        \[
+        [T(v_i)]_\mathcal{B} = [T]_\mathcal{B}[v_i]_\mathcal{B} = [T]_\mathcal{B}\begin{bmatrix}
+            0\\
+            0\\
+            \vdots\\
+            0\\
+            1\\
+            0\\
+            \vdots\\
+            0
+        \end{bmatrix}_\mathcal{B} = \begin{bmatrix}
+            0\\
+            0\\
+            \vdots\\
+            0\\
+            \lambda_i\\
+            0\\
+            \vdots\\
+            0
+        \end{bmatrix}_\mathcal{B}
+        \]
+        para $i = 1$, \dots, $n$. Isto é,
+        \[
+        T(v_1) = \lambda_1 v_1,\ T(v_2) = \lambda_2 v_2,\dots, T(v_n) = \lambda_n v_n.
+        \]
+    \end{frame}
+
+    \begin{frame}
+    \begin{definicao}
+        Seja $T : V \to V$ um operador linear.
+        \begin{enumerate}[label={\roman*})]
+            \item Um \textbf{autovalor} de $T$ é um elemento $\lambda \in \cp{K}$ tal que existe um vetor não nulo $u \in V$ com $T(u) = \lambda u$.\index{Autovalor}
+            \item Se $\lambda$ é um autovalor de $T$, então todo vetor não nulo $u \in V$ tal que
+            \[
+            T(u) = \lambda u
+            \]
+            é chamado de \textbf{autovetor} de $T$ \textbf{associado} ao autovalor $\lambda$. Denotaremos por $Aut_T(\lambda)$ o subespaço gerado por todos os autovetores associados a $\lambda$. Assim
+            \[
+            \aut_T(\lambda) = \{u \in V \mid T(u) = \lambda u\}.
+            \]
+            \item Suponha que $\dim V = n < \infty$. Dizemos que $T$ é \textbf{diagonalizável} se existir uma base $\mathcal{B}$ de $V$ tal que $[T]_\mathcal{B}$ é diagonal, isto é, tem a forma \eqref{formadiagonal}. Tal fato equivale a dizer que existe uma base formada por autovetores.
+        \end{enumerate}
+    \end{definicao}
+    \end{frame}
 \end{document}
