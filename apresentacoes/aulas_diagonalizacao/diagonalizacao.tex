@@ -120,4 +120,143 @@
         \end{enumerate}
     \end{definicao}
     \end{frame}
+
+    \begin{frame}
+        Temos aqui duas questões importantes:
+        \begin{enumerate}[label={\arabic*})]
+            \item Dado um operador $T \colon V \to V$, existem autovetores para $T$?
+
+            \item Se sim, existe um número suficiente de autovetores para forma uma base de $V$?
+        \end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+        Aqui surgem duas questões:
+        \begin{enumerate}[label={\arabic*})]
+            \item Como determinar se uma transformação linear $T \colon V \to V$ possui autovetores?
+
+            \item A existência de autovetores de $T$ depende da base escolhida para $V$?
+        \end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+        \begin{teorema}
+            As seguintes afirmações são equivalentes:
+            \begin{enumerate}[label={\roman*})]
+                \item o escalar $\lambda \in \cp{K}$ é um autovalor do operador linear $T \colon V \to V$;
+
+                \item o operador $T - \lambda Id$ não é injetor;
+
+                \item dada uma base ordenada $\mathcal{B}$ qualquer de $V$ temos
+                \[
+                \det([T]_\mathcal{B} - \lambda[Id]_\mathcal{B}) = 0.
+                \]
+            \end{enumerate}
+        \end{teorema}
+    \end{frame}
+
+    \begin{frame}
+        \begin{teorema}
+            Se $A \in M_n(\cp{K})$ for uma matriz $n \times n$, então $\lambda \in \cp{K}$ é um autovalor de $A$ se, e somente se, $\lambda$ satisfaz a equação
+            \[
+            \det(A - \lambda I_n) = 0.
+            \]
+            Essa equação é chamada de \textbf{equação característica} de $A$.
+        \end{teorema}
+    \end{frame}
+
+    \begin{frame}
+        Seja $A \in M_n(\cp{K})$ onde $n \ge 1$. Vamos definir o \textbf{determinante da matriz $A$}, denotado por $\det(A)$, de modo indutivo.
+
+        Se $n = 1$, então a matriz $A \in \cp{M}_1(\cp{K})$ é da forma
+        \[
+        A = (a_{11})
+        \]
+        e neste caso definimos
+        \[
+        \det(A) = a_{11} \in \cp{K}.
+        \]
+    \end{frame}
+
+\begin{frame}
+        Suponha que $n > 1$ e que $\det(B)$ esteja definido para todas as matrizes $B \in \cp{M}_p(\cp{K})$ com $p < n$ e seja $A \in \cp{M}_n(\cp{K})$. Para cada $(i,j)$, defina a matriz $A_{ij}$ formada a partir de $A$ retirando-se a sua $i$-ésima linha e a sua $j$-ésima coluna. É claro que $A \in \cp{M}_{n - 1}(\cp{K})$ e portanto $\det(A_{ij})$ está definido. Defina então
+        \begin{align*}
+            \det(A) &= \sum_{j = 1}^n(-1)^{i + j}a_{ij}\det(A_{ij}) \\ &= (-1)^{i + 1}a_{i1}\det(A_{i1}) + (-1)^{i + 2}a_{i2}\det(A_{i2}) \\ & + (-1)^{i + 3}a_{i3}\det(A_{i3}) + \cdots + (-1)^{i + n}a_{in}\det(A_{in}) \in \cp{K}
+        \end{align*}
+    \end{frame}
+
+    \begin{frame}
+        \begin{proposicao}
+            Sejam $A$, $B \in \cp{M}_n(\cp{K})$ e $\lambda \in \cp{K}$. Temos:
+            \begin{enumerate}[label={\roman*})]
+                \item $\det(AB) = \det(A) \det(B)$,
+                \item $\det(\lambda A) = \lambda^n \det(A)$,
+                \item Se $A$ é invertível, então $\det(A^{-1}) = [(\det(A)]^{-1}$.
+            \end{enumerate}
+        \end{proposicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{proposicao}
+            Seja $A$ uma matriz $n \times n$ com entradas num corpo $\cp{K}$.
+            \begin{enumerate}[label={\roman*})]
+                \item Se $B$ é a matriz resultante da permutação de duas linhas de $A$, então $\det (B) = -\det (A)$.
+                \item Se $B$ é a matriz resultante da multiplicação de uma linha de $A$ por um escalar não nulo $\alpha \in \cp{K}$, então $\det(B) = \alpha\det(A)$.
+                \item Se $B$ é a matriz resultante da soma da linha $i$ de $A$ com um múltiplo não nulo $\alpha \in \cp{K}$ da linha $j$ de $A$, então $\det(B) = \det(A)$.
+            \end{enumerate}
+        \end{proposicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{teorema}
+            Uma matriz $A \in \cp{M}_n(\cp{K})$ é invertível se, e somente se, $\det(A) \ne 0$.
+        \end{teorema}
+    \end{frame}
+
+    \begin{frame}
+        Dado $V$ um espaço vetorial sobre $\cp{K}$, com $\dim_\cp{K} V = n < \infty$ e um operador linear $T \colon V \to V$, queremos tentar encontrar, se existir, uma base ordenada $\mathcal{D}$ de $V$ formada por autovetores. Para isso devemos proceder da seguinte maneira:
+        \begin{enumerate}[label={\arabic*})]
+            \item Se não foi dada, encontre a matriz de $T$ com relação a alguma base ordenada $\mathcal{B}$ de $V$. Pode-se usar a base canônica $\mathcal{B}$ de $V$ para facilitar o cálculo de $[T]_\mathcal{B}$.
+            \seti
+        \end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+        \begin{enumerate}[label={\arabic*})]
+            \conti
+            \item Uma vez encontrada $[T]_\mathcal{B}$ calcule
+            \[
+            [T]_\mathcal{B} - \lambda I_n = [T]_\mathcal{B} - \begin{bmatrix}\lambda & 0 & 0 & \cdots & 0\\0 & \lambda & 0 & \cdots & 0\\0 & 0 & \lambda & \cdots & 0\\\vdots & \vdots & \vdots & \cdots & \vdots\\0 & 0 & 0 & \cdots & \lambda\end{bmatrix}.
+            \]
+
+            \item\label{passo4diag} Determine todos os valores, se existem, de $\lambda \in \cp{K}$ tais que
+            \[
+            \det([T]_\mathcal{B} - \lambda I_n) = 0.
+            \]
+            \seti
+        \end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+        \begin{enumerate}[label={\arabic*})]
+            \conti
+            \item Se não existir $\lambda \in \cp{K}$ no passo anterior, então $T$ não é diagonalizável.
+
+            \item Para cada $\lambda_1$, $\lambda_2$, \dots, $\lambda_r$ encontrando em \ref{passo4diag} resolva o sistema linear homogêneo
+            \[
+            ([T]_\mathcal{B} - \lambda_jI_n)X = 0.
+            \]
+            O subespaço $Aut_T(\lambda_j)$ será dada pelas soluções desse sistema.
+            \seti
+        \end{enumerate}
+    \end{frame}
+
+\begin{frame}
+        \begin{enumerate}[label={\arabic*})]
+        \conti
+            \item Encontre uma base para cada $Aut_T(\lambda_j)$, com $j = 1$, 2, \dots, $r$.
+
+            \item Se o conjunto $\mathcal{D}$ resultante a união de todas as bases encontradas no passo anterior possuir $\dim_\cp{K}V$ elementos, então $\mathcal{D}$ será uma base de $V$ tal que a matriz de $T$ com relação à essa base será diagonal. Se $\mathcal{D}$ possuir menos elementos que $\dim_\cp{K}V$ então $T$ não é diagonalizável.
+        \end{enumerate}
+    \end{frame}
 \end{document}
