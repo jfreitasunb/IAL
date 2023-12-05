@@ -70,7 +70,8 @@
     \end{frame}
 
     \begin{frame}
-        No caso geral, \pause seja $T : V \to V$ um operador linear \pause e suponha que exista uma base $\mathcal{B} \pause = \{v_1,\dots,v_n\}$ \pause de $V$ tal que\pause
+        No caso geral, \pause seja $T : V \to V$ um operador linear \pause e suponha que exista uma base $\mathcal{B} \pause =
+        \{v_1,\dots,v_n\}$ \pause de $V$ tal que\pause
         \begin{align}\label{formadiagonal}
             [T]_\mathcal{B} = \begin{bmatrix}
                 \lambda_1 & 0 & 0 & \dots & 0\\
@@ -107,14 +108,17 @@
         \begin{definicao}
             Seja $T : V \to V$ um operador linear.\pause
             \begin{enumerate}[label={\roman*})]
-                \item Um \textbf{autovalor} \pause de $T$ é um elemento $\lambda \in \cp{K}$ \pause tal que existe um vetor não nulo \pause $u \in V$ \pause com $T(u) = \lambda u$.\pause
+                \item Um \textbf{autovalor} \pause de $T$ é um elemento $\lambda \in \cp{K}$ \pause tal que existe um vetor não nulo
+                    \pause $u \in V$ \pause com $T(u) = \lambda u$.\pause
+
                 \vspace*{1cm}
 
                 \item Se $\lambda$ é um autovalor de $T$, \pause então todo vetor não nulo \pause $u \in V$ tal que\pause
                 \[
                     T(u) = \lambda u\pause
                 \]
-                é chamado de \textbf{autovetor} \pause de $T$ \textbf{associado} ao autovalor $\lambda$. \pause Denotaremos por $\aut_T(\lambda)$ \pause o subespaço gerado por todos os autovetores associados a $\lambda$. \pause Assim\pause
+                é chamado de \textbf{autovetor} \pause de $T$ \textbf{associado} ao autovalor $\lambda$. \pause Denotaremos por
+                $\aut_T(\lambda)$ \pause o subespaço gerado por todos os autovetores associados a $\lambda$. \pause Assim\pause
                 \[
                     \aut_T(\lambda) = \pause \{u \in V \pause \mid T(u) = \lambda u\}.\pause
                 \]
@@ -128,7 +132,9 @@
         \begin{definicao}
             \begin{enumerate}[label={\roman*})]
                 \conti
-                \item Suponha que $\dim V = n < \infty$. \pause Dizemos que $T$ é \textbf{diagonalizável} \pause se existir uma base $\mathcal{B}$ de $V$ \pause tal que $[T]_\mathcal{B}$ é diagonal, \pause isto é, tem a forma \eqref{formadiagonal}. \pause Tal fato equivale a dizer que existe uma base formada por autovetores.
+                \item Suponha que $\dim V = n < \infty$. \pause Dizemos que $T$ é \textbf{diagonalizável} \pause se existir uma base
+                    $\mathcal{B}$ de $V$ \pause tal que $[T]_\mathcal{B}$ é diagonal, \pause isto é, tem a forma \eqref{formadiagonal}.
+                    \pause Tal fato equivale a dizer que existe uma base formada por autovetores.
         \end{enumerate}
     \end{definicao}
     \end{frame}
@@ -178,7 +184,8 @@
 
     \begin{frame}
         \begin{teorema}
-            Se $A \in M_n(\cp{K})$ \pause for uma matriz $n \times n$, \pause então $\lambda \in \cp{K}$ é um autovalor de $A$ \pause se, e somente se, $\lambda$ satisfaz a equação\pause
+            Se $A \in M_n(\cp{K})$ \pause for uma matriz $n \times n$, \pause então $\lambda \in \cp{K}$ é um autovalor de $A$ \pause
+            se, e somente se, $\lambda$ satisfaz a equação\pause
             \[
                 \det(A - \lambda I_n) = 0.\pause
             \]
@@ -187,7 +194,8 @@
     \end{frame}
 
     \begin{frame}
-        Seja $A \in M_n(\cp{K})$ onde $n \ge 1$. \pause Vamos definir o \textbf{determinante da matriz $A$}, \pause denotado por $\det(A)$, \pause de modo indutivo.\pause
+        Seja $A \in M_n(\cp{K})$ onde $n \ge 1$. \pause Vamos definir o \textbf{determinante da matriz $A$}, \pause denotado por
+        $\det(A)$, \pause de modo indutivo.\pause
 
         Se $n = 1$, \pause então a matriz $A \in \cp{M}_1(\cp{K})$ \pause é da forma
         \[
@@ -200,9 +208,13 @@
     \end{frame}
 
 \begin{frame}
-        Suponha que $n > 1$ \pause e que $\det(B)$ \pause esteja definido para todas as matrizes $B \in \cp{M}_p(\cp{K})$ \pause com $p < n$ \pause e seja $A \in \cp{M}_n(\cp{K})$. \pause Para cada $(i,j)$, \pause defina a matriz $A_{ij}$ \pause formada a partir de $A$ \pause retirando-se a sua $i$-ésima linha \pause e a sua $j$-ésima coluna. \pause É claro que $A \in \cp{M}_{n - 1}(\cp{K})$ \pause e portanto $\det(A_{ij})$ \pause está definido. \pause Defina então\pause
+        Suponha que $n > 1$ \pause e que $\det(B)$ \pause esteja definido para todas as matrizes $B \in \cp{M}_p(\cp{K})$ \pause com
+        $p < n$ \pause e seja $A \in \cp{M}_n(\cp{K})$. \pause Para cada $(i,j)$, \pause defina a matriz $A_{ij}$ \pause formada a partir
+        de $A$ \pause retirando-se a sua $i$-ésima linha \pause e a sua $j$-ésima coluna. \pause É claro que
+        $A \in \cp{M}_{n - 1}(\cp{K})$ \pause e portanto $\det(A_{ij})$ \pause está definido. \pause Defina então\pause
         \begin{align*}
-            \det(A) &= \sum_{j = 1}^n(-1)^{i + j}a_{ij}\det(A_{ij}) \\ &= (-1)^{i + 1}a_{i1}\det(A_{i1}) + (-1)^{i + 2}a_{i2}\det(A_{i2}) \\ & + (-1)^{i + 3}a_{i3}\det(A_{i3}) + \cdots + (-1)^{i + n}a_{in}\det(A_{in}) \in \cp{K}
+            \det(A) &= \sum_{j = 1}^n(-1)^{i + j}a_{ij}\det(A_{ij}) \\ &= (-1)^{i + 1}a_{i1}\det(A_{i1}) + (-1)^{i + 2}a_{i2}\det(A_{i2})
+                 \\ & + (-1)^{i + 3}a_{i3}\det(A_{i3}) + \cdots + (-1)^{i + n}a_{in}\det(A_{in}) \in \cp{K}
         \end{align*}
     \end{frame}
 
@@ -232,11 +244,13 @@
 
                 \vspace*{1cm}
 
-                \item Se $B$ é a matriz resultante da multiplicação de uma linha de $A$ \pause por um escalar não nulo $\alpha \in \cp{K}$, \pause então $\det(B) = \alpha\det(A)$.\pause
+                \item Se $B$ é a matriz resultante da multiplicação de uma linha de $A$ \pause por um escalar não nulo
+                    $\alpha \in \cp{K}$, \pause então $\det(B) = \alpha\det(A)$.\pause
 
                 \vspace*{1cm}
 
-                \item Se $B$ é a matriz resultante da soma da linha $i$ de $A$ \pause com um múltiplo não nulo \pause $\alpha \in \cp{K}$ da linha $j$ de $A$, \pause então $\det(B) = \det(A)$.
+                \item Se $B$ é a matriz resultante da soma da linha $i$ de $A$ \pause com um múltiplo não nulo \pause $\alpha \in \cp{K}$
+                    da linha $j$ de $A$, \pause então $\det(B) = \det(A)$.
             \end{enumerate}
         \end{proposicao}
     \end{frame}
@@ -248,9 +262,12 @@
     \end{frame}
 
     \begin{frame}
-        Dado $V$ um espaço vetorial sobre $\cp{K}$, \pause com $\dim_\cp{K} V = n < \infty$ \pause e um operador linear $T \colon V \to V$, \pause queremos tentar encontrar, se existir, \pause uma base ordenada $\mathcal{D}$ de $V$ \pause formada por autovetores. \pause Para isso devemos proceder da seguinte maneira:\pause
+        Dado $V$ um espaço vetorial sobre $\cp{K}$, \pause com $\dim_\cp{K} V = n < \infty$ \pause e um operador linear
+        $T \colon V \to V$, \pause queremos tentar encontrar, se existir, \pause uma base ordenada $\mathcal{D}$ de $V$ \pause
+        formada por autovetores. \pause Para isso devemos proceder da seguinte maneira:\pause
         \begin{enumerate}[label={\arabic*})]
-            \item Se não foi dada, \pause encontre a matriz de $T$ com relação a alguma base ordenada $\mathcal{B}$ de $V$. \pause Pode-se usar a base canônica $\mathcal{B}$ \pause de $V$ para facilitar o cálculo de $[T]_\mathcal{B}$.
+            \item Se não foi dada, \pause encontre a matriz de $T$ com relação a alguma base ordenada $\mathcal{B}$ de $V$. \pause
+                Pode-se usar a base canônica $\mathcal{B}$ \pause de $V$ para facilitar o cálculo de $[T]_\mathcal{B}$.
             \seti
         \end{enumerate}
     \end{frame}
@@ -260,7 +277,9 @@
             \conti
             \item Uma vez encontrada $[T]_\mathcal{B}$ calcule\pause
             \[
-                [T]_\mathcal{B} - \lambda I_n = [T]_\mathcal{B} - \begin{bmatrix}\lambda & 0 & 0 & \cdots & 0\\0 & \lambda & 0 & \cdots & 0\\0 & 0 & \lambda & \cdots & 0\\\vdots & \vdots & \vdots & \cdots & \vdots\\0 & 0 & 0 & \cdots & \lambda\end{bmatrix}.\pause
+                [T]_\mathcal{B} - \lambda I_n = [T]_\mathcal{B} - \begin{bmatrix}\lambda & 0 & 0 & \cdots & 0\\0 & \lambda & 0 &
+                \cdots & 0\\0 & 0 & \lambda & \cdots & 0\\\vdots & \vdots & \vdots & \cdots & \vdots\\0 & 0 & 0 & \cdots &
+            \lambda\end{bmatrix}.\pause
             \]
 
             \item\label{passo4diag} Determine todos os valores, \pause se existem, de $\lambda \in \cp{K}$ \pause tais que\pause
@@ -278,7 +297,8 @@
 
             \vspace*{1cm}
 
-            \item Para cada $\lambda_1$, \pause $\lambda_2$, \pause \dots, $\lambda_r$ \pause encontrando em \ref{passo4diag} \pause resolva o sistema linear homogêneo\pause
+            \item Para cada $\lambda_1$, \pause $\lambda_2$, \pause \dots, $\lambda_r$ \pause encontrando em \ref{passo4diag} \pause
+                resolva o sistema linear homogêneo\pause
             \[
                 ([T]_\mathcal{B} - \lambda_jI_n)X = 0.\pause
             \]
@@ -294,26 +314,34 @@
 
             \vspace*{1cm}
 
-            \item Se o conjunto $\mathcal{D}$ \pause resultante a união de todas as bases encontradas no passo anterior \pause possuir $\dim_\cp{K}V$ elementos, \pause então $\mathcal{D}$ será uma base de $V$ \pause tal que a matriz de $T$ com relação à essa base será diagonal. \pause Se $\mathcal{D}$ possuir menos elementos que $\dim_\cp{K}V$ \pause então $T$ não é diagonalizável.
+            \item Se o conjunto $\mathcal{D}$ \pause resultante a união de todas as bases encontradas no passo anterior \pause
+                possuir $\dim_\cp{K}V$ elementos, \pause então $\mathcal{D}$ será uma base de $V$ \pause tal que a matriz de $T$ com
+                relação à essa base será diagonal. \pause Se $\mathcal{D}$ possuir menos elementos que $\dim_\cp{K}V$ \pause então $T$
+                não é diagonalizável.
         \end{enumerate}
     \end{frame}
 
     \begin{frame}
         \begin{teorema}
-            Seja $T : V \to V$ um operador linear \pause onde $V$ é um $\cp{K}$-espaço vetorial de dimensão finita \pause e sejam $\lambda_1$, \pause \dots, \pause $\lambda_r$, \pause $r \ge 1$, autovalores de $T$, \pause dois a dois distintos.\pause
+            Seja $T : V \to V$ um operador linear \pause onde $V$ é um $\cp{K}$-espaço vetorial de dimensão finita \pause e sejam
+            $\lambda_1$, \pause \dots, \pause $\lambda_r$, \pause $r \ge 1$, autovalores de $T$, \pause dois a dois distintos.\pause
             \begin{enumerate}[label={\roman*})]
-                \item\label{autovetorLI} Se $u_1 + \cdots + u_r = 0_V$ \pause com $u_i \in \aut_T(\lambda_i)$; \pause $i = 1$, \dots, $r$; \pause então $u_i = 0_V$ \pause para todo $i$.\pause
+                \item\label{autovetorLI} Se $u_1 + \cdots + u_r = 0_V$ \pause com $u_i \in \aut_T(\lambda_i)$; \pause $i = 1$, \dots,
+                    $r$; \pause então $u_i = 0_V$ \pause para todo $i$.\pause
 
                 \vspace*{1cm}
 
-                \item Para cada $i = 1$, \dots, $r$ \pause seja $\mathcal{B}_i$ \pause um conjunto linearmente independente \pause contido em $\aut_T(\lambda_i)$. \pause Então $\mathcal{B}_1 \cup \cdots \cup \mathcal{B}_r$ \pause é L.I. em $V$.
+                \item Para cada $i = 1$, \dots, $r$ \pause seja $\mathcal{B}_i$ \pause um conjunto linearmente independente \pause
+                    contido em $\aut_T(\lambda_i)$. \pause Então $\mathcal{B}_1 \cup \cdots \cup \mathcal{B}_r$ \pause é L.I. em $V$.
             \end{enumerate}
         \end{teorema}
     \end{frame}
 
     \begin{frame}
         \begin{corolario}
-            Seja $T : V \to V$ um operador linear, \pause onde $V$ é um $\cp{K}$-espaço vetorial \pause de dimensão finita. \pause Se $\lambda_1$, \pause \dots, \pause $\lambda_r$ \pause são todos os autovalores de $T$, \pause então $T$ é diagonalizável \pause se, e somente se,\pause
+            Seja $T : V \to V$ um operador linear, \pause onde $V$ é um $\cp{K}$-espaço vetorial \pause de dimensão finita. \pause Se
+            $\lambda_1$, \pause \dots, \pause $\lambda_r$ \pause são todos os autovalores de $T$, \pause então $T$ é diagonalizável
+            \pause se, e somente se,\pause
             \[
                 \dim_\cp{K} V = \pause \sum_{i = i}^r\dim_\cp{K}\aut_T(\lambda_i).
             \]
