@@ -42,6 +42,52 @@
     Considere $\real^2$ e $\mathcal{P}_2(\real)$ como $\real$-espaços vetoriais, $\mathcal{B}_1 = \{(1,3); (2,5)\}$ e
     $\mathcal{B}_2 = \{2, 1 + x, x^2\}$ bases ordenadas de $\real^2$ e $\mathcal{P}_2(\real)$, respectivamente.
 
+    \vspace*{.5cm}
+
+    \solucao Para encontrar a matriz da transformação $G$ com respeito às bases dadas devemos aplicar a transformação $G$ nos vetores
+    de $\mathcal{B}_1$ e escrever o resultado como combinação linear dos vetores da base $\mathcal{B}_2$. Começamos calculando $G$ em
+    cada vetor de $\mathcal{B}_1$:
+    \begin{align*}
+        G(1, 3) = 1x^2 + 3x + 4\\
+        G(2, 5) = 2x^2 + 5x + 7
+    \end{align*}
+    Agora vamos escrever cada um desses resultados como combinação linear dos vetores em $\mathcal{B}_2$:
+    \begin{align*}
+        x^2 + 3x + 4 &= \alpha 2 + \beta(1 + x) + \gamma x^2\\
+        x^2 + 3x + 4 &= \alpha 2 + \beta + \beta x + \gamma x^2\\
+        x^2 + 3x + 4 &= (\alpha 2 + \beta) + \beta x + \gamma x^2
+    \end{align*}
+    daí devemos ter
+    \[
+        \begin{cases}
+            2\alpha + \beta = 4\\
+            \beta = 3\\
+            \gamma = 1
+        \end{cases}
+    \]
+    logo $\alpha = 1/2$, $\beta = 3$ e $\gamma = 1$.
+
+    Repetindo o procedimento para o segundo vetor:
+    \begin{align*}
+        2x^2 + 5x + 7 &= \alpha 2 + \beta(1 + x) + \gamma x^2\\
+        2x^2 + 5x + 7 &= \alpha 2 + \beta + \beta x + \gamma x^2\\
+        2x^2 + 5x + 7 &= (\alpha 2 + \beta) + \beta x + \gamma x^2
+    \end{align*}
+    daí devemos ter
+    \[
+        \begin{cases}
+            2\alpha + \beta = 7\\
+            \beta = 5\\
+            \gamma = 2
+        \end{cases}
+    \]
+    logo $\alpha = 1$, $\beta = 5$ e $\gamma = 2$.
+
+    Portanto a matriz de $G$ será:
+    \[
+        [G]_{\mathcal{B}_1, \mathcal{B}_2} = \begin{bmatrix}1/2 & 1\\ 3 & 5\\ 1 & 2\end{bmatrix}.
+    \]
+
     \vspace*{2cm}
 
     \questao{}  Seja $T : \cp{M}_2(\complex) \to \cp{M}_2(\complex)$ uma transformação linear dada por
@@ -69,4 +115,19 @@
     \]
     Determine a matriz de $T$ com relação à base ordenada canônica $\mathcal{B}_1$.
 
+    \vspace*{.5cm}
+
+    \solucao Nesse caso vamos aplicar a transformação $T$ nos vetores de $\mathcal{B}_1$ e escrever o resultado como combinação linear
+    dos vetores de $\mathcal{B}_1$:
+    \begin{align*}
+        T(u_1) &= \begin{bmatrix}0 & 1\\ 0 & 0\end{bmatrix} = 0u_1 + 1u_2 + 0u_3 + 0u_4\\
+        T(u_2) &= \begin{bmatrix}0 & 0\\ 0 & 0\end{bmatrix} = 0u_1 + 0u_2 + 0u_3 + 0u_4\\
+        T(u_3) &= \begin{bmatrix}0 & 0\\ 1 & 0\end{bmatrix} = 0u_1 + 0u_2 + 1u_3 + 0u_4\\
+        T(u_1) &= \begin{bmatrix}\phantom{-}0 & 0\\ -1 & 0\end{bmatrix} = 0u_1 + 0u_2 - 1u_3 + 0u_4
+    \end{align*}
+
+    Portanto a matriz de $T$ com respeito à base $\mathcal{B}_1$ é:
+    \[
+        [T]_{\mathcal{B}_1} = \begin{bmatrix}0 & 0 & 0 & \phantom{-}0\\1 & 0 & 0 & \phantom{-}0\\0 & 0 & 1 & -1\\0 & 0 & 0 & \phantom{-}0\end{bmatrix}
+    \]
 \end{document}
