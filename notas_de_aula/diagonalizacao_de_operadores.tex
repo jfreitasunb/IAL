@@ -108,9 +108,9 @@ para $i = 1$, \dots, $n$. Isto é,
     No caso da transformação linear $T$ dada em \eqref{exemplodiagonalizacao}, $-1$ é um autovalor de $T$ e os autovetores associados ao
     autovalor $-1$ são $w_1 = (1, 0, 1)$ e $w_2 = (0, 1, 2)$. Nesse caso
     \[
-        Aut_T(-1) = [w_1, w_2].
+        \aut_T(-1) = [w_1, w_2].
     \]
-    Observe que se $u = \alpha_1w_1 + \alpha_2w_2 \in Aut_T(-1)$, então
+    Observe que se $u = \alpha_1w_1 + \alpha_2w_2 \in \aut_T(-1)$, então
     \begin{align*}
         T(u) &= T(\alpha_1w_1 + \alpha_2w_2) \\ &= \alpha_1T(w_1) + \alpha_2T(w_2) \\ &= -\alpha_1w_1 - \alpha_2w_2 \\ &= -(\alpha_1w_1 +
         \alpha_2w_2) \\ &= -u
@@ -118,9 +118,9 @@ para $i = 1$, \dots, $n$. Isto é,
 
     Além disso, $-2$ é um autovalor de $T$ e o autovetor associado a esse autovalor é $w_3 = (1, -1, 1)$. Assim
     \[
-        Aut_T(-2) = [w_3].
+        \aut_T(-2) = [w_3].
     \]
-    Aqui também temos que se $u = \alpha w_3 \in Aut_T(-2)$, então
+    Aqui também temos que se $u = \alpha w_3 \in \aut_T(-2)$, então
     \begin{align*}
         T(u) &= T(\alpha w_3) \\ &= \alpha T(w_3) \\ &= -2\alpha w_3 \\ &= -2u
     \end{align*}
@@ -324,9 +324,9 @@ encontrar, se existir, uma base ordenada $\mathcal{D}$ de $V$ formada por autove
         \[
             ([T]_\mathcal{B} - \lambda_jI_n)X = 0.
         \]
-        O subespaço $Aut_T(\lambda_j)$ será dada pelas soluções desse sistema.
+        O subespaço $\aut_T(\lambda_j)$ será dada pelas soluções desse sistema.
 
-    \item Encontre uma base para cada $Aut_T(\lambda_j)$, com $j = 1$, 2, \dots, $r$.
+    \item Encontre uma base para cada $\aut_T(\lambda_j)$, com $j = 1$, 2, \dots, $r$.
 
     \item Se o conjunto $\mathcal{D}$ resultante a união de todas as bases encontradas no passo anterior possuir $\dim_\cp{K}V$ elementos,
         então $\mathcal{D}$ será uma base de $V$ tal que a matriz de $T$ com relação à essa base será diagonal. Se $\mathcal{D}$ possuir
