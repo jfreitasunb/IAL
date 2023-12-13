@@ -20,23 +20,154 @@
 \vesp{.6}
 
 \begin{exercicio}
-  Prove que cada uma das funções abaixo é uma transformação linear.
-  \begin{enumerate}[label={\alph*})]
-    \item $D : \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dada por
+    Prove que cada uma das funções abaixo é uma transformação linear.
+    \begin{enumerate}[label={\alph*})]
+        \item $D : \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dada por
+        \[
+            D(a_0 + a_1x + a_2x^2 + \cdots + a_nx^n) = a_1 + 2a_2x + \cdots + na_nx^{n - 1}.
+        \]
+        Considere $\mathcal{P}(\complex)$ um $\complex$-espaço vetorial.
+
+        \item $T : \mathcal{C}([a,b], \real) \to \real$ dada por
+        \[
+            T(f(x)) = \int_a^bf(x)dx.
+        \]
+        Considere $\mathcal{C}([a,b], \real)$ e $\real$ como $\real$-espaços vetoriais.
+
+        \item $F : \mathcal{P}_2(\real) \to \mathcal{P}_2(\real)$ dada por $F(p(t)) = t^2p''(x)$. Considere $\mathcal{P}_2(\real)$ um $\real$-espaço vetorial.
+
+        \item $G : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $G(X) = MX + X$, onde
+        \[
+            M = \begin{pmatrix}
+                    1 & 0\\
+                    0 & 0
+                \end{pmatrix}.
+        \]
+        Considere $\cp{M}_2(\real)$ um $\real$-espaço vetorial.
+
+        \item $H : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $H(X) = MX - XM$, onde
+        \[
+            M = \begin{pmatrix}
+                    1 & 2\\
+                    0 & 1
+                \end{pmatrix}.
+        \]
+        Considere $\cp{M}_2(\real)$ um $\real$-espaço vetorial.
+
+        \item $T : \complex^3 \to \complex$ dada por $T(x,y,z) = x + 2y + iz$. Considere $\complex^3$ e $\complex^2$ como $\complex$-espaços vetoriais.
+
+        \item $F : \mathcal{P}_3(\real) \to \mathcal{P}_4(\real)$ dada por $F(p(x)) = xp(x + 1)$. Considere $\mathcal{P}_3(\real)$ e $\mathcal{P}_4(\real)$ como $\real$-espaços vetoriais.
+
+        \item $G : \real^2 \to \mathcal{P}_2(\real)$ dada por $T(a,b) = ax^2 + bx + (a + b)$. Considere $\real^2$ e $\mathcal{P}_2(\real)$ como $\real$-espaços vetoriais.
+    \end{enumerate}
+\end{exercicio}
+
+\begin{exercicio}
+    Seja $V$ um $\cp{K}$-espaço vetorial e $T : V \to V$ uma transformação linear. Dado $\lambda \in \cp{K}$, defina
     \[
-        D(a_0 + a_1x + a_2x^2 + \cdots + a_nx^n) = a_1 + 2a_2x + \cdots + na_nx^{n - 1}.
+        V_\lambda = \{ u \in V \mid T(u) = \lambda u\}.
     \]
-    Considere $\mathcal{P}(\complex)$ um $\complex$-espaço vetorial.
+    Mostre que $V_\lambda$ é um $\cp{K}$-subespaço vetorial de $V$.
+\end{exercicio}
 
-    \item $T : \mathcal{C}([a,b], \real) \to \real$ dada por
+\begin{exercicio}
+    Considere a função $T : \complex \to \cp{M}_2(\real)$ dada por
     \[
-        T(f(x)) = \int_a^bf(x)dx.
+        T(x + yi) = \begin{pmatrix}
+                        x + 7y & 5y\\
+                       -10y & x - 7y
+                   \end{pmatrix}.
     \]
-    Considere $\mathcal{C}([a,b], \real)$ e $\real$ como $\real$-espaços vetoriais.
+    Considerando $\complex$ como um espaço vetorial sobre $\real$:
+    \begin{enumerate}[label={\alph*})]
+        \item Prove que $T$ é uma transformação linear.
 
-    \item $F : \mathcal{P}_2(\real) \to \mathcal{P}_2(\real)$ dada por $F(p(t)) = t^2p''(x)$. Considere $\mathcal{P}_2(\real)$ um $\real$-espaço vetorial.
+        \item Prove que $T(z_1\cdot z_2) = T(z_1)\cdot T(z_2)$ para todos $z_1$, $z_2 \in \complex$.
+    \end{enumerate}
+\end{exercicio}
 
-    \item $G : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $G(X) = MX + X$, onde
+\begin{exercicio}
+    Seja $T : \real^2 \to \real^2$ uma transformação linear tal que $T(1,1) = (1,0)$ e $T(1,-1) = (0,1)$. Encontre $T(1,0)$ e $T(1,2)$.
+    \begin{solucao}
+        $T(1,0) = (1/2,1/2)$ e $T(0,2) = (3/2,-1/2)$.
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+    Sejam $v_1$, $v_2$ e $v_3$ vetores num espaço vetorial $V$ e seja $T \colon V \to \real^3$ uma transformação linear tal que
+    \[
+        T(v_1) = (1, -1, 2), \ T(v_2) = (0, 3, 2), \ T(v_3) = (-3, 1, 2).
+    \]
+    Encontre $T(2v_1 - 3v_2 + 4v_3)$.
+\end{exercicio}
+
+\begin{exercicio}
+    Considere a base $\mathcal{B} = \{v_1, v_2\}$ de $\real^2$, em que $v_1 = (1, 1)$ e $v_2 = (1, 0)$. Considere o operador linear $T \colon \real^2 \to \real^2$ tal que
+    \[
+        T(v_1) = (1, -2)\quad \mbox{e} \quad T(v_2) = (4, -1).
+    \]
+    Encontre a expressão para $T(x, y)$ e use essa expressão para obter $T(5, -3)$.
+\end{exercicio}
+
+\begin{exercicio}
+    Considere a base $\mathcal{B} = \{v_1, v_2\}$ de $\real^2$, em que $v_1 = (-2, 1)$ e $v_2 = (1, 3)$. Considere a transformação linear $T \colon \real^2 \to \real^3$ tal que
+    \[
+        T(v_1) = (-1, 2, 0)\quad \mbox{e} \quad T(v_2) = (0, -3, 5).
+    \]
+    Encontre a expressão para $T(x, y)$ e use essa expressão para obter $T(2, -3)$.
+\end{exercicio}
+
+\begin{exercicio}
+    Considere a base $\mathcal{B} = \{v_1, v_2, v_3\}$ de $\real^3$, em que $v_1 = (1, 1, 1)$, $v_2 = (1, 1, 0)$ e $v_3 = (1, 0, 0)$. Considere o operador linear $T \colon \real^3 \to \real^3$ tal que
+    \[
+        T(v_1) = (2, -1, 4),\ T(v_2) = (3, 0, 1),\ T(v_3) = (-1, 5, 1).
+    \]
+    Encontre a expressão para $T(x, y, z)$ e use essa expressão para obter $T(2, 4, -1)$.
+\end{exercicio}
+
+\begin{exercicio}
+    Considere a base $\mathcal{B} = \{v_1, v_2, v_3\}$ de $\real^3$, em que $v_1 = (1, 2, 1)$, $v_2 = (2, 9, 0)$ e $v_3 = (3, 3, 4)$. Considere a transformação linear $T \colon \real^3 \to \real^2$ tal que
+    \[
+        T(v_1) = (1, 0),\ T(v_2) = (-1, 1),\ T(v_3) = (0, 1).
+    \]
+    Encontre a expressão para $T(x, y, z)$ e use essa expressão para obter $T(7, 13, 7)$.
+\end{exercicio}
+
+Nos exercícios \eqref{nucleo_imagem_inicio} à \eqref{nucleo_imagem_fim}, encontre uma base e a dimensão de:
+\begin{enumerate}[label={\alph*})]
+    \item $\ker(F)$
+
+    \item $\im(F)$
+\end{enumerate}
+
+\begin{exercicio}\label{nucleo_imagem_inicio}
+    Seja $F : \real^4 \to \real^3$ a transformação linear definida por
+    \[
+        F(x,y,s,t) = (x - y + s + t, x + 2s - t, x + y + 3s - 3t).
+    \]
+    \begin{solucao}
+        \begin{enumerate}[label={\alph*})]
+            \item $\dim_\real\im F = 2$
+
+            \item $\dim_\real\ker F = 2$
+        \end{enumerate}
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+    Seja $F : \mathcal{P}_3(\real) \to \mathcal{P}_4(\real)$ dada por $F(p(x)) = xp(x + 1)$. Considere $\mathcal{P}_3(\real)$ e $\mathcal{P}_4(\real)$ como $\real$-espaços vetoriais.
+\end{exercicio}
+
+\begin{exercicio}
+    Seja $G : \real^2 \to \mathcal{P}_2(\real)$ dada por $G(a,b) = ax^2 + bx + (a + b)$. Considere $\real^2$ e $\mathcal{P}_2(\real)$ como $\real$-espaços vetoriais.
+\end{exercicio}
+
+\begin{exercicio}
+    Seja $F : \mathcal{P}_2(\real) \to \mathcal{P}_2(\real)$ dada por $F(p(t)) = t^2p''(t)$. Considere $\mathcal{P}_2(\real)$ um $\real$-espaço vetorial.
+\end{exercicio}
+
+\begin{exercicio}
+    Seja $G : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $G(X) = MX + X$ onde
     \[
         M = \begin{pmatrix}
                 1 & 0\\
@@ -44,278 +175,143 @@
             \end{pmatrix}.
     \]
     Considere $\cp{M}_2(\real)$ um $\real$-espaço vetorial.
+\end{exercicio}
 
-    \item $H : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $H(X) = MX - XM$, onde
+\begin{exercicio}
+    Seja $D : \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dada por
     \[
-        M = \begin{pmatrix}
-                1 & 2\\
-                0 & 1
-            \end{pmatrix}.
+        D(a_0 + a_1x + a_2x^2 + \cdots + a_nx^n) = a_1 + 2a_2x + \cdots + na_nx^{n - 1}.
     \]
-    Considere $\cp{M}_2(\real)$ um $\real$-espaço vetorial.
-
-    \item $T : \complex^3 \to \complex$ dada por $T(x,y,z) = x + 2y + iz$. Considere $\complex^3$ e $\complex^2$ como $\complex$-espaços vetoriais.
-
-    \item $F : \mathcal{P}_3(\real) \to \mathcal{P}_4(\real)$ dada por $F(p(x)) = xp(x + 1)$. Considere $\mathcal{P}_3(\real)$ e $\mathcal{P}_4(\real)$ como $\real$-espaços vetoriais.
-
-    \item $G : \real^2 \to \mathcal{P}_2(\real)$ dada por $T(a,b) = ax^2 + bx + (a + b)$. Considere $\real^2$ e $\mathcal{P}_2(\real)$ como $\real$-espaços vetoriais.
-  \end{enumerate}
+    Considere $\mathcal{P}(\complex)$ um $\complex$-espaço vetorial.
 \end{exercicio}
 
 \begin{exercicio}
-  Seja $V$ um $\cp{K}$-espaço vetorial e $T : V \to V$ uma transformação linear. Dado $\lambda \in \cp{K}$, defina
-  \[
-      V_\lambda = \{ u \in V \mid T(u) = \lambda u\}.
-  \]
-  Mostre que $V_\lambda$ é um $\cp{K}$-subespaço vetorial de $V$.
+    Seja $F : \real^3 \to \real^3$ a transformação linear definida por
+    \[
+        F(x,y,z) = (x + 2y - z, y + z, x + y - 2z).
+    \]
+    \begin{solucao}
+        \begin{enumerate}[label={\alph*})]
+            \item $\dim_\real\im F = 2$
+
+            \item $\dim_\real\ker F = 1$
+        \end{enumerate}
+    \end{solucao}
 \end{exercicio}
 
 \begin{exercicio}
-  Considere a função $T : \complex \to \cp{M}_2(\real)$ dada por
-  \[
-      T(x + yi) = \begin{pmatrix}
-                        x + 7y & 5y\\
-                       -10y & x - 7y
-                   \end{pmatrix}.
-  \]
-  Considerando $\complex$ como um espaço vetorial sobre $\real$:
-  \begin{enumerate}[label={\alph*})]
-    \item Prove que $T$ é uma transformação linear.
+    Seja $F : \cp{M}_3(\real) \to \cp{M}_3(\real)$ a transformação linear definida por
+    \[
+        F(A) = AM - MA,
+    \]
+    onde $M = \begin{bmatrix}1 & \phantom{-}2 & 0\\0 & \phantom{-}3 & 1\\0 & -1 & 1\end{bmatrix}$ e $\cp{M}_3(\real)$ é um $\real$-espaço vetorial.
+    \begin{solucao}
+        \begin{enumerate}[label={\alph*})]
+            \item $\dim_\real\im F = 2$
 
-    \item Prove que $T(z_1\cdot z_2) = T(z_1)\cdot T(z_2)$ para todos $z_1$, $z_2 \in \complex$.
-  \end{enumerate}
-\end{exercicio}
-
-\begin{exercicio}
-  Seja $T : \real^2 \to \real^2$ uma transformação linear tal que $T(1,1) = (1,0)$ e $T(1,-1) = (0,1)$. Encontre $T(1,0)$ e $T(1,2)$.
-  \begin{solucao}
-    $T(1,0) = (1/2,1/2)$ e $T(0,2) = (3/2,-1/2)$.
-  \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-  Sejam $v_1$, $v_2$ e $v_3$ vetores num espaço vetorial $V$ e seja $T \colon V \to \real^3$ uma transformação linear tal que
-  \[
-    T(v_1) = (1, -1, 2), \ T(v_2) = (0, 3, 2), \ T(v_3) = (-3, 1, 2).
-  \]
-  Encontre $T(2v_1 - 3v_2 + 4v_3)$.
-\end{exercicio}
-
-\begin{exercicio}
-  Considere a base $\mathcal{B} = \{v_1, v_2\}$ de $\real^2$, em que $v_1 = (1, 1)$ e $v_2 = (1, 0)$. Considere o operador linear $T \colon \real^2 \to \real^2$ tal que
-  \[
-    T(v_1) = (1, -2)\quad \mbox{e} \quad T(v_2) = (4, -1).
-  \]
-  Encontre a expressão para $T(x, y)$ e use essa expressão para obter $T(5, -3)$.
-\end{exercicio}
-
-\begin{exercicio}
-  Considere a base $\mathcal{B} = \{v_1, v_2\}$ de $\real^2$, em que $v_1 = (-2, 1)$ e $v_2 = (1, 3)$. Considere a transformação linear $T \colon \real^2 \to \real^3$ tal que
-  \[
-    T(v_1) = (-1, 2, 0)\quad \mbox{e} \quad T(v_2) = (0, -3, 5).
-  \]
-  Encontre a expressão para $T(x, y)$ e use essa expressão para obter $T(2, -3)$.
-\end{exercicio}
-
-\begin{exercicio}
-  Considere a base $\mathcal{B} = \{v_1, v_2, v_3\}$ de $\real^3$, em que $v_1 = (1, 1, 1)$, $v_2 = (1, 1, 0)$ e $v_3 = (1, 0, 0)$. Considere o operador linear $T \colon \real^3 \to \real^3$ tal que
-  \[
-    T(v_1) = (2, -1, 4),\ T(v_2) = (3, 0, 1),\ T(v_3) = (-1, 5, 1).
-  \]
-  Encontre a expressão para $T(x, y, z)$ e use essa expressão para obter $T(2, 4, -1)$.
-\end{exercicio}
-
-\begin{exercicio}
-  Considere a base $\mathcal{B} = \{v_1, v_2, v_3\}$ de $\real^3$, em que $v_1 = (1, 2, 1)$, $v_2 = (2, 9, 0)$ e $v_3 = (3, 3, 4)$. Considere a transformação linear $T \colon \real^3 \to \real^2$ tal que
-  \[
-    T(v_1) = (1, 0),\ T(v_2) = (-1, 1),\ T(v_3) = (0, 1).
-  \]
-  Encontre a expressão para $T(x, y, z)$ e use essa expressão para obter $T(7, 13, 7)$.
-\end{exercicio}
-
-Nos exercícios \eqref{nucleo_imagem_inicio} à \eqref{nucleo_imagem_fim}, encontre uma base e a dimensão de:
-\begin{enumerate}[label={\alph*})]
-  \item $\ker(F)$
-
-  \item $\im(F)$
-\end{enumerate}
-
-\begin{exercicio}\label{nucleo_imagem_inicio}
-  Seja $F : \real^4 \to \real^3$ a transformação linear definida por
-  \[
-  F(x,y,s,t) = (x - y + s + t, x + 2s - t, x + y + 3s - 3t).
-  \]
-  \begin{solucao}
-    \begin{enumerate}[label={\alph*})]
-      \item $\dim_\real\im F = 2$
-
-      \item $\dim_\real\ker F = 2$
-    \end{enumerate}
-  \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-  Seja $F : \mathcal{P}_3(\real) \to \mathcal{P}_4(\real)$ dada por $F(p(x)) = xp(x + 1)$. Considere $\mathcal{P}_3(\real)$ e $\mathcal{P}_4(\real)$ como $\real$-espaços vetoriais.
-\end{exercicio}
-
-\begin{exercicio}
-  Seja $G : \real^2 \to \mathcal{P}_2(\real)$ dada por $G(a,b) = ax^2 + bx + (a + b)$. Considere $\real^2$ e $\mathcal{P}_2(\real)$ como $\real$-espaços vetoriais.
-\end{exercicio}
-
-\begin{exercicio}
-  Seja $F : \mathcal{P}_2(\real) \to \mathcal{P}_2(\real)$ dada por $F(p(t)) = t^2p''(t)$. Considere $\mathcal{P}_2(\real)$ um $\real$-espaço vetorial.
-\end{exercicio}
-
-\begin{exercicio}
-  Seja $G : \cp{M}_2(\real) \to \cp{M}_2(\real)$ dada por $G(X) = MX + X$ onde
-  \[
-      M = \begin{pmatrix}
-            1 & 0\\
-            0 & 0
-          \end{pmatrix}.
-  \]
-  Considere $\cp{M}_2(\real)$ um $\real$-espaço vetorial.
-\end{exercicio}
-
-\begin{exercicio}
-  Seja $D : \mathcal{P}(\complex) \to \mathcal{P}(\complex)$ dada por
-  \[
-      D(a_0 + a_1x + a_2x^2 + \cdots + a_nx^n) = a_1 + 2a_2x + \cdots + na_nx^{n - 1}.
-  \]
-  Considere $\mathcal{P}(\complex)$ um $\complex$-espaço vetorial.
-\end{exercicio}
-
-\begin{exercicio}
-  Seja $F : \real^3 \to \real^3$ a transformação linear definida por
-  \[
-      F(x,y,z) = (x + 2y - z, y + z, x + y - 2z).
-  \]
-  \begin{solucao}
-    \begin{enumerate}[label={\alph*})]
-      \item $\dim_\real\im F = 2$
-
-      \item $\dim_\real\ker F = 1$
-    \end{enumerate}
-  \end{solucao}
-\end{exercicio}
-
-\begin{exercicio}
-  Seja $F : \cp{M}_3(\real) \to \cp{M}_3(\real)$ a transformação linear definida por
-  \[
-      F(A) = AM - MA,
-  \]
-  onde $M = \begin{bmatrix}
-    1 & \phantom{-}2 & 0\\0 & \phantom{-}3 & 1\\0 & -1 & 1
-  \end{bmatrix}$ e $\cp{M}_3(\real)$ é um $\real$-espaço vetorial.
-  \begin{solucao}
-    \begin{enumerate}[label={\alph*})]
-      \item $\dim_\real\im F = 2$
-
-      \item $\dim_\real\ker F = 2$
-    \end{enumerate}
-  \end{solucao}
+            \item $\dim_\real\ker F = 2$
+        \end{enumerate}
+    \end{solucao}
 \end{exercicio}
 
 \begin{exercicio}\label{nucleo_imagem_fim}
-  Seja $F : \cp{M}_2(\complex) \to \cp{M}_2(\complex)$ a transformação linear definida por
-  \[
-      F(A) = AM - MA,
-  \]
-  onde $M = \begin{bmatrix}
-    1 & 2\\0 & 3
-  \end{bmatrix}$ e $\cp{M}_2(\complex)$ é um $\complex$-espaço vetorial.
-  \begin{solucao}
+    Seja $F : \cp{M}_2(\complex) \to \cp{M}_2(\complex)$ a transformação linear definida por
+    \[
+        F(A) = AM - MA,
+    \]
+    onde $M = \begin{bmatrix}1 & 2\\0 & 3\end{bmatrix}$ e $\cp{M}_2(\complex)$ é um $\complex$-espaço vetorial.
+    \begin{solucao}
+        \begin{enumerate}[label={\alph*})]
+            \item $\dim_\real\im F = 2$
+
+        \item $\dim_\real\ker F = 2$
+        \end{enumerate}
+    \end{solucao}
+\end{exercicio}
+
+\begin{exercicio}
+    Determine uma transformação linear $T : \real^3 \to \real^3$ tal que:
     \begin{enumerate}[label={\alph*})]
-      \item $\dim_\real\im F = 2$
+        \item $\dim_\real \ker(T) = 0$;
 
-      \item $\dim_\real\ker F = 2$
+        \item $\dim_\real \ker(T) = 1$;
+
+        \item $\dim_\real \ker(T) = 2$;
+
+        \item $\dim_\real \ker(T) = 3$.
     \end{enumerate}
-  \end{solucao}
 \end{exercicio}
 
 \begin{exercicio}
-  Determine uma transformação linear $T : \real^3 \to \real^3$ tal que:
-  \begin{enumerate}[label={\alph*})]
-    \item $\dim_\real \ker(T) = 0$;
-
-    \item $\dim_\real \ker(T) = 1$;
-
-    \item $\dim_\real \ker(T) = 2$;
-
-    \item $\dim_\real \ker(T) = 3$.
-  \end{enumerate}
+    Considere $\real^4$ e seus subespaços $V = [(1,0,1,1);(0,-1,-1,-1)]$ e $W = \{(x,y,z,t) \in \real^4 \mid x + y = 0,\ t + z = 0\}$. Determine uma transformação linear $T : \real^4 \to \real^4$ tal que $\ker(T) = V$ e $\im(T) = W$.
 \end{exercicio}
 
 \begin{exercicio}
-  Considere $\real^4$ e seus subespaços $V = [(1,0,1,1);(0,-1,-1,-1)]$ e $W = \{(x,y,z,t) \in \real^4 \mid x + y = 0,\ t + z = 0\}$. Determine uma transformação linear $T : \real^4 \to \real^4$ tal que $\ker(T) = V$ e $\im(T) = W$.
+    Determine o n\'ucleo e a imagem das seguintes transformações lineares:
+    \begin{enumerate}[label={\alph*})]
+        \item $T : \real^2 \to \real^2$ dada por $T(x,y) = (x - y, x + y)$.
+
+        \item $T : \complex^2 \to \real^2$ dada por $T(x + yi,z + ti) = (x + 2z, -x + 2t)$.
+    \end{enumerate}
 \end{exercicio}
 
 \begin{exercicio}
-  Determine o n\'ucleo e a imagem das seguintes transformações lineares:
-  \begin{enumerate}[label={\alph*})]
-    \item $T : \real^2 \to \real^2$ dada por $T(x,y) = (x - y, x + y)$.
-
-    \item $T : \complex^2 \to \real^2$ dada por $T(x + yi,z + ti) = (x + 2z, -x + 2t)$.
-  \end{enumerate}
+    Ache uma transformação linear $T : \real^4 \to \real^4$ tal que
+    \begin{align*}
+        \ker(T) &= [(1,0,0,1);(-1,0,0,1)]\\
+        \im(T) &= [(1,-1,0,2);(0,1,-1,0)].
+    \end{align*}
 \end{exercicio}
 
 \begin{exercicio}
-  Ache uma transformação linear $T : \real^4 \to \real^4$ tal que
-  \begin{align*}
-    \ker(T) &= [(1,0,0,1);(-1,0,0,1)]\\
-    \im(T) &= [(1,-1,0,2);(0,1,-1,0)].
-  \end{align*}
+    Encontre uma transformação linear $F : \real^3 \to \real^4$, cuja imagem é gerada por $w_1 = (1,2,0,-4)$ e $w_2 = (2,0,-1,-3)$.
 \end{exercicio}
 
 \begin{exercicio}
-  Encontre uma transformação linear $F : \real^3 \to \real^4$, cuja imagem é gerada por $w_1 = (1,2,0,-4)$ e $w_2 = (2,0,-1,-3)$.
-\end{exercicio}
-
-\begin{exercicio}
-  Encontre uma transformação linear $T : \real^3 \to \cp{M}_{3 \times 1}(\real)$, cuja imagem é gerada por
-  \[
+    Encontre uma transformação linear $T : \real^3 \to \cp{M}_{3 \times 1}(\real)$, cuja imagem é gerada por
+    \[
         v_1 = \begin{bmatrix}
                 1\\2\\3
               \end{bmatrix},
         v_2 = \begin{bmatrix}
                  4\\5\\6
               \end{bmatrix}.
-  \]
+    \]
 \end{exercicio}
 
 \begin{exercicio}
-  Encontre uma transformação linear $T : \cp{M}_{1 \times 4}(\real) \to \real^5$ , cujo kernel é gerado por
-  \[
-      v_1 = \begin{bmatrix}
+    Encontre uma transformação linear $T : \cp{M}_{1 \times 4}(\real) \to \real^5$ , cujo kernel é gerado por
+    \[
+        v_1 = \begin{bmatrix}
                 1 & 2 & 3 & 4
-            \end{bmatrix},
-      v_2 = \begin{bmatrix}
+              \end{bmatrix},
+        v_2 = \begin{bmatrix}
                 0 & 1 & 1 & 1
-            \end{bmatrix}.
-  \]
+              \end{bmatrix}.
+    \]
 \end{exercicio}
 
 \begin{exercicio}
-  Nos casos abaixo construa uma transformação linear $T : V \to W$ satisfazendo as condições dadas:
-  \begin{enumerate}[label={\alph*})]
-    \item $V = \real^3$, $W = \real^2$, $\cp{K} = \real$, $\dim_\cp{K} \ker(T) = 1$, $\dim_\cp{K} \im(T) = 2$
+    Nos casos abaixo construa uma transformação linear $T : V \to W$ satisfazendo as condições dadas:
+    \begin{enumerate}[label={\alph*})]
+        \item $V = \real^3$, $W = \real^2$, $\cp{K} = \real$, $\dim_\cp{K} \ker(T) = 1$, $\dim_\cp{K} \im(T) = 2$
 
-    \item $V = \real^3$, $W = \cp{M}_{3\times 1}(\complex)$, $\cp{K} = \real$, $\dim_\cp{K} \ker(T) = 2$, $\dim_\cp{K} \im(T) = 1$
+        \item $V = \real^3$, $W = \cp{M}_{3\times 1}(\complex)$, $\cp{K} = \real$, $\dim_\cp{K} \ker(T) = 2$, $\dim_\cp{K} \im(T) = 1$
 
-    \item $V = \real^3$, $W = \cp{M}_{3\times 1}(\real)$, $\cp{K} = \real$, $\dim_\cp{K} \ker(T) = 0$, $\dim_\cp{K} \im(T) = 3$
+        \item $V = \real^3$, $W = \cp{M}_{3\times 1}(\real)$, $\cp{K} = \real$, $\dim_\cp{K} \ker(T) = 0$, $\dim_\cp{K} \im(T) = 3$
 
-    \item $V = \real^3$, $W = \cp{M}_{3\times 1}(\real)$, $\cp{K} = \real$, $\dim_\cp{K} \ker(T) = 3$, $\dim_\cp{K} \im(T) = 0$
+        \item $V = \real^3$, $W = \cp{M}_{3\times 1}(\real)$, $\cp{K} = \real$, $\dim_\cp{K} \ker(T) = 3$, $\dim_\cp{K} \im(T) = 0$
 
-    \item $V = \cp{M}_{3\times 1}(\complex)$, $W = \real^3$, $\cp{K} = \real$, $\dim_\cp{K} \ker(T) = 3$, $\dim_\cp{K} \im(T) = 3$
+        \item $V = \cp{M}_{3\times 1}(\complex)$, $W = \real^3$, $\cp{K} = \real$, $\dim_\cp{K} \ker(T) = 3$, $\dim_\cp{K} \im(T) = 3$
 
-    \item $V = \mathcal{P}_5(\real)$, $W = \real^4$, $\cp{K} = \real$, $\dim_\cp{K} \ker(T) = 4$, $\dim_\cp{K} \im(T) = 2$
+        \item $V = \mathcal{P}_5(\real)$, $W = \real^4$, $\cp{K} = \real$, $\dim_\cp{K} \ker(T) = 4$, $\dim_\cp{K} \im(T) = 2$
 
-    \item $V = \mathcal{P}_5(\complex)$, $W = \complex^5$, $\cp{K} = \complex$, $\dim_\cp{K} \ker(T) = 1$, $\dim_\cp{K} \im(T) = 5$
+        \item $V = \mathcal{P}_5(\complex)$, $W = \complex^5$, $\cp{K} = \complex$, $\dim_\cp{K} \ker(T) = 1$, $\dim_\cp{K} \im(T) = 5$
 
-    \item $V = \mathcal{P}_5(\complex)$, $W = \cp{M}_{3\times 2}(\complex)$, $\cp{K} = \complex$, $\dim_\cp{K} \ker(T) = 2$, $\dim_\cp{K} \im(T) = 4$
+        \item $V = \mathcal{P}_5(\complex)$, $W = \cp{M}_{3\times 2}(\complex)$, $\cp{K} = \complex$, $\dim_\cp{K} \ker(T) = 2$, $\dim_\cp{K} \im(T) = 4$
 
-    \item $V = \mathcal{P}_4(\real)$, $W = \cp{M}_{2\times 2}(\real)$, $\cp{K} = \real$, $\dim_\cp{K} \ker(T) = 3$, $\dim_\cp{K} \im(T) = 2$
-  \end{enumerate}
+        \item $V = \mathcal{P}_4(\real)$, $W = \cp{M}_{2\times 2}(\real)$, $\cp{K} = \real$, $\dim_\cp{K} \ker(T) = 3$, $\dim_\cp{K} \im(T) = 2$
+    \end{enumerate}
 \end{exercicio}
 
 % \begin{exercicio}
